@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mrsiproc on Neurodesk</title><link>https://neurodesk.org/tags/mrsiproc/</link><description>Recent content in Mrsiproc on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/tags/mrsiproc/index.xml" rel="self" type="application/rss+xml"/><item><title>Spectroscopy pipeline</title><link>https://neurodesk.org/tutorials-examples/tutorials/spectroscopy/mrsiproc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/spectroscopy/mrsiproc/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Korbinian Eckstein.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/korbinian90/" target="_blank" rel="noopener">@korbinian90&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+
+
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Processing MRSI&lt;/h4>
+
+ 
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>ml mrsiproc/0.1.0&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>bash Part1_ProcessMRSI.sh [ARGUMENTS]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>bash Part2_EvaluateMRSI.sh [ARGUMENTS]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+&lt;/div>
+
+&lt;h2 id="starting-neurodesk">Starting Neurodesk&lt;/h2>
+&lt;p>After starting Neurodesk, a JupyterLab instance should open. You can either work from here or open a desktop environment by clicking &lt;code>Neurodesktop&lt;/code> under &lt;code>Notebooks&lt;/code>. This tutorial uses the desktop.&lt;/p></description></item></channel></rss>

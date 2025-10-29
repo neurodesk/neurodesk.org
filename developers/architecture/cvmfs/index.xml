@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurodesk CVMFS on Neurodesk</title><link>https://neurodesk.org/developers/architecture/cvmfs/</link><description>Recent content in Neurodesk CVMFS on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/developers/architecture/cvmfs/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup CVMFS Proxy</title><link>https://neurodesk.org/developers/architecture/cvmfs/proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/proxy/</guid><description>&lt;p>If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don&amp;rsquo;t run any proxy servers but it would be important for using it on a cluster.&lt;/p>
+&lt;h1 id="setup-a-cvmfs-proxy-server">Setup a CVMFS proxy server&lt;/h1>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo yum install -y squid&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Open the &lt;code>squid.conf&lt;/code>and use the following configuration&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vi /etc/squid/squid.conf&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># List of local IP addresses (separate IPs and/or CIDR notation) allowed to access your local proxy&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#acl local_nodes src YOUR_CLIENT_IPS&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Destination domains that are allowed&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>acl stratum_ones dstdomain &lt;span style="color:#0550ae">.&lt;/span>neurodesk&lt;span style="color:#0550ae">.&lt;/span>org &lt;span style="color:#0550ae">.&lt;/span>openhtc&lt;span style="color:#0550ae">.&lt;/span>io &lt;span style="color:#0550ae">.&lt;/span>cern&lt;span style="color:#0550ae">.&lt;/span>ch &lt;span style="color:#0550ae">.&lt;/span>gridpp&lt;span style="color:#0550ae">.&lt;/span>rl&lt;span style="color:#0550ae">.&lt;/span>ac&lt;span style="color:#0550ae">.&lt;/span>uk &lt;span style="color:#0550ae">.&lt;/span>opensciencegrid&lt;span style="color:#0550ae">.&lt;/span>org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Squid port&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>http_port &lt;span style="color:#0550ae">3128&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Deny access to anything which is not part of our stratum_ones ACL.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>http_access allow stratum_ones
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Only allow access from our local machines&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#http_access allow local_nodes&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>http_access allow localhost
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Finally, deny all other access to this proxy&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>http_access deny all
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>minimum_expiry_time &lt;span style="color:#0550ae">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>maximum_object_size &lt;span style="color:#0550ae">1024&lt;/span> MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cache_mem &lt;span style="color:#0550ae">128&lt;/span> MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>maximum_object_size_in_memory &lt;span style="color:#0550ae">128&lt;/span> KB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># 5 GB disk cache&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cache_dir ufs &lt;span style="color:#0550ae">/&lt;/span>&lt;span style="color:#cf222e">var&lt;/span>&lt;span style="color:#0550ae">/&lt;/span>spool&lt;span style="color:#0550ae">/&lt;/span>squid &lt;span style="color:#0550ae">5000&lt;/span> &lt;span style="color:#0550ae">16&lt;/span> &lt;span style="color:#0550ae">256&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo squid -k parse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start squid
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl &lt;span style="color:#6639ba">enable&lt;/span> squid
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl status squid
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl restart squid&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Then add the proxy to the cvmfs config:&lt;/p></description></item><item><title>CVMFS architecture</title><link>https://neurodesk.org/developers/architecture/cvmfs/cvmfs_architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/cvmfs_architecture/</guid><description>&lt;p>We store our singularity containers unpacked on CVMFS. We tried the DUCC tool in the beginning, but it was causing too many issues with dockerhub and we were rate limited. The script to unpack our singularity containers is here: &lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/sync_containers_to_cvmfs.sh" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/sync_containers_to_cvmfs.sh&lt;/a>&lt;/p>
+&lt;p>It gets called by a cronjob on the CVMFS Stratum 0 server and relies on the log.txt file being updated via an action in the neurocommand repository (&lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/.github/workflows/upload_containers_simg.sh" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/.github/workflows/upload_containers_simg.sh&lt;/a>)&lt;/p>
+&lt;p>The Stratum 1 servers then pull this repo from Stratum 0 and our desktops mount these repos (configured here: &lt;a href="https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile&lt;/a>)&lt;/p></description></item><item><title>Setup Stratum 0 server</title><link>https://neurodesk.org/developers/architecture/cvmfs/stratum0/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/stratum0/</guid><description>&lt;h2 id="setup-a-stratum-0-server">Setup a Stratum 0 server:&lt;/h2>
+&lt;h3 id="setup-storage">Setup Storage&lt;/h3>
+&lt;p>(would object storage be better? -&amp;gt; see comment below under next iteration ideas)&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>lsblk -l
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkfs.ext4 /dev/vdb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /storage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mount /dev/vdb /storage/ -t auto
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chown ec2-user /storage/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod a+rwx /storage/&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vi /etc/fstab
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>/dev/vdb /storage auto defaults,nofail &lt;span style="color:#0550ae">0&lt;/span> &lt;span style="color:#0550ae">2&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;h3 id="setup-server">Setup server&lt;/h3>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo yum install vim htop gcc git screen
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo timedatectl set-timezone Australia/Brisbane
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install -y cvmfs cvmfs-server
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl &lt;span style="color:#6639ba">enable&lt;/span> httpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl restart httpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># sudo systemctl stop firewalld&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># restore keys:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /etc/cvmfs/keys/incoming
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod a+rwx /etc/cvmfs/keys/incoming
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> connections/cvmfs_keys/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>scp neuro* ec2-user@203.101.226.164:/etc/cvmfs/keys/incoming
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv /etc/cvmfs/keys/incoming/* /etc/cvmfs/keys/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#backup keys: &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#mkdir cvmfs_keys&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#scp opc@158.101.127.61:/etc/cvmfs/keys/neuro* .&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo cvmfs_server mkfs -o &lt;span style="color:#953800">$USER&lt;/span> neurodesk.ardc.edu.au
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> /storage
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir -p cvmfs-storage/srv/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> /srv/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv cvmfs/ /storage/cvmfs-storage/srv/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /storage/cvmfs-storage/srv/cvmfs/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> /var/spool
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /storage/spool
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv cvmfs/ /storage/spool/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /storage/spool/cvmfs .
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cvmfs_server transaction neurodesk.ardc.edu.au
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cvmfs_server publish neurodesk.ardc.edu.au&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vi /etc/cron.d/cvmfs_resign&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0550ae">0&lt;/span> &lt;span style="color:#0550ae">11&lt;/span> * * &lt;span style="color:#0550ae">1&lt;/span> root /usr/bin/cvmfs_server resign neurodesk.ardc.edu.au&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /etc/cvmfs/keys/neurodesk.ardc.edu.au.pub&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuV9JBs9uXBR83qUs7AiE
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nSQfvh6VCdNigVzOfRMol5cXsYq3cFy/Vn1Nt+7SGpDTQArQieZo4eWC9ww2oLq0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>vY1pWyAms3Y4i+IUmMbwNifDU4GQ1KN9u4zl9Peun2YQCLE7mjC0ZLQtLM7Q0Z8h
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>NwP8jRJTN+u8mRKzkyxfSMLscVMKhm2pAwnT1zB9i3bzVV+FSnidXq8rnnzNHMgv
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tfqx1h0gVyTeodToeFeGG5vq69wGZlwEwBJWVRGzzr+a8dWNBFMJ1HxamrBEBW4P
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>AxOKGHmQHTGbo+tdV/K6ZxZ2Ry+PVedNmbON/EPaGlI8Vd0fascACfByqqeUEhAB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dQIDAQAB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-----END PUBLIC KEY-----&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;h2 id="next-iteration-of-this">Next iteration of this:&lt;/h2>
+&lt;h3 id="use-object-storage">use object storage?&lt;/h3>
+&lt;ul>
+&lt;li>current implementation uses block storage, but this makes increasing the volume size a bit more work&lt;/li>
+&lt;li>we couldn&amp;rsquo;t get object storage to work on Oracle as it assumes AWS S3 -&amp;gt; Try again on AWS&lt;/li>
+&lt;/ul>
+&lt;h3 id="optimize-settings-for-repositories-for-container-images">Optimize settings for repositories for Container Images&lt;/h3>
+&lt;p>from the CVMFS documentation:
+Repositories containing Linux container image contents (that is: container root file systems) should use overlayfs as a union file system and have the following configuration:&lt;/p></description></item><item><title>Setup Stratum 1 server</title><link>https://neurodesk.org/developers/architecture/cvmfs/stratum1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/stratum1/</guid><description>&lt;p>The stratum 1 servers for the desktop are configured here: &lt;a href="https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile&lt;/a>&lt;/p>
+&lt;p>If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy.&lt;/p>
+&lt;h1 id="setup-a-stratum-1-server-this-setup-works-best-on-rocky-linux-9">Setup a Stratum 1 server (This setup works best on Rocky Linux 9):&lt;/h1>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install -y cvmfs-server squid tmux
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install -y python3-mod_wsgi 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dnf install dnf-automatic -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl &lt;span style="color:#6639ba">enable&lt;/span> dnf-automatic-install.timer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl status dnf-automatic-install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl cat dnf-automatic-install.timer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo vi /etc/dnf/automatic.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># check if automatic updates are downloaded and applied&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tmux new -s cvmfs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># return to session: tmux a -t cvmfs&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#0a3069">&amp;#39;s/Listen 80/Listen 127.0.0.1:8080/&amp;#39;&lt;/span> /etc/httpd/conf/httpd.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">set&lt;/span> +H
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;http_port 80 accel&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee /etc/squid/squid.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;http_port 8000 accel&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/squid/squid.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;http_access allow all&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/squid/squid.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;cache_peer 127.0.0.1 parent 8080 0 no-query originserver&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/squid/squid.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;acl CVMFSAPI urlpath_regex ^/cvmfs/[^/]*/api/&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/squid/squid.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;cache deny !CVMFSAPI&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/squid/squid.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;cache_mem 128 MB&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/squid/squid.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start httpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl start squid
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl &lt;span style="color:#6639ba">enable&lt;/span> httpd
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl &lt;span style="color:#6639ba">enable&lt;/span> squid
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#YOU NEED TO ADD YOUR GEO IP data here!&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#39;CVMFS_GEO_ACCOUNT_ID=APPLY_FOR_ONE_THIS_IS_a_SIX_DIGIT_NUMBER&amp;#39;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/cvmfs/server.local
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#39;CVMFS_GEO_LICENSE_KEY=APPLY_FOR_ONE_THIS_IS_a_password&amp;#39;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee -a /etc/cvmfs/server.local
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#0550ae">600&lt;/span> /etc/cvmfs/server.local
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir -p /etc/cvmfs/keys/ardc.edu.au/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;-----BEGIN PUBLIC KEY-----
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUPEmxDp217SAtZxaBep
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">Bi2TQcLoh5AJ//HSIz68ypjOGFjwExGlHb95Frhu1SpcH5OASbV+jJ60oEBLi3sD
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">qA6rGYt9kVi90lWvEjQnhBkPb0uWcp1gNqQAUocybCzHvoiG3fUzAe259CrK09qR
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">pX8sZhgK3eHlfx4ycyMiIQeg66AHlgVCJ2fKa6fl1vnh6adJEPULmn6vZnevvUke
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">I6U1VcYTKm5dPMrOlY/fGimKlyWvivzVv1laa5TAR2Dt4CfdQncOz+rkXmWjLjkD
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">87WMiTgtKybsmMLb2yCGSgLSArlSWhbMA0MaZSzAwE9PJKCCMvTANo5644zc8jBe
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">NQIDAQAB
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">-----END PUBLIC KEY-----&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee /etc/cvmfs/keys/ardc.edu.au/neurodesk.ardc.edu.au.pub
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo cvmfs_server add-replica -o &lt;span style="color:#953800">$USER&lt;/span> http://stratum0.neurodesk.cloud.edu.au/cvmfs/neurodesk.ardc.edu.au /etc/cvmfs/keys/ardc.edu.au
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># CVMFS will store everything in /srv/cvmfs so make sure there is enough space or create a symlink to a bigger storage volume&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># e.g.:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#cd /storage&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#sudo mkdir -p cvmfs-storage/srv/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#cd /srv/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#sudo mv cvmfs/ /storage/cvmfs-storage/srv/&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#sudo ln -s /storage/cvmfs-storage/srv/cvmfs/ --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo cvmfs_server snapshot neurodesk.ardc.edu.au
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#If this keeps failing with errors like &amp;#34;Processing chunks [21605 registered chunks]: failed to download #http://stratum0.neurodesk.cloud.edu.au/cvmfs/neurodesk.ardc.edu.au/data/03/99e1faa88d0d66a8707cdecdc9b063cc527e50 (17 - host data transfer cut short)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#couldn&amp;#39;t reach Stratum 0 - please check the network connection&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#terminate called after throwing an instance of &amp;#39;ECvmfsException&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># what(): PANIC: /home/sftnight/jenkins/workspace/CvmfsFullBuildDocker/CVMFS_BUILD_ARCH/docker-x86_64/CVMFS_BUILD_PLATFORM/cc9/build/BUILD/cvmfs-2.13.0/cvmfs/swissknife_pull.cc : 286&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#Download error&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#Aborted (core dumped)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#Then this is a deep packet inspection issue on the side of the stratum 1. To get around this, create an SSH tunnel to the stratum 0 server and transfer via that tunnel:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#ssh -L 8081:localhost:80 ec2-user@stratum0.neurodesk.cloud.edu.au&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#sudo vi /etc/cvmfs/repositories.d/neurodesk.ardc.edu.au/server.conf&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># change this:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#CVMFS_STRATUM0=http://stratum0.neurodesk.cloud.edu.au/cvmfs/neurodesk.ardc.edu.au&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># to this:&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#CVMFS_STRATUM0=http://localhost:8081/cvmfs/neurodesk.ardc.edu.au&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Then run the sync again&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#34;/var/log/cvmfs/*.log {
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069"> weekly
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069"> missingok
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069"> notifempty
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">}&amp;#34;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee /etc/logrotate.d/cvmfs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">echo&lt;/span> &lt;span style="color:#0a3069">&amp;#39;*/5 * * * * root output=$(/usr/bin/cvmfs_server snapshot -a -i 2&amp;gt;&amp;amp;1) || echo &amp;#34;$output&amp;#34; &amp;#39;&lt;/span> &lt;span style="color:#1f2328">|&lt;/span> sudo tee /etc/cron.d/cvmfs_stratum1_snapshot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo yum install iptables
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo iptables -t nat -A PREROUTING -p tcp -m tcp --dport &lt;span style="color:#0550ae">80&lt;/span> -j REDIRECT --to-ports &lt;span style="color:#0550ae">8000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl disable firewalld 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl stop firewalld 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># make sure that port 80 is open in the real firewall&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo cvmfs_server update-geodb
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#test&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl --head http://YOUR_IP_OR_DNS/cvmfs/neurodesk.ardc.edu.au/.cvmfspublished&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div></description></item></channel></rss>

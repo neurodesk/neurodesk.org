@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurocommand on Neurodesk</title><link>https://neurodesk.org/getting-started/neurocommand/</link><description>Recent content in Neurocommand on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/neurocommand/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux and HPC</title><link>https://neurodesk.org/getting-started/neurocommand/linux-and-hpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/linux-and-hpc/</guid><description>&lt;h2 id="ways-of-using-neurocommand-in-linux-and-hpc">Ways of using Neurocommand in Linux and HPC:&lt;/h2>
+&lt;ol>
+&lt;li>You can use the module files for Neurocontainers directly via CVMFS: &lt;a href="https://neurodesk.org/docs/getting-started/neurocontainers/cvmfs/" target="_blank" rel="noopener">https://neurodesk.org/docs/getting-started/neurocontainers/cvmfs/&lt;/a>&lt;/li>
+&lt;li>or you can install Neurocommand as described here:&lt;/li>
+&lt;/ol>
+&lt;h2 id="requirements">Requirements:&lt;/h2>
+&lt;ul>
+&lt;li>python 3.6+ &lt;a href="https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer" target="_blank" rel="noopener">https://www.anaconda.com/docs/getting-started/miniconda/install#linux-terminal-installer&lt;/a>&lt;/li>
+&lt;li>singularity &lt;a href="https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html" target="_blank" rel="noopener">https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html&lt;/a>&lt;/li>
+&lt;li>git&lt;/li>
+&lt;li>lmod &lt;a href="https://lmod.readthedocs.io/en/latest/" target="_blank" rel="noopener">https://lmod.readthedocs.io/en/latest/&lt;/a>&lt;/li>
+&lt;/ul>
+
+
+&lt;div class="alert alert-info" role="alert">
+
+
+ &lt;strong>On HPC&lt;/strong>, you will likely have lmod and Singularity already installed - check with your sysadmin
+
+&lt;/div>
+
+&lt;h2 id="setup-instructions">Setup Instructions:&lt;/h2>
+&lt;h3 id="install-command-line-eg-running-on-linux-or-hpc">&lt;strong>Install command line&lt;/strong> (e.g. running on Linux or HPC)&lt;/h3>
+&lt;ol>
+&lt;li>Load singularity
+For optimal performance, ensure you are using Singularity version 3.x:&lt;/li>
+&lt;/ol>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module load singularity/3.5.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#or&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>module load singularity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#or &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>module load apptainer&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>If this doens&amp;rsquo;t work it might already be loaded. Just run &lt;code>singularity&lt;/code> and check.&lt;/p></description></item><item><title>Windows</title><link>https://neurodesk.org/getting-started/neurocommand/windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/windows/</guid><description>&lt;h2 id="wsl-w-ubuntu--lxde">WSL (w/ Ubuntu + LXDE)&lt;/h2>
+&lt;p>For more information on WSL: &lt;a href="https://docs.microsoft.com/en-us/windows/wsl" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/windows/wsl&lt;/a>&lt;/p>
+&lt;h3 id="setting-up">Setting up&lt;/h3>
+&lt;ol>
+&lt;li>Setup WSL2 using the following instructions &lt;em>(Ubuntu 18.04 recommended)&lt;/em>&lt;br>
+&lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/windows/wsl/install-win10&lt;/a>
+&lt;em>Proceed until a Ubuntu bash shell is available from the Windows Host&lt;/em>&lt;br>
+&lt;em>Run the remaining commands in the Bash shell&lt;/em>&lt;/li>
+&lt;li>&lt;code>sudo apt-get install lxde&lt;/code> to install LXDE desktop in WSL&lt;/li>
+&lt;li>Reboot&lt;/li>
+&lt;li>&lt;code>sudo apt-get install xrdp&lt;/code> to install XRDP in WSL&lt;/li>
+&lt;li>Open &lt;code>/etc/xrdp/xrdp.ini&lt;/code>
+Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;/li>
+&lt;li>Run &lt;code>echo startlxde &amp;gt; ~/.xsession&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h3 id="running">Running&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>sudo service xrdp start&lt;/code> to start xrdp server&lt;/li>
+&lt;li>Open Microsoft Remote Desktop Connection in Windows host&lt;/li>
+&lt;li>Connect to &lt;code>localhost:3390&lt;/code>&lt;/li>
+&lt;li>In the next login page, leave Session as &lt;code>Xorg&lt;/code>. Enter your WSL username and password and click &lt;code>OK&lt;/code>&lt;/li>
+&lt;li>This should open an LXDE Linux Desktop environment. Follow &lt;a href="https://neurodesk.org/docs/getting-started/neurocommand/linux">Linux guide&lt;/a> from here on&lt;/li>
+&lt;/ol></description></item><item><title>Visual Studio Code</title><link>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</guid><description>&lt;p>The following guide is for connecting to Neurodesktop using a VS Code installation running on your host machine.&lt;/p>
+&lt;blockquote>
+&lt;p>Please see additional instructions below if Neurodesktop is running remotely (i.e. Cloud, HPC, VM)&lt;/p>&lt;/blockquote>
+&lt;h2 id="pre-requisites">Pre-requisites&lt;/h2>
+&lt;!-- markdown-link-check-disable -->
+&lt;p>Visual Studio Code &lt;em>(&lt;a href="https://code.visualstudio.com" target="_blank" rel="noopener">https://code.visualstudio.com&lt;/a>)&lt;/em> installed on your host. Standalone version should work fine
+Install the following VS Code extensions:&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker" target="_blank" rel="noopener">Docker extension&lt;/a> (Required)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank" rel="noopener">Remote development extension pack&lt;/a>. Includes the following extensions
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers" target="_blank" rel="noopener">Remote - Containers&lt;/a> (Required)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl" target="_blank" rel="noopener">Remote - WSL&lt;/a> (For windows hosts)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!-- markdown-link-check-enable -->
+&lt;h2 id="connecting-to-neurodesktop">Connecting to Neurodesktop&lt;/h2>
+&lt;p>Open VS Code and open a Folder (File &amp;gt; Open Folder)&lt;/p></description></item></channel></rss>

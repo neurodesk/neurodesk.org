@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hosted on Neurodesk</title><link>https://neurodesk.org/getting-started/hosted/</link><description>Recent content in Hosted on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/hosted/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Codespaces</title><link>https://neurodesk.org/getting-started/hosted/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/github/</guid><description>&lt;p>Start a GitHub Codespace in the repository of your choice:
+&lt;/br>
+&lt;img src="https://neurodesk.org/static/docs/getting-started/hosted/github_codespace.png" alt="Start GitHub Codespace" width="500">&lt;/p>
+&lt;p>Then start the neurodesktop container in a terminal:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker volume create neurodesk-home &lt;span style="color:#0550ae">&amp;amp;&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo docker run &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> --shm-size&lt;span style="color:#0550ae">=&lt;/span>1gb -it --security-opt &lt;span style="color:#953800">apparmor&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>neurodeskapp --privileged --user&lt;span style="color:#0550ae">=&lt;/span>root --name neurodesktop &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -v ~/neurodesktop-storage:/neurodesktop-storage &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> --mount &lt;span style="color:#953800">source&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>neurodesk-home,target&lt;span style="color:#0550ae">=&lt;/span>/home/jovyan &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -e &lt;span style="color:#953800">NB_UID&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span>&lt;span style="color:#cf222e">$(&lt;/span>id -u&lt;span style="color:#cf222e">)&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span> -e &lt;span style="color:#953800">NB_GID&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span>&lt;span style="color:#cf222e">$(&lt;/span>id -g&lt;span style="color:#cf222e">)&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span> &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -p 8888:8888 &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -e &lt;span style="color:#953800">NEURODESKTOP_VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>2025-06-10 ghcr.io/neurodesk/neurodesktop/neurodesktop:2025-06-10&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Then open Neurodesktop in the browser by clicking the &amp;ldquo;Open in Browser&amp;rdquo; Button displayed
+&lt;/br>
+&lt;img src="https://neurodesk.org/static/docs/getting-started/hosted/github_codespace_open.png" alt="Pop up on GitHub Codespace" width="400">&lt;/p>
+&lt;p>The token for authentication is displayed in the terminal:
+&lt;img src="https://neurodesk.org/static/docs/getting-started/hosted/ghc_terminal.png" alt="alt text">&lt;/p></description></item><item><title>Bunya</title><link>https://neurodesk.org/getting-started/hosted/bunya/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/bunya/</guid><description>&lt;!-- markdown-link-check-disable -->
+&lt;p>Neurodesk is installed at the University of Queensland&amp;rsquo;s supercomputer &amp;ldquo;Bunya&amp;rdquo;. To access neurodesk tools you need to be in an interactive job (so either start a virtual desktop via Open On-Demand: &lt;a href="https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard" target="_blank" rel="noopener">https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard&lt;/a>) or run:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>salloc --nodes&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0550ae">1&lt;/span> --ntasks-per-node&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0550ae">1&lt;/span> --cpus-per-task&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0550ae">1&lt;/span> --mem&lt;span style="color:#0550ae">=&lt;/span>5G --job-name&lt;span style="color:#0550ae">=&lt;/span>TinyInteractive --time&lt;span style="color:#0550ae">=&lt;/span>01:00:00 --partition&lt;span style="color:#0550ae">=&lt;/span>debug --account&lt;span style="color:#0550ae">=&lt;/span>REPLACE_THIS_WITH_YOUR_AccountString srun --export&lt;span style="color:#0550ae">=&lt;/span>PATH,TERM,HOME,LANG --pty /bin/bash -l&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;!-- markdown-link-check-enable -->
+&lt;p>Then load the neurodesk modules:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module use /sw/local/rocky8/noarch/neuro/software/neurocommand/local/containers/modules/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">APPTAINER_BINDPATH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>/scratch,/QRISdata&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Now you can list all modules (Neurodesk modules are the first ones in the list):&lt;/p></description></item><item><title>Nectar Virtual Desktop Service</title><link>https://neurodesk.org/getting-started/hosted/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/nectar/</guid><description>&lt;p>
+
+&lt;div class="alert alert-info" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+
+ Link to Nectar Virtual Desktop Service: &lt;strong>&lt;a href="https://desktop.rc.nectar.org.au" target="_blank" rel="noopener">https://desktop.rc.nectar.org.au&lt;/a>&lt;/strong>
+
+&lt;/div>
+
+
+
+&lt;div class="alert alert-warning" role="alert">
+
+
+ This option is only available to Australian researchers. See &lt;a href="https://desktop.rc.nectar.org.au/about/" target="_blank" rel="noopener">here&lt;/a> for more information
+
+&lt;/div>
+&lt;/p>
+&lt;p>There are a few differences between the open-source version of Neurodesk and what&amp;rsquo;s hosted on Nectar VDI:&lt;/p>
+&lt;ol>
+&lt;li>There is no &lt;code>/neurodesktop-storage&lt;/code> folder (the folder on the Desktop does not lead anywhere).&lt;/li>
+&lt;li>Files uploaded via drag and drop do not get stored on the desktop but in &lt;code>/home/vdiuser/thinclient_drives/GUACFS&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="instructions-for-use">Instructions for use&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Go to &lt;a href="https://desktop.rc.nectar.org.au/" target="_blank" rel="noopener">https://desktop.rc.nectar.org.au/&lt;/a>&lt;/p></description></item><item><title>Play</title><link>https://neurodesk.org/getting-started/hosted/play/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/play/</guid><description>&lt;p>Neurodesk Play provides instant access to our neuroimaging analysis environment directly through your web browser. This service allows you to:&lt;/p>
+&lt;ul>
+&lt;li>Start using Neurodesk immediately without any installation&lt;/li>
+&lt;li>Access a wide range of pre-installed neuroimaging tools&lt;/li>
+&lt;li>Try out the platform before setting up a local installation&lt;/li>
+&lt;li>Collaborate with colleagues using a consistent environment&lt;/li>
+&lt;li>Run analyses from any device with a modern web browser&lt;/li>
+&lt;/ul>
+&lt;p>Ready to get started? Click the button below to launch Neurodesk Play:&lt;/p></description></item><item><title>Google Colab</title><link>https://neurodesk.org/getting-started/hosted/googlecolab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/googlecolab/</guid><description>&lt;div class="alert alert-warning" role="alert">
+
+
+ WARNING: Google disabled a crucial feature necessary for running containers, and Neurodesk containers currently do not run on Google Colab.
+
+&lt;/div>
+
+&lt;p>Open a notebook in Google Colab and run the following commands to set up the Neurodesk environment:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">import&lt;/span> &lt;span style="color:#24292e">os&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>os&lt;span style="color:#0550ae">.&lt;/span>environ&lt;span style="color:#1f2328">[&lt;/span>&lt;span style="color:#0a3069">&amp;#34;LD_PRELOAD&amp;#34;&lt;/span>&lt;span style="color:#1f2328">]&lt;/span> &lt;span style="color:#0550ae">=&lt;/span> &lt;span style="color:#0a3069">&amp;#34;&amp;#34;&lt;/span>&lt;span style="color:#1f2328">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>os&lt;span style="color:#0550ae">.&lt;/span>environ&lt;span style="color:#1f2328">[&lt;/span>&lt;span style="color:#0a3069">&amp;#34;APPTAINER_BINDPATH&amp;#34;&lt;/span>&lt;span style="color:#1f2328">]&lt;/span> &lt;span style="color:#0550ae">=&lt;/span> &lt;span style="color:#0a3069">&amp;#34;/content&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>os&lt;span style="color:#0550ae">.&lt;/span>environ&lt;span style="color:#1f2328">[&lt;/span>&lt;span style="color:#0a3069">&amp;#34;MPLCONFIGDIR&amp;#34;&lt;/span>&lt;span style="color:#1f2328">]&lt;/span> &lt;span style="color:#0550ae">=&lt;/span> &lt;span style="color:#0a3069">&amp;#34;/content/matplotlib-mpldir&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>os&lt;span style="color:#0550ae">.&lt;/span>environ&lt;span style="color:#1f2328">[&lt;/span>&lt;span style="color:#0a3069">&amp;#34;LMOD_CMD&amp;#34;&lt;/span>&lt;span style="color:#1f2328">]&lt;/span> &lt;span style="color:#0550ae">=&lt;/span> &lt;span style="color:#0a3069">&amp;#34;/usr/share/lmod/lmod/libexec/lmod&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f6f8fa;background-color:#82071e">!&lt;/span>curl &lt;span style="color:#0550ae">-&lt;/span>J &lt;span style="color:#0550ae">-&lt;/span>O https&lt;span style="color:#1f2328">:&lt;/span>&lt;span style="color:#0550ae">//&lt;/span>raw&lt;span style="color:#0550ae">.&lt;/span>githubusercontent&lt;span style="color:#0550ae">.&lt;/span>com&lt;span style="color:#0550ae">/&lt;/span>NeuroDesk&lt;span style="color:#0550ae">/&lt;/span>neurocommand&lt;span style="color:#0550ae">/&lt;/span>main&lt;span style="color:#0550ae">/&lt;/span>googlecolab_setup&lt;span style="color:#0550ae">.&lt;/span>sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f6f8fa;background-color:#82071e">!&lt;/span>chmod &lt;span style="color:#0550ae">+&lt;/span>x googlecolab_setup&lt;span style="color:#0550ae">.&lt;/span>sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f6f8fa;background-color:#82071e">!&lt;/span>&lt;span style="color:#0550ae">./&lt;/span>googlecolab_setup&lt;span style="color:#0550ae">.&lt;/span>sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>os&lt;span style="color:#0550ae">.&lt;/span>environ&lt;span style="color:#1f2328">[&lt;/span>&lt;span style="color:#0a3069">&amp;#34;MODULEPATH&amp;#34;&lt;/span>&lt;span style="color:#1f2328">]&lt;/span> &lt;span style="color:#0550ae">=&lt;/span> &lt;span style="color:#0a3069">&amp;#39;:&amp;#39;&lt;/span>&lt;span style="color:#0550ae">.&lt;/span>join&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#6639ba">map&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#6639ba">str&lt;/span>&lt;span style="color:#1f2328">,&lt;/span> &lt;span style="color:#6639ba">list&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#6639ba">map&lt;/span>&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#cf222e">lambda&lt;/span> x&lt;span style="color:#1f2328">:&lt;/span> os&lt;span style="color:#0550ae">.&lt;/span>path&lt;span style="color:#0550ae">.&lt;/span>join&lt;span style="color:#1f2328">(&lt;/span>os&lt;span style="color:#0550ae">.&lt;/span>path&lt;span style="color:#0550ae">.&lt;/span>abspath&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#0a3069">&amp;#39;/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/&amp;#39;&lt;/span>&lt;span style="color:#1f2328">),&lt;/span> x&lt;span style="color:#1f2328">),&lt;/span>os&lt;span style="color:#0550ae">.&lt;/span>listdir&lt;span style="color:#1f2328">(&lt;/span>&lt;span style="color:#0a3069">&amp;#39;/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/&amp;#39;&lt;/span>&lt;span style="color:#1f2328">)))))&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Once this setup is completed you can list the available Neurodesk applications like this:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">import&lt;/span> &lt;span style="color:#24292e">lmod&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">await&lt;/span> lmod&lt;span style="color:#0550ae">.&lt;/span>avail&lt;span style="color:#1f2328">()&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>and use applications like this:&lt;/p></description></item></channel></rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Preprocessing on Neurodesk</title><link>https://neurodesk.org/tags/preprocessing/</link><description>Recent content in Preprocessing on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/tags/preprocessing/index.xml" rel="self" type="application/rss+xml"/><item><title>Using fmriprep with neurodesk on an HPC</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/fmriprep/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/fmriprep/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/garner-code" target="_blank" rel="noopener">@kel_github&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way.&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;blockquote>
+&lt;p>&lt;em>An example notebook can be found here:&lt;/em>
+&lt;a href="https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb" target="_blank" rel="noopener">https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb&lt;/a>&lt;/p></description></item><item><title>Using MFCSC</title><link>https://neurodesk.org/tutorials-examples/tutorials/multimodal_imaging/mfcsc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/multimodal_imaging/mfcsc/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Oren Civier.&lt;/em>&lt;/p>
+&lt;p>Github: [@civier]
+Email: &lt;a href="mailto:orenciv@gmail.com">orenciv@gmail.com&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;p>More details on MFCSC and this tutorial can be found in the following paper:&lt;/p>
+&lt;blockquote>
+&lt;p>Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports
+&lt;a href="https://doi.org/10.1038/s41598-022-17213-z" target="_blank" rel="noopener">https://doi.org/10.1038/s41598-022-17213-z&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;p>In short, MFCSC calculates the mismatch between connectomes generated from different imaging modalities. It does it by normalising the connectomes to a common space calculated at group level, and taking into account the role of indirect connectivity in shaping the functional connectomes.&lt;/p></description></item><item><title>Using mriqc with neurodesk on HPC</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/mriqc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/mriqc/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/garner-code" target="_blank" rel="noopener">@kel_github&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>This workflow documents how to use MRIQC with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way.&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;hr>
+&lt;h1 id="assumptions">Assumptions&lt;/h1>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Your data is already in &lt;a href="https://bids.neuroimaging.io/" target="_blank" rel="noopener">BIDS format&lt;/a>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> You plan to run mriqc using Neurodesk&lt;/li>
+&lt;/ul>
+&lt;p>NOTE: MRIQC has its $HOME variable hardcoded to be /home/mriqc. This leads to problems on some HPCs. A workaround is to run this before mriqc:&lt;/p></description></item></channel></rss>

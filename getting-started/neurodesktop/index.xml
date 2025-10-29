@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurodesktop on Neurodesk</title><link>https://neurodesk.org/getting-started/neurodesktop/</link><description>Recent content in Neurodesktop on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/neurodesktop/index.xml" rel="self" type="application/rss+xml"/><item><title>Portable Unprivileged NeuroDesktop</title><link>https://neurodesk.org/getting-started/neurodesktop/portable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/portable/</guid><description>&lt;div class="alert alert-info" role="alert">
+
+
+ Installing TinyRange manually is for advanced users only. These instructions should be used as a supplement to running NeurodeskApp.
+
+&lt;/div>
+
+&lt;h3 id="minimum-system-requirements">Minimum System Requirements&lt;/h3>
+&lt;ol>
+&lt;li>At least 5GB free space for neurodesktop base image&lt;/li>
+&lt;li>At least 8GB of RAM&lt;/li>
+&lt;/ol>
+&lt;h2 id="downloading-tinyrange">Downloading TinyRange&lt;/h2>
+&lt;p>TinyRange (&lt;a href="https://github.com/tinyrange/tinyrange" target="_blank" rel="noopener">https://github.com/tinyrange/tinyrange&lt;/a>) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privileges and doesn&amp;rsquo;t need Docker or Podman installed to work.&lt;/p>
+&lt;p>Downlaod the latest version of TinyRange from: &lt;a href="https://github.com/tinyrange/tinyrange/releases/latest" target="_blank" rel="noopener">https://github.com/tinyrange/tinyrange/releases/latest&lt;/a>&lt;/p></description></item><item><title>Linux</title><link>https://neurodesk.org/getting-started/neurodesktop/linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/linux/</guid><description>&lt;h2 id="minimum-system-requirements">Minimum System Requirements&lt;/h2>
+&lt;ol>
+&lt;li>At least 3GB free space for neurodesktop base image&lt;/li>
+&lt;li>Docker requirements. Details found under &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">https://docs.docker.com/get-docker/&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h2 id="quickstart">Quickstart&lt;/h2>
+&lt;h3 id="0-install-docker-or-podman">0. Install Docker or Podman&lt;/h3>
+&lt;p>Install Docker from here: &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">https://docs.docker.com/get-docker/&lt;/a>. Additional information is available &lt;a href="#installing-docker">below&lt;/a>.
+Alternatively, Neurodesk also works with Podman (&lt;a href="https://podman.io" target="_blank" rel="noopener">https://podman.io&lt;/a>).&lt;/p>
+&lt;p>To set up Neurodesk on Ubuntu, ensure both Podman client and server are installed. Follow the Podman installation instructions provided at &lt;a href="https://podman.io/docs/installation" target="_blank" rel="noopener">https://podman.io/docs/installation&lt;/a> for server setup.&lt;/p>
+
+
+&lt;div class="alert alert-info" role="alert">
+
+
+ &lt;p>In Ubuntu 20.10 or newer versions, the packages to install Podman are included to download in the standard repository of the system. However, for Ubuntu 20.04, we manually have to add the repository of Podman.&lt;/p></description></item><item><title>MacOS</title><link>https://neurodesk.org/getting-started/neurodesktop/mac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/mac/</guid><description>&lt;h2 id="quickstart">Quickstart&lt;/h2>
+&lt;h3 id="1-install-docker-or-podman">1. Install Docker or Podman&lt;/h3>
+&lt;p>Install Docker from here: &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">https://docs.docker.com/get-docker/&lt;/a>
+Alternatively, Neurodesk also works with Podman, follow the Podman installation instructions provided at &lt;a href="https://podman.io/docs/installation" target="_blank" rel="noopener">https://podman.io/docs/installation&lt;/a>.&lt;/p>
+
+
+&lt;div class="alert alert-warning" role="alert">
+
+
+ &lt;p>Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memory minimum for docker is highly recommended. You need to adjust this:&lt;/p>
+&lt;ol>
+&lt;li>Open the Docker Desktop and Navigate to the Settings. Then navigate to the &amp;ldquo;Resources&amp;rdquo; section.&lt;/li>
+&lt;li>Increase the Memory slider from 2.00 GB to 4.00 GB (or greater)&lt;/li>
+&lt;li>Increase Swap slider from 1GB to 2GB (or greater)&lt;/li>
+&lt;/ol>
+
+&lt;/div>
+
+&lt;h3 id="2-run-neurodesktop">2. Run Neurodesktop&lt;/h3>
+&lt;p>Use one of the following options to run Neurodesktop:&lt;/p></description></item><item><title>Windows</title><link>https://neurodesk.org/getting-started/neurodesktop/windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/windows/</guid><description>&lt;h2 id="minimum-system-requirements">Minimum System Requirements&lt;/h2>
+&lt;ol>
+&lt;li>At least 3GB free space for neurodesktop base image&lt;/li>
+&lt;li>Docker requirements. Details found under &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">https://docs.docker.com/get-docker/&lt;/a>&lt;/li>
+&lt;li>If installing docker using WSL, minimum 20GB space recommended for WSL with Ubuntu&lt;/li>
+&lt;/ol>
+&lt;h2 id="quickstart">Quickstart&lt;/h2>
+&lt;h3 id="1-install-docker-or-podman">1. Install Docker or Podman&lt;/h3>
+&lt;p>Install Docker from here: &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">https://docs.docker.com/get-docker/&lt;/a>
+
+
+&lt;div class="alert alert-info" role="alert">
+
+
+ The docker installation will reboot your computer a few times. There might be warnings regarding WSL2 and this also might require a few more installation steps that unfortunately differ for every system. Please get in touch if you are stuck and have a look at our troubleshooting page. Here is a detailed instruction on how Neurodesk was installed on Windows VMs from the team at Technion: &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf" target="_blank" rel="noopener">Detailed Docker &amp;amp; Neurodesk installation instruction Windows
+&lt;/a>
+
+&lt;/div>
+&lt;/p></description></item><item><title>Cloud</title><link>https://neurodesk.org/getting-started/neurodesktop/cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/cloud/</guid><description>&lt;h2 id="options-for-running-neurodesk-on-cloud-computing-resources">Options for Running Neurodesk on cloud computing resources&lt;/h2>
+&lt;p>There are a couple of ways how Neurodesktop can be run on cloud computing resources:&lt;/p>
+&lt;ol>
+&lt;li>The first and easiest option is to provision a virtual Linux machine and run docker on this machine similar to a local Linux setup: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/linux/" target="_blank" rel="noopener">https://neurodesk.org/docs/getting-started/neurodesktop/linux/&lt;/a>&lt;/li>
+&lt;li>Another option is to use Windows VMs and some groups have had success with that. Here is a detailed instructions on this setup: &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf&lt;/a>&lt;/li>
+&lt;li>This group runs jupyterhub with a neurodesk image through Docker Compose: &lt;a href="https://github.com/wieluk/jupyterhub-neurodesk/" target="_blank" rel="noopener">https://github.com/wieluk/jupyterhub-neurodesk/&lt;/a>&lt;/li>
+&lt;li>The most scalable solution is to run Neurodesk via Kubernetes. This setup is a bit more complex, but can handle many simultaneous users and is ideal for research groups and workshops. The easiest way to deploy Neurodesk on Kubernetes is to use Zero to Jupyterhub (&lt;a href="https://z2jh.jupyter.org/en/stable/" target="_blank" rel="noopener">https://z2jh.jupyter.org/en/stable/&lt;/a>) - then you can use the Neurodesk image like any other jupyterhub image. If you do not want to run a privileged container you need to deploy the cvmfs setup on Kubernetes as well: &lt;a href="https://github.com/cvmfs-contrib/cvmfs-csi/" target="_blank" rel="noopener">https://github.com/cvmfs-contrib/cvmfs-csi/&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Data Storage</title><link>https://neurodesk.org/getting-started/neurodesktop/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/storage/</guid><description>&lt;div>
+ &lt;nav id="TableOfContents">
+ &lt;ul>
+ &lt;li>&lt;a href="#drag-and-drop">Drag and Drop&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#uploading-files">Uploading files&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#downloading-files">Downloading files&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#local-storage">Local storage&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#mounting-external-storage-on-your-host-computer">Mounting external storage on your host-computer&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#cloud-storage">Cloud storage&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#nextcloud-and-owncloud-desktop-clients">Nextcloud and Owncloud desktop clients&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#mounting-webdav-storage-using-davfs2">Mounting webdav storage using davfs2&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#rclone">Rclone&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#globus">Globus&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#mount-volume-using-sshfs">Mount volume using SSHFS&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+&lt;/nav>
+&lt;/div>
+&lt;h2 id="drag-and-drop">Drag and Drop&lt;/h2>
+&lt;h3 id="uploading-files">Uploading files&lt;/h3>
+&lt;p>You can drag-and-drop files into the browser window to get files into Neurodesktop. This will then start a file upload:&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/4021595/160577507-b5159bae-13c0-4fbf-85da-0ce55fd481f3.png" alt="{538BB51E-0FEB-46EA-B1B8-FDF122776735}">&lt;/p>
+&lt;h3 id="downloading-files">Downloading files&lt;/h3>
+&lt;p>To download files from the desktop using the same mechanism you will need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:&lt;/p></description></item></channel></rss>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Functional Imaging on Neurodesk</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/</link><description>Recent content in Functional Imaging on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/index.xml" rel="self" type="application/rss+xml"/><item><title>Connectome Workbench</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/connectomeworkbench/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/connectomeworkbench/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Fernanda L. Ribeiro.&lt;/em>&lt;/p>
+&lt;p>Email: &lt;a href="mailto:fernanda.ribeiro@uq.edu.au">fernanda.ribeiro@uq.edu.au&lt;/a>&lt;/p>
+&lt;p>Github: @felenitaribeiro&lt;/p>
+&lt;p>Twitter: @NandaRibeiro93&lt;/p>&lt;/blockquote>
+&lt;!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
+&lt;p>This tutorial documents how to use Connectome Workbench on NeuroDesk for visualizing the 7T HCP Retinotopy Dataset.&lt;/p>
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;h2 id="download-data">Download data&lt;/h2>
+&lt;!-- markdown-link-check-disable -->
+&lt;ol>
+&lt;li>
+&lt;p>First, make sure you register for the Human Connectome Project Open Access Data: &lt;a href="https://www.humanconnectome.org/study/hcp-young-adult/data-use-terms" target="_blank" rel="noopener">https://www.humanconnectome.org/study/hcp-young-adult/data-use-terms&lt;/a>&lt;/p></description></item><item><title>Using fmriprep with neurodesk on an HPC</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/fmriprep/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/fmriprep/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/garner-code" target="_blank" rel="noopener">@kel_github&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way.&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;blockquote>
+&lt;p>&lt;em>An example notebook can be found here:&lt;/em>
+&lt;a href="https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb" target="_blank" rel="noopener">https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb&lt;/a>&lt;/p></description></item><item><title>Using mriqc with neurodesk on HPC</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/mriqc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/mriqc/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/garner-code" target="_blank" rel="noopener">@kel_github&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>This workflow documents how to use MRIQC with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way.&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;hr>
+&lt;h1 id="assumptions">Assumptions&lt;/h1>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Your data is already in &lt;a href="https://bids.neuroimaging.io/" target="_blank" rel="noopener">BIDS format&lt;/a>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> You plan to run mriqc using Neurodesk&lt;/li>
+&lt;/ul>
+&lt;p>NOTE: MRIQC has its $HOME variable hardcoded to be /home/mriqc. This leads to problems on some HPCs. A workaround is to run this before mriqc:&lt;/p></description></item><item><title>PhysIO</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/physio/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/physio/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Lars Kasper.&lt;/em>&lt;/p>
+&lt;p>Github: @mrikasper&lt;/p>
+&lt;p>Twitter: @mrikasper&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;h2 id="origin">Origin&lt;/h2>
+&lt;p>The PhysIO Toolbox implements ideas for robust physiological noise modeling in fMRI, outlined in this paper:&lt;/p>
+&lt;ol>
+&lt;li>Kasper, L., Bollmann, S., Diaconescu, A.O., Hutton, C., Heinzle, J., Iglesias,
+S., Hauser, T.U., Sebold, M., Manjaly, Z.-M., Pruessmann, K.P., Stephan, K.E., 2017.
+&lt;em>The PhysIO Toolbox for Modeling Physiological Noise in fMRI Data&lt;/em>.
+Journal of Neuroscience Methods 276, 56-72. &lt;a href="https://doi.org/10.1016/j.jneumeth.2016.10.019" target="_blank" rel="noopener">https://doi.org/10.1016/j.jneumeth.2016.10.019&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;p>PhysIO is part of the open-source &lt;a href="https://translationalneuromodeling.github.io/tapas/" target="_blank" rel="noopener">TAPAS Software Package&lt;/a> for Translational Neuromodeling and Computational Psychiatry, introduced in the following paper:&lt;/p></description></item><item><title>A batch scripting example for PhysIO toolbox</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/physio_batch_workflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/physio_batch_workflow/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: @kel-github&lt;/p>
+&lt;p>Twitter: @garner_theory&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;p>This tutorial walks through 1 way to batch script the use of the PhysIO toolbox with Neurodesk.
+The goal is to use the toolbox to generate physiological regressors to use when modelling fMRI data.
+The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. &lt;p>&lt;/p></description></item><item><title>Statistical Parametric Mapping (SPM)</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/spm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/spm/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Steffen Bollmann.&lt;/em>&lt;/p>
+&lt;p>Email: &lt;a href="mailto:s.bollmannn@uq.edu.au">s.bollmannn@uq.edu.au&lt;/a>&lt;/p>
+&lt;p>Github: @stebo85&lt;/p>
+&lt;p>Twitter: @sbollmann_MRI&lt;/p>&lt;/blockquote>
+&lt;!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;p>This tutorial is based on the excellent tutorial from Andy&amp;rsquo;s Brain book: &lt;a href="https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html" target="_blank" rel="noopener">https://andysbrainbook.readthedocs.io/en/latest/SPM/SPM_Overview.html&lt;/a>
+Our version here is a shortened and adjusted version for using on the Neurodesk platform.&lt;/p></description></item></channel></rss>

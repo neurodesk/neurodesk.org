@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture on Neurodesk</title><link>https://neurodesk.org/developers/architecture/</link><description>Recent content in Architecture on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/developers/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Neurodesk Architecture</title><link>https://neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-components/</guid><description>&lt;p>&lt;img src="https://neurodesk.org/static/developers/architecture/neurodesk-components/NeurodeskArchitecture.png" alt="architecture" title="architecture">&lt;/p>
+&lt;h2 id="neurodesktop-recommended-for-beginners">Neurodesktop: Recommended for Beginners&lt;/h2>
+&lt;p>&lt;em>Neurodesktop&lt;/em> is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
+To get started, see: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">Neurodesktop&lt;/a> (&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">Github&lt;/a>)&lt;/p>
+&lt;ul>
+&lt;li>docker container with interface modifications&lt;/li>
+&lt;li>contains tools necessary to manage workflows in sub-containers: vscode, git&lt;/li>
+&lt;li>CI: builds docker image and tests if it runs; tests if CVMFS servers are OK before deployment&lt;/li>
+&lt;li>CD: pushes images to github &amp;amp; docker registry&lt;/li>
+&lt;/ul>
+&lt;h2 id="neurocommand">Neurocommand:&lt;/h2>
+&lt;p>&lt;em>Neurocommand&lt;/em> offers the option to install and manage multiple distinct containers for more advanced users who prefer a command-line interface. &lt;em>Neurocommand&lt;/em> is the recommended interface for users seeking to use Neurodesk in high performance computing (HPC) environments.&lt;/p></description></item><item><title>Neurodesktop Release Process</title><link>https://neurodesk.org/developers/architecture/release_process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/release_process/</guid><description>&lt;h2 id="neurodesktop">Neurodesktop:&lt;/h2>
+&lt;ol>
+&lt;li>Check if the last automated build ran OK: &lt;a href="https://github.com/NeuroDesk/neurodesktop/actions" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/actions&lt;/a>&lt;/li>
+&lt;li>Run this build date and test if everything is ok and no regression happened&lt;/li>
+&lt;li>Check what changes where made since the last release: &lt;a href="https://github.com/NeuroDesk/neurodesktop/commits/main" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/commits/main&lt;/a>&lt;/li>
+&lt;li>Summarize the main changes and copy this to the Release History: &lt;a href="https://neurodesk.org/docs/overview/release-history/" target="_blank" rel="noopener">https://neurodesk.org/docs/overview/release-history/&lt;/a>&lt;/li>
+&lt;li>Change the version of the latest desktop in &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/data/neurodesktop.toml" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesk.github.io/blob/main/data/neurodesktop.toml&lt;/a>&lt;/li>
+&lt;li>Commit all changes&lt;/li>
+&lt;li>Tweet a quick summary of the changes and announce new version: &lt;a href="https://masto.ai/@Neurodesk" target="_blank" rel="noopener">https://masto.ai/@Neurodesk&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h2 id="neurodesk-app">Neurodesk App:&lt;/h2>
+&lt;h3 id="release-process">Release process&lt;/h3>
+&lt;p>Follow these steps to create a new release of the &lt;a href="https://github.com/NeuroDesk/neurodesk-app" target="_blank" rel="noopener">Neurodesk App&lt;/a>.&lt;/p></description></item><item><title>Neurodesktop Dev</title><link>https://neurodesk.org/developers/architecture/neurodesk-dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-dev/</guid><description>&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Warning&lt;/h4>
+
+ For development and testing only. Not recommended for production use
+
+&lt;/div>
+
+&lt;h2 id="building-neurodesktop-dev">Building neurodesktop-dev&lt;/h2>
+&lt;p>Dev builds can be triggered by Neurodesk admins from &lt;a href="https://github.com/NeuroDesk/neurodesktop/actions/workflows/build-neurodesktop-dev.yml" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/actions/workflows/build-neurodesktop-dev.yml&lt;/a>&lt;/p>
+&lt;h2 id="running-latest-neurodesktop-dev">Running latest neurodesktop-dev&lt;/h2>
+&lt;h3 id="linux">Linux&lt;/h3>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker pull vnmd/neurodesktop-dev:latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo docker run &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> --shm-size&lt;span style="color:#0550ae">=&lt;/span>1gb -it --cap-add SYS_ADMIN &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> --security-opt apparmor:unconfined --device&lt;span style="color:#0550ae">=&lt;/span>/dev/fuse &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> --name neurodesktop-dev &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -v ~/neurodesktop-storage:/neurodesktop-storage &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -e &lt;span style="color:#953800">NB_UID&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span>&lt;span style="color:#cf222e">$(&lt;/span>id -u&lt;span style="color:#cf222e">)&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span> -e &lt;span style="color:#953800">NB_GID&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span>&lt;span style="color:#cf222e">$(&lt;/span>id -g&lt;span style="color:#cf222e">)&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span> &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -p 8888:8888 -e &lt;span style="color:#953800">NEURODESKTOP_VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>dev &lt;span style="color:#0a3069">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> vnmd/neurodesktop-dev:latest&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;h3 id="windows">Windows&lt;/h3>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker pull vnmd/neurodesktop-dev:latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run --shm-size&lt;span style="color:#0550ae">=&lt;/span>1gb -it --cap-add SYS_ADMIN --security-opt apparmor:unconfined --device&lt;span style="color:#0550ae">=&lt;/span>/dev/fuse --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -e &lt;span style="color:#953800">NEURODESKTOP_VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>dev vnmd/neurodesktop-dev:latest&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div></description></item><item><title>Transparent Singularity</title><link>https://neurodesk.org/developers/architecture/transparent_singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/transparent_singularity/</guid><description>&lt;p>Transparent singularity is here &lt;a href="https://github.com/NeuroDesk/transparent-singularity/" target="_blank" rel="noopener">https://github.com/NeuroDesk/transparent-singularity/&lt;/a>&lt;/p>
+&lt;p>This project allows to use singularity containers transparently on HPCs, so that an application inside the container can be used without adjusting any scripts or pipelines (e.g. nipype).&lt;/p>
+&lt;h2 id="important-add-bind-points-to-bashrc-before-executing-this-script">Important: add bind points to .bashrc before executing this script&lt;/h2>
+&lt;p>This script expects that you have adjusted the Singularity Bindpoints in your .bashrc, e.g.:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> SINGULARITY_BINDPATH&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#34;/gpfs1/,/QRISdata,/data&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;h2 id="this-gives-you-a-list-of-all-tested-images-available-in-neurodesk">This gives you a list of all tested images available in neurodesk:&lt;/h2>
+&lt;p>&lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p></description></item><item><title>Project Roadmap</title><link>https://neurodesk.org/developers/architecture/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/roadmap/</guid><description>&lt;p>All things we are currently working on and are planning to do are listed here: &lt;a href="https://github.com/orgs/NeuroDesk/projects/9/views/4" target="_blank" rel="noopener">https://github.com/orgs/NeuroDesk/projects/9/views/4&lt;/a>&lt;/p>
+&lt;p>The larger themes and subthemes are:&lt;/p>
+&lt;h1 id="streamlining-container-build-and-release-process">Streamlining container build and release process&lt;/h1>
+&lt;h2 id="improving-the-workflow-of-how-users-can-add-new-applications-to-neurodesk">Improving the workflow of how users can add new applications to Neurodesk&lt;/h2>
+&lt;p>Adding new applications to Neurodesk requires multiple steps and back-and-forth between contributors and maintainers. We are aiming to simplify this process by developing an interactive workflow based on our current interactive container builder and the existing github workflows.&lt;/p></description></item></channel></rss>

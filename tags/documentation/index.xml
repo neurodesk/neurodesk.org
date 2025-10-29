@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on Neurodesk</title><link>https://neurodesk.org/tags/documentation/</link><description>Recent content in Documentation on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/tags/documentation/index.xml" rel="self" type="application/rss+xml"/><item><title>Contribute Tutorials</title><link>https://neurodesk.org/tutorials-examples/contribute/contribute-tutorials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/contribute/contribute-tutorials/</guid><description>&lt;p>We welcome tutorials that walk users through using tools or workflows available in Neurodesk. These tutorials are valuable learning resources that support accessible, reproducible neuroimaging.&lt;/p>
+&lt;p>Tutorials are written in Markdown and hosted in the &lt;a href="https://github.com/Neurodesk/neurodesk.github.io/tree/main/content/en/tutorials-examples/tutorials" target="_blank" rel="noopener">&lt;code>neurodesk.github.io:tutorials&lt;/code>&lt;/a> repository, where they appear as part of the documentation site.&lt;/p>
+&lt;hr>
+&lt;h2 id="getting-started">Getting Started&lt;/h2>
+&lt;p>To contribute a new tutorial, follow the steps below:&lt;/p>
+&lt;h3 id="1-start-from-the-template">1. Start from the template&lt;/h3>
+&lt;p>Download the &lt;a href="https://github.com/Neurodesk/neurodesk.github.io/blob/main/.github/content-templates/tutorial-template.md" target="_blank" rel="noopener">tutorial Markdown template&lt;/a> file from GitHub and edit it locally with your own content.&lt;/p></description></item><item><title>Analysing M/EEG Data with FieldTrip</title><link>https://neurodesk.org/tutorials-examples/tutorials/electrophysiology/fieldtrip/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/electrophysiology/fieldtrip/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Judy D Zhu.&lt;/em>&lt;/p>
+&lt;p>Email: &lt;a href="mailto:judyzhud@gmail.com">judyzhud@gmail.com&lt;/a>&lt;/p>
+&lt;p>Github: @JD-Zhu&lt;/p>
+&lt;p>Twitter: @JudyDZhu&lt;/p>&lt;/blockquote>
+&lt;hr>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;p>Please note that this container uses a compiled version of FieldTrip to run scripts (without needing a Matlab license). Code development is not currently supported within the container and needs to be carried out separately in Matlab.&lt;br>
+&lt;br/>&lt;/p></description></item><item><title>Using fmriprep with neurodesk on an HPC</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/fmriprep/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/fmriprep/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/garner-code" target="_blank" rel="noopener">@kel_github&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>This workflow documents how to use fmriprep with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way.&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;blockquote>
+&lt;p>&lt;em>An example notebook can be found here:&lt;/em>
+&lt;a href="https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb" target="_blank" rel="noopener">https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb&lt;/a>&lt;/p></description></item><item><title>Using mriqc with neurodesk on HPC</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/mriqc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/mriqc/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/garner-code" target="_blank" rel="noopener">@kel_github&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>This workflow documents how to use MRIQC with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way.&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;hr>
+&lt;h1 id="assumptions">Assumptions&lt;/h1>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Your data is already in &lt;a href="https://bids.neuroimaging.io/" target="_blank" rel="noopener">BIDS format&lt;/a>&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> You plan to run mriqc using Neurodesk&lt;/li>
+&lt;/ul>
+&lt;p>NOTE: MRIQC has its $HOME variable hardcoded to be /home/mriqc. This leads to problems on some HPCs. A workaround is to run this before mriqc:&lt;/p></description></item><item><title>A batch scripting example for PhysIO toolbox</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/physio_batch_workflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/physio_batch_workflow/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Kelly G. Garner.&lt;/em>&lt;/p>
+&lt;p>Github: @kel-github&lt;/p>
+&lt;p>Twitter: @garner_theory&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;p>This tutorial walks through 1 way to batch script the use of the PhysIO toolbox with Neurodesk.
+The goal is to use the toolbox to generate physiological regressors to use when modelling fMRI data.
+The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. &lt;p>&lt;/p></description></item><item><title>Contribute to Neurodesk.org</title><link>https://neurodesk.org/developers/documentation/creating-website-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/creating-website-content/</guid><description>&lt;p>This applies if you with to submit a new tutorial or amend content on a page. Our website is mostly written in Markdown (.md files). We include the basics of writing in Markdown on this page.&lt;/p>
+&lt;h2 id="table-of-contents">Table of contents&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="#create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications">Create your own copy of &lt;em>neurodesk/neurodesk.github.io&lt;/em> repository&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#create-your-content-or-make-your-modifications">Create your content or make your modifications&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#contribute-your-new-content-to-the-official-documentation">Contribute your new content to the official documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#formatting-guidelines">Formatting guidelines&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#code-blocks">Code blocks&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#images">Images&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#alerts-and-warnings">Alerts and warnings&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#tables">Tables&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#lists">Lists&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications">Create your own copy of &lt;em>neurodesk/neurodesk.github.io&lt;/em> repository where you will be able to make modifications&lt;/h3>
+&lt;p>Begin by creating a copy of our documentation that you can edit:&lt;/p></description></item></channel></rss>

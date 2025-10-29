@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Structural Imaging on Neurodesk</title><link>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/</link><description>Recent content in Structural Imaging on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/index.xml" rel="self" type="application/rss+xml"/><item><title>FreeSurfer</title><link>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/freesurfer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/freesurfer/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Steffen Bollmann.&lt;/em>&lt;/p>
+&lt;p>Github: &lt;a href="https://github.com/stebo85" target="_blank" rel="noopener">@stebo85&lt;/a>
+Web: &lt;a href="https://mri.sbollmann.net/" target="_blank" rel="noopener">mri.sbollmann.net&lt;/a>
+Twitter: &lt;a href="https://twitter.com/sbollmann_MRI" target="_blank" rel="noopener">@sbollmann_MRI&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;h2 id="freesurfer-example-using-module-load-eg-on-an-hpc">FreeSurfer Example using module load (e.g. on an HPC)&lt;/h2>
+&lt;p>Download data:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>osf -p bt4ez fetch osfstorage/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz sub-01_ses-01_7T_T1w_defaced.nii.gz&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Setup FreeSurfer:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span style="display:flex;">&lt;span>ml freesurfer&lt;span style="color:#0550ae">/&lt;/span>&lt;span style="color:#0550ae">7.3&lt;/span>&lt;span style="color:#0550ae">.&lt;/span>&lt;span style="color:#0550ae">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> SUBJECTS_DIR&lt;span style="color:#0550ae">=$&lt;/span>PWD&lt;span style="color:#0550ae">/&lt;/span>freesurfer&lt;span style="color:#0550ae">-&lt;/span>output
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkdir &lt;span style="color:#0550ae">$&lt;/span>SUBJECTS_DIR
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> SINGULARITYENV_SUBJECTS_DIR&lt;span style="color:#0550ae">=$&lt;/span>SUBJECTS_DIR
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> APPTAINERENV_SUBJECTS_DIR&lt;span style="color:#0550ae">=$&lt;/span>SUBJECTS_DIR&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Run Recon all pipeline:&lt;/p></description></item><item><title>Structural connectivity dMRI</title><link>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/structuralconnectivity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/structuralconnectivity/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>This tutorial was created by Joan Amos.&lt;/em>&lt;/p>
+&lt;p>Email: &lt;a href="mailto:joan@std.uestc.edu.cn">joan@std.uestc.edu.cn&lt;/a>
+Github: @Joanone&lt;/p>&lt;/blockquote>
+&lt;!-- Following line adds a link to getting set up with Neurodesk -->
+
+&lt;div class="alert alert-info" role="alert">
+ &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
+ &lt;i>For more information on getting set up with a Neurodesk environment, see &lt;a href="https://neurodesk.org/tutorials-examples">here&lt;/a>&lt;/i>
+&lt;/div>
+&lt;!-- -->
+&lt;h2 id="references">References:&lt;/h2>
+&lt;p>The steps used for this tutorial were from:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/civier/HCP-dMRI-connectome" target="_blank" rel="noopener">https://github.com/civier/HCP-dMRI-connectome&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://andysbrainbook.readthedocs.io/en/latest/MRtrix/MRtrix_Course/MRtrix_00_Diffusion_Overview.html" target="_blank" rel="noopener">https://andysbrainbook.readthedocs.io/en/latest/MRtrix/MRtrix_Course/MRtrix_00_Diffusion_Overview.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mrtrix.readthedocs.io/en/latest/quantitative_structural_connectivity/structural_connectome.html" target="_blank" rel="noopener">https://mrtrix.readthedocs.io/en/latest/quantitative_structural_connectivity/structural_connectome.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="data-description">Data Description&lt;/h2>
+&lt;h3 id="reference">Reference:&lt;/h3>
+&lt;p>The single subject data (T1w structural and diffusion) used in this tutorial has been minimally preprocessed and was downloaded from the open available source:&lt;/p></description></item></channel></rss>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurodesk Overview on Neurodesk</title><link>https://neurodesk.org/overview/</link><description>Recent content in Neurodesk Overview on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/overview/index.xml" rel="self" type="application/rss+xml"/><item><title>Acknowledgments</title><link>https://neurodesk.org/overview/acknowledgement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/acknowledgement/</guid><description>&lt;p>We are deeply grateful to all the individuals, institutions, and communities that support the Neurodesk project through their time, expertise, infrastructure, and resources.&lt;/p>
+&lt;h2 id="cultural-and-land-acknowledgement">Cultural and Land Acknowledgement&lt;/h2>
+&lt;p>&lt;strong>We acknowledge and honour the Traditional Custodians and Indigenous Peoples of all lands on which we live, work, and connect around the world.&lt;/strong> These lands have been, and continue to be, places of deep cultural, spiritual, and ancestral significance for their First Peoples. We honour their resilience, knowledge, and contributions, and commit to respectful collaboration wherever our work reaches.&lt;/p></description></item><item><title>Code of Conduct</title><link>https://neurodesk.org/overview/code-of-conduct/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/code-of-conduct/</guid><description>&lt;h2 id="neurodesks-code-of-conduct">Neurodesk&amp;rsquo;s Code of Conduct&lt;/h2>
+&lt;p>Neurodesk is an open, collaborative, and globally distributed initiative dedicated to building accessible tools for neuroimaging and neuroscience research. We value the contributions of individuals from all backgrounds and are committed to cultivating a diverse, inclusive, and respectful environment for everyone.&lt;/p>
+&lt;p>We expect all members of the Neurodesk community to engage respectfully and constructively in all interactions, both public and private. This Code of Conduct outlines our shared values, sets expectations for behavior, and describes pathways for addressing concerns.&lt;/p></description></item><item><title>Neurodesk Publications</title><link>https://neurodesk.org/overview/publications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/publications/</guid><description>&lt;p>This page highlights peer-reviewed papers, preprints, and other research outputs that have used or cited Neurodesk in their methods, workflows, or infrastructure.&lt;/p>
+&lt;p>For instructions on how to cite Neurodesk and specific tools, visit our &lt;a href="https://neurodesk.org/docs/how-to-cite-us">Citation Guide&lt;/a>.&lt;/p>
+&lt;hr>
+&lt;h2 id="featured-publications">Featured Publications&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J., &amp;hellip; Narayanan, A. &amp;amp; Bollmann, S. Neurodesk: an accessible, flexible and portable data analysis environment for reproducible neuroimaging. Nat Methods (2024). &lt;a href="https://doi.org/10.1038/s41592-023-02145-x" target="_blank" rel="noopener">https://doi.org/10.1038/s41592-023-02145-x&lt;/a>&lt;/p></description></item><item><title>How to cite us</title><link>https://neurodesk.org/overview/how-to-cite-us/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/how-to-cite-us/</guid><description>&lt;p>If you used Neurodesk in your research or teaching, please cite our main paper and the relevant containerized tools to ensure reproducibility and proper attribution.&lt;/p>
+&lt;h2 id="citing-neurodesk">Citing Neurodesk&lt;/h2>
+&lt;p>Please cite the &lt;a href="https://www.nature.com/articles/s41592-023-02145-x" target="_blank" rel="noopener">Neurodesk paper&lt;/a>. You can also access it via the &lt;a href="https://rdcu.be/eqro7" target="_blank" rel="noopener">open access link&lt;/a> or refer to the &lt;a href="https://www.biorxiv.org/content/10.1101/2022.12.23.521691v2" target="_blank" rel="noopener">preprint version&lt;/a>.&lt;/p>
+&lt;p>If you used &lt;strong>Neurodesktop&lt;/strong>, please include the version used (e.g., &lt;code>v2025-06-10&lt;/code>). See &lt;a href="#examples">examples below&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Full citation:&lt;/strong>
+Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J., &amp;hellip; Narayanan, A. &amp;amp; Bollmann, S. Neurodesk: an accessible, flexible and portable data analysis environment for reproducible neuroimaging. Nat Methods (2024). &lt;a href="https://doi.org/10.1038/s41592-023-02145-x" target="_blank" rel="noopener">https://doi.org/10.1038/s41592-023-02145-x&lt;/a>&lt;/p></description></item><item><title>Neurodesk FAQ</title><link>https://neurodesk.org/overview/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/faq/</guid><description>&lt;div>
+ &lt;nav id="TableOfContents">
+ &lt;ul>
+ &lt;li>&lt;a href="#general-overview">&lt;strong>General Overview&lt;/strong>&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#what-is-neurodesk">What is Neurodesk?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#what-applications-are-included-in-neurodesk">What applications are included in Neurodesk?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-should-i-cite-the-tools-i-am-using-and-neurodesk-itself">How should I cite the tools I am using and Neurodesk itself?&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#using-neurodesktop">&lt;strong>Using Neurodesktop&lt;/strong>&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#can-i-change-the-desktop-resolution">Can I change the desktop resolution?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#can-i-run-neurodesk-on-an-hpc-without-docker">Can I run Neurodesk on an HPC without Docker?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-do-i-get-my-files-into-neurodesk">How do I get my files into Neurodesk?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#can-i-export-a-jupyter-notebook-as-a-pdf">Can I export a jupyter notebook as a PDF?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#is-there-reduced-performance-when-using-containers">Is there reduced performance when using containers?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-can-i-see-how-many-compute-resources-neurodesk-containers-need">How can I see how many compute resources Neurodesk containers need?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#can-i-just-use-the-containers-without-neurodesktop-or-neurocommand">Can I just use the containers without neurodesktop or neurocommand?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#can-i-keep-my-modifications-in-the-container">Can I keep my modifications in the container?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#can-i-force-a-complete-container-download-to-my-system">Can I force a complete container download to my system?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-to-restart-a-neurodesk-lab-session">How to restart a Neurodesk Lab session?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-to-restart-a-stuck-neurodesk-when-running-locally-in-docker-or-using-the-neurodeskapp">How to restart a stuck Neurodesk when running locally in Docker or using the NeurodeskApp?&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#troubleshooting-common-issues">&lt;strong>Troubleshooting Common Issues&lt;/strong>&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#i-get-an-error-failed-to-create-session-check-if-docker-is-running-and-try-again-when-i-try-to-launch-neurdesk-app-locally">I get an error &amp;ldquo;Failed to create session. Check if Docker is running and try again.&amp;rdquo; when I try to launch Neurdesk App locally.&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#freeview-720-crashes-when-i-open-files">Freeview 7.2.0 crashes when I open files&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#matlab-asks-me-to-reactivate-after-restarting-the-desktop">Matlab asks me to reactivate after restarting the desktop&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#trouble-installing-neurodesk-images">Trouble installing neurodesk images&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#i-got-an-error-message-x-killed-or-not-enough-memory">I got an error message &amp;lsquo;X killed&amp;rsquo; or not enough memory&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-to-empty-trash-bin-in-neurodesktop">How to empty trash bin in Neurodesktop&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#keyboard-clipboard-and-language-support">&lt;strong>Keyboard, Clipboard, and Language Support&lt;/strong>&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#keyboard-and-multi-language-support">Keyboard and Multi-Language support&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#i-am-using-a-european-keyboard-layout-and-i-cannot-type-symbols-that-require-the-alt-gr-key-like--or-">I am using a European keyboard layout and I cannot type symbols that require the ALT-GR key (like @ or \)&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#clipboard-issues">Clipboard issues&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#how-do-i-copy-and-paste-text">How do I copy and paste text?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#i-cannot-copy-and-paste-text-within-neurodesktop-using-keyboard-shortcuts">I cannot copy and paste text within Neurodesktop using keyboard shortcuts&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#copying-text-from-my-host-computer-and-pasting-it-inside-neurodesktop-doesnt-work-in-firefox">Copying text from my host computer and pasting it inside Neurodesktop doesn&amp;rsquo;t work in Firefox&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#copy-and-paste-between-my-host-computer-and-neurodesktop-or-vice-versa-doesnt-work-in-chrome-or-edge">Copy and paste between my host computer and Neurodesktop (or vice versa) doesn&amp;rsquo;t work in Chrome or Edge&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#i-fixed-my-internet-browser-clipboard-but-copy-or-paste-still-do-not-work-in-the-terminal">I fixed my internet browser clipboard, but copy or paste still do not work in the terminal&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#i-fixed-my-internet-browser-clipboard-but-copy-or-paste-still-do-not-work-in-the-file-browser">I fixed my internet browser clipboard, but copy or paste still do not work in the file browser&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#i-fixed-my-internet-browser-clipboard-but-copy-or-paste-still-do-not-work-in-a-specificall-applications">I fixed my internet browser clipboard, but copy or paste still do not work in a specific/all applications&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#docker-wsl-memory">&lt;strong>Docker, WSL, Memory&lt;/strong>&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#docker">Docker&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#docker-shows-an-error-that-unprivileged-user-namespaces-are-not-enabled">Docker: Shows an error that unprivileged user namespaces are not enabled.&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#docker-cannot-connect-to-the-docker-daemon-at-unixvarrundockersock-is-the-docker-daemon-running">Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#windows">Windows&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#windows-users-wsl-not-installed-properly">Windows users: WSL not installed properly&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#windows-users-not-enough-free-space-on-the-partition-in-windows-and-wsl2">Windows users: Not enough free space on the partition in Windows and WSL2&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#windows-users-failure-to-connect-to-neurodesktop-in-firefox">Windows users: Failure to connect to Neurodesktop in Firefox&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#macos">MacOS&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#if-you-are-using-docker-on-macos">If you are using Docker on MacOS&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#vscode">&lt;strong>VScode&lt;/strong>&lt;/a>
+ &lt;ul>
+ &lt;li>
+ &lt;ul>
+ &lt;li>&lt;a href="#vscode-is-not-starting-up-or-starts-many-many-copies-of-itself-">Vscode is not starting up (or starts many many copies of itself &amp;hellip;)&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#contributing--support">&lt;strong>Contributing &amp;amp; Support&lt;/strong>&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#how-can-i-contribute-new-containers">How can I contribute new containers?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#i-couldnt-find-the-information-i-was-looking-for-where-can-i-get-additional-assistance">I couldn&amp;rsquo;t find the information I was looking for. Where can I get additional assistance?&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+&lt;/nav>
+&lt;/div>
+&lt;h2 id="general-overview">&lt;strong>General Overview&lt;/strong>&lt;/h2>
+&lt;h3 id="what-is-neurodesk">What is Neurodesk?&lt;/h3>
+&lt;p>Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code.&lt;/p></description></item><item><title>Discussion Forum</title><link>https://neurodesk.org/overview/discussion-forum/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/discussion-forum/</guid><description>&lt;p>Our main discussion forum is hosted on GitHub Discussions&lt;/p>
+&lt;p>Please use the link below to ask questions, share ideas, and connect with the NeuroDesk community.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://github.com/orgs/NeuroDesk/discussions" target="_blank" rel="noopener noreferrer">Go to the NeuroDesk Discussion Forum on GitHub →&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>Metrics</title><link>https://neurodesk.org/overview/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/metrics/</guid><description>&lt;h2 id="docker-metrics">Docker metrics&lt;/h2>
+&lt;p>Total Neurodesktop container pulls: &lt;img src="https://img.shields.io/docker/pulls/vnmd/neurodesktop" alt="Docker Pulls">&lt;/p>
+&lt;h2 id="github-metrics">Github metrics&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Repository&lt;/th>
+ &lt;th>Stars&lt;/th>
+ &lt;th>Open issues&lt;/th>
+ &lt;th>Last Commit&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">neurodesktop&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesktop" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesktop" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesktop" alt="">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocommand" target="_blank" rel="noopener">neurocommand&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocommand" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocommand" alt="">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocontainers" target="_blank" rel="noopener">neurocontainers&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocontainers" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers" alt="">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/NeuroDesk/transparent-singularity" target="_blank" rel="noopener">transparent-singularity&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/transparent-singularity" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity" alt="">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/NeuroDesk/example-notebooks" target="_blank" rel="noopener">example-notebooks&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/example-notebooks" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks" alt="">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk.github.io" target="_blank" rel="noopener">neurodesk.github.io&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk-app" target="_blank" rel="noopener">neurodesk-app&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk-app" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app" alt="">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="neurodesk-app-download-metrics">Neurodesk App download metrics&lt;/h2>
+&lt;img src="https://neurodesk.org/static/docs/overview/neurodeskapp_metrics.png" width="95%">
+&lt;h2 id="user-metrics">User metrics&lt;/h2>
+&lt;iframe src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0">&lt;/iframe>
+&lt;h2 id="uptime-metrics">Uptime metrics&lt;/h2>
+
+
+&lt;div class="alert alert-info" role="alert">
+&lt;h4 class="alert-heading">For service uptimes, use this link&lt;/h4>
+
+ &lt;a href="https://stats.uptimerobot.com/NBE38IZWZM" target="_blank" rel="noopener">https://stats.uptimerobot.com/NBE38IZWZM&lt;/a>
+
+&lt;/div></description></item><item><title>Release History</title><link>https://neurodesk.org/overview/release-history/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/release-history/</guid><description>&lt;dl>
+&lt;dt>Latest Version&lt;/dt>
+&lt;dd>2025-06-10&lt;/dd>
+&lt;/dl>
+&lt;p>Please consult &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md" target="_blank" rel="noopener">this page&lt;/a> for the template for new releases.&lt;/p>
+&lt;h2 id="2025-06-10">2025-06-10&lt;/h2>
+&lt;h3 id="new-features">New Features&lt;/h3>
+&lt;ul>
+&lt;li>upgrade to jupyterhub 5.3.0&lt;/li>
+&lt;li>added nbgitpuller, tcsh&lt;/li>
+&lt;li>added neurodesk copilot: &lt;a href="https://neurodesk.org/developers/neurodesk-copilot/" target="_blank" rel="noopener">https://neurodesk.org/developers/neurodesk-copilot/&lt;/a>&lt;/li>
+&lt;li>added qsirecon&lt;/li>
+&lt;/ul>
+&lt;h3 id="improvements">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>updated niivue (with breaking interface change!)&lt;/li>
+&lt;li>updated jupyter-lmod (with breaking interface change!)&lt;/li>
+&lt;li>moved cvmfs cache to home directory&lt;/li>
+&lt;li>updated background to new Neurodesk logo&lt;/li>
+&lt;li>updated ants to 2.6.0&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>split cvmfs in 3 different regions&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-04-08">2025-04-08&lt;/h2>
+&lt;h3 id="new-features-1">New Features&lt;/h3>
+&lt;ul>
+&lt;li>Added &lt;a href="https://github.com/UNFmontreal/Dcm2Bids" target="_blank" rel="noopener">dcm2bids&lt;/a> support&lt;/li>
+&lt;li>Integrated &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> v8.0.2&lt;/li>
+&lt;/ul>
+&lt;h3 id="improvements-1">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>Replaced &lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a> 4.6.0 with 4.6.1 to fix GUI bug&lt;/li>
+&lt;li>Updated &lt;a href="https://qsiprep.readthedocs.io/" target="_blank" rel="noopener">qsiprep&lt;/a> to 1.0.1&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes-1">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>Improved internet test by using DNS lookup instead of ping&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-03-14">2025-03-14&lt;/h2>
+&lt;h3 id="bug-fixes-2">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>Startup process was setting variables in different places&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-03-12">2025-03-12&lt;/h2>
+&lt;h3 id="new-features-2">New Features&lt;/h3>
+&lt;ul>
+&lt;li>Added neurodesk copilot dependencies&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes-3">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>Apptainer didn&amp;rsquo;t mount binfmt, which was resulting in simg files not working in offline mode on apple silicon&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-03-07">2025-03-07&lt;/h2>
+&lt;h3 id="bug-fixes-4">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>CVMFS_DISABLED=false also disabled it.&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-03-06">2025-03-06&lt;/h2>
+&lt;h3 id="improvements-2">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>Add overlay directory on startup&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes-5">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>Only link from cvmfs if cvmfs is not disabled&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-03-05">2025-03-05&lt;/h2>
+&lt;h3 id="new-features-3">New Features&lt;/h3>
+&lt;ul>
+&lt;li>Added support for downloading containers offline, can be activated by setting CVMFS_DISABLE=true&lt;/li>
+&lt;li>Add &lt;a href="https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/" target="_blank" rel="noopener">synthstrip&lt;/a> 7.4.1&lt;/li>
+&lt;li>Add &lt;a href="https://pypi.org/project/pydeface/" target="_blank" rel="noopener">pydeface&lt;/a> 2.0.2&lt;/li>
+&lt;li>Add [&lt;a href="https://fmriprep.org/en/stable/" target="_blank" rel="noopener">fmriprep&lt;/a>.org/en/stable/) 24.1.1 20250214&lt;/li>
+&lt;/ul>
+&lt;h3 id="improvements-3">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>update [&lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a>](https://&lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a>.readthedocs.io/en/latest/) to 4.5.0&lt;/li>
+&lt;li>update &lt;a href="https://aslprep.readthedocs.io/en/latest/" target="_blank" rel="noopener">aslprep&lt;/a> to 0.7.5&lt;/li>
+&lt;li>update &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> to v7.3.1&lt;/li>
+&lt;li>update &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> to v7.3.2&lt;/li>
+&lt;li>changed from apptainer -w flag to overlay directory because it works with SIMG files&lt;/li>
+&lt;li>disable automatic GPU flag &amp;ndash;nv because it is causing problems on newer host OSs like Ubuntu 24.04&lt;/li>
+&lt;li>automate zenodo doi creation and update to applist.json&lt;/li>
+&lt;li>tweaks in chown of files in homedirectory (#268 #269)&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-02-04">2025-02-04&lt;/h2>
+&lt;h3 id="new-features-4">New Features&lt;/h3>
+&lt;ul>
+&lt;li>Add latency check for cvmfs direct vs CDN&lt;/li>
+&lt;li>Add &lt;a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank" rel="noopener">fsl&lt;/a> 6.0.7.16&lt;/li>
+&lt;li>Add &lt;a href="https://wfwiggins.github.io/dicomtools/" target="_blank" rel="noopener">dicomtools&lt;/a> container&lt;/li>
+&lt;/ul>
+&lt;h3 id="improvements-4">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>update &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> 8.0.0 and nighres&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-01-29">2025-01-29&lt;/h2>
+&lt;h3 id="new-features-5">New Features&lt;/h3>
+&lt;ul>
+&lt;li>Add &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> 8.0.0&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes-6">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>In JVM - parameters only worked for arm64, not x86&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-01-24">2025-01-24&lt;/h2>
+&lt;h3 id="new-features-6">New Features&lt;/h3>
+&lt;ul>
+&lt;li>add &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> 2023b&lt;/li>
+&lt;li>add &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> 2022b&lt;/li>
+&lt;li>new Quay.io jupyter baseimage&lt;/li>
+&lt;/ul>
+&lt;h3 id="improvements-5">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>update version in neurodesk.yml&lt;/li>
+&lt;li>Change TinyRange share path to /data instead of /share&lt;/li>
+&lt;li>updated &lt;a href="https://github.com/Puckett-Lab/deepRetinotopy" target="_blank" rel="noopener">deepRetinotopy&lt;/a> version by&lt;/li>
+&lt;li>update &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> 2024b&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes-7">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>Added workaround for JVM bug on Apple M4&lt;/li>
+&lt;li>added docker fix for MacOS to desktop&lt;/li>
+&lt;/ul>
+&lt;h2 id="2024-12-06">2024-12-06&lt;/h2>
+&lt;ul>
+&lt;li>updated &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a>: v7.2.2&lt;/li>
+&lt;li>add &lt;a href="https://heudiconv.readthedocs.io/en/latest/" target="_blank" rel="noopener">heudiconv&lt;/a> 1.3.1&lt;/li>
+&lt;li>add &lt;a href="https://mriqc.readthedocs.io/en/latest/" target="_blank" rel="noopener">mriqc&lt;/a> 24.0.2 20241108&lt;/li>
+&lt;li>add &lt;a href="https://github.com/samsrf/samsrf" target="_blank" rel="noopener">samsrfx&lt;/a> v10.003&lt;/li>
+&lt;li>add palmettobug 0.0.1 20241119&lt;/li>
+&lt;li>add neurodock/pydesigner&lt;/li>
+&lt;li>Update &lt;a href="https://github.com/rordenlab/dcm2niix" target="_blank" rel="noopener">dcm2niix&lt;/a> version to 20241125&lt;/li>
+&lt;li>changed CVMFS servers&lt;/li>
+&lt;li>added -w workaround for docker on apple silicon into dockerfile&lt;/li>
+&lt;li>add static strace to /opt for container debugging&lt;/li>
+&lt;li>enabled VNC again and fix RDP auto resizing&lt;/li>
+&lt;/ul>
+&lt;h2 id="2024-10-22">2024-10-22&lt;/h2>
+&lt;ul>
+&lt;li>use cloudfront distribution only&lt;/li>
+&lt;li>workaround for kernel bug on arm64&lt;/li>
+&lt;li>add ipywidgets ipyvolume jupyterlab_widgets&lt;/li>
+&lt;li>add &lt;a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank" rel="noopener">fsl&lt;/a> 6.0.7.14&lt;/li>
+&lt;li>add &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> v7.2.1&lt;/li>
+&lt;/ul>
+&lt;h2 id="2024-10-16">2024-10-16&lt;/h2>
+&lt;ul>
+&lt;li>add jupyter-resource-usage plugin&lt;/li>
+&lt;li>disable VNC&lt;/li>
+&lt;li>remove updating of example directory on startup&lt;/li>
+&lt;li>update jupyter-server-proxy&lt;/li>
+&lt;li>add more CVMFS servers&lt;/li>
+&lt;li>Added relion 4.0.1.sm61 20240528&lt;/li>
+&lt;li>update &lt;a href="https://aslprep.readthedocs.io/en/latest/" target="_blank" rel="noopener">aslprep&lt;/a> to 0.7.0&lt;/li>
+&lt;li>update deepretinotpy to 1.0.5&lt;/li>
+&lt;li>add quickshear&lt;/li>
+&lt;li>add nighres 1.5.1&lt;/li>
+&lt;li>update &lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a> 4.3.3 and 4.4.0&lt;/li>
+&lt;li>Added bart 0.9.00&lt;/li>
+&lt;li>updated &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> to 7.1.0&lt;/li>
+&lt;li>Added mrtrix3src (latest version)&lt;/li>
+&lt;li>update VesselBoost to ver 1.0.0 by @KMarshallX in #301&lt;/li>
+&lt;li>add qmrlab&lt;/li>
+&lt;li>added niimath&lt;/li>
+&lt;li>updated &lt;a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank" rel="noopener">fsl&lt;/a> to 6.0.7.8&lt;/li>
+&lt;li>update &lt;a href="https://aslprep.readthedocs.io/en/latest/" target="_blank" rel="noopener">aslprep&lt;/a> to 0.7.2&lt;/li>
+&lt;li>update ants to 2.5.3&lt;/li>
+&lt;li>updated spinalcordtoolbox to 6.4&lt;/li>
+&lt;li>Update afni to 24.2.07&lt;/li>
+&lt;li>add &lt;a href="https://github.com/rordenlab/dcm2niix" target="_blank" rel="noopener">dcm2niix&lt;/a>&lt;/li>
+&lt;li>add micapipe 0.2.3&lt;/li>
+&lt;li>added brainnetviewer&lt;/li>
+&lt;li>Added brainlifecli&lt;/li>
+&lt;li>update &lt;a href="https://fmriprep.org/en/stable/" target="_blank" rel="noopener">fmriprep&lt;/a> to 24.1.0&lt;/li>
+&lt;li>Update dsistudio 2024.06.12&lt;/li>
+&lt;li>add vmtk 1.5.0&lt;/li>
+&lt;/ul>
+&lt;h2 id="2024-05-25">2024-05-25&lt;/h2>
+&lt;ul>
+&lt;li>add new CVMFS CDN servers&lt;/li>
+&lt;li>add jupyter_scheduler and ipycanvas&lt;/li>
+&lt;li>update guacamole version to 1.5.5 and tomcat to 9.0.87&lt;/li>
+&lt;li>add rise extension for presentations&lt;/li>
+&lt;li>&lt;a href="https://github.com/NeuroDesk/neurocommand/releases/tag/2024-05-25" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/releases/tag/2024-05-25&lt;/a>&lt;/li>
+&lt;li>fixed brkraw by @stebo85 in #268&lt;/li>
+&lt;li>&lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a>: v6.4.1 by @astewartau in #270&lt;/li>
+&lt;li>update mrtrix3 by @stebo85 in #271&lt;/li>
+&lt;li>&lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a>: v6.4.2 by @astewartau in #272&lt;/li>
+&lt;li>&lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a>: v6.4.3 by @astewartau in #274&lt;/li>
+&lt;li>update &lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a> to 4.3.2 by @stebo85 in #275&lt;/li>
+&lt;li>update &lt;a href="https://fmriprep.org/en/stable/" target="_blank" rel="noopener">fmriprep&lt;/a> by @stebo85 in #277&lt;/li>
+&lt;li>add julia 1.9.4 by @stebo85 in #280&lt;/li>
+&lt;li>update dsi_studio by @stebo85 in #283&lt;/li>
+&lt;li>add glmsingle by @stebo85 in #284&lt;/li>
+&lt;li>ants 2.5.1 20240429 by @stebo85 in #285&lt;/li>
+&lt;li>&lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a>: v6.4.4 by @astewartau in #287&lt;/li>
+&lt;/ul>
+&lt;h2 id="2024-03-27">2024-03-27&lt;/h2>
+&lt;ul>
+&lt;li>Switched from singularity to apptainer&lt;/li>
+&lt;li>added (brkraw) and fixed multiple tools (mrtrix3, julia)&lt;/li>
+&lt;/ul>
+&lt;h2 id="2024-01-12">2024-01-12&lt;/h2>
+&lt;ul>
+&lt;li>fixed &lt;a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank" rel="noopener">fsl&lt;/a> GUI error, when starting &lt;a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank" rel="noopener">fsl&lt;/a> in VNC mode (the USER was not exported)&lt;/li>
+&lt;li>removed c.ServerApp.root_dir setting because it was causing an error when clicking on the Home button. Now it&amp;rsquo;s not possible to navigate outside of the homedirectory anymore in the side panel.&lt;/li>
+&lt;/ul>
+&lt;h2 id="2023-11-28">2023-11-28&lt;/h2>
+&lt;ul>
+&lt;li>fixed a bug where the /proc/cpuinfo file under ARM did not contain a MHz entry, which stopped &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> from starting up&lt;/li>
+&lt;li>fixed a bug where the SINGULARITY_BINDPATH was not send in a jupyter notebook file&lt;/li>
+&lt;/ul>
+&lt;h2 id="2023-10-29">2023-10-29&lt;/h2>
+&lt;ul>
+&lt;li>bugfix: conda and mamba environments are now initialized correctly when neurodesktop starts up (not just in jupyter)&lt;/li>
+&lt;/ul>
+&lt;h2 id="2023-09-20">2023-09-20&lt;/h2>
+&lt;ul>
+&lt;li>the neurodesktop image is now multi-arch and supports x86 and ARM64&lt;/li>
+&lt;li>fixed recursive link creation in /data&lt;/li>
+&lt;li>switched to new cvmfs server geolocation DNS steering policy system: cvmfs[1,2,3].neurodesk.org resolve to 3 servers per region which are compared for speed by the client on startup&lt;/li>
+&lt;li>fixed recursive execution of bash shell inside a singularity container&lt;/li>
+&lt;li>fixed empty username&lt;/li>
+&lt;li>switched release tag naming scheme to YYYY-MM-DD instead of YYYYMMDD for better readability&lt;/li>
+&lt;/ul>
+&lt;h2 id="20230628">20230628&lt;/h2>
+&lt;ul>
+&lt;li>directories can now be deleted in jupyter interface even if they contain files&lt;/li>
+&lt;li>moved startup configurations out of .bashrc&lt;/li>
+&lt;li>removed redundant chown of homedirectory (e.g. affecting windows startup time)&lt;/li>
+&lt;li>added git extension to juputerlab&lt;/li>
+&lt;li>more robust handling of CVMFS edge cases&lt;/li>
+&lt;/ul>
+&lt;h2 id="20230531">20230531&lt;/h2>
+&lt;ul>
+&lt;li>included neurodesktop version in hostname&lt;/li>
+&lt;li>removed apt lists&lt;/li>
+&lt;li>triggered automount externally&lt;/li>
+&lt;/ul>
+&lt;h2 id="20230525">20230525&lt;/h2>
+&lt;ul>
+&lt;li>used jupyter based image&lt;/li>
+&lt;li>fixed environment variables for nipype&lt;/li>
+&lt;li>fixed RDP upload permission errors&lt;/li>
+&lt;li>added symlink on home if /data is mounted&lt;/li>
+&lt;/ul>
+&lt;h2 id="20221216">20221216&lt;/h2>
+&lt;ul>
+&lt;li>added VNC connection back into docker container because RDP currently causes issues for european keyboards&lt;/li>
+&lt;li>added &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> into AFNI container to get @SUMA_Make_Spec_FS to work (issue: &lt;a href="https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927" target="_blank" rel="noopener">https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927&lt;/a>)&lt;/li>
+&lt;li>added deepretinotopy tool in version 1.0.0 20221201 (contributed by Xincheng &amp;amp; Fernanda)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20221129">20221129&lt;/h2>
+&lt;ul>
+&lt;li>updated &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> to 1.1.13 (contributed by Ashley)&lt;/li>
+&lt;li>added nipype 1.8.3 (contributed by Steffen)&lt;/li>
+&lt;li>added mneextended 1.1.0 (contributed by David)&lt;/li>
+&lt;li>added new tool category &amp;ldquo;workflows&amp;rdquo;&lt;/li>
+&lt;li>added new CVMFS mirror server in Phoenix&lt;/li>
+&lt;li>added mimetypes so that nii/minc files now open in the respective applications&lt;/li>
+&lt;li>&lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> licenses can now be saved from the activation GUI&lt;/li>
+&lt;li>update rstudio to 2022.07.2 (and R version to 4.1.2 with new additional packages, like brms)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220813">20220813&lt;/h2>
+&lt;ul>
+&lt;li>updated &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> to 1.1.12 (contributed by Ashley)&lt;/li>
+&lt;li>updated 3D Slicer to 5.0.3 and included MONAI Label (contributed by Xincheng)&lt;/li>
+&lt;li>added &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> 2022a (contributed by Oren)&lt;/li>
+&lt;li>updated AFNI to 22.1.14 (contributed by Steffen)&lt;/li>
+&lt;li>updated Spinal Cord Toolbox to 5.7 (contributed by Steffen)&lt;/li>
+&lt;li>updated Oshyx to 0.4 (contributed by Jeryn)&lt;/li>
+&lt;li>updated &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> to 7.3.2 (contributed by Steffen)&lt;/li>
+&lt;li>added CVMFS mirror server in Perth and cleaned up server list to account for DNS geo location steering (contributed by Steffen)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220701">20220701&lt;/h2>
+&lt;ul>
+&lt;li>added laynii 2.2.1 - layer fMRI toolbox (contributed by Renzo Huber)&lt;/li>
+&lt;li>added fieldtrip 20220617 - eeg processing (contributed by David White)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220329">20220329&lt;/h2>
+&lt;ul>
+&lt;li>added &lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a> 3.7.0 (converting data to bids) contributed by Oren&lt;/li>
+&lt;li>added sigviewer 0.6.4 (viewing electrophysiological data) contributed by Tom&lt;/li>
+&lt;li>added niftyreg 1.4.0 (image registration tool) contributed by Steffen&lt;/li>
+&lt;li>added mne 1.0.0 (EEG processing pipeline) contributed by David&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220302">20220302&lt;/h2>
+&lt;ul>
+&lt;li>update of ROMEO (phase unwrapping) to latest version 3.2.8&lt;/li>
+&lt;li>update of &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> (automated end-to-end QSM processing) to latest version 1.1.10&lt;/li>
+&lt;li>added mritools 3.3.0 (includes clearswi 1.0.1, mcpc3ds 0.1.0, romeo 3.2.8 as compiled binaries)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220222">20220222&lt;/h2>
+&lt;ul>
+&lt;li>update for PhysIO toolbox (physiological noise correction for fMRI) to r2021a including the latest SPM r8224&lt;/li>
+&lt;li>update of lcmodel to include basis sets for 1.5-9.4T&lt;/li>
+&lt;li>added a memory display plugin to illustrate how much memory is available to the container and how much is consumed&lt;/li>
+&lt;li>added a version checker to help with identifying if a new version is available&lt;/li>
+&lt;li>added file upload via guacamole (+ update of guacamole to 1.4) - users can now drag and drop their files onto guacamole and they get copied to the desktop&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220128">20220128&lt;/h2>
+&lt;ul>
+&lt;li>update of Spinalcordtoolbox to 5.5&lt;/li>
+&lt;li>update of CAT12 to r1933&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220121">20220121&lt;/h2>
+&lt;ul>
+&lt;li>MNE Python 0.23.4 container including VScode and extensions&lt;/li>
+&lt;li>VScode container including Python/Julia Extensions and singularity to test &amp;ldquo;Inception Mode&amp;rdquo; (Running singularity containers within singularity containers)&lt;/li>
+&lt;li>update of &lt;a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank" rel="noopener">fsl&lt;/a> to 6.0.5.1&lt;/li>
+&lt;li>added CAT12 (a software that allows estimation of tissue volumes (and additional surface parameters such as cortical thickness, gyrification or fractal dimension) for different volume and surface-based atlas maps)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20220111">20220111&lt;/h2>
+&lt;ul>
+&lt;li>a deep learning based vessel segmentation algorithm &amp;ldquo;vesselapp&amp;rdquo; was added in version 0.3.1&lt;/li>
+&lt;li>palm - Permutation Analysis of Linear Models - was added in version alpha119&lt;/li>
+&lt;li>niistat running in octave was added with version 1.0.20191216&lt;/li>
+&lt;li>MRIcroGL was updated to a version with included python support, so the scripting is now working&lt;/li>
+&lt;li>rabies - Rodent Automated Bold Improvement of EPI Sequences was added with version 0.3.5&lt;/li>
+&lt;li>oshyx was updated to 0.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="20211220">20211220&lt;/h2>
+&lt;ul>
+&lt;li>neurodesktop can now be accessed via native RDP client as well (e.g. for multi-monitor support): &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/windows/#using-an-rdp-client" target="_blank" rel="noopener">https://neurodesk.org/docs/getting-started/neurodesktop/windows/#using-an-rdp-client&lt;/a>&lt;/li>
+&lt;li>there is a new Help button in the menu :)&lt;/li>
+&lt;li>updates of ants 2.3.4 (now includes Scripts as well, including antsCookTemplatePriors.sh) + newly added version 2.3.5&lt;/li>
+&lt;li>new version of &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> 1.1.9 20211219&lt;/li>
+&lt;li>new version of Spinal Cord Toolbox 5.4&lt;/li>
+&lt;li>new tools: MRIcroGL and surfice - fantastic viewers for neuroimaging data&lt;/li>
+&lt;/ul>
+&lt;h2 id="20211207">20211207&lt;/h2>
+&lt;ul>
+&lt;li>Physio toolbox compiled and added to SPM + update of SPM&lt;/li>
+&lt;li>added brainstorm&lt;/li>
+&lt;li>new neurodesktop container management scripts for Linux, Mac and Windows: &lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop&lt;/a>&lt;/li>
+&lt;li>added fieldtrip&lt;/li>
+&lt;li>Datalad is now in the main image, so datalad run should work&lt;/li>
+&lt;li>added Oshy-X segmentation tool&lt;/li>
+&lt;li>updated &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> 7.2.0&lt;/li>
+&lt;/ul>
+&lt;h2 id="20211028">20211028&lt;/h2>
+&lt;ul>
+&lt;li>added EEGLAB&lt;/li>
+&lt;/ul>
+&lt;h2 id="20211018">20211018&lt;/h2>
+&lt;ul>
+&lt;li>added Rstudio, R and multiple R packages (plotly, car, tidyverse, &amp;hellip;)&lt;/li>
+&lt;li>added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: &lt;a href="https://neurodesk.org/tutorials-examples/tutorials/phase_processing/" target="_blank" rel="noopener">https://neurodesk.org/tutorials-examples/tutorials/phase_processing/&lt;/a>)&lt;/li>
+&lt;li>added more categories in applications menu (Body, Electrophysiology, Hippocampus, Phase Processing, Rodent Imaging, Shape Analysis, Spine, Statistics)&lt;/li>
+&lt;li>bugfix: improved startup time of the desktop container (miniconda in homedirectory was causing chmod slowdown)&lt;/li>
+&lt;li>bugfix: ssh, vnc and rdp servers are now restarted in case the container was stopped and started again (e.g. on Standby)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20210929">20210929&lt;/h2>
+&lt;ul>
+&lt;li>fixed naming of aidmri to aidamri and added new category &amp;ldquo;Rodent Imaging&amp;rdquo;&lt;/li>
+&lt;li>updated all tool icons and updated neurodesk icon including background image&lt;/li>
+&lt;li>VScode now stores settings in persistent storage /neurodesktop-storage and with this keeps extensions and settings across different neurodesktop versions&lt;/li>
+&lt;li>docker layers are now cached, so updating the desktop to the next version is very fast and consumes less disk space locally&lt;/li>
+&lt;li>default theme of terminal changed from Solarized to Tango as the old theme was hiding information in tools like htop (same font colour on same background&amp;hellip;)&lt;/li>
+&lt;/ul>
+&lt;h2 id="20210923">20210923&lt;/h2>
+&lt;ul>
+&lt;li>removed faulty &lt;a href="https://mriqc.readthedocs.io/en/latest/" target="_blank" rel="noopener">mriqc&lt;/a> 0.15.2 container&lt;/li>
+&lt;li>neurodesk.github.io is now starting page in firefox browser&lt;/li>
+&lt;/ul>
+&lt;h2 id="20210918">20210918&lt;/h2>
+&lt;ul>
+&lt;li>added &lt;a href="https://mriqc.readthedocs.io/en/latest/" target="_blank" rel="noopener">mriqc&lt;/a> 0.16.1 and mrtrix 3.0.3&lt;/li>
+&lt;/ul>
+&lt;h2 id="20210917">20210917&lt;/h2>
+&lt;ul>
+&lt;li>included more tools for connecting to cloud storage services (rclone, owncloud, nextcloud, davfs2, globus). For more info: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/storage">Storage&lt;/a>&lt;/li>
+&lt;li>styling of desktop interface, including background wallpaper and colour scheme in terminal window&lt;/li>
+&lt;li>new categories in menu system (visualization) and added more categories to tools&lt;/li>
+&lt;/ul>
+&lt;h2 id="20210916">20210916&lt;/h2>
+&lt;ul>
+&lt;li>This is the first version of the newly renamed and rebuild neurodesktop (previously vnm and neuromachine)&lt;/li>
+&lt;li>containers are mounted by default from CVMFS, but this can be deactivated by adding &lt;code>-e CVMFS_DISABLE=true&lt;/code> to the docker call&lt;/li>
+&lt;/ul></description></item><item><title>Contribute</title><link>https://neurodesk.org/overview/contribute/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/contribute/</guid><description>&lt;h2 id="get-involved">Get Involved&lt;/h2>
+&lt;p>Neurodesk is a community-driven project. We welcome contributions from people with diverse skill sets and backgrounds. Here are some of the ways you can get involved:&lt;/p>
+&lt;h3 id="contribute-code">Contribute Code&lt;/h3>
+&lt;p>Help us build better neuroimaging infrastructure by writing code, improving our containers, or developing new features.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://neurodesk.org/developers/new_tools/">Add or update tools&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/NeuroDesk/neurocontainers/issues" target="_blank" rel="noopener">Help solve issues&lt;/a> - visit our Github page and pick something out&lt;/li>
+&lt;/ul>
+&lt;h3 id="improve-documentation">Improve Documentation&lt;/h3>
+&lt;p>Good documentation makes tools accessible. Contribute tutorials, usage guides, or improve existing documentation.&lt;/p></description></item><item><title>Applications</title><link>https://neurodesk.org/overview/applications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/applications/</guid><description>&lt;p>Below is a list of the neurocontainer applications included in the most recent Neurodesk release.&lt;/p>
+&lt;p>To use these applications through the Neurodesk platform, find the correct instructions for getting started by selecting your computing environment details in the widget on our &lt;a href="https://neurodesk.org#startup" target="_blank" rel="noopener">home page&lt;/a>&lt;/p>
+&lt;p>Neurodesktop comes packaged with:&lt;/p>
+&lt;ul>
+&lt;li>programming software (e.g., Visual Studio Code, python, git)&lt;/li>
+&lt;li>workflow systems (Nipype)&lt;/li>
+&lt;li>data synchronization utilities (Rsync, Rclone, Nextcloud, Owncloud)&lt;/li>
+&lt;li>system management tools (Lmod, Singularity, Htop)&lt;/li>
+&lt;li>additional resources (Imagemagic, Firefox, OpenSSH client)&lt;/li>
+&lt;li>access to Neurocontainers via the Neurodesk menu (see list below)&lt;/li>
+&lt;/ul>
+
+
+&lt;div class="alert alert-info" role="alert">
+
+
+ If you can&amp;rsquo;t find an application in Neurodesktop&amp;rsquo;s menu, you may need to &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">update Neurodesktop&lt;/a>&lt;br>
+If you can&amp;rsquo;t find an application on the Nectar Desktop Service, visit our &lt;a href="https://github.com/orgs/NeuroDesk/discussions" target="_blank" rel="noopener">discussion forum&lt;/a> to create a request&lt;br>
+For more information on data synchronization, visit our &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/storage">Storage section&lt;/a>&lt;br>
+For guides and tutorials, refer to the respective &lt;a href="https://neurodesk.org/tutorials-examples/" target="_blank" rel="noopener">tutorial and examples&lt;/a>&lt;br>
+
+&lt;/div></description></item></channel></rss>
