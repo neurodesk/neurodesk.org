@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Local on Neurodesk</title><link>https://neurodesk.org/getting-started/local/</link><description>Recent content in Local on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/local/index.xml" rel="self" type="application/rss+xml"/><item><title>Examples</title><link>https://neurodesk.org/getting-started/local/examples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/local/examples/</guid><description>&lt;p>On this page we show specific examples of the different ways of how Neurodesk can be installed on a local computer. We start from the highest level using the Neurodesk app, then go lower level via docker, neurocommand and down to the lowest level using neurocontainers. We also show on each level how containers can be streamed via CVMFS or downloaded locally.&lt;/p>
+&lt;h1 id="running-neurodesk-on-a-ubuntu-2404-computer">Running Neurodesk on a Ubuntu 24.04 computer&lt;/h1>
+&lt;p>On a linux machine you have mutliple options to use Neurodesk:&lt;/p></description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/local/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/local/neurodeskapp/</guid><description>&lt;img style="float: right;" src="https://neurodesk.org/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="750">
+&lt;!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
+&lt;h3 id="determine-system-privileges">Determine System Privileges&lt;/h3>
+&lt;p>Before running the app, check whether your system has privileged access (root/admin permissions). This determines which engine you need to use to run the app:&lt;/p>
+&lt;p>If you have privileged access → Use Docker or Podman Engine&lt;/p>
+&lt;p>If you do NOT have privileged access → Use TinyRange Engine, or run remote instance&lt;/p>
+&lt;img src="https://neurodesk.org/static/docs/getting-started/neurodeskapp/engine-options.png" width="400">
+&lt;h3 id="minimum-system-requirements">Minimum System Requirements&lt;/h3>
+&lt;ol>
+&lt;li>At least 5GB free space for neurodesktop base image.&lt;/li>
+&lt;li>One of the following options, depending on system privileges:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>With privileged access: Docker or Podman to run respective engines&lt;/p></description></item></channel></rss>
