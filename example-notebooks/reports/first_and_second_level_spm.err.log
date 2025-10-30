@@ -1,0 +1,132 @@
+Traceback (most recent call last):
+  File "/home/runner/.local/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/.local/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/.local/lib/python3.10/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/runner/.local/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/runner/.local/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/.local/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/.local/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Level1Design - Generates an SPM design matrix
+level1design = Node(spm.Level1Design(bases={'hrf':{'derivs': [0,0]}}, # no derivatives
+                                timing_units='secs',
+                                interscan_interval=TR, 
+                                microtime_onset=8, #The onset/time-bin in seconds for alignment
+                                microtime_resolution=16, #Number of time-bins per scan in secs
+                                mask_threshold=0.8,
+                                global_intensity_normalization='none',
+                                volterra_expansion_order=1, #do not model interactions
+                                model_serial_correlations='AR(1)'), # serial correlations --> autoregressive AR(1) model during Classical (ReML) parameter estimation
+                                name='level1design')
+
+if NIPYPE_VERSION > '1.8.6':
+# Factors need to match conditions: product of levels (here 6) needs to match number of condition names --> F1, F2, U1, U2, S1, S2
+    level1design.inputs.factor_info = [dict(name = 'Face', levels = 3),
+                                        dict(name = 'Rep', levels = 2)]
+                            
+wf.connect(modelspec,'session_info', level1design, 'session_info')
+------------------
+
+----- stderr -----
+stty: 'standard input': Inappropriate ioctl for device
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+File [0;32m~/.local/lib/python3.10/site-packages/nipype/utils/spm_docs.py:48[0m, in [0;36m_strip_header[0;34m(doc)[0m
+[1;32m     47[0m [38;5;28;01mtry[39;00m:
+[0;32m---> 48[0m     index [38;5;241m=[39m [43mdoc[49m[38;5;241;43m.[39;49m[43mindex[49m[43m([49m[43mhdr[49m[43m)[49m
+[1;32m     49[0m [38;5;28;01mexcept[39;00m [38;5;167;01mValueError[39;00m [38;5;28;01mas[39;00m e:
+
+[0;31mValueError[0m: substring not found
+
+The above exception was the direct cause of the following exception:
+
+[0;31mOSError[0m                                   Traceback (most recent call last)
+Cell [0;32mIn[22], line 2[0m
+[1;32m      1[0m [38;5;66;03m# Level1Design - Generates an SPM design matrix[39;00m
+[0;32m----> 2[0m level1design [38;5;241m=[39m Node([43mspm[49m[38;5;241;43m.[39;49m[43mLevel1Design[49m[43m([49m[43mbases[49m[38;5;241;43m=[39;49m[43m{[49m[38;5;124;43m'[39;49m[38;5;124;43mhrf[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m{[49m[38;5;124;43m'[39;49m[38;5;124;43mderivs[39;49m[38;5;124;43m'[39;49m[43m:[49m[43m [49m[43m[[49m[38;5;241;43m0[39;49m[43m,[49m[38;5;241;43m0[39;49m[43m][49m[43m}[49m[43m}[49m[43m,[49m[43m [49m[38;5;66;43;03m# no derivatives[39;49;00m
+[1;32m      3[0m [43m                                [49m[43mtiming_units[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43msecs[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m      4[0m [43m                                [49m[43minterscan_interval[49m[38;5;241;43m=[39;49m[43mTR[49m[43m,[49m[43m [49m
+[1;32m      5[0m [43m                                [49m[43mmicrotime_onset[49m[38;5;241;43m=[39;49m[38;5;241;43m8[39;49m[43m,[49m[43m [49m[38;5;66;43;03m#The onset/time-bin in seconds for alignment[39;49;00m
+[1;32m      6[0m [43m                                [49m[43mmicrotime_resolution[49m[38;5;241;43m=[39;49m[38;5;241;43m16[39;49m[43m,[49m[43m [49m[38;5;66;43;03m#Number of time-bins per scan in secs[39;49;00m
+[1;32m      7[0m [43m                                [49m[43mmask_threshold[49m[38;5;241;43m=[39;49m[38;5;241;43m0.8[39;49m[43m,[49m
+[1;32m      8[0m [43m                                [49m[43mglobal_intensity_normalization[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mnone[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m      9[0m [43m                                [49m[43mvolterra_expansion_order[49m[38;5;241;43m=[39;49m[38;5;241;43m1[39;49m[43m,[49m[43m [49m[38;5;66;43;03m#do not model interactions[39;49;00m
+[1;32m     10[0m [43m                                [49m[43mmodel_serial_correlations[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mAR(1)[39;49m[38;5;124;43m'[39;49m[43m)[49m, [38;5;66;03m# serial correlations --> autoregressive AR(1) model during Classical (ReML) parameter estimation[39;00m
+[1;32m     11[0m                                 name[38;5;241m=[39m[38;5;124m'[39m[38;5;124mlevel1design[39m[38;5;124m'[39m)
+[1;32m     13[0m [38;5;28;01mif[39;00m NIPYPE_VERSION [38;5;241m>[39m [38;5;124m'[39m[38;5;124m1.8.6[39m[38;5;124m'[39m:
+[1;32m     14[0m [38;5;66;03m# Factors need to match conditions: product of levels (here 6) needs to match number of condition names --> F1, F2, U1, U2, S1, S2[39;00m
+[1;32m     15[0m     level1design[38;5;241m.[39minputs[38;5;241m.[39mfactor_info [38;5;241m=[39m [[38;5;28mdict[39m(name [38;5;241m=[39m [38;5;124m'[39m[38;5;124mFace[39m[38;5;124m'[39m, levels [38;5;241m=[39m [38;5;241m3[39m),
+[1;32m     16[0m                                         [38;5;28mdict[39m(name [38;5;241m=[39m [38;5;124m'[39m[38;5;124mRep[39m[38;5;124m'[39m, levels [38;5;241m=[39m [38;5;241m2[39m)]
+
+File [0;32m~/.local/lib/python3.10/site-packages/nipype/interfaces/spm/base.py:303[0m, in [0;36mSPMCommand.__init__[0;34m(self, **inputs)[0m
+[1;32m    302[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21m__init__[39m([38;5;28mself[39m, [38;5;241m*[39m[38;5;241m*[39minputs):
+[0;32m--> 303[0m     [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43minputs[49m[43m)[49m
+[1;32m    304[0m     [38;5;28mself[39m[38;5;241m.[39minputs[38;5;241m.[39mon_trait_change(
+[1;32m    305[0m         [38;5;28mself[39m[38;5;241m.[39m_matlab_cmd_update, [[38;5;124m"[39m[38;5;124mmatlab_cmd[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mmfile[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mpaths[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124muse_mcr[39m[38;5;124m"[39m]
+[1;32m    306[0m     )
+[1;32m    307[0m     [38;5;28mself[39m[38;5;241m.[39m_find_mlab_cmd_defaults()
+
+File [0;32m~/.local/lib/python3.10/site-packages/nipype/interfaces/base/core.py:199[0m, in [0;36mBaseInterface.__init__[0;34m(self, from_file, resource_monitor, ignore_exception, **inputs)[0m
+[1;32m    196[0m [38;5;66;03m# Create input spec, disable any defaults that are unavailable due to[39;00m
+[1;32m    197[0m [38;5;66;03m# version, and then apply the inputs that were passed.[39;00m
+[1;32m    198[0m [38;5;28mself[39m[38;5;241m.[39minputs [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39minput_spec()
+[0;32m--> 199[0m unavailable_traits [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_check_version_requirements[49m[43m([49m
+[1;32m    200[0m [43m    [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43minputs[49m[43m,[49m[43m [49m[43mpermissive[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m
+[1;32m    201[0m [43m[49m[43m)[49m
+[1;32m    202[0m [38;5;28;01mif[39;00m unavailable_traits:
+[1;32m    203[0m     [38;5;28mself[39m[38;5;241m.[39minputs[38;5;241m.[39mtrait_set([38;5;241m*[39m[38;5;241m*[39m{k: Undefined [38;5;28;01mfor[39;00m k [38;5;129;01min[39;00m unavailable_traits})
+
+File [0;32m~/.local/lib/python3.10/site-packages/nipype/interfaces/base/core.py:297[0m, in [0;36mBaseInterface._check_version_requirements[0;34m(self, trait_object, permissive)[0m
+[1;32m    294[0m check [38;5;241m=[39m [38;5;28mdict[39m(min_ver[38;5;241m=[39m[38;5;28;01mlambda[39;00m t: t [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m)
+[1;32m    295[0m names [38;5;241m=[39m trait_object[38;5;241m.[39mtrait_names([38;5;241m*[39m[38;5;241m*[39mcheck)
+[0;32m--> 297[0m [38;5;28;01mif[39;00m names [38;5;129;01mand[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mversion[49m:
+[1;32m    298[0m     version [38;5;241m=[39m LooseVersion([38;5;28mstr[39m([38;5;28mself[39m[38;5;241m.[39mversion))
+[1;32m    299[0m     [38;5;28;01mfor[39;00m name [38;5;129;01min[39;00m names:
+
+File [0;32m~/.local/lib/python3.10/site-packages/nipype/interfaces/spm/base.py:351[0m, in [0;36mSPMCommand.version[0;34m(self)[0m
+[1;32m    349[0m [38;5;129m@property[39m
+[1;32m    350[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mversion[39m([38;5;28mself[39m):
+[0;32m--> 351[0m     info_dict [38;5;241m=[39m [43mInfo[49m[38;5;241;43m.[39;49m[43mgetinfo[49m[43m([49m
+[1;32m    352[0m [43m        [49m[43mmatlab_cmd[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43minputs[49m[38;5;241;43m.[39;49m[43mmatlab_cmd[49m[43m,[49m
+[1;32m    353[0m [43m        [49m[43mpaths[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43minputs[49m[38;5;241;43m.[39;49m[43mpaths[49m[43m,[49m
+[1;32m    354[0m [43m        [49m[43muse_mcr[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43minputs[49m[38;5;241;43m.[39;49m[43muse_mcr[49m[43m,[49m
+[1;32m    355[0m [43m    [49m[43m)[49m
+[1;32m    356[0m     [38;5;28;01mif[39;00m info_dict:
+[1;32m    357[0m         [38;5;28;01mreturn[39;00m [38;5;124m"[39m[38;5;132;01m{}[39;00m[38;5;124m.[39m[38;5;132;01m{}[39;00m[38;5;124m"[39m[38;5;241m.[39mformat(
+[1;32m    358[0m             info_dict[[38;5;124m"[39m[38;5;124mname[39m[38;5;124m"[39m][38;5;241m.[39msplit([38;5;124m"[39m[38;5;124mSPM[39m[38;5;124m"[39m)[[38;5;241m-[39m[38;5;241m1[39m], info_dict[[38;5;124m"[39m[38;5;124mrelease[39m[38;5;124m"[39m]
+[1;32m    359[0m         )
+
+File [0;32m~/.local/lib/python3.10/site-packages/nipype/interfaces/spm/base.py:235[0m, in [0;36mInfo.getinfo[0;34m(klass, matlab_cmd, paths, use_mcr)[0m
+[1;32m    232[0m     klass[38;5;241m.[39m_paths [38;5;241m=[39m paths
+[1;32m    233[0m     [38;5;28;01mreturn[39;00m [38;5;28;01mNone[39;00m
+[0;32m--> 235[0m out [38;5;241m=[39m [43msd[49m[38;5;241;43m.[39;49m[43m_strip_header[49m[43m([49m[43mout[49m[38;5;241;43m.[39;49m[43mruntime[49m[38;5;241;43m.[39;49m[43mstdout[49m[43m)[49m
+[1;32m    236[0m out_dict [38;5;241m=[39m {}
+[1;32m    237[0m [38;5;28;01mfor[39;00m part [38;5;129;01min[39;00m out[38;5;241m.[39msplit([38;5;124m"[39m[38;5;124m|[39m[38;5;124m"[39m):
+
+File [0;32m~/.local/lib/python3.10/site-packages/nipype/utils/spm_docs.py:50[0m, in [0;36m_strip_header[0;34m(doc)[0m
+[1;32m     48[0m     index [38;5;241m=[39m doc[38;5;241m.[39mindex(hdr)
+[1;32m     49[0m [38;5;28;01mexcept[39;00m [38;5;167;01mValueError[39;00m [38;5;28;01mas[39;00m e:
+[0;32m---> 50[0m     [38;5;28;01mraise[39;00m [38;5;167;01mOSError[39;00m([38;5;124m"[39m[38;5;124mThis docstring was not generated by Nipype![39m[38;5;130;01m\n[39;00m[38;5;124m"[39m) [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01me[39;00m
+[1;32m     52[0m index [38;5;241m+[39m[38;5;241m=[39m [38;5;28mlen[39m(hdr)
+[1;32m     53[0m index [38;5;241m+[39m[38;5;241m=[39m [38;5;241m1[39m
+
+[0;31mOSError[0m: This docstring was not generated by Nipype!
+
+
