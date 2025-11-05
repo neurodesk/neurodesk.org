@@ -113,7 +113,8 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;p>Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code.&lt;/p></description></item><item><title>Discussion Forum</title><link>https://neurodesk.org/overview/discussion-forum/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/discussion-forum/</guid><description>&lt;p>Our main discussion forum is hosted on GitHub Discussions&lt;/p>
 &lt;p>Please use the link below to ask questions, share ideas, and connect with the NeuroDesk community.&lt;/p>
 &lt;p>&lt;strong>&lt;a href="https://github.com/orgs/NeuroDesk/discussions" target="_blank" rel="noopener noreferrer">Go to the NeuroDesk Discussion Forum on GitHub →&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>Metrics</title><link>https://neurodesk.org/overview/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/metrics/</guid><description>&lt;h2 id="docker-metrics">Docker metrics&lt;/h2>
-&lt;p>Total Neurodesktop container pulls: &lt;img src="https://img.shields.io/docker/pulls/vnmd/neurodesktop" alt="Docker Pulls">&lt;/p>
+&lt;p>Total Neurodesktop container pulls: &lt;img src="https://img.shields.io/docker/pulls/vnmd/neurodesktop" alt="Docker Pulls"/>
+&lt;/p>
 &lt;h2 id="github-metrics">Github metrics&lt;/h2>
 &lt;table>
  &lt;thead>
@@ -127,45 +128,66 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
  &lt;tbody>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">neurodesktop&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesktop" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesktop" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesktop" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesktop" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesktop" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesktop" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocommand" target="_blank" rel="noopener">neurocommand&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocommand" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocommand" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocommand" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocommand" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocontainers" target="_blank" rel="noopener">neurocontainers&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocontainers" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocontainers" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/transparent-singularity" target="_blank" rel="noopener">transparent-singularity&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/transparent-singularity" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/transparent-singularity" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/example-notebooks" target="_blank" rel="noopener">example-notebooks&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/example-notebooks" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/example-notebooks" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk.github.io" target="_blank" rel="noopener">neurodesk.github.io&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk-app" target="_blank" rel="noopener">neurodesk-app&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk-app" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>

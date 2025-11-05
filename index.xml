@@ -144,7 +144,8 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI" target="_blank" rel="noo
 &lt;/br>
 &lt;img src="https://neurodesk.org/static/docs/getting-started/hosted/github_codespace_open.png" alt="Pop up on GitHub Codespace" width="400">&lt;/p>
 &lt;p>The token for authentication is displayed in the terminal:
-&lt;img src="https://neurodesk.org/static/docs/getting-started/hosted/ghc_terminal.png" alt="alt text">&lt;/p></description></item><item><title>Indexing with Algolia</title><link>https://neurodesk.org/developers/documentation/algolia-indexing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/algolia-indexing/</guid><description>&lt;h2 id="1-prerequisites">1. Prerequisites&lt;/h2>
+&lt;img src="https://neurodesk.org/static/docs/getting-started/hosted/ghc_terminal.png" alt="alt text"/>
+&lt;/p></description></item><item><title>Indexing with Algolia</title><link>https://neurodesk.org/developers/documentation/algolia-indexing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/algolia-indexing/</guid><description>&lt;h2 id="1-prerequisites">1. Prerequisites&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia account&lt;/a>&lt;/li>
 &lt;/ul>
@@ -355,7 +356,8 @@ Email: &lt;a href="mailto:orenciv@gmail.com">orenciv@gmail.com&lt;/a>&lt;/p>&lt;
 &lt;/ol>
 &lt;ul>
 &lt;li>
-&lt;p>With privileged access: Docker or Podman to run respective engines&lt;/p></description></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-components/</guid><description>&lt;p>&lt;img src="https://neurodesk.org/static/developers/architecture/neurodesk-components/NeurodeskArchitecture.png" alt="architecture" title="architecture">&lt;/p>
+&lt;p>With privileged access: Docker or Podman to run respective engines&lt;/p></description></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-components/</guid><description>&lt;p>&lt;img src="https://neurodesk.org/static/developers/architecture/neurodesk-components/NeurodeskArchitecture.png" alt="architecture" title="architecture"/>
+&lt;/p>
 &lt;h2 id="neurodesktop-recommended-for-beginners">Neurodesktop: Recommended for Beginners&lt;/h2>
 &lt;p>&lt;em>Neurodesktop&lt;/em> is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
 To get started, see: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">Neurodesktop&lt;/a> (&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">Github&lt;/a>)&lt;/p>
@@ -839,7 +841,8 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI" target="_blank" rel="noo
 &lt;li>Log in to Neurodesk app or Neurodesktop using the GitHub single sign-on (SSO) option.&lt;/li>
 &lt;li>Grant permission to GitHub Copilot when prompted to ensure Copilot can operate within your Neurodesk environment.&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://neurodesk.org/static/developers/LLM_support/login-github.png" alt="Login with Github">&lt;/p></description></item><item><title>Neurocontainer Copilot using Google Jules agent</title><link>https://neurodesk.org/developers/neurocontainer-copilot/google-jules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/neurocontainer-copilot/google-jules/</guid><description>&lt;p>While Neurodesk significantly reduces the friction associated with portability and reproducibility, incorporating new neuroimaging tools remains challenging. Incorporating new neuroimaging tools into Neurodesk is challenging due setting the correct environment variables, finding specific versions of the software dependencies, version requirements or specific build steps. However, writing accurate and efficient container recipes requires expertise in containerization technologies and knowledge of software dependencies. Neurocontainer Copilot can help identify these details from provided documentation (README or installation documentation) and code samples. The development involves the following steps: 1) We use existing neurocontainer recipes to generate the recipes for new tools using LLM agents. 2) We use Google Jules agent to automate the process of generating Neurocontainer recipes. 3) We use the generated recipes to create pull requests in the Neurocontainers repository, which can be reviewed and merged by the Neurocontainers team or user can use it to test the recipe locally.&lt;/p></description></item><item><title>Linux</title><link>https://neurodesk.org/getting-started/neurodesktop/linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/linux/</guid><description>&lt;h2 id="minimum-system-requirements">Minimum System Requirements&lt;/h2>
+&lt;p>&lt;img src="https://neurodesk.org/static/developers/LLM_support/login-github.png" alt="Login with Github"/>
+&lt;/p></description></item><item><title>Neurocontainer Copilot using Google Jules agent</title><link>https://neurodesk.org/developers/neurocontainer-copilot/google-jules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/neurocontainer-copilot/google-jules/</guid><description>&lt;p>While Neurodesk significantly reduces the friction associated with portability and reproducibility, incorporating new neuroimaging tools remains challenging. Incorporating new neuroimaging tools into Neurodesk is challenging due setting the correct environment variables, finding specific versions of the software dependencies, version requirements or specific build steps. However, writing accurate and efficient container recipes requires expertise in containerization technologies and knowledge of software dependencies. Neurocontainer Copilot can help identify these details from provided documentation (README or installation documentation) and code samples. The development involves the following steps: 1) We use existing neurocontainer recipes to generate the recipes for new tools using LLM agents. 2) We use Google Jules agent to automate the process of generating Neurocontainer recipes. 3) We use the generated recipes to create pull requests in the Neurocontainers repository, which can be reviewed and merged by the Neurocontainers team or user can use it to test the recipe locally.&lt;/p></description></item><item><title>Linux</title><link>https://neurodesk.org/getting-started/neurodesktop/linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/linux/</guid><description>&lt;h2 id="minimum-system-requirements">Minimum System Requirements&lt;/h2>
 &lt;ol>
 &lt;li>At least 3GB free space for neurodesktop base image&lt;/li>
 &lt;li>Docker requirements. Details found under &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">https://docs.docker.com/get-docker/&lt;/a>&lt;/li>
@@ -1176,10 +1179,12 @@ Install the following VS Code extensions:&lt;/p>
 &lt;h2 id="drag-and-drop">Drag and Drop&lt;/h2>
 &lt;h3 id="uploading-files">Uploading files&lt;/h3>
 &lt;p>You can drag-and-drop files into the browser window to get files into Neurodesktop. This will then start a file upload:&lt;/p>
-&lt;p>&lt;img src="https://user-images.githubusercontent.com/4021595/160577507-b5159bae-13c0-4fbf-85da-0ce55fd481f3.png" alt="{538BB51E-0FEB-46EA-B1B8-FDF122776735}">&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/4021595/160577507-b5159bae-13c0-4fbf-85da-0ce55fd481f3.png" alt="{538BB51E-0FEB-46EA-B1B8-FDF122776735}"/>
+&lt;/p>
 &lt;h3 id="downloading-files">Downloading files&lt;/h3>
 &lt;p>To download files from the desktop using the same mechanism you will need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:&lt;/p></description></item><item><title>Metrics</title><link>https://neurodesk.org/overview/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/metrics/</guid><description>&lt;h2 id="docker-metrics">Docker metrics&lt;/h2>
-&lt;p>Total Neurodesktop container pulls: &lt;img src="https://img.shields.io/docker/pulls/vnmd/neurodesktop" alt="Docker Pulls">&lt;/p>
+&lt;p>Total Neurodesktop container pulls: &lt;img src="https://img.shields.io/docker/pulls/vnmd/neurodesktop" alt="Docker Pulls"/>
+&lt;/p>
 &lt;h2 id="github-metrics">Github metrics&lt;/h2>
 &lt;table>
  &lt;thead>
@@ -1193,45 +1198,66 @@ Install the following VS Code extensions:&lt;/p>
  &lt;tbody>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">neurodesktop&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesktop" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesktop" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesktop" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesktop" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesktop" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesktop" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocommand" target="_blank" rel="noopener">neurocommand&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocommand" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocommand" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocommand" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocommand" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocontainers" target="_blank" rel="noopener">neurocontainers&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocontainers" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocontainers" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/transparent-singularity" target="_blank" rel="noopener">transparent-singularity&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/transparent-singularity" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/transparent-singularity" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/example-notebooks" target="_blank" rel="noopener">example-notebooks&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/example-notebooks" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/example-notebooks" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk.github.io" target="_blank" rel="noopener">neurodesk.github.io&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk-app" target="_blank" rel="noopener">neurodesk-app&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk-app" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app" alt="">&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app" alt="">&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app" alt=""/>
+&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
