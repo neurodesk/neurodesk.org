@@ -43,7 +43,7 @@
 &lt;div class="highlight">
  &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>datalad containers-run -n neurodesk-romeo&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;h2 id="change-version-of-container">Change version of container&lt;/h2>
-&lt;p>You can change which version of a container is used in two ways:&lt;/p></description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p>Our containers are automatically built in &lt;a href="https://github.com/NeuroDesk/neurocontainers/" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocontainers/&lt;/a> and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener">dockerhub&lt;/a> and on &lt;a href="https://github.com/NeuroDesk/neurocontainers/packages" target="_blank" rel="noopener">github&lt;/a>&lt;/p>
+&lt;p>You can change which version of a container is used in two ways:&lt;/p></description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p>Our containers are automatically built in &lt;a href="https://github.com/neurodesk/neurocontainers/" target="_blank" rel="noopener">https://github.com/neurodesk/neurocontainers/&lt;/a> and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener">dockerhub&lt;/a> and on &lt;a href="https://github.com/neurodesk/neurocontainers/packages" target="_blank" rel="noopener">github&lt;/a>&lt;/p>
 &lt;h2 id="pull-docker-containers">Pull Docker containers&lt;/h2>
 &lt;p>e.g. for a julia container
 docker&lt;/p>
@@ -77,12 +77,12 @@ docker&lt;/p>
 &lt;p>Make sure to adjust invertcontrast.py to your pipeline needs (or replace/rename other files from the &lt;a href="https://github.com/kspaceKelvin/python-ismrmrd-server" target="_blank" rel="noopener">Python MRD server&lt;/a>:&lt;/p></description></item><item><title>Singularity</title><link>https://neurodesk.org/getting-started/neurocontainers/singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/singularity/</guid><description>&lt;p>Our docker containers are converted to singularity containers and stored on Object storage.&lt;/p>
 &lt;h2 id="download-singularity-containers">Download Singularity Containers&lt;/h2>
 &lt;p>First get an overview of which containers are available as Singularity containers:
-&lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p>
+&lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p>
 
 
 
 &lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -s https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/log.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -s https://raw.githubusercontent.com/neurodesk/neurocommand/main/cvmfs/log.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;p>assign the container name to a variable:&lt;/p>
 
 

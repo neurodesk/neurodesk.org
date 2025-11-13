@@ -72,6 +72,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
  &lt;ul>
  &lt;li>&lt;a href="#docker">Docker&lt;/a>
  &lt;ul>
+ &lt;li>&lt;a href="#docker-neurodesktop-image-doesnt-start-and-fails-with-out-of-memory-or-cvmfs-exceptions">Docker: Neurodesktop image doesn&amp;rsquo;t start and fails with out of memory or CVMFS exceptions&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#docker-shows-an-error-that-unprivileged-user-namespaces-are-not-enabled">Docker: Shows an error that unprivileged user namespaces are not enabled.&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#docker-cannot-connect-to-the-docker-daemon-at-unixvarrundockersock-is-the-docker-daemon-running">Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.&lt;/a>&lt;/li>
  &lt;/ul>
@@ -111,8 +112,8 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;h2 id="general-overview">&lt;strong>General Overview&lt;/strong>&lt;/h2>
 &lt;h3 id="what-is-neurodesk">What is Neurodesk?&lt;/h3>
 &lt;p>Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code.&lt;/p></description></item><item><title>Discussion Forum</title><link>https://neurodesk.org/overview/discussion-forum/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/discussion-forum/</guid><description>&lt;p>Our main discussion forum is hosted on GitHub Discussions&lt;/p>
-&lt;p>Please use the link below to ask questions, share ideas, and connect with the NeuroDesk community.&lt;/p>
-&lt;p>&lt;strong>&lt;a href="https://github.com/orgs/NeuroDesk/discussions" target="_blank" rel="noopener noreferrer">Go to the NeuroDesk Discussion Forum on GitHub →&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>Metrics</title><link>https://neurodesk.org/overview/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/metrics/</guid><description>&lt;h2 id="docker-metrics">Docker metrics&lt;/h2>
+&lt;p>Please use the link below to ask questions, share ideas, and connect with the neurodesk community.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://github.com/orgs/neurodesk/discussions" target="_blank" rel="noopener noreferrer">Go to the neurodesk Discussion Forum on GitHub →&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>Metrics</title><link>https://neurodesk.org/overview/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/metrics/</guid><description>&lt;h2 id="docker-metrics">Docker metrics&lt;/h2>
 &lt;p>Total Neurodesktop container pulls: &lt;img src="https://img.shields.io/docker/pulls/vnmd/neurodesktop" alt="Docker Pulls"/>
 &lt;/p>
 &lt;h2 id="github-metrics">Github metrics&lt;/h2>
@@ -127,7 +128,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">neurodesktop&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurodesktop" target="_blank" rel="noopener">neurodesktop&lt;/a>&lt;/td>
  &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesktop" alt=""/>
 &lt;/td>
  &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesktop" alt=""/>
@@ -136,57 +137,57 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocommand" target="_blank" rel="noopener">neurocommand&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocommand" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurocommand" target="_blank" rel="noopener">neurocommand&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurocommand" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurocommand" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocommand" alt=""/>
-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocontainers" target="_blank" rel="noopener">neurocontainers&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocontainers" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurocommand" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/transparent-singularity" target="_blank" rel="noopener">transparent-singularity&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/transparent-singularity" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurocontainers" target="_blank" rel="noopener">neurocontainers&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurocontainers" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurocontainers" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity" alt=""/>
-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/example-notebooks" target="_blank" rel="noopener">example-notebooks&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/example-notebooks" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurocontainers" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk.github.io" target="_blank" rel="noopener">neurodesk.github.io&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/transparent-singularity" target="_blank" rel="noopener">transparent-singularity&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/transparent-singularity" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/transparent-singularity" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/transparent-singularity" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk-app" target="_blank" rel="noopener">neurodesk-app&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk-app" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/example-notebooks" target="_blank" rel="noopener">example-notebooks&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/example-notebooks" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/example-notebooks" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/example-notebooks" alt=""/>
+&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurodesk.github.io" target="_blank" rel="noopener">neurodesk.github.io&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurodesk-app" target="_blank" rel="noopener">neurodesk-app&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesk-app" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;/tbody>
@@ -207,7 +208,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;dt>Latest Version&lt;/dt>
 &lt;dd>2025-06-10&lt;/dd>
 &lt;/dl>
-&lt;p>Please consult &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md" target="_blank" rel="noopener">this page&lt;/a> for the template for new releases.&lt;/p>
+&lt;p>Please consult &lt;a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md" target="_blank" rel="noopener">this page&lt;/a> for the template for new releases.&lt;/p>
 &lt;h2 id="2025-06-10">2025-06-10&lt;/h2>
 &lt;h3 id="new-features">New Features&lt;/h3>
 &lt;ul>
@@ -389,7 +390,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;li>add jupyter_scheduler and ipycanvas&lt;/li>
 &lt;li>update guacamole version to 1.5.5 and tomcat to 9.0.87&lt;/li>
 &lt;li>add rise extension for presentations&lt;/li>
-&lt;li>&lt;a href="https://github.com/NeuroDesk/neurocommand/releases/tag/2024-05-25" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/releases/tag/2024-05-25&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/neurodesk/neurocommand/releases/tag/2024-05-25" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/releases/tag/2024-05-25&lt;/a>&lt;/li>
 &lt;li>fixed brkraw by @stebo85 in #268&lt;/li>
 &lt;li>&lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a>: v6.4.1 by @astewartau in #270&lt;/li>
 &lt;li>update mrtrix3 by @stebo85 in #271&lt;/li>
@@ -455,7 +456,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;h2 id="20221216">20221216&lt;/h2>
 &lt;ul>
 &lt;li>added VNC connection back into docker container because RDP currently causes issues for european keyboards&lt;/li>
-&lt;li>added &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> into AFNI container to get @SUMA_Make_Spec_FS to work (issue: &lt;a href="https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927" target="_blank" rel="noopener">https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927&lt;/a>)&lt;/li>
+&lt;li>added &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> into AFNI container to get @SUMA_Make_Spec_FS to work (issue: &lt;a href="https://github.com/orgs/neurodesk/discussions/210#discussioncomment-4337927" target="_blank" rel="noopener">https://github.com/orgs/neurodesk/discussions/210#discussioncomment-4337927&lt;/a>)&lt;/li>
 &lt;li>added deepretinotopy tool in version 1.0.0 20221201 (contributed by Xincheng &amp;amp; Fernanda)&lt;/li>
 &lt;/ul>
 &lt;h2 id="20221129">20221129&lt;/h2>
@@ -540,7 +541,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;ul>
 &lt;li>Physio toolbox compiled and added to SPM + update of SPM&lt;/li>
 &lt;li>added brainstorm&lt;/li>
-&lt;li>new neurodesktop container management scripts for Linux, Mac and Windows: &lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop&lt;/a>&lt;/li>
+&lt;li>new neurodesktop container management scripts for Linux, Mac and Windows: &lt;a href="https://github.com/neurodesk/neurodesktop" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesktop&lt;/a>&lt;/li>
 &lt;li>added fieldtrip&lt;/li>
 &lt;li>Datalad is now in the main image, so datalad run should work&lt;/li>
 &lt;li>added Oshy-X segmentation tool&lt;/li>
@@ -591,7 +592,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;p>Help us build better neuroimaging infrastructure by writing code, improving our containers, or developing new features.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://neurodesk.org/developers/new_tools/">Add or update tools&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/NeuroDesk/neurocontainers/issues" target="_blank" rel="noopener">Help solve issues&lt;/a> - visit our Github page and pick something out&lt;/li>
+&lt;li>&lt;a href="https://github.com/neurodesk/neurocontainers/issues" target="_blank" rel="noopener">Help solve issues&lt;/a> - visit our Github page and pick something out&lt;/li>
 &lt;/ul>
 &lt;h3 id="improve-documentation">Improve Documentation&lt;/h3>
 &lt;p>Good documentation makes tools accessible. Contribute tutorials, usage guides, or improve existing documentation.&lt;/p></description></item><item><title>Applications</title><link>https://neurodesk.org/overview/applications/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/applications/</guid><description>&lt;p>Below is a list of the neurocontainer applications included in the most recent Neurodesk release.&lt;/p>
@@ -611,7 +612,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 
 
  If you can&amp;rsquo;t find an application in Neurodesktop&amp;rsquo;s menu, you may need to &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">update Neurodesktop&lt;/a>&lt;br>
-If you can&amp;rsquo;t find an application on the Nectar Desktop Service, visit our &lt;a href="https://github.com/orgs/NeuroDesk/discussions" target="_blank" rel="noopener">discussion forum&lt;/a> to create a request&lt;br>
+If you can&amp;rsquo;t find an application on the Nectar Desktop Service, visit our &lt;a href="https://github.com/orgs/neurodesk/discussions" target="_blank" rel="noopener">discussion forum&lt;/a> to create a request&lt;br>
 For more information on data synchronization, visit our &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/storage">Storage section&lt;/a>&lt;br>
 For guides and tutorials, refer to the respective &lt;a href="https://neurodesk.org/tutorials-examples/" target="_blank" rel="noopener">tutorial and examples&lt;/a>&lt;br>
 

@@ -19,7 +19,7 @@
 &lt;p>Github: @felenitaribeiro&lt;/p>
 &lt;p>Twitter: @NandaRibeiro93&lt;/p>&lt;/blockquote>
 &lt;!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
-&lt;p>This tutorial documents how to use Connectome Workbench on NeuroDesk for visualizing the 7T HCP Retinotopy Dataset.&lt;/p>
+&lt;p>This tutorial documents how to use Connectome Workbench on neurodesk for visualizing the 7T HCP Retinotopy Dataset.&lt;/p>
 
 &lt;div class="alert alert-info" role="alert">
  &lt;h4 class="alert-heading">Getting Setup with Neurodesk&lt;/h4>
@@ -95,7 +95,7 @@ analyses and rerun them.&lt;/p></description></item><item><title>Examples</title
 &lt;!-- -->
 &lt;blockquote>
 &lt;p>&lt;em>An example notebook can be found here:&lt;/em>
-&lt;a href="https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb" target="_blank" rel="noopener">https://github.com/NeuroDesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb&lt;/a>&lt;/p></description></item><item><title>FreeSurfer</title><link>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/freesurfer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/freesurfer/</guid><description>&lt;blockquote>
+&lt;a href="https://github.com/neurodesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb" target="_blank" rel="noopener">https://github.com/neurodesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb&lt;/a>&lt;/p></description></item><item><title>FreeSurfer</title><link>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/freesurfer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/freesurfer/</guid><description>&lt;blockquote>
 &lt;p>&lt;em>This tutorial was created by Steffen Bollmann.&lt;/em>&lt;/p>
 &lt;p>Github: &lt;a href="https://github.com/stebo85" target="_blank" rel="noopener">@stebo85&lt;/a>
 Web: &lt;a href="https://mri.sbollmann.net/" target="_blank" rel="noopener">mri.sbollmann.net&lt;/a>
@@ -225,14 +225,14 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI" target="_blank" rel="noo
 
 
 &lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone --recurse-submodules git@github.com:NeuroDesk/neurodesk.github.io.git&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone --recurse-submodules git@github.com:neurodesk/neurodesk.github.io.git&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;p>or&lt;/p>
 &lt;h3 id="using-https">Using HTTPS&lt;/h3>
 
 
 
 &lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone --recurse-submodules https://github.com/NeuroDesk/neurodesk.github.io.git&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone --recurse-submodules https://github.com/neurodesk/neurodesk.github.io.git&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;h3 id="if-you-cloned-without-recurse-submodules">If you cloned without &amp;ndash;recurse-submodules&lt;/h3>
 &lt;p>Run the following command to pull submodules&lt;/p>
 
@@ -360,7 +360,7 @@ Email: &lt;a href="mailto:orenciv@gmail.com">orenciv@gmail.com&lt;/a>&lt;/p>&lt;
 &lt;/p>
 &lt;h2 id="neurodesktop-recommended-for-beginners">Neurodesktop: Recommended for Beginners&lt;/h2>
 &lt;p>&lt;em>Neurodesktop&lt;/em> is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
-To get started, see: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">Neurodesktop&lt;/a> (&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">Github&lt;/a>)&lt;/p>
+To get started, see: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">Neurodesktop&lt;/a> (&lt;a href="https://github.com/neurodesk/neurodesktop" target="_blank" rel="noopener">Github&lt;/a>)&lt;/p>
 &lt;ul>
 &lt;li>docker container with interface modifications&lt;/li>
 &lt;li>contains tools necessary to manage workflows in sub-containers: vscode, git&lt;/li>
@@ -412,7 +412,7 @@ Journal of Neuroscience Methods 276, 56-72. &lt;a href="https://doi.org/10.1016/
 &lt;!-- -->
 &lt;p>This tutorial walks through 1 way to batch script the use of the PhysIO toolbox with Neurodesk.
 The goal is to use the toolbox to generate physiological regressors to use when modelling fMRI data.
-The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. &lt;p>&lt;/p></description></item><item><title>Portable Unprivileged NeuroDesktop</title><link>https://neurodesk.org/getting-started/neurodesktop/portable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/portable/</guid><description>&lt;div class="alert alert-info" role="alert">
+The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. &lt;p>&lt;/p></description></item><item><title>Portable Unprivileged neurodesktop</title><link>https://neurodesk.org/getting-started/neurodesktop/portable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/portable/</guid><description>&lt;div class="alert alert-info" role="alert">
 
 
  Installing TinyRange manually is for advanced users only. These instructions should be used as a supplement to running NeurodeskApp.
@@ -495,19 +495,19 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI" target="_blank" rel="noo
 &lt;a href="https://neurodesk.org/example-notebooks/structural_imaging/qsmxt_example.html" target="_blank" rel="noopener">https://neurodesk.org/example-notebooks/structural_imaging/qsmxt_example.html&lt;/a>&lt;/p>&lt;/blockquote>
 &lt;p>Please see the above example notebook which provides a detailed QSM tutorial using QSMxT.&lt;/p></description></item><item><title>Neurodesktop Release Process</title><link>https://neurodesk.org/developers/architecture/release_process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/release_process/</guid><description>&lt;h2 id="neurodesktop">Neurodesktop:&lt;/h2>
 &lt;ol>
-&lt;li>Check if the last automated build ran OK: &lt;a href="https://github.com/NeuroDesk/neurodesktop/actions" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/actions&lt;/a>&lt;/li>
+&lt;li>Check if the last automated build ran OK: &lt;a href="https://github.com/neurodesk/neurodesktop/actions" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesktop/actions&lt;/a>&lt;/li>
 &lt;li>Run this build date and test if everything is ok and no regression happened&lt;/li>
-&lt;li>Check what changes where made since the last release: &lt;a href="https://github.com/NeuroDesk/neurodesktop/commits/main" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/commits/main&lt;/a>&lt;/li>
+&lt;li>Check what changes where made since the last release: &lt;a href="https://github.com/neurodesk/neurodesktop/commits/main" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesktop/commits/main&lt;/a>&lt;/li>
 &lt;li>Summarize the main changes and copy this to the Release History: &lt;a href="https://neurodesk.org/docs/overview/release-history/" target="_blank" rel="noopener">https://neurodesk.org/docs/overview/release-history/&lt;/a>&lt;/li>
-&lt;li>Change the version of the latest desktop in &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/data/neurodesktop.toml" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesk.github.io/blob/main/data/neurodesktop.toml&lt;/a>&lt;/li>
+&lt;li>Change the version of the latest desktop in &lt;a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/data/neurodesktop.toml" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesk.github.io/blob/main/data/neurodesktop.toml&lt;/a>&lt;/li>
 &lt;li>Commit all changes&lt;/li>
 &lt;li>Tweet a quick summary of the changes and announce new version: &lt;a href="https://masto.ai/@Neurodesk" target="_blank" rel="noopener">https://masto.ai/@Neurodesk&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;h2 id="neurodesk-app">Neurodesk App:&lt;/h2>
 &lt;h3 id="release-process">Release process&lt;/h3>
-&lt;p>Follow these steps to create a new release of the &lt;a href="https://github.com/NeuroDesk/neurodesk-app" target="_blank" rel="noopener">Neurodesk App&lt;/a>.&lt;/p></description></item><item><title>CVMFS architecture</title><link>https://neurodesk.org/developers/architecture/cvmfs/cvmfs_architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/cvmfs_architecture/</guid><description>&lt;p>We store our singularity containers unpacked on CVMFS. We tried the DUCC tool in the beginning, but it was causing too many issues with dockerhub and we were rate limited. The script to unpack our singularity containers is here: &lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/sync_containers_to_cvmfs.sh" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/sync_containers_to_cvmfs.sh&lt;/a>&lt;/p>
-&lt;p>It gets called by a cronjob on the CVMFS Stratum 0 server and relies on the log.txt file being updated via an action in the neurocommand repository (&lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/.github/workflows/upload_containers_simg.sh" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/.github/workflows/upload_containers_simg.sh&lt;/a>)&lt;/p>
-&lt;p>The Stratum 1 servers then pull this repo from Stratum 0 and our desktops mount these repos (configured here: &lt;a href="https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile&lt;/a>)&lt;/p></description></item><item><title>Statistical Parametric Mapping (SPM)</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/spm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/spm/</guid><description>&lt;blockquote>
+&lt;p>Follow these steps to create a new release of the &lt;a href="https://github.com/neurodesk/neurodesk-app" target="_blank" rel="noopener">Neurodesk App&lt;/a>.&lt;/p></description></item><item><title>CVMFS architecture</title><link>https://neurodesk.org/developers/architecture/cvmfs/cvmfs_architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/cvmfs_architecture/</guid><description>&lt;p>We store our singularity containers unpacked on CVMFS. We tried the DUCC tool in the beginning, but it was causing too many issues with dockerhub and we were rate limited. The script to unpack our singularity containers is here: &lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/sync_containers_to_cvmfs.sh" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/cvmfs/sync_containers_to_cvmfs.sh&lt;/a>&lt;/p>
+&lt;p>It gets called by a cronjob on the CVMFS Stratum 0 server and relies on the log.txt file being updated via an action in the neurocommand repository (&lt;a href="https://github.com/neurodesk/neurocommand/blob/main/.github/workflows/upload_containers_simg.sh" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/.github/workflows/upload_containers_simg.sh&lt;/a>)&lt;/p>
+&lt;p>The Stratum 1 servers then pull this repo from Stratum 0 and our desktops mount these repos (configured here: &lt;a href="https://github.com/neurodesk/neurodesktop/blob/main/Dockerfile" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesktop/blob/main/Dockerfile&lt;/a>)&lt;/p></description></item><item><title>Statistical Parametric Mapping (SPM)</title><link>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/spm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/tutorials-examples/tutorials/functional_imaging/spm/</guid><description>&lt;blockquote>
 &lt;p>&lt;em>This tutorial was created by Steffen Bollmann.&lt;/em>&lt;/p>
 &lt;p>Email: &lt;a href="mailto:s.bollmannn@uq.edu.au">s.bollmannn@uq.edu.au&lt;/a>&lt;/p>
 &lt;p>Github: @stebo85&lt;/p>
@@ -618,7 +618,7 @@ Our version here is a shortened and adjusted version for using on the Neurodesk 
 &lt;/ul>
 &lt;h3 id="optimize-settings-for-repositories-for-container-images">Optimize settings for repositories for Container Images&lt;/h3>
 &lt;p>from the CVMFS documentation:
-Repositories containing Linux container image contents (that is: container root file systems) should use overlayfs as a union file system and have the following configuration:&lt;/p></description></item><item><title>Setup Stratum 1 server</title><link>https://neurodesk.org/developers/architecture/cvmfs/stratum1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/stratum1/</guid><description>&lt;p>The stratum 1 servers for the desktop are configured here: &lt;a href="https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/blob/main/Dockerfile&lt;/a>&lt;/p>
+Repositories containing Linux container image contents (that is: container root file systems) should use overlayfs as a union file system and have the following configuration:&lt;/p></description></item><item><title>Setup Stratum 1 server</title><link>https://neurodesk.org/developers/architecture/cvmfs/stratum1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/stratum1/</guid><description>&lt;p>The stratum 1 servers for the desktop are configured here: &lt;a href="https://github.com/neurodesk/neurodesktop/blob/main/Dockerfile" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesktop/blob/main/Dockerfile&lt;/a>&lt;/p>
 &lt;p>If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy.&lt;/p>
 &lt;h1 id="setup-a-stratum-1-server-this-setup-works-best-on-rocky-linux-9">Setup a Stratum 1 server (This setup works best on Rocky Linux 9):&lt;/h1>
 
@@ -950,7 +950,7 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
 &lt;div class="alert alert-info" role="alert">
 
 
- The docker installation will reboot your computer a few times. There might be warnings regarding WSL2 and this also might require a few more installation steps that unfortunately differ for every system. Please get in touch if you are stuck and have a look at our troubleshooting page. Here is a detailed instruction on how Neurodesk was installed on Windows VMs from the team at Technion: &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf" target="_blank" rel="noopener">Detailed Docker &amp;amp; Neurodesk installation instruction Windows
+ The docker installation will reboot your computer a few times. There might be warnings regarding WSL2 and this also might require a few more installation steps that unfortunately differ for every system. Please get in touch if you are stuck and have a look at our troubleshooting page. Here is a detailed instruction on how Neurodesk was installed on Windows VMs from the team at Technion: &lt;a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf" target="_blank" rel="noopener">Detailed Docker &amp;amp; Neurodesk installation instruction Windows
 &lt;/a>
 
 &lt;/div>
@@ -968,7 +968,7 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
 &lt;/div>
 
 &lt;h2 id="building-neurodesktop-dev">Building neurodesktop-dev&lt;/h2>
-&lt;p>Dev builds can be triggered by Neurodesk admins from &lt;a href="https://github.com/NeuroDesk/neurodesktop/actions/workflows/build-neurodesktop-dev.yml" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop/actions/workflows/build-neurodesktop-dev.yml&lt;/a>&lt;/p>
+&lt;p>Dev builds can be triggered by Neurodesk admins from &lt;a href="https://github.com/neurodesk/neurodesktop/actions/workflows/build-neurodesktop-dev.yml" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesktop/actions/workflows/build-neurodesktop-dev.yml&lt;/a>&lt;/p>
 &lt;h2 id="running-latest-neurodesktop-dev">Running latest neurodesktop-dev&lt;/h2>
 &lt;h3 id="linux">Linux&lt;/h3>
 
@@ -991,13 +991,13 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
 &lt;div class="highlight">
  &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker pull vnmd/neurodesktop-dev:latest
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run --shm-size&lt;span style="color:#0550ae">=&lt;/span>1gb -it --cap-add SYS_ADMIN --security-opt apparmor:unconfined --device&lt;span style="color:#0550ae">=&lt;/span>/dev/fuse --name neurodesktop -v C:/neurodesktop-storage:/neurodesktop-storage -p 8888:8888 -e &lt;span style="color:#953800">NEURODESKTOP_VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>dev vnmd/neurodesktop-dev:latest&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div></description></item><item><title>New tool</title><link>https://neurodesk.org/developers/new_tools/new_tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/new_tools/new_tool/</guid><description>&lt;p>We have launched our new container build system. Some documentation can already be found here: &lt;a href="https://github.com/NeuroDesk/neurocontainers/tree/main/builder" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocontainers/tree/main/builder&lt;/a>&lt;/p>
+&lt;/div></description></item><item><title>New tool</title><link>https://neurodesk.org/developers/new_tools/new_tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/new_tools/new_tool/</guid><description>&lt;p>We have launched our new container build system. Some documentation can already be found here: &lt;a href="https://github.com/neurodesk/neurocontainers/tree/main/builder" target="_blank" rel="noopener">https://github.com/neurodesk/neurocontainers/tree/main/builder&lt;/a>&lt;/p>
 &lt;p>We have also released a web browser UI to create your own Neurocontainer: &lt;a href="https://neurodesk.org/neurocontainers-ui/" target="_blank" rel="noopener">https://neurodesk.org/neurocontainers-ui/&lt;/a>&lt;/p>
 &lt;p>We are currently building the detailed documentation for this, but documenttaion is also embedded in the UI. If you have any issues, please&lt;/p>
 &lt;h2 id="need-help">Need Help?&lt;/h2>
 &lt;p>If you have questions or would like feedback before submitting:&lt;/p>
 &lt;ul>
-&lt;li>Open a &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/discussions" target="_blank" rel="noopener">discussion&lt;/a>&lt;/li>
+&lt;li>Open a &lt;a href="https://github.com/neurodesk/neurodesk.github.io/discussions" target="_blank" rel="noopener">discussion&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>We appreciate your contribution to the Neurodesk community and reproducible science.&lt;/p></description></item><item><title>Update tool in Neurodesk</title><link>https://neurodesk.org/developers/new_tools/update_tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/new_tools/update_tool/</guid><description>&lt;p>Updating an existing container is quite easy with this new build system.&lt;/p>
 &lt;p>Here is a step-by-step on how to procede by modifying the .yaml file. It is also possible to edit the containers by using our newly released web browser UI : &lt;a href="https://neurodesk.org/neurocontainers-ui/" target="_blank" rel="noopener">https://neurodesk.org/neurocontainers-ui/&lt;/a>&lt;/p>
@@ -1006,7 +1006,7 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
 &lt;hr>
 &lt;h2 id="condensed-version">Condensed version&lt;/h2>
 &lt;ol>
-&lt;li>Access the &lt;a href="https://github.com/NeuroDesk/neurocontainers" target="_blank" rel="noopener">Neurodesk Containers repository&lt;/a>&lt;/li>
+&lt;li>Access the &lt;a href="https://github.com/neurodesk/neurocontainers" target="_blank" rel="noopener">Neurodesk Containers repository&lt;/a>&lt;/li>
 &lt;li>Fork the repository&lt;/li>
 &lt;li>Using your preferred development environment (such as VS Code locally or GitHub Codespaces), make changes to the desired container.&lt;/li>
 &lt;/ol>
@@ -1075,6 +1075,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
  &lt;ul>
  &lt;li>&lt;a href="#docker">Docker&lt;/a>
  &lt;ul>
+ &lt;li>&lt;a href="#docker-neurodesktop-image-doesnt-start-and-fails-with-out-of-memory-or-cvmfs-exceptions">Docker: Neurodesktop image doesn&amp;rsquo;t start and fails with out of memory or CVMFS exceptions&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#docker-shows-an-error-that-unprivileged-user-namespaces-are-not-enabled">Docker: Shows an error that unprivileged user namespaces are not enabled.&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#docker-cannot-connect-to-the-docker-daemon-at-unixvarrundockersock-is-the-docker-daemon-running">Docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.&lt;/a>&lt;/li>
  &lt;/ul>
@@ -1135,12 +1136,12 @@ Install the following VS Code extensions:&lt;/p>
 &lt;p>There are a couple of ways how Neurodesktop can be run on cloud computing resources:&lt;/p>
 &lt;ol>
 &lt;li>The first and easiest option is to provision a virtual Linux machine and run docker on this machine similar to a local Linux setup: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/linux/" target="_blank" rel="noopener">https://neurodesk.org/docs/getting-started/neurodesktop/linux/&lt;/a>&lt;/li>
-&lt;li>Another option is to use Windows VMs and some groups have had success with that. Here is a detailed instructions on this setup: &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf&lt;/a>&lt;/li>
+&lt;li>Another option is to use Windows VMs and some groups have had success with that. Here is a detailed instructions on this setup: &lt;a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesk.github.io/blob/main/static/docs/getting-started/neurodesktop/Neurodesk_Windows_Technion.pdf&lt;/a>&lt;/li>
 &lt;li>This group runs jupyterhub with a neurodesk image through Docker Compose: &lt;a href="https://github.com/wieluk/jupyterhub-neurodesk/" target="_blank" rel="noopener">https://github.com/wieluk/jupyterhub-neurodesk/&lt;/a>&lt;/li>
 &lt;li>The most scalable solution is to run Neurodesk via Kubernetes. This setup is a bit more complex, but can handle many simultaneous users and is ideal for research groups and workshops. The easiest way to deploy Neurodesk on Kubernetes is to use Zero to Jupyterhub (&lt;a href="https://z2jh.jupyter.org/en/stable/" target="_blank" rel="noopener">https://z2jh.jupyter.org/en/stable/&lt;/a>) - then you can use the Neurodesk image like any other jupyterhub image. If you do not want to run a privileged container you need to deploy the cvmfs setup on Kubernetes as well: &lt;a href="https://github.com/cvmfs-contrib/cvmfs-csi/" target="_blank" rel="noopener">https://github.com/cvmfs-contrib/cvmfs-csi/&lt;/a>&lt;/li>
 &lt;/ol></description></item><item><title>Discussion Forum</title><link>https://neurodesk.org/overview/discussion-forum/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/discussion-forum/</guid><description>&lt;p>Our main discussion forum is hosted on GitHub Discussions&lt;/p>
-&lt;p>Please use the link below to ask questions, share ideas, and connect with the NeuroDesk community.&lt;/p>
-&lt;p>&lt;strong>&lt;a href="https://github.com/orgs/NeuroDesk/discussions" target="_blank" rel="noopener noreferrer">Go to the NeuroDesk Discussion Forum on GitHub →&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>Transparent Singularity</title><link>https://neurodesk.org/developers/architecture/transparent_singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/transparent_singularity/</guid><description>&lt;p>Transparent singularity is here &lt;a href="https://github.com/NeuroDesk/transparent-singularity/" target="_blank" rel="noopener">https://github.com/NeuroDesk/transparent-singularity/&lt;/a>&lt;/p>
+&lt;p>Please use the link below to ask questions, share ideas, and connect with the neurodesk community.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://github.com/orgs/neurodesk/discussions" target="_blank" rel="noopener noreferrer">Go to the neurodesk Discussion Forum on GitHub →&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>Transparent Singularity</title><link>https://neurodesk.org/developers/architecture/transparent_singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/transparent_singularity/</guid><description>&lt;p>Transparent singularity is here &lt;a href="https://github.com/neurodesk/transparent-singularity/" target="_blank" rel="noopener">https://github.com/neurodesk/transparent-singularity/&lt;/a>&lt;/p>
 &lt;p>This project allows to use singularity containers transparently on HPCs, so that an application inside the container can be used without adjusting any scripts or pipelines (e.g. nipype).&lt;/p>
 &lt;h2 id="important-add-bind-points-to-bashrc-before-executing-this-script">Important: add bind points to .bashrc before executing this script&lt;/h2>
 &lt;p>This script expects that you have adjusted the Singularity Bindpoints in your .bashrc, e.g.:&lt;/p>
@@ -1150,7 +1151,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;div class="highlight">
  &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> SINGULARITY_BINDPATH&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#34;/gpfs1/,/QRISdata,/data&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;h2 id="this-gives-you-a-list-of-all-tested-images-available-in-neurodesk">This gives you a list of all tested images available in neurodesk:&lt;/h2>
-&lt;p>&lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p></description></item><item><title>Data Storage</title><link>https://neurodesk.org/getting-started/neurodesktop/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/storage/</guid><description>&lt;div>
+&lt;p>&lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p></description></item><item><title>Data Storage</title><link>https://neurodesk.org/getting-started/neurodesktop/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/storage/</guid><description>&lt;div>
  &lt;nav id="TableOfContents">
  &lt;ul>
  &lt;li>&lt;a href="#drag-and-drop">Drag and Drop&lt;/a>
@@ -1197,7 +1198,7 @@ Install the following VS Code extensions:&lt;/p>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">neurodesktop&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurodesktop" target="_blank" rel="noopener">neurodesktop&lt;/a>&lt;/td>
  &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesktop" alt=""/>
 &lt;/td>
  &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesktop" alt=""/>
@@ -1206,57 +1207,57 @@ Install the following VS Code extensions:&lt;/p>
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocommand" target="_blank" rel="noopener">neurocommand&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocommand" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurocommand" target="_blank" rel="noopener">neurocommand&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurocommand" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocommand" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurocommand" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocommand" alt=""/>
-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurocontainers" target="_blank" rel="noopener">neurocontainers&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurocontainers" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurocontainers" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurocontainers" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurocommand" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/transparent-singularity" target="_blank" rel="noopener">transparent-singularity&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/transparent-singularity" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurocontainers" target="_blank" rel="noopener">neurocontainers&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurocontainers" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/transparent-singularity" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurocontainers" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/transparent-singularity" alt=""/>
-&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/example-notebooks" target="_blank" rel="noopener">example-notebooks&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/example-notebooks" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/example-notebooks" alt=""/>
-&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/example-notebooks" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurocontainers" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk.github.io" target="_blank" rel="noopener">neurodesk.github.io&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk.github.io" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/transparent-singularity" target="_blank" rel="noopener">transparent-singularity&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/transparent-singularity" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk.github.io" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/transparent-singularity" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk.github.io" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/transparent-singularity" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>&lt;a href="https://github.com/NeuroDesk/neurodesk-app" target="_blank" rel="noopener">neurodesk-app&lt;/a>&lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/stars/NeuroDesk/neurodesk-app" alt=""/>
+ &lt;td>&lt;a href="https://github.com/neurodesk/example-notebooks" target="_blank" rel="noopener">example-notebooks&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/example-notebooks" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/NeuroDesk/neurodesk-app" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/example-notebooks" alt=""/>
 &lt;/td>
- &lt;td>&lt;img src="https://img.shields.io/github/last-commit/NeuroDesk/neurodesk-app" alt=""/>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/example-notebooks" alt=""/>
+&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurodesk.github.io" target="_blank" rel="noopener">neurodesk.github.io&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesk.github.io" alt=""/>
+&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://github.com/neurodesk/neurodesk-app" target="_blank" rel="noopener">neurodesk-app&lt;/a>&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/stars/neurodesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/issues-raw/neurodesk/neurodesk-app" alt=""/>
+&lt;/td>
+ &lt;td>&lt;img src="https://img.shields.io/github/last-commit/neurodesk/neurodesk-app" alt=""/>
 &lt;/td>
  &lt;/tr>
  &lt;/tbody>
@@ -1277,7 +1278,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;dt>Latest Version&lt;/dt>
 &lt;dd>2025-06-10&lt;/dd>
 &lt;/dl>
-&lt;p>Please consult &lt;a href="https://github.com/NeuroDesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md" target="_blank" rel="noopener">this page&lt;/a> for the template for new releases.&lt;/p>
+&lt;p>Please consult &lt;a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md" target="_blank" rel="noopener">this page&lt;/a> for the template for new releases.&lt;/p>
 &lt;h2 id="2025-06-10">2025-06-10&lt;/h2>
 &lt;h3 id="new-features">New Features&lt;/h3>
 &lt;ul>
@@ -1459,7 +1460,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;li>add jupyter_scheduler and ipycanvas&lt;/li>
 &lt;li>update guacamole version to 1.5.5 and tomcat to 9.0.87&lt;/li>
 &lt;li>add rise extension for presentations&lt;/li>
-&lt;li>&lt;a href="https://github.com/NeuroDesk/neurocommand/releases/tag/2024-05-25" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/releases/tag/2024-05-25&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/neurodesk/neurocommand/releases/tag/2024-05-25" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/releases/tag/2024-05-25&lt;/a>&lt;/li>
 &lt;li>fixed brkraw by @stebo85 in #268&lt;/li>
 &lt;li>&lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a>: v6.4.1 by @astewartau in #270&lt;/li>
 &lt;li>update mrtrix3 by @stebo85 in #271&lt;/li>
@@ -1525,7 +1526,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;h2 id="20221216">20221216&lt;/h2>
 &lt;ul>
 &lt;li>added VNC connection back into docker container because RDP currently causes issues for european keyboards&lt;/li>
-&lt;li>added &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> into AFNI container to get @SUMA_Make_Spec_FS to work (issue: &lt;a href="https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927" target="_blank" rel="noopener">https://github.com/orgs/NeuroDesk/discussions/210#discussioncomment-4337927&lt;/a>)&lt;/li>
+&lt;li>added &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> into AFNI container to get @SUMA_Make_Spec_FS to work (issue: &lt;a href="https://github.com/orgs/neurodesk/discussions/210#discussioncomment-4337927" target="_blank" rel="noopener">https://github.com/orgs/neurodesk/discussions/210#discussioncomment-4337927&lt;/a>)&lt;/li>
 &lt;li>added deepretinotopy tool in version 1.0.0 20221201 (contributed by Xincheng &amp;amp; Fernanda)&lt;/li>
 &lt;/ul>
 &lt;h2 id="20221129">20221129&lt;/h2>
@@ -1610,7 +1611,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;ul>
 &lt;li>Physio toolbox compiled and added to SPM + update of SPM&lt;/li>
 &lt;li>added brainstorm&lt;/li>
-&lt;li>new neurodesktop container management scripts for Linux, Mac and Windows: &lt;a href="https://github.com/NeuroDesk/neurodesktop" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurodesktop&lt;/a>&lt;/li>
+&lt;li>new neurodesktop container management scripts for Linux, Mac and Windows: &lt;a href="https://github.com/neurodesk/neurodesktop" target="_blank" rel="noopener">https://github.com/neurodesk/neurodesktop&lt;/a>&lt;/li>
 &lt;li>added fieldtrip&lt;/li>
 &lt;li>Datalad is now in the main image, so datalad run should work&lt;/li>
 &lt;li>added Oshy-X segmentation tool&lt;/li>
@@ -1661,7 +1662,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;p>Help us build better neuroimaging infrastructure by writing code, improving our containers, or developing new features.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://neurodesk.org/developers/new_tools/">Add or update tools&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/NeuroDesk/neurocontainers/issues" target="_blank" rel="noopener">Help solve issues&lt;/a> - visit our Github page and pick something out&lt;/li>
+&lt;li>&lt;a href="https://github.com/neurodesk/neurocontainers/issues" target="_blank" rel="noopener">Help solve issues&lt;/a> - visit our Github page and pick something out&lt;/li>
 &lt;/ul>
 &lt;h3 id="improve-documentation">Improve Documentation&lt;/h3>
 &lt;p>Good documentation makes tools accessible. Contribute tutorials, usage guides, or improve existing documentation.&lt;/p></description></item><item><title>Nectar Virtual Desktop Service</title><link>https://neurodesk.org/getting-started/hosted/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/nectar/</guid><description>&lt;p>
@@ -1698,7 +1699,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;li>Collaborate with colleagues using a consistent environment&lt;/li>
 &lt;li>Run analyses from any device with a modern web browser&lt;/li>
 &lt;/ul>
-&lt;p>Ready to get started? Click the button below to launch Neurodesk Play:&lt;/p></description></item><item><title>Project Roadmap</title><link>https://neurodesk.org/developers/architecture/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/roadmap/</guid><description>&lt;p>All things we are currently working on and are planning to do are listed here: &lt;a href="https://github.com/orgs/NeuroDesk/projects/9/views/4" target="_blank" rel="noopener">https://github.com/orgs/NeuroDesk/projects/9/views/4&lt;/a>&lt;/p>
+&lt;p>Ready to get started? Click the button below to launch Neurodesk Play:&lt;/p></description></item><item><title>Project Roadmap</title><link>https://neurodesk.org/developers/architecture/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/roadmap/</guid><description>&lt;p>All things we are currently working on and are planning to do are listed here: &lt;a href="https://github.com/orgs/neurodesk/projects/9/views/4" target="_blank" rel="noopener">https://github.com/orgs/neurodesk/projects/9/views/4&lt;/a>&lt;/p>
 &lt;p>The larger themes and subthemes are:&lt;/p>
 &lt;h1 id="streamlining-container-build-and-release-process">Streamlining container build and release process&lt;/h1>
 &lt;h2 id="improving-the-workflow-of-how-users-can-add-new-applications-to-neurodesk">Improving the workflow of how users can add new applications to Neurodesk&lt;/h2>
@@ -1719,7 +1720,7 @@ Install the following VS Code extensions:&lt;/p>
 
 
  If you can&amp;rsquo;t find an application in Neurodesktop&amp;rsquo;s menu, you may need to &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">update Neurodesktop&lt;/a>&lt;br>
-If you can&amp;rsquo;t find an application on the Nectar Desktop Service, visit our &lt;a href="https://github.com/orgs/NeuroDesk/discussions" target="_blank" rel="noopener">discussion forum&lt;/a> to create a request&lt;br>
+If you can&amp;rsquo;t find an application on the Nectar Desktop Service, visit our &lt;a href="https://github.com/orgs/neurodesk/discussions" target="_blank" rel="noopener">discussion forum&lt;/a> to create a request&lt;br>
 For more information on data synchronization, visit our &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/storage">Storage section&lt;/a>&lt;br>
 For guides and tutorials, refer to the respective &lt;a href="https://neurodesk.org/tutorials-examples/" target="_blank" rel="noopener">tutorial and examples&lt;/a>&lt;br>
 
@@ -1768,7 +1769,7 @@ For guides and tutorials, refer to the respective &lt;a href="https://neurodesk.
 &lt;div class="highlight">
  &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>datalad containers-run -n neurodesk-romeo&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;h2 id="change-version-of-container">Change version of container&lt;/h2>
-&lt;p>You can change which version of a container is used in two ways:&lt;/p></description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p>Our containers are automatically built in &lt;a href="https://github.com/NeuroDesk/neurocontainers/" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocontainers/&lt;/a> and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener">dockerhub&lt;/a> and on &lt;a href="https://github.com/NeuroDesk/neurocontainers/packages" target="_blank" rel="noopener">github&lt;/a>&lt;/p>
+&lt;p>You can change which version of a container is used in two ways:&lt;/p></description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p>Our containers are automatically built in &lt;a href="https://github.com/neurodesk/neurocontainers/" target="_blank" rel="noopener">https://github.com/neurodesk/neurocontainers/&lt;/a> and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener">dockerhub&lt;/a> and on &lt;a href="https://github.com/neurodesk/neurocontainers/packages" target="_blank" rel="noopener">github&lt;/a>&lt;/p>
 &lt;h2 id="pull-docker-containers">Pull Docker containers&lt;/h2>
 &lt;p>e.g. for a julia container
 docker&lt;/p>
@@ -1801,7 +1802,7 @@ docker&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>os&lt;span style="color:#0550ae">.&lt;/span>environ&lt;span style="color:#1f2328">[&lt;/span>&lt;span style="color:#0a3069">&amp;#34;MPLCONFIGDIR&amp;#34;&lt;/span>&lt;span style="color:#1f2328">]&lt;/span> &lt;span style="color:#0550ae">=&lt;/span> &lt;span style="color:#0a3069">&amp;#34;/content/matplotlib-mpldir&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>os&lt;span style="color:#0550ae">.&lt;/span>environ&lt;span style="color:#1f2328">[&lt;/span>&lt;span style="color:#0a3069">&amp;#34;LMOD_CMD&amp;#34;&lt;/span>&lt;span style="color:#1f2328">]&lt;/span> &lt;span style="color:#0550ae">=&lt;/span> &lt;span style="color:#0a3069">&amp;#34;/usr/share/lmod/lmod/libexec/lmod&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f6f8fa;background-color:#82071e">!&lt;/span>curl &lt;span style="color:#0550ae">-&lt;/span>J &lt;span style="color:#0550ae">-&lt;/span>O https&lt;span style="color:#1f2328">:&lt;/span>&lt;span style="color:#0550ae">//&lt;/span>raw&lt;span style="color:#0550ae">.&lt;/span>githubusercontent&lt;span style="color:#0550ae">.&lt;/span>com&lt;span style="color:#0550ae">/&lt;/span>NeuroDesk&lt;span style="color:#0550ae">/&lt;/span>neurocommand&lt;span style="color:#0550ae">/&lt;/span>main&lt;span style="color:#0550ae">/&lt;/span>googlecolab_setup&lt;span style="color:#0550ae">.&lt;/span>sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f6f8fa;background-color:#82071e">!&lt;/span>curl &lt;span style="color:#0550ae">-&lt;/span>J &lt;span style="color:#0550ae">-&lt;/span>O https&lt;span style="color:#1f2328">:&lt;/span>&lt;span style="color:#0550ae">//&lt;/span>raw&lt;span style="color:#0550ae">.&lt;/span>githubusercontent&lt;span style="color:#0550ae">.&lt;/span>com&lt;span style="color:#0550ae">/&lt;/span>neurodesk&lt;span style="color:#0550ae">/&lt;/span>neurocommand&lt;span style="color:#0550ae">/&lt;/span>main&lt;span style="color:#0550ae">/&lt;/span>googlecolab_setup&lt;span style="color:#0550ae">.&lt;/span>sh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f6f8fa;background-color:#82071e">!&lt;/span>chmod &lt;span style="color:#0550ae">+&lt;/span>x googlecolab_setup&lt;span style="color:#0550ae">.&lt;/span>sh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f6f8fa;background-color:#82071e">!&lt;/span>&lt;span style="color:#0550ae">./&lt;/span>googlecolab_setup&lt;span style="color:#0550ae">.&lt;/span>sh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -1832,12 +1833,12 @@ docker&lt;/p>
 &lt;p>Make sure to adjust invertcontrast.py to your pipeline needs (or replace/rename other files from the &lt;a href="https://github.com/kspaceKelvin/python-ismrmrd-server" target="_blank" rel="noopener">Python MRD server&lt;/a>:&lt;/p></description></item><item><title>Search Results</title><link>https://neurodesk.org/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/search/</guid><description/></item><item><title>Singularity</title><link>https://neurodesk.org/getting-started/neurocontainers/singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/singularity/</guid><description>&lt;p>Our docker containers are converted to singularity containers and stored on Object storage.&lt;/p>
 &lt;h2 id="download-singularity-containers">Download Singularity Containers&lt;/h2>
 &lt;p>First get an overview of which containers are available as Singularity containers:
-&lt;a href="https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/NeuroDesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p>
+&lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p>
 
 
 
 &lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -s https://raw.githubusercontent.com/NeuroDesk/neurocommand/main/cvmfs/log.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -s https://raw.githubusercontent.com/neurodesk/neurocommand/main/cvmfs/log.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;p>assign the container name to a variable:&lt;/p>
 
 
