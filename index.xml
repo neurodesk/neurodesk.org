@@ -417,7 +417,9 @@ Repositories containing Linux container image contents (that is: container root 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#test&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl --head http://YOUR_IP_OR_DNS/cvmfs/neurodesk.ardc.edu.au/.cvmfspublished&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div></description></item><item><title>Bunya</title><link>https://neurodesk.org/getting-started/hosted/bunya/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/bunya/</guid><description>&lt;!-- markdown-link-check-disable -->
+&lt;/div></description></item><item><title>Tutorials have moved to NeurodeskEDU</title><link>https://neurodesk.org/redirects/tutorials-to-neurodeskedu/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/redirects/tutorials-to-neurodeskedu/</guid><description>&lt;p>The tutorials that used to live on this site have been migrated.&lt;/p>
+&lt;p>New home: &lt;a href="https://neurodesk.org/edu" target="_blank" rel="noopener">https://neurodesk.org/edu&lt;/a>&lt;/p>
+&lt;p>Please update any bookmarks/links to point to Neurodesk EDU.&lt;/p></description></item><item><title>Bunya</title><link>https://neurodesk.org/getting-started/hosted/bunya/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/bunya/</guid><description>&lt;!-- markdown-link-check-disable -->
 &lt;p>Neurodesk is installed at the University of Queensland&amp;rsquo;s supercomputer &amp;ldquo;Bunya&amp;rdquo;. To access neurodesk tools you need to be in an interactive job (so either start a virtual desktop via Open On-Demand: &lt;a href="https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard" target="_blank" rel="noopener">https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard&lt;/a>) or run:&lt;/p>
 
 
@@ -1239,7 +1241,7 @@ Install the following VS Code extensions:&lt;/p>
 &lt;h2 id="20211018">20211018&lt;/h2>
 &lt;ul>
 &lt;li>added Rstudio, R and multiple R packages (plotly, car, tidyverse, &amp;hellip;)&lt;/li>
-&lt;li>added ClearSWI and ROMEO for MRI phase processing (including new Tutorials: &lt;a href="https://neurodesk.org/tutorials-examples/tutorials/phase_processing/" target="_blank" rel="noopener">https://neurodesk.org/tutorials-examples/tutorials/phase_processing/&lt;/a>)&lt;/li>
+&lt;li>added ClearSWI and ROMEO for MRI phase processing&lt;/li>
 &lt;li>added more categories in applications menu (Body, Electrophysiology, Hippocampus, Phase Processing, Rodent Imaging, Shape Analysis, Spine, Statistics)&lt;/li>
 &lt;li>bugfix: improved startup time of the desktop container (miniconda in homedirectory was causing chmod slowdown)&lt;/li>
 &lt;li>bugfix: ssh, vnc and rdp servers are now restarted in case the container was stopped and started again (e.g. on Standby)&lt;/li>
@@ -1337,7 +1339,7 @@ Install the following VS Code extensions:&lt;/p>
  If you can&amp;rsquo;t find an application in Neurodesktop&amp;rsquo;s menu, you may need to &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop">update Neurodesktop&lt;/a>&lt;br>
 If you can&amp;rsquo;t find an application on the Nectar Desktop Service, visit our &lt;a href="https://github.com/orgs/neurodesk/discussions" target="_blank" rel="noopener">discussion forum&lt;/a> to create a request&lt;br>
 For more information on data synchronization, visit our &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/storage">Storage section&lt;/a>&lt;br>
-For guides and tutorials, refer to the respective &lt;a href="https://neurodesk.org/tutorials-examples/" target="_blank" rel="noopener">tutorial and examples&lt;/a>&lt;br>
+For guides and tutorials, refer to the respective &lt;a href="https://neurodesk.org/edu/" target="_blank" rel="noopener">tutorial and examples&lt;/a>&lt;br>
 
 &lt;/div></description></item><item><title>CVMFS</title><link>https://neurodesk.org/getting-started/neurocontainers/cvmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/cvmfs/</guid><description>&lt;h2 id="install-the-cernvm-file-system-cvmfs">Install the CernVM File System (CVMFS)&lt;/h2>
 &lt;p>To begin, install CVMFS. Follow the official instructions here: &lt;a href="https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software" target="_blank" rel="noopener">https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software&lt;/a>&lt;/p>
