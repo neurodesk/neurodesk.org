@@ -58,12 +58,12 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/structural_imaging/freesurfer';</script>
-    <link rel="canonical" href="https://neurodesk.github.io/neurodeskedu/examples/structural_imaging/freesurfer.html" />
+    <link rel="canonical" href="https://neurodesk.org/edu/examples/structural_imaging/freesurfer.html" />
     <link rel="icon" href="../../_static/neurodesk_logo.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="FSL course - BET" href="FSL_course_bet.html" />
-    <link rel="prev" title="Brain Extraction Tools" href="brain_extraction_different_tools.html" />
+    <link rel="next" title="QSMxT" href="qsmxt.html" />
+    <link rel="prev" title="FreeSurfer: recon-all-clinical" href="freesurfer-recon-all-clinical.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,13 +176,8 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../diffusion_imaging/intro.html">Diffusion Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
-
-
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_1.html">MRtrix: Part 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_2.html">MRtrix: Part 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_3.html">MRtrix: Part 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/mrtrix3tissue.html">MRtrix3Tissue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_1.html">Basic Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_2.html">Advanced Tracking with DIPY</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
 
 
@@ -194,37 +189,21 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/aslprep.html">ASLprep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/deepretinotopy.html">DeepRetinotopy</a></li>
-
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fmriprep.html">fMRIprep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
 
 
 
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/intro_to_preprocessing.html">Introduction to Preprocessing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/mri_vol2surf.html">FreeSurfer: mri_vol2surf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/process_five_echo_dataset.html">tedana: TE Dependent ANAlysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/aslprep.html">ASLprep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/deepretinotopy.html">DeepRetinotopy</a></li>
-
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/deepretinotopy.html">DeepRetinotopy Toolbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fmriprep.html">fMRIprep</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
@@ -239,31 +218,14 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Structural Imaging</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">FreeSurfer</a></li>
-
-
-<li class="toctree-l3"><a class="reference internal" href="FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qsmxt.html">QSMxT</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l3"><a class="reference internal" href="sct_toolbox.html">SCT Toolbox</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="FSL_course_bet.html">FSL course - BET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
+
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">FreeSurfer</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="qsmxt.html">QSMxT</a></li>
 
 
@@ -278,17 +240,6 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../workflows/intro.html">Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/bids_conversion.html">BIDS conversion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/MRIQC.html">MRIQC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_short.html">Basic Nipype</a></li>
-
-
-<li class="toctree-l3"><a class="reference internal" href="../workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/PyBIDS.html">PyBIDS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/pydra_preproc_ants.html">Pydra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/RISE_slideshow.html">RISE Slideshow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/MRIQC.html">MRIQC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/PyBIDS.html">PyBIDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/RISE_slideshow.html">RISE Slideshow</a></li>
@@ -296,14 +247,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_short.html">Basic Nipype</a></li>
 
-
 <li class="toctree-l3"><a class="reference internal" href="../workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/pydra_preproc_ants.html">Pydra</a></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -367,7 +317,7 @@
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Contribute Example Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Contribute Tutorials</a></li>
 </ul>
@@ -413,6 +363,55 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/structural_imaging/freesurfer.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Run in America"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in America logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in America</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/structural_imaging/freesurfer.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Run in Europe"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Europe logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Europe</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -520,14 +519,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">FreeSurfer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-cpu-information">Output CPU information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-freesurfer">Load FreeSurfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -538,30 +542,29 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="freesurfer">
+  <section class="tex2jax_ignore mathjax_ignore" id="freesurfer">
 <h1>FreeSurfer<a class="headerlink" href="#freesurfer" title="Link to this heading">#</a></h1>
 <p><strong>Author:</strong> Steffen Bollmann</p>
-<p><strong>Citation:</strong></p>
-<p><strong>Dataset</strong>: MP2RAGE T1-weighted average 7T model (human brain model)</p>
+<p><strong>Date:</strong> 17 Oct 2024</p>
+<section id="citation-and-resources">
+<h2>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h2>
+<section id="tools-included-in-this-workflow">
+<h3>Tools included in this workflow<a class="headerlink" href="#tools-included-in-this-workflow" title="Link to this heading">#</a></h3>
+<p><strong>FreeSurfer:</strong></p>
+<ul class="simple">
+<li><p>Fischl B. (2012). FreeSurfer. NeuroImage, 62(2), 774–781. <a class="reference external" href="https://doi.org/10.1016/j.neuroimage.2012.01.021">https://doi.org/10.1016/j.neuroimage.2012.01.021</a></p></li>
+</ul>
+</section>
+<section id="dataset">
+<h3>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h3>
+<p><strong>MP2RAGE T1-weighted average 7T model (human brain model)</strong></p>
 <ul class="simple">
 <li><p>Bollmann, Steffen, Andrew Janke, Lars Marstaller, David Reutens, Kieran O’Brien, and Markus Barth. “MP2RAGE T1-weighted average 7T model” January 1, 2017. <a class="reference external" href="https://espace.library.uq.edu.au/view/UQ:480383">doi:10.14264/uql.2017.266</a></p></li>
 </ul>
-<section id="output-cpu-information">
-<h2>Output CPU information<a class="headerlink" href="#output-cpu-information" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;vendor&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
-<span class="o">!</span>cat<span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;model name&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vendor_id	: GenuineIntel
-model name	: Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+</section>
+<section id="load-freesurfer">
+<h2>Load FreeSurfer<a class="headerlink" href="#load-freesurfer" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can use module to load freesurfer in a specific version</span>
@@ -572,7 +575,7 @@ model name	: Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;mrtrix3/3.0.4&#39;, &#39;freesurfer/7.3.2&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;freesurfer/7.3.2&#39;]
 </pre></div>
 </div>
 </div>
@@ -740,9 +743,8 @@ model name	: Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
 </div>
 </div>
 </section>
-</section>
 <section id="download-data">
-<h1>Download data<a class="headerlink" href="#download-data" title="Link to this heading">#</a></h1>
+<h2>Download data<a class="headerlink" href="#download-data" title="Link to this heading">#</a></h2>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">![</span><span class="w"> </span>-f<span class="w"> </span>./mp2rage.nii<span class="w">  </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$FILE</span><span class="s2"> exist.&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>wget<span class="w"> </span>https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii<span class="w"> </span>-O<span class="w"> </span>./mp2rage.nii<span class="w"> </span>
@@ -778,8 +780,8 @@ freesurfer.ipynb			qsmxt.ipynb
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="run">
-<h1>Run<a class="headerlink" href="#run" title="Link to this heading">#</a></h1>
+<section id="run">
+<h2>Run<a class="headerlink" href="#run" title="Link to this heading">#</a></h2>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>mkdir<span class="w"> </span>./freesurfer_output
@@ -7254,6 +7256,9 @@ lh.smoothwm.K.crv	 rh.inflated.K		  rh.white.preaparc.K
 </div>
 </div>
 </div>
+</section>
+<section id="results">
+<h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ipyniivue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NiiVue</span>
@@ -7278,6 +7283,45 @@ lh.smoothwm.K.crv	 rh.inflated.K		  rh.white.preaparc.K
 <div class="cell_output docutils container">
 <div class="output text_html"><img src="https://raw.githubusercontent.com/NeuroDesk/example-notebooks/refs/heads/main/books/images/freesurfer_orig_aseg.png"/></div></div>
 </div>
+<section id="dependencies-in-jupyter-python">
+<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+
+<span class="o">%</span><span class="k">watermark</span>
+<span class="o">%</span><span class="k">watermark</span> --iversions
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The watermark extension is already loaded. To reload it, use:
+  %reload_ext watermark
+Last updated: 2025-11-02T23:13:08.528046+00:00
+
+Python implementation: CPython
+Python version       : 3.11.6
+IPython version      : 8.16.1
+
+Compiler    : GCC 12.3.0
+OS          : Linux
+Release     : 5.4.0-204-generic
+Machine     : x86_64
+Processor   : x86_64
+CPU cores   : 32
+Architecture: 64bit
+
+ipyniivue: 2.3.2
+IPython  : 8.16.1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -7311,20 +7355,20 @@ lh.smoothwm.K.crv	 rh.inflated.K		  rh.white.preaparc.K
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="brain_extraction_different_tools.html"
+       href="freesurfer-recon-all-clinical.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Brain Extraction Tools</p>
+        <p class="prev-next-title">FreeSurfer: recon-all-clinical</p>
       </div>
     </a>
     <a class="right-next"
-       href="FSL_course_bet.html"
+       href="qsmxt.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">FSL course - BET</p>
+        <p class="prev-next-title">QSMxT</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -7344,14 +7388,19 @@ lh.smoothwm.K.crv	 rh.inflated.K		  rh.white.preaparc.K
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">FreeSurfer</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-cpu-information">Output CPU information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-freesurfer">Load FreeSurfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>

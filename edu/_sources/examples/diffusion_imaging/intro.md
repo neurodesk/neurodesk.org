@@ -8,9 +8,5 @@ This folder contains example notebooks that demonstrate diffusion MRI preprocess
 
 ```{toctree}
 :titlesonly:
-Diffusion_TBSS_Demo
-MRtrix_1
-MRtrix_2
-MRtrix_3
-mrtrix3tissue
+:maxdepth: 1
 ```

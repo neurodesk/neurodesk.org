@@ -8,6 +8,5 @@ Example notebooks for spectroscopy analyses.
 
 ```{toctree}
 :titlesonly:
-lcmodel
-osprey
+:maxdepth: 1
 ```

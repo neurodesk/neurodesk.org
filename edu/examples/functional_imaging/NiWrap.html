@@ -58,12 +58,12 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/functional_imaging/NiWrap';</script>
-    <link rel="canonical" href="https://neurodesk.github.io/neurodeskedu/examples/functional_imaging/NiWrap.html" />
+    <link rel="canonical" href="https://neurodesk.org/edu/examples/functional_imaging/NiWrap.html" />
     <link rel="icon" href="../../_static/neurodesk_logo.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="tedana: TE Dependent ANAlysis" href="process_five_echo_dataset.html" />
-    <link rel="prev" title="FreeSurfer: mri_vol2surf" href="mri_vol2surf.html" />
+    <link rel="next" title="ASLprep" href="aslprep.html" />
+    <link rel="prev" title="Resting state with FSLnets" href="FSLnets_course_practical.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,13 +176,8 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../diffusion_imaging/intro.html">Diffusion Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
-
-
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_1.html">MRtrix: Part 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_2.html">MRtrix: Part 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_3.html">MRtrix: Part 3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/mrtrix3tissue.html">MRtrix3Tissue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_1.html">Basic Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_2.html">Advanced Tracking with DIPY</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
 
 
@@ -194,37 +189,21 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Functional Imaging</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="aslprep.html">ASLprep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deepretinotopy.html">DeepRetinotopy</a></li>
-
-<li class="toctree-l3"><a class="reference internal" href="first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fmriprep.html">fMRIprep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
 
 
 
 <li class="toctree-l3"><a class="reference internal" href="FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSLnets_course_practical.html">Resting state with FSLnets</a></li>
-<li class="toctree-l3"><a class="reference internal" href="intro_to_preprocessing.html">Introduction to Preprocessing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mri_vol2surf.html">FreeSurfer: mri_vol2surf</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">NiWrap and Connectome Workbench</a></li>
-<li class="toctree-l3"><a class="reference internal" href="process_five_echo_dataset.html">tedana: TE Dependent ANAlysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">NiWrap and Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aslprep.html">ASLprep</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deepretinotopy.html">DeepRetinotopy</a></li>
-
+<li class="toctree-l3"><a class="reference internal" href="deepretinotopy.html">DeepRetinotopy Toolbox</a></li>
 <li class="toctree-l3"><a class="reference internal" href="first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fmriprep.html">fMRIprep</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
@@ -239,31 +218,14 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer.html">FreeSurfer</a></li>
-
-
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/qsmxt.html">QSMxT</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
+
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer.html">FreeSurfer</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/qsmxt.html">QSMxT</a></li>
 
 
@@ -278,17 +240,6 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../workflows/intro.html">Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/bids_conversion.html">BIDS conversion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/MRIQC.html">MRIQC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_short.html">Basic Nipype</a></li>
-
-
-<li class="toctree-l3"><a class="reference internal" href="../workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/PyBIDS.html">PyBIDS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/pydra_preproc_ants.html">Pydra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/RISE_slideshow.html">RISE Slideshow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../workflows/AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/MRIQC.html">MRIQC</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/PyBIDS.html">PyBIDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/RISE_slideshow.html">RISE Slideshow</a></li>
@@ -296,14 +247,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_short.html">Basic Nipype</a></li>
 
-
 <li class="toctree-l3"><a class="reference internal" href="../workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/pydra_preproc_ants.html">Pydra</a></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -367,7 +317,7 @@
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Contribute Example Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Contribute Tutorials</a></li>
 </ul>
@@ -413,6 +363,55 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/functional_imaging/NiWrap.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Run in America"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in America logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in America</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/functional_imaging/NiWrap.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Run in Europe"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Europe logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Europe</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -521,10 +520,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-based-visualization-workflow-for-single-subject-cifti">Surface-Based Visualization Workflow for Single-Subject CIFTI</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#output-cpu-information">Output CPU information</a></li>
 </ul>
 </li>
 </ul>
@@ -560,6 +558,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-and-visualize-top-10-face-selective-parcels">Analyze and visualize top 10 face-selective Parcels</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>
@@ -578,8 +577,9 @@ document.write(`
 <section id="surface-based-visualization-workflow-for-single-subject-cifti">
 <h2>Surface-Based Visualization Workflow for Single-Subject CIFTI<a class="headerlink" href="#surface-based-visualization-workflow-for-single-subject-cifti" title="Link to this heading">#</a></h2>
 <p><strong>Author</strong>: Monika Doerig</p>
-<section id="citation">
-<h3>Citation:<a class="headerlink" href="#citation" title="Link to this heading">#</a></h3>
+<p><strong>Date</strong>: 23 July 2025</p>
+<section id="citation-and-resources">
+<h3>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h3>
 <section id="tools-included-in-this-workflow">
 <h4>Tools included in this workflow<a class="headerlink" href="#tools-included-in-this-workflow" title="Link to this heading">#</a></h4>
 <p><strong>NiWrap:</strong></p>
@@ -606,23 +606,6 @@ document.write(`
 <ul class="simple">
 <li><p>Zhengxin Gong and Ming Zhou and Yuxuan Dai and Yushan Wen and Youyi Liu and Zonglei Zhen (2023). A large-scale fMRI dataset for the visual processing of naturalistic scenes. OpenNeuro. [Dataset] doi: <a class="reference external" href="https://openneuro.org/datasets/ds004496/versions/2.1.2">doi:10.18112/openneuro.ds004496.v2.1.2</a></p></li>
 </ul>
-</section>
-<section id="output-cpu-information">
-<h4>Output CPU information<a class="headerlink" href="#output-cpu-information" title="Link to this heading">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;vendor&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
-<span class="o">!</span>cat<span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;model name&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vendor_id	: GenuineIntel
-model name	: Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 </section>
@@ -919,7 +902,7 @@ Object - others
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-math &#39;x * (x &gt; 1.081139940023422)&#39; /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -var x /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face.dscalar.nii
 [I] parsed &#39;x * (x &gt; 1.081139940023422)&#39; as &#39;x * (x &gt; 1.08113994002342)&#39;
-[I] Executed cifti-math in 0:00:00.232172
+[I] Executed cifti-math in 0:00:00.251962
 </pre></div>
 </div>
 </div>
@@ -951,7 +934,7 @@ Object - others
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii
-[I] Executed cifti-separate in 0:00:00.201324
+[I] Executed cifti-separate in 0:00:00.192519
 </pre></div>
 </div>
 </div>
@@ -983,7 +966,7 @@ Object - others
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01.L.sulc.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01.R.sulc.func.gii
-[I] Executed cifti-separate in 0:00:00.189456
+[I] Executed cifti-separate in 0:00:00.195140
 </pre></div>
 </div>
 </div>
@@ -1383,7 +1366,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5d4cd5c7a32db56d984db2c9db7e60bc24baa32b8d7e56d3db87fd38cc1b7607.png" src="../../_images/5d4cd5c7a32db56d984db2c9db7e60bc24baa32b8d7e56d3db87fd38cc1b7607.png" />
+<img alt="../../_images/9f55744a919d5bf2b223352544e18f0b7529709421e9ac57f32398f2701fd151.png" src="../../_images/9f55744a919d5bf2b223352544e18f0b7529709421e9ac57f32398f2701fd151.png" />
 </div>
 </div>
 </section>
@@ -1405,7 +1388,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-stats /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -reduce COUNT_NONZERO -show-map-name
 [I] 1:	Face - others:	2971
-[I] Executed cifti-stats in 0:00:00.194127
+[I] Executed cifti-stats in 0:00:00.186400
 </pre></div>
 </div>
 </div>
@@ -1440,9 +1423,9 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii 2.0 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_smooth.L.func.gii
-[I] Executed metric-smoothing in 0:00:00.452040
+[I] Executed metric-smoothing in 0:00:00.415578
 [D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii 2.0 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_smooth.R.func.gii
-[I] Executed metric-smoothing in 0:00:00.369080
+[I] Executed metric-smoothing in 0:00:00.438166
 </pre></div>
 </div>
 </div>
@@ -1474,7 +1457,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d02965586a07499536dbdb30809e165fd4231334e9646a4509b4753fa3b1c9b1.png" src="../../_images/d02965586a07499536dbdb30809e165fd4231334e9646a4509b4753fa3b1c9b1.png" />
+<img alt="../../_images/2a05f168b0674afdddba5776b3cf821d99fdbb2dbd78d947408e6ac5225d3bcb.png" src="../../_images/2a05f168b0674afdddba5776b3cf821d99fdbb2dbd78d947408e6ac5225d3bcb.png" />
 </div>
 </div>
 </section>
@@ -1497,7 +1480,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-parcellate /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii COLUMN /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_parcellated.pscalar.nii
-[I] Executed cifti-parcellate in 0:00:00.281348
+[I] Executed cifti-parcellate in 0:00:00.254114
 </pre></div>
 </div>
 </div>
@@ -1514,7 +1497,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-label-export-table /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii parcels /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/schaefer_labels.txt
-[I] Executed cifti-label-export-table in 0:00:00.185427
+[I] Executed cifti-label-export-table in 0:00:00.181663
 </pre></div>
 </div>
 </div>
@@ -1706,7 +1689,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found networks: [&#39;LimbicA&#39;, &#39;DefaultC&#39;, &#39;DefaultA&#39;, &#39;SalVentAttnA&#39;, &#39;SomMotB&#39;, &#39;ContB&#39;, &#39;DefaultB&#39;, &#39;TempPar&#39;, &#39;DorsAttnB&#39;, &#39;VisPeri&#39;, &#39;ContA&#39;, &#39;DorsAttnA&#39;, &#39;SomMotA&#39;, &#39;LimbicB&#39;, &#39;ContC&#39;, &#39;SalVentAttnB&#39;, &#39;VisCent&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found networks: [&#39;LimbicB&#39;, &#39;LimbicA&#39;, &#39;ContB&#39;, &#39;VisCent&#39;, &#39;ContA&#39;, &#39;SalVentAttnB&#39;, &#39;ContC&#39;, &#39;DefaultC&#39;, &#39;SalVentAttnA&#39;, &#39;SomMotA&#39;, &#39;DefaultB&#39;, &#39;DorsAttnB&#39;, &#39;DorsAttnA&#39;, &#39;SomMotB&#39;, &#39;TempPar&#39;, &#39;DefaultA&#39;, &#39;VisPeri&#39;]
 </pre></div>
 </div>
 </div>
@@ -1739,7 +1722,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/4006bc4ecd0d3122dfec11a948eca7f43f421d04fa7a7f48cb0ff55a68a0e79b.png" src="../../_images/4006bc4ecd0d3122dfec11a948eca7f43f421d04fa7a7f48cb0ff55a68a0e79b.png" />
+<img alt="../../_images/2afc1b0252bef5d9338b5debf45da65410e1e42d99038bbda598c4853be84aaa.png" src="../../_images/2afc1b0252bef5d9338b5debf45da65410e1e42d99038bbda598c4853be84aaa.png" />
 </div>
 </div>
 </section>
@@ -1809,7 +1792,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d273cbc2b24f2a2846cb8de8da78d7aced248ad4fab659d953f2c54bd0d57bf8.png" src="../../_images/d273cbc2b24f2a2846cb8de8da78d7aced248ad4fab659d953f2c54bd0d57bf8.png" />
+<img alt="../../_images/3203d1f190fcf058ec79163e411d198c962dca9a7343a42586d24ebf42e25d00.png" src="../../_images/3203d1f190fcf058ec79163e411d198c962dca9a7343a42586d24ebf42e25d00.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Top 10 Face-Selective Parcels:
 ------------------------------------------------------------
  1. 17Networks_RH_DorsAttnA_TempOcc_2        |  2.771 | DorsAttnA
@@ -1827,6 +1810,47 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 </section>
+</section>
+<section id="dependencies-in-jupyter-python">
+<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+
+<span class="o">%</span><span class="k">watermark</span>
+<span class="o">%</span><span class="k">watermark</span> --iversions
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2025-11-02T23:44:19.884530+00:00
+
+Python implementation: CPython
+Python version       : 3.11.6
+IPython version      : 8.16.1
+
+Compiler    : GCC 12.3.0
+OS          : Linux
+Release     : 5.4.0-204-generic
+Machine     : x86_64
+Processor   : x86_64
+CPU cores   : 32
+Architecture: 64bit
+
+matplotlib      : 3.8.4
+nibabel         : 5.3.2
+numpy           : 2.2.6
+nilearn         : 0.12.0
+re              : 2.2.1
+niwrap_workbench: 0.6.1
+pandas          : 2.2.3
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -1862,20 +1886,20 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="mri_vol2surf.html"
+       href="FSLnets_course_practical.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">FreeSurfer: mri_vol2surf</p>
+        <p class="prev-next-title">Resting state with FSLnets</p>
       </div>
     </a>
     <a class="right-next"
-       href="process_five_echo_dataset.html"
+       href="aslprep.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">tedana: TE Dependent ANAlysis</p>
+        <p class="prev-next-title">ASLprep</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1896,10 +1920,9 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-based-visualization-workflow-for-single-subject-cifti">Surface-Based Visualization Workflow for Single-Subject CIFTI</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation">Citation:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#output-cpu-information">Output CPU information</a></li>
 </ul>
 </li>
 </ul>
@@ -1935,6 +1958,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyze-and-visualize-top-10-face-selective-parcels">Analyze and visualize top 10 face-selective Parcels</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>
