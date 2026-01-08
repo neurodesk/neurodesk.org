@@ -589,6 +589,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registration-workflow-with-antspy-and-freesurfer-s-synthstrip">Registration Workflow with ANTsPy and FreeSurfer’s SynthStrip</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
@@ -596,6 +597,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-and-import">Installation and Import</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-pydra">Introduction Pydra</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-the-preprocessing-workflow">Overview of the Preprocessing Workflow</a></li>
 </ul>
@@ -611,7 +613,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-tasks">2.2 Shell-tasks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">3.3. Workflow</a></li>
 </ul>
 </li>
@@ -622,8 +624,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-results">5. Visualizing Results</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-overview-tasks-inputs-and-outputs">Workflow overview: tasks, inputs, and outputs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-registration-to-mni-space">Functional registration to MNI space</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-registration-to-mni-space">Functional registration to MNI space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -641,8 +645,11 @@ document.write(`
 <h1>Pydra<a class="headerlink" href="#pydra" title="Link to this heading">#</a></h1>
 <section id="registration-workflow-with-antspy-and-freesurfer-s-synthstrip">
 <h2>Registration Workflow with ANTsPy and FreeSurfer’s SynthStrip<a class="headerlink" href="#registration-workflow-with-antspy-and-freesurfer-s-synthstrip" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Author</strong>: Monika Doerig</p>
 <p><strong>Date</strong>: 2 Sep 2025</p>
+</section>
 <section id="citation-and-resources">
 <h3>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h3>
 <section id="tools-included-in-this-workflow">
@@ -673,6 +680,11 @@ document.write(`
 <li><p>Kelly AMC and Uddin LQ and Biswal BB and Castellanos FX and Milham MP (2018). Flanker task (event-related). <a class="reference external" href="https://openneuro.org/datasets/ds000102/versions/00001">OpenNeuro Dataset ds000102</a></p></li>
 <li><p>Kelly, A.M., Uddin, L.Q., Biswal, B.B., Castellanos, F.X., Milham, M.P. (2008). Competition between functional brain networks mediates behavioral variability. Neuroimage, 39(1):527-37</p></li>
 </ul>
+</section>
+</section>
+</section>
+<section id="installation-and-import">
+<h2>Installation and Import<a class="headerlink" href="#installation-and-import" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
@@ -726,8 +738,6 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-</section>
 </section>
 <section id="introduction-pydra">
 <h2>Introduction Pydra<a class="headerlink" href="#introduction-pydra" title="Link to this heading">#</a></h2>
@@ -1079,8 +1089,8 @@ optional arguments:
 </div>
 </div>
 </section>
-<section id="id1">
-<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h3><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">SynthStrip</span></code> tool for robust skull-stripping can be expressed as shell task in just a few lines using this syntax:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1388,9 +1398,8 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 <img alt="../../_images/48ed9b82022b54ee13bb555d46a7ea05e022e73e4b772cd1a3657e3348f82509.png" src="../../_images/48ed9b82022b54ee13bb555d46a7ea05e022e73e4b772cd1a3657e3348f82509.png" />
 </div>
 </div>
-</section>
 <section id="dependencies-in-jupyter-python">
-<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
 </ul>
@@ -1429,6 +1438,7 @@ nibabel     : 5.3.2
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -1498,6 +1508,7 @@ nibabel     : 5.3.2
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registration-workflow-with-antspy-and-freesurfer-s-synthstrip">Registration Workflow with ANTsPy and FreeSurfer’s SynthStrip</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
@@ -1505,6 +1516,7 @@ nibabel     : 5.3.2
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-and-import">Installation and Import</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-pydra">Introduction Pydra</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-the-preprocessing-workflow">Overview of the Preprocessing Workflow</a></li>
 </ul>
@@ -1520,7 +1532,7 @@ nibabel     : 5.3.2
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-tasks">2.2 Shell-tasks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">3.3. Workflow</a></li>
 </ul>
 </li>
@@ -1531,8 +1543,10 @@ nibabel     : 5.3.2
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-results">5. Visualizing Results</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-overview-tasks-inputs-and-outputs">Workflow overview: tasks, inputs, and outputs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-registration-to-mni-space">Functional registration to MNI space</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-registration-to-mni-space">Functional registration to MNI space</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

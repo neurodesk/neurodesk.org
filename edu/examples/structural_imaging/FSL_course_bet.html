@@ -588,6 +588,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-resources">Citation/ Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
@@ -625,8 +626,11 @@ document.write(`
 <p>This interactive demonstration is based on the official FSL course <strong>“Introductory FSL Practicals/ Introduction - BET”</strong>.</p>
 <p>Brain extraction is a fundamental preprocessing step in neuroimaging analysis, particularly critical for structural image segmentation where precision matters most. While BET is straightforward to use, achieving optimal results often requires understanding how to fine-tune parameters for challenging datasets.
 This interactive version covers the core BET fundamentals, including parameter adjustment techniques for difficult images, and troubleshooting approaches for problematic cases. The hands-on format allows you to experiment with different settings and immediately see their effects on brain extraction quality.</p>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p><strong>Author:</strong> Monika Doerig</p>
 <p><strong>Date:</strong> 13 June 2025</p>
+</section>
 <section id="citation-resources">
 <h2>Citation/ Resources:<a class="headerlink" href="#citation-resources" title="Link to this heading">#</a></h2>
 <section id="tools-included-in-this-workflow">
@@ -1423,7 +1427,7 @@ Miscellaneous options:
 <li><p>Higher values (e.g., -f 0.8): More conservative extraction - tighter brain boundary but may exclude brain tissue</p></li>
 <li><p>Default (-f 0.5): Balanced approach suitable for most cases</p></li>
 </ul>
-<p>The folowing visualization shows three different threshold results overlaid on the original image, demonstrating how this single parameter dramatically changes the extraction outcome.</p>
+<p>The following visualization shows three different threshold results overlaid on the original image, demonstrating how this single parameter dramatically changes the extraction outcome.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>bet<span class="w"> </span>./fsl_course_data/intro/structural.nii.gz<span class="w"> </span>./output/structural_brain_f02<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>-f<span class="w"> </span><span class="m">0</span>.2
@@ -1562,10 +1566,13 @@ Miscellaneous options:
 </div>
 </div>
 <ul class="simple">
-<li><p><strong>Solutions:</strong></p></li>
+<li><p><strong>Solutions:</strong></p>
+<ul>
 <li><p>Crop the image first to remove the neck: <code class="docutils literal notranslate"><span class="pre">robustfov</span> <span class="pre">-i</span> <span class="pre">input</span> <span class="pre">-r</span> <span class="pre">output_crop</span></code> (recommended)</p></li>
 <li><p>Leave large FOV, but set brain centre-of-gravity: <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">&lt;x</span> <span class="pre">y</span> <span class="pre">z&gt;</span> <span class="pre">option</span></code>  (manual coordinate specification)</p></li>
 <li><p>Robust brain centre estimation: <code class="docutils literal notranslate"><span class="pre">-R</span>&#160;&#160; <span class="pre">option</span></code> (iterates BET several times)</p></li>
+</ul>
+</li>
 </ul>
 <p>Different images may need different approaches - having multiple strategies available is essential for handling problematic cases.</p>
 <p><strong>Recommended Practice</strong>: Combine cropping with <code class="docutils literal notranslate"><span class="pre">-R</span></code> option for most robust results across different image types:</p>
@@ -1740,6 +1747,7 @@ ipyniivue: 2.3.2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-resources">Citation/ Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>

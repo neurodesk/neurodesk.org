@@ -588,7 +588,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-mr-spectra-from-the-human-brain-using-single-voxel-spectroscopy-svs">Analyzing MR Spectra from the Human Brain using Single Voxel Spectroscopy (SVS)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-mr-spectra-from-the-human-brain-using-single-voxel-spectroscopy-svs">Analyzing MR Spectra from the Human Brain using Single Voxel Spectroscopy (SVS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mr-spectroscopy-mrs">MR Spectroscopy (MRS)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
@@ -627,6 +630,8 @@ document.write(`
 <h1>MR Spectroscopy with Osprey<a class="headerlink" href="#mr-spectroscopy-with-osprey" title="Link to this heading">#</a></h1>
 <section id="analyzing-mr-spectra-from-the-human-brain-using-single-voxel-spectroscopy-svs">
 <h2>Analyzing MR Spectra from the Human Brain using Single Voxel Spectroscopy (SVS)<a class="headerlink" href="#analyzing-mr-spectra-from-the-human-brain-using-single-voxel-spectroscopy-svs" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Author</strong>: Michal Toth</p>
 <p><strong>Date</strong>: 24 Sep 2025</p>
 <p>This notebook was prepared for an audience of clinicians at the 2025 PACTALS (Pan-Asian consortium of Treatment and Research in ALS) conference in Melbourne (<a class="reference external" href="https://www.pactalscongress.com/programme">link</a>)</p>
@@ -653,18 +658,15 @@ The computer will either:
   <li>📂 Save results into a folder</li>
 </ul>
 </div></section>
+</section>
 <section id="mr-spectroscopy-mrs">
 <h2>MR Spectroscopy (MRS)<a class="headerlink" href="#mr-spectroscopy-mrs" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Quantification of concentration of various metabolites (chemical compounds)</p></li>
 <li><p>Each metabolite has a distinct spectral (frequency-domain) signature based on its chemical structure</p></li>
 </ul>
-<div style="background-color: #000000; border-radius: 4px; display: inline-block; padding: 10px; max-width: 60%;">
-<img src="../../static/examples/spectroscopy/osprey/mrs_intro.png"
-    alt="My Image" 
-    width="100%" 
-    height="100%">
-</div></section>
+<p><img alt="MRS spectrum overview" src="../../_images/mrs_intro.png" /></p>
+</section>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>This example demonstrates the processing of MR spectra acquired from the human motor cortex using <code class="docutils literal notranslate"><span class="pre">Osprey</span></code>, a standalone tool for processing and quantification of magnetic resonance spectroscopy (MRS) data.</p>
@@ -810,26 +812,31 @@ The computer will either:
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
-echo &quot;Downloading data&quot;
-osf -p 3a2ws fetch osfstorage/osprey.zip ./data_osprey/osprey.zip
-echo &quot;Unzipping data&quot;
-unzip ./data_osprey/osprey.zip -d ./data_osprey/
+set -e
+
+DATA_DIR=&quot;./data_osprey&quot;
+ZIP_FILE=&quot;$DATA_DIR/osprey.zip&quot;
+
+mkdir -p &quot;$DATA_DIR&quot;
+
+if [ ! -f &quot;$ZIP_FILE&quot; ]; then
+  echo &quot;Downloading data&quot;
+  osf -p 3a2ws fetch osfstorage/osprey.zip &quot;$ZIP_FILE&quot;
+else
+  echo &quot;Data archive already exists, skipping download&quot;
+fi
+
+echo &quot;Extracting data&quot;
+unzip -o &quot;$ZIP_FILE&quot; -d &quot;$DATA_DIR&quot; &gt; /dev/null
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data
-Unzipping data
-Archive:  ./data_osprey/osprey.zip
-   creating: ./data_osprey/sub-002/ses-01/
-   creating: ./data_osprey/sub-002/ses-01/anat/
-  inflating: ./data_osprey/sub-002/ses-01/anat/sub-002_ses-01_acq-MP2RAGE_desc-defaced_T1w.nii  
-   creating: ./data_osprey/sub-002/ses-01/mrs/
-  inflating: ./data_osprey/sub-002/ses-01/mrs/meas_MID00104_FID130221_svs_slaser_dkd_ul_wref.dat  
-  inflating: ./data_osprey/sub-002/ses-01/mrs/meas_MID00103_FID130220_svs_slaser_dkd_ul.dat
+Extracting data
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 150M/150M [00:16&lt;00:00, 9.38Mbytes/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 150M/150M [00:13&lt;00:00, 11.0Mbytes/s]
 </pre></div>
 </div>
 </div>
@@ -937,13 +944,13 @@ Archive:  ./data_osprey/osprey.zip
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅  &#39;/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/data_osprey&#39;
-✅  &#39;/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output&#39;
-✅  &#39;/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/data_osprey/basis_siemens_slaser30.mat&#39;
-✅  &#39;/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-job.json&#39;
-✅  &#39;/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/data_osprey/sub-002/ses-01/mrs/meas_MID00103_FID130220_svs_slaser_dkd_ul.dat&#39;
-✅  &#39;/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/data_osprey/sub-002/ses-01/mrs/meas_MID00104_FID130221_svs_slaser_dkd_ul_wref.dat&#39;
-✅  &#39;/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/data_osprey/sub-002/ses-01/anat/sub-002_ses-01_acq-MP2RAGE_desc-defaced_T1w.nii&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅  &#39;/home/jovyan/Git_repositories/neurodeskedu/books/examples/spectroscopy/data_osprey&#39;
+✅  &#39;/home/jovyan/Git_repositories/neurodeskedu/books/examples/spectroscopy/osprey-output&#39;
+✅  &#39;/home/jovyan/Git_repositories/neurodeskedu/books/examples/spectroscopy/data_osprey/basis_siemens_slaser30.mat&#39;
+✅  &#39;/home/jovyan/Git_repositories/neurodeskedu/books/examples/spectroscopy/osprey-job.json&#39;
+✅  &#39;/home/jovyan/Git_repositories/neurodeskedu/books/examples/spectroscopy/data_osprey/sub-002/ses-01/mrs/meas_MID00103_FID130220_svs_slaser_dkd_ul.dat&#39;
+✅  &#39;/home/jovyan/Git_repositories/neurodeskedu/books/examples/spectroscopy/data_osprey/sub-002/ses-01/mrs/meas_MID00104_FID130221_svs_slaser_dkd_ul_wref.dat&#39;
+✅  &#39;/home/jovyan/Git_repositories/neurodeskedu/books/examples/spectroscopy/data_osprey/sub-002/ses-01/anat/sub-002_ses-01_acq-MP2RAGE_desc-defaced_T1w.nii&#39;
 </pre></div>
 </div>
 </div>
@@ -1151,7 +1158,6 @@ Full Osprey runtime: 319.306377 seconds
     <span class="s2">&quot;colormap&quot;</span><span class="p">:</span> <span class="s2">&quot;gray&quot;</span><span class="p">,</span>
     <span class="s2">&quot;cal_min&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">vmin</span><span class="p">)</span> <span class="k">if</span> <span class="n">vmin</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
     <span class="s2">&quot;cal_max&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">vmax</span><span class="p">)</span> <span class="k">if</span> <span class="n">vmax</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="s2">&quot;ignore_zero_voxels&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">})</span>
 
 <span class="c1"># WM segmentation.</span>
@@ -1160,7 +1166,6 @@ Full Osprey runtime: 319.306377 seconds
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;wm&quot;</span><span class="p">,</span>
     <span class="s2">&quot;opacity&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
     <span class="s2">&quot;colormap&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ignore_zero_voxels&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">})</span>
 
 <span class="c1"># GM segmentation.</span>
@@ -1169,7 +1174,6 @@ Full Osprey runtime: 319.306377 seconds
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;gm&quot;</span><span class="p">,</span>
     <span class="s2">&quot;opacity&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
     <span class="s2">&quot;colormap&quot;</span><span class="p">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ignore_zero_voxels&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">})</span>
 
 <span class="c1"># CSF segmentation.</span>
@@ -1178,7 +1182,6 @@ Full Osprey runtime: 319.306377 seconds
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;csf&quot;</span><span class="p">,</span>
     <span class="s2">&quot;opacity&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
     <span class="s2">&quot;colormap&quot;</span><span class="p">:</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ignore_zero_voxels&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <span class="p">})</span>
 
 <span class="c1"># Add legend (in HTML so we can style).</span>
@@ -1445,7 +1448,10 @@ pandas    : 2.3.3
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-mr-spectra-from-the-human-brain-using-single-voxel-spectroscopy-svs">Analyzing MR Spectra from the Human Brain using Single Voxel Spectroscopy (SVS)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-mr-spectra-from-the-human-brain-using-single-voxel-spectroscopy-svs">Analyzing MR Spectra from the Human Brain using Single Voxel Spectroscopy (SVS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mr-spectroscopy-mrs">MR Spectroscopy (MRS)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">

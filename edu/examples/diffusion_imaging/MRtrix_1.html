@@ -589,6 +589,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
@@ -603,7 +604,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-dataset">Downloading the Dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-at-the-data">Looking at the Data</a><ul class="nav section-nav flex-column">
@@ -611,18 +612,20 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization"><strong>Visualization</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Preprocessing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dwi-denoise">dwi_denoise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-degibbs">mri_degibbs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dwipreproc">dwipreproc</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-for-corrupt-slices">Checking for Corrupt Slices</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-mask">Generating a Mask</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-mask">Generating a Mask</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -641,8 +644,11 @@ document.write(`
 <section id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
 <p>This notebook is the first in a series on Diffusion Analysis using MRtrix. In this part, we will focus on loading, viewing and preprocessing steps essential for preparing diffusion MRI data for further analysis. Subsequent parts will cover additional topics, including Constrained Spherical Deconvolution (CSD) methods and tissue estimation and then finally registration and streamline fitting.</p>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Author:</strong> Monika Doerig</p>
 <p><strong>Date</strong>: 5 June 2025</p>
+</section>
 <section id="citation-and-resources">
 <h3>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h3>
 <section id="tools-included-in-this-workflow">
@@ -845,8 +851,8 @@ action summary:
 </div>
 </div>
 </div>
-<section id="id1">
-<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h3><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>If you want to download more subjects, here is an example how to get 4 controls and 4 patients:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PATTERN_CONTROLS=&quot;sub-CON0[1-4]&quot;
 PATTERN_PATIENTS=&quot;sub-PAT0[1-4]&quot;
@@ -1064,8 +1070,8 @@ If the number of volumes in your dataset and the number of bvals and bvecs do no
 </div>
 </section>
 </section>
-<section id="id2">
-<h2>Preprocessing<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>Preprocessing<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Diffusion data in particular is susceptible to warping artifacts as a result of the phase-encoding direction: In general, the predominant encoding direction - such as Anterior to Posterior, or AP - will make the anterior part of the brain look more “squished”, as though a strong headwind is blowing from the Anterior direction. The opposite is true of the Posterior to Anterior, or PA, phase-encoding direction. Sometimes these distortions are very subtle, but other times they are conspicuous.</p>
 <p>The following are common preprocessing steps done with MRtrix. If you have used the software package FSL to analyze diffusion data, note that some of the FSL commands - such as eddy and topup - are used in some of the MRtrix libraries.</p>
 <section id="dwi-denoise">
@@ -1184,14 +1190,14 @@ mrcat: [100%] concatenating &quot;mean_b0_PA.mif&quot;[0K?7h?7l
 </div>
 </div>
 </div>
-<section id="id3">
-<h4><a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<section id="id4">
+<h4><a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <p>We now have everything we need to run the main preprocessing step, which is called by <code class="docutils literal notranslate"><span class="pre">dwipreproc</span></code>. For the most part, this command is a wrapper that uses FSL commands such as <code class="docutils literal notranslate"><span class="pre">topup</span></code> and <code class="docutils literal notranslate"><span class="pre">eddy</span></code> to unwarp the data and remove eddy currents.</p>
 <p>The first arguments are the input and output; the second option, <em>-nocleanup</em>, will keep the temporary processing folder which contains a few files we will examine later. <em>-pe_dir AP</em> signalizes that the primary phase-encoding direction is anterior-to-posterior, and <em>-rpe_pair</em> combined with the <em>-se_epi</em> options indicates that the following input file (i.e., “b0_pair.mif”) is a pair of spin-echo images that were acquired with reverse phase-encoding directions.</p>
 <p>Lastly, <em>-eddy_options</em> specifies options that are specific to the FSL command <code class="docutils literal notranslate"><span class="pre">eddy</span></code>. You can visit the eddy user guide for more options and details about what they do. For now, we will only use the options <em>–slm=linear</em> (which can be useful for data that was acquired with less than 60 directions) and <em>–data_is_shelled</em> (which indicates that the diffusion data was acquired with multiple b-values).</p>
 </section>
-<section id="id4">
-<h4><a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<section id="id5">
+<h4><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>dwifslpreproc<span class="w"> </span>sub-02_den.mif<span class="w"> </span>sub-02_den_preproc.mif<span class="w"> </span>-nocleanup<span class="w"> </span>-pe_dir<span class="w"> </span>AP<span class="w"> </span>-rpe_pair<span class="w"> </span>-se_epi<span class="w"> </span>b0_pair.mif<span class="w"> </span>-eddy_options<span class="w"> </span><span class="s2">&quot; --slm=linear --data_is_shelled&quot;</span>
@@ -1228,8 +1234,8 @@ dwifslpreproc: <span class=" -Color -Color-Green">Scratch directory retained; lo
 </div>
 </div>
 </section>
-<section id="id5">
-<h4><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<section id="id6">
+<h4><a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <p>When it has finished running, examine the output to see how eddy current correction and unwarping have changed the data; ideally, you should see more signal restored in regions such as the orbitofrontal cortex, which is particularly susceptible to signal dropout.</p>
 <p>Let’s display the newly preprocessed data (gray) as well as the original diffusion data ocolored in red. You should see a noticeable difference between the two images, especially in the frontal lobes of the brain near the eyes, which are most susceptible to eddy currents.</p>
 <div class="cell docutils container">
@@ -1489,9 +1495,8 @@ mrconvert: [100%] copying from &quot;sub-02_masked_mask.nii.gz&quot; to &quot;ma
 <img alt="../../_images/4a5913ac2672c9f0d2b0f73a509fb09212751e2ff7061c6277e37080a5df1107.png" src="../../_images/4a5913ac2672c9f0d2b0f73a509fb09212751e2ff7061c6277e37080a5df1107.png" />
 </div>
 </div>
-</section>
 <section id="dependencies-in-jupyter-python">
-<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
 </ul>
@@ -1529,6 +1534,7 @@ nibabel   : 5.3.2
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -1598,6 +1604,7 @@ nibabel   : 5.3.2
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
@@ -1612,7 +1619,7 @@ nibabel   : 5.3.2
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-dataset">Downloading the Dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-at-the-data">Looking at the Data</a><ul class="nav section-nav flex-column">
@@ -1620,18 +1627,20 @@ nibabel   : 5.3.2
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization"><strong>Visualization</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Preprocessing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dwi-denoise">dwi_denoise</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-degibbs">mri_degibbs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dwipreproc">dwipreproc</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-for-corrupt-slices">Checking for Corrupt Slices</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-mask">Generating a Mask</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-mask">Generating a Mask</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

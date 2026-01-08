@@ -740,26 +740,55 @@ Press <code class="docutils literal notranslate"><span class="pre">Ctrl-Enter</s
 </section>
 <section id="notebook-metadata">
 <h4>Notebook metadata<a class="headerlink" href="#notebook-metadata" title="Link to this heading">#</a></h4>
-<p>Alternatively, these settings can also be saved/changed in the notebook metadata of the respective notebook, which contains a JSON object, that can be edited in the Property Inspector &gt; ADVANCED TOOLS &gt; Notebook metadata:</p>
-<p>As an example, to autolunch the slideshow upon opening, the notebook metadata can be edited as follows:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="p">...</span>
-<span class="w">    </span><span class="s2">&quot;rise&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;autolaunch&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
-<span class="w">    </span><span class="p">...</span>
+<p>Alternatively, these settings can also be saved or changed in the notebook metadata.
+Notebook metadata is stored as a JSON object at the top level of the notebook file.</p>
+<p>As an example, to autolaunch the slideshow upon opening, the notebook metadata can be edited as follows:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;rise&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;autolaunch&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>To start the slideshow at the beginning and not at the selected slide, the following configuration change can be made:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="p">...</span>
-<span class="w"> </span><span class="s2">&quot;rise&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;start_slideshow_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;beginning&quot;</span><span class="p">}</span>
-<span class="w">    </span><span class="p">...</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nt">&quot;rise&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;start_slideshow_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;beginning&quot;</span>
+<span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
+<p><strong>Option A:</strong> Graphical metadata editor (older Jupyter versions)</p>
+<p>In older Jupyter Notebook and JupyterLab versions, notebook metadata could be edited via a graphical interface (Property Inspector → Advanced Tools → Notebook metadata), and changes were confirmed using a tick icon.</p>
 <p>To save the configuration changes:</p>
 <ol class="arabic simple">
 <li><p>Edit the metadata</p></li>
 <li><p>Save the changes by clicking the little tick icon that appears above the notebook metadata window.</p></li>
 </ol>
 <p><img alt="change_metadata_notebook.png" src="../../_images/change_metadata_notebook.png" /></p>
-</section>
+<div style="background-color:#ffffcc; padding:10px; border-left:5px solid #ffcc00">
+<strong>Note:</strong> Editing notebook metadata in this interface is no longer available in recent JupyterLab versions.
+</div><p><strong>Option B:</strong> Edit the notebook file (current JupyterLab)</p>
+<p>In current JupyterLab (≥ 4) and Notebook (≥ 7), notebook metadata must be edited directly:</p>
+<ol class="arabic simple">
+<li><p>Right-click the notebook file</p></li>
+<li><p>Select <strong>Open With → Editor</strong></p></li>
+<li><p>Locate the top-level <code class="docutils literal notranslate"><span class="pre">&quot;metadata&quot;</span></code> section</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">rise</span></code> entry, for example:</p></li>
+</ol>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="err">...</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;rise&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nt">&quot;scroll&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">   </span><span class="nt">&quot;start_slideshow_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;selected&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span><span class="p">},</span>
+<span class="w"> </span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Save the file</p></li>
+</ol>
+<div style="background-color:#ffffcc; padding:10px; border-left:5px solid #ffcc00">
+<strong>Note:</strong> Saving the file applies the changes. In current JupyterLab versions, the notebook metadata can be viewed in the Property Inspector (Advanced Tools → Notebook metadata), but cannot be edited there.<br>
+</div></section>
 <section id="dependencies-in-jupyter-python">
 <h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">

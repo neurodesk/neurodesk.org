@@ -589,6 +589,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-probabilistic-tractography-using-basic-stopping-criteria">Deterministic and Probabilistic Tractography Using Basic Stopping Criteria</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
@@ -625,8 +626,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-local-tracking-probabilistic-and-deterministic-approaches">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-tractography">Probabilistic tractography</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-tractography">Deterministic tractography</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -644,8 +647,11 @@ document.write(`
 <h1>Basic Tracking with DIPY<a class="headerlink" href="#basic-tracking-with-dipy" title="Link to this heading">#</a></h1>
 <section id="deterministic-and-probabilistic-tractography-using-basic-stopping-criteria">
 <h2>Deterministic and Probabilistic Tractography Using Basic Stopping Criteria<a class="headerlink" href="#deterministic-and-probabilistic-tractography-using-basic-stopping-criteria" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Author</strong>: Monika Doerig</p>
 <p><strong>Date</strong>: 5 Dec 2025</p>
+</section>
 <section id="citation-and-resources">
 <h3>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h3>
 <section id="tools-included-in-this-workflow">
@@ -1017,7 +1023,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 <h3>C) CSD (Constrained Spherical Deconvolution)<a class="headerlink" href="#c-csd-constrained-spherical-deconvolution" title="Link to this heading">#</a></h3>
 <p>Constrained Spherical Deconvolution (CSD) reconstructs the fiber Orientation Distribution Function (fODF) by estimating how the diffusion signal would look for a single, coherently oriented fiber (the response function) and then deconvolving this response from the measured signal. This allows recovery of multiple fiber orientations within a voxel, making it particularly effective in regions with crossing fibers.</p>
 <ul class="simple">
-<li><p>https://docs.dipy.org/stable/examples_built/reconstruction/reconst_csd.html#</p></li>
+<li><p><a class="reference external" href="https://docs.dipy.org/stable/examples_built/reconstruction/reconst_csd.html#">DIPY’s CSD reconstruction example</a></p></li>
 </ul>
 <p>First, let’s verify the b-values of the dataset by looking at the attribute <code class="docutils literal notranslate"><span class="pre">gtab.bvals</span></code>.</p>
 <div class="cell docutils container">
@@ -1561,9 +1567,8 @@ Probabilistic  — n=  587, mean= 49.7 mm, median= 51.0 mm, std= 23.1 mm
 <img alt="../../_images/b75f22a4d99ad72aab42c289c9fe0619c6a9027d8ee52be40cc6d84edcbc957b.png" src="../../_images/b75f22a4d99ad72aab42c289c9fe0619c6a9027d8ee52be40cc6d84edcbc957b.png" />
 </div>
 </div>
-</section>
 <section id="dependencies-in-jupyter-python">
-<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
 </ul>
@@ -1602,6 +1607,7 @@ IPython   : 9.6.0
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -1671,6 +1677,7 @@ IPython   : 9.6.0
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-probabilistic-tractography-using-basic-stopping-criteria">Deterministic and Probabilistic Tractography Using Basic Stopping Criteria</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
@@ -1707,8 +1714,10 @@ IPython   : 9.6.0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-local-tracking-probabilistic-and-deterministic-approaches">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-tractography">Probabilistic tractography</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-tractography">Deterministic tractography</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

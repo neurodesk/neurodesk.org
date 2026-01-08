@@ -588,10 +588,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-we-begin">Shell We Begin?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-we-begin">Shell We Begin?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools-and-import-python-libraries">1. Load software tools and import Python libraries</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">2. Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-open-data-on-osf-using-datalad">Access Open Data on OSF Using DataLad</a></li>
@@ -653,9 +650,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipyniivue">ipyniivue</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-skull-stripped-brain">Visualize the skull-stripped brain</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-fa-image-dec-map">Visualize the FA image (DEC map)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>
@@ -681,13 +678,10 @@ document.write(`
 <li><p>Visualize outputs and quality control reports directly in the notebook</p></li>
 <li><p>Navigate to detailed, tool-specific notebooks for deeper exploration</p></li>
 </ul>
-<section id="id1">
-<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Author:</strong> Monika Doerig</p>
 <p><strong>Date:</strong> 13 June 2025</p>
 <p><strong>Citation:</strong>
 For clarity and conciseness, references and citations supporting each tool or workflow are included in the linked notebooks themselves.</p>
-</section>
 </section>
 <section id="load-software-tools-and-import-python-libraries">
 <h2>1. Load software tools and import Python libraries<a class="headerlink" href="#load-software-tools-and-import-python-libraries" title="Link to this heading">#</a></h2>
@@ -761,7 +755,7 @@ For clarity and conciseness, references and citations supporting each tool or wo
 <h2>2. Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
 <section id="access-open-data-on-osf-using-datalad">
 <h3>Access Open Data on OSF Using DataLad<a class="headerlink" href="#access-open-data-on-osf-using-datalad" title="Link to this heading">#</a></h3>
-<p>Note: The dataset must first be uploaded to OSF as a DataLad datase.</p>
+<p>Note :This workflow requires the dataset to be available as a DataLad dataset on OSF (i.e. with DataLad metadata and annexed file storage).</p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download one subject of the Brain Tumor Connectomics Data in BIDS Format</span>
@@ -3456,9 +3450,8 @@ None
 </div>
 </div>
 </section>
-</section>
 <section id="dependencies-in-jupyter-python">
-<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
 </ul>
@@ -3503,6 +3496,7 @@ numpy         : 1.26.4
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -3571,10 +3565,7 @@ numpy         : 1.26.4
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-we-begin">Shell We Begin?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-we-begin">Shell We Begin?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools-and-import-python-libraries">1. Load software tools and import Python libraries</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">2. Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-open-data-on-osf-using-datalad">Access Open Data on OSF Using DataLad</a></li>
@@ -3636,9 +3627,9 @@ numpy         : 1.26.4
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipyniivue">ipyniivue</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-skull-stripped-brain">Visualize the skull-stripped brain</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-fa-image-dec-map">Visualize the FA image (DEC map)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>

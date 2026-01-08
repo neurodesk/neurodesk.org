@@ -588,6 +588,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
@@ -610,7 +611,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brain-extraction">Brain Extraction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ants">1. ANTs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#afni">2. AFNI</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3. FreeSurfer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. FreeSurfer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fsl">4. FSL</a></li>
 </ul>
 </li>
@@ -634,8 +635,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="brain-extraction-tools">
 <h1>Brain Extraction Tools<a class="headerlink" href="#brain-extraction-tools" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p><strong>Author:</strong> Monika Doerig</p>
 <p><strong>Date:</strong> 10 June 2025</p>
+</section>
 <section id="citation-and-resources">
 <h2>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h2>
 <section id="educational-resources">
@@ -3254,8 +3258,8 @@ to generate a new masked version of the input.
 <p>From <a class="reference external" href="https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dSkullStrip.html">AFNI’s documentation</a>:</p>
 <p><code class="docutils literal notranslate"><span class="pre">-push_to_edge</span></code>: Adds an aggressive push to brain edges. Use this option when the chunks of gray matter are not included. This option might cause the mask to leak into non-brain areas.</p>
 </section>
-<section id="id1">
-<h3>3. FreeSurfer<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h3>3. FreeSurfer<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>FreeSurfer’s SynthStrip is a skull-stripping tool that extracts brain voxels from a landscape of image types, ranging across imaging modalities, resolutions, and subject populations. It leverages a deep learning strategy to synthesize arbitrary training images from segmentation maps, yielding a robust model agnostic to acquisition specifics.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3678,6 +3682,7 @@ scipy     : 1.13.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
@@ -3700,7 +3705,7 @@ scipy     : 1.13.0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brain-extraction">Brain Extraction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ants">1. ANTs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#afni">2. AFNI</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3. FreeSurfer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. FreeSurfer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fsl">4. FSL</a></li>
 </ul>
 </li>

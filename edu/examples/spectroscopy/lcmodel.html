@@ -589,6 +589,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-mr-spectra-from-rat-hippocampus">Analyzing MR Spectra from Rat Hippocampus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
@@ -616,7 +617,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-lcmodel">Run lcmodel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-lcmodel-output-to-pdf-and-png-formats">Exporting LCModel Output to PDF and PNG Formats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
@@ -637,8 +638,11 @@ document.write(`
 <h1>MR Spectroscopy with LCModel<a class="headerlink" href="#mr-spectroscopy-with-lcmodel" title="Link to this heading">#</a></h1>
 <section id="analyzing-mr-spectra-from-rat-hippocampus">
 <h2>Analyzing MR Spectra from Rat Hippocampus<a class="headerlink" href="#analyzing-mr-spectra-from-rat-hippocampus" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Author</strong>: Monika Doerig</p>
 <p><strong>Date</strong>: 12 Aug 2025</p>
+</section>
 <section id="citation-and-resources">
 <h3>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h3>
 <section id="tools-included-in-this-workflow">
@@ -692,20 +696,6 @@ document.write(`
 </div>
 </div>
 </div>
-<p>The command below updates the package list and installs <code class="docutils literal notranslate"><span class="pre">Ghostscript</span></code>, which provides the <code class="docutils literal notranslate"><span class="pre">ps2pdf</span></code> utility for converting LCModel’s <code class="docutils literal notranslate"><span class="pre">.ps</span></code> output into a <code class="docutils literal notranslate"><span class="pre">PDF</span></code>, as well as tools to convert the <code class="docutils literal notranslate"><span class="pre">.ps</span></code> file into <code class="docutils literal notranslate"><span class="pre">PNG</span></code> images for easier inline viewing in notebooks and web pages.</p>
-<div class="cell tag_scroll-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ghostscript<span class="w"> </span>-y<span class="w"> </span>-qq
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ghostscript is already the newest version (9.55.0~dfsg1-0ubuntu5.13).
-0 upgraded, 0 newly installed, 0 to remove and 275 not upgraded.
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the necessary libraries</span>
@@ -718,6 +708,14 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">IFrame</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The command below updates the package list and installs <code class="docutils literal notranslate"><span class="pre">Ghostscript</span></code>, which provides the <code class="docutils literal notranslate"><span class="pre">ps2pdf</span></code> utility for converting LCModel’s <code class="docutils literal notranslate"><span class="pre">.ps</span></code> output into a <code class="docutils literal notranslate"><span class="pre">PDF</span></code>, as well as tools to convert the <code class="docutils literal notranslate"><span class="pre">.ps</span></code> file into <code class="docutils literal notranslate"><span class="pre">PNG</span></code> images for easier inline viewing in notebooks and web pages.</p>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ghostscript<span class="w"> </span>-y<span class="w"> </span>-qq
 </pre></div>
 </div>
 </div>
@@ -780,9 +778,6 @@ document.write(`
 </tr>
 </tbody>
 </table>
-</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                                |
-</pre></div>
 </div>
 </section>
 <section id="key-control-parameters">
@@ -1044,8 +1039,16 @@ $HOME/.lcmodel/varian/bin2raw $DATA_FILE $LCM_DIR $MET_H2O
 
 
 <span class="n">real</span><span class="p">,</span> <span class="n">imag</span> <span class="o">=</span> <span class="n">load_raw_data</span><span class="p">(</span><span class="s2">&quot;./lcmodel_outputs/raw/RAW&quot;</span><span class="p">)</span>
-
-<span class="c1"># Create the x-axis based on the number of FID points</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Raw Free Induction Decay (FID) Signal</strong>:</p>
+<p>This plot shows the unprocessed time-domain MR spectroscopy signal extracted from the <code class="docutils literal notranslate"><span class="pre">.RAW</span> <span class="pre">file</span></code>. The real (blue) and imaginary (red dashed) components represent the complex-valued FID acquired after excitation, before any frequency or phase correction.
+Visual inspection of the FID can help identify noise, artifacts, or unexpected decay behavior prior to Fourier transformation and spectral fitting.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the x-axis based on the number of FID points</span>
 <span class="n">data_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">real</span><span class="p">))</span>
 
 <span class="c1">#  Plot the data</span>
@@ -1064,12 +1067,9 @@ $HOME/.lcmodel/varian/bin2raw $DATA_FILE $LCM_DIR $MET_H2O
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/dbcae9e6f45bd742aba49863eb7ec9cab14877b89e7b1b1eb16a3fa7dfc7353a.png" src="../../_images/dbcae9e6f45bd742aba49863eb7ec9cab14877b89e7b1b1eb16a3fa7dfc7353a.png" />
+<img alt="../../_images/f6b16df5fd852fd67734ed450b7798749fbc9ac5b5511f204b57feb76c8d7c26.png" src="../../_images/f6b16df5fd852fd67734ed450b7798749fbc9ac5b5511f204b57feb76c8d7c26.png" />
 </div>
 </div>
-<p><strong>Raw Free Induction Decay (FID) Signal</strong>:</p>
-<p>This plot shows the unprocessed time-domain MR spectroscopy signal extracted from the <code class="docutils literal notranslate"><span class="pre">.RAW</span> <span class="pre">file</span></code>. The real (blue) and imaginary (red dashed) components represent the complex-valued FID acquired after excitation, before any frequency or phase correction.
-Visual inspection of the FID can help identify noise, artifacts, or unexpected decay behavior prior to Fourier transformation and spectral fitting.</p>
 </section>
 </section>
 <section id="extracting-parameters-to-generate-the-control-file">
@@ -1336,6 +1336,11 @@ For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-prove
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/bin/bash: line 1: ps2pdf: command not found
+</pre></div>
+</div>
+</div>
 </div>
 <p>Alternatively, converting the <code class="docutils literal notranslate"><span class="pre">.ps</span></code> to <code class="docutils literal notranslate"><span class="pre">PNG</span></code> images with <code class="docutils literal notranslate"><span class="pre">Ghostscript</span></code> (gs) produces raster images (one per page) that are easy to display inline in notebooks and web pages without requiring PDF viewers.</p>
 <p>The following <code class="docutils literal notranslate"><span class="pre">gs</span></code> command converts a multi-page PostScript (<code class="docutils literal notranslate"><span class="pre">.ps</span></code>) file into one or more high-resolution PNG images — one image per page.</p>
@@ -1393,14 +1398,7 @@ For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-prove
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GPL Ghostscript 9.55.0 (2021-09-27)
-Copyright (C) 2021 Artifex Software, Inc.  All rights reserved.
-This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
-see the file COPYING for details.
-Loading NimbusSans-Regular font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusSans-Regular... 4466276 2919749 2017472 704520 1 done.
-Loading NimbusSans-Italic font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusSans-Italic... 4532388 3109010 2037672 717907 1 done.
-Loading NimbusMonoPS-Bold font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusMonoPS-Bold... 4719700 3356826 2118472 774028 1 done.
-Loading NimbusMonoPS-Regular font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusMonoPS-Regular... 4967612 3596618 2118472 777835 1 done.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/bin/bash: line 1: gs: command not found
 </pre></div>
 </div>
 </div>
@@ -1414,8 +1412,45 @@ Loading NimbusMonoPS-Regular font from /usr/share/ghostscript/9.55.0/Resource/Fo
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0a69d0ddbfc9ffe67c9ec5a995427d86b47ec3e42b2e4f7adb2317dc2cced608.png" src="../../_images/0a69d0ddbfc9ffe67c9ec5a995427d86b47ec3e42b2e4f7adb2317dc2cced608.png" />
-<img alt="../../_images/904b2ab822e06509d8210050d54919c41dda5dac0c746d59a8407ecf8f61fb12.png" src="../../_images/904b2ab822e06509d8210050d54919c41dda5dac0c746d59a8407ecf8f61fb12.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># display the to png images (two pdf pages)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;./lcmodel_outputs/results/sl1_1-1_page_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">))</span>
+
+<span class="nn">File /opt/conda/lib/python3.12/site-packages/IPython/core/display.py:1025,</span> in <span class="ni">Image.__init__</span><span class="nt">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="bp">self</span><span class="o">.</span><span class="n">unconfined</span> <span class="o">=</span> <span class="n">unconfined</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="bp">self</span><span class="o">.</span><span class="n">alt</span> <span class="o">=</span> <span class="n">alt</span>
+<span class="ne">-&gt; </span><span class="mi">1025</span> <span class="nb">super</span><span class="p">(</span><span class="n">Image</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1026</span>         <span class="n">metadata</span><span class="o">=</span><span class="n">metadata</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1028</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="p">{}):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1029</span>     <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">]</span>
+
+<span class="nn">File /opt/conda/lib/python3.12/site-packages/IPython/core/display.py:343,</span> in <span class="ni">DisplayObject.__init__</span><span class="nt">(self, data, url, filename, metadata)</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span>     <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">--&gt; </span><span class="mi">343</span> <span class="bp">self</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_data</span><span class="p">()</span>
+
+<span class="nn">File /opt/conda/lib/python3.12/site-packages/IPython/core/display.py:1060,</span> in <span class="ni">Image.reload</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1058</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Reload the raw data from file or URL.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1059</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1060</span>     <span class="nb">super</span><span class="p">(</span><span class="n">Image</span><span class="p">,</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">reload</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1061</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">retina</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1062</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_retina_shape</span><span class="p">()</span>
+
+<span class="nn">File /opt/conda/lib/python3.12/site-packages/IPython/core/display.py:369,</span> in <span class="ni">DisplayObject.reload</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">367</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">368</span>     <span class="n">encoding</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_flags</span> <span class="k">else</span> <span class="s2">&quot;utf-8&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">369</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_flags</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">370</span>         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">371</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">372</span>     <span class="c1"># Deferred import</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./lcmodel_outputs/results/sl1_1-1_page_1.png&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p><strong>Note on PDF viewing:</strong> PDFs can be displayed directly within Jupyter notebooks using <code class="docutils literal notranslate"><span class="pre">IFrame</span></code>, but this only works in interactive environments (local Jupyter, Colab, etc.). When viewing this notebook on GitHub Pages, the PDFs won’t render due to security restrictions.</p>
@@ -1423,8 +1458,8 @@ Loading NimbusMonoPS-Regular font from /usr/share/ghostscript/9.55.0/Resource/Fo
 <span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;./lcmodel_outputs/results/sl1_1-1.pdf&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
 </pre></div>
 </div>
-<section id="id1">
-<h4><a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<section id="id2">
+<h4><a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div style="background-color:#e7f3fe; border-left:4px solid #2196F3; padding:10px;">
 💡 <strong>Helpful Hint:</strong> To download the output PNGs or PDFs, open the file browser in the <strong>JupyterLab interface</strong>, navigate to the output directory (e.g., <code>./lcmodel_outputs/results/</code>), right-click the desired file, and select <em>Download</em>.
 </div>
@@ -1433,9 +1468,6 @@ Loading NimbusMonoPS-Regular font from /usr/share/ghostscript/9.55.0/Resource/Fo
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../../static/examples/spectroscopy/lcmodel/download_png.png&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/95c3db52519d746abb48b243c134405f8922f8176b17bb7333534b3db05bec0c.png" src="../../_images/95c3db52519d746abb48b243c134405f8922f8176b17bb7333534b3db05bec0c.png" />
 </div>
 </div>
 </section>
@@ -1450,29 +1482,6 @@ Loading NimbusMonoPS-Regular font from /usr/share/ghostscript/9.55.0/Resource/Fo
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2025-10-23T00:40:12.288598+00:00
-
-Python implementation: CPython
-Python version       : 3.11.6
-IPython version      : 8.16.1
-
-Compiler    : GCC 12.3.0
-OS          : Linux
-Release     : 5.4.0-204-generic
-Machine     : x86_64
-Processor   : x86_64
-CPU cores   : 32
-Architecture: 64bit
-
-re        : 2.2.1
-matplotlib: 3.8.4
-IPython   : 8.16.1
-nibabel   : 5.2.1
-numpy     : 2.2.6
 </pre></div>
 </div>
 </div>
@@ -1547,6 +1556,7 @@ numpy     : 2.2.6
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-mr-spectra-from-rat-hippocampus">Analyzing MR Spectra from Rat Hippocampus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
@@ -1574,7 +1584,7 @@ numpy     : 2.2.6
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-lcmodel">Run lcmodel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-lcmodel-output-to-pdf-and-png-formats">Exporting LCModel Output to PDF and PNG Formats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>

@@ -589,6 +589,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-diverse-neuroimaging-formats">Visualizing Diverse Neuroimaging Formats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
@@ -631,8 +632,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tractography">4. Tractography</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dsi-studio-tiny-tract-files-tt">DSI-Studio tiny-tract files (TT)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tractography-with-multiple-formats-and-brain-surface">Advanced Tractography with Multiple Formats and Brain Surface</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tractography-with-multiple-formats-and-brain-surface">Advanced Tractography with Multiple Formats and Brain Surface</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -650,8 +653,11 @@ document.write(`
 <h1>Ipyniivue and Ipywidgets<a class="headerlink" href="#ipyniivue-and-ipywidgets" title="Link to this heading">#</a></h1>
 <section id="visualizing-diverse-neuroimaging-formats">
 <h2>Visualizing Diverse Neuroimaging Formats<a class="headerlink" href="#visualizing-diverse-neuroimaging-formats" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Author</strong>: Monika Doerig</p>
 <p><strong>Date</strong>: 12 Dec 2025</p>
+</section>
 <section id="citation-and-resources">
 <h3>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h3>
 <section id="tools-included-in-this-workflow">
@@ -1317,7 +1323,7 @@ All datasets and matcaps downloaded successfully.
 <section id="applying-cifti-dense-time-series-to-a-standard-surface-mesh">
 <h4>Applying CIFTI Dense Time Series to a Standard Surface Mesh<a class="headerlink" href="#applying-cifti-dense-time-series-to-a-standard-surface-mesh" title="Link to this heading">#</a></h4>
 <blockquote>
-<div><p>Unlike FreeSurfer surface files, CIFTI files typically do not store surface geometry themselves; instead, they reference a standardized surface mesh onto which data are mapped..</p>
+<div><p>Unlike FreeSurfer surface files, CIFTI files typically do not store surface geometry themselves; instead, they reference a standardized surface mesh onto which data are mapped.</p>
 </div></blockquote>
 <p>CIFT-2I files encode data defined on standardized cortical surface vertices and, optionally, subcortical voxels, unified within a single matrix representation.
 Conceptually, a CIFTI file is a labeled data matrix whose dimensions are mapped to brain locations, allowing surface-based and voxel-based structures to be represented together while excluding non-informative regions such as the medial wall.
@@ -1879,9 +1885,8 @@ In the fsLR framework, per-vertex measurements (e.g., myelin maps, cortical thic
 <img alt="../../_images/794a24a3810c7ba64b83cb7e40faef00f0b2cd03f80ce3d7c847ae1957282ac4.png" src="../../_images/794a24a3810c7ba64b83cb7e40faef00f0b2cd03f80ce3d7c847ae1957282ac4.png" />
 </div>
 </div>
-</section>
 <section id="dependencies-in-jupyter-python">
-<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
 </ul>
@@ -1916,6 +1921,7 @@ ipyniivue : 2.3.2
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -1985,6 +1991,7 @@ ipyniivue : 2.3.2
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-diverse-neuroimaging-formats">Visualizing Diverse Neuroimaging Formats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
@@ -2027,8 +2034,10 @@ ipyniivue : 2.3.2
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tractography">4. Tractography</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dsi-studio-tiny-tract-files-tt">DSI-Studio tiny-tract files (TT)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tractography-with-multiple-formats-and-brain-surface">Advanced Tractography with Multiple Formats and Brain Surface</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-tractography-with-multiple-formats-and-brain-surface">Advanced Tractography with Multiple Formats and Brain Surface</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

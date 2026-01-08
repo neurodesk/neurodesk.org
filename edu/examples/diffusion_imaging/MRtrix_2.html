@@ -624,9 +624,9 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
 </ul>
 </li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>
@@ -743,30 +743,6 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="downloading-the-preprocessed-data-from-mrtrix-part-1">
-<h2>Downloading the preprocessed data from MRtrix Part 1<a class="headerlink" href="#downloading-the-preprocessed-data-from-mrtrix-part-1" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/mask.mif<span class="w"> </span>MRtrix_preprocessed/mask.mif
-<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-02_den_preproc_unbiased.mif<span class="w"> </span>MRtrix_preprocessed/sub-02_den_preproc_unbiased.mif
-<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-CON02_ses-preop_T1w.nii.gz<span class="w"> </span>MRtrix_preprocessed/sub-CON02_ses-preop_T1w.nii.gz
-<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-02_AP.bval<span class="w"> </span>MRtrix_preprocessed/sub-02_AP.bval
-<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-02_AP.bvec<span class="w"> </span>MRtrix_preprocessed/sub-02_AP.bvec
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████| 80.0k/80.0k [00:00&lt;00:00, 40.5Mbytes/s]
-100%|████████████████████████████████████| 226M/226M [00:07&lt;00:00, 28.5Mbytes/s]
-100%|██████████████████████████████████| 8.31M/8.31M [00:00&lt;00:00, 59.8Mbytes/s]
-100%|██████████████████████████████████████| 476/476 [00:00&lt;00:00, 3.82Mbytes/s]
-100%|██████████████████████████████████| 2.77k/2.77k [00:00&lt;00:00, 15.6Mbytes/s]
-</pre></div>
-</div>
-</div>
-</div>
 <p>Try typing one of the commands from the library, such as <code class="docutils literal notranslate"><span class="pre">mrconvert</span></code>. If MRtrix has been installed correctly, you should see the help page printed by default when no arguments are passed to the command:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -791,6 +767,30 @@ USAGE
         input        the input image.
 
         output       the output image.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="downloading-the-preprocessed-data-from-mrtrix-part-1">
+<h2>Downloading the preprocessed data from MRtrix Part 1<a class="headerlink" href="#downloading-the-preprocessed-data-from-mrtrix-part-1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/mask.mif<span class="w"> </span>MRtrix_preprocessed/mask.mif
+<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-02_den_preproc_unbiased.mif<span class="w"> </span>MRtrix_preprocessed/sub-02_den_preproc_unbiased.mif
+<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-CON02_ses-preop_T1w.nii.gz<span class="w"> </span>MRtrix_preprocessed/sub-CON02_ses-preop_T1w.nii.gz
+<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-02_AP.bval<span class="w"> </span>MRtrix_preprocessed/sub-02_AP.bval
+<span class="o">!</span><span class="w"> </span>osf<span class="w"> </span>-p<span class="w"> </span>y2dq4<span class="w"> </span>fetch<span class="w"> </span>preprocessed/sub-02_AP.bvec<span class="w"> </span>MRtrix_preprocessed/sub-02_AP.bvec
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████████████████████████████| 80.0k/80.0k [00:00&lt;00:00, 40.5Mbytes/s]
+100%|████████████████████████████████████| 226M/226M [00:07&lt;00:00, 28.5Mbytes/s]
+100%|██████████████████████████████████| 8.31M/8.31M [00:00&lt;00:00, 59.8Mbytes/s]
+100%|██████████████████████████████████████| 476/476 [00:00&lt;00:00, 3.82Mbytes/s]
+100%|██████████████████████████████████| 2.77k/2.77k [00:00&lt;00:00, 15.6Mbytes/s]
 </pre></div>
 </div>
 </div>
@@ -1297,9 +1297,8 @@ If the segmentation step fails, this may be due to insufficient contrast between
     </p>
 </div></section>
 </section>
-</section>
 <section id="dependencies-in-jupyter-python">
-<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
 </ul>
@@ -1339,6 +1338,7 @@ matplotlib: 3.10.7
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -1443,9 +1443,9 @@ matplotlib: 3.10.7
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"></a></li>
 </ul>
 </li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>
