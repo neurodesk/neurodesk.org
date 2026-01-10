@@ -238,7 +238,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 
@@ -798,8 +798,8 @@ Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas
 [INFO   ] scanning for unlocked files (this may take some time)                 
 [INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
-| 		datalad siblings -d &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/ds000102&quot; enable -s s3-PRIVATE 
-<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/example-notebooks/books/workflows/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+| 		datalad siblings -d &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/ds000102&quot; enable -s s3-PRIVATE 
+<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/neurodeskedu/books/workflows/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
 Total:   0%|                                    | 0.00/136M [00:00&lt;?, ? Bytes/s]
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
 Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.4k/10.6M [00:00&lt;00:32, 323k Bytes/s]
@@ -1099,7 +1099,7 @@ None
 inskull_mesh_file = &lt;undefined&gt;
 mask_file = &lt;undefined&gt;
 meshfile = &lt;undefined&gt;
-out_file = /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/T1w_nipype_bet.nii.gz
+out_file = /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/T1w_nipype_bet.nii.gz
 outline_file = &lt;undefined&gt;
 outskin_mask_file = &lt;undefined&gt;
 outskin_mesh_file = &lt;undefined&gt;
@@ -1224,9 +1224,9 @@ skull_mask_file = &lt;undefined&gt;
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>inskull_mask_file = &lt;undefined&gt;
 inskull_mesh_file = &lt;undefined&gt;
-mask_file = /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/T1w_nipype_bet_mask.nii.gz
+mask_file = /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/T1w_nipype_bet_mask.nii.gz
 meshfile = &lt;undefined&gt;
-out_file = /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/T1w_nipype_bet.nii.gz
+out_file = /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/T1w_nipype_bet.nii.gz
 outline_file = &lt;undefined&gt;
 outskin_mask_file = &lt;undefined&gt;
 outskin_mesh_file = &lt;undefined&gt;
@@ -1361,7 +1361,7 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:30,538 nipype.workflow INFO:
-	 Generated workflow graph: /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/smoothflow/workflow_graph.png (graph2use=hierarchical, simple_form=True).
+	 Generated workflow graph: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/workflow_graph.png (graph2use=hierarchical, simple_form=True).
 </pre></div>
 </div>
 <img alt="../../_images/32fcfb2329fe3d59a6dab0a41afe4f4a865b0b313875c6f4ad5ca857ac36427c.png" src="../../_images/32fcfb2329fe3d59a6dab0a41afe4f4a865b0b313875c6f4ad5ca857ac36427c.png" />
@@ -1378,7 +1378,7 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:30,929 nipype.workflow INFO:
-	 Generated workflow graph: /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/smoothflow/graph.png (graph2use=flat, simple_form=True).
+	 Generated workflow graph: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/graph.png (graph2use=flat, simple_form=True).
 </pre></div>
 </div>
 <img alt="../../_images/633f4e5b88aaaf63d098dc5fa40c770829b503750804aa1f285e463f6566e4f4.png" src="../../_images/633f4e5b88aaaf63d098dc5fa40c770829b503750804aa1f285e463f6566e4f4.png" />
@@ -1397,19 +1397,19 @@ skull_mask_file = &lt;undefined&gt;
 251031-00:46:30,945 nipype.workflow INFO:
 	 Running serially.
 251031-00:46:30,946 nipype.workflow INFO:
-	 [Node] Setting-up &quot;smoothflow.skullstrip&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/smoothflow/skullstrip&quot;.
+	 [Node] Setting-up &quot;smoothflow.skullstrip&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/skullstrip&quot;.
 251031-00:46:30,949 nipype.workflow INFO:
 	 [Node] Executing &quot;skullstrip&quot; &lt;nipype.interfaces.fsl.preprocess.BET&gt;
 251031-00:46:34,891 nipype.workflow INFO:
 	 [Node] Finished &quot;skullstrip&quot;, elapsed time 3.9415459999999998s.
 251031-00:46:34,895 nipype.workflow INFO:
-	 [Node] Setting-up &quot;smoothflow.smooth&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/smoothflow/smooth&quot;.
+	 [Node] Setting-up &quot;smoothflow.smooth&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/smooth&quot;.
 251031-00:46:34,897 nipype.workflow INFO:
 	 [Node] Executing &quot;smooth&quot; &lt;nipype.interfaces.fsl.maths.IsotropicSmooth&gt;
 251031-00:46:42,635 nipype.workflow INFO:
 	 [Node] Finished &quot;smooth&quot;, elapsed time 7.737129s.
 251031-00:46:42,649 nipype.workflow INFO:
-	 [Node] Setting-up &quot;smoothflow.mask&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/smoothflow/mask&quot;.
+	 [Node] Setting-up &quot;smoothflow.mask&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/mask&quot;.
 251031-00:46:42,659 nipype.workflow INFO:
 	 [Node] Executing &quot;mask&quot; &lt;nipype.interfaces.fsl.maths.ApplyMask&gt;
 251031-00:46:44,109 nipype.workflow INFO:
@@ -1890,13 +1890,13 @@ skull_mask_file = &lt;undefined&gt;
 251031-00:46:47,645 nipype.workflow INFO:
 	 Running serially.
 251031-00:46:47,646 nipype.workflow INFO:
-	 [Node] Setting-up &quot;data_input.dg&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/data_input/_subject_id_01/dg&quot;.
+	 [Node] Setting-up &quot;data_input.dg&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/data_input/_subject_id_01/dg&quot;.
 251031-00:46:47,656 nipype.workflow INFO:
 	 [Node] Executing &quot;dg&quot; &lt;nipype.interfaces.io.DataGrabber&gt;
 251031-00:46:47,658 nipype.workflow INFO:
 	 [Node] Finished &quot;dg&quot;, elapsed time 0.000579s.
 251031-00:46:47,661 nipype.workflow INFO:
-	 [Node] Setting-up &quot;data_input.dg&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/data_input/_subject_id_02/dg&quot;.
+	 [Node] Setting-up &quot;data_input.dg&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/data_input/_subject_id_02/dg&quot;.
 251031-00:46:47,664 nipype.workflow INFO:
 	 [Node] Executing &quot;dg&quot; &lt;nipype.interfaces.io.DataGrabber&gt;
 251031-00:46:47,666 nipype.workflow INFO:
@@ -2065,7 +2065,7 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:48,854 nipype.workflow INFO:
-	 Generated workflow graph: /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/graph.png (graph2use=colored, simple_form=True).
+	 Generated workflow graph: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/graph.png (graph2use=colored, simple_form=True).
 </pre></div>
 </div>
 <img alt="../../_images/6684b0d309ede89a63ecb4e1a3b6c1a7349f9b5fbbf5f521832c1e69ac05369a.png" src="../../_images/6684b0d309ede89a63ecb4e1a3b6c1a7349f9b5fbbf5f521832c1e69ac05369a.png" />
@@ -2086,7 +2086,7 @@ skull_mask_file = &lt;undefined&gt;
 251031-00:46:48,880 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
 251031-00:46:50,51 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.dg&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/dg&quot;.
+	 [Node] Setting-up &quot;preproc.dg&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/dg&quot;.
 251031-00:46:50,62 nipype.workflow INFO:
 	 [Node] Executing &quot;dg&quot; &lt;nipype.interfaces.io.DataGrabber&gt;
 251031-00:46:50,67 nipype.workflow INFO:
@@ -2096,7 +2096,7 @@ skull_mask_file = &lt;undefined&gt;
 251031-00:46:50,880 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
 251031-00:46:51,113 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.mcflirt&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/mcflirt&quot;.
+	 [Node] Setting-up &quot;preproc.mcflirt&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/mcflirt&quot;.
 251031-00:46:51,123 nipype.workflow INFO:
 	 [Node] Executing &quot;mcflirt&quot; &lt;nipype.interfaces.fsl.preprocess.MCFLIRT&gt;
 251031-00:46:52,875 nipype.workflow INFO:
@@ -2110,7 +2110,7 @@ skull_mask_file = &lt;undefined&gt;
 251031-00:47:18,879 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
 251031-00:47:19,18 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.smooth&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/smooth&quot;.
+	 [Node] Setting-up &quot;preproc.smooth&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/smooth&quot;.
 251031-00:47:19,30 nipype.workflow INFO:
 	 [Node] Executing &quot;smooth&quot; &lt;nipype.interfaces.fsl.maths.IsotropicSmooth&gt;
 251031-00:47:20,877 nipype.workflow INFO:
@@ -2124,7 +2124,7 @@ skull_mask_file = &lt;undefined&gt;
 251031-00:47:30,881 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
 251031-00:47:31,15 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.sinker&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/sinker&quot;.
+	 [Node] Setting-up &quot;preproc.sinker&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/sinker&quot;.
 251031-00:47:31,30 nipype.workflow INFO:
 	 [Node] Executing &quot;sinker&quot; &lt;nipype.interfaces.io.DataSink&gt;
 251031-00:47:31,41 nipype.workflow INFO:
@@ -2182,35 +2182,35 @@ For example, to get rid of the string 'bold' and to adapt the file ending of the
 251031-00:47:35,928 nipype.workflow INFO:
 	 Running serially.
 251031-00:47:35,929 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.dg&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/dg&quot;.
+	 [Node] Setting-up &quot;preproc.dg&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/dg&quot;.
 251031-00:47:35,932 nipype.workflow INFO:
 	 [Node] Executing &quot;dg&quot; &lt;nipype.interfaces.io.DataGrabber&gt;
 251031-00:47:35,933 nipype.workflow INFO:
 	 [Node] Finished &quot;dg&quot;, elapsed time 0.000376s.
 251031-00:47:35,936 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.mcflirt&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/mcflirt&quot;.
+	 [Node] Setting-up &quot;preproc.mcflirt&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/mcflirt&quot;.
 251031-00:47:35,938 nipype.workflow INFO:
 	 [Node] Cached &quot;preproc.mcflirt&quot; - collecting precomputed outputs
 251031-00:47:35,938 nipype.workflow INFO:
 	 [Node] &quot;preproc.mcflirt&quot; found cached.
 251031-00:47:35,939 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.smooth&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/smooth&quot;.
+	 [Node] Setting-up &quot;preproc.smooth&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/smooth&quot;.
 251031-00:47:35,941 nipype.workflow INFO:
 	 [Node] Cached &quot;preproc.smooth&quot; - collecting precomputed outputs
 251031-00:47:35,942 nipype.workflow INFO:
 	 [Node] &quot;preproc.smooth&quot; found cached.
 251031-00:47:35,943 nipype.workflow INFO:
-	 [Node] Setting-up &quot;preproc.sinker&quot; in &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/sinker&quot;.
+	 [Node] Setting-up &quot;preproc.sinker&quot; in &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/sinker&quot;.
 251031-00:47:35,945 nipype.workflow INFO:
 	 [Node] Outdated cache found for &quot;preproc.sinker&quot;.
 251031-00:47:35,948 nipype.workflow INFO:
 	 [Node] Executing &quot;sinker&quot; &lt;nipype.interfaces.io.DataSink&gt;
 251031-00:47:35,949 nipype.interface INFO:
-	 sub: /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf_smooth.nii.gz -&gt; /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf_smooth.nii.gz
+	 sub: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf_smooth.nii.gz -&gt; /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf_smooth.nii.gz
 251031-00:47:35,950 nipype.interface INFO:
-	 sub: /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz -&gt; /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.nii.gz
+	 sub: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz -&gt; /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.nii.gz
 251031-00:47:35,951 nipype.interface INFO:
-	 sub: /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz.par -&gt; /home/jovyan/Git_repositories/example-notebooks/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.par
+	 sub: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz.par -&gt; /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.par
 251031-00:47:35,952 nipype.workflow INFO:
 	 [Node] Finished &quot;sinker&quot;, elapsed time 0.003552s.
 </pre></div>
@@ -2394,7 +2394,7 @@ nibabel   : 5.2.1
 <li><p>Renton, A.I., Dao, T.T., Johnstone, T. et al. Neurodesk: an accessible, flexible and portable data analysis environment for reproducible neuroimaging. Nat Methods (2024). https://doi.org/10.1038/s41592-023-02145-x</p>
 <ul>
 <li><p><a class="reference external" href="https://neurodesk.org/">Neurodesk Website</a></p></li>
-<li><p><a class="reference external" href="https://neurodesk.org/example-notebooks/intro.html">Jupyter Notebook Examples on Neurodesk</a></p></li>
+<li><p><a class="reference external" href="https://neurodesk.org/edu/intro.html">Jupyter Notebook Examples on Neurodesk</a></p></li>
 </ul>
 </li>
 </ul>

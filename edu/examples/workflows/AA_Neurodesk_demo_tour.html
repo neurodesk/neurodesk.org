@@ -236,7 +236,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 
@@ -992,7 +992,7 @@ BIDScoin requires that the source data repository follows a <code class="docutil
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Downloading the tutorial dataset...
 bidscointutorial.tar.gz: 192MB [00:03, 61.9MB/s]                                
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Unpacking the downloaded data in: /home/jovyan/Git_repositories/example-notebooks/books/workflows
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Unpacking the downloaded data in: /home/jovyan/Git_repositories/neurodeskedu/books/workflows
 <span class=" -Color -Color-Bold -Color-Bold-Black">SUCCESS</span> | <span class=" -Color -Color-Bold -Color-Bold-Green">Done</span>
 </pre></div>
 </div>
@@ -1089,392 +1089,392 @@ examples:
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | 
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | -------------- START BIDSmapper ------------
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; bidsmapper sourcefolder=/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw bidsfolder=/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids bidsmap=bidsmap.yaml template=/home/jovyan/.bidscoin/4.3.3+qt5/templates/bidsmap_dccn.yaml plugins=[] subprefix=None sesprefix=None store=False force=False
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | No existing bidsmap file found: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmap.yaml
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; bidsmapper sourcefolder=/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw bidsfolder=/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids bidsmap=bidsmap.yaml template=/home/jovyan/.bidscoin/4.3.3+qt5/templates/bidsmap_dccn.yaml plugins=[] subprefix=None sesprefix=None store=False force=False
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | No existing bidsmap file found: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmap.yaml
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Reading: /home/jovyan/.bidscoin/4.3.3+qt5/templates/bidsmap_dccn.yaml
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Checking the bidsmap run-items:
 <span class=" -Color -Color-Bold -Color-Bold-Black">SUCCESS</span> | <span class=" -Color -Color-Bold -Color-Bold-Green">All datatypes and options in the template bidsmap are valid</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Mapping: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01 (subject 1/2)
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Executing plugin: dcm2niix2bids -&gt; /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;exclude&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/001-localizer_32ch-head/00001_1.3.12.2.1107.5.2.43.66068.2020042808460132520200538.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;exclude&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/002-AAHead_Scout_32ch-head/00001_1.3.12.2.1107.5.2.43.66068.202004280846254557100752.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;anat&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/007-t1_mprage_sag_ipat2_1p0iso/00001_1.3.12.2.1107.5.2.43.66068.2020042808523182387402502.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef/00001_1.3.12.2.1107.5.2.43.66068.2020042810531713998841564.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/048-cmrr_2p4iso_mb8_TR0700/00001_1.3.12.2.1107.5.2.43.66068.2020042810531742256741694.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/049-field_map_2p4iso/00001_1.3.12.2.1107.5.2.43.66068.2020042810545563732043000.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/050-field_map_2p4iso/00001_1.3.12.2.1107.5.2.43.66068.2020042810545625307043255.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef/00001_1.3.12.2.1107.5.2.43.66068.2020042810585076294853155.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/060-cmrr_2p5iso_mb3me3_TR1500/00001_1.3.12.2.1107.5.2.43.66068.2020042810585131207753573.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/061-field_map_2p5iso/00001_1.3.12.2.1107.5.2.43.66068.2020042811000180097857226.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/062-field_map_2p5iso/00001_1.3.12.2.1107.5.2.43.66068.2020042811000218155657429.IMA
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Mapping: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01 (subject 2/2)
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Detected a flat data-structure in: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Making temporary copy: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01 -&gt; /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt; Sorting: /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01 (712 files)
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/002-AAHead_Scout_32ch-head</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/001-localizer_32ch-head</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Executing plugin: dcm2niix2bids -&gt; /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Mapping: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01 (subject 1/2)
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Executing plugin: dcm2niix2bids -&gt; /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;exclude&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/001-localizer_32ch-head/00001_1.3.12.2.1107.5.2.43.66068.2020042808460132520200538.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;exclude&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/002-AAHead_Scout_32ch-head/00001_1.3.12.2.1107.5.2.43.66068.202004280846254557100752.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;anat&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/007-t1_mprage_sag_ipat2_1p0iso/00001_1.3.12.2.1107.5.2.43.66068.2020042808523182387402502.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef/00001_1.3.12.2.1107.5.2.43.66068.2020042810531713998841564.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/048-cmrr_2p4iso_mb8_TR0700/00001_1.3.12.2.1107.5.2.43.66068.2020042810531742256741694.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/049-field_map_2p4iso/00001_1.3.12.2.1107.5.2.43.66068.2020042810545563732043000.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/050-field_map_2p4iso/00001_1.3.12.2.1107.5.2.43.66068.2020042810545625307043255.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef/00001_1.3.12.2.1107.5.2.43.66068.2020042810585076294853155.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;func&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/060-cmrr_2p5iso_mb3me3_TR1500/00001_1.3.12.2.1107.5.2.43.66068.2020042810585131207753573.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/061-field_map_2p5iso/00001_1.3.12.2.1107.5.2.43.66068.2020042811000180097857226.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Discovered &#39;fmap&#39; DICOM sample: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/062-field_map_2p5iso/00001_1.3.12.2.1107.5.2.43.66068.2020042811000218155657429.IMA
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Mapping: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01 (subject 2/2)
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Detected a flat data-structure in: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Making temporary copy: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01 -&gt; /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt; Sorting: /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01 (712 files)
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/002-AAHead_Scout_32ch-head</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/001-localizer_32ch-head</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Executing plugin: dcm2niix2bids -&gt; /tmp/tmpaaqc3wzy/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01</span>
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Checking the bidsmap run-items:                               /subject]
 <span class=" -Color -Color-Bold -Color-Bold-Black">SUCCESS</span> | <span class=" -Color -Color-Bold -Color-Bold-Green">All run-items in the bidsmap are valid</span>
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | bids-validator 1.14.6 test results (* = in .bidsignore):
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | False:	exclude/sub-DICOM_task-localizer32chhead_acq-localizer32chhead_echo-1_GR.*
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | False:	exclude/sub-DICOM_task-AAHeadScout32chhead_acq-AAHeadScout32chhead_echo-1_GR.*
 <span class=" -Color -Color-Bold -Color-Bold-Black">SUCCESS</span> | <span class=" -Color -Color-Bold -Color-Bold-Green">All generated bidsnames are BIDS-valid</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Writing bidsmap to: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmap.yaml
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Writing bidsmap to: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmap.yaml
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | -------------- FINISHED! -------------------
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | 
 <span class=" -Color -Color-Bold -Color-Bold-Black">SUCCESS</span> | <span class=" -Color -Color-Bold -Color-Bold-Green">No BIDScoin errors or warnings were reported</span>
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | For the complete log see: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmapper.log
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | For the complete log see: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmapper.log
 NB: That folder may contain privacy sensitive information, e.g. pathnames in logfiles and provenance data samples
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | 
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | -------------- START BIDScoiner 4.3.3+qt5: BIDS 1.9.0 ------------
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; bidscoiner sourcefolder=/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw bidsfolder=/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids participant=None force=False bidsmap=bidsmap.yaml
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Creating dataset description file: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/dataset_description.json
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Creating a template README file (adjust it to your needs): /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/README
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Reading: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmap.yaml
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; bidscoiner sourcefolder=/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw bidsfolder=/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids participant=None force=False bidsmap=bidsmap.yaml
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Creating dataset description file: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/dataset_description.json
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Creating a template README file (adjust it to your needs): /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/README
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Reading: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/code/bidscoin/bidsmap.yaml
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Checking the bidsmap run-items:
 <span class=" -Color -Color-Bold -Color-Bold-Black">SUCCESS</span> | <span class=" -Color -Color-Bold -Color-Bold-Green">All run-items in the bidsmap are valid</span>
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | ------------------- Subject 1/2 -------------------           ubject/s]
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; Coining datasources in: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; Coining datasources in: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Executing plugin: dcm2niix2bids</span>             ubject/s]
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/001-localizer_32ch-head
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/002-AAHead_Scout_32ch-head
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/007-t1_mprage_sag_ipat2_1p0iso
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/001-localizer_32ch-head
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/002-AAHead_Scout_32ch-head
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/007-t1_mprage_sag_ipat2_1p0iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-t1mpragesagipat21p0iso_T1w&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/anat&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/007-t1_mprage_sag_ipat2_1p0iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-t1mpragesagipat21p0iso_T1w&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/anat&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/007-t1_mprage_sag_ipat2_1p0iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 192 DICOM file(s)
-Convert 192 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/anat/sub-001_ses-01_acq-t1mpragesagipat21p0iso_T1w (256x256x192x1)
+Convert 192 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/anat/sub-001_ses-01_acq-t1mpragesagipat21p0iso_T1w (256x256x192x1)
 Conversion required 1.323579 seconds (1.310888 for core code).
 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 1 DICOM file(s)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref (88x88x64x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref (88x88x64x1)
 Conversion required 0.037840 seconds (0.037833 for core code).
 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/048-cmrr_2p4iso_mb8_TR0700
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/048-cmrr_2p4iso_mb8_TR0700
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/048-cmrr_2p4iso_mb8_TR0700&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/048-cmrr_2p4iso_mb8_TR0700&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 10 DICOM file(s)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold (88x88x64x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold (88x88x64x10)
 Conversion required 0.368439 seconds (0.365960 for core code).
 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/049-field_map_2p4iso
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/049-field_map_2p4iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p4iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/049-field_map_2p4iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p4iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/049-field_map_2p4iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 128 DICOM file(s)
 Slices not stacked: echo varies (TE 4.92, 7.38; echo 1, 2). Use &#39;merge 2D slices&#39; option to force stacking
-Convert 64 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e1 (88x88x64x1)
-Convert 64 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e2 (88x88x64x1)
+Convert 64 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e1 (88x88x64x1)
+Convert 64 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e2 (88x88x64x1)
 Conversion required 0.166053 seconds (0.165967 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude2.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/050-field_map_2p4iso
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude2.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/050-field_map_2p4iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p4iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/050-field_map_2p4iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p4iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/050-field_map_2p4iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 64 DICOM file(s)
-Convert 64 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph (88x88x64x1)
+Convert 64 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph (88x88x64x1)
 Conversion required 0.070547 seconds (0.070541 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;, &#39;ph&#39;] postfixes, renaming ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 3 DICOM file(s)
 Slices not stacked: echo varies (TE 34.8, 56.2; echo 2, 3). Use &#39;merge 2D slices&#39; option to force stacking
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2 (84x84x51x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2 (84x84x51x1)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3 (84x84x51x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3 (84x84x51x1)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1 (84x84x51x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1 (84x84x51x1)
 Conversion required 0.082883 seconds (0.082787 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_sbref.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_sbref.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_sbref.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_sbref.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e3&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_sbref.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/060-cmrr_2p5iso_mb3me3_TR1500
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_sbref.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/060-cmrr_2p5iso_mb3me3_TR1500
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/060-cmrr_2p5iso_mb3me3_TR1500&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/060-cmrr_2p5iso_mb3me3_TR1500&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 30 DICOM file(s)
 Slices not stacked: echo varies (TE 13.4, 56.2; echo 1, 3). Use &#39;merge 2D slices&#39; option to force stacking
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1 (84x84x51x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1 (84x84x51x10)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3 (84x84x51x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3 (84x84x51x10)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2 (84x84x51x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2 (84x84x51x10)
 Conversion required 0.715654 seconds (0.714467 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_bold.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_bold.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_bold.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_bold.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e3&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_bold.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/061-field_map_2p5iso
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_bold.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/061-field_map_2p5iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p5iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/061-field_map_2p5iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p5iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/061-field_map_2p5iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 102 DICOM file(s)
 Slices not stacked: echo varies (TE 5.06, 2.6; echo 2, 1). Use &#39;merge 2D slices&#39; option to force stacking
-Convert 51 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e2 (84x84x51x1)
-Convert 51 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e1 (84x84x51x1)
+Convert 51 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e2 (84x84x51x1)
+Convert 51 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e1 (84x84x51x1)
 Conversion required 0.144849 seconds (0.144791 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude2.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/062-field_map_2p5iso
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude2.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/062-field_map_2p5iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        ubject/s]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p5iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-001/ses-01/062-field_map_2p5iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-001_ses-01_acq-fieldmap2p5iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap&quot; &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-001/ses-01/062-field_map_2p5iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         ubject/s]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 51 DICOM file(s)
-Convert 51 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph (84x84x51x1)
+Convert 51 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph (84x84x51x1)
 Conversion required 0.056338 seconds (0.056294 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;, &#39;ph&#39;] postfixes, renaming ubject/s]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing acquisition time data to: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/sub-001_ses-01_scans.tsv</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing sub-001 subject data to: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/participants.tsv</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing subject meta data to: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/participants.json</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)</span>
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing acquisition time data to: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/sub-001_ses-01_scans.tsv</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing sub-001 subject data to: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/participants.tsv</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing subject meta data to: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/participants.json</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)</span>
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | ------------------- Subject 2/2 -------------------           /subject]
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Detected a flat data-structure in: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Making temporary copy: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01 -&gt; /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt; Sorting: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01 (712 files)
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/002-AAHead_Scout_32ch-head</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/001-localizer_32ch-head</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; Coining datasources in: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Detected a flat data-structure in: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | Making temporary copy: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01 -&gt; /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt; Sorting: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01 (712 files)
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/002-AAHead_Scout_32ch-head</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/001-localizer_32ch-head</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">   Creating:  /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | &gt;&gt;&gt; Coining datasources in: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Executing plugin: dcm2niix2bids</span>             /subject]
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/001-localizer_32ch-head
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/002-AAHead_Scout_32ch-head
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/001-localizer_32ch-head
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Leaving out: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/002-AAHead_Scout_32ch-head
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-t1mpragesagipat21p0iso_T1w&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/anat&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-t1mpragesagipat21p0iso_T1w&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/anat&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/007-t1_mprage_sag_ipat2_1p0iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 192 DICOM file(s)
-Convert 192 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/anat/sub-002_ses-01_acq-t1mpragesagipat21p0iso_T1w (256x256x192x1)
+Convert 192 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/anat/sub-002_ses-01_acq-t1mpragesagipat21p0iso_T1w (256x256x192x1)
 Conversion required 1.574461 seconds (1.564820 for core code).
 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/047-cmrr_2p4iso_mb8_TR0700_SBRef&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 1 DICOM file(s)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref (88x88x64x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_sbref (88x88x64x1)
 Conversion required 0.038790 seconds (0.038739 for core code).
 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/048-cmrr_2p4iso_mb8_TR0700&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 10 DICOM file(s)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold (88x88x64x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold (88x88x64x10)
 Conversion required 0.371501 seconds (0.371323 for core code).
 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p4iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p4iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/049-field_map_2p4iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 128 DICOM file(s)
 Slices not stacked: echo varies (TE 4.92, 7.38; echo 1, 2). Use &#39;merge 2D slices&#39; option to force stacking
-Convert 64 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e1 (88x88x64x1)
-Convert 64 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e2 (88x88x64x1)
+Convert 64 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e1 (88x88x64x1)
+Convert 64 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e2 (88x88x64x1)
 Conversion required 0.156943 seconds (0.156598 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude2.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude2.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p4iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p4iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/050-field_map_2p4iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 64 DICOM file(s)
-Convert 64 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph (88x88x64x1)
+Convert 64 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph (88x88x64x1)
 Conversion required 0.064915 seconds (0.064874 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;, &#39;ph&#39;] postfixes, renaming /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff_e2_ph.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/059-cmrr_2p5iso_mb3me3_TR1500_SBRef&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 3 DICOM file(s)
 Slices not stacked: echo varies (TE 13.4, 34.8; echo 1, 2). Use &#39;merge 2D slices&#39; option to force stacking
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1 (84x84x51x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1 (84x84x51x1)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2 (84x84x51x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2 (84x84x51x1)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 1 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3 (84x84x51x1)
+Convert 1 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3 (84x84x51x1)
 Conversion required 0.085969 seconds (0.085792 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_sbref.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_sbref.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_sbref.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_sbref.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e3&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_sbref.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_sbref_e3.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_sbref.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/060-cmrr_2p5iso_mb3me3_TR1500&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 30 DICOM file(s)
 Slices not stacked: echo varies (TE 13.4, 56.2; echo 1, 3). Use &#39;merge 2D slices&#39; option to force stacking
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1 (84x84x51x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1 (84x84x51x10)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3 (84x84x51x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3 (84x84x51x10)
 UINT16-&gt;INT16 Future release will change default. github.com/rordenlab/dcm2niix/issues/338
-Convert 10 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2 (84x84x51x10)
+Convert 10 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2 (84x84x51x10)
 Conversion required 0.714900 seconds (0.714076 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_bold.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_bold.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_bold.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_bold.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e3&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_bold.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_bold_e3.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/func/sub-002_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_bold.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p5iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p5iso_magnitude1&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/061-field_map_2p5iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 102 DICOM file(s)
 Slices not stacked: echo varies (TE 2.6, 5.06; echo 1, 2). Use &#39;merge 2D slices&#39; option to force stacking
-Convert 51 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e1 (84x84x51x1)
-Convert 51 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e2 (84x84x51x1)
+Convert 51 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e1 (84x84x51x1)
+Convert 51 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e2 (84x84x51x1)
 Conversion required 0.120363 seconds (0.120114 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e1&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e1.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1.nii.gz
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e1.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1.nii.gz
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;] postfixes, renaming       /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e2.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude2.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1_e2.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude2.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | --&gt; Coining: /tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Command:                                        /subject]</span>
-dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p5iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso&quot;
+dcm2niix -b y -z y -i n -l n -f &quot;sub-002_ses-01_acq-fieldmap2p5iso_phasediff&quot; -o &quot;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap&quot; &quot;/tmp/tmp9p9vifm6/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/raw/sub-002/ses-01/062-field_map_2p5iso&quot;
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Output:                                         /subject]</span>
 Chris Rorden&#39;s dcm2niiX version v1.0.20240202  (JP2:OpenJPEG) (JP-LS:CharLS) GCC12.2.0 x86-64 (64-bit Linux)
 Found 51 DICOM file(s)
-Convert 51 DICOM as /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph (84x84x51x1)
+Convert 51 DICOM as /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph (84x84x51x1)
 Conversion required 0.050441 seconds (0.050409 for core code).
 
 <span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Found dcm2niix [&#39;e2&#39;, &#39;ph&#39;] postfixes, renaming /subject]</span>
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph.nii.gz -&gt;
-/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff.nii.gz
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing acquisition time data to: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/sub-002_ses-01_scans.tsv</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing sub-002 subject data to: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/participants.tsv</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
-<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)</span>
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff_e2_ph.nii.gz -&gt;
+/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff.nii.gz
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing acquisition time data to: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/sub-002_ses-01_scans.tsv</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">VERBOSE</span> | <span class=" -Color -Color-C245">Writing sub-002 subject data to: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/participants.tsv</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Black">WARNING</span> | <span class=" -Color -Color-Yellow">Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)</span>
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | -------------- FINISHED! ------------                         /subject]
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | 
 <span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | The following BIDScoin errors and warnings were reported:
 
 &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
-2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)
-2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:49 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/fmap/sub-001_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude1.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_magnitude2.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p4iso_phasediff.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude1.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_magnitude2.json (i.e. the fieldmap may not be used)
+2025-11-10 00:21:54 - WARNING | Empty IntendedFor/B0FieldSource/B0FieldIdentifier fieldmap values in /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-002/ses-01/fmap/sub-002_ses-01_acq-fieldmap2p5iso_phasediff.json (i.e. the fieldmap may not be used)
 &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
 
-<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | For the complete log see: /home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/code/bidscoin/bidscoiner.log
+<span class=" -Color -Color-Bold -Color-Bold-Black">INFO</span> | For the complete log see: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/code/bidscoin/bidscoiner.log
 NB: That folder may contain privacy sensitive information, e.g. pathnames in logfiles and provenance data samples
 </pre></div>
 </div>
@@ -1606,11 +1606,11 @@ NB: That folder may contain privacy sensitive information, e.g. pathnames in log
 The first 3 files are:
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;BIDSJSONFile filename=&#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/dataset_description.json&#39;&gt;,
- &lt;BIDSJSONFile filename=&#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/participants.json&#39;&gt;,
- &lt;BIDSDataFile filename=&#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/participants.tsv&#39;&gt;,
- &lt;BIDSFile filename=&#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/README&#39;&gt;,
- &lt;BIDSJSONFile filename=&#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/anat/sub-001_ses-01_acq-t1mpragesagipat21p0iso_T1w.json&#39;&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;BIDSJSONFile filename=&#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/dataset_description.json&#39;&gt;,
+ &lt;BIDSJSONFile filename=&#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/participants.json&#39;&gt;,
+ &lt;BIDSDataFile filename=&#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/participants.tsv&#39;&gt;,
+ &lt;BIDSFile filename=&#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/README&#39;&gt;,
+ &lt;BIDSJSONFile filename=&#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/anat/sub-001_ses-01_acq-t1mpragesagipat21p0iso_T1w.json&#39;&gt;]
 </pre></div>
 </div>
 </div>
@@ -1624,10 +1624,10 @@ The first 3 files are:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold.nii.gz&#39;,
- &#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_bold.nii.gz&#39;,
- &#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_bold.nii.gz&#39;,
- &#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_bold.nii.gz&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold.nii.gz&#39;,
+ &#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-1_bold.nii.gz&#39;,
+ &#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-2_bold.nii.gz&#39;,
+ &#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p5isomb3me3TR1500_dir-AP_echo-3_bold.nii.gz&#39;]
 </pre></div>
 </div>
 </div>
@@ -1658,7 +1658,7 @@ The first 3 files are:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BIDSImageFile filename=&#39;/home/jovyan/Git_repositories/example-notebooks/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold.nii.gz&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BIDSImageFile filename=&#39;/home/jovyan/Git_repositories/neurodeskedu/books/workflows/bidscointutorial/bids/sub-001/ses-01/func/sub-001_ses-01_task-cmrr2p4isomb8TR0700_dir-AP_bold.nii.gz&#39;&gt;
 </pre></div>
 </div>
 </div>

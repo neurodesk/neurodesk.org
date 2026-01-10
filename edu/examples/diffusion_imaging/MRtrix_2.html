@@ -236,7 +236,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 
@@ -814,9 +814,9 @@ USAGE
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dwi2response: 
 dwi2response: <span class=" -Color -Color-Green">Note that this script makes use of commands / algorithms that have relevant articles for citation. Please consult the help page (-help option) for more information.</span>
 dwi2response: 
-dwi2response: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi2response-tmp-KLMJ15/</span>
-dwi2response: <span class=" -Color -Color-Green">Importing DWI data (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/MRtrix_preprocessed/sub-02_den_preproc_unbiased.mif)...</span>
-dwi2response: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi2response-tmp-KLMJ15/)</span>
+dwi2response: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi2response-tmp-KLMJ15/</span>
+dwi2response: <span class=" -Color -Color-Green">Importing DWI data (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/MRtrix_preprocessed/sub-02_den_preproc_unbiased.mif)...</span>
+dwi2response: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi2response-tmp-KLMJ15/)</span>
 dwi2response: <span class=" -Color -Color-Green">Computing brain mask (dwi2mask)...</span>
 dwi2response: <span class=" -Color -Color-Green">-------</span>
 dwi2response: <span class=" -Color -Color-Green">4 unique b-value(s) detected: 0,700,1200,2800 with 6,16,30,50 volumes</span>
@@ -863,8 +863,8 @@ dwi2response: <span class=" -Color -Color-Green"> * Estimating response function
 dwi2response: <span class=" -Color -Color-Green">-------</span>
 dwi2response: <span class=" -Color -Color-Green">Generating outputs...</span>
 dwi2response: <span class=" -Color -Color-Green">-------</span>
-dwi2response: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging)</span>
-dwi2response: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi2response-tmp-KLMJ15/)</span>
+dwi2response: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging)</span>
+dwi2response: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi2response-tmp-KLMJ15/)</span>
 </pre></div>
 </div>
 </div>
@@ -1174,9 +1174,9 @@ mrconvert: [100%] copying from &quot;MRtrix_pre...-CON02_ses-preop_T1w.nii.gz&qu
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5ttgen: 
 5ttgen: <span class=" -Color -Color-Green">Note that this script makes use of commands / algorithms that have relevant articles for citation; INCLUDING FROM EXTERNAL SOFTWARE PACKAGES. Please consult the help page (-help option) for more information.</span>
 5ttgen: 
-5ttgen: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/</span>
-<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/T1.mif /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/input.mif
-5ttgen: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/)</span>
+5ttgen: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/</span>
+<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/T1.mif /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/input.mif
+5ttgen: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/)</span>
 <span class=" -Color -Color-Cyan">Command:</span>  mrconvert input.mif T1.nii -strides -1,+2,+3
 <span class=" -Color -Color-Cyan">Command:</span>  maskfilter /opt/fsl-6.0.5.1/data/standard/MNI152_T1_1mm_brain_mask_dil.nii.gz dilate mni_mask.nii -npass 4
 <span class=" -Color -Color-Cyan">Command:</span>  standard_space_roi T1.nii T1_preBET.nii.gz -maskMASK mni_mask.nii -roiFOV
@@ -1195,10 +1195,10 @@ mrconvert: [100%] copying from &quot;MRtrix_pre...-CON02_ses-preop_T1w.nii.gz&qu
 <span class=" -Color -Color-Cyan">Command:</span>  mrcalc 0 wm.mif -min path.mif
 <span class=" -Color -Color-Cyan">Command:</span>  mrcat cgm.mif sgm.mif wm.mif csf.mif path.mif - -axis 3 | mrconvert - combined_precrop.mif -strides +2,+3,+4,+1
 <span class=" -Color -Color-Cyan">Command:</span>  mrmath combined_precrop.mif sum - -axis 3 | mrthreshold - - -abs 0.5 | mrgrid combined_precrop.mif crop result.mif -mask -
-<span class=" -Color -Color-Cyan">Command:</span>  mrconvert result.mif /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/5tt_nocoreg.mif
+<span class=" -Color -Color-Cyan">Command:</span>  mrconvert result.mif /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/5tt_nocoreg.mif
 <span class=" -Color -Color-Cyan">Command:</span>  5ttcheck result.mif
-5ttgen: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging)</span>
-5ttgen: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/)</span>
+5ttgen: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging)</span>
+5ttgen: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/5ttgen-tmp-MWYNUJ/)</span>
 </pre></div>
 </div>
 </div>

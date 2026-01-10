@@ -236,7 +236,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 
@@ -658,8 +658,8 @@ document.write(`
 <section id="workflows-this-work-is-based-on">
 <h3>Workflows this work is based on<a class="headerlink" href="#workflows-this-work-is-based-on" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://neurodesk.org/example-notebooks/functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></p></li>
-<li><p><a class="reference external" href="https://neurodesk.org/example-notebooks/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></p></li>
+<li><p><a class="reference external" href="https://neurodesk.org/edu/examples/functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></p></li>
+<li><p><a class="reference external" href="https://neurodesk.org/edu/examples/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></p></li>
 </ul>
 </section>
 <section id="educational-resources">
@@ -751,8 +751,8 @@ Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas
 [INFO   ] scanning for unlocked files (this may take some time)                 
 [INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
-| 		datalad siblings -d &quot;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds000102&quot; enable -s s3-PRIVATE 
-<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+| 		datalad siblings -d &quot;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds000102&quot; enable -s s3-PRIVATE 
+<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
 Total:   0%|                                    | 0.00/618M [00:00&lt;?, ? Bytes/s]
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
 Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.3k/10.6M [00:00&lt;00:34, 304k Bytes/s]
@@ -2078,10 +2078,10 @@ align_epi_anat.py -anat2epi -anat sub-01_T1w+orig -save_skullstrip -suffix _al_j
   3dSkullStrip -orig_vol -input ./__tt_sub-03_T1w+orig -prefix ./__tt_sub-03_T1w_ns
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-03_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/__tt_sub-03_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/__tt_sub-03_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -2122,7 +2122,7 @@ align_epi_anat.py -anat2epi -anat sub-01_T1w+orig -save_skullstrip -suffix _al_j
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
-#++ Applying threshold of 862.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 862.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/862.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -2202,10 +2202,10 @@ align_epi_anat.py -anat2epi -anat sub-01_T1w+orig -save_skullstrip -suffix _al_j
  + - number of free params = 6
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-02_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/__tt_sub-02_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/__tt_sub-02_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -2245,7 +2245,7 @@ align_epi_anat.py -anat2epi -anat sub-01_T1w+orig -save_skullstrip -suffix _al_j
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
-#++ Applying threshold of 873.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 873.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/873.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -2844,10 +2844,10 @@ align_epi_anat.py -anat2epi -anat sub-01_T1w+orig -save_skullstrip -suffix _al_j
  + - Smoothing source; radius=1.00
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-01_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/__tt_sub-01_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/__tt_sub-01_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -2969,7 +2969,7 @@ align_epi_anat.py -anat2epi -anat sub-01_T1w+orig -save_skullstrip -suffix _al_j
  + -- Parameters = 96.0748 2.0948 -34.2916 17.3132 2.7689 0.1456 0.9854 0.9980 0.9916 -0.0036 -0.0049 -0.0043
  + - cost(#7)=-0.027112   [o=4 t=3]
  + -- Parameters = 76.6310 6.3971 -37.4413 -16.1191 7.0182 2.9906 0.9911 0.9837 0.9798 0.0145 0.0021 0.0037
-#++ Applying threshold of 844.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 844.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/844.000000))&#39;
  + - cost(#8)=-0.028788   [o=11 t=12]
@@ -3054,7 +3054,7 @@ align_epi_anat.py -anat2epi -anat sub-01_T1w+orig -save_skullstrip -suffix _al_j
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/__tt_sub-03_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/sub-03_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/__tt_sub-03_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/sub-03_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-03_T1w_ns+orig sub-03_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -3831,7 +3831,7 @@ Padding ...
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/__tt_sub-02_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/sub-02_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/__tt_sub-02_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/sub-02_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-02_T1w_ns+orig sub-02_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -4670,7 +4670,7 @@ foreach run ( 01 02 )
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/__tt_sub-01_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/sub-01_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/__tt_sub-01_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/sub-01_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-01_T1w_ns+orig sub-01_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -7416,7 +7416,7 @@ final voxel resolution    : 3.000000	3.000000	3.000000
 
 motion limit              : 0.3
 num TRs above mot limit   : 3
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_UFKQoxXOx9w++ Writing palette image to QC_sub-03/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_UFKQoxXOx9w++ Writing palette image to QC_sub-03/media/qc_00_vorig_EPI.pbar.jpg
 average motion (per TR)   : 0.0601768
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-03/media/qc_00_vorig_EPI.sag.jpg&#39;
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-03/media/qc_00_vorig_EPI.cor.jpg&#39;
@@ -7489,7 +7489,7 @@ average outlier frac (TR) : 0.00147247
 ++ Output dataset ./QC_sub-03/media/__workdir_EAC_d1KlWnkhvgr/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__workdir_EAC_d1KlWnkhvgr/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__workdir_EAC_d1KlWnkhvgr/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -7664,7 +7664,7 @@ blur estimates (FWHM)     : 0 0 0
 
 
 apqc_make_tcsh.py -review_style pythonic -subj_dir . -uvar_json out.ss_review_uvars.json
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_F78SW5oqxEW++ Writing palette image to QC_sub-02/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_F78SW5oqxEW++ Writing palette image to QC_sub-02/media/qc_00_vorig_EPI.pbar.jpg
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
 ++ Found 37 files for QCing.
@@ -7707,7 +7707,7 @@ bc: Command not found.
 ++ Output dataset ./QC_sub-02/media/__workdir_EAC_rEICjqm728c/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__workdir_EAC_rEICjqm728c/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__workdir_EAC_rEICjqm728c/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -7775,7 +7775,7 @@ bc: Command not found.
 ++ Using blowup factor: 4
 ++ Using opacity:  9
 ++ Making temporary work directory to copy vis files: QC_sub-01/media/__tmp_chauf_2BhSd2lGYAG
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_xbFSwitdEj3++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_xbFSwitdEj3++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Converted 0 to labels
 ++ Final subbrick indices: -1 -1 -1
@@ -8008,7 +8008,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :842 
 [1] 2473508
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_2BhSd2lGYAG++ Writing palette image to QC_sub-01/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_2BhSd2lGYAG++ Writing palette image to QC_sub-01/media/qc_00_vorig_EPI.pbar.jpg
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_00_vorig_EPI.sag.jpg&#39;
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_00_vorig_EPI.cor.jpg&#39;
 ++ Writing one 1816x256 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_00_vorig_EPI.axi.jpg&#39;
@@ -8026,7 +8026,7 @@ AFNI QUITTs!
 ++ DONE (good exit)
    see: QC_sub-01/media/qc_00_vorig_EPI*
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_gRi88pR0qSs++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_gRi88pR0qSs++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
 
@@ -8060,7 +8060,7 @@ AFNI QUITTs!
 ++ Output dataset ./QC_sub-01/media/__workdir_EAC_mTqxEiaVTSV/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__workdir_EAC_mTqxEiaVTSV/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__workdir_EAC_mTqxEiaVTSV/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -8185,7 +8185,7 @@ AFNI QUITTs!
 ++ Converted 0 to labels
 ++ Final subbrick indices: 0 0 0
 ++ Copy ulay to visualize (volumetric) within user&#39;s range:
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_G89f8zF2c5c++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_G89f8zF2c5c++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -8365,7 +8365,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :548 
 [1] 2475998
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_wI0eVhhqLjJ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_wI0eVhhqLjJ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
 
@@ -8389,7 +8389,7 @@ AFNI QUITTs!
 ++ DONE! Image output:
        QC_sub-01/media/qc_01_ve2a_epi2anat
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_g4hCnO6aZUG++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_g4hCnO6aZUG++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -8481,7 +8481,7 @@ AFNI QUITTs!
 ++ Using blowup factor: 2
 ++ Using opacity:  9
 ++ Making temporary work directory to copy vis files: ../__tmp_chauf_vKLJasUj5R1
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_TreW1c1ptEv++ Writing palette image to QC_sub-03/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_TreW1c1ptEv++ Writing palette image to QC_sub-03/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Converted 0 to labels
 ++ Final subbrick indices: 0 0 0
 ++ Copy ulay to visualize (volumetric) within user&#39;s range:
@@ -8621,7 +8621,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
 ++ 3dGrayplot: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
  + Loading dataset ./errts.sub-03_REML+tlrc.HEAD
  + Number of voxels in mask = 68545
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_vKLJasUj5R1++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_vKLJasUj5R1++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -8645,7 +8645,7 @@ AFNI QUITTs!
 ++ DONE! Image output:
        QC_sub-01/media/qc_02_va2t_anat2temp
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_59BbiDFYCiw++ Writing palette image to QC_sub-02/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_59BbiDFYCiw++ Writing palette image to QC_sub-02/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-02/media/qc_03_vstat_Full_Fstat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-02/media/qc_03_vstat_Full_Fstat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-02/media/qc_03_vstat_Full_Fstat.axi.jpg&#39;
@@ -8798,7 +8798,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :818 
 [1] 2480008
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_NjbipMnhoU1++ Writing palette image to QC_sub-01/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_NjbipMnhoU1++ Writing palette image to QC_sub-01/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_03_vstat_Full_Fstat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_03_vstat_Full_Fstat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_03_vstat_Full_Fstat.axi.jpg&#39;
@@ -8835,7 +8835,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
 ++ 3dGrayplot: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
  + Loading dataset ./errts.sub-01_REML+tlrc.HEAD
  + Number of voxels in mask = 69731
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/__tmp_chauf_rOkg72lU3zf++ Writing palette image to QC_sub-03/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/__tmp_chauf_rOkg72lU3zf++ Writing palette image to QC_sub-03/media/qc_06_mot_grayplot.pbar.jpg
 ++ Writing one 73x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.sag.jpg&#39;
 ++ Writing one 61x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.cor.jpg&#39;
 ++ Writing one 61x73 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.axi.jpg&#39;
@@ -9009,7 +9009,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :97 
 [1] 2482035
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/__tmp_chauf_33D69u071eR++ Writing palette image to QC_sub-02/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/__tmp_chauf_33D69u071eR++ Writing palette image to QC_sub-02/media/qc_06_mot_grayplot.pbar.jpg
 ++ Writing one 73x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.sag.jpg&#39;
 ++ Writing one 61x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.cor.jpg&#39;
 ++ Writing one 61x73 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.axi.jpg&#39;
@@ -9087,7 +9087,7 @@ Traceback (most recent call last):
     import matplotlib.pyplot  as plt
 ModuleNotFoundError: No module named &#39;matplotlib&#39;
 ++ Output dataset ././__tmp_chauf_L9VZqsID8He/tmp_ulay.nii
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_glK4FL9KO6e++ Writing palette image to QC_sub-03/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_glK4FL9KO6e++ Writing palette image to QC_sub-03/media/qc_10_regr_corr_errts.pbar.jpg
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
 ++ Output dataset ././__tmp_chauf_L9VZqsID8He/tmp_olay.nii
@@ -9264,7 +9264,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :488 
 [1] 2484361
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/__tmp_chauf_L9VZqsID8He++ Writing palette image to QC_sub-01/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/__tmp_chauf_L9VZqsID8He++ Writing palette image to QC_sub-01/media/qc_06_mot_grayplot.pbar.jpg
 ++ Writing one 73x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.sag.jpg&#39;
 ++ Writing one 61x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.cor.jpg&#39;
 ++ Writing one 61x73 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.axi.jpg&#39;
@@ -9311,7 +9311,7 @@ Traceback (most recent call last):
 ModuleNotFoundError: No module named &#39;matplotlib&#39;
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_Qn77tlHidt9++ Writing palette image to QC_sub-02/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_Qn77tlHidt9++ Writing palette image to QC_sub-02/media/qc_10_regr_corr_errts.pbar.jpg
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
 Traceback (most recent call last):
@@ -9340,7 +9340,7 @@ AFNI QUITTs!
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
 ++ Check summary of degrees of freedom in: QC_sub-01/media/qc_09_regr_df.dat
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_6nGDZqpMg66++ Writing palette image to QC_sub-03/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/QC_sub-03/media/__tmp_chauf_6nGDZqpMg66++ Writing palette image to QC_sub-03/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ olay_alpha has known value: Yes
 ++ pbar name has known extension: jpg
 ++ My command:
@@ -9635,7 +9635,7 @@ touch out.pre_ss_warn.txt
 foreach run ( 01 02 )
 3dToutcount -automask -fraction -polort 2 -legendre pb00.sub-04.r01.tcat+orig
 ++ 3dToutcount: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_pUx4Rc8sXcJ++ Writing palette image to QC_sub-01/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/QC_sub-01/media/__tmp_chauf_pUx4Rc8sXcJ++ Writing palette image to QC_sub-01/media/qc_10_regr_corr_errts.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_10_regr_corr_errts.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_10_regr_corr_errts.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-01/media/qc_10_regr_corr_errts.axi.jpg&#39;
@@ -9653,7 +9653,7 @@ AFNI QUITTs!
 ++ DONE (good exit)
    see: QC_sub-01/media/qc_10_regr_corr_errts*
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_ebA8q1JHnFw++ Writing palette image to QC_sub-02/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/QC_sub-02/media/__tmp_chauf_ebA8q1JHnFw++ Writing palette image to QC_sub-02/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-02/media/qc_11_regr_tsnr_fin.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-02/media/qc_11_regr_tsnr_fin.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-02/media/qc_11_regr_tsnr_fin.axi.jpg&#39;
@@ -9738,10 +9738,10 @@ num stim classes provided : 2
 final anatomy dset        : anat_final.sub-02+tlrc.HEAD
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-04_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/__tt_sub-04_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/__tt_sub-04_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -9781,7 +9781,7 @@ final anatomy dset        : anat_final.sub-02+tlrc.HEAD
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
-#++ Applying threshold of 815.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 815.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/815.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -9950,10 +9950,10 @@ final anatomy dset        : anat_final.sub-02+tlrc.HEAD
    o=87 v=-0.016864:  53.11  25.73 -35.62   9.69 -21.75 -40.77  [rand]
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-05_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/__tt_sub-05_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/__tt_sub-05_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -10124,7 +10124,7 @@ final anatomy dset        : anat_final.sub-02+tlrc.HEAD
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
  + !source mask fill: ubot=40 usiz=154.5
-#++ Applying threshold of 855.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 855.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/855.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -10656,7 +10656,7 @@ final anatomy dset        : anat_final.sub-02+tlrc.HEAD
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/__tt_sub-04_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/sub-04_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/__tt_sub-04_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/sub-04_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-04_T1w_ns+orig sub-04_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -11411,7 +11411,7 @@ Warping has converged.
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/__tt_sub-05_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/sub-05_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/__tt_sub-05_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/sub-05_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-05_T1w_ns+orig sub-05_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -11446,12 +11446,12 @@ Applying brain mask
 ++ 3drename: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ THD_rename_dataset_files: rename __ats_tmp___pad15_pre.sub-04_T1w_ns+orig.HEAD -&gt; __ats_tmp___pad15_pre.sub-04_T1w_ns.skl+orig.HEAD
 ++ THD_rename_dataset_files: rename __ats_tmp___pad15_pre.sub-04_T1w_ns+orig.BRIK -&gt; __ats_tmp___pad15_pre.sub-04_T1w_ns.skl+orig.BRIK
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/__tt_sub-06_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/__tt_sub-06_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -11492,7 +11492,7 @@ Applying brain mask
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
-#++ Applying threshold of 863.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 863.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/863.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -12433,7 +12433,7 @@ volume 0..1..2..3..4..5..6..7..8..9..10..11..12..13..14..15..16..17..18..19..20.
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/__tt_sub-06_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/sub-06_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/__tt_sub-06_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/sub-06_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-06_T1w_ns+orig sub-06_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -15040,7 +15040,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :406 
 [1] 2525904
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_9WfgA46eR8A++ Writing palette image to QC_sub-04/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_9WfgA46eR8A++ Writing palette image to QC_sub-04/media/qc_00_vorig_EPI.pbar.jpg
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-04/media/qc_00_vorig_EPI.sag.jpg&#39;
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-04/media/qc_00_vorig_EPI.cor.jpg&#39;
 ++ Writing one 1816x256 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-04/media/qc_00_vorig_EPI.axi.jpg&#39;
@@ -15076,7 +15076,7 @@ if ( 146..153,157..291 ==  ) continue
 ++ Authored by: A cast of thousands
 ++ 3dFWHMx: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: The Bob
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_EC51bBVAmgB++ Writing palette image to QC_sub-05/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_EC51bBVAmgB++ Writing palette image to QC_sub-05/media/qc_00_vorig_EPI.pbar.jpg
 ++ Number of voxels in mask = 71257
 ++ Output dataset ./QC_sub-04/media/__workdir_EAC_1KJHkTaQRzH/REFBOX.nii
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -15087,7 +15087,7 @@ if ( 146..153,157..291 ==  ) continue
 ++ Output dataset ./QC_sub-04/media/__workdir_EAC_1KJHkTaQRzH/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__workdir_EAC_1KJHkTaQRzH/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__workdir_EAC_1KJHkTaQRzH/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
 
@@ -15185,7 +15185,7 @@ AFNI QUITTs!
 ++ Output dataset ./QC_sub-05/media/__workdir_EAC_94p9x9HQFSA/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__workdir_EAC_94p9x9HQFSA/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__workdir_EAC_94p9x9HQFSA/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -15334,7 +15334,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :870 
 [1] 2527676
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_nPIAiSh9Zoi++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_nPIAiSh9Zoi++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
 
@@ -15438,7 +15438,7 @@ gen_ss_review_scripts.py -exit0 -mot_limit 0.3 -mask_dset full_mask.sub-06+tlrc.
 ++ writing ss review driver:         @ss_review_driver
 ++ writing ss review drive commands: @ss_review_driver_commands
 ++ 3dMedianFilter: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_d0GWh2HPWdO++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_d0GWh2HPWdO++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 rm -f rm.epi.1.r01+tlrc.BRIK rm.epi.1.r01+tlrc.HEAD rm.epi.1.r02+tlrc.BRIK rm.epi.1.r02+tlrc.HEAD rm.epi.all1+orig.BRIK rm.epi.all1+orig.HEAD rm.epi.mean+tlrc.BRIK rm.epi.mean+tlrc.HEAD rm.epi.min.r01+tlrc.BRIK rm.epi.min.r01+tlrc.HEAD rm.epi.min.r02+tlrc.BRIK rm.epi.min.r02+tlrc.HEAD rm.epi.nomask.r01+tlrc.BRIK rm.epi.nomask.r01+tlrc.HEAD rm.epi.nomask.r02+tlrc.BRIK rm.epi.nomask.r02+tlrc.HEAD rm.epi.volreg.r01+orig.BRIK rm.epi.volreg.r01+orig.HEAD rm.epi.volreg.r02+orig.BRIK rm.epi.volreg.r02+orig.HEAD rm.errts.unit+tlrc.BRIK rm.errts.unit+tlrc.HEAD rm.mask_r01+tlrc.BRIK rm.mask_r01+tlrc.HEAD rm.mask_r02+tlrc.BRIK rm.mask_r02+tlrc.HEAD rm.mean_r01+tlrc.BRIK rm.mean_r01+tlrc.HEAD rm.mean_r02+tlrc.BRIK rm.mean_r02+tlrc.HEAD rm.noise.all+tlrc.BRIK rm.noise.all+tlrc.HEAD rm.resam.anat+tlrc.BRIK rm.resam.anat+tlrc.HEAD rm.resam.group+tlrc.BRIK rm.resam.group+tlrc.HEAD rm.signal.all+tlrc.BRIK rm.signal.all+tlrc.HEAD
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
@@ -15707,7 +15707,7 @@ blur estimates (FWHM)     : 0 0 0
 
 
 apqc_make_tcsh.py -review_style pythonic -subj_dir . -uvar_json out.ss_review_uvars.json
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_BCZarmP3ijj++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_BCZarmP3ijj++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -15741,7 +15741,7 @@ tee out.review_html
 *+ Found main dset (template):  /opt/afni-latest/MNI_avg152T1+tlrc
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_IzkT2TbCQja++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_IzkT2TbCQja++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -15943,8 +15943,8 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :960 
 [1] 2534476
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_XX1plqJNbpF++ Writing palette image to QC_sub-06/media/qc_00_vorig_EPI.pbar.jpg
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_UQi3Od52wWL++ Writing palette image to QC_sub-04/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_XX1plqJNbpF++ Writing palette image to QC_sub-06/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_UQi3Od52wWL++ Writing palette image to QC_sub-04/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_00_vorig_EPI.sag.jpg&#39;
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_00_vorig_EPI.cor.jpg&#39;
 ++ Writing one 1816x256 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_00_vorig_EPI.axi.jpg&#39;
@@ -15983,7 +15983,7 @@ AFNI QUITTs!
 ++ Copy refbox (/opt/afni-latest/MNI_avg152T1+tlrc) to workdir
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_Wj0B3kPL4MJ++ Writing palette image to QC_sub-05/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_Wj0B3kPL4MJ++ Writing palette image to QC_sub-05/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Output dataset ./QC_sub-06/media/__workdir_EAC_Y0Ka3q0HjFg/REFBOX.nii
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
@@ -15998,7 +15998,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
 ++ Output dataset ./QC_sub-06/media/__workdir_EAC_Y0Ka3q0HjFg/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__workdir_EAC_Y0Ka3q0HjFg/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__workdir_EAC_Y0Ka3q0HjFg/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -16155,7 +16155,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
  -- trying to start Xvfb :974 
 [1] 2536366
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_zTiucky2kaR++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_zTiucky2kaR++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
 
@@ -16405,7 +16405,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :683 
 [1] 2537884
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_h9Yk75BK8q2++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_h9Yk75BK8q2++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -16429,7 +16429,7 @@ AFNI QUITTs!
 ++ DONE! Image output:
        QC_sub-06/media/qc_02_va2t_anat2temp
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/__tmp_chauf_gI1ZptTLJh7++ Writing palette image to QC_sub-04/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/__tmp_chauf_gI1ZptTLJh7++ Writing palette image to QC_sub-04/media/qc_06_mot_grayplot.pbar.jpg
 ++ Writing one 73x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.sag.jpg&#39;
 ++ Writing one 61x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.cor.jpg&#39;
 ++ Writing one 61x73 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.axi.jpg&#39;
@@ -16493,7 +16493,7 @@ rm: cannot remove &#39;__tmp_img_enorm.jpg&#39;: No such file or directory
   [0%, 120%] -&gt; [0.000000, .893150]
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/__tmp_chauf_ZdFeiohaBMq++ Writing palette image to QC_sub-05/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/__tmp_chauf_ZdFeiohaBMq++ Writing palette image to QC_sub-05/media/qc_06_mot_grayplot.pbar.jpg
 ++ Output dataset ./QC_sub-06/media/__tmp_chauf_1MztDywgtnM/tmp_ulay.nii
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
@@ -16722,7 +16722,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :686 
 [1] 2541013
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_1MztDywgtnM++ Writing palette image to QC_sub-06/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_1MztDywgtnM++ Writing palette image to QC_sub-06/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_03_vstat_Full_Fstat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_03_vstat_Full_Fstat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_03_vstat_Full_Fstat.axi.jpg&#39;
@@ -16756,7 +16756,7 @@ Traceback (most recent call last):
   File &quot;/opt/afni-latest/afnipy/lib_plot_1D.py&quot;, line 39, in &lt;module&gt;
     import matplotlib.pyplot  as plt
 ModuleNotFoundError: No module named &#39;matplotlib&#39;
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_pgFSNQjw4kE++ Writing palette image to QC_sub-04/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_pgFSNQjw4kE++ Writing palette image to QC_sub-04/media/qc_10_regr_corr_errts.pbar.jpg
 ++ 3dGrayplot: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
  + Loading dataset ./errts.sub-06_REML+tlrc.HEAD
  + Number of voxels in mask = 71257
@@ -16777,7 +16777,7 @@ AFNI QUITTs!
 ++ DONE (good exit)
    see: QC_sub-04/media/qc_10_regr_corr_errts*
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_8yUWBGxSwkw++ Writing palette image to QC_sub-05/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_8yUWBGxSwkw++ Writing palette image to QC_sub-05/media/qc_10_regr_corr_errts.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-05/media/qc_10_regr_corr_errts.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-05/media/qc_10_regr_corr_errts.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-05/media/qc_10_regr_corr_errts.axi.jpg&#39;
@@ -16921,7 +16921,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :721 
 [1] 2543226
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_IhiZi0WxBDc++ Writing palette image to QC_sub-04/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/QC_sub-04/media/__tmp_chauf_IhiZi0WxBDc++ Writing palette image to QC_sub-04/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-04/media/qc_11_regr_tsnr_fin.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-04/media/qc_11_regr_tsnr_fin.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-04/media/qc_11_regr_tsnr_fin.axi.jpg&#39;
@@ -16942,7 +16942,7 @@ AFNI QUITTs!
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
 ++ Check for corr matrix warnings in: QC_sub-04/media/qc_12_warns_xmat.dat
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_djtauunDaRv++ Writing palette image to QC_sub-05/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/QC_sub-05/media/__tmp_chauf_djtauunDaRv++ Writing palette image to QC_sub-05/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ Check for censor fraction warnings (general): QC_sub-04/media/qc_13_warns_cen_total.dat
  + 3dGrayplot: Elapsed = 9.0 s
 ++ Check for censor fraction warnings (per stim): QC_sub-04/media/qc_14_warns_cen_stim.dat
@@ -17324,7 +17324,7 @@ touch out.pre_ss_warn.txt
 foreach run ( 01 02 )
 3dToutcount -automask -fraction -polort 2 -legendre pb00.sub-08.r01.tcat+orig
 ++ 3dToutcount: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/__tmp_chauf_ZmGRqORMgSJ++ Writing palette image to QC_sub-06/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/__tmp_chauf_ZmGRqORMgSJ++ Writing palette image to QC_sub-06/media/qc_06_mot_grayplot.pbar.jpg
 ++ Writing one 73x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.sag.jpg&#39;
 ++ Writing one 61x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.cor.jpg&#39;
 ++ Writing one 61x73 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.axi.jpg&#39;
@@ -17539,7 +17539,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
 #++ Removing skull from anat data
 #Script is running (command trimmed):
   3dSkullStrip -orig_vol -input ./__tt_sub-08_T1w+orig -prefix ./__tt_sub-08_T1w_ns
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_uenAWOWmGM6++ Writing palette image to QC_sub-06/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_uenAWOWmGM6++ Writing palette image to QC_sub-06/media/qc_10_regr_corr_errts.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_10_regr_corr_errts.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_10_regr_corr_errts.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_10_regr_corr_errts.axi.jpg&#39;
@@ -17619,7 +17619,7 @@ AFNI QUITTs!
  -- trying to start Xvfb :692 
 [1] 2549070
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_32VAFyruEt7++ Writing palette image to QC_sub-06/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/QC_sub-06/media/__tmp_chauf_32VAFyruEt7++ Writing palette image to QC_sub-06/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_11_regr_tsnr_fin.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_11_regr_tsnr_fin.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-06/media/qc_11_regr_tsnr_fin.axi.jpg&#39;
@@ -17843,10 +17843,10 @@ align_epi_anat.py -anat2epi -anat sub-09_T1w+orig -save_skullstrip -suffix _al_j
   3dSkullStrip -orig_vol -input ./__tt_sub-09_T1w+orig -prefix ./__tt_sub-09_T1w_ns
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-08_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/__tt_sub-08_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/__tt_sub-08_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -17887,7 +17887,7 @@ align_epi_anat.py -anat2epi -anat sub-09_T1w+orig -save_skullstrip -suffix _al_j
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
-#++ Applying threshold of 819.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 819.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/819.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -17904,10 +17904,10 @@ align_epi_anat.py -anat2epi -anat sub-09_T1w+orig -save_skullstrip -suffix _al_j
 ++ Loading datasets into memory
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-07_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/__tt_sub-07_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/__tt_sub-07_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -17947,7 +17947,7 @@ align_epi_anat.py -anat2epi -anat sub-09_T1w+orig -save_skullstrip -suffix _al_j
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
-#++ Applying threshold of 845.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 845.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/845.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -19289,7 +19289,7 @@ align_epi_anat.py -anat2epi -anat sub-09_T1w+orig -save_skullstrip -suffix _al_j
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/__tt_sub-08_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/sub-08_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/__tt_sub-08_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/sub-08_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-08_T1w_ns+orig sub-08_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -19464,7 +19464,7 @@ copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/funct
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/__tt_sub-07_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/sub-07_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/__tt_sub-07_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/sub-07_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-07_T1w_ns+orig sub-07_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -19660,10 +19660,10 @@ foreach run ( 01 02 )
 ++ Creating mask for -maxdisp
 #Script is running (command trimmed):
   3dinfo ./__tt_sub-09_T1w_ns+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/__tt_sub-09_T1w_ns+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/__tt_sub-09_T1w_ns+orig is not oblique
 #Script is running (command trimmed):
   3dinfo ./vr_base_min_outlier+orig | \grep &#39;Data Axes Tilt:&#39;|\grep &#39;Oblique&#39;
-#++ Dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/vr_base_min_outlier+orig is not oblique
+#++ Dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/vr_base_min_outlier+orig is not oblique
 #++ using 0th sub-brick because only one found
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_vr_base_min_outlier_ts ./vr_base_min_outlier+orig&#39;[0]&#39;
@@ -19707,7 +19707,7 @@ foreach run ( 01 02 )
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_vr_base_min_outlier_ts_ns+orig
-#++ Applying threshold of 767.000000 on /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/__tt_vr_base_min_outlier_ts_ns+orig
+#++ Applying threshold of 767.000000 on /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/__tt_vr_base_min_outlier_ts_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_vr_base_min_outlier_ts_ns_wt -a ./__tt_vr_base_min_outlier_ts_ns+orig -expr &#39;min(1,(a/767.000000))&#39;
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -20594,7 +20594,7 @@ volume 0..1..2..3..4..5..6..7..8..9..10..11..12..13..14..15..16..17..18..19..20.
 ++ #   PLEASE check results VISUALLY for alignment quality   #
 ++ ###########################################################
 #++ Creating final output: skullstripped anat data
-copying from dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/__tt_sub-09_T1w_ns+orig to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/sub-09_T1w_ns+orig
+copying from dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/__tt_sub-09_T1w_ns+orig to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/sub-09_T1w_ns+orig
 #Script is running (command trimmed):
   3dcopy ./__tt_sub-09_T1w_ns+orig sub-09_T1w_ns
 ++ 3dcopy: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -23152,7 +23152,7 @@ bc: Command not found.
 ++ 3dAutobox: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Auto bbox: x=8..54  y=2..59  z=0..37
 ++ 3dAutobox: output dataset = QC_sub-07/media/__tmp_chauf_VpA52C1KIKO/ulay_box_0.nii
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_udHP0cMFvlB++ Writing palette image to QC_sub-08/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_udHP0cMFvlB++ Writing palette image to QC_sub-08/media/qc_00_vorig_EPI.pbar.jpg
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-08/media/qc_00_vorig_EPI.sag.jpg&#39;
  + detrending done (0.00 CPU s thus far)
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-08/media/qc_00_vorig_EPI.cor.jpg&#39;
@@ -23204,7 +23204,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
 ++ Output dataset ./QC_sub-08/media/__workdir_EAC_WrvHJCBfgNq/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__workdir_EAC_WrvHJCBfgNq/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__workdir_EAC_WrvHJCBfgNq/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -23314,7 +23314,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :213 
 [1] 2585204
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_VpA52C1KIKO++ Writing palette image to QC_sub-07/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_VpA52C1KIKO++ Writing palette image to QC_sub-07/media/qc_00_vorig_EPI.pbar.jpg
  + ACF done (0.00 CPU s thus far)
 ++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to files_ACF/out.3dFWHMx.ACF.err_reml.r01.1D
 ++ 1dplot: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
@@ -23359,7 +23359,7 @@ if ( 146..291 ==  ) continue
 ++ Output dataset ./QC_sub-07/media/__workdir_EAC_g4DqTV6ZB59/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__workdir_EAC_g4DqTV6ZB59/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__workdir_EAC_g4DqTV6ZB59/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -23458,7 +23458,7 @@ if ( 146..291 ==  ) continue
 ++ Sub-brick 0 scale factor = 314.130402
 ++ Computing output statistics
 ++ Output dataset /tmp/3dcalc_XYZ_-cdJRGF5kb439SoVrFERSQ+tlrc.BRIK
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_NiiqeAPQrDP++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_NiiqeAPQrDP++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
 ++ 503424 voxels in the entire dataset (no mask)
@@ -23607,7 +23607,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :687 
 [1] 2586939
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_nWauLhOaCgW++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_nWauLhOaCgW++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
 
@@ -23800,7 +23800,7 @@ average outlier frac (TR) : 0.000870959
  -- trying to start Xvfb :671 
 [1] 2588414
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_hhY4oNB9Acw++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_hhY4oNB9Acw++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
@@ -23922,7 +23922,7 @@ TSNR average              : 133.674
 global correlation (GCOR) : 0.037331
 anat/EPI mask Dice coef   : 0.924751
 anat/templ mask Dice coef : 0.957488
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_YKe19jcmBi7++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_YKe19jcmBi7++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -24058,7 +24058,7 @@ bc: Command not found.
 
  -- trying to start Xvfb :300 
 [1] 2592839
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_uemz0o9w0xw++ Writing palette image to QC_sub-08/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_uemz0o9w0xw++ Writing palette image to QC_sub-08/media/qc_03_vstat_Full_Fstat.pbar.jpg
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
 ++ 3dmaskdump: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Executing 3dcalc()
@@ -24118,7 +24118,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
 ++ 3dGrayplot: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
  + Loading dataset ./errts.sub-08_REML+tlrc.HEAD
  + Number of voxels in mask = 68948
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_ssFqqJuqKz0++ Writing palette image to QC_sub-07/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_ssFqqJuqKz0++ Writing palette image to QC_sub-07/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-07/media/qc_03_vstat_Full_Fstat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-07/media/qc_03_vstat_Full_Fstat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-07/media/qc_03_vstat_Full_Fstat.axi.jpg&#39;
@@ -24136,7 +24136,7 @@ AFNI QUITTs!
 ++ DONE (good exit)
    see: QC_sub-07/media/qc_03_vstat_Full_Fstat*
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_GABbbCwHnBZ++ Writing palette image to QC_sub-09/media/qc_00_vorig_EPI.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_GABbbCwHnBZ++ Writing palette image to QC_sub-09/media/qc_00_vorig_EPI.pbar.jpg
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_00_vorig_EPI.sag.jpg&#39;
 ++ Writing one 1816x212 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_00_vorig_EPI.cor.jpg&#39;
 ++ Writing one 1816x256 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_00_vorig_EPI.axi.jpg&#39;
@@ -24179,7 +24179,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
 ++ Output dataset ./QC_sub-09/media/__workdir_EAC_jPRgefnngt1/eac_0_cp.nii
 ++ 3dAllineate: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark the Registrator
-++ Source dataset: /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__workdir_EAC_jPRgefnngt1/eac_0_cp.nii
+++ Source dataset: /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__workdir_EAC_jPRgefnngt1/eac_0_cp.nii
 ++ Base dataset:   (not given)
 ++ Loading datasets into memory
  +        -cmass x y z shifts =    0.000    0.000    0.000
@@ -24349,7 +24349,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :539 
 [1] 2595251
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_D1cscnsnCsG++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_D1cscnsnCsG++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_01_ve2a_epi2anat.axi.jpg&#39;
 
@@ -24516,7 +24516,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
 ++ (initial) Slice spacing ordered (x,y,z) is:  61 73 61
 ++ 3dAutomask: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Emperor Zhark
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/__tmp_chauf_OGxKFoEaK9U++ Writing palette image to QC_sub-08/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/__tmp_chauf_OGxKFoEaK9U++ Writing palette image to QC_sub-08/media/qc_06_mot_grayplot.pbar.jpg
 ++ 3dAutobox: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Auto bbox: x=0..60  y=0..72  z=0..60
 ++ THD_zeropad: all pad values are zero - just copying dataset
@@ -24659,7 +24659,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
  -- trying to start Xvfb :19 
 [1] 2597522
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_vV8GwxB8wHE++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_vV8GwxB8wHE++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ../qc_02_va2t_anat2temp.axi.jpg&#39;
 
@@ -24683,7 +24683,7 @@ AFNI QUITTs!
 ++ DONE! Image output:
        QC_sub-09/media/qc_02_va2t_anat2temp
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/__tmp_chauf_Z3PFzut2JZT++ Writing palette image to QC_sub-07/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/__tmp_chauf_Z3PFzut2JZT++ Writing palette image to QC_sub-07/media/qc_06_mot_grayplot.pbar.jpg
 ++ Writing one 73x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.sag.jpg&#39;
 ++ Writing one 61x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.cor.jpg&#39;
 ++ Writing one 61x73 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.axi.jpg&#39;
@@ -24827,7 +24827,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
   [0%, 120%] -&gt; [0.000000, .893150]
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_mfXuAXlgZ94++ Writing palette image to QC_sub-08/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_mfXuAXlgZ94++ Writing palette image to QC_sub-08/media/qc_10_regr_corr_errts.pbar.jpg
 ++ Output dataset ./QC_sub-07/media/__tmp_chauf_hQgFMVwfj18/tmp_ulay.nii
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
@@ -24940,7 +24940,7 @@ _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
  -- trying to start Xvfb :630 
 [1] 2600366
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_P6LO3ZKyUFu++ Writing palette image to QC_sub-09/media/qc_03_vstat_Full_Fstat.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_P6LO3ZKyUFu++ Writing palette image to QC_sub-09/media/qc_03_vstat_Full_Fstat.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_03_vstat_Full_Fstat.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_03_vstat_Full_Fstat.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_03_vstat_Full_Fstat.axi.jpg&#39;
@@ -24958,7 +24958,7 @@ AFNI QUITTs!
 ++ DONE (good exit)
    see: QC_sub-09/media/qc_03_vstat_Full_Fstat*
 
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_hQgFMVwfj18++ Writing palette image to QC_sub-07/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_hQgFMVwfj18++ Writing palette image to QC_sub-07/media/qc_10_regr_corr_errts.pbar.jpg
 /opt/afni-latest/afnipy/lib_afni1D.py:1302: SyntaxWarning: &#39;str&#39; object is not callable; perhaps you missed a comma?
   print(&#39;** uncensor from vec: nt = %d, but nocen len = %d&#39; \
 Traceback (most recent call last):
@@ -25026,7 +25026,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
   [0%, 120%] -&gt; [0.000000, .893150]
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_HEPIM8HSmR7++ Writing palette image to QC_sub-08/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/QC_sub-08/media/__tmp_chauf_HEPIM8HSmR7++ Writing palette image to QC_sub-08/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ Output dataset ./QC_sub-07/media/__tmp_chauf_DjNaCwK97Bb/tmp_ulay.nii
 ++ 3dcalc: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: A cast of thousands
@@ -25172,7 +25172,7 @@ cd ..
 echo execution finished: `date`
 date
 execution finished: Tue Nov  4 05:19:33 UTC 2025
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_DjNaCwK97Bb++ Writing palette image to QC_sub-07/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/QC_sub-07/media/__tmp_chauf_DjNaCwK97Bb++ Writing palette image to QC_sub-07/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-07/media/qc_11_regr_tsnr_fin.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-07/media/qc_11_regr_tsnr_fin.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-07/media/qc_11_regr_tsnr_fin.axi.jpg&#39;
@@ -25342,7 +25342,7 @@ execution finished: Tue Nov  4 05:19:38 UTC 2025
  -- trying to start Xvfb :186 
 [1] 2603502
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/__tmp_chauf_Er2GePzVUhS++ Writing palette image to QC_sub-09/media/qc_06_mot_grayplot.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/__tmp_chauf_Er2GePzVUhS++ Writing palette image to QC_sub-09/media/qc_06_mot_grayplot.pbar.jpg
 ++ Writing one 73x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.sag.jpg&#39;
 ++ Writing one 61x61 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.cor.jpg&#39;
 ++ Writing one 61x73 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; ./__tmp_ZXCV_img.axi.jpg&#39;
@@ -25459,7 +25459,7 @@ ModuleNotFoundError: No module named &#39;matplotlib&#39;
  -- trying to start Xvfb :653 
 [1] 2604618
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_de0e1OAF3KW++ Writing palette image to QC_sub-09/media/qc_10_regr_corr_errts.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_de0e1OAF3KW++ Writing palette image to QC_sub-09/media/qc_10_regr_corr_errts.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_10_regr_corr_errts.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_10_regr_corr_errts.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_10_regr_corr_errts.axi.jpg&#39;
@@ -25540,7 +25540,7 @@ AFNI QUITTs!
  -- trying to start Xvfb :601 
 [1] 2605450
 _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-+/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_piIaUSSkwId++ Writing palette image to QC_sub-09/media/qc_11_regr_tsnr_fin.pbar.jpg
++/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/QC_sub-09/media/__tmp_chauf_piIaUSSkwId++ Writing palette image to QC_sub-09/media/qc_11_regr_tsnr_fin.pbar.jpg
 ++ Writing one 1538x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_11_regr_tsnr_fin.sag.jpg&#39;
 ++ Writing one 1286x182 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_11_regr_tsnr_fin.cor.jpg&#39;
 ++ Writing one 1286x218 image to filter &#39;/opt/afni-latest/cjpeg -quality 95 &gt; QC_sub-09/media/qc_11_regr_tsnr_fin.axi.jpg&#39;
@@ -25843,7 +25843,7 @@ Number of values stored at each pixel = 13
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running 3dttest++...
 
 
-Command: 3dttest++ -prefix /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest -mask /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_mask+tlrc -setA Inc-Con sub-01 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01+tlrc[7] sub-02 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02+tlrc[7] sub-03 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03+tlrc[7] sub-04 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04+tlrc[7] sub-05 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05+tlrc[7] sub-06 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06+tlrc[7] sub-07 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07+tlrc[7] sub-08 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08+tlrc[7] sub-09 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09+tlrc[7]
+Command: 3dttest++ -prefix /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest -mask /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_mask+tlrc -setA Inc-Con sub-01 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01+tlrc[7] sub-02 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02+tlrc[7] sub-03 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03+tlrc[7] sub-04 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04+tlrc[7] sub-05 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05+tlrc[7] sub-06 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06+tlrc[7] sub-07 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07+tlrc[7] sub-08 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08+tlrc[7] sub-09 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09+tlrc[7]
 
 ++ 3dttest++: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 ++ Authored by: Zhark++
@@ -25856,7 +25856,7 @@ Command: 3dttest++ -prefix /home/jovyan/Git_repositories/example-notebooks/books
 ++ Creating FDR curves in output dataset
 *+ WARNING: Smallest FDR q [1 Inc-Con_Tstat] = 0.241757 ==&gt; few true single voxel detections
  + Added 1 FDR curve to dataset
-++ Output dataset /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest+tlrc.BRIK
+++ Output dataset /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest+tlrc.BRIK
 ++ ----- 3dttest++ says so long, farewell, and happy trails to you :) -----
 </pre></div>
 </div>
@@ -25931,7 +25931,7 @@ Command: 3dttest++ -prefix /home/jovyan/Git_repositories/example-notebooks/books
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running 3dMEMA...
 
-Command: 3dMEMA -prefix /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_results/Flanker_Inc-Con_MEMA -mask /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_mask+tlrc -set IncCon sub-01 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01_REML+tlrc[8] sub-02 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02_REML+tlrc[8] sub-03 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03_REML+tlrc[8] sub-04 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04_REML+tlrc[8] sub-05 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05_REML+tlrc[8] sub-06 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06_REML+tlrc[8] sub-07 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07_REML+tlrc[8] sub-08 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08_REML+tlrc[8] sub-09 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09_REML+tlrc[7] /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09_REML+tlrc[8] 
+Command: 3dMEMA -prefix /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_results/Flanker_Inc-Con_MEMA -mask /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_mask+tlrc -set IncCon sub-01 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01_REML+tlrc[8] sub-02 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02_REML+tlrc[8] sub-03 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03_REML+tlrc[8] sub-04 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04_REML+tlrc[8] sub-05 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05_REML+tlrc[8] sub-06 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06_REML+tlrc[8] sub-07 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07_REML+tlrc[8] sub-08 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08_REML+tlrc[8] sub-09 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09_REML+tlrc[7] /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09_REML+tlrc[8] 
 
 [1] &quot;-----------------&quot;
 [1] &quot;Totally 61 slices in the volume data.&quot;
@@ -26065,7 +26065,7 @@ This approach is intended for <strong>exploratory visualization only</strong> an
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>++ 3dinfo: AFNI version=AFNI_21.2.00 (Jul  8 2021) [64-bit]
 
-Dataset File:    /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest.nii.gz
+Dataset File:    /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest.nii.gz
 Identifier Code: XYZ_e6jy6nwqCv_6fUYGSp5k8w  Creation Date: Tue Nov  4 05:21:10 2025
 Template Space:  MNI
 Dataset Type:    Anat Bucket (-abuc)
@@ -26087,7 +26087,7 @@ Number of values stored at each pixel = 2
      statcode = fitt;  statpar = 8
 
 ----- HISTORY -----
-[jovyan@jupyter-monidoerig: Tue Nov  4 05:20:07 2025] {AFNI_21.2.00:linux_openmp_64} 3dttest++ -prefix /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest -mask /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/group_mask+tlrc -setA Inc-Con sub-01 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01+tlrc[7]&#39; sub-02 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02+tlrc[7]&#39; sub-03 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03+tlrc[7]&#39; sub-04 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04+tlrc[7]&#39; sub-05 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05+tlrc[7]&#39; sub-06 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06+tlrc[7]&#39; sub-07 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07+tlrc[7]&#39; sub-08 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08+tlrc[7]&#39; sub-09 &#39;/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09+tlrc[7]&#39;
+[jovyan@jupyter-monidoerig: Tue Nov  4 05:20:07 2025] {AFNI_21.2.00:linux_openmp_64} 3dttest++ -prefix /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_results/Flanker-Inc-Con_ttest -mask /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/group_mask+tlrc -setA Inc-Con sub-01 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-01.results/stats.sub-01+tlrc[7]&#39; sub-02 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-02.results/stats.sub-02+tlrc[7]&#39; sub-03 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-03.results/stats.sub-03+tlrc[7]&#39; sub-04 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-04.results/stats.sub-04+tlrc[7]&#39; sub-05 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-05.results/stats.sub-05+tlrc[7]&#39; sub-06 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-06.results/stats.sub-06+tlrc[7]&#39; sub-07 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-07.results/stats.sub-07+tlrc[7]&#39; sub-08 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-08.results/stats.sub-08+tlrc[7]&#39; sub-09 &#39;/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/afni_pro_glm/sub-09.results/stats.sub-09+tlrc[7]&#39;
 [jovyan@jupyter-monidoerig: Tue Nov  4 05:21:10 2025] {AFNI_21.2.00:linux_openmp_64} 3dcopy ./afni_pro_glm/group_results/Flanker-Inc-Con_ttest+tlrc ./afni_pro_glm/group_results/Flanker-Inc-Con_ttest.nii.gz
 </pre></div>
 </div>

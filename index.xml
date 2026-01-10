@@ -1418,7 +1418,8 @@ docker&lt;/p>
 
 &lt;div class="highlight">
  &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>Replace &lt;code>julia_1.6.1&lt;/code> with your selected application. You can find the available containers here: &lt;a href="https://neurodesk.org/applications/" target="_blank" rel="noopener">https://neurodesk.org/applications/&lt;/a>&lt;/p></description></item><item><title>Google Colab</title><link>https://neurodesk.org/getting-started/hosted/googlecolab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/googlecolab/</guid><description>&lt;p>Open a notebook in Google Colab and run the following commands to set up the Neurodesk environment:&lt;/p>
+&lt;/div>&lt;p>Replace &lt;code>julia_1.6.1&lt;/code> with your selected application. You can find the available containers here: &lt;a href="https://neurodesk.org/applications/" target="_blank" rel="noopener">https://neurodesk.org/applications/&lt;/a>&lt;/p></description></item><item><title>Google Colab and Cloud Shell</title><link>https://neurodesk.org/getting-started/hosted/googlecolab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/googlecolab/</guid><description>&lt;h2 id="colab">Colab&lt;/h2>
+&lt;p>Open a notebook in Google Colab and run the following commands to set up the Neurodesk environment:&lt;/p>
 
 
 

@@ -27,7 +27,7 @@ A brief guide to using fmriprep with Neurodesk.
 <!-- -->
 
 > _An example notebook can be found here:_
-> https://github.com/neurodesk/example-notebooks/blob/main/books/functional_imaging/fmriprep.ipynb
+> https://github.com/neurodesk/neurodeskedu/blob/main/books/functional_imaging/fmriprep.ipynb
 >
 ---
 

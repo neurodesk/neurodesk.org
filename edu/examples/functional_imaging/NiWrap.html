@@ -236,7 +236,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 
@@ -762,7 +762,7 @@ echo &quot;Datalad download complete for ds004496.&quot;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>install(ok): /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496 (dataset)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>install(ok): /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004496 (dataset)
 Downloading Ciftify derivative files for sub-01 from ds004496...
 get(ok): derivatives/ciftify/sub-01/results/ses-floc_task-floc/ses-floc_task-floc_beta.dscalar.nii (file)
 get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.ArealDistortion_FS.32k_fs_LR.dscalar.nii (file)
@@ -791,14 +791,14 @@ action summary:
 Datalad download complete for ds004496.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO] Attempting a clone into /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496 
-[INFO] Attempting to clone from https://github.com/OpenNeuroDatasets/ds004496.git to /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO] Attempting a clone into /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004496 
+[INFO] Attempting to clone from https://github.com/OpenNeuroDatasets/ds004496.git to /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004496 
 [INFO] Start enumerating objects 
 [INFO] Start counting objects 
 [INFO] Start compressing objects 
 [INFO] Start receiving objects 
 [INFO] Start resolving deltas 
-[INFO] Completed clone attempts for Dataset(/home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496) 
+[INFO] Completed clone attempts for Dataset(/home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004496) 
 [INFO] scanning for unlocked files (this may take some time) 
 [INFO] Remote origin not usable by git-annex; setting annex-ignore
 </pre></div>
@@ -970,7 +970,7 @@ Object - others
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-math &#39;x * (x &gt; 1.081139940023422)&#39; /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -var x /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face.dscalar.nii
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-math &#39;x * (x &gt; 1.081139940023422)&#39; /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -var x /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/beta_face.dscalar.nii
 [I] parsed &#39;x * (x &gt; 1.081139940023422)&#39; as &#39;x * (x &gt; 1.08113994002342)&#39;
 [I] Executed cifti-math in 0:00:00.251962
 </pre></div>
@@ -1003,7 +1003,7 @@ Object - others
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii
 [I] Executed cifti-separate in 0:00:00.192519
 </pre></div>
 </div>
@@ -1035,7 +1035,7 @@ Object - others
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01.L.sulc.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01.R.sulc.func.gii
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01.L.sulc.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01.R.sulc.func.gii
 [I] Executed cifti-separate in 0:00:00.195140
 </pre></div>
 </div>
@@ -1456,7 +1456,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-stats /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -reduce COUNT_NONZERO -show-map-name
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-stats /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -reduce COUNT_NONZERO -show-map-name
 [I] 1:	Face - others:	2971
 [I] Executed cifti-stats in 0:00:00.186400
 </pre></div>
@@ -1492,9 +1492,9 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii 2.0 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_smooth.L.func.gii
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii 2.0 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01_thresh_smooth.L.func.gii
 [I] Executed metric-smoothing in 0:00:00.415578
-[D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii 2.0 /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_thresh_smooth.R.func.gii
+[D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii 2.0 /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01_thresh_smooth.R.func.gii
 [I] Executed metric-smoothing in 0:00:00.438166
 </pre></div>
 </div>
@@ -1549,7 +1549,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-parcellate /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii COLUMN /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/sub-01_parcellated.pscalar.nii
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-parcellate /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii COLUMN /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/sub-01_parcellated.pscalar.nii
 [I] Executed cifti-parcellate in 0:00:00.254114
 </pre></div>
 </div>
@@ -1566,7 +1566,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-label-export-table /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii parcels /home/jovyan/Git_repositories/example-notebooks/books/functional_imaging/niwrap_results/schaefer_labels.txt
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-label-export-table /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii parcels /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/niwrap_results/schaefer_labels.txt
 [I] Executed cifti-label-export-table in 0:00:00.181663
 </pre></div>
 </div>

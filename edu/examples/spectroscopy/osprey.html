@@ -236,7 +236,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 
@@ -972,7 +972,7 @@ Setting up environment variables
 ---
 LD_LIBRARY_PATH is .:/opt/MCR/R2023a//runtime/glnxa64:/opt/MCR/R2023a//bin/glnxa64:/opt/MCR/R2023a//sys/os/glnxa64:/opt/MCR/R2023a//sys/opengl/lib/glnxa64
 Spectral fitting parameters will not be saved (default). Please indicate otherwise in the csv-file or the GUI 
-/home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-job.json
+/home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-job.json
 Timestamp October 30, 2025 00:07:41 Osprey 2.9.0
 Timestamp October 30, 2025 00:07:41 Osprey 2.9.0  OspreyLoad
 Loading raw data from dataset   1 out of   1 total datasets...
@@ -1008,8 +1008,8 @@ Processing data from dataset   1 out of   1 total datasets...
 
 ... done.
  Elapsed time 57.194783 seconds
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QM_processed_spectra.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QM_processed_spectra.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QM_processed_spectra.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QM_processed_spectra.json
 Timestamp October 30, 2025 00:08:56 Osprey 2.9.0  OspreyFit
 Fitting metabolite spectra from dataset   1 out of   1 total datasets...
 
@@ -1018,8 +1018,8 @@ Fitting metabolite spectra from dataset   1 out of   1 total datasets...
 
 ... done.
  Elapsed time 4.912133 seconds
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QM_processed_spectra.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QM_processed_spectra.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QM_processed_spectra.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QM_processed_spectra.json
 Timestamp October 30, 2025 00:09:07 Osprey 2.9.0  OspreyCoreg
 Coregistering voxel from dataset   1 out of   1 total datasets...
 
@@ -1037,7 +1037,7 @@ Segmenting structural image from dataset   1 out of   1 total datasets...
 
 SPM12: spm_preproc_run (v7670)                     00:09:22 - 30/10/2025
 ========================================================================
-Segment /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/data_osprey/sub-002/ses-01/anat/sub-002_ses-01_acq-MP2RAGE_desc-defaced_T1w.nii,1
+Segment /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/data_osprey/sub-002/ses-01/anat/sub-002_ses-01_acq-MP2RAGE_desc-defaced_T1w.nii,1
 Completed                               :          00:12:55 - 30/10/2025
 30-Oct-2025 00:12:55 - Done    &#39;Segment&#39;
 30-Oct-2025 00:12:55 - Done
@@ -1060,39 +1060,39 @@ Completed                               :          00:12:55 - 30/10/2025
 
 SPM12: spm_imcalc (v6961)                          00:13:14 - 30/10/2025
 ========================================================================
-ImCalc Image: /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/VoxelMasks/MID00103_FID130220_svs_slaser_dkd_ul_space-spm152_mask_VoxelOverlap.nii
+ImCalc Image: /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/VoxelMasks/MID00103_FID130220_svs_slaser_dkd_ul_space-spm152_mask_VoxelOverlap.nii
 30-Oct-2025 00:13:15 - Done    &#39;Image Calculator&#39;
 30-Oct-2025 00:13:15 - Done
 
 
 ... done.
  Elapsed time 234.532095 seconds
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/SegMaps/TissueFractions_Voxel_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/SegMaps/TissueFractions_Voxel_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/SegMaps/TissueFractions_Voxel_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/SegMaps/TissueFractions_Voxel_1.json
 Timestamp October 30, 2025 00:13:16 Osprey 2.9.0  OspreyQuantify
 
 Quantifying dataset   1 out of   1 total datasets...
 
 ... done.
  Elapsed time 0.064912 seconds
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_amplMets_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_amplMets_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_tCr_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_tCr_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_rawWaterScaled_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_rawWaterScaled_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_CSFWaterScaled_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_CSFWaterScaled_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_TissCorrWaterScaled_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_TissCorrWaterScaled_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaled_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaled_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaledGroupNormed_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaledGroupNormed_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_CRLB_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_CRLB_Voxel_1_Basis_1.json
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_h2oarea_Voxel_1_Basis_1.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/QuantifyResults/A_h2oarea_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_amplMets_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_amplMets_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_tCr_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_tCr_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_rawWaterScaled_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_rawWaterScaled_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_CSFWaterScaled_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_CSFWaterScaled_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_TissCorrWaterScaled_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_TissCorrWaterScaled_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaled_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaled_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaledGroupNormed_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_AlphaCorrWaterScaledGroupNormed_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_CRLB_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_CRLB_Voxel_1_Basis_1.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_h2oarea_Voxel_1_Basis_1.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/QuantifyResults/A_h2oarea_Voxel_1_Basis_1.json
 Timestamp October 30, 2025 00:13:18 Osprey 2.9.0  OspreyOverview
 
 Gathering spectra from subspectrum 1 out of 2 total subspectra..Gathering spectra from subspectrum 1 out of 2 total subspectra..Gathering spectra from subspectrum 2 out of 2 total subspectra...
@@ -1104,8 +1104,8 @@ Interpolating fit models from fit 1 out of 1 total fits.Interpolating fit models
 
 Scaling data from dataset 1 out of 1 total datasets.Scaling data from dataset 1 out of 1 total datasets.Scaling data from dataset 1 out of 1 total datasets...
 ... done.
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/subject_names_and_excluded.tsv
-Writing table to file = /home/jovyan/Git_repositories/example-notebooks/books/spectroscopy/osprey-output/subject_names_and_excluded.json
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/subject_names_and_excluded.tsv
+Writing table to file = /home/jovyan/Git_repositories/neurodeskedu/books/spectroscopy/osprey-output/subject_names_and_excluded.json
 ... done.
  Elapsed time 0.289561 seconds
 Runtime Breakdown................

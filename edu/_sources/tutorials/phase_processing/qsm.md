@@ -23,7 +23,7 @@ Example workflow for Quantitative Susceptibility Mapping (QSM)
 <!-- -->
 
 > _An example notebook can be found here:_
-> https://neurodesk.org/example-notebooks/structural_imaging/qsmxt_example.html
+> https://neurodesk.org/edu/examples/template.html
 >
 
 Please see the above example notebook which provides a detailed QSM tutorial using QSMxT.

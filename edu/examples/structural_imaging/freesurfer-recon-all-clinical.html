@@ -236,7 +236,7 @@
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Structural Imaging</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">FreeSurfer: recon-all-clinical</a></li>
 
@@ -974,14 +974,14 @@ INPUT_SCAN=./data/structural/mp2rage.nii.gz
 #--------------------------------------------
 #@# recon-all-clinical Thu Oct 30 10:07:59 PM UTC 2025
  
-mri_convert ./data/structural/mp2rage.nii.gz /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/native.mgz 
+mri_convert ./data/structural/mp2rage.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/native.mgz 
 INFO: using NIfTI-1 sform (sform_code=1)
 reading from ./data/structural/mp2rage.nii.gz...
 TR=4310.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (0.999815, -0.0191912, -0.00103917)
 j_ras = (0.019201, 0.999761, 0.0104718)
 k_ras = (0.000837961, -0.0104898, 0.999945)
-writing to /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/native.mgz...
+writing to /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/native.mgz...
  
 SynthSeg-robust 2.0
 using CPU, hiding all CUDA_VISIBLE_DEVICES
@@ -990,9 +990,9 @@ addctab  True
 predicting 1/1
 1/1 [==============================] - 284s 284s/step
 
-segmentation  saved in:    /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/synthseg.mgz
-volumes saved in:          /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/stats/synthseg.vol.csv
-QC scores saved in:        /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/stats/synthseg.qc.csv
+segmentation  saved in:    /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/synthseg.mgz
+volumes saved in:          /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/stats/synthseg.vol.csv
+QC scores saved in:        /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/stats/synthseg.qc.csv
 
 #@# mri_synthseg vmpeak  53443556
 
@@ -1015,7 +1015,7 @@ Prediction without flipping
 Prediction with flipping
 1/1 [==============================] - 41s 41s/step
 
-prediction  saved in: /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/synthSR.raw.mgz
+prediction  saved in: /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/synthSR.raw.mgz
 
 If you use this tool in a publication, please cite:
 
@@ -1118,8 +1118,8 @@ will read norm from ./synthSR.norm.mgz
 will read input aseg from ./aseg.auto_noCCseg.mgz
 writing aseg with cc labels to aseg.presurf.mgz
 will write lta as ./transforms/cc_up.lta
-reading aseg from /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/./aseg.auto_noCCseg.mgz
-reading norm from /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/./synthSR.norm.mgz
+reading aseg from /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/./aseg.auto_noCCseg.mgz
+reading norm from /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/./synthSR.norm.mgz
 195958 voxels in left wm, 50361 in right wm, xrange [72, 97]
 searching rotation angles z=[-5  9], y=[-8  6]
 searching scale 1 Z rot 8.5  global minimum found at slice 76.0, rotations (-0.83, 1.72)
@@ -1141,7 +1141,7 @@ eigenvectors:
 -0.08493  -0.99638  -0.00478;
  0.99639  -0.08492  -0.00081;
 error in mid anterior detected - correcting...
-writing aseg with callosum to /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/aseg.presurf.mgz...
+writing aseg with callosum to /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri/aseg.presurf.mgz...
 corpus callosum segmentation took 1.1 minutes
 #VMPC# mri_cc VmPeak  246464
 mri_cc done
@@ -1753,7 +1753,7 @@ segmenting defects...
 analyzing neighboring defects...
 12 defects to be corrected 
 0 vertices coincident
-reading input surface /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/lh.qsphere.nofix...
+reading input surface /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/lh.qsphere.nofix...
 reading brain volume from brain...
 reading wm segmentation from wm...
 Reading original properties of orig.nofix
@@ -1801,7 +1801,7 @@ tessellation finished, orienting corrected surface...
 building final representation...
 350 vertices and 0 faces have been removed from triangulation
 after topology correction, eno=2 (nv=114214, nf=228424, ne=342636, g=0)
-writing corrected surface to /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/lh.orig.premesh...
+writing corrected surface to /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/lh.orig.premesh...
 
 0.000 % of the vertices (0 vertices) exhibit an orientation change
 removing intersecting faces
@@ -1853,7 +1853,7 @@ segmenting defects...
 analyzing neighboring defects...
 12 defects to be corrected 
 0 vertices coincident
-reading input surface /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/rh.qsphere.nofix...
+reading input surface /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/rh.qsphere.nofix...
 reading brain volume from brain...
 reading wm segmentation from wm...
 Reading original properties of orig.nofix
@@ -1901,7 +1901,7 @@ tessellation finished, orienting corrected surface...
 building final representation...
 967 vertices and 0 faces have been removed from triangulation
 after topology correction, eno=2 (nv=112665, nf=225326, ne=337989, g=0)
-writing corrected surface to /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/rh.orig.premesh...
+writing corrected surface to /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/surf/rh.orig.premesh...
 
 0.000 % of the vertices (0 vertices) exhibit an orientation change
 removing intersecting faces
@@ -1957,8 +1957,8 @@ Found 0 intersections
 writing corrected surface to ./rh.orig
 8.0.0-beta
 
-cd /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
-setenv SUBJECTS_DIR /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical
+cd /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical
 mris_autodet_gwstats --o ../surf/autodet.gw.stats.lh.dat --i brain.mgz --wm wm.mgz --surf ../surf/lh.orig.premesh 
 
 border white:    208355 voxels (2.70%)
@@ -2002,8 +2002,8 @@ When placing the pial surface
 mris_autodet_gwstats done
 8.0.0-beta
 
-cd /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
-setenv SUBJECTS_DIR /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical
+cd /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical
 mris_autodet_gwstats --o ../surf/autodet.gw.stats.rh.dat --i brain.mgz --wm wm.mgz --surf ../surf/rh.orig.premesh 
 
 border white:    208355 voxels (2.70%)
@@ -2048,8 +2048,8 @@ mris_autodet_gwstats done
 8.0.0-beta
 8.0.0-beta
 
-cd /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
-setenv SUBJECTS_DIR /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical
+cd /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical
 mris_place_surface --adgws-in ../surf/autodet.gw.stats.lh.dat --wm wm.mgz --threads 2 --invol brain.mgz --lh --i ../surf/lh.orig --o ../surf/lh.white.preaparc --white --seg aseg.presurf.mgz --nsmooth 5 
 
 Reading in input surface ../surf/lh.orig
@@ -2419,8 +2419,8 @@ mris_place_surface done
 8.0.0-beta
 8.0.0-beta
 
-cd /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
-setenv SUBJECTS_DIR /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical
+cd /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical
 mris_place_surface --adgws-in ../surf/autodet.gw.stats.rh.dat --wm wm.mgz --threads 2 --invol brain.mgz --rh --i ../surf/rh.orig --o ../surf/rh.white.preaparc --white --seg aseg.presurf.mgz --nsmooth 5 
 
 Reading in input surface ../surf/rh.orig
@@ -2795,8 +2795,8 @@ mris_place_surface done
 8.0.0-beta
 8.0.0-beta
 
-cd /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
-setenv SUBJECTS_DIR /home/jovyan/Git_repositories/example-notebooks/books/structural_imaging/data/structural/recon-all-clinical
+cd /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical/TestSubject/mri
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/structural_imaging/data/structural/recon-all-clinical
 mris_place_surface --adgws-in ../surf/autodet.gw.stats.rh.dat --wm wm.mgz --threads 2 --invol brain.mgz --rh --i ../surf/rh.orig --o ../surf/rh.white.preaparc --white --seg aseg.presurf.mgz --nsmooth 5 
 
 Reading in input surface ../surf/rh.orig

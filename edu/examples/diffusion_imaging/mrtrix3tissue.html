@@ -238,7 +238,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro - Clinical Normalization toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 
@@ -725,7 +725,7 @@ Receiving:  60%|████████████▌        | 13.5k/22.6k [00
 Resolving:   0%|                              | 0.00/5.65k [00:00&lt;?, ? Deltas/s]
 [INFO   ] scanning for unlocked files (this may take some time)                 
 [INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
-<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/ds002080 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/ds002080 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
 Total:   0%|                                   | 0.00/97.7M [00:00&lt;?, ? Bytes/s]
 Get sub-CON0 .. p_T1w.nii.gz:   0%|            | 0.00/8.06M [00:00&lt;?, ? Bytes/s]
 Get sub-CON0 .. p_T1w.nii.gz:   0%|    | 33.3k/8.06M [00:00&lt;00:26, 307k Bytes/s]
@@ -948,10 +948,10 @@ mrcat: [100%] concatenating &quot;mean_b0_PA.mif&quot;?7h?7l
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dwifslpreproc: 
 dwifslpreproc: <span class=" -Color -Color-Green">Note that this script makes use of commands / algorithms that have relevant articles for citation; INCLUDING FROM EXTERNAL SOFTWARE PACKAGES. Please consult the help page (-help option) for more information.</span>
 dwifslpreproc: 
-dwifslpreproc: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/</span>
-<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi_denoised_unringed.mif /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/dwi.mif -json_export /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/dwi.json
-<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/b0_pair.mif /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/se_epi.mif
-dwifslpreproc: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/)</span>
+dwifslpreproc: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/</span>
+<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi_denoised_unringed.mif /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/dwi.mif -json_export /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/dwi.json
+<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/b0_pair.mif /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/se_epi.mif
+dwifslpreproc: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/)</span>
 dwifslpreproc: <span class=" -Color -Color-Green">Total readout time not provided at command-line; assuming sane default of 0.1</span>
 <span class=" -Color -Color-Cyan">Command:</span>  mrinfo dwi.mif -export_grad_mrtrix grad.b
 <span class=" -Color -Color-Cyan">Command:</span>  mrconvert se_epi.mif topup_in.nii -import_pe_table se_epi_manual_pe_scheme.txt -strides -1,+2,+3,+4 -export_pe_table topup_datain.txt
@@ -966,9 +966,9 @@ dwifslpreproc: <span class=" -Color -Color-Green">Total readout time not provide
 dwifslpreproc: <span class=" -Color -Color-Green">CUDA version of &#39;eddy&#39; was not successful; attempting OpenMP version</span>
 <span class=" -Color -Color-Cyan">Command:</span>  eddy_openmp --imain=eddy_in.nii --mask=eddy_mask.nii --acqp=eddy_config.txt --index=eddy_indices.txt --bvecs=bvecs --bvals=bvals --topup=field --slm=linear --data_is_shelled --out=dwi_post_eddy --verbose
 <span class=" -Color -Color-Cyan">Command:</span>  mrconvert dwi_post_eddy.nii.gz result.mif -strides -1,2,3,4 -fslgrad dwi_post_eddy.eddy_rotated_bvecs bvals
-<span class=" -Color -Color-Cyan">Command:</span>  mrconvert result.mif /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi_denoised_unringed_preproc.mif
-dwifslpreproc: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging)</span>
-dwifslpreproc: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/)</span>
+<span class=" -Color -Color-Cyan">Command:</span>  mrconvert result.mif /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi_denoised_unringed_preproc.mif
+dwifslpreproc: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging)</span>
+dwifslpreproc: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwifslpreproc-tmp-OMRCOI/)</span>
 </pre></div>
 </div>
 </div>
@@ -986,9 +986,9 @@ dwifslpreproc: <span class=" -Color -Color-Green">Deleting scratch directory (/h
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dwibiascorrect: 
 dwibiascorrect: <span class=" -Color -Color-Green">Note that this script makes use of commands / algorithms that have relevant articles for citation; INCLUDING FROM EXTERNAL SOFTWARE PACKAGES. Please consult the help page (-help option) for more information.</span>
 dwibiascorrect: 
-dwibiascorrect: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/</span>
-<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi_denoised_unringed_preproc.mif /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/in.mif
-dwibiascorrect: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/)</span>
+dwibiascorrect: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/</span>
+<span class=" -Color -Color-Cyan">Command:</span>  mrconvert /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi_denoised_unringed_preproc.mif /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/in.mif
+dwibiascorrect: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/)</span>
 <span class=" -Color -Color-Cyan">Command:</span>  dwi2mask in.mif mask.mif
 <span class=" -Color -Color-Cyan">Command:</span>  dwiextract in.mif - -bzero | mrmath - mean mean_bzero.mif -axis 3
 <span class=" -Color -Color-Cyan">Command:</span>  mrconvert mean_bzero.mif mean_bzero.nii -strides +1,+2,+3
@@ -998,9 +998,9 @@ dwibiascorrect: <span class=" -Color -Color-Green">Changing to scratch directory
 <span class=" -Color -Color-Cyan">Command:</span>  mrcalc corrected.nii mask.mif -mult - | mrmath - sum - -axis 0 | mrmath - sum - -axis 1 | mrmath - sum - -axis 2 | mrdump -
 <span class=" -Color -Color-Cyan">Command:</span>  mrcalc init_bias.nii 0.531319575981 -mult bias.mif
 <span class=" -Color -Color-Cyan">Command:</span>  mrcalc in.mif bias.mif -div result.mif
-<span class=" -Color -Color-Cyan">Command:</span>  mrconvert result.mif /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi_denoised_unringed_preproc_unbiased.mif
-dwibiascorrect: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging)</span>
-dwibiascorrect: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/)</span>
+<span class=" -Color -Color-Cyan">Command:</span>  mrconvert result.mif /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi_denoised_unringed_preproc_unbiased.mif
+dwibiascorrect: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging)</span>
+dwibiascorrect: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwibiascorrect-tmp-Y7JHHU/)</span>
 </pre></div>
 </div>
 </div>
@@ -1053,9 +1053,9 @@ dwi2mask: [done] applying mask cleaning filter?7h
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dwi2response: 
 dwi2response: <span class=" -Color -Color-Green">Note that this script makes use of commands / algorithms that have relevant articles for citation. Please consult the help page (-help option) for more information.</span>
 dwi2response: 
-dwi2response: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi2response-tmp-5QHWDZ/</span>
-dwi2response: <span class=" -Color -Color-Green">Importing DWI data (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi_denoised_unringed_preproc_unbiased.mif)...</span>
-dwi2response: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi2response-tmp-5QHWDZ/)</span>
+dwi2response: <span class=" -Color -Color-Green">Generated scratch directory: /home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi2response-tmp-5QHWDZ/</span>
+dwi2response: <span class=" -Color -Color-Green">Importing DWI data (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi_denoised_unringed_preproc_unbiased.mif)...</span>
+dwi2response: <span class=" -Color -Color-Green">Changing to scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi2response-tmp-5QHWDZ/)</span>
 dwi2response: <span class=" -Color -Color-Green">Computing brain mask (dwi2mask)...</span>
 dwi2response: <span class=" -Color -Color-Green">-------</span>
 dwi2response: <span class=" -Color -Color-Green">4 unique b-value(s) detected: 0,700,1200,2800 with 6,16,30,50 volumes</span>
@@ -1101,8 +1101,8 @@ dwi2response: <span class=" -Color -Color-Green"> * Estimating response function
 dwi2response: <span class=" -Color -Color-Green">-------</span>
 dwi2response: <span class=" -Color -Color-Green">Generating outputs...</span>
 dwi2response: <span class=" -Color -Color-Green">-------</span>
-dwi2response: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging)</span>
-dwi2response: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/example-notebooks/books/diffusion_imaging/dwi2response-tmp-5QHWDZ/)</span>
+dwi2response: <span class=" -Color -Color-Green">Changing back to original directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging)</span>
+dwi2response: <span class=" -Color -Color-Green">Deleting scratch directory (/home/jovyan/Git_repositories/neurodeskedu/books/diffusion_imaging/dwi2response-tmp-5QHWDZ/)</span>
 </pre></div>
 </div>
 </div>
