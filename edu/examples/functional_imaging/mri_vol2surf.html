@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -50,13 +50,16 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"0034973b5287415b91454bc598b580a7": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_14dc96478b1740248e99688766e09202", "msg_id": "", "outputs": [{"ename": "TypeError", "evalue": "view_surf() got an unexpected keyword argument 'darkness'", "output_type": "error", "traceback": ["\u001b[31m---------------------------------------------------------------------------\u001b[39m", "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)", "\u001b[36mFile \u001b[39m\u001b[32m/opt/conda/lib/python3.13/site-packages/ipywidgets/widgets/interaction.py:257\u001b[39m, in \u001b[36minteractive.update\u001b[39m\u001b[34m(self, *args)\u001b[39m\n\u001b[32m    255\u001b[39m     value = widget.get_interact_value()\n\u001b[32m    256\u001b[39m     \u001b[38;5;28mself\u001b[39m.kwargs[widget._kwarg] = value\n\u001b[32m--> \u001b[39m\u001b[32m257\u001b[39m \u001b[38;5;28mself\u001b[39m.result = \u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43mf\u001b[49m\u001b[43m(\u001b[49m\u001b[43m*\u001b[49m\u001b[43m*\u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[43m.\u001b[49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m    258\u001b[39m show_inline_matplotlib_plots()\n\u001b[32m    259\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m.auto_display \u001b[38;5;129;01mand\u001b[39;00m \u001b[38;5;28mself\u001b[39m.result \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n", "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[12]\u001b[39m\u001b[32m, line 7\u001b[39m, in \u001b[36mplot1\u001b[39m\u001b[34m(depth, time_point)\u001b[39m\n\u001b[32m      4\u001b[39m \u001b[38;5;129m@interact\u001b[39m(depth = depth, time_point = time_point)\n\u001b[32m      5\u001b[39m \u001b[38;5;28;01mdef\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34mplot1\u001b[39m(depth, time_point):\n\u001b[32m----> \u001b[39m\u001b[32m7\u001b[39m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mplot_data\u001b[49m\u001b[43m(\u001b[49m\u001b[43mdepth\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mtime_point\u001b[49m\u001b[43m)\u001b[49m\n", "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[11]\u001b[39m\u001b[32m, line 12\u001b[39m, in \u001b[36mplot_data\u001b[39m\u001b[34m(depth, time_point)\u001b[39m\n\u001b[32m     10\u001b[39m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[32m     11\u001b[39m     data = np.array(nib.load(\u001b[33m\"\u001b[39m\u001b[33mderivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_hemi-L_space-fsnative_bold.func.gii\u001b[39m\u001b[33m\"\u001b[39m).agg_data())[:,time_point]\n\u001b[32m---> \u001b[39m\u001b[32m12\u001b[39m view = \u001b[43mplotting\u001b[49m\u001b[43m.\u001b[49m\u001b[43mview_surf\u001b[49m\u001b[43m(\u001b[49m\n\u001b[32m     13\u001b[39m \u001b[43m\u001b[49m\u001b[43msurf_mesh\u001b[49m\u001b[43m=\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mderivatives/freesurfer/sub-01/surf/lh.sphere.gii\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\n\u001b[32m     14\u001b[39m \u001b[43m\u001b[49m\u001b[43msurf_map\u001b[49m\u001b[43m=\u001b[49m\u001b[43mnp\u001b[49m\u001b[43m.\u001b[49m\u001b[43mreshape\u001b[49m\u001b[43m(\u001b[49m\u001b[43mdata\u001b[49m\u001b[43m[\u001b[49m\u001b[43m:\u001b[49m\u001b[43m]\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43m(\u001b[49m\u001b[43m-\u001b[49m\u001b[32;43m1\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[32m     15\u001b[39m \u001b[43m\u001b[49m\u001b[43mcmap\u001b[49m\u001b[43m=\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mReds\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mblack_bg\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43;01mFalse\u001b[39;49;00m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43msymmetric_cmap\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43;01mFalse\u001b[39;49;00m\u001b[43m,\u001b[49m\n\u001b[32m     16\u001b[39m \u001b[43m\u001b[49m\u001b[43mthreshold\u001b[49m\u001b[43m=\u001b[49m\u001b[32;43m0\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mvmax\u001b[49m\u001b[43m=\u001b[49m\u001b[32;43m10000\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mdarkness\u001b[49m\u001b[43m=\u001b[49m\u001b[38;5;28;43;01mNone\u001b[39;49;00m\u001b[43m)\u001b[49m\n\u001b[32m     17\u001b[39m \u001b[38;5;28;01mreturn\u001b[39;00m view\n", "\u001b[31mTypeError\u001b[39m: view_surf() got an unexpected keyword argument 'darkness'"]}]}}, "14dc96478b1740248e99688766e09202": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "189e0c8332e24b5a9694721ae0beef9a": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_e6496387bf49497c881379b48b86a294", "IPY_MODEL_254c6a39455c45ef9e1677eefe9363cd", "IPY_MODEL_0034973b5287415b91454bc598b580a7"], "layout": "IPY_MODEL_2817df4b0f294d03a4eb6711f880bc01"}}, "254c6a39455c45ef9e1677eefe9363cd": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DropdownModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["0", "50", "100", "150", "200", "250", "300"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "time_point", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_8c83cb4728534d538c75b2985feca2e0", "style": "IPY_MODEL_5c23b36593214e9e864956f357644703"}}, "2817df4b0f294d03a4eb6711f880bc01": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5c23b36593214e9e864956f357644703": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "8c83cb4728534d538c75b2985feca2e0": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "99c5a1aacb214898b4fa1ad9d39c0d07": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DescriptionStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "b864ef1317274896be3b56d2bd1b4e47": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "e6496387bf49497c881379b48b86a294": {"model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "model_name": "DropdownModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DropdownModel", "_options_labels": ["0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1.0", "average"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "DropdownView", "description": "depth", "description_tooltip": null, "disabled": false, "index": 0, "layout": "IPY_MODEL_b864ef1317274896be3b56d2bd1b4e47", "style": "IPY_MODEL_99c5a1aacb214898b4fa1ad9d39c0d07"}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/functional_imaging/mri_vol2surf';</script>
     <link rel="canonical" href="https://neurodesk.org/edu/examples/functional_imaging/mri_vol2surf.html" />
     <link rel="icon" href="../../_static/neurodesk_logo.svg"/>
@@ -464,7 +467,7 @@
       
       
       
-      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/functional_imaging/mri_vol2surf.ipynb&branch=main" target="_blank"
+      <li><a href="https://edu.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/functional_imaging/mri_vol2surf.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Run in Global Server 2"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -716,383 +719,403 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning:   0%|                             | 0.00/2.00 [00:00&lt;?, ? candidates/s]
+
 Enumerating: 0.00 Objects [00:00, ? Objects/s]
                                               
 Counting:   0%|                              | 0.00/99.6k [00:00&lt;?, ? Objects/s]
+
+Counting:  95%|████████████████████▉ | 94.6k/99.6k [00:00&lt;00:00, 861k Objects/s]
                                                                                 
 Compressing:   0%|                           | 0.00/68.8k [00:00&lt;?, ? Objects/s]
-Compressing:  60%|███████████▍       | 41.3k/68.8k [00:00&lt;00:00, 343k Objects/s]
+
+Compressing:  44%|████████▎          | 30.3k/68.8k [00:00&lt;00:00, 289k Objects/s]
+
+Compressing:  86%|████████████████▎  | 59.2k/68.8k [00:00&lt;00:00, 229k Objects/s]
+
                                                                                 
 Receiving:   0%|                             | 0.00/99.6k [00:00&lt;?, ? Objects/s]
-Receiving:  19%|███▉                 | 18.9k/99.6k [00:00&lt;00:00, 188k Objects/s]
-Receiving:  48%|██████████           | 47.8k/99.6k [00:00&lt;00:00, 243k Objects/s]
-Receiving:  73%|███████████████▎     | 72.7k/99.6k [00:00&lt;00:00, 225k Objects/s]
-Receiving:  96%|████████████████████▏| 95.6k/99.6k [00:00&lt;00:00, 190k Objects/s]
+
+Receiving:   8%|█▌                  | 7.97k/99.6k [00:00&lt;00:01, 78.7k Objects/s]
+
+Receiving:  26%|█████▍               | 25.9k/99.6k [00:00&lt;00:00, 133k Objects/s]
+
+Receiving:  49%|██████████▎          | 48.8k/99.6k [00:00&lt;00:00, 175k Objects/s]
+
+Receiving:  69%|██████████████▍      | 68.7k/99.6k [00:00&lt;00:00, 182k Objects/s]
+
+Receiving:  88%|██████████████████▍  | 87.7k/99.6k [00:00&lt;00:00, 108k Objects/s]
                                                                                 
 Resolving:   0%|                              | 0.00/28.4k [00:00&lt;?, ? Deltas/s]
-Resolving:  74%|████████████████▎     | 21.0k/28.4k [00:00&lt;00:00, 209k Deltas/s]
-[INFO   ] scanning for unlocked files (this may take some time)                 
+Resolving:  23%|████▊                | 6.52k/28.4k [00:00&lt;00:00, 60.6k Deltas/s]
+
+Resolving:  54%|███████████▎         | 15.3k/28.4k [00:00&lt;00:00, 75.0k Deltas/s]
+
+Resolving:  81%|█████████████████    | 23.0k/28.4k [00:00&lt;00:00, 58.8k Deltas/s]
+
+                                                                                
 [INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
-[INFO   ] Cannot run git-annex-remote-openneuro -- It is not installed in PATH (/usr/lib/git-core:/cvmfs/neurodesk.ardc.edu.au/containers/freesurfer_7.3.2_20220812:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin) 
-[INFO   ] Cannot run git-annex-remote-openneuro -- It is not installed in PATH (/usr/lib/git-core:/cvmfs/neurodesk.ardc.edu.au/containers/freesurfer_7.3.2_20220812:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin)
-|   unable to use external special remote git-annex-remote-openneuro 
-<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/neurodeskedu/books/functional_imaging/ds004698 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
-get(ok): derivatives/freesurfer/sub-01/label/BA_exvivo.ctab (file)
-get(ok): derivatives/freesurfer/sub-01/label/BA_exvivo.thresh.ctab (file)
-get(ok): derivatives/freesurfer/sub-01/label/aparc.annot.DKTatlas.ctab (file)
-get(ok): derivatives/freesurfer/sub-01/label/aparc.annot.a2009s.ctab (file)
-get(ok): derivatives/freesurfer/sub-01/label/aparc.annot.ctab (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA1_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA1_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA2_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA2_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA3a_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA3a_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA3b_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA3b_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA44_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA44_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA45_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA45_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA4a_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA4a_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA4p_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA4p_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA6_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA6_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA_exvivo.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.BA_exvivo.thresh.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.MT_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.MT_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.V1_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.V1_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.V2_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.V2_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.aparc.DKTatlas.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.aparc.a2009s.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.aparc.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.cortex.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.entorhinal_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.entorhinal_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.perirhinal_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/lh.perirhinal_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA1_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA1_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA2_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA2_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA3a_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA3a_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA3b_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA3b_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA44_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA44_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA45_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA45_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA4a_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA4a_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA4p_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA4p_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA6_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA6_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA_exvivo.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.BA_exvivo.thresh.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.MT_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.MT_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.V1_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.V1_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.V2_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.V2_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.aparc.DKTatlas.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.aparc.a2009s.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.aparc.annot (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.cortex.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.entorhinal_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.entorhinal_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.perirhinal_exvivo.label (file)
-get(ok): derivatives/freesurfer/sub-01/label/rh.perirhinal_exvivo.thresh.label (file)
-get(ok): derivatives/freesurfer/sub-01/tmp/cw256 (file)
-get(ok): derivatives/freesurfer/sub-01/touch/aparc.DKTatlas2aseg.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/aparc.a2009s2aseg.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/apas2aseg.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/asegmerge.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/ca_label.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/ca_normalize.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/ca_register.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/conform.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/cortical_ribbon.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/em_register.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/fill.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/inorm1.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/inorm2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.aparc.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.aparc2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.aparcstats.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.aparcstats2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.aparcstats3.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.avgcurv.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.curvstats.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.final_surfaces.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.inflate.H.K.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.inflate1.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.inflate2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.jacobian_white.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.pctsurfcon.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.pial_refine.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.pial_surface.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.qsphere.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.smoothwm1.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.smoothwm2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.sphmorph.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.sphreg.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.surfvolume.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.tessellate.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.topofix.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.white.H.K.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/lh.white_surface.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/nu.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/relabelhypos.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.aparc.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.aparc2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.aparcstats.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.aparcstats2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.aparcstats3.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.avgcurv.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.curvstats.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.final_surfaces.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.inflate.H.K.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.inflate1.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.inflate2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.jacobian_white.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.pctsurfcon.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.pial_refine.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.pial_surface.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.qsphere.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.smoothwm1.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.smoothwm2.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.sphmorph.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.sphreg.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.surfvolume.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.tessellate.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.topofix.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.white.H.K.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rh.white_surface.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mri_ca_register.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mri_em_register.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_fix_topology.lh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_fix_topology.rh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_inflate.lh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_inflate.rh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_register.lh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_register.rh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_sphere.lh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_sphere.rh.dat (file)
-get(ok): derivatives/freesurfer/sub-01/touch/segstats.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/talairach.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/wmaparc.stats.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/wmaparc.touch (file)
-get(ok): derivatives/freesurfer/sub-01/touch/wmsegment.touch (file)
-get(ok): derivatives/freesurfer/sub-01/mri/T1.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/T2.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/T2.norm.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/T2.prenorm.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aparc+aseg.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aparc.DKTatlas+aseg.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aparc.a2009s+aseg.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aseg.auto.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aseg.auto_noCCseg.label_intensities.txt (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aseg.auto_noCCseg.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aseg.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aseg.presurf.hypos.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/aseg.presurf.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/brain.finalsurfs.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/brain.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/brainmask.auto.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/brainmask.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/ctrl_pts.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/filled.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/lh.ribbon.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/mri_nu_correct.mni.log (file)
-get(ok): derivatives/freesurfer/sub-01/mri/mri_nu_correct.mni.log.bak (file)
-get(ok): derivatives/freesurfer/sub-01/mri/norm.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/nu.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/orig.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/orig/001.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/orig/T2raw.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/orig_nu.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/rawavg.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/rh.ribbon.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/ribbon.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/segment.dat (file)
-get(ok): derivatives/freesurfer/sub-01/mri/talairach.label_intensities.txt (file)
-get(ok): derivatives/freesurfer/sub-01/mri/talairach.log (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.log (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.mincost (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.param (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.sum (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.lta (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.lta (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/cc_up.lta (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.auto.xfm (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.auto.xfm.lta (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.lta (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.m3z (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.xfm (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach_avi.log (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach_avi_QA.log (file)
-get(ok): derivatives/freesurfer/sub-01/mri/transforms/talsrcimg_to_711-2C_as_mni_average_305_t4_vox2vox.txt (file)
-get(ok): derivatives/freesurfer/sub-01/mri/wm.asegedit.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/wm.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/wm.seg.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/mri/wmparc.mgz (file)
-get(ok): derivatives/freesurfer/sub-01/stats/aseg.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.BA_exvivo.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.BA_exvivo.thresh.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.DKTatlas.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.a2009s.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.pial.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.curv.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/lh.w-g.pct.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.BA_exvivo.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.BA_exvivo.thresh.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.DKTatlas.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.a2009s.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.pial.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.curv.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/rh.w-g.pct.stats (file)
-get(ok): derivatives/freesurfer/sub-01/stats/wmparc.stats (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/build-stamp.txt (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/expert-options (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/lastcall.build-stamp.txt (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/patchdir.txt (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/pctsurfcon.log (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/pctsurfcon.log.old (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/ponscc.cut.log (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-lh.cmd (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-lh.log (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-rh.cmd (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-rh.log (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-status-lh.log (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-status-rh.log (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-status.log (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.cmd (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.done (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.env (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.env.bak (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.local-copy (file)
-get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.log (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.area (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.area.mid (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.area.pial (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.avg_curv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.curv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.curv.pial (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.defect_borders (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.defect_chull (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.defect_labels (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated.H (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated.K (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.jacobian_white (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.midthickness (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.orig (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.orig.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.pial (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.qsphere.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.retinotopy.sphere.reg (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.BE.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.C.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.FI.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.H.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.K.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.K1.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.K2.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.S.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.sphere (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.sphere.reg (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.sulc (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.thickness (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.volume (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.w-g.pct.mgh (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.white (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.white.H (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.white.K (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.white.preaparc (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.white.preaparc.H (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.white.preaparc.K (file)
-get(ok): derivatives/freesurfer/sub-01/surf/lh.woT2.pial (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.area (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.area.mid (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.area.pial (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.avg_curv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.curv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.curv.pial (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.defect_borders (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.defect_chull (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.defect_labels (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated.H (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated.K (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.jacobian_white (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.midthickness (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.orig (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.orig.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.pial (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.qsphere.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.retinotopy.sphere.reg (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.BE.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.C.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.FI.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.H.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.K.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.K1.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.K2.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.S.crv (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.nofix (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.sphere (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.sphere.reg (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.sulc (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.thickness (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.volume (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.w-g.pct.mgh (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.white (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.white.H (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.white.K (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.white.preaparc (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.white.preaparc.H (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.white.preaparc.K (file)
-get(ok): derivatives/freesurfer/sub-01/surf/rh.woT2.pial (file)
-get(ok): derivatives/freesurfer/sub-01/label (directory)
-get(ok): derivatives/freesurfer/sub-01/tmp (directory)
+[INFO   ] https://github.com/OpenNeuroDatasets/ds004698.git/config download failed: Not Found
+[INFO   ] Cannot run git-annex-remote-openneuro -- It is not installed in PATH (/usr/lib/git-core:/cvmfs/neurodesk.ardc.edu.au/containers/freesurfer_7.3.2_20220812:/opt/conda/bin:/home/jovyan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin) 
+[INFO   ] Cannot run git-annex-remote-openneuro -- It is not installed in PATH (/usr/lib/git-core:/cvmfs/neurodesk.ardc.edu.au/containers/freesurfer_7.3.2_20220812:/opt/conda/bin:/home/jovyan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin) 
+[INFO   ] unable to use external special remote git-annex-remote-openneuro
+<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/workspace/books/examples/functional_imaging/ds004698 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+
+get(ok): derivatives/freesurfer/sub-01/touch/aparc.DKTatlas2aseg.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/aparc.a2009s2aseg.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/apas2aseg.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/asegmerge.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/ca_label.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/ca_normalize.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/ca_register.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/conform.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/cortical_ribbon.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/em_register.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/fill.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/inorm1.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/inorm2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.aparc.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.aparc2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.aparcstats.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.aparcstats2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.aparcstats3.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.avgcurv.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.curvstats.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.final_surfaces.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.inflate.H.K.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.inflate1.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.inflate2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.jacobian_white.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.pctsurfcon.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.pial_refine.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.pial_surface.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.qsphere.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.smoothwm1.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.smoothwm2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.sphmorph.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.sphreg.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.surfvolume.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.tessellate.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.topofix.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.white.H.K.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/lh.white_surface.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/nu.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/relabelhypos.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.aparc.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.aparc2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.aparcstats.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.aparcstats2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.aparcstats3.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.avgcurv.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.curvstats.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.final_surfaces.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.inflate.H.K.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.inflate1.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.inflate2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.jacobian_white.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.pctsurfcon.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.pial_refine.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.pial_surface.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.qsphere.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.smoothwm1.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.smoothwm2.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.sphmorph.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.sphreg.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.surfvolume.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.tessellate.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.topofix.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.white.H.K.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rh.white_surface.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mri_ca_register.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mri_em_register.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_fix_topology.lh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_fix_topology.rh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_inflate.lh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_inflate.rh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_register.lh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_register.rh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_sphere.lh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/rusage.mris_sphere.rh.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/segstats.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/talairach.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/wmaparc.stats.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/wmaparc.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/touch/wmsegment.touch (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/build-stamp.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/expert-options (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/lastcall.build-stamp.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/patchdir.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/pctsurfcon.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/pctsurfcon.log.old (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/ponscc.cut.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-lh.cmd (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-lh.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-rh.cmd (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-rh.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-status-lh.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-status-rh.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all-status.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.cmd (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.done (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.env (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.env.bak (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.local-copy (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/scripts/recon-all.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.area (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.area.mid (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.area.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.avg_curv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.curv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.curv.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.defect_borders (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.defect_chull (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.defect_labels (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated.H (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated.K (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.inflated.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.jacobian_white (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.midthickness (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.orig (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.orig.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.qsphere.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.retinotopy.sphere.reg (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.BE.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.C.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.FI.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.H.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.K.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.K1.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.K2.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.S.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.smoothwm.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.sphere (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.sphere.reg (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.sulc (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.thickness (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.volume (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.w-g.pct.mgh (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.white (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.white.H (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.white.K (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.white.preaparc (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.white.preaparc.H (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.white.preaparc.K (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/lh.woT2.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.area (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.area.mid (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.area.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.avg_curv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.curv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.curv.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.defect_borders (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.defect_chull (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.defect_labels (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated.H (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated.K (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.inflated.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.jacobian_white (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.midthickness (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.orig (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.orig.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.qsphere.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.retinotopy.sphere.reg (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.BE.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.C.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.FI.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.H.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.K.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.K1.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.K2.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.S.crv (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.smoothwm.nofix (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.sphere (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.sphere.reg (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.sulc (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.thickness (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.volume (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.w-g.pct.mgh (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.white (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.white.H (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.white.K (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.white.preaparc (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.white.preaparc.H (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.white.preaparc.K (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/surf/rh.woT2.pial (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/aseg.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.BA_exvivo.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.BA_exvivo.thresh.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.DKTatlas.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.a2009s.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.pial.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.aparc.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.curv.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/lh.w-g.pct.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.BA_exvivo.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.BA_exvivo.thresh.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.DKTatlas.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.a2009s.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.pial.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.aparc.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.curv.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/rh.w-g.pct.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/stats/wmparc.stats (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/T1.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/T2.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/T2.norm.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/T2.prenorm.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aparc+aseg.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aparc.DKTatlas+aseg.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aparc.a2009s+aseg.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aseg.auto.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aseg.auto_noCCseg.label_intensities.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aseg.auto_noCCseg.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aseg.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aseg.presurf.hypos.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/aseg.presurf.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/brain.finalsurfs.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/brain.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/brainmask.auto.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/brainmask.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/ctrl_pts.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/filled.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/lh.ribbon.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/mri_nu_correct.mni.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/mri_nu_correct.mni.log.bak (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/norm.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/nu.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/orig.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/orig/001.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/orig/T2raw.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/orig_nu.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/rawavg.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/rh.ribbon.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/ribbon.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/segment.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/talairach.label_intensities.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/talairach.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.mincost (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.param (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.dat.sum (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.auto.lta (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/T2raw.lta (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/cc_up.lta (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.auto.xfm (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.auto.xfm.lta (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.lta (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.m3z (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach.xfm (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach_avi.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talairach_avi_QA.log (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/transforms/talsrcimg_to_711-2C_as_mni_average_305_t4_vox2vox.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/wm.asegedit.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/wm.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/wm.seg.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/mri/wmparc.mgz (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/BA_exvivo.ctab (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/BA_exvivo.thresh.ctab (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/aparc.annot.DKTatlas.ctab (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/aparc.annot.a2009s.ctab (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/aparc.annot.ctab (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA1_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA1_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA2_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA2_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA3a_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA3a_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA3b_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA3b_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA44_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA44_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA45_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA45_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA4a_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA4a_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA4p_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA4p_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA6_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA6_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA_exvivo.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.BA_exvivo.thresh.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.MT_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.MT_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.V1_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.V1_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.V2_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.V2_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.aparc.DKTatlas.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.aparc.a2009s.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.aparc.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.cortex.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.entorhinal_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.entorhinal_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.perirhinal_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/lh.perirhinal_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA1_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA1_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA2_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA2_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA3a_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA3a_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA3b_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA3b_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA44_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA44_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA45_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA45_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA4a_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA4a_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA4p_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA4p_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA6_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA6_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA_exvivo.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.BA_exvivo.thresh.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.MT_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.MT_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.V1_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.V1_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.V2_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.V2_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.aparc.DKTatlas.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.aparc.a2009s.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.aparc.annot (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.cortex.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.entorhinal_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.entorhinal_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.perirhinal_exvivo.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/label/rh.perirhinal_exvivo.thresh.label (file) [from s3-PUBLIC...]
+get(ok): derivatives/freesurfer/sub-01/tmp/cw256 (file) [from s3-PUBLIC...]
 get(ok): derivatives/freesurfer/sub-01/touch (directory)
-get(ok): derivatives/freesurfer/sub-01/mri (directory)
-get(ok): derivatives/freesurfer/sub-01/stats (directory)
 get(ok): derivatives/freesurfer/sub-01/scripts (directory)
 get(ok): derivatives/freesurfer/sub-01/surf (directory)
+get(ok): derivatives/freesurfer/sub-01/stats (directory)
+get(ok): derivatives/freesurfer/sub-01/mri (directory)
+get(ok): derivatives/freesurfer/sub-01/label (directory)
+get(ok): derivatives/freesurfer/sub-01/tmp (directory)
 action summary:
   get (ok: 339)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_hemi-L_space-fsnative_bold.func.gii (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_boldref.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_from-T1w_to-scanner_mode-image_xfm.txt (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-aparcaseg_dseg.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_hemi-R_space-fsnative_bold.func.gii (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-brain_mask.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-aseg_dseg.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_boldref.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-brain_mask.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-aparcaseg_dseg.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_desc-confounds_timeseries.tsv (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-aseg_dseg.nii.gz (file)
-get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_from-scanner_to-T1w_mode-image_xfm.txt (file)
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_from-T1w_to-scanner_mode-image_xfm.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-aseg_dseg.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_boldref.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-brain_mask.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_hemi-L_space-fsnative_bold.func.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_from-scanner_to-T1w_mode-image_xfm.txt (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-aparcaseg_dseg.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-aparcaseg_dseg.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_boldref.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-aseg_dseg.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_hemi-R_space-fsnative_bold.func.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-brain_mask.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_space-MNI152NLin2009cAsym_desc-preproc_bold.nii.gz (file) [from s3-PUBLIC...]
+get(ok): derivatives/fmriprep/sub-01/ses-01/func/sub-01_ses-01_task-fixedbar_run-1_desc-confounds_timeseries.tsv (file) [from s3-PUBLIC...]
 action summary:
   get (notneeded: 7, ok: 15)
 </pre></div>
@@ -1551,7 +1574,7 @@ Dim: 221709 1 1
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing depth: 0.0
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.0.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.0.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.0.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.0.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.0.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1560,7 +1583,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.0.func.gii...
 Data has been converted!
 Processing depth: 0.1
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.1.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.1.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.1.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.1.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.1.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1569,7 +1592,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.1.func.gii...
 Data has been converted!
 Processing depth: 0.2
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.2.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.2.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.2.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.2.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.2.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1578,7 +1601,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.2.func.gii...
 Data has been converted!
 Processing depth: 0.30000000000000004
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.3.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.3.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.3.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.3.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.3.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1587,7 +1610,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.3.func.gii...
 Data has been converted!
 Processing depth: 0.4
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.4.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.4.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.4.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.4.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.4.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1596,7 +1619,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.4.func.gii...
 Data has been converted!
 Processing depth: 0.5
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.5.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.5.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.5.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.5.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.5.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1605,7 +1628,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.5.func.gii...
 Data has been converted!
 Processing depth: 0.6000000000000001
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.6.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.6.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.6.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.6.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.6.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1614,7 +1637,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.6.func.gii...
 Data has been converted!
 Processing depth: 0.7000000000000001
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.7.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.7.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.7.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.7.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.7.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1623,7 +1646,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.7.func.gii...
 Data has been converted!
 Processing depth: 0.8
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.8.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.8.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.8.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.8.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.8.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1632,7 +1655,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.8.func.gii...
 Data has been converted!
 Processing depth: 0.9
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.9.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.9.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.9.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.9.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.9.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1641,7 +1664,7 @@ k_ras = (0, 0, 1)
 writing to ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-0.9.func.gii...
 Data has been converted!
 Processing depth: 1.0
-/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-1.0.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-1.0.func.gii 
+/opt/freesurfer-7.3.2/bin/mri_convert ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-1.0.func.mgh ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-1.0.func.gii
 reading from ../new_data/sub-01_ses-01_task-fixedbar_run-1_space-T1w_desc-preproc_bold_depth-1.0.func.mgh...
 TR=1200.00, TE=0.00, TI=0.00, flip angle=0.00
 i_ras = (1, 0, 0)
@@ -1716,7 +1739,7 @@ Data has been converted!
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "1466b3e0eec7493bb43a3098d0cc84c7", "version_major": 2, "version_minor": 0}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "189e0c8332e24b5a9694721ae0beef9a", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 <section id="dependencies-in-jupyter-python">
 <h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
@@ -1733,24 +1756,24 @@ Data has been converted!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2025-12-04T04:06:29.784777+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-01-18T06:28:31.514815+00:00
 
 Python implementation: CPython
-Python version       : 3.11.6
-IPython version      : 8.16.1
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
-Compiler    : GCC 12.3.0
+Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.4.0-204-generic
+Release     : 5.15.0-151-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
-numpy     : 2.2.4
-ipywidgets: 8.1.2
-nibabel   : 5.3.2
-nilearn   : 0.11.1
+ipywidgets: 7.8.5
+nibabel   : 5.3.3
+nilearn   : 0.13.0
+numpy     : 2.3.5
 </pre></div>
 </div>
 </div>

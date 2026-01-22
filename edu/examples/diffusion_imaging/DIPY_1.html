@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -50,7 +50,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -464,7 +464,7 @@
       
       
       
-      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/diffusion_imaging/DIPY_1.ipynb&branch=main" target="_blank"
+      <li><a href="https://edu.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&urlpath=lab/tree/neurodeskedu/books/examples/diffusion_imaging/DIPY_1.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Run in Global Server 2"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -745,20 +745,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">nibabel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nib</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.segment.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">median_otsu</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.core.gradients</span><span class="w"> </span><span class="kn">import</span> <span class="n">gradient_table</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.reconst.dti</span><span class="w"> </span><span class="kn">import</span> <span class="n">TensorModel</span><span class="p">,</span> <span class="n">fractional_anisotropy</span><span class="p">,</span> <span class="n">color_fa</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;dipy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="data-preparation">
@@ -780,15 +766,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Load example diffusion data</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">img</span><span class="p">,</span> <span class="n">gtab</span> <span class="o">=</span> <span class="n">read_stanford_hardi</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#affine = img.affine</span>
-
-<span class="ne">NameError</span>: name &#39;read_stanford_hardi&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data shape: (81, 106, 76, 160)
+b-values (unique): [   0. 2000.] …
 </pre></div>
 </div>
 </div>
@@ -803,18 +782,6 @@ document.write(`
 
 <span class="c1"># Create white matter mask - also dilate this mask by 1 voxel to ensure streamlines reach the grey matter</span>
 <span class="n">white_matter</span> <span class="o">=</span> <span class="n">binary_dilation</span><span class="p">((</span><span class="n">labels</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">labels</span> <span class="o">==</span> <span class="mi">2</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">label_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;stanford_labels&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">t1_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;stanford_t1&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">load_nifti_data</span><span class="p">(</span><span class="n">label_fname</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;get_fnames&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -837,18 +804,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Compute a quick brain mask</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">b0_masked</span><span class="p">,</span> <span class="n">brain_mask</span> <span class="o">=</span> <span class="n">median_otsu</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">data</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">vol_idx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">gtab</span><span class="o">.</span><span class="n">bvals</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">b0_masked</span><span class="o">.</span><span class="n">shape</span>
-
-<span class="ne">NameError</span>: name &#39;median_otsu&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(81, 106, 76, 160)
 </pre></div>
 </div>
 </div>
@@ -866,16 +822,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sli</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">histeq</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">sli</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f0937f693d0&gt;
 </pre></div>
 </div>
+<img alt="../../_images/134d1f5dee31b52cabc8a32b8dc3935cef3d5ddc586efe41ec7b3e9496277e32.png" src="../../_images/134d1f5dee31b52cabc8a32b8dc3935cef3d5ddc586efe41ec7b3e9496277e32.png" />
 </div>
 </div>
 </section>
@@ -932,34 +882,11 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Voxel reconstruction with DTI - instantiate TensorModel and fit it to the data</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">tenmodel</span> <span class="o">=</span> <span class="n">TensorModel</span><span class="p">(</span><span class="n">gtab</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">tenfit</span> <span class="o">=</span> <span class="n">tenmodel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">b0_masked</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">FA</span> <span class="o">=</span> <span class="n">fractional_anisotropy</span><span class="p">(</span><span class="n">tenfit</span><span class="o">.</span><span class="n">evals</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;TensorModel&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p>The fitting will not be accurate in the background of the image as there is no signal and possibly we will find FA values with nans (not a number). We can easily remove these in the following way.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FA</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">FA</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">FA</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">FA</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="ne">NameError</span>: name &#39;FA&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -976,21 +903,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Show FA slice</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">FA</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">sli</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;FA (DTI) — middle slice&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;FA&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;FA&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/520bf40eaba7cb28a39d756f421c6d11960de9f43b4c9425f01dd6bed07e3d7f.png" src="../../_images/520bf40eaba7cb28a39d756f421c6d11960de9f43b4c9425f01dd6bed07e3d7f.png" />
 </div>
 </div>
 <p>We can also compute the colored FA or RGB-map. First, FA needs tob e scaled between 0 and 1, then the RGB map can be computed and visualized.</p>
@@ -1006,16 +919,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">FA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">FA</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">RGB</span> <span class="o">=</span> <span class="n">color_fa</span><span class="p">(</span><span class="n">FA</span><span class="p">,</span> <span class="n">tenfit</span><span class="o">.</span><span class="n">evecs</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;FA&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/4b3ba26e8d2863f2234727760e057ee24f4711b11c7d3959dbc16a1ff75ff1ea.png" src="../../_images/4b3ba26e8d2863f2234727760e057ee24f4711b11c7d3959dbc16a1ff75ff1ea.png" />
 </div>
 </div>
 <p>Let’s also visualize the tensor ellipsoids of a small rectangular area in an axial slice of the corpus callosum (CC):</p>
@@ -1042,32 +946,13 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sphere</span> <span class="o">=</span> <span class="n">get_sphere</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;repulsion724&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">scene</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Scene</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">evals</span> <span class="o">=</span> <span class="n">tenfit</span><span class="o">.</span><span class="n">evals</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span> <span class="mi">38</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;get_sphere&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/24f9f994a95a24259201bdddd073d650ed60e336dc8777b04d1e3e59a1cf0d63.png" src="../../_images/24f9f994a95a24259201bdddd073d650ed60e336dc8777b04d1e3e59a1cf0d63.png" />
 </div>
 </div>
 <p>Finally, we will visualize the tensor Orientation Distribution Functions for the same area as we did with the ellipsoids.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;scene&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1085,16 +970,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">tensor_odfs</span> <span class="o">=</span> <span class="n">tenmodel</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span> <span class="mi">37</span><span class="p">:</span><span class="mi">38</span><span class="p">])</span><span class="o">.</span><span class="n">odf</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">odf_actor</span> <span class="o">=</span> <span class="n">actor</span><span class="o">.</span><span class="n">odf_slicer</span><span class="p">(</span><span class="n">tensor_odfs</span><span class="p">,</span> <span class="n">sphere</span><span class="o">=</span><span class="n">sphere</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">odf_actor</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;tenmodel&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/d0c09c5cbef4ccbf2b5a29a3581062a95fbcd21f74fa031f6ffcde129cb28085.png" src="../../_images/d0c09c5cbef4ccbf2b5a29a3581062a95fbcd21f74fa031f6ffcde129cb28085.png" />
 </div>
 </div>
 </section>
@@ -1122,23 +998,6 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Instantiate CSA model with spherical harmonic order (l) of 6</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">csa_model</span> <span class="o">=</span> <span class="n">CsaOdfModel</span><span class="p">(</span><span class="n">gtab</span><span class="p">,</span> <span class="n">sh_order_max</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Calculate properties of the ODFs and return for example the peaks and their indices</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">csa_peaks</span> <span class="o">=</span> <span class="n">peaks_from_model</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">csa_model</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">data</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>     <span class="mi">11</span>     <span class="n">mask</span><span class="o">=</span><span class="n">white_matter</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;CsaOdfModel&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p>For quality assurance, we can visualize an axial slice from the direction field estimated by the CSA model. Each glyph represents a local fiber orientation derived from the ODF peaks. The underlying ODFs are not shown here.</p>
 <div class="cell docutils container">
@@ -1157,20 +1016,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Scene</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">actor</span><span class="o">.</span><span class="n">peak_slicer</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="n">csa_peaks</span><span class="o">.</span><span class="n">peak_dirs</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span> <span class="mi">37</span><span class="p">:</span><span class="mi">38</span><span class="p">],</span> <span class="n">peaks_values</span><span class="o">=</span><span class="n">csa_peaks</span><span class="o">.</span><span class="n">peak_values</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span> <span class="mi">37</span><span class="p">:</span><span class="mi">38</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="kc">None</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">window</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">scene</span><span class="o">=</span><span class="n">scene</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;csa_direction_field.png&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;window&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/e401dd1b6d94fe4f2384165b5fef0c0fe2717a93e33004cc0ced94709a527f2c.png" src="../../_images/e401dd1b6d94fe4f2384165b5fef0c0fe2717a93e33004cc0ced94709a527f2c.png" />
 </div>
 </div>
 </section>
@@ -1188,12 +1034,24 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">gtab</span><span class="o">.</span><span class="n">bvals</span>
-
-<span class="ne">NameError</span>: name &#39;gtab&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([   0.,    0.,    0.,    0.,    0.,    0.,    0.,    0.,    0.,
+          0., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000., 2000.,
+       2000., 2000., 2000., 2000., 2000., 2000., 2000.])
 </pre></div>
 </div>
 </div>
@@ -1214,16 +1072,6 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">response</span><span class="p">,</span> <span class="n">ratio</span> <span class="o">=</span> <span class="n">auto_response_ssst</span><span class="p">(</span><span class="n">gtab</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">roi_radii</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fa_thr</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;auto_response_ssst&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p>The response tuple contains two elements: an array with the eigenvalues of the response function and the average S0 for this response:</p>
 <div class="cell docutils container">
@@ -1233,12 +1081,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;response&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0.00139919, 0.0003007 , 0.0003007 ]), 416.7372408293461)
 </pre></div>
 </div>
 </div>
@@ -1251,12 +1094,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;ratio&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.21491283972218628
 </pre></div>
 </div>
 </div>
@@ -1283,16 +1121,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Scene</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">evals</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">evecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span>
-
-<span class="ne">NameError</span>: name &#39;window&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/de6801af88cbb153201f57478e0462825e2b4dde2b0cca6b832204c45718da69.png" src="../../_images/de6801af88cbb153201f57478e0462825e2b4dde2b0cca6b832204c45718da69.png" />
 </div>
 </div>
 </section>
@@ -1306,17 +1135,6 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Instantiate the CSD model </span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">csd_model</span> <span class="o">=</span> <span class="n">ConstrainedSphericalDeconvModel</span><span class="p">(</span><span class="n">gtab</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;ConstrainedSphericalDeconvModel&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1327,14 +1145,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Fit the model and show the CSD-based ODFs also known as FODFs (fiber ODFs).</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">csd_fit</span> <span class="o">=</span> <span class="n">csd_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span> <span class="mi">38</span><span class="p">:</span><span class="mi">39</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">csd_odf</span> <span class="o">=</span> <span class="n">csd_fit</span><span class="o">.</span><span class="n">odf</span><span class="p">(</span><span class="n">default_sphere</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;csd_model&#39; is not defined
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 900/900 [00:00&lt;00:00, 3629.00it/s]
 </pre></div>
 </div>
 </div>
@@ -1355,18 +1166,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fodf_spheres</span> <span class="o">=</span> <span class="n">actor</span><span class="o">.</span><span class="n">odf_slicer</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">csd_odf</span><span class="p">,</span> <span class="n">sphere</span><span class="o">=</span><span class="n">default_sphere</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;plasma&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">fodf_spheres</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;scene&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/d45e41ee005748181b0433df9d33bfc41a732a0f27c20146a9e9e5e161a05c75.png" src="../../_images/d45e41ee005748181b0433df9d33bfc41a732a0f27c20146a9e9e5e161a05c75.png" />
 </div>
 </div>
 <p>We can also find the peak directions (maxima) of the ODFs with <code class="docutils literal notranslate"><span class="pre">peaks_from_model</span></code>.</p>
@@ -1388,21 +1188,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Find peak directions (maxima) of the ODFs</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">peaks_csd</span> <span class="o">=</span> <span class="n">peaks_from_model</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">csd_model</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                          <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                          <span class="n">sphere</span><span class="o">=</span><span class="n">default_sphere</span><span class="p">,</span>           
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                          <span class="n">relative_peak_threshold</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span>                          <span class="n">min_separation_angle</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span>                          <span class="n">mask</span><span class="o">=</span><span class="n">white_matter</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">8</span>                          <span class="n">return_sh</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>                          <span class="n">parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CSD peaks computed. SH shape:&quot;</span><span class="p">,</span> <span class="n">peaks_csd</span><span class="o">.</span><span class="n">shm_coeff</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;peaks_from_model&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CSD peaks computed. SH shape: (81, 106, 76, 45)
 </pre></div>
 </div>
 </div>
@@ -1424,21 +1210,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Scene</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">actor</span><span class="o">.</span><span class="n">peak_slicer</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="n">peaks_csd</span><span class="o">.</span><span class="n">peak_dirs</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span> <span class="mi">38</span><span class="p">:</span><span class="mi">39</span><span class="p">],</span> <span class="n">peaks_values</span><span class="o">=</span><span class="n">peaks_csd</span><span class="o">.</span><span class="n">peak_values</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span> <span class="mi">38</span><span class="p">:</span><span class="mi">39</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="n">colors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">window</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">scene</span><span class="o">=</span><span class="n">scene</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;csd_direction_field.png&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;window&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/e0431602bb8df52f997a45c7b57ac89b59c64a0c4d37c0bfbe360dd212068884.png" src="../../_images/e0431602bb8df52f997a45c7b57ac89b59c64a0c4d37c0bfbe360dd212068884.png" />
 </div>
 </div>
 <p>We now visualize both the ODFs and peaks in the same space.</p>
@@ -1454,16 +1226,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fodf_spheres</span><span class="o">.</span><span class="n">GetProperty</span><span class="p">()</span><span class="o">.</span><span class="n">SetOpacity</span><span class="p">(</span><span class="mf">0.4</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">fodf_spheres</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">window</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">scene</span><span class="o">=</span><span class="n">scene</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;csd_both.png&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;fodf_spheres&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/9074060ddb34e03025e6ef30e9b7d968c7fd48464caf8bdb1f35c0b11e2fad26.png" src="../../_images/9074060ddb34e03025e6ef30e9b7d968c7fd48464caf8bdb1f35c0b11e2fad26.png" />
 </div>
 </div>
 <blockquote>
@@ -1510,17 +1273,6 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fa_thr</span> <span class="o">=</span> <span class="mf">0.15</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">stopping_criterion</span> <span class="o">=</span> <span class="n">ThresholdStoppingCriterion</span><span class="p">(</span><span class="n">FA</span><span class="p">,</span> <span class="n">fa_thr</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;ThresholdStoppingCriterion&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1535,20 +1287,10 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">mask_fa</span> <span class="o">=</span> <span class="n">FA</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">mask_fa</span><span class="p">[</span><span class="n">mask_fa</span> <span class="o">&lt;</span> <span class="mf">0.15</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
-
-<span class="ne">NameError</span>: name &#39;FA&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f0935db8ec0&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/78b254974ddaefe32c6a7ecd429f9fb1b7c6a1f4fcefa650188bc0a4e03856d7.png" src="../../_images/78b254974ddaefe32c6a7ecd429f9fb1b7c6a1f4fcefa650188bc0a4e03856d7.png" />
 </div>
 </div>
 <blockquote>
@@ -1569,16 +1311,6 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">stopping_criterion_binary</span> <span class="o">=</span> <span class="n">BinaryStoppingCriterion</span><span class="p">(</span><span class="n">white_matter</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;BinaryStoppingCriterion&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1592,18 +1324,10 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">white_matter</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>            <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;white_matter&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f0935dee720&gt;
 </pre></div>
 </div>
-<img alt="../../_images/71a4763b52bf9a2bc8b7c3341aa6592b740d19392f9c05f1cfedb28413421fb6.png" src="../../_images/71a4763b52bf9a2bc8b7c3341aa6592b740d19392f9c05f1cfedb28413421fb6.png" />
+<img alt="../../_images/73aad5f76cf58e7e932054ed6841a0f184bb58ae3bd085bb7076f2d7d3704d25.png" src="../../_images/73aad5f76cf58e7e932054ed6841a0f184bb58ae3bd085bb7076f2d7d3704d25.png" />
 </div>
 </div>
 <blockquote>
@@ -1630,15 +1354,7 @@ Each seed acts as a starting location for streamline propagation based on local 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="nn">      1 # Seeding</span> in <span class="ni">the corpus callosum </span><span class="nt">(label value 2)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">seed_mask</span> <span class="o">=</span> <span class="n">labels</span> <span class="o">==</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">seeds_mask</span> <span class="o">=</span> <span class="n">seeds_from_mask</span><span class="p">(</span><span class="n">seed_mask</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#places one seed per voxel</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of seeds:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">seeds_mask</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;labels&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of seeds: 505
 </pre></div>
 </div>
 </div>
@@ -1653,14 +1369,7 @@ Each seed acts as a starting location for streamline propagation based on local 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Whole-brain seeding</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">seeds_wm</span> <span class="o">=</span> <span class="n">seeds_from_mask</span><span class="p">(</span><span class="n">white_matter</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of seeds:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">seeds_wm</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;seeds_from_mask&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of seeds: 96983
 </pre></div>
 </div>
 </div>
@@ -1690,21 +1399,6 @@ Each seed acts as a starting location for streamline propagation based on local 
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Probabilistic direction getting for fiber tracking</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Uses on-the-fly SH-to-PMF conversion for memory efficiency</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">prob_dg</span> <span class="o">=</span> <span class="n">ProbabilisticDirectionGetter</span><span class="o">.</span><span class="n">from_shcoeff</span><span class="p">(</span><span class="n">peaks_csd</span><span class="o">.</span><span class="n">shm_coeff</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                                                     <span class="n">max_angle</span><span class="o">=</span><span class="mf">30.</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                                                     <span class="n">sphere</span><span class="o">=</span><span class="n">peaks_csd</span><span class="o">.</span><span class="n">sphere</span><span class="p">,</span> 
-<span class="g g-Whitespace">      </span><span class="mi">6</span>                                                     <span class="n">sh_to_pmf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;ProbabilisticDirectionGetter&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p>Local Tracking is used for probabilistic tractography which takes the direction getter along with the stopping criterion and seeds as input.</p>
 <div class="cell docutils container">
@@ -1721,18 +1415,7 @@ Each seed acts as a starting location for streamline propagation based on local 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">streamlines_prob</span> <span class="o">=</span> <span class="n">LocalTracking</span><span class="p">(</span><span class="n">direction_getter</span><span class="o">=</span><span class="n">prob_dg</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                                  <span class="n">stopping_criterion</span><span class="o">=</span><span class="n">stopping_criterion_binary</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                                  <span class="n">seeds</span><span class="o">=</span><span class="n">seeds_mask</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                                  <span class="n">affine</span><span class="o">=</span><span class="n">affine</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                                  <span class="n">step_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Compute streamlines</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">streamlines_prob</span> <span class="o">=</span> <span class="n">Streamlines</span><span class="p">(</span><span class="n">streamlines_prob</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;LocalTracking&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilistic streamlines: 587
 </pre></div>
 </div>
 </div>
@@ -1750,16 +1433,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Scene</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">actor</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">streamlines_prob</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colormap</span><span class="o">.</span><span class="n">line_colors</span><span class="p">(</span><span class="n">streamlines_prob</span><span class="p">)))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">window</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">scene</span><span class="o">=</span><span class="n">scene</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;tractogram_probabilistic.png&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;window&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/a3c03b2d897af064f99a933ce57b272dce1f7fce349510a591a2fdb757ebe29d.png" src="../../_images/a3c03b2d897af064f99a933ce57b272dce1f7fce349510a591a2fdb757ebe29d.png" />
 </div>
 </div>
 </section>
@@ -1787,22 +1461,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">36</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Deterministic from CSD peaks</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">dg_det</span> <span class="o">=</span> <span class="n">DeterministicMaximumDirectionGetter</span><span class="o">.</span><span class="n">from_shcoeff</span><span class="p">(</span><span class="n">peaks_csd</span><span class="o">.</span><span class="n">shm_coeff</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                                                          <span class="n">max_angle</span><span class="o">=</span><span class="mf">30.</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                                                          <span class="n">sphere</span><span class="o">=</span><span class="n">peaks_csd</span><span class="o">.</span><span class="n">sphere</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                                                          <span class="n">sh_to_pmf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">streamlines_det</span> <span class="o">=</span> <span class="n">LocalTracking</span><span class="p">(</span><span class="n">direction_getter</span><span class="o">=</span><span class="n">dg_det</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>                                 <span class="n">stopping_criterion</span><span class="o">=</span><span class="n">stopping_criterion_binary</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>                                 <span class="n">seeds</span><span class="o">=</span><span class="n">seeds_mask</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>                                 <span class="n">affine</span><span class="o">=</span><span class="n">affine</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>                                 <span class="n">step_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">streamlines_det</span> <span class="o">=</span> <span class="n">Streamlines</span><span class="p">(</span><span class="n">streamlines_det</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;DeterministicMaximumDirectionGetter&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Deterministic streamlines: 587
 </pre></div>
 </div>
 </div>
@@ -1819,16 +1478,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Scene</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">actor</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">streamlines_det</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colormap</span><span class="o">.</span><span class="n">line_colors</span><span class="p">(</span><span class="n">streamlines_det</span><span class="p">)))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">window</span><span class="o">.</span><span class="n">record</span><span class="p">(</span><span class="n">scene</span><span class="o">=</span><span class="n">scene</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;tractogram_deterministic.png&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;window&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/ef47e2eb26420316c6e6249a7f816db755612a13e3af83c563add2eb70ac5667.png" src="../../_images/ef47e2eb26420316c6e6249a7f816db755612a13e3af83c563add2eb70ac5667.png" />
 </div>
 </div>
 <p>The following alternative visualizations display the corpus callosum streamlines overlaid on T1-weighted anatomical slices (axial at z=35 and sagittal at z=35), with the seed ROI shown as a semi-transparent yellow contour.</p>
@@ -1862,19 +1512,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">38</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Make display objects</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">cc_streamlines_actor</span> <span class="o">=</span> <span class="n">actor</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">streamlines_det</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colormap</span><span class="o">.</span><span class="n">line_colors</span><span class="p">(</span><span class="n">streamlines_det</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">cc_ROI_actor</span> <span class="o">=</span> <span class="n">actor</span><span class="o">.</span><span class="n">contour_from_roi</span><span class="p">(</span><span class="n">seed_mask</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">vol_actor</span> <span class="o">=</span> <span class="n">actor</span><span class="o">.</span><span class="n">slicer</span><span class="p">(</span><span class="n">t1_data</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;actor&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/f7feea880fd13dda2fa89d65f3ae00e2ff95caa4c4d5790c95ce178f9484944b.png" src="../../_images/f7feea880fd13dda2fa89d65f3ae00e2ff95caa4c4d5790c95ce178f9484944b.png" />
 </div>
 </div>
 <p>The sagittal view illustrates these interhemispheric pathways connecting the two hemispheres.</p>
@@ -1889,18 +1527,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">39</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">scene</span><span class="o">.</span><span class="n">set_camera</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">focal_point</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">view_up</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">window</span><span class="o">.</span><span class="n">record</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">scene</span><span class="o">=</span><span class="n">scene</span><span class="p">,</span> <span class="n">n_frames</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">out_path</span><span class="o">=</span><span class="s2">&quot;corpuscallosum_sagittal.png&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;corpuscallosum_sagittal.png&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;scene&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/2ab57f30bf83f4a821a5762646322e9d9971286c80c7f0558b0d25078a032d2f.png" src="../../_images/2ab57f30bf83f4a821a5762646322e9d9971286c80c7f0558b0d25078a032d2f.png" />
 </div>
 </div>
 </section>
@@ -1933,17 +1560,12 @@ Streamline length is a basic metric that provides insight into the spatial exten
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">40</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Compute streamline length distributions (in mm)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">len_det</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">streamlines_det</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">len_prob</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="n">streamlines_prob</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Streamline Statistics:&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;length&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Streamline Statistics:
+Deterministic  — n=  587, mean= 50.3 mm, median= 50.5 mm, std= 23.1 mm
+Probabilistic  — n=  587, mean= 49.7 mm, median= 51.0 mm, std= 23.1 mm
 </pre></div>
 </div>
+<img alt="../../_images/b75f22a4d99ad72aab42c289c9fe0619c6a9027d8ee52be40cc6d84edcbc957b.png" src="../../_images/b75f22a4d99ad72aab42c289c9fe0619c6a9027d8ee52be40cc6d84edcbc957b.png" />
 </div>
 </div>
 <section id="dependencies-in-jupyter-python">
@@ -1961,23 +1583,27 @@ Streamline length is a basic metric that provides insight into the spatial exten
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-01-14T03:00:22.196251+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2025-12-05T00:51:41.858665+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.12.10
+IPython version      : 9.6.0
 
-Compiler    : GCC 14.3.0
+Compiler    : GCC 13.3.0
 OS          : Linux
-Release     : 5.15.0-151-generic
+Release     : 5.4.0-204-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
-matplotlib: 3.10.8
-nibabel   : 5.3.3
-numpy     : 2.3.5
+numpy     : 1.26.4
+nibabel   : 5.3.2
+scipy     : 1.14.1
+fury      : 0.11.0
+dipy      : 1.9.0
+matplotlib: 3.10.7
+IPython   : 9.6.0
 </pre></div>
 </div>
 </div>
