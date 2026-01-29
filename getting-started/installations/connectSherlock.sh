@@ -105,15 +105,15 @@ apptainer run \\
    --fakeroot \\
    --nv \\
    --overlay ~/neurodesktop-overlay.img \\
-   --bind /home/groups/polimeni/neurodesk/local/containers/:/neurodesktop-storage/containers \\
-   --bind /home/groups/polimeni/neurodesk/local/containers/:/neurocommand/local/containers \\
+   --bind \$GROUP_HOME/neurodesk/local/containers/:/neurodesktop-storage/containers \\
+   --bind \$GROUP_HOME/neurodesk/local/containers/:/neurocommand/local/containers \\
    --no-home \\
    --home ~/neurodesktop-home:/home/jovyan \\
    --env CVMFS_DISABLE=true \\
    --env NB_UID=\$(id -u) \\
    --env NB_GID=\$(id -g) \\
    --env NEURODESKTOP_VERSION=latest \\
-   /home/groups/polimeni/neurodesk/neurodesktop_latest.sif \\
+   \$GROUP_HOME/neurodesk/neurodesktop_latest.sif \\
    start-notebook.py --allow-root
 EOF
 chmod +x ~/.neurodesk_setup.sh"
