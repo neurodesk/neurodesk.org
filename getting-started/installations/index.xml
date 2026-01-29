@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Installation Examples on Neurodesk</title><link>https://neurodesk.org/getting-started/installations/</link><description>Recent content in Installation Examples on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/installations/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu 24.04</title><link>https://neurodesk.org/getting-started/installations/ubuntu2404/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/ubuntu2404/</guid><description>&lt;p>On this page we show specific examples of the different ways of how Neurodesk can be installed on a local computer. We start from the highest level using the Neurodesk app, then go lower level via docker, neurocommand and down to the lowest level using neurocontainers. We also show on each level how containers can be streamed via CVMFS or downloaded locally.&lt;/p>
+&lt;h1 id="running-neurodesk-on-a-ubuntu-2404-computer">Running Neurodesk on a Ubuntu 24.04 computer&lt;/h1>
+&lt;p>On a linux machine you have mutliple options to use Neurodesk:&lt;/p></description></item><item><title>Bunya</title><link>https://neurodesk.org/getting-started/installations/bunya/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/bunya/</guid><description>&lt;!-- markdown-link-check-disable -->
+&lt;p>Neurodesk is installed at the University of Queensland&amp;rsquo;s supercomputer &amp;ldquo;Bunya&amp;rdquo;. To access neurodesk tools you need to be in an interactive job (so either start a virtual desktop via Open On-Demand: &lt;a href="https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard" target="_blank" rel="noopener">https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard&lt;/a>) or run:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>salloc --nodes&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0550ae">1&lt;/span> --ntasks-per-node&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0550ae">1&lt;/span> --cpus-per-task&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0550ae">1&lt;/span> --mem&lt;span style="color:#0550ae">=&lt;/span>5G --job-name&lt;span style="color:#0550ae">=&lt;/span>TinyInteractive --time&lt;span style="color:#0550ae">=&lt;/span>01:00:00 --partition&lt;span style="color:#0550ae">=&lt;/span>debug --account&lt;span style="color:#0550ae">=&lt;/span>REPLACE_THIS_WITH_YOUR_AccountString srun --export&lt;span style="color:#0550ae">=&lt;/span>PATH,TERM,HOME,LANG --pty /bin/bash -l&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;!-- markdown-link-check-enable -->
+&lt;p>Then load the neurodesk modules:&lt;/p>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module use /sw/local/rocky8/noarch/neuro/software/neurocommand/local/containers/modules/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">APPTAINER_BINDPATH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>/scratch,/QRISdata&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;p>Now you can list all modules (Neurodesk modules are the first ones in the list):&lt;/p></description></item><item><title>Greatlakes</title><link>https://neurodesk.org/getting-started/installations/greatlakes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/greatlakes/</guid><description>&lt;div>
+ &lt;nav id="TableOfContents">
+ &lt;ul>
+ &lt;li>
+ &lt;ul>
+ &lt;li>&lt;a href="#setup-on-a-desktop">Setup on a desktop&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#setup-on-with-a-jupyter-notebook">Setup on with a jupyter notebook&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+&lt;/nav>
+&lt;/div>
+&lt;h3 id="setup-on-a-desktop">Setup on a desktop&lt;/h3>
+
+
+
+&lt;div class="highlight">
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span style="display:flex;">&lt;span>module &lt;span style="color:#6639ba">load&lt;/span> singularity
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># now change to a directory with enough storage, e.g. /nfs/turbo/username&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone https&lt;span style="color:#1f2328">:&lt;/span>&lt;span style="color:#0550ae">//&lt;/span>github&lt;span style="color:#0550ae">.&lt;/span>com&lt;span style="color:#0550ae">/&lt;/span>neurodesk&lt;span style="color:#0550ae">/&lt;/span>neurocommand&lt;span style="color:#0550ae">.&lt;/span>git 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd neurocommand 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pip3 install &lt;span style="color:#0550ae">-&lt;/span>r neurodesk&lt;span style="color:#0550ae">/&lt;/span>requirements&lt;span style="color:#0550ae">.&lt;/span>txt &lt;span style="color:#0550ae">--&lt;/span>user 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bash build&lt;span style="color:#0550ae">.&lt;/span>sh &lt;span style="color:#0550ae">--&lt;/span>cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bash containers&lt;span style="color:#0550ae">.&lt;/span>sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> SINGULARITY_BINDPATH&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#f6f8fa;background-color:#82071e">`&lt;/span>pwd &lt;span style="color:#0550ae">-&lt;/span>P&lt;span style="color:#f6f8fa;background-color:#82071e">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bash containers&lt;span style="color:#0550ae">.&lt;/span>sh itksnap
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># now select a version of itksnap to install. For this copy and paste the installation&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#0a3069">&amp;#34;module load singularity&amp;#34;&lt;/span> &lt;span style="color:#0550ae">&amp;gt;&amp;gt;&lt;/span> &lt;span style="color:#0550ae">~/.&lt;/span>bashrc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#0a3069">&amp;#34;module use $PWD/local/containers/modules/&amp;#34;&lt;/span> &lt;span style="color:#0550ae">&amp;gt;&amp;gt;&lt;/span> &lt;span style="color:#0550ae">~/.&lt;/span>bashrc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo &lt;span style="color:#0a3069">&amp;#34;export SINGULARITY_BINDPATH=/nfs/,/scratch/&amp;#34;&lt;/span> &lt;span style="color:#0550ae">&amp;gt;&amp;gt;&lt;/span> &lt;span style="color:#0550ae">~/.&lt;/span>bashrc&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>&lt;h3 id="setup-on-with-a-jupyter-notebook">Setup on with a jupyter notebook&lt;/h3>
+&lt;p>Start new Jupyter notebook by entering &amp;ldquo;load singularity&amp;rdquo; in the Module Commands field:&lt;/p></description></item><item><title>Sherlock</title><link>https://neurodesk.org/getting-started/installations/sherlock/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/sherlock/</guid><description>&lt;p>Neurodesk runs on Stanfords supercomputer &amp;ldquo;Sherlock&amp;rdquo; and below are different ways of accessing it.&lt;/p>
+&lt;div>
+ &lt;nav id="TableOfContents">
+ &lt;ul>
+ &lt;li>&lt;a href="#using-neurodesk-on-sherlock-via-ssh">Using Neurodesk on Sherlock via ssh&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#using-neurodesk-containers">Using Neurodesk containers&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#submitting-a-job">Submitting a job:&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#using-gui-applications">Using GUI applications&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#gpu-support">GPU support&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#using-neurodesk-on-sherlock-via-ondemand">Using Neurodesk on Sherlock via Ondemand&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#installing-jupyterlab-plugins">Installing jupyterlab plugins:&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#neuroimaging-visualization-in-the-file-browser-and-notebooks-of-jupyter-lab">Neuroimaging Visualization in the File Browser and notebooks of Jupyter Lab&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#using-containers-inside-a-jupyter-notebook">Using containers inside a jupyter notebook&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#using-niivue-inside-a-jupyter-notebook">Using niivue inside a jupyter notebook:&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#using-neurodesk-via-a-full-neurodesktop-session">Using Neurodesk via a full neurodesktop session&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#downloading-startup-script">downloading startup script&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#starting-session">starting session&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#start-desktop-manually-when-inside-a-job">start desktop manually when inside a job&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#connecting-with-vscode">connecting with VScode&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#connecting-with-cursor">connecting with Cursor&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#using-coding-agents-on-sherlock">using coding agents on sherlock&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#misc">Misc&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#note-on-miniconda">note on miniconda&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#note-on-mriqc">note on MRIQC&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#note-on-afni">note on AFNI&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#data-transfer">Data transfer&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#transfer-files-to-and-from-onedrive">Transfer files to and from Onedrive&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#transfer-files-using-datalad">Transfer files using datalad&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#transfer-files-via-scp">Transfer files via scp&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#managing-neurodesk-on-sherlock">Managing Neurodesk on Sherlock&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#installing-neurodesk-for-a-lab">Installing Neurodesk for a lab&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#installing-additional-containers">Installing additional containers&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#updating-neurodesktop-image">Updating Neurodesktop image&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+&lt;/nav>
+&lt;/div>
+&lt;h2 id="using-neurodesk-on-sherlock-via-ssh">Using Neurodesk on Sherlock via ssh&lt;/h2>
+&lt;h3 id="using-neurodesk-containers">Using Neurodesk containers&lt;/h3>
+&lt;p>Setup your ~/.ssh/config&lt;/p></description></item><item><title>Nectar Virtual Desktop Service</title><link>https://neurodesk.org/getting-started/installations/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/nectar/</guid><description>&lt;p>
+
+&lt;div class="alert alert-info" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+
+ Link to Nectar Virtual Desktop Service: &lt;strong>&lt;a href="https://desktop.rc.nectar.org.au" target="_blank" rel="noopener">https://desktop.rc.nectar.org.au&lt;/a>&lt;/strong>
+
+&lt;/div>
+
+
+
+&lt;div class="alert alert-warning" role="alert">
+
+
+ This option is only available to Australian researchers. See &lt;a href="https://desktop.rc.nectar.org.au/about/" target="_blank" rel="noopener">here&lt;/a> for more information
+
+&lt;/div>
+&lt;/p>
+&lt;p>There are a few differences between the open-source version of Neurodesk and what&amp;rsquo;s hosted on Nectar VDI:&lt;/p>
+&lt;ol>
+&lt;li>There is no &lt;code>/neurodesktop-storage&lt;/code> folder (the folder on the Desktop does not lead anywhere).&lt;/li>
+&lt;li>Files uploaded via drag and drop do not get stored on the desktop but in &lt;code>/home/vdiuser/thinclient_drives/GUACFS&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="instructions-for-use">Instructions for use&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Go to &lt;a href="https://desktop.rc.nectar.org.au/" target="_blank" rel="noopener">https://desktop.rc.nectar.org.au/&lt;/a>&lt;/p></description></item></channel></rss>
