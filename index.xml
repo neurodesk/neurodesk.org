@@ -702,18 +702,18 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
  &lt;li>&lt;a href="#using-neurodesk-on-sherlock-via-ssh">Using Neurodesk on Sherlock via ssh&lt;/a>
  &lt;ul>
  &lt;li>&lt;a href="#using-neurodesk-containers">Using Neurodesk containers&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#submitting-a-job">Submitting a job:&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#submitting-a-job">Submitting a job&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#using-gui-applications">Using GUI applications&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#gpu-support">GPU support&lt;/a>&lt;/li>
  &lt;/ul>
  &lt;/li>
  &lt;li>&lt;a href="#using-neurodesk-on-sherlock-via-ondemand">Using Neurodesk on Sherlock via Ondemand&lt;/a>
  &lt;ul>
- &lt;li>&lt;a href="#installing-jupyterlab-plugins">Installing jupyterlab plugins:&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#installing-jupyterlab-plugins">Installing jupyterlab plugins&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#neuroimaging-visualization-in-the-file-browser-and-notebooks-of-jupyter-lab">Neuroimaging Visualization in the File Browser and notebooks of Jupyter Lab&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#using-containers-inside-a-jupyter-notebook">Using containers inside a jupyter notebook&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#using-niivue-inside-a-jupyter-notebook">Using niivue inside a jupyter notebook:&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#checking-on-slurm-inside-jupyter-lab">Checking on SLURM inside jupyter lab:&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#using-niivue-inside-a-jupyter-notebook">Using niivue inside a jupyter notebook&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#checking-on-slurm-inside-jupyter-lab">Checking on SLURM inside jupyter lab&lt;/a>&lt;/li>
  &lt;/ul>
  &lt;/li>
  &lt;li>&lt;a href="#using-neurodesk-via-a-full-neurodesktop-session">Using Neurodesk via a full neurodesktop session&lt;/a>
@@ -736,6 +736,7 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
  &lt;li>&lt;a href="#data-transfer">Data transfer&lt;/a>
  &lt;ul>
  &lt;li>&lt;a href="#transfer-files-to-and-from-onedrive">Transfer files to and from Onedrive&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#mounting-sherlock-on-your-computer-through-sshfs">mounting sherlock on your computer through sshfs&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#transfer-files-using-datalad">Transfer files using datalad&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#transfer-files-via-scp">Transfer files via scp&lt;/a>&lt;/li>
  &lt;/ul>
