@@ -720,7 +720,7 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
  &lt;ul>
  &lt;li>&lt;a href="#downloading-startup-script">downloading startup script&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#starting-session">starting session&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#start-desktop-manually-when-inside-a-job">start desktop manually when inside a job&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#start-desktop-manually-when-already-inside-a-job">start desktop manually when already inside a job&lt;/a>&lt;/li>
  &lt;/ul>
  &lt;/li>
  &lt;li>&lt;a href="#connecting-with-vscode">connecting with VScode&lt;/a>&lt;/li>
@@ -736,7 +736,7 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
  &lt;li>&lt;a href="#data-transfer">Data transfer&lt;/a>
  &lt;ul>
  &lt;li>&lt;a href="#transfer-files-to-and-from-onedrive">Transfer files to and from Onedrive&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#mounting-sherlock-on-your-computer-through-sshfs">mounting sherlock on your computer through sshfs&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#mounting-sherlock-files-on-your-computer-through-sshfs">mounting sherlock files on your computer through sshfs&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#transfer-files-using-datalad">Transfer files using datalad&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#transfer-files-via-scp">Transfer files via scp&lt;/a>&lt;/li>
  &lt;/ul>
