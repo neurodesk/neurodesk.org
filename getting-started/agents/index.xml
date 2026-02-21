@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scientific Agents on Neurodesk</title><link>https://neurodesk.org/getting-started/agents/</link><description>Recent content in Scientific Agents on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/agents/index.xml" rel="self" type="application/rss+xml"/><item><title>Opencode</title><link>https://neurodesk.org/getting-started/agents/opencode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/agents/opencode/</guid><description>&lt;p>start OpenCode on a terminal with &lt;code>opencode&lt;/code>. Our Opencode wrapper script will walk you through setting it up depending on which models are available to you.&lt;/p>
+&lt;p>You can also configure your own model provider:&lt;/p>
+&lt;ul>
+&lt;li>ctrl+p&lt;/li>
+&lt;li>and select switch model&lt;/li>
+&lt;li>then ctrl+a to connect a different provider&lt;/li>
+&lt;/ul>
+&lt;p>You can also self-host a model in Ollama on your computer (recommended Apple Silicon with at least 64GB RAM). For this install Ollama on your system and start the neurodesktop container with these additional docker parameters:&lt;/p></description></item><item><title>Codex</title><link>https://neurodesk.org/getting-started/agents/codex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/agents/codex/</guid><description>&lt;p>Start codex on a terminal with &lt;code>codex&lt;/code> then authenticate with your OpenAI account. You need to use the Device Code option:
+&lt;img src="https://neurodesk.org/static/docs/agents/codex-device-code.png" alt="codex setup device code"/>
+&lt;/p>
+&lt;p>Then give it a task.&lt;/p></description></item><item><title>Claude Claude</title><link>https://neurodesk.org/getting-started/agents/claude/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/agents/claude/</guid><description>&lt;p>start &lt;code>claude&lt;/code> on a terminal and authenticate with an Anthropic subscription.&lt;/p>
+&lt;p>Note: claude outputs a long URL on the terminal and the jupyterhub terminal unfortunatley adds linebreaks in the URL which render it invalid. To fix this, copy the authentication URL into an editor and manually remove the linebreaks before pasting it into a browser.&lt;/p>
+&lt;p>accept that you trust the folder:
+&lt;img src="https://neurodesk.org/static/docs/agents/claude-trust.png" alt="Claude - trust folder"/>
+&lt;/p>
+&lt;p>Then give it a task and approve the permission requests while it works away:
+&lt;img src="https://neurodesk.org/static/docs/agents/claude-run.png" alt="Claude permissions"/>
+&lt;/p></description></item><item><title>Notebook Intelligence</title><link>https://neurodesk.org/getting-started/agents/notebook_intelligence/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/agents/notebook_intelligence/</guid><description>&lt;p>Start Notebook Intelligence from the side panel:
+&lt;img src="https://neurodesk.org/static/docs/agents/nbi_start.png" alt="Start Notebook Intelligence"/>
+&lt;/p>
+&lt;p>Then connect Github Copilot (or Change the model provider)&lt;/p>
+&lt;p>Switch to agent, select all tools (via the settings button next to the Agent Selector) and give it a task:
+&lt;img src="https://neurodesk.org/static/docs/agents/nbi_tools.png" alt="NBI tools"/>
+&lt;/p>
+&lt;p>You can also ask it to fill in code in specific cells:&lt;/p>
+&lt;p>For a more capable model you can also switch to Claude in the settings:
+&lt;img src="https://neurodesk.org/static/docs/agents/nbi_claude.png" alt="claude"/>
+&lt;/p>
+&lt;p>You can also self-host a model in Ollama on your computer. For this install Ollama on your system and start the neurodesktop container with these additional docker parameters:&lt;/p></description></item></channel></rss>
