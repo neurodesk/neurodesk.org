@@ -1,4 +1,15 @@
 #!/bin/bash
+
+random_tunnel_port() {
+    # macOS does not ship `shuf` by default.
+    if command -v shuf >/dev/null 2>&1; then
+        shuf -i 10000-65000 -n 1
+        return
+    fi
+
+    echo $((10000 + RANDOM % 55001))
+}
+
 function connectSherlock() {
     local LOGIN_NODE="sherlock"
     local JOB_NAME="neurodesktop"
@@ -69,7 +80,12 @@ function connectSherlock() {
     read -r GPU
     GPU=${GPU:-none}
 
-    local MIDDLE_PORT=$(shuf -i 10000-65000 -n 1)
+    local MIDDLE_PORT
+    MIDDLE_PORT=$(random_tunnel_port)
+    if [[ ! "$MIDDLE_PORT" =~ ^[0-9]+$ ]]; then
+        echo "Failed to select a valid tunnel port."
+        return 1
+    fi
     echo "Establishing tunnel via Login Node port: $MIDDLE_PORT"
 
     # --- 3. CHECK LOCAL PORT 8888 ---

@@ -110,7 +110,14 @@ To get started, see: &lt;a href="https://neurodesk.org/docs/getting-started/neur
 &lt;li>CD: pushes images to github &amp;amp; docker registry&lt;/li>
 &lt;/ul>
 &lt;h2 id="neurocommand">Neurocommand:&lt;/h2>
-&lt;p>&lt;em>Neurocommand&lt;/em> offers the option to install and manage multiple distinct containers for more advanced users who prefer a command-line interface. &lt;em>Neurocommand&lt;/em> is the recommended interface for users seeking to use Neurodesk in high performance computing (HPC) environments.&lt;/p></description></item><item><title>Play</title><link>https://neurodesk.org/getting-started/hosted/play/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/play/</guid><description>&lt;p>Neurodesk Play provides instant access to our neuroimaging analysis environment directly through your web browser. This service allows you to:&lt;/p>
+&lt;p>&lt;em>Neurocommand&lt;/em> offers the option to install and manage multiple distinct containers for more advanced users who prefer a command-line interface. &lt;em>Neurocommand&lt;/em> is the recommended interface for users seeking to use Neurodesk in high performance computing (HPC) environments.&lt;/p></description></item><item><title>Opencode</title><link>https://neurodesk.org/getting-started/scigent/opencode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/scigent/opencode/</guid><description>&lt;p>start OpenCode on a terminal with &lt;code>opencode&lt;/code>. Our Opencode wrapper script will walk you through setting it up depending on which models are available to you.&lt;/p>
+&lt;p>You can also configure your own model provider:&lt;/p>
+&lt;ul>
+&lt;li>ctrl+p&lt;/li>
+&lt;li>and select switch model&lt;/li>
+&lt;li>then ctrl+a to connect a different provider&lt;/li>
+&lt;/ul>
+&lt;p>You can also self-host a model in Ollama on your computer (recommended Apple Silicon with at least 64GB RAM). For this install Ollama on your system and start the neurodesktop container with these additional docker parameters:&lt;/p></description></item><item><title>Play</title><link>https://neurodesk.org/getting-started/hosted/play/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/play/</guid><description>&lt;p>Neurodesk Play provides instant access to our neuroimaging analysis environment directly through your web browser. This service allows you to:&lt;/p>
 &lt;ul>
 &lt;li>Start using Neurodesk immediately without any installation.&lt;/li>
 &lt;li>Access a wide range of pre-installed neuroimaging tools.&lt;/li>
@@ -401,7 +408,13 @@ Repositories containing Linux container image contents (that is: container root 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo cvmfs_server update-geodb
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#test&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl --head http://YOUR_IP_OR_DNS/cvmfs/neurodesk.ardc.edu.au/.cvmfspublished&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl --head http://YOUR_IP_OR_DNS/cvmfs/neurodesk.ardc.edu.au/.cvmfspublished
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo crontab -e
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Run CVMFS Stratum 1 Garbage Collection every Sunday at 3:00 AM&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0550ae">0&lt;/span> &lt;span style="color:#0550ae">3&lt;/span> * * &lt;span style="color:#0550ae">0&lt;/span> /usr/bin/cvmfs_server gc -a &amp;gt;&amp;gt; /var/log/cvmfs_gc.log 2&amp;gt;&lt;span style="color:#1f2328">&amp;amp;&lt;/span>&lt;span style="color:#0550ae">1&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div></description></item><item><title>Tutorials have moved to NeurodeskEDU</title><link>https://neurodesk.org/redirects/tutorials-to-neurodeskedu/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/redirects/tutorials-to-neurodeskedu/</guid><description>&lt;p>The tutorials that used to live on this site have been migrated.&lt;/p>
 &lt;p>New home: &lt;a href="https://neurodesk.org/edu" target="_blank" rel="noopener">https://neurodesk.org/edu&lt;/a>&lt;/p>
 &lt;p>Please update any bookmarks/links to point to Neurodesk EDU.&lt;/p></description></item><item><title>Ubuntu 24.04</title><link>https://neurodesk.org/getting-started/installations/ubuntu2404/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/ubuntu2404/</guid><description>&lt;p>On this page we show specific examples of the different ways of how Neurodesk can be installed on a local computer. We start from the highest level using the Neurodesk app, then go lower level via docker, neurocommand and down to the lowest level using neurocontainers. We also show on each level how containers can be streamed via CVMFS or downloaded locally.&lt;/p>
@@ -423,7 +436,10 @@ Repositories containing Linux container image contents (that is: container root 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">APPTAINER_BINDPATH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>/scratch,/QRISdata&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;p>Now you can list all modules (Neurodesk modules are the first ones in the list):&lt;/p></description></item><item><title>Code of Conduct</title><link>https://neurodesk.org/overview/code-of-conduct/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/code-of-conduct/</guid><description>&lt;h2 id="neurodesks-code-of-conduct">Neurodesk&amp;rsquo;s Code of Conduct&lt;/h2>
 &lt;p>Neurodesk is an open, collaborative, and globally distributed initiative dedicated to building accessible tools for neuroimaging and neuroscience research. We value the contributions of individuals from all backgrounds and are committed to cultivating a diverse, inclusive, and respectful environment for everyone.&lt;/p>
-&lt;p>We expect all members of the Neurodesk community to engage respectfully and constructively in all interactions, both public and private. This Code of Conduct outlines our shared values, sets expectations for behavior, and describes pathways for addressing concerns.&lt;/p></description></item><item><title>Contribute to Neurodesk.org</title><link>https://neurodesk.org/developers/documentation/creating-website-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/creating-website-content/</guid><description>&lt;p>This applies if you with to submit a new tutorial or amend content on a page. Our website is mostly written in Markdown (.md files). We include the basics of writing in Markdown on this page.&lt;/p>
+&lt;p>We expect all members of the Neurodesk community to engage respectfully and constructively in all interactions, both public and private. This Code of Conduct outlines our shared values, sets expectations for behavior, and describes pathways for addressing concerns.&lt;/p></description></item><item><title>Codex</title><link>https://neurodesk.org/getting-started/scigent/codex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/scigent/codex/</guid><description>&lt;p>Start codex on a terminal with &lt;code>codex&lt;/code> then authenticate with your OpenAI account. You need to use the Device Code option:
+&lt;img src="codex-device-code.png" alt="codex setup device code"/>
+&lt;/p>
+&lt;p>Then give it a task.&lt;/p></description></item><item><title>Contribute to Neurodesk.org</title><link>https://neurodesk.org/developers/documentation/creating-website-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/creating-website-content/</guid><description>&lt;p>This applies if you with to submit a new tutorial or amend content on a page. Our website is mostly written in Markdown (.md files). We include the basics of writing in Markdown on this page.&lt;/p>
 &lt;h2 id="table-of-contents">Table of contents&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="#create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications">Create your own copy of &lt;em>neurodesk/neurodesk.github.io&lt;/em> repository&lt;/a>&lt;/li>
@@ -598,6 +614,13 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
 &lt;/a>
 
 &lt;/div>
+&lt;/p></description></item><item><title>Claude Claude</title><link>https://neurodesk.org/getting-started/scigent/claude/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/scigent/claude/</guid><description>&lt;p>start &lt;code>claude&lt;/code> on a terminal and authenticate with an Anthropic subscription.&lt;/p>
+&lt;p>Note: claude outputs a long URL on the terminal and the jupyterhub terminal unfortunatley adds linebreaks in the URL which render it invalid. To fix this, copy the authentication URL into an editor and manually remove the linebreaks before pasting it into a browser.&lt;/p>
+&lt;p>accept that you trust the folder:
+&lt;img src="claude-trust.png" alt="alt text"/>
+&lt;/p>
+&lt;p>Then give it a task and approve the permission requests while it works away:
+&lt;img src="claude-run.png" alt="alt text"/>
 &lt;/p></description></item><item><title>Github Codespaces</title><link>https://neurodesk.org/getting-started/hosted/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/github/</guid><description>&lt;p>Start a GitHub Codespace in the repository of your choice:
 &lt;/br>
 &lt;img src="https://neurodesk.org/static/docs/getting-started/hosted/github_codespace.png" alt="Start GitHub Codespace" width="500">&lt;/p>
@@ -868,25 +891,31 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;/div>
 &lt;h2 id="general-overview">&lt;strong>General Overview&lt;/strong>&lt;/h2>
 &lt;h3 id="what-is-neurodesk">What is Neurodesk?&lt;/h3>
-&lt;p>Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code.&lt;/p></description></item><item><title>Visual Studio Code</title><link>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</guid><description>&lt;p>The following guide is for connecting to Neurodesktop using a VS Code installation running on your host machine.&lt;/p>
+&lt;p>Neurodesk provides a containerised data analysis environment to facilitate reproducible analysis of neuroimaging data. Analysis pipelines for neuroimaging data typically rely on specific versions of packages and software, and are dependent on their native operating system. These dependencies mean that a working analysis pipeline may fail or produce different results on a new computer, or even on the same computer after a software update. Neurodesk provides a platform in which anyone, anywhere, using any computer can reproduce your original research findings given the original data and analysis code.&lt;/p></description></item><item><title>Notebook Intelligence</title><link>https://neurodesk.org/getting-started/scigent/notebook_intelligence/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/scigent/notebook_intelligence/</guid><description>&lt;p>Start Notebook Intelligence from the side panel:
+&lt;img src="nbi_start.png" alt="Start Notebook Intelligence"/>
+&lt;/p>
+&lt;p>Then connect Github Copilot (or Change the model provider)&lt;/p>
+&lt;p>Switch to agent, select all tools (via the settings button next to the Agent Selector) and give it a task:
+&lt;img src="nbi_tools.png" alt="NBI tools"/>
+&lt;/p>
+&lt;p>You can also ask it to fill in code in specific cells:&lt;/p>
+&lt;p>For a more capable model you can also switch to Claude in the settings:
+&lt;img src="nbi_claude.png" alt="claude"/>
+&lt;/p>
+&lt;p>You can also self-host a model in Ollama on your computer. For this install Ollama on your system and start the neurodesktop container with these additional docker parameters:&lt;/p></description></item><item><title>Visual Studio Code</title><link>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</guid><description>&lt;p>The following guide is for connecting to Neurodesktop using a VS Code installation running on your host machine.&lt;/p>
 &lt;blockquote>
 &lt;p>Please see additional instructions below if Neurodesktop is running remotely (i.e. Cloud, HPC, VM)&lt;/p>&lt;/blockquote>
 &lt;h2 id="pre-requisites">Pre-requisites&lt;/h2>
 &lt;!-- markdown-link-check-disable -->
 &lt;p>Visual Studio Code &lt;em>(&lt;a href="https://code.visualstudio.com" target="_blank" rel="noopener">https://code.visualstudio.com&lt;/a>)&lt;/em> installed on your host. Standalone version should work fine
-Install the following VS Code extensions:&lt;/p>
+Install the following VS Code extension:&lt;/p>
 &lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker" target="_blank" rel="noopener">Docker extension&lt;/a> (Required)&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank" rel="noopener">Remote development extension pack&lt;/a>. Includes the following extensions
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers" target="_blank" rel="noopener">Remote - Containers&lt;/a> (Required)&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl" target="_blank" rel="noopener">Remote - WSL&lt;/a> (For windows hosts)&lt;/li>
-&lt;/ul>
-&lt;/li>
+&lt;li>Dev Containers ms-vscode-remote.remote-containers from Microsoft&lt;/li>
 &lt;/ul>
 &lt;!-- markdown-link-check-enable -->
 &lt;h2 id="connecting-to-neurodesktop">Connecting to Neurodesktop&lt;/h2>
-&lt;p>Open VS Code and open a Folder (File &amp;gt; Open Folder)&lt;/p></description></item><item><title>Cloud</title><link>https://neurodesk.org/getting-started/neurodesktop/cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/cloud/</guid><description>&lt;h2 id="options-for-running-neurodesk-on-cloud-computing-resources">Options for Running Neurodesk on cloud computing resources&lt;/h2>
+&lt;p>Start Neurodesk through the Neurodeskapp or through a docker command.
+Open VS Code and open the Remote Explorer. Then Attach to the running Neurodesktop container.&lt;/p></description></item><item><title>Cloud</title><link>https://neurodesk.org/getting-started/neurodesktop/cloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/cloud/</guid><description>&lt;h2 id="options-for-running-neurodesk-on-cloud-computing-resources">Options for Running Neurodesk on cloud computing resources&lt;/h2>
 &lt;p>There are a couple of ways how Neurodesktop can be run on cloud computing resources:&lt;/p>
 &lt;ol>
 &lt;li>The first and easiest option is to provision a virtual Linux machine and run docker on this machine similar to a local Linux setup: &lt;a href="https://neurodesk.org/docs/getting-started/neurodesktop/linux/" target="_blank" rel="noopener">https://neurodesk.org/docs/getting-started/neurodesktop/linux/&lt;/a>&lt;/li>

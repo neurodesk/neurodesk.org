@@ -62,16 +62,11 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
 &lt;h2 id="pre-requisites">Pre-requisites&lt;/h2>
 &lt;!-- markdown-link-check-disable -->
 &lt;p>Visual Studio Code &lt;em>(&lt;a href="https://code.visualstudio.com" target="_blank" rel="noopener">https://code.visualstudio.com&lt;/a>)&lt;/em> installed on your host. Standalone version should work fine
-Install the following VS Code extensions:&lt;/p>
+Install the following VS Code extension:&lt;/p>
 &lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker" target="_blank" rel="noopener">Docker extension&lt;/a> (Required)&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank" rel="noopener">Remote development extension pack&lt;/a>. Includes the following extensions
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers" target="_blank" rel="noopener">Remote - Containers&lt;/a> (Required)&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl" target="_blank" rel="noopener">Remote - WSL&lt;/a> (For windows hosts)&lt;/li>
-&lt;/ul>
-&lt;/li>
+&lt;li>Dev Containers ms-vscode-remote.remote-containers from Microsoft&lt;/li>
 &lt;/ul>
 &lt;!-- markdown-link-check-enable -->
 &lt;h2 id="connecting-to-neurodesktop">Connecting to Neurodesktop&lt;/h2>
-&lt;p>Open VS Code and open a Folder (File &amp;gt; Open Folder)&lt;/p></description></item></channel></rss>
+&lt;p>Start Neurodesk through the Neurodeskapp or through a docker command.
+Open VS Code and open the Remote Explorer. Then Attach to the running Neurodesktop container.&lt;/p></description></item></channel></rss>

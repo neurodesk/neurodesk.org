@@ -255,5 +255,11 @@ Repositories containing Linux container image contents (that is: container root 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo cvmfs_server update-geodb
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#test&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl --head http://YOUR_IP_OR_DNS/cvmfs/neurodesk.ardc.edu.au/.cvmfspublished&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl --head http://YOUR_IP_OR_DNS/cvmfs/neurodesk.ardc.edu.au/.cvmfspublished
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo crontab -e
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># Run CVMFS Stratum 1 Garbage Collection every Sunday at 3:00 AM&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0550ae">0&lt;/span> &lt;span style="color:#0550ae">3&lt;/span> * * &lt;span style="color:#0550ae">0&lt;/span> /usr/bin/cvmfs_server gc -a &amp;gt;&amp;gt; /var/log/cvmfs_gc.log 2&amp;gt;&lt;span style="color:#1f2328">&amp;amp;&lt;/span>&lt;span style="color:#0550ae">1&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div></description></item></channel></rss>
