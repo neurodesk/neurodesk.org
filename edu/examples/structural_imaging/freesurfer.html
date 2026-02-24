@@ -1,0 +1,2190 @@
+<!DOCTYPE html><html lang="en" data-content_root="../../"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FreeSurfer — Neurodesk</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079">
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062">
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be">
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b">
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css">
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6">
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e">
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b">
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/structural_imaging/freesurfer';</script>
+    <link rel="canonical" href="https://neurodesk.org/edu/examples/structural_imaging/freesurfer.html">
+    <link rel="icon" href="../../_static/neurodesk_logo.svg">
+    <link rel="index" title="Index" href="../../genindex.html">
+    <link rel="search" title="Search" href="../../search.html">
+    <link rel="next" title="SCT Toolbox" href="sct_toolbox.html">
+    <link rel="prev" title="FreeSurfer: recon-all-clinical" href="freesurfer-recon-all-clinical.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="docsearch:language" content="en">
+  <meta name="author" content="Steffen Bollmann"><meta property="article:author" content="Steffen Bollmann"><meta name="citation_author" content="Steffen Bollmann"></head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox" class="sidebar-toggle" id="pst-primary-sidebar-checkbox">
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox" class="sidebar-toggle" id="pst-secondary-sidebar-checkbox">
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/neurodesk_logo.svg" class="logo__image only-light" alt="Neurodesk - Home">
+    <script>document.write(`<img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark" alt="Neurodesk - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neurodesk.org" title="Return to neurodesk.org" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-house fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Return to neurodesk.org</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../template.html">Example Notebook Template</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../diffusion_imaging/intro.html">Diffusion Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_1.html">Basic Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_2.html">Advanced Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_1.html">MRtrix: Part 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_2.html">MRtrix: Part 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_3.html">MRtrix: Part 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/mrtrix3tissue.html">MRtrix3Tissue</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/deepretinotopy.html">DeepRetinotopy Toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fMRI_tutorial_in_R_magic.html">Resting-State fMRI Analysis in R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fmriprep.html">fMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/intro_to_preprocessing.html">Introduction to Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/mri_vol2surf.html">FreeSurfer: mri_vol2surf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/process_five_echo_dataset.html">tedana: TE Dependent ANAlysis</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantitative_imaging/intro.html">Quantitative Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/aslprep.html">ASLprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/qsmxt.html">QSMxT</a></li>
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Structural Imaging</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="FSL_course_bet.html">FSL course - BET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SYNcro.html">SYNcro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
+
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">FreeSurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sct_toolbox.html">SCT Toolbox</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../workflows/intro.html">Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/MRIQC.html">MRIQC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/Magic_commands.html">Magic Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/PyBIDS.html">PyBIDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/RISE_slideshow.html">RISE Slideshow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/bids_conversion.html">BIDS conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_short.html">Basic Nipype</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/pydra_preproc_ants.html">Pydra</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
+
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/multimodal_imaging/intro.html">Multimodal Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multimodal_imaging/MFCSC.html">Using MFCSC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/programming/conda.html">Conda environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/programming/matlab.html">Matlab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/reproducibility/intro.html">Reproducibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/reproducibility/datalad-run.html">Reproducible script execution with DataLad</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/spectroscopy/lcmodel.html">Spectroscopy with lcmodel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/spectroscopy/mrsiproc.html">Spectroscopy pipeline</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/structural_imaging/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/structural_imaging/structuralconnectivity.html">Structural connectivity dMRI</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Contribute Example Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Contribute Tutorials</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://play.neurodesk.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/structural_imaging/freesurfer.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Australia" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Australia logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Australia</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/structural_imaging/freesurfer.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Europe" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Europe logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Europe</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/structural_imaging/freesurfer.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in America" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in America logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in America</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/structural_imaging/freesurfer.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 1" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 1 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 1</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://edu.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/structural_imaging/freesurfer.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 2" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 2 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 2</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/examples/structural_imaging/freesurfer.ipynb" target="_blank" class="btn btn-sm btn-download-source-button dropdown-item" title="Download source file" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()" class="btn btn-sm btn-download-pdf-button dropdown-item" title="Print to PDF" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>FreeSurfer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-freesurfer">Load FreeSurfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="freesurfer">
+<h1>FreeSurfer<a class="headerlink" href="#freesurfer" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><strong>Author:</strong> Steffen Bollmann</p>
+<p><strong>Date:</strong> 17 Oct 2024</p>
+<section id="id2">
+<h3><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p><strong>License:</strong></p>
+<div style="margin-top: 10px;">
+    <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #0066cc;">
+        <i class="fas fa-balance-scale"></i> MIT License
+    </a>
+</div>
+<p><strong>Note:</strong> If this notebook uses neuroimaging tools from Neurocontainers, those tools retain their original licenses. Please see <a href="https://neurodesk.org/overview/how-to-cite-us/" target="_blank" style="color: #0066cc;">Neurodesk citation guidelines</a> for details.</p>
+</section>
+</section>
+<section id="citation-and-resources">
+<h2>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h2>
+<section id="tools-included-in-this-workflow">
+<h3>Tools included in this workflow<a class="headerlink" href="#tools-included-in-this-workflow" title="Link to this heading">#</a></h3>
+<p><strong>FreeSurfer:</strong></p>
+<ul class="simple">
+<li><p>Fischl B. (2012). FreeSurfer. NeuroImage, 62(2), 774–781. <a class="reference external" href="https://doi.org/10.1016/j.neuroimage.2012.01.021">https://doi.org/10.1016/j.neuroimage.2012.01.021</a></p></li>
+</ul>
+</section>
+<section id="dataset">
+<h3>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h3>
+<p><strong>MP2RAGE T1-weighted average 7T model (human brain model)</strong></p>
+<ul class="simple">
+<li><p>Bollmann, Steffen, Andrew Janke, Lars Marstaller, David Reutens, Kieran O’Brien, and Markus Barth. “MP2RAGE T1-weighted average 7T model” January 1, 2017. <a class="reference external" href="https://espace.library.uq.edu.au/view/UQ:480383">doi:10.14264/uql.2017.266</a></p></li>
+</ul>
+</section>
+</section>
+<section id="load-freesurfer">
+<h2>Load FreeSurfer<a class="headerlink" href="#load-freesurfer" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can use module to load freesurfer in a specific version</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">module</span>
+<span class="k">await</span> <span class="n">module</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'freesurfer/8.1.0'</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">module</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['freesurfer/8.1.0']
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Request a freesurfer license and store it in your homedirectory. This is just an exampe - please replace with your license id:</span>
+<span class="o">!</span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Steffen.Bollmann@cai.uq.edu.au"</span><span class="w"> </span>&gt;<span class="w"> </span>~/.license
+<span class="o">!</span><span class="nb">echo</span><span class="w"> </span><span class="s2">"21029"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.license
+<span class="o">!</span><span class="nb">echo</span><span class="w"> </span><span class="s2">"*Cqyn12sqTCxo"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.license
+<span class="o">!</span><span class="nb">echo</span><span class="w"> </span><span class="s2">"FSxgcvGkNR59Y"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.license
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>recon-all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>USAGE: recon-all
+
+ Required Arguments:
+   -subjid &lt;subjid&gt;
+   -&lt;process directive&gt;
+
+ Fully-Automated Directive:
+  -all           : performs all stages of cortical reconstruction
+  -autorecon-all : same as -all
+
+ Manual-Intervention Workflow Directives:
+  -autorecon1    : process stages 1-5 (see below)
+  -autorecon2    : process stages 6-23
+                   after autorecon2, check white surfaces:
+                     a. if wm edit was required, then run -autorecon2-wm
+                     b. if control points added, then run -autorecon2-cp
+                     c. proceed to run -autorecon3
+  -autorecon2-cp : process stages 12-23 (uses -f w/ mri_normalize, -keep w/ mri_seg)
+  -autorecon2-wm : process stages 15-23
+  -autorecon2-inflate1 : 6-18
+  -autorecon2-perhemi : tess, sm1, inf1, q, fix, sm2, inf2, finalsurf, ribbon
+  -autorecon3    : process stages 24-34
+                     if edits made to correct pial, then run -autorecon-pial
+  -hemi ?h       : just do lh or rh (default is to do both)
+
+  Autorecon Processing Stages (see -autorecon# flags above):
+    1.  Motion Correction and Conform
+    2.  NU (Non-Uniform intensity normalization)
+    3.  Talairach transform computation
+    4.  Intensity Normalization 1
+    5.  Skull Strip
+
+    6.  EM Register (linear volumetric registration)
+    7.  CA Intensity Normalization
+    8.  CA Non-linear Volumetric Registration 
+    9.  Remove neck
+    10. EM Register, with skull
+    11. CA Label (Aseg: Volumetric Labeling) and Statistics
+
+    12. Intensity Normalization 2 (start here for control points)
+    13. White matter segmentation
+    14. Edit WM With ASeg
+    15. Fill (start here for wm edits)
+    16. Tessellation (begins per-hemisphere operations)
+    17. Smooth1
+    18. Inflate1
+    19. QSphere
+    20. Automatic Topology Fixer
+    21. White Surfs (start here for brain edits for pial surf)
+    22. Smooth2
+    23. Inflate2
+
+    24. Spherical Mapping
+    25. Spherical Registration 
+    26. Spherical Registration, Contralater hemisphere
+    27. Map average curvature to subject
+    28. Cortical Parcellation (Labeling)
+    29. Cortical Parcellation Statistics
+    30. Pial Surfs
+    31. WM/GM Contrast
+    32. Cortical Ribbon Mask
+    33. Cortical Parcellation mapped to ASeg
+    34  Brodmann and exvio EC labels
+
+ Step-wise Directives
+  See -help
+
+ Expert Preferences
+  -pons-crs C R S : col, row, slice of seed point for pons, used in fill
+  -cc-crs C R S : col, row, slice of seed point for corpus callosum, used in fill
+  -lh-crs C R S : col, row, slice of seed point for left hemisphere, used in fill
+  -rh-crs C R S : col, row, slice of seed point for right hemisphere, used in fill
+  -nofill        : do not use the automatic subcort seg to fill
+  -watershed cmd : control skull stripping/watershed program
+  -xmask file : custom external brain mask to replace automated skullstripping
+  -wsless : decrease watershed threshold (leaves less skull, but can strip more brain)
+  -wsmore : increase watershed threshold (leaves more skull, but can strip less brain)
+  -wsatlas : use atlas when skull stripping
+  -no-wsatlas : do not use atlas when skull stripping
+  -no-wsgcaatlas : do not use GCA atlas when skull stripping
+  -wsthresh pct : explicity set watershed threshold
+  -wsseed C R S : identify an index (C, R, S) point in the skull
+  -norm3diters niters : number of 3d iterations for mri_normalize
+  -normmaxgrad maxgrad : max grad (-g) for mri_normalize. Default is 1.
+  -norm1-b N : in the _first_ usage of mri_normalize, use control 
+               point with intensity N below target (default=10.0) 
+  -norm2-b N : in the _second_ usage of mri_normalize, use control 
+               point with intensity N below target (default=10.0) 
+  -norm1-n N : in the _first_ usage of mri_normalize, do N number 
+               of iterations
+  -norm2-n N : in the _second_ usage of mri_normalize, do N number 
+               of iterations
+  -cm           : conform volumes to the min voxel size 
+  -no-fix-with-ga : do not use genetic algorithm when fixing topology
+  -fix-diag-only  : topology fixer runs until ?h.defect_labels files
+                    are created, then stops
+  -seg-wlo wlo : set wlo value for mri_segment and mris_make_surfaces
+  -seg-ghi ghi : set ghi value for mri_segment and mris_make_surfaces
+  -nothicken   : pass '-thicken 0' to mri_segment
+  -no-ca-align-after : turn off -align-after with mri_ca_register
+  -no-ca-align : turn off -align with mri_ca_label
+  -deface      : deface subject, written to orig_defaced.mgz
+
+  -expert file     : read-in expert options file
+  -xopts-use       : use pre-existing expert options file
+  -xopts-clean     : delete pre-existing expert options file
+  -xopts-overwrite : overwrite pre-existing expert options file
+  -termscript script : run script before exiting (multiple -termscript flags possible)
+   This can be good for running custom post-processing after recon-all
+   The script must be in your path. The subjid is passed as the only argument
+   The current directory is changed to SUBJECTS_DIR before the script is run
+   The script should exit with 0 unless there is an error
+
+  -mprage : assume scan parameters are MGH MP-RAGE protocol
+  -washu_mprage : assume scan parameters are Wash.U. MP-RAGE protocol.
+                  both mprage flags affect mri_normalize and mri_segment,
+                  and assumes a darker gm.
+  -schwartzya3t-atlas : for tal reg, use special young adult 3T atlas
+
+  -threads num  : set number of threads to use
+
+ Notification Files (Optional)
+  -waitfor file : wait for file to appear before beginning
+  -notify  file : create this file after finishing
+
+ Status and Log files (Optional)
+  -log     file : default is scripts/recon-all.log
+  -status  file : default is scripts/recon-all-status.log
+  -noappend     : start new log and status files instead of appending
+  -no-isrunning : do not check whether this subject is currently being processed
+
+ Segmentation of substructures of hippocampus and brainstem 
+ (These deprecated; please see segmentHA_T1.sh, segmentHA_T1.sh, segmentHA_T1_long.sh, segmentBS.sh)
+  -hippocampal-subfields-T1 : segmentation of hippocampal subfields using input T1 scan
+  -hippocampal-subfields-T2 file ID : segmentation using an additional scan (given by file);
+                                      ID is a user-defined identifier for the analysis
+  -hippocampal-subfields-T1T2 file ID : segmentation using additional scan (given by file) and input T1
+                                        simultaneously; ID is a user-defined identifier for the analysis
+  -brainstem-structures : segmentation of brainstem structures
+
+ Other Arguments (Optional)
+  -sd subjectsdir : specify subjects dir (default env SUBJECTS_DIR)
+  -mail username  : mail user when done
+  -umask umask    : set unix file permission mask (default 002)
+  -grp groupid    : check that current group is alpha groupid 
+  -onlyversions   : print version of each binary and exit
+  -debug          : print out lots of info
+  -allowcoredump  : set coredump limit to unlimited
+  -dontrun        : do everything but execute each command
+  -version        : print version of this script and exit
+  -help           : voluminous bits of wisdom
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="download-data">
+<h2>Download data<a class="headerlink" href="#download-data" title="Link to this heading">#</a></h2>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">![</span><span class="w"> </span>-f<span class="w"> </span>./mp2rage.nii<span class="w">  </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$FILE</span><span class="s2"> exist."</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>wget<span class="w"> </span>https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii<span class="w"> </span>-O<span class="w"> </span>./mp2rage.nii<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-02-15 23:01:08--  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Resolving imaging.org.au (imaging.org.au)... 203.101.229.7
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1536000352 (1.4G) [application/octet-stream]
+Saving to: ‘./mp2rage.nii’
+
+./mp2rage.nii       100%[===================&gt;]   1.43G  9.13MB/s    in 2m 42s  
+
+2026-02-15 23:03:53 (9.05 MB/s) - ‘./mp2rage.nii’ saved [1536000352/1536000352]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FSL_course_bet.ipynb			intro.md
+SYNcro.ipynb				mp2rage.nii
+brain_extraction_different_tools.ipynb	preCourse.tar.gz
+freesurfer-recon-all-clinical.ipynb	sct_toolbox.ipynb
+freesurfer.ipynb
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="run">
+<h2>Run<a class="headerlink" href="#run" title="Link to this heading">#</a></h2>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+
+#setup freesurfer
+export SUBJECTS_DIR=$PWD/freesurfer-output
+mkdir $SUBJECTS_DIR
+export SINGULARITYENV_SUBJECTS_DIR=$SUBJECTS_DIR
+export APPTAINERENV_SUBJECTS_DIR=$SUBJECTS_DIR
+
+#when using freesurfer &gt;8.0.0
+export FS_ALLOW_DEEP=1
+export APPTAINERENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
+export SINGULARITYENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
+
+export FS_LICENSE=~/.license 
+
+recon-all -subject subjectname -i mp2rage.nii -all -sd $SUBJECTS_DIR
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Adding options -fix-ento-wm -transfer-base-bfs -fix-vsinus -fix-mca-dura -fix-ga -fix-acj -synthstrip -synthseg -synthmorph 
+fs-check-version --s subjectname --o /tmp/tmp.o5gfWt
+Sun Feb 15 11:04:06 PM UTC 2026
+
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output
+cd /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging
+/opt/freesurfer-8.1.0/bin/fs-check-version --s subjectname --o /tmp/tmp.o5gfWt
+-rwxr-xr-x 1 nobody nogroup 18565 Jul 19  2025 /opt/freesurfer-8.1.0/bin/fs-check-version
+
+freesurfer-linux-ubuntu22_x86_64-8.1.0-20250719-f30dfed
+$Id$
+Linux jupyter-monidoerig 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+pid 327737
+Current FS Version freesurfer-linux-ubuntu22_x86_64-8.1.0-20250719-f30dfed
+Subject does not have a bstampfile, copying /opt/freesurfer-8.1.0/build-stamp.txt
+Subject FS Version: freesurfer-linux-ubuntu22_x86_64-8.1.0-20250719-f30dfed
+No constraints on version because REQ=UnSet and FsVerFile=NotThere
+#@#% fs-check-version match = 1
+fs-check-version Done
+INFO: SUBJECTS_DIR is /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output
+Actual FREESURFER_HOME /opt/freesurfer-8.1.0
+Linux jupyter-monidoerig 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+/home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname
+
+ mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/mp2rage.nii /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig/001.mgz 
+
+mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/mp2rage.nii /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig/001.mgz 
+INFO: using NIfTI-1 sform (sform_code=1)
+reading from /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/mp2rage.nii...
+TR=0.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (1, 0, 0)
+j_ras = (0, 1, 0)
+k_ras = (0, 0, 1)
+writing to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig/001.mgz...
+#--------------------------------------------
+#@# MotionCor Sun Feb 15 11:06:39 PM UTC 2026
+Found 1 runs
+/home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig/001.mgz
+Checking for (invalid) multi-frame inputs...
+Only one run found so motion
+correction will not be performed. I'll
+copy the run to rawavg and continue.
+
+ cp /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig/001.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz 
+
+
+ mri_info /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz 
+
+rawavg.mgz ========================================
+Volume information for /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz
+          type: MGH
+        intent: MRI (0)
+    dimensions: 640 x 750 x 800
+   voxel sizes: 0.300000, 0.300000, 0.300000
+          type: FLOAT (3)
+           fov: 240.000
+           dof: 1
+        xstart: -96.0, xend: 96.0
+        ystart: -112.5, yend: 112.5
+        zstart: -120.0, zend: 120.0
+            TR: 0.00 msec, TE: 0.00 msec, TI: 0.00 msec, flip angle: 0.00 degrees
+       nframes: 1
+       PhEncDir: UNKNOWN
+       FieldStrength: 0.000000
+ras xform present
+    xform info: x_r =   1.0000, y_r =   0.0000, z_r =   0.0000, c_r =     0.3750
+              : x_a =   0.0000, y_a =   1.0000, z_a =   0.0000, c_a =     0.3750
+              : x_s =   0.0000, y_s =   0.0000, z_s =   1.0000, c_s =     0.3750
+
+talairach xfm : 
+Orientation   : RAS
+Primary Slice Direction: axial
+
+voxel to ras transform:
+                0.3000   0.0000   0.0000   -95.6250
+                0.0000   0.3000   0.0000  -112.1250
+                0.0000   0.0000   0.3000  -119.6250
+                0.0000   0.0000   0.0000     1.0000
+
+voxel-to-ras determinant 0.027
+
+ras to voxel transform:
+                3.3333   0.0000   0.0000   318.7500
+                0.0000   3.3333   0.0000   373.7500
+                0.0000   0.0000   3.3333   398.7500
+                0.0000   0.0000   0.0000     1.0000
+/home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname
+
+ mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --conform 
+
+mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --conform 
+reading from /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz...
+TR=0.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (1, 0, 0)
+j_ras = (0, 1, 0)
+k_ras = (0, 0, 1)
+volume geometry:
+valid   : -1313717184
+extent  : (256, 256, 256)
+voxel   : ( 1.0000,  1.0000,  1.0000)
+x_(ras) : (-1.0000,  0.0000,  0.0000)
+y_(ras) : ( 0.0000,  0.0000, -1.0000)
+z_(ras) : ( 0.0000,  1.0000,  0.0000)
+c_(ras) : ( 0.3750,  0.3750,  0.3750)
+shears  : ( 0.0000,  0.0000,  0.0000)
+file    : /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz
+changing data type from float to uchar (noscale = 0)...
+MRIchangeType: Building histogram 0 255 1000, flo=0, fhi=0.999, dest_type=0
+Reslicing using trilinear interpolation 
+writing to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz...
+
+ mri_add_xform_to_header -c /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/talairach.xfm /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz 
+
+INFO: extension is mgz
+
+ mri_info /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz 
+
+orig.mgz ========================================
+Volume information for /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz
+          type: MGH
+        intent: MRI (0)
+    dimensions: 256 x 256 x 256
+   voxel sizes: 1.000000, 1.000000, 1.000000
+          type: UCHAR (0)
+           fov: 256.000
+           dof: 1
+        xstart: -128.0, xend: 128.0
+        ystart: -128.0, yend: 128.0
+        zstart: -128.0, zend: 128.0
+            TR: 0.00 msec, TE: 0.00 msec, TI: 0.00 msec, flip angle: 0.00 degrees
+       nframes: 1
+       PhEncDir: UNKNOWN
+       FieldStrength: 0.000000
+ras xform present
+    xform info: x_r =  -1.0000, y_r =   0.0000, z_r =   0.0000, c_r =     0.3750
+              : x_a =   0.0000, y_a =   0.0000, z_a =   1.0000, c_a =     0.3750
+              : x_s =   0.0000, y_s =  -1.0000, z_s =   0.0000, c_s =     0.3750
+
+talairach xfm : /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/talairach.xfm
+Orientation   : LIA
+Primary Slice Direction: coronal
+
+voxel to ras transform:
+               -1.0000   0.0000   0.0000   128.3750
+                0.0000   0.0000   1.0000  -127.6250
+                0.0000  -1.0000   0.0000   128.3750
+                0.0000   0.0000   0.0000     1.0000
+
+voxel-to-ras determinant -1
+
+ras to voxel transform:
+               -1.0000  -0.0000  -0.0000   128.3750
+               -0.0000  -0.0000  -1.0000   128.3750
+               -0.0000   1.0000  -0.0000   127.6250
+               -0.0000  -0.0000  -0.0000     1.0000
+lta_convert --inlta identity.nofile --src /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz --trg /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --outlta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg2orig.lta --subject subjectname
+8.1.0
+
+--inlta: identity.nofile input LTA transform.
+--src: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg.mgz src image (geometry).
+--trg: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz trg image (geometry).
+--outlta: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg2orig.lta output LTA.
+--s: subjectname subject name
+ LTA read, type : 1
+ 1.00000   0.00000   0.00000   0.00000;
+ 0.00000   1.00000   0.00000   0.00000;
+ 0.00000   0.00000   1.00000   0.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+setting subject to subjectname
+Writing  LTA to file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/rawavg2orig.lta...
+lta_convert successful.
+
+ mri_synthstrip --threads 1 -i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz -o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/synthstrip.mgz 
+
+Configuring model on the CPU
+Running SynthStrip model version 1
+Input image read from: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz
+Processing frame (of 1): 1 done
+Masked image saved to: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/synthstrip.mgz
+
+If you use SynthStrip in your analysis, please cite:
+----------------------------------------------------
+SynthStrip: Skull-Stripping for Any Brain Image
+A Hoopes, JS Mora, AV Dalca, B Fischl, M Hoffmann
+NeuroImage 206 (2022), 119474
+https://doi.org/10.1016/j.neuroimage.2022.119474
+
+Website: https://synthstrip.io
+
+
+ mri_synthseg --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/synthseg.rca.mgz --threads 1 --vol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/stats/synthseg.vol.csv --keepgeom --addctab --cpu 
+
+SynthSeg 2.0
+using CPU, hiding all CUDA_VISIBLE_DEVICES
+using 1 thread
+addctab  True
+predicting 1/1
+1/1 [==============================] - 861s 861s/step
+Reslicing to have same geom as the input [1. 1. 1.]
+
+segmentation  saved in:    /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/synthseg.rca.mgz
+volumes saved in:          /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/stats/synthseg.vol.csv
+
+#@# mri_synthseg vmpeak  17950540
+
+If you use this tool in a publication, please cite:
+SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining
+B. Billot, D.N. Greve, O. Puonti, A. Thielscher, K. Van Leemput, B. Fischl, A.V. Dalca, J.E. Iglesias
+Medical Image Analysis, 2023.
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri ~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms ~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+Sun Feb 15 11:35:46 PM UTC 2026
+
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output
+cd /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname
+/opt/freesurfer-8.1.0/bin/fs-synthmorph-reg --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/synthstrip.mgz --t /opt/freesurfer-8.1.0/average/mni305.cor.stripped.mgz --affine-only --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305 --threads 1
+-rwxr-xr-x 1 nobody nogroup 30890 Jul 19  2025 /opt/freesurfer-8.1.0/bin/fs-synthmorph-reg
+
+freesurfer-linux-ubuntu22_x86_64-8.1.0-20250719-f30dfed
+$Id$
+Linux jupyter-monidoerig 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+pid 328357
+Sun Feb 15 11:35:48 PM UTC 2026
+
+
+
+mri_synthmorph -m affine -t /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305/aff.lta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/synthstrip.mgz /usr/local/freesurfer/8.1.0/average/mni305.cor.stripped.mgz -j 1
+#@# mri_synthmorph: affine, threads: 1, VmPeak: 6647424
+Thank you for choosing SynthMorph. Please cite us!
+
+SynthMorph: learning contrast-invariant registration without acquired images
+Hoffmann M, Billot B, Greve DN, Iglesias JE, Fischl B, Dalca AV
+IEEE Transactions on Medical Imaging, 41 (3), 543-558, 2022
+https://doi.org/10.1109/TMI.2021.3116879
+
+Anatomy-specific acquisition-agnostic affine registration learned from
+fictitious images
+Hoffmann M, Hoopes A, Fischl B*, Dalca AV* (*equal contribution)
+SPIE Medical Imaging: Image Processing, 12464, 1246402, 2023
+https://doi.org/10.1117/12.2653251
+https://synthmorph.io/#papers (PDF)
+
+Anatomy-aware and acquisition-agnostic joint registration with SynthMorph
+Hoffmann M, Hoopes A, Greve DN, Fischl B*, Dalca AV* (*equal contribution)
+Imaging Neuroscience, 2, 1-33, 2024
+https://doi.org/10.1162/imag_a_00197
+
+Website: https://synthmorph.io
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305 ~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+lta_convert --invert --inlta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305/aff.lta --outlta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305/reg.targ_to_invol.lta
+8.1.0
+
+--invert: will invert transform.
+--inlta: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305/aff.lta input LTA transform.
+--outlta: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305/reg.targ_to_invol.lta output LTA.
+ LTA read, type : 1
+ 1.04569   0.00323   0.00594  -0.07553;
+ 0.00904   0.96688   0.33561  -10.03954;
+-0.00261  -0.32509   1.08153  -23.69741;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305/reg.targ_to_invol.lta...
+lta_convert successful.
+
+
+
+
+To check affine registration
+tkregisterfv --mov /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/synthstrip.mgz --targ /usr/local/freesurfer/8.1.0/average/mni305.cor.stripped.mgz --reg /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.mni305/aff.lta
+
+AffineOnly specified, so exiting now
+ 
+Started at Sun Feb 15 11:35:46 PM UTC 2026 
+Ended   at Sun Feb 15 11:38:45 PM UTC 2026
+Fs-Synthmorph-Reg-Run-Time-Sec 179
+Fs-Synthmorph-Reg-Run-Time-Min 2.98
+Fs-Synthmorph-Reg-Run-Time-Hours 0.05
+ 
+fs-synthmorph-reg Done
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms ~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+8.1.0
+
+--ltavox2vox: output LTA as VOX_TO_VOX transform.
+--inlta: synthmorph.mni305/aff.lta input LTA transform.
+--outlta: talairach.xfm.lta output LTA.
+ LTA read, type : 1
+ 1.04569   0.00323   0.00594  -0.07553;
+ 0.00904   0.96688   0.33561  -10.03954;
+-0.00261  -0.32509   1.08153  -23.69741;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file talairach.xfm.lta...
+lta_convert successful.
+8.1.0
+
+--inlta: talairach.xfm.lta input LTA transform.
+--outmni: talairach.xfm output MNI/XFM matrix.
+ LTA read, type : 1
+ 1.04569   0.00323   0.00594  -0.07552;
+ 0.00904   0.96688   0.33561  -10.03953;
+-0.00261  -0.32509   1.08153  -23.69742;
+ 0.00000   0.00000   0.00000   1.00000;
+lta_convert successful.
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname 
+
+ fs-synthmorph-reg --s subjectname --threads 1 --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --test 
+
+Sun Feb 15 11:38:49 PM UTC 2026
+
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output
+cd /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname
+/opt/freesurfer-8.1.0/bin/fs-synthmorph-reg --s subjectname --threads 1 --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --test
+-rwxr-xr-x 1 nobody nogroup 30890 Jul 19  2025 /opt/freesurfer-8.1.0/bin/fs-synthmorph-reg
+
+freesurfer-linux-ubuntu22_x86_64-8.1.0-20250719-f30dfed
+$Id$
+Linux jupyter-monidoerig 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+pid 328530
+mri_mask -bb 3 /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz
+cropping npad = 3
+DoAbs = 0
+Computing bounding box, npad = 3, 3, 3, 3, 3, 3
+34 6 13  188 245 230
+maskval=0, outval=0
+Writing masked volume to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz...done.
+lta_convert --inlta identity.nofile --src /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz --trg /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --outlta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta
+8.1.0
+
+--inlta: identity.nofile input LTA transform.
+--src: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz src image (geometry).
+--trg: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz trg image (geometry).
+--outlta: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta output LTA.
+ LTA read, type : 1
+ 1.00000   0.00000   0.00000   0.00000;
+ 0.00000   1.00000   0.00000   0.00000;
+ 0.00000   0.00000   1.00000   0.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta...
+lta_convert successful.
+Sun Feb 15 11:38:55 PM UTC 2026
+
+
+
+mri_synthmorph -m affine -t /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/aff.lta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.cropped.nii.gz -j 1
+#@# mri_synthmorph: affine, threads: 1, VmPeak: 6618432
+Thank you for choosing SynthMorph. Please cite us!
+
+SynthMorph: learning contrast-invariant registration without acquired images
+Hoffmann M, Billot B, Greve DN, Iglesias JE, Fischl B, Dalca AV
+IEEE Transactions on Medical Imaging, 41 (3), 543-558, 2022
+https://doi.org/10.1109/TMI.2021.3116879
+
+Anatomy-specific acquisition-agnostic affine registration learned from
+fictitious images
+Hoffmann M, Hoopes A, Fischl B*, Dalca AV* (*equal contribution)
+SPIE Medical Imaging: Image Processing, 12464, 1246402, 2023
+https://doi.org/10.1117/12.2653251
+https://synthmorph.io/#papers (PDF)
+
+Anatomy-aware and acquisition-agnostic joint registration with SynthMorph
+Hoffmann M, Hoopes A, Greve DN, Fischl B*, Dalca AV* (*equal contribution)
+Imaging Neuroscience, 2, 1-33, 2024
+https://doi.org/10.1162/imag_a_00197
+
+Website: https://synthmorph.io
+Sun Feb 15 11:40:48 PM UTC 2026
+
+
+
+mri_concatenate_lta -invert1 -invertout /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/aff.lta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.invol_to_croptarg.lta
+invert the first LTA before applying it 
+invert the output LTA
+Read individual LTAs
+Warning: dst volume of lta1 doesn't match src volume of lta2
+Volume geometry for lta1-dst: 
+volume geometry:
+extent  : (188, 245, 230)
+voxel   : ( 1.0000,  1.0000,  1.0000)
+x_(ras) : (-1.0000,  0.0000,  0.0000)
+y_(ras) : ( 0.0000,  0.0000, -1.0000)
+z_(ras) : ( 0.0000,  1.0000,  0.0000)
+c_(ras) : ( 0.3750,  0.3750, -0.1250)
+shears  : ( 0.0000,  0.0000,  0.0000)
+file    : none
+Volume geometry for lta2-src:
+volume geometry:
+extent  : (188, 245, 230)
+voxel   : ( 1.0000,  1.0000,  1.0000)
+x_(ras) : (-1.0000,  0.0000,  0.0000)
+y_(ras) : ( 0.0000,  0.0000, -1.0000)
+z_(ras) : ( 0.0000,  1.0000,  0.0000)
+c_(ras) : ( 0.3750,  0.3750, -0.1250)
+shears  : ( 0.0000,  0.0000,  0.0000)
+file    : /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz
+Combining the two LTAs to get a RAS-to-RAS from src of LTA1 to dst of LTA2...
+Inverting output LTA
+Writing combined LTA to file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.invol_to_croptarg.lta...
+mri_concatenate_lta successful.
+
+
+
+mri_concatenate_lta -invert2 /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/reg.1.0mm.to.1.0mm.cropped.lta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.invol_to_croptarg.lta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta
+invert the second LTA before applying it 
+Read individual LTAs
+Combining the two LTAs to get a RAS-to-RAS from src of LTA1 to dst of LTA2...
+Writing combined LTA to file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta...
+mri_concatenate_lta successful.
+
+
+
+lta_convert --invert --inlta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta --outlta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta
+8.1.0
+
+--invert: will invert transform.
+--inlta: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta input LTA transform.
+--outlta: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta output LTA.
+ LTA read, type : 1
+ 0.91413   0.00333  -0.00726   0.49654;
+-0.01463   0.90958  -0.23624   1.82455;
+-0.00540   0.27808   0.79995   22.73711;
+ 0.00000   0.00000   0.00000   1.00000;
+Writing  LTA to file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta...
+lta_convert successful.
+
+
+
+lta_convert --inlta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta --outmni /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.xfm
+8.1.0
+
+--inlta: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta input LTA transform.
+--outmni: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.xfm output MNI/XFM matrix.
+ LTA read, type : 1
+ 1.09389  -0.00646   0.00802  -0.71376;
+ 0.01789   1.00826   0.29793  -8.62249;
+ 0.00116  -0.35054   1.14657  -25.43064;
+ 0.00000   0.00000   0.00000   1.00000;
+lta_convert successful.
+
+
+
+
+To check affine registration
+tkregisterfv --mov /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz --targ /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.nii.gz --reg /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.invol_to_targ.lta
+
+
+
+
+mri_synthmorph -m deform -t /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/deform.mgz -i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/aff.lta /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.cropped.nii.gz -j 1 -o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/synthmorph.out.mgz
+#@# mri_synthmorph: deform, threads: 1, VmPeak: 15244668
+Thank you for choosing SynthMorph. Please cite us!
+
+SynthMorph: learning contrast-invariant registration without acquired images
+Hoffmann M, Billot B, Greve DN, Iglesias JE, Fischl B, Dalca AV
+IEEE Transactions on Medical Imaging, 41 (3), 543-558, 2022
+https://doi.org/10.1109/TMI.2021.3116879
+
+Anatomy-specific acquisition-agnostic affine registration learned from
+fictitious images
+Hoffmann M, Hoopes A, Fischl B*, Dalca AV* (*equal contribution)
+SPIE Medical Imaging: Image Processing, 12464, 1246402, 2023
+https://doi.org/10.1117/12.2653251
+https://synthmorph.io/#papers (PDF)
+
+Anatomy-aware and acquisition-agnostic joint registration with SynthMorph
+Hoffmann M, Hoopes A, Greve DN, Fischl B*, Dalca AV* (*equal contribution)
+Imaging Neuroscience, 2, 1-33, 2024
+https://doi.org/10.1162/imag_a_00197
+
+Website: https://synthmorph.io
+
+
+mri_warp_convert --inras /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/deform.mgz --insrcgeom /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz --outm3z /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz --vg-thresh 1e-5 --lta1-inv /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/reg.crop-to-invol.lta --lta2 /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/reg.1.0mm.cropped.to.1.0mm.lta
+8.1.0
+
+--inras: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/deform.mgz input RAS warp.
+--insrcgeom: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/invol.crop.nii.gz atlas/source image (used for geometry).
+--outm3z: /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz output M3Z.
+Setting vg_isEqual_Threshold to 0.000010
+Applying LTAs to the GCAM
+GCAMwrite(/home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz)
+[INFO] Warpfield::convert(): converting GCAM ...
+[INFO] Warpfield::convert(): gcam       [193 x 229 x 193]
+[INFO] Warpfield::convert(): gcam image [256 x 256 x 256]
+[INFO] Warpfield::convert(): gcam atlas [193 x 229 x 193]
+[INFO] Warpfield::convert(): total out of range voxel count: 0
+[INFO] niiWrite(): MGZ_INTENT_WARPMAP =&gt; NIFTI_INTENT_DISPVECT, intent_code = 1006, dimensions = {5, 193, 229, 193, 1, 3, 1, 1}
+[INFO] niiWrite(): convert displacement from 0 to 3
+mri_warp_convert successful.
+
+
+mri_ca_register -invert-and-save /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.inv.nii.gz
+INFO: using NIfTI-1 sform (sform_code=1)
+Loading gcam
+[INFO] niiRead(): intent_code = 1006, dimensions = {5, 193, 229, 193, 1, 3, 1, 1}
+[DEBUG] Warpfield::read() gcam-&gt;status = GCAM_LABELED
+setting orig areas to linear transform determinant scaled 1.00
+Computing inverse of GCAM
+Filling inverse of GCAM
+Allocating inv_gcam...(256, 256, 256)
+Saving inverse to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.inv.nii.gz
+GCAMwrite(/home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.inv.nii.gz)
+[INFO] Warpfield::convert(): converting GCAM ...
+[INFO] Warpfield::convert(): gcam       [256 x 256 x 256]
+[INFO] Warpfield::convert(): gcam image [193 x 229 x 193]
+[INFO] Warpfield::convert(): gcam atlas [256 x 256 x 256]
+[INFO] Warpfield::convert(): total out of range voxel count: 0
+[INFO] niiWrite(): MGZ_INTENT_WARPMAP =&gt; NIFTI_INTENT_DISPVECT, intent_code = 1006, dimensions = {5, 256, 256, 256, 1, 3, 1, 1}
+[INFO] niiWrite(): convert displacement from 0 to 3
+mri_vol2vol --regheader --mov /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/synthmorph.out.mgz --targ /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/morph.out.nii.gz
+movvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/synthmorph.out.mgz
+targvol /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.nii.gz
+outvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/morph.out.nii.gz
+invert 0
+tal    0
+talres 2
+regheader 1
+noresample 0
+interp  trilinear (1)
+precision  float (3)
+Gdiag_no  -1
+Synth      0
+SynthSeed  1772126768
+
+Computing registration based on scanner-to-scanner
+
+Final tkRAS-to-tkRAS Matrix is:
+ 1.00000   0.00000   0.00000  -0.50000;
+ 0.00000   1.00000   0.00000   13.50000;
+ 0.00000   0.00000   1.00000   0.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+
+Vox2Vox Matrix is:
+ 1.00000   0.00000   0.00000  -20.00000;
+ 0.00000   1.00000   0.00000  -20.00000;
+ 0.00000   0.00000   1.00000  -2.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Resampling
+Output registration matrix is identity
+
+mri_vol2vol done
+mri_convert -rt nearest /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz -at /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/test.nii.gz
+mri_convert -rt nearest /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz -at /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/test.nii.gz 
+INFO: using NIfTI-1 sform (sform_code=1)
+reading from /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/orig.mgz...
+TR=0.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+INFO: Reading transformation from file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz...
+INFO: Applying transformation from file /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/warp.to.mni152.1.0mm.1.0mm.nii.gz...
+Applying morph_3d ...
+[INFO] niiRead(): intent_code = 1006, dimensions = {5, 193, 229, 193, 1, 3, 1, 1}
+[DEBUG] Warpfield::read() gcam-&gt;status = GCAM_LABELED
+setting orig areas to linear transform determinant scaled 1.00
+morphing to atlas with resample type 0
+writing to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/test.nii.gz...
+mri_diff --po /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/test.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/morph.out.nii.gz
+mri_diff --po /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/test.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/tmp/morph.out.nii.gz 
+diffcount 4594649
+Volumes differ in pixel data
+maxdiff 129.76824188 at 104 137 52 0
+tkmeditfv -f /opt/freesurfer-8.1.0/average/mni_icbm152_nlin_asym_09c/reg-targets/mni152.1.0mm.nii.gz -aux /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/test.nii.gz
+ 
+Started at Sun Feb 15 11:38:49 PM UTC 2026 
+Ended   at Mon Feb 16 12:13:06 AM UTC 2026
+Fs-Synthmorph-Reg-Run-Time-Sec 2057
+Fs-Synthmorph-Reg-Run-Time-Min 34.28
+Fs-Synthmorph-Reg-Run-Time-Hours 0.57
+ 
+fs-synthmorph-reg Done
+#--------------------------------------------
+#@# Nu Intensity Correction Mon Feb 16 12:13:06 AM UTC 2026
+
+ mri_nu_correct.mni --i orig.mgz --o nu.mgz --uchar transforms/talairach.xfm --n 2 --ants-n4 
+
+/usr/bin/bc
+/home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri
+/opt/freesurfer-8.1.0/bin/mri_nu_correct.mni
+--i orig.mgz --o nu.mgz --uchar transforms/talairach.xfm --n 2 --ants-n4
+nIters 2
+mri_nu_correct.mni 8.1.0
+Linux jupyter-monidoerig 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+Mon Feb 16 12:13:08 AM UTC 2026
+tmpdir is ./tmp.mri_nu_correct.mni.329043
+cd /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri
+AntsN4BiasFieldCorrectionFs -i orig.mgz -o ./tmp.mri_nu_correct.mni.329043/nu0.mgz --dtype uchar
+AntsN4BiasFieldCorrectionFs done
+mri_binarize --i ./tmp.mri_nu_correct.mni.329043/nu0.mgz --min -1 --o ./tmp.mri_nu_correct.mni.329043/ones.mgz
+
+8.1.0
+cwd /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri
+cmdline mri_binarize --i ./tmp.mri_nu_correct.mni.329043/nu0.mgz --min -1 --o ./tmp.mri_nu_correct.mni.329043/ones.mgz 
+sysname  Linux
+hostname jupyter-monidoerig
+machine  x86_64
+user     jovyan
+
+input      ./tmp.mri_nu_correct.mni.329043/nu0.mgz
+frame      0
+nErode3d   0
+nErode2d   0
+output     ./tmp.mri_nu_correct.mni.329043/ones.mgz
+Binarizing based on threshold
+min        -1
+max        +infinity
+binval        1
+binvalnot     0
+fstart = 0, fend = 0, nframes = 1
+Found 16777216 values in range
+Counting number of voxels in first frame
+Found 16777216 voxels in final mask
+Writing output to ./tmp.mri_nu_correct.mni.329043/ones.mgz
+Count: 16777216 16777216.000000 16777216 100.000000
+mri_binarize done
+mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.329043/ones.mgz --i orig.mgz --sum ./tmp.mri_nu_correct.mni.329043/sum.junk --avgwf ./tmp.mri_nu_correct.mni.329043/input.mean.dat
+
+8.1.0
+cwd 
+cmdline mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.329043/ones.mgz --i orig.mgz --sum ./tmp.mri_nu_correct.mni.329043/sum.junk --avgwf ./tmp.mri_nu_correct.mni.329043/input.mean.dat 
+sysname  Linux
+hostname jupyter-monidoerig
+machine  x86_64
+user     jovyan
+whitesurfname  white
+UseRobust  0
+Loading ./tmp.mri_nu_correct.mni.329043/ones.mgz
+Loading orig.mgz
+Voxel Volume is 1 mm^3
+Generating list of segmentation ids
+Found   1 segmentations
+Computing statistics for each segmentation
+
+Reporting on   1 segmentations
+Using PrintSegStat
+Computing spatial average of each frame
+
+Writing to ./tmp.mri_nu_correct.mni.329043/input.mean.dat
+mri_segstats done
+mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.329043/ones.mgz --i ./tmp.mri_nu_correct.mni.329043/nu0.mgz --sum ./tmp.mri_nu_correct.mni.329043/sum.junk --avgwf ./tmp.mri_nu_correct.mni.329043/output.mean.dat
+
+8.1.0
+cwd 
+cmdline mri_segstats --id 1 --seg ./tmp.mri_nu_correct.mni.329043/ones.mgz --i ./tmp.mri_nu_correct.mni.329043/nu0.mgz --sum ./tmp.mri_nu_correct.mni.329043/sum.junk --avgwf ./tmp.mri_nu_correct.mni.329043/output.mean.dat 
+sysname  Linux
+hostname jupyter-monidoerig
+machine  x86_64
+user     jovyan
+whitesurfname  white
+UseRobust  0
+Loading ./tmp.mri_nu_correct.mni.329043/ones.mgz
+Loading ./tmp.mri_nu_correct.mni.329043/nu0.mgz
+Voxel Volume is 1 mm^3
+Generating list of segmentation ids
+Found   1 segmentations
+Computing statistics for each segmentation
+
+Reporting on   1 segmentations
+Using PrintSegStat
+Computing spatial average of each frame
+
+Writing to ./tmp.mri_nu_correct.mni.329043/output.mean.dat
+mri_segstats done
+mris_calc -o ./tmp.mri_nu_correct.mni.329043/nu0.mgz ./tmp.mri_nu_correct.mni.329043/nu0.mgz mul 1.16048835830789136545
+Packing
+Done packing
+Unpacking
+Saving result to './tmp.mri_nu_correct.mni.329043/nu0.mgz' (type = MGH )                       [ ok ]
+#VMPC# mris_calc VmPeak  213688
+mri_convert ./tmp.mri_nu_correct.mni.329043/nu0.mgz nu.mgz --like orig.mgz
+mri_convert ./tmp.mri_nu_correct.mni.329043/nu0.mgz nu.mgz --like orig.mgz 
+reading from ./tmp.mri_nu_correct.mni.329043/nu0.mgz...
+TR=0.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+INFO: transform src into the like-volume: orig.mgz
+writing to nu.mgz...
+mri_make_uchar nu.mgz transforms/talairach.xfm nu.mgz
+type change took 0 minutes and 6 seconds.
+FIRST_PERCENTILE 0.010000
+WM_PERCENTILE    0.900000
+MAX_R 50.000000
+i1 = 5, i2 = 81
+#mri_make_uchar# mapping 13 209 to  3 110  :  b -4.51908 m 0.548893 : thresh 8.23308 maxsat 472.804 : nzero 12014042 nsat 0
+ 
+ 
+Mon Feb 16 12:17:00 AM UTC 2026
+mri_nu_correct.mni done
+
+ mri_add_xform_to_header -c /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/talairach.xfm nu.mgz nu.mgz 
+
+INFO: extension is mgz
+#--------------------------------------------
+#@# Intensity Normalization Mon Feb 16 12:17:01 AM UTC 2026
+/home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri
+
+ mri_normalize -g 1 -seed 1234 -mprage nu.mgz T1.mgz 
+
+using max gradient = 1.000
+setting seed for random number genererator to 1234
+assuming input volume is MGH (Van der Kouwe) MP-RAGE
+reading mri_src from nu.mgz...
+normalizing image...
+NOT doing gentle normalization with control points/label
+talairach transform
+ 1.04569   0.00323   0.00594  -0.07552;
+ 0.00904   0.96688   0.33561  -10.03953;
+-0.00261  -0.32509   1.08153  -23.69742;
+ 0.00000   0.00000   0.00000   1.00000;
+processing without aseg, no1d=0
+MRInormInit(): 
+INFO: Modifying talairach volume c_(r,a,s) based on average_305
+MRInormalize(): 
+MRIsplineNormalize(): npeaks = 20
+Starting OpenSpline(): npoints = 20
+building Voronoi diagram...
+performing soap bubble smoothing, sigma = 8...
+
+Iterating 2 times
+---------------------------------
+3d normalization pass 1 of 2
+white matter peak found at 110
+white matter peak found at 110
+gm peak at 65 (65), valley at 53 (53)
+csf peak at 33, setting threshold to 54
+building Voronoi diagram...
+performing soap bubble smoothing, sigma = 8...
+---------------------------------
+3d normalization pass 2 of 2
+white matter peak found at 110
+white matter peak found at 110
+gm peak at 63 (63), valley at 41 (41)
+csf peak at 32, setting threshold to 52
+building Voronoi diagram...
+performing soap bubble smoothing, sigma = 8...
+Done iterating ---------------------------------
+writing output to T1.mgz
+3D bias adjustment took 1 minutes and 46 seconds.
+#--------------------------------------
+
+#@# MCADura Segmentation Mon Feb 16 12:18:47 AM UTC 2026
+mri_mcadura_seg --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/mca-dura.mgz --threads 1 --synthmorphdir /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm
+Mon Feb 16 12:18:51 AM UTC 2026
+
+setenv SUBJECTS_DIR /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output
+cd /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri
+/opt/freesurfer-8.1.0/bin/mri_mcadura_seg --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/mca-dura.mgz --threads 1 --synthmorphdir /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm
+-rwxr-xr-x 1 nobody nogroup 13384 Jul 19  2025 /opt/freesurfer-8.1.0/bin/mri_mcadura_seg
+
+freesurfer-linux-ubuntu22_x86_64-8.1.0-20250719-f30dfed
+$Id$
+Linux jupyter-monidoerig 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+pid 329182
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182 ~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri 
+~/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri 
+mri_vol2vol --reg /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta --mov /opt/freesurfer-8.1.0/average/mca-dura.prior.warp.mni152.1.0mm.lh.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/mcadura.prior.lh.nii.gz
+regio_read_register: loading lta
+
+Matrix from regfile:
+-1.09389   0.00646  -0.00802   0.80293;
+ 0.00116  -0.35054   1.14657  -43.63174;
+-0.01789  -1.00826  -0.29793  -9.37406;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Getting target volume geom from lta destination
+movvol /opt/freesurfer-8.1.0/average/mca-dura.prior.warp.mni152.1.0mm.lh.nii.gz
+outvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/mcadura.prior.lh.nii.gz
+regfile /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta
+invert 0
+tal    0
+talres 2
+regheader 0
+noresample 0
+interp  trilinear (1)
+precision  float (3)
+Gdiag_no  -1
+Synth      0
+SynthSeed  1771296704
+
+Final tkRAS-to-tkRAS Matrix is:
+-1.09389   0.00646  -0.00802   0.80293;
+ 0.00116  -0.35054   1.14657  -43.63174;
+-0.01789  -1.00826  -0.29793  -9.37406;
+ 0.00000   0.00000   0.00000   1.00000;
+
+
+Vox2Vox Matrix is:
+-1.09389  -0.00802  -0.00646   237.56815;
+-0.01789  -0.29793   1.00826   35.24152;
+-0.00116  -1.14657  -0.35054   244.64642;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Resampling
+Output registration matrix is identity
+
+mri_vol2vol done
+mri_mask -T .001 -crop-to-fov-mm 80 80 80 /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/mcadura.prior.lh.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/lh.crop.nii.gz
+CropToFoVmm 80 80 80
+DoAbs = 0
+Found 6386 voxels in mask (pct=  0.04)
+MRIcropToFoV(): thresh=0.001 FoV = (80,80,80) 
+nhits=6386  centroid = (164.29,116.584,156.024) min = (136,95,138) max = (184,133,172) delta = (49,39,35) 
+Region 124 77 116  80 80 80
+124 77 116  80 80 80
+maskval=0, outval=0
+Writing masked volume to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/lh.crop.nii.gz...done.
+mri_vol2vol --regheader --mov /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz --targ /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/lh.crop.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.lh.crop.nii.gz
+movvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz
+targvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/lh.crop.nii.gz
+outvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.lh.crop.nii.gz
+invert 0
+tal    0
+talres 2
+regheader 1
+noresample 0
+interp  trilinear (1)
+precision  float (3)
+Gdiag_no  -1
+Synth      0
+SynthSeed  1772105130
+
+Computing registration based on scanner-to-scanner
+
+Final tkRAS-to-tkRAS Matrix is:
+ 1.00000   0.00000   0.00000  -35.99999;
+ 0.00000   1.00000   0.00000   28.00000;
+ 0.00000   0.00000   1.00000   11.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+
+Vox2Vox Matrix is:
+ 1.00000   0.00000   0.00000   123.99998;
+ 0.00000   1.00000   0.00000   77.00000;
+ 0.00000   0.00000   1.00000   116.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Resampling
+Output registration matrix is identity
+
+mri_vol2vol done
+mri_sclimbic_seg --model /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5 --ctab /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.ctab --keep_ac --percentile 99.9 --vmp --output-base mcadura --conform --logfile mri_mcadura_seg.log --no-cite-sclimbic --threads 1 --fov 72 --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.lh.crop.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.mgz
+/opt/freesurfer-8.1.0/python/scripts/mri_sclimbic_seg --model /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5 --ctab /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.ctab --keep_ac --percentile 99.9 --vmp --output-base mcadura --conform --logfile mri_mcadura_seg.log --no-cite-sclimbic --threads 1 --fov 72 --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.lh.crop.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.mgz
+Keeping anterior commissure in vols and stats
+Using CPU
+Using 1 thread(s)
+Loaded lookup table /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.ctab
+Loaded population stats /opt/freesurfer-8.1.0/models/sclimbic.volstats.csv
+nb_labels 2
+inshape (72, 72, 72) features 24
+  (None, 72, 72, 72, 1)
+Loading weights from /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5 -----------------------
+Done loading weights -----------------------
+Loaded model weights /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5
+
+Segmenting image 1/1
+Loaded input image from /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.lh.crop.nii.gz
+1/1 [==============================] - 3s 3s/step
+Wrote segmentation to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.mgz
+vmpcma: 4519436
+done
+mri_vol2vol --regheader --interp nearest --mov /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.mgz --targ /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.uncropped.mgz
+movvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.mgz
+targvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz
+outvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.uncropped.mgz
+invert 0
+tal    0
+talres 2
+regheader 1
+noresample 0
+interp  nearest (0)
+precision  float (3)
+Gdiag_no  -1
+Synth      0
+SynthSeed  1771324506
+
+Computing registration based on scanner-to-scanner
+
+Final tkRAS-to-tkRAS Matrix is:
+ 1.00000   0.00000   0.00000   35.99999;
+ 0.00000   1.00000   0.00000  -27.99999;
+ 0.00000   0.00000   1.00000  -11.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+
+Vox2Vox Matrix is:
+ 1.00000   0.00000   0.00000  -123.99998;
+ 0.00000   1.00000   0.00000  -76.99999;
+ 0.00000   0.00000   1.00000  -115.99998;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Resampling
+Output registration matrix is identity
+
+mri_vol2vol done
+mri_vol2vol --reg /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta --mov /opt/freesurfer-8.1.0/average/mca-dura.prior.warp.mni152.1.0mm.rh.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/mcadura.prior.rh.nii.gz
+regio_read_register: loading lta
+
+Matrix from regfile:
+-1.09389   0.00646  -0.00802   0.80293;
+ 0.00116  -0.35054   1.14657  -43.63174;
+-0.01789  -1.00826  -0.29793  -9.37406;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Getting target volume geom from lta destination
+movvol /opt/freesurfer-8.1.0/average/mca-dura.prior.warp.mni152.1.0mm.rh.nii.gz
+outvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/mcadura.prior.rh.nii.gz
+regfile /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/transforms/synthmorph.1.0mm.1.0mm/reg.targ_to_invol.lta
+invert 0
+tal    0
+talres 2
+regheader 0
+noresample 0
+interp  trilinear (1)
+precision  float (3)
+Gdiag_no  -1
+Synth      0
+SynthSeed  1771832715
+
+Final tkRAS-to-tkRAS Matrix is:
+-1.09389   0.00646  -0.00802   0.80293;
+ 0.00116  -0.35054   1.14657  -43.63174;
+-0.01789  -1.00826  -0.29793  -9.37406;
+ 0.00000   0.00000   0.00000   1.00000;
+
+
+Vox2Vox Matrix is:
+-1.09389  -0.00802  -0.00646   237.56815;
+-0.01789  -0.29793   1.00826   35.24152;
+-0.00116  -1.14657  -0.35054   244.64642;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Resampling
+Output registration matrix is identity
+
+mri_vol2vol done
+mri_mask -T .001 -crop-to-fov-mm 80 80 80 /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/mcadura.prior.rh.nii.gz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/rh.crop.nii.gz
+CropToFoVmm 80 80 80
+DoAbs = 0
+Found 6789 voxels in mask (pct=  0.04)
+MRIcropToFoV(): thresh=0.001 FoV = (80,80,80) 
+nhits=6789  centroid = (92.2296,116.688,156.08) min = (72,95,138) max = (117,134,175) delta = (46,40,38) 
+Region 52 77 116  80 80 80
+52 77 116  80 80 80
+maskval=0, outval=0
+Writing masked volume to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/rh.crop.nii.gz...done.
+mri_vol2vol --regheader --mov /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz --targ /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/rh.crop.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.nii.gz
+movvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz
+targvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/rh.crop.nii.gz
+outvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.nii.gz
+invert 0
+tal    0
+talres 2
+regheader 1
+noresample 0
+interp  trilinear (1)
+precision  float (3)
+Gdiag_no  -1
+Synth      0
+SynthSeed  1771343809
+
+Computing registration based on scanner-to-scanner
+
+Final tkRAS-to-tkRAS Matrix is:
+ 1.00000   0.00000   0.00000   36.00001;
+ 0.00000   1.00000   0.00000   28.00000;
+ 0.00000   0.00000   1.00000   11.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+
+Vox2Vox Matrix is:
+ 1.00000   0.00000   0.00000   51.99999;
+ 0.00000   1.00000   0.00000   77.00000;
+ 0.00000   0.00000   1.00000   116.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Resampling
+Output registration matrix is identity
+
+mri_vol2vol done
+mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.nii.gz --left-right-reverse-pix /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.lrrev.nii.gz
+mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.nii.gz --left-right-reverse-pix /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.lrrev.nii.gz 
+reading from /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.nii.gz...
+WARNING: applying left-right reversal to the input pixels
+without changing geometry. This will likely make 
+the volume geometry WRONG, so make sure you know what you  
+are doing.
+  Reversing pixels for the columns
+TR=0.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+writing to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.lrrev.nii.gz...
+mri_sclimbic_seg --model /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5 --ctab /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.ctab --keep_ac --percentile 99.9 --vmp --output-base mcadura --conform --logfile mri_mcadura_seg.log --no-cite-sclimbic --threads 1 --fov 72 --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.lrrev.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.lrrev.mgz
+/opt/freesurfer-8.1.0/python/scripts/mri_sclimbic_seg --model /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5 --ctab /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.ctab --keep_ac --percentile 99.9 --vmp --output-base mcadura --conform --logfile mri_mcadura_seg.log --no-cite-sclimbic --threads 1 --fov 72 --i /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.lrrev.nii.gz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.lrrev.mgz
+Keeping anterior commissure in vols and stats
+Using CPU
+Using 1 thread(s)
+Loaded lookup table /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.ctab
+Loaded population stats /opt/freesurfer-8.1.0/models/sclimbic.volstats.csv
+nb_labels 2
+inshape (72, 72, 72) features 24
+  (None, 72, 72, 72, 1)
+Loading weights from /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5 -----------------------
+Done loading weights -----------------------
+Loaded model weights /opt/freesurfer-8.1.0/models/mca-dura.both-lh.nstd21.fhs.h5
+
+Segmenting image 1/1
+Loaded input image from /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/invol.rh.crop.lrrev.nii.gz
+1/1 [==============================] - 4s 4s/step
+Wrote segmentation to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.lrrev.mgz
+vmpcma: 4520112
+done
+mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.lrrev.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.mgz --left-right-swap-label-table /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.index /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.rh.index --left-right-reverse-pix
+mri_convert /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.lrrev.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.mgz --left-right-swap-label-table /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.lh.index /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/dumca.rh.index --left-right-reverse-pix 
+reading from /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.lrrev.mgz...
+Performing left-right swap of labels
+MRIlrswapSeg(): nswaps 895
+WARNING: applying left-right reversal to the input pixels
+without changing geometry. This will likely make 
+the volume geometry WRONG, so make sure you know what you  
+are doing.
+  Reversing pixels for the columns
+TR=0.00, TE=0.00, TI=0.00, flip angle=0.00
+i_ras = (-1, 0, 0)
+j_ras = (0, 0, -1)
+k_ras = (0, 1, 0)
+writing to /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.mgz...
+mri_vol2vol --regheader --interp nearest --mov /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.mgz --targ /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.uncropped.mgz
+movvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.mgz
+targvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/nu.mgz
+outvol /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.uncropped.mgz
+invert 0
+tal    0
+talres 2
+regheader 1
+noresample 0
+interp  nearest (0)
+precision  float (3)
+Gdiag_no  -1
+Synth      0
+SynthSeed  1771341517
+
+Computing registration based on scanner-to-scanner
+
+Final tkRAS-to-tkRAS Matrix is:
+ 1.00000   0.00000   0.00000  -35.99999;
+ 0.00000   1.00000   0.00000  -27.99999;
+ 0.00000   0.00000   1.00000  -11.00000;
+ 0.00000   0.00000   0.00000   1.00000;
+
+
+Vox2Vox Matrix is:
+ 1.00000   0.00000   0.00000  -52.00000;
+ 0.00000   1.00000   0.00000  -76.99999;
+ 0.00000   0.00000   1.00000  -115.99998;
+ 0.00000   0.00000   0.00000   1.00000;
+
+Resampling
+Output registration matrix is identity
+
+mri_vol2vol done
+mri_concat /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.lh.uncropped.mgz /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/tmp.mri_mcadura_seg.329182/seg.rh.uncropped.mgz --sum --ctab /opt/freesurfer-8.1.0/models/mca-dura.ctab --o /home/jovyan/Git_repositories/neurodeskedu/books/examples/structural_imaging/freesurfer-output/subjectname/mri/mca-dura.mgz
+ninputs = 2
+Checking inputs
+nframestot = 2
+Allocing output
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>threshold mask volume at 0.001
+threshold mask volume at 0.001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>./freesurfer-output/subjectname/mri
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T1.mgz			      entowm.mgz	      ribbon.mgz
+antsdn.brain.mgz	      filled.auto.mgz	      segment.dat
+aparc+aseg.mgz		      filled.mgz	      surface.defects.mgz
+aparc.DKTatlas+aseg.mgz       lh.ribbon.mgz	      synthseg.rca.mgz
+aparc.a2009s+aseg.mgz	      mca-dura.mgz	      synthstrip.mgz
+aseg.auto.mgz		      mri_nu_correct.mni.log  talairach.log
+aseg.auto_noCCseg.mgz	      mrisps.white.mgz	      tmp
+aseg.mgz		      mrisps.wpa.mgz	      transforms
+aseg.presurf.hypos.mgz	      norm.mgz		      vsinus.log
+aseg.presurf.mgz	      nu.mgz		      vsinus.mgz
+brain.finalsurfs.manedit.mgz  orig		      wm.asegedit.mgz
+brain.finalsurfs.mgz	      orig.mgz		      wm.mgz
+brain.mgz		      rawavg.mgz	      wm.seg.mgz
+brainmask.mgz		      rawavg2orig.lta	      wmparc.mgz
+ctrl_pts.mgz		      rh.ribbon.mgz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>./freesurfer-output/subjectname/surf
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>autodet.gw.stats.lh.dat  lh.smoothwm.K1.crv	  rh.inflated.nofix
+autodet.gw.stats.rh.dat  lh.smoothwm.K2.crv	  rh.jacobian_white
+lh.area			 lh.smoothwm.S.crv	  rh.orig
+lh.area.mid		 lh.smoothwm.nofix	  rh.orig.nofix
+lh.area.pial		 lh.sphere		  rh.orig.premesh
+lh.avg_curv		 lh.sphere.reg		  rh.pial
+lh.curv			 lh.sulc		  rh.pial.T1
+lh.curv.pial		 lh.thickness		  rh.qsphere.nofix
+lh.defect_borders	 lh.volume		  rh.smoothwm
+lh.defect_chull		 lh.w-g.pct.mgh		  rh.smoothwm.BE.crv
+lh.defect_labels	 lh.white		  rh.smoothwm.C.crv
+lh.defects.pointset	 lh.white.H		  rh.smoothwm.FI.crv
+lh.fsaverage.sphere.reg  lh.white.K		  rh.smoothwm.H.crv
+lh.inflated		 lh.white.preaparc	  rh.smoothwm.K.crv
+lh.inflated.H		 lh.white.preaparc.H	  rh.smoothwm.K1.crv
+lh.inflated.K		 lh.white.preaparc.K	  rh.smoothwm.K2.crv
+lh.inflated.nofix	 rh.area		  rh.smoothwm.S.crv
+lh.jacobian_white	 rh.area.mid		  rh.smoothwm.nofix
+lh.orig			 rh.area.pial		  rh.sphere
+lh.orig.nofix		 rh.avg_curv		  rh.sphere.reg
+lh.orig.premesh		 rh.curv		  rh.sulc
+lh.pial			 rh.curv.pial		  rh.thickness
+lh.pial.T1		 rh.defect_borders	  rh.volume
+lh.qsphere.nofix	 rh.defect_chull	  rh.w-g.pct.mgh
+lh.smoothwm		 rh.defect_labels	  rh.white
+lh.smoothwm.BE.crv	 rh.defects.pointset	  rh.white.H
+lh.smoothwm.C.crv	 rh.fsaverage.sphere.reg  rh.white.K
+lh.smoothwm.FI.crv	 rh.inflated		  rh.white.preaparc
+lh.smoothwm.H.crv	 rh.inflated.H		  rh.white.preaparc.H
+lh.smoothwm.K.crv	 rh.inflated.K		  rh.white.preaparc.K
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="results">
+<h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ipyniivue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NiiVue</span>
+
+<span class="n">nv</span> <span class="o">=</span> <span class="n">NiiVue</span><span class="p">(</span><span class="n">crosshair_color</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">nv</span><span class="o">.</span><span class="n">load_volumes</span><span class="p">([{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"./freesurfer-output/subjectname/mri/orig.mgz"</span><span class="p">},</span>
+                  <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"./freesurfer-output/subjectname/mri/aseg.mgz"</span><span class="p">}])</span>
+<span class="n">nv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "4f6bc0fe50a142fba249a55f5a38936f", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<section id="dependencies-in-jupyter-python">
+<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+
+<span class="o">%</span><span class="k">watermark</span>
+<span class="o">%</span><span class="k">watermark</span> --iversions
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-16T03:08:04.105186+00:00
+
+Python implementation: CPython
+Python version       : 3.13.9
+IPython version      : 9.7.0
+
+Compiler    : GCC 14.3.0
+OS          : Linux
+Release     : 5.15.0-164-generic
+Machine     : x86_64
+Processor   : x86_64
+CPU cores   : 32
+Architecture: 64bit
+
+ipyniivue: 2.4.4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./examples/structural_imaging"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev" href="freesurfer-recon-all-clinical.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">FreeSurfer: recon-all-clinical</p>
+      </div>
+    </a>
+    <a class="right-next" href="sct_toolbox.html" title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">SCT Toolbox</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-freesurfer">Load FreeSurfer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-data">Download data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Neurodesk Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  
+</body></html>

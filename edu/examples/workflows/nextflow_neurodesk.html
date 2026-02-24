@@ -1,0 +1,1158 @@
+<!DOCTYPE html><html lang="en" data-content_root="../../"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nextflow in Neurodesk — Neurodesk</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079">
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062">
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be">
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b">
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css">
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6">
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e">
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b">
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/workflows/nextflow_neurodesk';</script>
+    <link rel="canonical" href="https://neurodesk.org/edu/examples/workflows/nextflow_neurodesk.html">
+    <link rel="icon" href="../../_static/neurodesk_logo.svg">
+    <link rel="index" title="Index" href="../../genindex.html">
+    <link rel="search" title="Search" href="../../search.html">
+    <link rel="next" title="Nipype on Neurodesk" href="nipype_full.html">
+    <link rel="prev" title="Ipyniivue and Ipywidgets" href="ipyniivue_ipywidgets.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="docsearch:language" content="en">
+  <meta name="author" content="Steffen Bollmann"><meta property="article:author" content="Steffen Bollmann"><meta name="citation_author" content="Steffen Bollmann"></head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox" class="sidebar-toggle" id="pst-primary-sidebar-checkbox">
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox" class="sidebar-toggle" id="pst-secondary-sidebar-checkbox">
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/neurodesk_logo.svg" class="logo__image only-light" alt="Neurodesk - Home">
+    <script>document.write(`<img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark" alt="Neurodesk - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neurodesk.org" title="Return to neurodesk.org" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-house fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Return to neurodesk.org</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../template.html">Example Notebook Template</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../diffusion_imaging/intro.html">Diffusion Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_1.html">Basic Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/DIPY_2.html">Advanced Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_1.html">MRtrix: Part 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_2.html">MRtrix: Part 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/MRtrix_3.html">MRtrix: Part 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diffusion_imaging/mrtrix3tissue.html">MRtrix3Tissue</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/deepretinotopy.html">DeepRetinotopy Toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fMRI_tutorial_in_R_magic.html">Resting-State fMRI Analysis in R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fmriprep.html">fMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/intro_to_preprocessing.html">Introduction to Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/mri_vol2surf.html">FreeSurfer: mri_vol2surf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/process_five_echo_dataset.html">tedana: TE Dependent ANAlysis</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../quantitative_imaging/intro.html">Quantitative Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/aslprep.html">ASLprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/qsmxt.html">QSMxT</a></li>
+
+
+
+
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Workflows</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MRIQC.html">MRIQC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Magic_commands.html">Magic Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PyBIDS.html">PyBIDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RISE_slideshow.html">RISE Slideshow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bids_conversion.html">BIDS conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Nextflow in Neurodesk</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="nipype_full.html">Nipype on Neurodesk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nipype_short.html">Basic Nipype</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydra_preproc_ants.html">Pydra</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
+
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/multimodal_imaging/intro.html">Multimodal Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/multimodal_imaging/MFCSC.html">Using MFCSC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
+
+
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/programming/conda.html">Conda environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/programming/matlab.html">Matlab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/reproducibility/intro.html">Reproducibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/reproducibility/datalad-run.html">Reproducible script execution with DataLad</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/spectroscopy/lcmodel.html">Spectroscopy with lcmodel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/spectroscopy/mrsiproc.html">Spectroscopy pipeline</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/structural_imaging/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/structural_imaging/structuralconnectivity.html">Structural connectivity dMRI</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Contribute Example Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Contribute Tutorials</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons"><a href="https://doi.org/10.5281/zenodo.18717009" target="_blank" rel="noopener noreferrer" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button">https://doi.org/10.5281/zenodo.18717009</a>
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://play.neurodesk.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/workflows/nextflow_neurodesk.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Australia" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Australia logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Australia</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/workflows/nextflow_neurodesk.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Europe" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Europe logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Europe</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/workflows/nextflow_neurodesk.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in America" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in America logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in America</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/workflows/nextflow_neurodesk.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 1" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 1 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 1</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://edu.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/examples/workflows/nextflow_neurodesk.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 2" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 2 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 2</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/examples/workflows/nextflow_neurodesk.ipynb" target="_blank" class="btn btn-sm btn-download-source-button dropdown-item" title="Download source file" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()" class="btn btn-sm btn-download-pdf-button dropdown-item" title="Print to PDF" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Nextflow in Neurodesk</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Nextflow in Neurodesk</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-engine">Workflow engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-from-osf">Dataset from OSF</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-test-data">Download test data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-simulated-second-subject-by-copying-sub-01">Create a simulated second subject by copying sub-01</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-nextflow">Hello Nextflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts">Core concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-subject-brain-extraction">Single-subject brain extraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-subject-pipeline">Multi-subject pipeline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-results">Visualize results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-and-environment-capture">Dependencies and environment capture</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="nextflow-in-neurodesk">
+<h1>Nextflow in Neurodesk<a class="headerlink" href="#nextflow-in-neurodesk" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><strong>Author:</strong> Steffen Bollmann</p>
+<p><strong>Date:</strong> 13 Feb 2026</p>
+<section id="id2">
+<h3><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p><strong>License:</strong></p>
+<div style="margin-top: 10px;">
+    <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #0066cc;">
+        <i class="fas fa-balance-scale"></i> MIT License
+    </a>
+</div>
+<p><strong>Note:</strong> If this notebook uses neuroimaging tools from Neurocontainers, those tools retain their original licenses. Please see <a href="https://neurodesk.org/overview/how-to-cite-us/" target="_blank" style="color: #0066cc;">Neurodesk citation guidelines</a> for details.</p>
+</section>
+</section>
+<section id="citation-and-resources">
+<h2>Citation and Resources<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h2>
+<section id="workflow-engine">
+<h3>Workflow engine<a class="headerlink" href="#workflow-engine" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Di Tommaso, P., Chatzou, M., Floden, E. W., Barja, P. P., Palumbo, E., &amp; Notredame, C. (2017). Nextflow enables reproducible computational workflows. <em>Nature Biotechnology, 35</em>(4), 316-319. <a class="reference external" href="https://doi.org/10.1038/nbt.3820">https://doi.org/10.1038/nbt.3820</a></p></li>
+</ul>
+</section>
+<section id="tools-included-in-this-workflow">
+<h3>Tools included in this workflow<a class="headerlink" href="#tools-included-in-this-workflow" title="Link to this heading">#</a></h3>
+<p><strong>FSL - Brain Extraction Tool (BET)</strong></p>
+<ul class="simple">
+<li><p>M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. <a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S1053811911010603?via%3Dihub">NeuroImage, 62:782-90, 2012</a></p></li>
+<li><p>Smith S. M. (2002). Fast robust automated brain extraction. Human brain mapping, 17(3), 143–155. <a class="reference external" href="https://doi.org/10.1002/hbm.10062">https://doi.org/10.1002/hbm.10062</a></p></li>
+</ul>
+</section>
+<section id="dataset-from-osf">
+<h3>Dataset from OSF<a class="headerlink" href="#dataset-from-osf" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Shaw, T., &amp; Bollmann, S. (2020). Dataset for Towards Optimising MRI Methods for ChAracterisation of Tissue (TOMCAT) [Data set]. OSF. <a class="reference external" href="https://doi.org/10.17605/OSF.IO/BT4EZ">https://doi.org/10.17605/OSF.IO/BT4EZ</a></p></li>
+</ul>
+</section>
+</section>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#Introduction"><span class="xref myst">Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#Setup"><span class="xref myst">Setup</span></a></p></li>
+<li><p><a class="reference internal" href="#Download-test-data"><span class="xref myst">Download test data</span></a></p></li>
+<li><p><a class="reference internal" href="#Hello-Nextflow"><span class="xref myst">Hello Nextflow</span></a></p></li>
+<li><p><a class="reference internal" href="#Core-concepts"><span class="xref myst">Core concepts</span></a></p></li>
+<li><p><a class="reference internal" href="#Single-subject-brain-extraction"><span class="xref myst">Single-subject brain extraction</span></a></p></li>
+<li><p><a class="reference internal" href="#Multi-subject-pipeline"><span class="xref myst">Multi-subject pipeline</span></a></p></li>
+<li><p><a class="reference internal" href="#Visualize-results"><span class="xref myst">Visualize results</span></a></p></li>
+<li><p><a class="reference internal" href="#Next-steps"><span class="xref myst">Next steps</span></a></p></li>
+<li><p><a class="reference internal" href="#Cleanup"><span class="xref myst">Cleanup</span></a></p></li>
+<li><p><a class="reference internal" href="#Dependencies-and-environment-capture"><span class="xref myst">Dependencies and environment capture</span></a></p></li>
+</ol>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.nextflow.io/">Nextflow</a> is a workflow engine that lets you write data-driven computational pipelines. It handles parallelism, file staging, and error recovery so you can focus on the analysis logic.</p>
+<p><strong>Why use Nextflow for neuroimaging?</strong></p>
+<ul class="simple">
+<li><p>Automatically runs independent subjects in parallel</p></li>
+<li><p>Tracks which steps have finished so you can resume failed runs with <code class="docutils literal notranslate"><span class="pre">-resume</span></code></p></li>
+<li><p>Works the same way on your laptop, an HPC cluster, or in the cloud</p></li>
+<li><p>Large ecosystem of ready-made pipelines at <a class="reference external" href="https://nf-co.re/">nf-core</a></p></li>
+</ul>
+<p>This notebook teaches Nextflow from scratch through three progressively complex examples:</p>
+<ol class="arabic simple">
+<li><p>A “hello world” pipeline</p></li>
+<li><p>Brain extraction on a single subject</p></li>
+<li><p>A multi-subject pipeline with quality-control summary</p></li>
+</ol>
+</section>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
+<p>Load FSL via the Neurodesk module system.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">module</span>
+<span class="k">await</span> <span class="n">module</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'fsl/6.0.7.16'</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">module</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#nextflow is installed inside Neurodesk</span>
+<span class="o">!</span>nextflow<span class="w"> </span>-version
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="download-test-data">
+<h2>Download test data<a class="headerlink" href="#download-test-data" title="Link to this heading">#</a></h2>
+<p>We download a T1-weighted MRI scan from the <a class="reference external" href="https://doi.org/10.17605/OSF.IO/BT4EZ">TOMCAT dataset</a> on OSF, then create a copy as a simulated second subject for the multi-subject demo later.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+mkdir -p data
+
+if [ -f ./data/sub-01.nii ]; then
+    echo "sub-01.nii already exists, skipping download"
+else
+    if [ ! -f ./data/sub-01.nii.gz ]; then
+        echo "Downloading T1w from OSF..."
+        osf -p bt4ez fetch osfstorage/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz ./data/sub-01.nii.gz
+    fi
+    echo "Decompressing..."
+    gunzip ./data/sub-01.nii.gz
+fi
+
+echo "Done."
+ls -lh ./data/sub-01.nii
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="create-a-simulated-second-subject-by-copying-sub-01">
+<h1>Create a simulated second subject by copying sub-01<a class="headerlink" href="#create-a-simulated-second-subject-by-copying-sub-01" title="Link to this heading">#</a></h1>
+<p>if [ ! -f ./data/sub-02.nii ]; then
+cp ./data/sub-01.nii ./data/sub-02.nii
+echo “Created sub-02.nii”
+else
+echo “sub-02.nii already exists”
+fi</p>
+<p>ls -lh ./data/</p>
+<section id="hello-nextflow">
+<h2>Hello Nextflow<a class="headerlink" href="#hello-nextflow" title="Link to this heading">#</a></h2>
+<p>Every Nextflow pipeline is a <code class="docutils literal notranslate"><span class="pre">.nf</span></code> script containing <strong>processes</strong> (units of work) and a <strong>workflow</strong> that wires them together using <strong>channels</strong> (asynchronous data queues).</p>
+<p>Let’s start with the simplest possible pipeline.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> hello.nf
+<span class="n">process</span> <span class="n">SAY_HELLO</span> <span class="p">{</span>
+    <span class="nb">input</span><span class="p">:</span>
+    <span class="n">val</span> <span class="n">greeting</span>
+
+    <span class="n">output</span><span class="p">:</span>
+    <span class="n">stdout</span>
+
+    <span class="n">script</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    echo "$greeting from Nextflow!"</span>
+<span class="sd">    """</span>
+<span class="p">}</span>
+
+<span class="n">workflow</span> <span class="p">{</span>
+    <span class="n">greetings</span> <span class="o">=</span> <span class="n">Channel</span><span class="o">.</span><span class="n">of</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'Bonjour'</span><span class="p">,</span> <span class="s1">'Hola'</span><span class="p">)</span>
+    <span class="n">SAY_HELLO</span><span class="p">(</span><span class="n">greetings</span><span class="p">)</span> <span class="o">|</span> <span class="n">view</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>nextflow<span class="w"> </span>run<span class="w"> </span>hello.nf
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What just happened?</strong></p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Channel.of(...)</span></code> created a channel with three items</p></li>
+<li><p>Nextflow launched the <code class="docutils literal notranslate"><span class="pre">SAY_HELLO</span></code> process <strong>three times</strong> — once per item, potentially in parallel</p></li>
+<li><p>Each execution ran in its own isolated <code class="docutils literal notranslate"><span class="pre">work/</span></code> subdirectory</p></li>
+</ol>
+<p>Let’s peek inside the work directory to see how Nextflow organises task execution:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+echo "=== work directory structure ==="
+# Show the first task directory as an example
+TASK_DIR=$(find work -name '.command.sh' -print -quit 2&gt;/dev/null | xargs dirname)
+if [ -n "$TASK_DIR" ]; then
+    echo "Example task dir: $TASK_DIR"
+    echo ""
+    echo "--- .command.sh (the actual script that ran) ---"
+    cat "$TASK_DIR/.command.sh"
+    echo ""
+    echo "--- .command.log (stdout/stderr) ---"
+    cat "$TASK_DIR/.command.log"
+else
+    echo "No work directory found (pipeline may not have run)"
+fi
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="core-concepts">
+<h2>Core concepts<a class="headerlink" href="#core-concepts" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Process</strong></p></td>
+<td><p>A unit of work with defined inputs, outputs, and a script. Runs in an isolated directory.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Channel</strong></p></td>
+<td><p>An asynchronous queue that connects processes. Data flows through channels.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Workflow</strong></p></td>
+<td><p>The top-level block that creates channels and wires processes together.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">publishDir</span></code></strong></p></td>
+<td><p>Copies output files from the work directory to a permanent results folder.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">params</span></code></strong></p></td>
+<td><p>Pipeline parameters that can be set on the command line with <code class="docutils literal notranslate"><span class="pre">--name</span> <span class="pre">value</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Nextflow automatically handles:</p>
+<ul class="simple">
+<li><p><strong>Parallelism</strong>: If a channel has N items, the process runs N times (potentially concurrently)</p></li>
+<li><p><strong>File staging</strong>: Input files are symlinked into each task’s work directory</p></li>
+<li><p><strong>Resumability</strong>: Use <code class="docutils literal notranslate"><span class="pre">-resume</span></code> to skip already-completed tasks after a failure</p></li>
+</ul>
+</section>
+<section id="single-subject-brain-extraction">
+<h2>Single-subject brain extraction<a class="headerlink" href="#single-subject-brain-extraction" title="Link to this heading">#</a></h2>
+<p>Now let’s do something useful: run FSL’s <code class="docutils literal notranslate"><span class="pre">bet</span></code> (Brain Extraction Tool) on a single T1w image via Nextflow.</p>
+<p>This introduces:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> inputs (file handling)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code> for configurable settings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publishDir</span></code> to save outputs to a results folder</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> bet_single.nf
+<span class="n">params</span><span class="o">.</span><span class="n">input</span> <span class="o">=</span> <span class="s1">'./data/sub-01.nii'</span>
+<span class="n">params</span><span class="o">.</span><span class="n">outdir</span> <span class="o">=</span> <span class="s1">'./results_single'</span>
+<span class="n">params</span><span class="o">.</span><span class="n">frac</span>  <span class="o">=</span> <span class="mf">0.4</span>
+
+<span class="n">process</span> <span class="n">BET</span> <span class="p">{</span>
+    <span class="n">publishDir</span> <span class="n">params</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="s1">'copy'</span>
+
+    <span class="nb">input</span><span class="p">:</span>
+    <span class="n">path</span> <span class="n">t1w</span>
+
+    <span class="n">output</span><span class="p">:</span>
+    <span class="n">path</span> <span class="s1">'*_brain.*'</span>
+
+    <span class="n">script</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    bet ${t1w} ${t1w.baseName}_brain -f ${params.frac} -m</span>
+<span class="sd">    """</span>
+<span class="p">}</span>
+
+<span class="n">workflow</span> <span class="p">{</span>
+    <span class="n">input_ch</span> <span class="o">=</span> <span class="n">Channel</span><span class="o">.</span><span class="n">fromPath</span><span class="p">(</span><span class="n">params</span><span class="o">.</span><span class="n">input</span><span class="p">)</span>
+    <span class="n">BET</span><span class="p">(</span><span class="n">input_ch</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>nextflow<span class="w"> </span>run<span class="w"> </span>bet_single.nf
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>-lh<span class="w"> </span>results_single/
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Key points:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Channel.fromPath(...)</span></code> creates a channel from a file path</p></li>
+<li><p>Inside the script block, <code class="docutils literal notranslate"><span class="pre">${t1w}</span></code> refers to the staged input file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publishDir</span></code> copies the outputs matching <code class="docutils literal notranslate"><span class="pre">'*_brain.*'</span></code> to our results folder</p></li>
+<li><p>We could override any parameter from the command line, e.g. <code class="docutils literal notranslate"><span class="pre">nextflow</span> <span class="pre">run</span> <span class="pre">bet_single.nf</span> <span class="pre">--frac</span> <span class="pre">0.3</span></code></p></li>
+</ul>
+</section>
+<section id="multi-subject-pipeline">
+<h2>Multi-subject pipeline<a class="headerlink" href="#multi-subject-pipeline" title="Link to this heading">#</a></h2>
+<p>Real neuroimaging studies have multiple subjects. Nextflow makes this easy — we just put multiple files into a channel and Nextflow fans out automatically.</p>
+<p>This pipeline has two processes:</p>
+<ol class="arabic simple">
+<li><p><strong>BET</strong> — runs brain extraction per subject (parallel fan-out)</p></li>
+<li><p><strong>QC_SUMMARY</strong> — collects all results and generates a summary table (runs once after all BET tasks finish)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%writefile</span> bet_multi.nf
+<span class="n">params</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="s1">'./data/sub-*.nii'</span>
+<span class="n">params</span><span class="o">.</span><span class="n">outdir</span> <span class="o">=</span> <span class="s1">'./results_multi'</span>
+<span class="n">params</span><span class="o">.</span><span class="n">frac</span>   <span class="o">=</span> <span class="mf">0.4</span>
+
+<span class="n">process</span> <span class="n">BET</span> <span class="p">{</span>
+    <span class="n">publishDir</span> <span class="s2">"$</span><span class="si">{params.outdir}</span><span class="s2">/bet"</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="s1">'copy'</span>
+
+    <span class="nb">input</span><span class="p">:</span>
+    <span class="n">path</span> <span class="n">t1w</span>
+
+    <span class="n">output</span><span class="p">:</span>
+    <span class="n">path</span> <span class="s1">'*_brain.nii.gz'</span>
+    <span class="n">path</span> <span class="s1">'*_brain_mask.nii.gz'</span>
+
+    <span class="n">script</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    bet ${t1w} ${t1w.baseName}_brain -f ${params.frac} -m</span>
+<span class="sd">    """</span>
+<span class="p">}</span>
+
+<span class="n">process</span> <span class="n">QC_SUMMARY</span> <span class="p">{</span>
+    <span class="n">publishDir</span> <span class="n">params</span><span class="o">.</span><span class="n">outdir</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="s1">'copy'</span>
+
+    <span class="nb">input</span><span class="p">:</span>
+    <span class="n">path</span> <span class="n">brain_images</span>
+    <span class="n">path</span> <span class="n">mask_images</span>
+
+    <span class="n">output</span><span class="p">:</span>
+    <span class="n">path</span> <span class="s1">'qc_summary.tsv'</span>
+
+    <span class="n">script</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    echo -e "subject\tbrain_volume_voxels" &gt; qc_summary.tsv</span>
+<span class="sd">    for mask in *_brain_mask.nii.gz; do</span>
+<span class="sd">        subj=\$(echo \$mask | sed 's/_brain_mask.nii.gz//')</span>
+<span class="sd">        nvox=\$(fslstats \$mask -V | awk '{print \$1}')</span>
+<span class="sd">        echo -e "\${subj}\t\${nvox}" &gt;&gt; qc_summary.tsv</span>
+<span class="sd">    done</span>
+<span class="sd">    echo "=== QC Summary ==="</span>
+<span class="sd">    cat qc_summary.tsv</span>
+<span class="sd">    """</span>
+<span class="p">}</span>
+
+<span class="n">workflow</span> <span class="p">{</span>
+    <span class="n">t1w_ch</span> <span class="o">=</span> <span class="n">Channel</span><span class="o">.</span><span class="n">fromPath</span><span class="p">(</span><span class="n">params</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span>
+
+    <span class="n">BET</span><span class="p">(</span><span class="n">t1w_ch</span><span class="p">)</span>
+
+    <span class="n">QC_SUMMARY</span><span class="p">(</span>
+        <span class="n">BET</span><span class="o">.</span><span class="n">out</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">collect</span><span class="p">(),</span>
+        <span class="n">BET</span><span class="o">.</span><span class="n">out</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>nextflow<span class="w"> </span>run<span class="w"> </span>bet_multi.nf
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+echo "=== Output files ==="
+ls -lh results_multi/bet/
+echo ""
+echo "=== QC Summary ==="
+cat results_multi/qc_summary.tsv
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>What’s new here?</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Channel.fromPath('data/sub-*.nii')</span></code> picks up both <code class="docutils literal notranslate"><span class="pre">sub-01.nii</span></code> and <code class="docutils literal notranslate"><span class="pre">sub-02.nii</span></code></p></li>
+<li><p>Nextflow runs <code class="docutils literal notranslate"><span class="pre">BET</span></code> twice in parallel (one per subject)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.collect()</span></code> gathers all per-subject outputs into a single list and passes it to <code class="docutils literal notranslate"><span class="pre">QC_SUMMARY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">QC_SUMMARY</span></code> runs <strong>once</strong>, after all BET tasks complete, and generates a combined table</p></li>
+</ul>
+<p>This fan-out/collect pattern is the foundation of most neuroimaging Nextflow pipelines.</p>
+</section>
+<section id="visualize-results">
+<h2>Visualize results<a class="headerlink" href="#visualize-results" title="Link to this heading">#</a></h2>
+<p>Use ipyniivue to visualize results. Enable the first line to see the comparison.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ipyniivue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NiiVue</span>
+
+<span class="n">nv</span> <span class="o">=</span> <span class="n">NiiVue</span><span class="p">()</span>
+<span class="n">nv</span><span class="o">.</span><span class="n">load_volumes</span><span class="p">([</span>
+    <span class="c1"># {"path": "./data/sub-01.nii", "colormap": "gray"},</span>
+    <span class="p">{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"./results_multi/bet/sub-01_brain.nii.gz"</span><span class="p">,</span> <span class="s2">"colormap"</span><span class="p">:</span> <span class="s2">"red"</span><span class="p">}</span>
+<span class="p">])</span>
+<span class="n">nv</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="next-steps">
+<h2>Next steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h2>
+<p>You now know the core Nextflow patterns. Here are some ways to extend what you’ve learned:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">-resume</span></code></strong>: Add this flag to skip already-completed tasks when re-running a pipeline after a failure or parameter change</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">nextflow.config</span></code></strong>: Move parameters, executor settings (local/SLURM/PBS), and resource limits (CPUs, memory) into a separate config file</p></li>
+<li><p><strong>Containers</strong>: Nextflow can pull and run Docker/Singularity containers per process — set <code class="docutils literal notranslate"><span class="pre">container</span></code> in a process or config</p></li>
+<li><p><strong>nf-core</strong>: Browse <a class="reference external" href="https://nf-co.re/">nf-co.re</a> for production-grade neuroimaging pipelines and community best practices</p></li>
+<li><p><strong>More modalities</strong>: Extend the glob pattern (<code class="docutils literal notranslate"><span class="pre">params.inputs</span></code>) to pick up T2w, FLAIR, or functional data</p></li>
+</ul>
+</section>
+<section id="dependencies-and-environment-capture">
+<h2>Dependencies and environment capture<a class="headerlink" href="#dependencies-and-environment-capture" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+
+<span class="o">%</span><span class="k">watermark</span>
+<span class="o">%</span><span class="k">watermark</span> --iversions
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./examples/workflows"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev" href="ipyniivue_ipywidgets.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ipyniivue and Ipywidgets</p>
+      </div>
+    </a>
+    <a class="right-next" href="nipype_full.html" title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Nipype on Neurodesk</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Nextflow in Neurodesk</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-engine">Workflow engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-from-osf">Dataset from OSF</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-test-data">Download test data</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-simulated-second-subject-by-copying-sub-01">Create a simulated second subject by copying sub-01</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-nextflow">Hello Nextflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-concepts">Core concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-subject-brain-extraction">Single-subject brain extraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-subject-pipeline">Multi-subject pipeline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-results">Visualize results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-and-environment-capture">Dependencies and environment capture</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Neurodesk Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  
+</body></html>
