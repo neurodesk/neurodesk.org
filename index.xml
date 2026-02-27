@@ -730,6 +730,7 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
  &lt;li>&lt;a href="#gpu-support">GPU support&lt;/a>&lt;/li>
  &lt;/ul>
  &lt;/li>
+ &lt;li>&lt;a href="#storage-on-sherlock">Storage on Sherlock:&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#using-neurodesk-on-sherlock-via-ondemand">Using Neurodesk on Sherlock via Ondemand&lt;/a>
  &lt;ul>
  &lt;li>&lt;a href="#installing-jupyterlab-plugins">Installing jupyterlab plugins&lt;/a>&lt;/li>
@@ -745,7 +746,6 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
  &lt;li>&lt;a href="#starting-session">starting session&lt;/a>&lt;/li>
  &lt;/ul>
  &lt;/li>
- &lt;li>&lt;a href="#alternative-to-running-connectsherlocksh-start-neurodesktop-manually-when-already-inside-a-job-on-sherlock">Alternative to running connectSherlock.sh: start neurodesktop manually when already inside a job on sherlock&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#connecting-with-vscode">connecting with VScode&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#connecting-with-cursor">connecting with Cursor&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#using-coding-agents-on-sherlock">using coding agents on sherlock&lt;/a>&lt;/li>
@@ -861,6 +861,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
  &lt;ul>
  &lt;li>&lt;a href="#windows-users-wsl-not-installed-properly">Windows users: WSL not installed properly&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#windows-users-not-enough-free-space-on-the-partition-in-windows-and-wsl2">Windows users: Not enough free space on the partition in Windows and WSL2&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#windows-users-windows-security-alert-for-docker-desktop-do-you-want-to-allow-public-private-and-domain-networks-to-access-this-app">Windows users: Windows Security Alert for Docker Desktop &amp;ldquo;Do you want to allow public, private, and domain networks to access this app&amp;rdquo;&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#windows-users-failure-to-connect-to-neurodesktop-in-firefox">Windows users: Failure to connect to Neurodesktop in Firefox&lt;/a>&lt;/li>
  &lt;/ul>
  &lt;/li>
@@ -1465,7 +1466,7 @@ Open VS Code and open the Remote Explorer. Then Attach to the running Neurodeskt
 &lt;li>&lt;a href="https://github.com/neurodesk/neurocontainers/issues" target="_blank" rel="noopener">Help solve issues&lt;/a> - visit our Github page and pick something out&lt;/li>
 &lt;/ul>
 &lt;h3 id="improve-documentation">Improve Documentation&lt;/h3>
-&lt;p>Good documentation makes tools accessible. Contribute tutorials, usage guides, or improve existing documentation.&lt;/p></description></item><item><title>Nectar Virtual Desktop Service</title><link>https://neurodesk.org/getting-started/installations/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/nectar/</guid><description>&lt;p>
+&lt;p>Good documentation makes tools accessible. Help improve our docs or developer guides.&lt;/p></description></item><item><title>Nectar Virtual Desktop Service</title><link>https://neurodesk.org/getting-started/installations/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/nectar/</guid><description>&lt;p>
 
 &lt;div class="alert alert-info" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>

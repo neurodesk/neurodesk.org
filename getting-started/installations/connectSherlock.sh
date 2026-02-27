@@ -10,10 +10,91 @@ random_tunnel_port() {
     echo $((10000 + RANDOM % 55001))
 }
 
+ssh_config_has_host_alias() {
+    local SSH_CONFIG_FILE="$1"
+    local TARGET_ALIAS="$2"
+
+    if [ ! -f "$SSH_CONFIG_FILE" ]; then
+        return 1
+    fi
+
+    awk -v target="$TARGET_ALIAS" '
+        /^[[:space:]]*#/ { next }
+        /^[[:space:]]*[Hh][Oo][Ss][Tt][[:space:]]+/ {
+            line = $0
+            sub(/^[[:space:]]*[Hh][Oo][Ss][Tt][[:space:]]+/, "", line)
+            split(line, host_patterns, /[[:space:]]+/)
+            for (i in host_patterns) {
+                if (tolower(host_patterns[i]) == tolower(target)) {
+                    found = 1
+                }
+            }
+        }
+        END { exit(found ? 0 : 1) }
+    ' "$SSH_CONFIG_FILE"
+}
+
+ensure_sherlock_ssh_config() {
+    local LOGIN_ALIAS="$1"
+    local SSH_DIR="${HOME}/.ssh"
+    local SSH_CONFIG_FILE="${SSH_DIR}/config"
+    local USER_CHOICE
+    local SHERLOCK_USER
+
+    mkdir -p "$SSH_DIR"
+    chmod 700 "$SSH_DIR" 2>/dev/null || true
+
+    if ssh_config_has_host_alias "$SSH_CONFIG_FILE" "$LOGIN_ALIAS"; then
+        return 0
+    fi
+
+    echo "No SSH config entry found for '${LOGIN_ALIAS}' in ${SSH_CONFIG_FILE}."
+    echo "This script connects using the '${LOGIN_ALIAS}' SSH alias."
+    echo -n "Add a Sherlock SSH config entry now? [Y/n] "
+    read -r USER_CHOICE
+
+    if [[ "$USER_CHOICE" =~ ^([nN][oO]|[nN])$ ]]; then
+        echo "Skipping SSH config update."
+        return 1
+    fi
+
+    echo -n "Sherlock username (SUNet ID) [${USER}]: "
+    read -r SHERLOCK_USER
+    SHERLOCK_USER=${SHERLOCK_USER:-$USER}
+
+    if [ -f "$SSH_CONFIG_FILE" ] && [ -s "$SSH_CONFIG_FILE" ]; then
+        printf "\n" >> "$SSH_CONFIG_FILE"
+    fi
+
+    cat >> "$SSH_CONFIG_FILE" <<EOF
+Host ${LOGIN_ALIAS}
+    ControlMaster auto
+    ControlPath ~/.ssh/%l%r@%h:%p
+    HostName login.sherlock.stanford.edu
+    User ${SHERLOCK_USER}
+    ControlPersist 1h
+EOF
+    chmod 600 "$SSH_CONFIG_FILE" 2>/dev/null || true
+    echo "Added SSH config entry for '${LOGIN_ALIAS}' to ${SSH_CONFIG_FILE}."
+    return 0
+}
+
 function connectSherlock() {
     local LOGIN_NODE="sherlock"
     local JOB_NAME="neurodesktop"
     local CTRL_SOCKET="${HOME}/.ssh/sherlock_ctrl_$(date +%s)_${RANDOM}"
+    local TUNNEL_PORT
+
+    if ! ensure_sherlock_ssh_config "$LOGIN_NODE"; then
+        echo "Please add a valid SSH entry for '${LOGIN_NODE}' and run the script again."
+        return 1
+    fi
+
+    TUNNEL_PORT=$(random_tunnel_port)
+    if [[ ! "$TUNNEL_PORT" =~ ^[0-9]+$ ]]; then
+        echo "Failed to select a valid tunnel port."
+        return 1
+    fi
 
     # Start master connection
     # -M: master mode, -f: background, -N: no command, -S: socket path
@@ -22,11 +103,11 @@ function connectSherlock() {
         echo "Authentication failed."
         return 1
     fi
-    # Close master connection and free up port 8888 on return
+    # Close master connection and free up local tunnel port on return
     trap 'ssh -S "'"$CTRL_SOCKET"'" -O exit "'"$LOGIN_NODE"'" 2>/dev/null; \
-          if lsof -Pi :8888 -sTCP:LISTEN -t >/dev/null 2>&1; then \
-              echo "Cleaning up port 8888..."; \
-              lsof -Pi :8888 -sTCP:LISTEN -t | xargs kill -9 2>/dev/null; \
+          if lsof -Pi :'"$TUNNEL_PORT"' -sTCP:LISTEN -t >/dev/null 2>&1; then \
+              echo "Cleaning up local port '"$TUNNEL_PORT"'..."; \
+              lsof -Pi :'"$TUNNEL_PORT"' -sTCP:LISTEN -t | xargs kill -9 2>/dev/null; \
           fi' RETURN
     
     # --- 1. CHECK FOR EXISTING "NEURODESKTOP" JOBS ---
@@ -43,7 +124,7 @@ function connectSherlock() {
         # Default to Yes
         if [[ ! "$reuse" =~ ^([nN][oO]|[nN])$ ]]; then
             echo "Reconnecting to $NODE_NAME..."
-            echo "ℹ️  Using existing tunnel on port 8888 (maintained by your original terminal)."
+            echo "ℹ️  Using existing tunnel from your original terminal."
             ssh -S "$CTRL_SOCKET" -t "$LOGIN_NODE" "ssh $NODE_NAME"
             return
         fi
@@ -80,84 +161,452 @@ function connectSherlock() {
     read -r GPU
     GPU=${GPU:-none}
 
-    local MIDDLE_PORT
-    MIDDLE_PORT=$(random_tunnel_port)
-    if [[ ! "$MIDDLE_PORT" =~ ^[0-9]+$ ]]; then
-        echo "Failed to select a valid tunnel port."
-        return 1
-    fi
-    echo "Establishing tunnel via Login Node port: $MIDDLE_PORT"
+    echo "Using shared random tunnel/notebook port: ${TUNNEL_PORT}"
+    echo "Open Neurodesktop at: http://127.0.0.1:${TUNNEL_PORT}"
 
-    # --- 3. CHECK LOCAL PORT 8888 ---
-    # Check if port 8888 is occupied and kill the process(es) if so
-    if lsof -Pi :8888 -sTCP:LISTEN -t >/dev/null ; then
-        echo "Port 8888 is already in use."
+    # --- 3. CHECK LOCAL PORT ---
+    # Check if local port is occupied and kill the process(es) if so
+    if lsof -Pi :"$TUNNEL_PORT" -sTCP:LISTEN -t >/dev/null ; then
+        echo "Port ${TUNNEL_PORT} is already in use."
         local PIDS
-        PIDS=$(lsof -Pi :8888 -sTCP:LISTEN -t)
-        echo "Killing process(es) $PIDS to free up port 8888..."
+        PIDS=$(lsof -Pi :"$TUNNEL_PORT" -sTCP:LISTEN -t)
+        echo "Killing process(es) $PIDS to free up port ${TUNNEL_PORT}..."
         echo "$PIDS" | xargs kill -9 2>/dev/null
     fi
 
     echo "Preparing setup script..."
-    ssh -S "$CTRL_SOCKET" "$LOGIN_NODE" "cat > ~/.neurodesk_setup.sh << 'EOF'
+    ssh -S "$CTRL_SOCKET" "$LOGIN_NODE" "cat > ~/.neurodesk_setup.sh && chmod +x ~/.neurodesk_setup.sh" <<'EOF'
 #!/bin/bash
-cd \$SCRATCH
-export PATH=\$PATH:/sbin:/usr/sbin
-if [ ! -f neurodesktop-overlay.img ]; then
-    echo \"Creating neurodesktop-overlay.img (2GB)...\"
-    dd if=/dev/zero of=neurodesktop-overlay.img bs=1M count=2048
-    mkfs.ext3 -F neurodesktop-overlay.img
-    debugfs -w -R \"mkdir upper\" neurodesktop-overlay.img
-    debugfs -w -R \"mkdir work\" neurodesktop-overlay.img
+export PATH=$PATH:/sbin:/usr/sbin
+NEURODESKTOP_START_DIR="${NEURODESKTOP_START_DIR:-$HOME}"
+if [ ! -d "${NEURODESKTOP_START_DIR}" ]; then
+    echo "Requested start dir ${NEURODESKTOP_START_DIR} not found; falling back to \$SCRATCH."
+    NEURODESKTOP_START_DIR="$SCRATCH"
+fi
+if ! cd "${NEURODESKTOP_START_DIR}"; then
+    echo "ERROR: failed to cd into ${NEURODESKTOP_START_DIR}"
+    exit 1
+fi
+echo "Container start directory target: ${NEURODESKTOP_START_DIR}"
+echo "Using --writable-tmpfs (ephemeral writable container layer)."
+NEURODESKTOP_ASSET_BASE="${SCRATCH:-$HOME}"
+NEURODESKTOP_ASSET_BASE="${NEURODESKTOP_ASSET_BASE%/}/neurodesktop"
+NEURODESKTOP_HOME_DIR="${NEURODESKTOP_ASSET_BASE}/home"
+NEURODESKTOP_WORKDIR="${NEURODESKTOP_HOME_DIR}/workdir"
+
+if [ ! -d "${NEURODESKTOP_HOME_DIR}" ]; then
+    echo "Creating ${NEURODESKTOP_HOME_DIR}..."
+    mkdir -p "${NEURODESKTOP_HOME_DIR}"
 else
-    echo \"neurodesktop-overlay.img found.\"
+    echo "${NEURODESKTOP_HOME_DIR} found."
 fi
 
-if [ ! -d ~/neurodesktop-home ]; then
-    echo \"Creating ~/neurodesktop-home...\"
-    mkdir -p ~/neurodesktop-home
+if [ ! -d "${NEURODESKTOP_WORKDIR}" ]; then
+    echo "Creating ${NEURODESKTOP_WORKDIR}..."
+    mkdir -p "${NEURODESKTOP_WORKDIR}"
 else
-    echo \"~/neurodesktop-home found.\"
+    echo "${NEURODESKTOP_WORKDIR} found."
 fi
 
-if [ ! -d ~/neurodesktop-home/workdir ]; then
-    echo \"Creating ~/neurodesktop-home/workdir...\"
-    mkdir -p ~/neurodesktop-home/workdir
-else
-    echo \"~/neurodesktop-home/workdir found.\"
+SLURM_BINDS=()
+add_slurm_bind() {
+    local bind_spec="$1"
+    local idx
+    for ((idx=1; idx<${#SLURM_BINDS[@]}; idx+=2)); do
+        if [ "${SLURM_BINDS[$idx]}" = "${bind_spec}" ]; then
+            return
+        fi
+    done
+    SLURM_BINDS+=(--bind "${bind_spec}")
+}
+HOST_SLURM_CONF="${SLURM_CONF:-/etc/slurm/slurm.conf}"
+HOST_SLURM_CONF_DIR=/etc/slurm
+if [ -n "${HOST_SLURM_CONF}" ]; then
+    HOST_SLURM_CONF_DIR=$(dirname -- "${HOST_SLURM_CONF}")
+fi
+HOST_SLURM_CONF_REAL=$(readlink -f "${HOST_SLURM_CONF}" 2>/dev/null || echo "${HOST_SLURM_CONF}")
+if [ -z "${HOST_SLURM_CONF_REAL}" ]; then
+    HOST_SLURM_CONF_REAL="${HOST_SLURM_CONF}"
+fi
+HOST_SLURM_CONF_REAL_DIR="${HOST_SLURM_CONF_DIR}"
+if [ -n "${HOST_SLURM_CONF_REAL}" ]; then
+    HOST_SLURM_CONF_REAL_DIR=$(dirname -- "${HOST_SLURM_CONF_REAL}")
+fi
+CONTAINER_SLURM_CONF_DIR=/etc/slurm
+CONTAINER_SLURM_CONF_PATH="${CONTAINER_SLURM_CONF_DIR}/${HOST_SLURM_CONF_REAL##*/}"
+if [ -d "${HOST_SLURM_CONF_REAL_DIR}" ]; then
+    add_slurm_bind "${HOST_SLURM_CONF_REAL_DIR}:${CONTAINER_SLURM_CONF_DIR}"
+elif [ -d "${HOST_SLURM_CONF_DIR}" ]; then
+    add_slurm_bind "${HOST_SLURM_CONF_DIR}:${CONTAINER_SLURM_CONF_DIR}"
 fi
 
+SLURM_PLUGIN_DIRS_RAW=""
+if [ -r "${HOST_SLURM_CONF_REAL}" ]; then
+    SLURM_PLUGIN_DIRS_RAW=$(awk -F= '/^[[:space:]]*PluginDir[[:space:]]*=/{print $2}' "${HOST_SLURM_CONF_REAL}" | tail -n 1 | tr -d '[:space:]')
+fi
+if [ -z "${SLURM_PLUGIN_DIRS_RAW}" ] && [ -n "${SLURM_PLUGIN_DIR:-}" ]; then
+    SLURM_PLUGIN_DIRS_RAW="${SLURM_PLUGIN_DIR}"
+fi
+if [ -n "${SLURM_PLUGIN_DIRS_RAW}" ]; then
+    OLD_IFS="${IFS}"
+    IFS=':'
+    read -r -a SLURM_PLUGIN_DIRS <<< "${SLURM_PLUGIN_DIRS_RAW}"
+    IFS="${OLD_IFS}"
+    for plugin_dir in "${SLURM_PLUGIN_DIRS[@]}"; do
+        if [ -n "${plugin_dir}" ] && [ -d "${plugin_dir}" ]; then
+            add_slurm_bind "${plugin_dir}:${plugin_dir}"
+        fi
+    done
+fi
 
-#    --home \$HOME/neurodesktop-home:/home/jovyan \\
+SLURM_LD_LIBRARY_PATH=""
+if [ -z "${NEURODESKTOP_ASSET_BASE:-}" ]; then
+    NEURODESKTOP_ASSET_BASE="${SCRATCH:-$HOME}"
+    NEURODESKTOP_ASSET_BASE="${NEURODESKTOP_ASSET_BASE%/}/neurodesktop"
+fi
+SLURM_ASSET_ROOT="${NEURODESKTOP_ASSET_BASE}/slurm"
+SLURM_HOST_BIN_REAL_STAGING="${SLURM_ASSET_ROOT}/bin-real"
+SLURM_HOST_BIN_STAGING="${SLURM_ASSET_ROOT}/bin"
+SLURM_HOST_LIB_STAGING="${SLURM_ASSET_ROOT}/libs"
+SLURM_WRAPPER_LIB_PATH="/opt/slurm-host-libs"
+SLURM_WRAPPER_BIN_PATH="/opt/slurm-host-bin"
+unset APPTAINERENV_PREPEND_PATH
+unset APPTAINERENV_PATH
+resolve_slurm_cmd_path() {
+    local slurm_cmd_name="$1"
+    local slurm_cmd_path=""
+    slurm_cmd_path=$(type -P "${slurm_cmd_name}" 2>/dev/null || true)
+    if [ -z "${slurm_cmd_path}" ]; then
+        for candidate in /usr/bin /usr/local/bin /bin /usr/sbin /sbin; do
+            if [ -x "${candidate}/${slurm_cmd_name}" ]; then
+                slurm_cmd_path="${candidate}/${slurm_cmd_name}"
+                break
+            fi
+        done
+    fi
+    echo "${slurm_cmd_path}"
+}
+file_mtime_epoch() {
+    local path="$1"
+    if [ ! -e "${path}" ]; then
+        echo 0
+        return
+    fi
+    stat -c %Y "${path}" 2>/dev/null || stat -f %m "${path}" 2>/dev/null || echo 0
+}
+hash_text_value() {
+    local value="$1"
+    if command -v sha256sum >/dev/null 2>&1; then
+        printf '%s' "${value}" | sha256sum | awk '{print $1}'
+    elif command -v shasum >/dev/null 2>&1; then
+        printf '%s' "${value}" | shasum -a 256 | awk '{print $1}'
+    else
+        printf '%s' "${value}" | cksum | awk '{print $1}'
+    fi
+}
+if command -v ldd >/dev/null 2>&1; then
+    SLURM_HOST_CMDS=(sinfo squeue scontrol sacct srun sbatch scancel salloc sstat sprio lfs)
+    SLURM_CACHE_DIR="${SLURM_ASSET_ROOT}/cache"
+    SLURM_CACHE_SIG_FILE="${SLURM_CACHE_DIR}/signature.txt"
+    SLURM_CACHE_TTL_SECONDS="${NEURODESKTOP_SLURM_CACHE_TTL_SECONDS:-86400}"
+    if [[ ! "${SLURM_CACHE_TTL_SECONDS}" =~ ^[0-9]+$ ]]; then
+        SLURM_CACHE_TTL_SECONDS=86400
+    fi
+    mkdir -p "${SLURM_CACHE_DIR}"
+    mkdir -p "${SLURM_HOST_BIN_REAL_STAGING}"
+    mkdir -p "${SLURM_HOST_BIN_STAGING}"
+    mkdir -p "${SLURM_HOST_LIB_STAGING}"
+    SLURM_CACHE_INPUT="host=$(hostname 2>/dev/null || echo unknown)
+slurm_conf=${HOST_SLURM_CONF_REAL}
+slurm_conf_mtime=$(file_mtime_epoch "${HOST_SLURM_CONF_REAL}")
+plugin_dirs=${SLURM_PLUGIN_DIRS_RAW:-unset}"
+    for plugin_dir in "${SLURM_PLUGIN_DIRS[@]}"; do
+        [ -z "${plugin_dir}" ] && continue
+        SLURM_CACHE_INPUT="${SLURM_CACHE_INPUT}
+plugin_dir=${plugin_dir}|mtime=$(file_mtime_epoch "${plugin_dir}")"
+    done
+    for slurm_cmd in "${SLURM_HOST_CMDS[@]}"; do
+        cmd_path=$(resolve_slurm_cmd_path "${slurm_cmd}")
+        SLURM_CACHE_INPUT="${SLURM_CACHE_INPUT}
+cmd=${slurm_cmd}|path=${cmd_path:-missing}|mtime=$(file_mtime_epoch "${cmd_path}")"
+    done
+    SLURM_CACHE_SIGNATURE=$(hash_text_value "${SLURM_CACHE_INPUT}")
 
-echo \"Starting Neurodesktop container...\"
-# Using backslashes for line continuation in the remote file requires double backslash here
-apptainer run \\
-   --nv \\
-   --fakeroot \\
-   --overlay \$SCRATCH/neurodesktop-overlay.img \\
-   --bind \$GROUP_HOME/neurodesk/local/containers/:/neurodesktop-storage/containers \\
-   --bind \$GROUP_HOME/neurodesk/local/containers/:/neurocommand/local/containers \\
-   --no-home \\
-   --env CVMFS_DISABLE=true \\
-   --env NB_UID=\$(id -u) \\
-   --env NB_GID=\$(id -g) \\
-   --env NEURODESKTOP_VERSION=latest \\
-   \$GROUP_HOME/neurodesk/neurodesktop_latest.sif \\
-   start-notebook.py --allow-root
+    NEED_CACHE_REBUILD=1
+    if [ -f "${SLURM_CACHE_SIG_FILE}" ] && [ -s "${SLURM_CACHE_SIG_FILE}" ]; then
+        CACHED_SIGNATURE=$(head -n 1 "${SLURM_CACHE_SIG_FILE}" 2>/dev/null || echo "")
+        CACHE_SIG_MTIME=$(file_mtime_epoch "${SLURM_CACHE_SIG_FILE}")
+        CACHE_NOW_EPOCH=$(date +%s)
+        CACHE_AGE=$((CACHE_NOW_EPOCH - CACHE_SIG_MTIME))
+        if [ "${CACHED_SIGNATURE}" = "${SLURM_CACHE_SIGNATURE}" ] && \
+           [ "${CACHE_AGE}" -ge 0 ] && [ "${CACHE_AGE}" -le "${SLURM_CACHE_TTL_SECONDS}" ] && \
+           ls "${SLURM_HOST_BIN_REAL_STAGING}"/* >/dev/null 2>&1 && \
+           ls "${SLURM_HOST_BIN_STAGING}"/* >/dev/null 2>&1; then
+            NEED_CACHE_REBUILD=0
+        fi
+    fi
+
+    if [ "${NEED_CACHE_REBUILD}" -eq 1 ]; then
+        echo "Preparing host Slurm compatibility assets (initial run or cache refresh)..."
+        rm -f "${SLURM_HOST_BIN_REAL_STAGING}"/* 2>/dev/null || true
+        rm -f "${SLURM_HOST_BIN_STAGING}"/* 2>/dev/null || true
+        rm -f "${SLURM_HOST_LIB_STAGING}"/*.so* 2>/dev/null || true
+
+        echo "Scanning host Slurm command dependencies..."
+        for slurm_cmd in "${SLURM_HOST_CMDS[@]}"; do
+            cmd_path=$(resolve_slurm_cmd_path "${slurm_cmd}")
+            if [ -n "${cmd_path}" ] && [ -x "${cmd_path}" ]; then
+                cp -Lf "${cmd_path}" "${SLURM_HOST_BIN_REAL_STAGING}/${slurm_cmd}" 2>/dev/null || true
+                printf '%s\n' \
+                    '#!/bin/bash' \
+                    "export LD_LIBRARY_PATH=${SLURM_WRAPPER_LIB_PATH}\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}" \
+                    "exec /opt/slurm-host-bin-real/${slurm_cmd} \"\$@\"" \
+                    > "${SLURM_HOST_BIN_STAGING}/${slurm_cmd}"
+                chmod +x "${SLURM_HOST_BIN_STAGING}/${slurm_cmd}" 2>/dev/null || true
+                while read -r dep_path; do
+                    [ -z "${dep_path}" ] && continue
+                    dep_base=$(basename "${dep_path}")
+                    case "${dep_base}" in
+                        libc.so.*|libm.so.*|libpthread.so.*|libdl.so.*|librt.so.*|ld-linux*.so.*)
+                            continue
+                            ;;
+                    esac
+                    cp -Lf "${dep_path}" "${SLURM_HOST_LIB_STAGING}/${dep_base}" 2>/dev/null || true
+                done < <(ldd "${cmd_path}" 2>/dev/null | awk '$2 == "=>" && $3 ~ /^\// {print $3} $1 ~ /^\// {print $1}')
+            fi
+        done
+
+        if [ -n "${SLURM_PLUGIN_DIRS_RAW}" ]; then
+            echo "Scanning Slurm plugin dependencies..."
+        fi
+        for plugin_dir in "${SLURM_PLUGIN_DIRS[@]}"; do
+            [ -d "${plugin_dir}" ] || continue
+            while read -r plugin_file; do
+                [ -r "${plugin_file}" ] || continue
+                while read -r dep_path; do
+                    [ -z "${dep_path}" ] && continue
+                    dep_base=$(basename "${dep_path}")
+                    case "${dep_base}" in
+                        libc.so.*|libm.so.*|libpthread.so.*|libdl.so.*|librt.so.*|ld-linux*.so.*)
+                            continue
+                            ;;
+                    esac
+                    cp -Lf "${dep_path}" "${SLURM_HOST_LIB_STAGING}/${dep_base}" 2>/dev/null || true
+                done < <(ldd "${plugin_file}" 2>/dev/null | awk '$2 == "=>" && $3 ~ /^\// {print $3} $1 ~ /^\// {print $1}')
+            done < <(find "${plugin_dir}" -maxdepth 4 -type f -name '*.so*' 2>/dev/null)
+        done
+
+        printf '%s\n' "${SLURM_CACHE_SIGNATURE}" > "${SLURM_CACHE_SIG_FILE}"
+    else
+        echo "Using cached host Slurm compatibility assets."
+    fi
+
+    if ls "${SLURM_HOST_BIN_REAL_STAGING}"/* >/dev/null 2>&1; then
+        add_slurm_bind "${SLURM_HOST_BIN_REAL_STAGING}:/opt/slurm-host-bin-real"
+    fi
+    if ls "${SLURM_HOST_BIN_STAGING}"/* >/dev/null 2>&1; then
+        add_slurm_bind "${SLURM_HOST_BIN_STAGING}:${SLURM_WRAPPER_BIN_PATH}"
+        export APPTAINERENV_PREPEND_PATH="${SLURM_WRAPPER_BIN_PATH}"
+        # Explicitly set PATH to keep wrapper precedence even if startup scripts reset PATH.
+        export APPTAINERENV_PATH="${SLURM_WRAPPER_BIN_PATH}:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    fi
+    for slurm_cmd in "${SLURM_HOST_CMDS[@]}"; do
+        cmd_path=$(resolve_slurm_cmd_path "${slurm_cmd}")
+        if [ -n "${cmd_path}" ] && [ -x "${cmd_path}" ] && [ -x "${SLURM_HOST_BIN_STAGING}/${slurm_cmd}" ]; then
+            # Force replacement of container slurm client command paths so PATH changes cannot bypass wrappers.
+            add_slurm_bind "${SLURM_HOST_BIN_STAGING}/${slurm_cmd}:${cmd_path}"
+        fi
+    done
+    if ls "${SLURM_HOST_LIB_STAGING}"/*.so* >/dev/null 2>&1; then
+        add_slurm_bind "${SLURM_HOST_LIB_STAGING}:${SLURM_WRAPPER_LIB_PATH}"
+        SLURM_LD_LIBRARY_PATH="${SLURM_WRAPPER_LIB_PATH} (wrapper scoped)"
+    fi
+
+    # Ensure legacy cached sh_quota wrappers do not survive cache reuse.
+    rm -f "${SLURM_HOST_BIN_REAL_STAGING}/sh_quota" 2>/dev/null || true
+
+    # Install a clean sh_quota shim into wrapper PATH that explicitly unsets
+    # LD_LIBRARY_PATH before executing the host helper.
+    HOST_SH_QUOTA_PATH=$(type -P sh_quota 2>/dev/null || true)
+    if [ -n "${HOST_SH_QUOTA_PATH}" ] && [ -x "${HOST_SH_QUOTA_PATH}" ]; then
+        printf '%s\n' \
+            '#!/bin/bash' \
+            'unset LD_LIBRARY_PATH' \
+            "exec \"${HOST_SH_QUOTA_PATH}\" \"\$@\"" \
+            > "${SLURM_HOST_BIN_STAGING}/sh_quota"
+        chmod +x "${SLURM_HOST_BIN_STAGING}/sh_quota" 2>/dev/null || true
+        add_slurm_bind "${HOST_SH_QUOTA_PATH}:${HOST_SH_QUOTA_PATH}"
+    else
+        rm -f "${SLURM_HOST_BIN_STAGING}/sh_quota" 2>/dev/null || true
+    fi
+    if [ -x "${SLURM_HOST_BIN_STAGING}/lfs" ]; then
+        # sh_quota calls /bin/lfs directly on Sherlock, so provide wrapper there.
+        add_slurm_bind "${SLURM_HOST_BIN_STAGING}/lfs:/bin/lfs"
+    else
+        HOST_LFS_PATH=$(resolve_slurm_cmd_path lfs)
+        if [ -n "${HOST_LFS_PATH}" ] && [ -x "${HOST_LFS_PATH}" ]; then
+            echo "WARNING: using unwrapped host lfs at ${HOST_LFS_PATH}; Lustre libs may be missing in container."
+            add_slurm_bind "${HOST_LFS_PATH}:/bin/lfs"
+        else
+            echo "WARNING: host lfs command not found; sh_quota may not report Lustre quotas."
+        fi
+    fi
+fi
+if [ -e /run/slurm ]; then
+    add_slurm_bind /run/slurm:/run/slurm
+fi
+if [ -e /run/slurmctld ]; then
+    add_slurm_bind /run/slurmctld:/run/slurmctld
+fi
+if [ -e /run/slurmdbd ]; then
+    add_slurm_bind /run/slurmdbd:/run/slurmdbd
+fi
+
+CLUSTER_NAME=""
+if [ -r "${HOST_SLURM_CONF_REAL}" ]; then
+    CLUSTER_NAME=$(awk -F= '/^[[:space:]]*ClusterName[[:space:]]*=/{print $2}' "${HOST_SLURM_CONF_REAL}" | tail -n 1 | tr -d '[:space:]')
+fi
+if [ -n "${CLUSTER_NAME}" ] && [ -e "/run/slurm-${CLUSTER_NAME}" ]; then
+    add_slurm_bind "/run/slurm-${CLUSTER_NAME}:/run/slurm-${CLUSTER_NAME}"
+fi
+
+SACK_SOCKET_CANDIDATE="${SLURM_SACK_SOCKET:-}"
+if [ -z "${SACK_SOCKET_CANDIDATE}" ]; then
+    if [ -n "${CLUSTER_NAME}" ] && [ -S "/run/slurm-${CLUSTER_NAME}/sack.socket" ]; then
+        SACK_SOCKET_CANDIDATE="/run/slurm-${CLUSTER_NAME}/sack.socket"
+    elif [ -S /run/slurm/sack.socket ]; then
+        SACK_SOCKET_CANDIDATE=/run/slurm/sack.socket
+    elif [ -S /run/slurmctld/sack.socket ]; then
+        SACK_SOCKET_CANDIDATE=/run/slurmctld/sack.socket
+    elif [ -S /run/slurmdbd/sack.socket ]; then
+        SACK_SOCKET_CANDIDATE=/run/slurmdbd/sack.socket
+    else
+        SACK_SOCKET_CANDIDATE=$(find /run -maxdepth 4 -type s -name 'sack.socket' 2>/dev/null | head -n 1)
+    fi
+fi
+if [ -n "${SACK_SOCKET_CANDIDATE}" ] && [ -S "${SACK_SOCKET_CANDIDATE}" ]; then
+    SACK_SOCKET_DIR=$(dirname "${SACK_SOCKET_CANDIDATE}")
+    if [ -d "${SACK_SOCKET_DIR}" ]; then
+        add_slurm_bind "${SACK_SOCKET_DIR}:${SACK_SOCKET_DIR}"
+    fi
+fi
+if [ -e /run/munge ]; then
+    add_slurm_bind /run/munge:/run/munge
+fi
+if [ -e /var/run/munge ]; then
+    add_slurm_bind /var/run/munge:/var/run/munge
+fi
+
+MUNGE_SOCKET_CANDIDATE="${MUNGE_SOCKET:-}"
+if [ -z "${MUNGE_SOCKET_CANDIDATE}" ]; then
+    for sock in \
+        /run/munge/munge.socket.2 \
+        /var/run/munge/munge.socket.2 \
+        /run/munge/munge.socket \
+        /var/run/munge/munge.socket \
+        /var/spool/slurmd/munge.socket.2 \
+        /var/spool/slurm/munge.socket.2
+    do
+        if [ -S "${sock}" ]; then
+            MUNGE_SOCKET_CANDIDATE="${sock}"
+            break
+        fi
+    done
+fi
+if [ -n "${MUNGE_SOCKET_CANDIDATE}" ] && [ -S "${MUNGE_SOCKET_CANDIDATE}" ]; then
+    MUNGE_SOCKET_DIR=$(dirname "${MUNGE_SOCKET_CANDIDATE}")
+    if [ -d "${MUNGE_SOCKET_DIR}" ]; then
+        add_slurm_bind "${MUNGE_SOCKET_DIR}:${MUNGE_SOCKET_DIR}"
+    fi
+fi
+
+export APPTAINERENV_NEURODESKTOP_SLURM_MODE=host
+export APPTAINERENV_SLURM_CONF="${CONTAINER_SLURM_CONF_PATH}"
+unset APPTAINERENV_LD_LIBRARY_PATH
+if [ -n "${SACK_SOCKET_CANDIDATE}" ] && [ -S "${SACK_SOCKET_CANDIDATE}" ]; then
+    export APPTAINERENV_SLURM_SACK_SOCKET="${SACK_SOCKET_CANDIDATE}"
+else
+    unset APPTAINERENV_SLURM_SACK_SOCKET
+fi
+
+if [ -n "${MUNGE_SOCKET_CANDIDATE}" ] && [ -S "${MUNGE_SOCKET_CANDIDATE}" ]; then
+    export APPTAINERENV_MUNGE_SOCKET="${MUNGE_SOCKET_CANDIDATE}"
+else
+    unset APPTAINERENV_MUNGE_SOCKET
+fi
+
+echo "Host Slurm integration: mode=${APPTAINERENV_NEURODESKTOP_SLURM_MODE:-unset} conf=${APPTAINERENV_SLURM_CONF:-unset} (from ${HOST_SLURM_CONF}) sack=${APPTAINERENV_SLURM_SACK_SOCKET:-unset} munge=${APPTAINERENV_MUNGE_SOCKET:-unset}"
+echo "Host Slurm plugin dirs: ${SLURM_PLUGIN_DIRS_RAW:-unset}"
+echo "Host Slurm bin dir: ${APPTAINERENV_PREPEND_PATH:-unset}"
+echo "Host Slurm PATH: ${APPTAINERENV_PATH:-unset}"
+echo "Host Slurm loader dirs: ${SLURM_LD_LIBRARY_PATH:-unset}"
+echo "Host Slurm wrapper count: $(ls "$SLURM_HOST_BIN_STAGING" 2>/dev/null | wc -l | tr -d ' ')"
+if [ -e "${HOST_SLURM_CONF_REAL}" ]; then
+    ls -l "${HOST_SLURM_CONF_REAL}"
+else
+    echo "WARNING: host slurm.conf not found at ${HOST_SLURM_CONF_REAL}"
+fi
+
+echo "Starting Neurodesktop container..."
+NEURODESKTOP_NOTEBOOK_PORT="${NEURODESKTOP_NOTEBOOK_PORT:-8888}"
+NEURODESKTOP_DISPLAY_URL="${NEURODESKTOP_DISPLAY_URL:-http://127.0.0.1:8888}"
+NEURODESKTOP_DISABLE_JPSERVER_EXTENSIONS="${NEURODESKTOP_DISABLE_JPSERVER_EXTENSIONS:-{'jupyter_server_fileid': False, 'jupyter_server_ydoc': False}}"
+NEURODESKTOP_SHELL_PROMPT="${NEURODESKTOP_SHELL_PROMPT:-neurodesk@sherlock:\\w\\$ }"
+NEURODESKTOP_UID=$(id -u)
+NEURODESKTOP_GID=$(id -g)
+NEURODESKTOP_ENABLE_GPU="${NEURODESKTOP_ENABLE_GPU:-0}"
+APPTAINER_GPU_ARGS=()
+if [ "${NEURODESKTOP_ENABLE_GPU}" = "1" ]; then
+    APPTAINER_GPU_ARGS+=(--nv)
+    if [ -n "${CUDA_VISIBLE_DEVICES:-}" ]; then
+        export APPTAINERENV_CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}"
+    fi
+    if [ -n "${NVIDIA_VISIBLE_DEVICES:-}" ]; then
+        export APPTAINERENV_NVIDIA_VISIBLE_DEVICES="${NVIDIA_VISIBLE_DEVICES}"
+    elif [ -n "${CUDA_VISIBLE_DEVICES:-}" ]; then
+        export APPTAINERENV_NVIDIA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}"
+    fi
+    echo "GPU passthrough enabled for container (--nv)."
+else
+    unset APPTAINERENV_CUDA_VISIBLE_DEVICES
+    unset APPTAINERENV_NVIDIA_VISIBLE_DEVICES
+    echo "GPU passthrough disabled for container."
+fi
+echo "Jupyter trash is disabled on Sherlock scratch mounts; deletes are permanent."
+apptainer run \
+   "${APPTAINER_GPU_ARGS[@]}" \
+   --writable-tmpfs \
+   --bind $GROUP_HOME/neurodesk/local/containers/:/neurodesktop-storage/containers \
+   --bind $GROUP_HOME/neurodesk/local/containers/:/neurocommand/local/containers \
+   "${SLURM_BINDS[@]}" \
+   --no-home \
+   --env CVMFS_DISABLE=true \
+   --env TINI_SUBREAPER=1 \
+   --env NB_UID="${NEURODESKTOP_UID}" \
+   --env NB_GID="${NEURODESKTOP_GID}" \
+   --env PS1="${NEURODESKTOP_SHELL_PROMPT}" \
+   --env NEURODESKTOP_VERSION=latest \
+   $GROUP_HOME/neurodesk/neurodesktop_latest.sif \
+   start-notebook.py \
+      --ServerApp.port="${NEURODESKTOP_NOTEBOOK_PORT}" \
+      --ServerApp.port_retries=0 \
+      --ServerApp.custom_display_url="${NEURODESKTOP_DISPLAY_URL}" \
+      --FileContentsManager.delete_to_trash=False \
+      --ServerApp.jpserver_extensions="${NEURODESKTOP_DISABLE_JPSERVER_EXTENSIONS}"
 EOF
-chmod +x ~/.neurodesk_setup.sh"
 
     # --- 4. LAUNCH ALLOCATION ---
     local GPU_FLAG=""
-    if [[ "$GPU" != "none" && ! -z "$GPU" ]]; then
+    local ENABLE_GPU_CONTAINER=0
+    if [[ -n "$GPU" && ! "$GPU" =~ ^([nN][oO][nN][eE]|0)$ ]]; then
         GPU_FLAG="--gres=gpu:$GPU"
+        ENABLE_GPU_CONTAINER=1
     fi
     
-    ssh -S "$CTRL_SOCKET" -t -L 8888:localhost:${MIDDLE_PORT} "$LOGIN_NODE" \
+    ssh -S "$CTRL_SOCKET" -t -L ${TUNNEL_PORT}:localhost:${TUNNEL_PORT} "$LOGIN_NODE" \
         "salloc --job-name=$JOB_NAME -p $PARTITION --nodes=1 --time=$WALLTIME --ntasks=1 --cpus-per-task=$CPUS --mem=$MEM $GPU_FLAG \
         bash -c 'echo \"Allocated: \${SLURM_NODELIST}\"; \
-                 ssh -t -L ${MIDDLE_PORT}:localhost:8888 \${SLURM_NODELIST} \"~/.neurodesk_setup.sh\"'"
+                 ssh -t -L ${TUNNEL_PORT}:localhost:${TUNNEL_PORT} \${SLURM_NODELIST} \"SLURM_CONF=\${SLURM_CONF:-} SLURM_SACK_SOCKET=\${SLURM_SACK_SOCKET:-} MUNGE_SOCKET=\${MUNGE_SOCKET:-} NEURODESKTOP_ENABLE_GPU=${ENABLE_GPU_CONTAINER} NEURODESKTOP_NOTEBOOK_PORT=${TUNNEL_PORT} NEURODESKTOP_DISPLAY_URL=http://127.0.0.1:${TUNNEL_PORT} ~/.neurodesk_setup.sh\"'"
 }
 
 # Check if the script is being executed directly
