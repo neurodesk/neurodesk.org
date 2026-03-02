@@ -204,9 +204,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -226,13 +223,6 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../quantitative_imaging/intro.html">Quantitative Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/aslprep.html">ASLprep</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/qsmxt.html">QSMxT</a></li>
-
-
-
-
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -245,10 +235,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer.html">FreeSurfer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../workflows/intro.html">Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -260,10 +248,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../workflows/bids_conversion.html">BIDS conversion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_short.html">Basic Nipype</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="../workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/pydra_preproc_ants.html">Pydra</a></li>
 </ul>
@@ -335,8 +321,9 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Contribute Example Notebooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Contribute Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Creating Example Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Creating Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/review.html">Reviewing for NeurodeskEDU</a></li>
 </ul>
 </details></li>
 </ul>
@@ -558,10 +545,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
@@ -612,12 +595,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="advanced-tracking-with-dipy">
 <h1>Advanced Tracking with DIPY<a class="headerlink" href="#advanced-tracking-with-dipy" title="Link to this heading">#</a></h1>
 <p>In this notebook, we explore advanced tractography methods, including <strong>anatomically-constrained tracking (ACT, CMC)</strong>, <strong>Particle Filtering Tractography (PFT)</strong>, <strong>deterministic LocalTracking with ACT</strong>, and <strong>Parallel Transport Tractography (PTT).</strong></p>
-<section id="id1">
-<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p><strong>Author</strong>: Monika Doerig</p>
 <p><strong>Date</strong>: 5 Dec 2025</p>
-<section id="id2">
-<h3><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p><strong>License:</strong></p>
 <div style="margin-top: 10px;">
     <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #0066cc;">
@@ -625,8 +604,6 @@ document.write(`
     </a>
 </div>
 <p><strong>Note:</strong> If this notebook uses neuroimaging tools from Neurocontainers, those tools retain their original licenses. Please see <a href="https://neurodesk.org/overview/how-to-cite-us/" target="_blank" style="color: #0066cc;">Neurodesk citation guidelines</a> for details.</p>
-</section>
-</section>
 <section id="citation-and-resources">
 <h2>Citation and Resources:<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h2>
 <section id="tools-included-in-this-workflow">
@@ -699,18 +676,6 @@ document.write(`
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.tracking.streamline</span><span class="w"> </span><span class="kn">import</span> <span class="n">Streamlines</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.tracking</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.viz</span><span class="w"> </span><span class="kn">import</span> <span class="n">window</span><span class="p">,</span> <span class="n">actor</span><span class="p">,</span> <span class="n">colormap</span><span class="p">,</span> <span class="n">has_fury</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  cos = np.divide(z, r, where=r &gt; 0)
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  cos = np.divide(z, r, where=r &gt; 0)
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
 </pre></div>
 </div>
 </div>
@@ -892,21 +857,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/fury/colormap.py:234: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  orient = np.abs(np.divide(v, r, where=r != 0))
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
-<img alt="../../_images/75dba1aa173491079340e7729c6511a6cbbc0bd48d3d71d2cd03d569393071a9.png" src="../../_images/75dba1aa173491079340e7729c6511a6cbbc0bd48d3d71d2cd03d569393071a9.png">
+<img alt="../../_images/55c992b609b8240f0c1952f6d3e7b1f02acd9d4c502e942b442efb28d0237a9a.png" src="../../_images/55c992b609b8240f0c1952f6d3e7b1f02acd9d4c502e942b442efb28d0237a9a.png">
 </div>
 </div>
 </section>
@@ -936,20 +887,7 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
-<img alt="../../_images/8ac1b068dc5d894512253421f83856ad3264b1b71a40635afd047ee272640af9.png" src="../../_images/8ac1b068dc5d894512253421f83856ad3264b1b71a40635afd047ee272640af9.png">
+<img alt="../../_images/e5936a03ec0d546f20fe3644dc42fb47003d3c0e28ecdab4c57da84bc00ec956.png" src="../../_images/e5936a03ec0d546f20fe3644dc42fb47003d3c0e28ecdab4c57da84bc00ec956.png">
 </div>
 </div>
 <blockquote>
@@ -1003,20 +941,7 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
-<img alt="../../_images/7b9b02b5a6f0f487e1913a478cf66d300e9fcb1dab1157e299203e277ad49a7f.png" src="../../_images/7b9b02b5a6f0f487e1913a478cf66d300e9fcb1dab1157e299203e277ad49a7f.png">
+<img alt="../../_images/2ec8cd2d417ed4ef13580fdc0c304cfef8b2fea37d4053ed0f43ab595903cf88.png" src="../../_images/2ec8cd2d417ed4ef13580fdc0c304cfef8b2fea37d4053ed0f43ab595903cf88.png">
 </div>
 </div>
 <div class="cell docutils container">
@@ -1028,8 +953,8 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2847
-Deterministic ACT streamlines: 1180
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2809
+Deterministic ACT streamlines: 1142
 PTT streamlines: 3155
 </pre></div>
 </div>
@@ -1050,26 +975,26 @@ PTT streamlines: 3155
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-26T02:42:57.921122+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-01-19T13:08:29.081727+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-164-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
-IPython   : 9.9.0
+IPython   : 9.7.0
 dipy      : 1.11.0
 fury      : 0.11.0
 matplotlib: 3.10.8
 nibabel   : 5.3.3
-numpy     : 2.4.2
+numpy     : 2.3.5
 </pre></div>
 </div>
 </div>
@@ -1138,10 +1063,6 @@ numpy     : 2.4.2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>

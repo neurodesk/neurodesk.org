@@ -206,9 +206,6 @@
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
-
-
-
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -228,13 +225,6 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../quantitative_imaging/intro.html">Quantitative Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/aslprep.html">ASLprep</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../quantitative_imaging/qsmxt.html">QSMxT</a></li>
-
-
-
-
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -247,10 +237,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer.html">FreeSurfer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../workflows/intro.html">Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -262,10 +250,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../workflows/bids_conversion.html">BIDS conversion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_short.html">Basic Nipype</a></li>
-
 <li class="toctree-l3"><a class="reference internal" href="../workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/pydra_preproc_ants.html">Pydra</a></li>
 </ul>
@@ -337,8 +323,9 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../contribute/intro.html">Contribute</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Contribute Example Notebooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Contribute Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/examples.html">Creating Example Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/tutorials.html">Creating Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contribute/review.html">Reviewing for NeurodeskEDU</a></li>
 </ul>
 </details></li>
 </ul>
@@ -560,10 +547,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resoures">Citation and Resoures:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-inluded-in-this-workflow">Tools inluded in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational Resources</a></li>
@@ -614,12 +597,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="fsl-preprocessing-and-glm">
 <h1>FSL Preprocessing and GLM<a class="headerlink" href="#fsl-preprocessing-and-glm" title="Link to this heading">#</a></h1>
 <p>This notebook showcases the FSL software package and performs preprocessing and first-level analysis on one subject from the Flanker dataset. The example is closely inspired by the FSL tutorial in Andy’s Brain Book and follows the steps outlined in <em>Chapter 4: Preprocessing</em> and <em>Chapter 5: Statistics and Modeling</em>. For detailed information about the dataset and analysis pipeline, refer to Andy’s original tutorial.</p>
-<section id="id1">
-<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p><strong>Author:</strong> Monika Doerig</p>
 <p><strong>Date</strong>: 15 May 2025</p>
-<section id="id2">
-<h3><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p><strong>License:</strong></p>
 <div style="margin-top: 10px;">
     <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #0066cc;">
@@ -627,8 +606,6 @@ document.write(`
     </a>
 </div>
 <p><strong>Note:</strong> If this notebook uses neuroimaging tools from Neurocontainers, those tools retain their original licenses. Please see <a href="https://neurodesk.org/overview/how-to-cite-us/" target="_blank" style="color: #0066cc;">Neurodesk citation guidelines</a> for details.</p>
-</section>
-</section>
 <section id="citation-and-resoures">
 <h2>Citation and Resoures:<a class="headerlink" href="#citation-and-resoures" title="Link to this heading">#</a></h2>
 <section id="tools-inluded-in-this-workflow">
@@ -821,16 +798,6 @@ action summary:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'../../static/examples/functional_imaging/FSL_preproc_glm/fsl_preproc_anat.png'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/e93ce0d7f33b000be2e63a58a6b9dd315bbda6b942cfc3b7e98ee17f9ded50b4.png" src="../../_images/e93ce0d7f33b000be2e63a58a6b9dd315bbda6b942cfc3b7e98ee17f9ded50b4.png">
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># functional image run 1, first volume</span>
 <span class="n">nv</span> <span class="o">=</span> <span class="n">NiiVue</span><span class="p">()</span>
 <span class="n">nv</span><span class="o">.</span><span class="n">load_volumes</span><span class="p">([{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"./FSL_preproc/sub-08_task-flanker_run-1_bold_vol0.nii.gz"</span><span class="p">}])</span>
@@ -843,16 +810,6 @@ action summary:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'../../static/examples/functional_imaging/FSL_preproc_glm/fsl_preproc_run1.png'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/468f61971c2e736a86751442791cd0773ada79c97a81cc63d836093af2d61d86.png" src="../../_images/468f61971c2e736a86751442791cd0773ada79c97a81cc63d836093af2d61d86.png">
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># functional image run 2</span>
 <span class="n">nv</span> <span class="o">=</span> <span class="n">NiiVue</span><span class="p">()</span>
 <span class="n">nv</span><span class="o">.</span><span class="n">load_volumes</span><span class="p">([{</span><span class="s2">"path"</span><span class="p">:</span> <span class="s2">"./FSL_preproc/sub-08_task-flanker_run-2_bold_vol0.nii.gz"</span><span class="p">}])</span>
@@ -862,16 +819,6 @@ action summary:
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "31fef657762c483d863684d931b68bbd", "version_major": 2, "version_minor": 0}</script></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'../../static/examples/functional_imaging/FSL_preproc_glm/fsl_preproc_run2.png'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/596b647fc36f21ec54e5b22c43eb305af65394eb788770179d9c64d748039b78.png" src="../../_images/596b647fc36f21ec54e5b22c43eb305af65394eb788770179d9c64d748039b78.png">
-</div>
 </div>
 </section>
 </section>
@@ -945,16 +892,6 @@ Miscellaneous options:
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "5b536a14ae0f4d158dc6588e269ba94f", "version_major": 2, "version_minor": 0}</script></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'../../static/examples/functional_imaging/FSL_preproc_glm/fsl_preproc_bet_05.png'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/db5b58de77a7a0969027a94522c050c64461be58bb6f4394b56e6717d058456d.png" src="../../_images/db5b58de77a7a0969027a94522c050c64461be58bb6f4394b56e6717d058456d.png">
-</div>
-</div>
 </section>
 </section>
 <section id="fixing-a-bad-skullstrip">
@@ -982,16 +919,6 @@ Miscellaneous options:
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "7f4bac17536e4369bd4cfb8ea819bc4e", "version_major": 2, "version_minor": 0}</script></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'../../static/examples/functional_imaging/FSL_preproc_glm/fsl_preproc_bet_02.png'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/1e9c5ee3b841b6b4eefe8ad5479a1172a0334562d9ed9e06f40bfd7f880aa4a2.png" src="../../_images/1e9c5ee3b841b6b4eefe8ad5479a1172a0334562d9ed9e06f40bfd7f880aa4a2.png">
-</div>
-</div>
 </section>
 <section id="motion-correction">
 <h3>Motion Correction<a class="headerlink" href="#motion-correction" title="Link to this heading">#</a></h3>
@@ -1015,9 +942,15 @@ Miscellaneous options:
 <h3>Smoothing<a class="headerlink" href="#smoothing" title="Link to this heading">#</a></h3>
 <p>Smoothing replaces each voxel’s signal with a weighted average of its neighbors, reducing noise at the cost of spatial resolution. While this blurs the image, it can enhance the signal-to-noise ratio by minimizing random fluctuations. Smoothing also helps improve statistical power and facilitates normalization to a standard template, as it makes anatomical differences between subjects less pronounced.
 To apply smoothing using <code class="docutils literal notranslate"><span class="pre">fslmaths</span></code>, the smoothing kernel is defined by its sigma (standard deviation). However, smoothing parameters are often specified using Full Width at Half Maximum (FWHM). To convert FWHM to sigma, use the formula:</p>
-<p><span class="math notranslate nohighlight">\(\text{𝜎} = FWHM/ \sqrt{8 \ln 2} = FWHM/  \approx 2.3548 \ \)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = \frac{FWHM}{\sqrt{8 \ln 2}} \approx \frac{FWHM}{2.3548}
+\]</div>
 <p>For a FWHM of 5 mm, this gives:</p>
-<p><span class="math notranslate nohighlight">\(\text{𝜎} = 5/2.3548 ≈ 2.1 \ \)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = \frac{5}{2.3548} \approx 2.1 \text{ mm}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Spatial smoothing FWHM=5mm (𝜎=2.1)</span>
@@ -1161,16 +1094,6 @@ To apply smoothing using <code class="docutils literal notranslate"><span class=
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">{"model_id": "997f139ed73b4797960f6cd712bd6c0c", "version_major": 2, "version_minor": 0}</script></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'../../static/examples/functional_imaging/FSL_preproc_glm/fsl_preproc_alignment.png'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/2d63d963907fbadf0664f54ea32fc24c72f46a924c7630aa18662d5466e2e7f3.png" src="../../_images/2d63d963907fbadf0664f54ea32fc24c72f46a924c7630aa18662d5466e2e7f3.png">
-</div>
 </div>
 <p><strong>Motion parameters</strong></p>
 <p>The motion plots show translation and rotation over time, with each timepoint (volume) on the x-axis. For translation, values are in millimeters. Look for sudden spikes greater than half the voxel size, or gradual drifts exceeding a full voxel. For example, with 3 mm isotropic voxels, relative motion over 1.5 mm between volumes or absolute shifts over 3 mm across the run may warrant closer inspection.</p>
@@ -2069,10 +1992,6 @@ matplotlib: 3.8.4
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resoures">Citation and Resoures:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-inluded-in-this-workflow">Tools inluded in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational Resources</a></li>

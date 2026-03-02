@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-02-26T01:06:18+00:00",
+  "generated_at": "2026-03-02T01:07:24+00:00",
   "source": {
     "type": "github-issues",
     "repo": "neurodesk/neurodeskedu-reviews"
@@ -29,17 +29,20 @@
     "ce423cf1-cbb0-4ac5-bf58-b3a52ad441c4": {
       "state": "queued",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/37",
+      "reviewers": [
+        "micmas"
+      ],
       "source_path": "examples/workflows/RISE_slideshow.ipynb"
-    },
-    "378baf4c-c107-47b9-a8bf-cc286d89d91e": {
-      "state": "queued",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/33",
-      "source_path": "examples/workflows/nextflow_neurodesk.ipynb"
     },
     "25f75b0e-c5e5-4f35-854c-3824f0a15762": {
       "state": "queued",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/32",
       "source_path": "examples/workflows/nipype_short.ipynb"
+    },
+    "378baf4c-c107-47b9-a8bf-cc286d89d91e": {
+      "state": "queued",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/33",
+      "source_path": "examples/workflows/nextflow_neurodesk.ipynb"
     },
     "ae2af25f-cf27-440b-a0d8-884a7b7e1703": {
       "state": "queued",
@@ -136,15 +139,15 @@
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/2",
       "source_path": "examples/diffusion_imaging/MRtrix_1.ipynb"
     },
-    "a8e7a7f7-f7aa-473b-b622-34e1fb415429": {
-      "state": "queued",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/38",
-      "source_path": "examples/diffusion_imaging/DIPY_2.ipynb"
-    },
     "1e97aef7-3669-490c-a282-eca9a1ddcfad": {
       "state": "queued",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/39",
       "source_path": "examples/diffusion_imaging/DIPY_1.ipynb"
+    },
+    "a8e7a7f7-f7aa-473b-b622-34e1fb415429": {
+      "state": "queued",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/38",
+      "source_path": "examples/diffusion_imaging/DIPY_2.ipynb"
     },
     "3334c019-8478-4eb9-8ed4-9a76f2dc6ba1": {
       "state": "queued",
@@ -180,11 +183,6 @@
       "state": "queued",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/7",
       "source_path": "examples/functional_imaging/AFNI_preprocessing_only.ipynb"
-    },
-    "7c44c84f-c365-4c19-96b8-ba6178e0326a": {
-      "state": "queued",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/1",
-      "source_path": "examples/diffusion_imaging/Diffusion_TBSS_Demo.ipynb"
     },
     "f578f799-150b-4e54-a9d7-e168596d782f": {
       "state": "queued",
@@ -230,6 +228,14 @@
       "state": "queued",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/44",
       "source_path": "examples/functional_imaging/fMRI_tutorial_in_R_magic.ipynb"
+    },
+    "7c44c84f-c365-4c19-96b8-ba6178e0326a": {
+      "state": "in-progress",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/1",
+      "reviewers": [
+        "stebo85"
+      ],
+      "source_path": "examples/diffusion_imaging/Diffusion_TBSS_Demo.ipynb"
     }
   }
 }
