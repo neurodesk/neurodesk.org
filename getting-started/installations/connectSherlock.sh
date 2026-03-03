@@ -178,6 +178,125 @@ EOF
     return 0
 }
 
+resolve_ssh_user_for_alias() {
+    local LOGIN_ALIAS="$1"
+    local RESOLVED_USER
+
+    RESOLVED_USER=$(ssh -G "$LOGIN_ALIAS" 2>/dev/null | awk 'tolower($1)=="user" {print $2; exit}')
+    if [ -z "$RESOLVED_USER" ]; then
+        RESOLVED_USER="$USER"
+    fi
+
+    echo "$RESOLVED_USER"
+}
+
+read_secret_value() {
+    local PROMPT_TEXT="$1"
+    local RESULT_VAR_NAME="$2"
+    local SECRET_VALUE
+
+    IFS= read -r -s -p "$PROMPT_TEXT" SECRET_VALUE
+    echo
+    printf -v "$RESULT_VAR_NAME" '%s' "$SECRET_VALUE"
+}
+
+ensure_sherlock_password_in_keychain() {
+    local SHERLOCK_USER="$1"
+    local KEYCHAIN_SERVICE="neurodesk.connectSherlock.ssh"
+    local USER_CHOICE
+    local SHERLOCK_PASSWORD
+
+    if ! command -v security >/dev/null 2>&1; then
+        return 1
+    fi
+
+    if security find-generic-password -a "$SHERLOCK_USER" -s "$KEYCHAIN_SERVICE" >/dev/null 2>&1; then
+        return 0
+    fi
+
+    echo "No saved Sherlock password found in macOS Keychain for '${SHERLOCK_USER}'."
+    echo -n "Save Sherlock password in Keychain for future logins? [Y/n] "
+    read -r USER_CHOICE
+
+    if [[ "$USER_CHOICE" =~ ^([nN][oO]|[nN])$ ]]; then
+        return 1
+    fi
+
+    read_secret_value "Sherlock password for ${SHERLOCK_USER}: " SHERLOCK_PASSWORD
+    if [ -z "$SHERLOCK_PASSWORD" ]; then
+        echo "Empty password was not saved."
+        return 1
+    fi
+
+    if ! security add-generic-password -U -a "$SHERLOCK_USER" -s "$KEYCHAIN_SERVICE" -w "$SHERLOCK_PASSWORD" >/dev/null 2>&1; then
+        unset SHERLOCK_PASSWORD
+        echo "Failed to save Sherlock password in Keychain."
+        return 1
+    fi
+
+    unset SHERLOCK_PASSWORD
+    echo "Saved Sherlock password in macOS Keychain service '${KEYCHAIN_SERVICE}'."
+    return 0
+}
+
+start_master_connection_with_password_autofill() {
+    local LOGIN_ALIAS="$1"
+    local CTRL_SOCKET="$2"
+    local SHERLOCK_USER
+    local ASKPASS_SCRIPT
+    local KEYCHAIN_SERVICE="neurodesk.connectSherlock.ssh"
+    local DUO_OPTION="${NEURODESKTOP_DUO_OPTION:-1}"
+
+    if [ "$(uname -s)" != "Darwin" ]; then
+        return 1
+    fi
+
+    if ! command -v security >/dev/null 2>&1; then
+        return 1
+    fi
+
+    SHERLOCK_USER=$(resolve_ssh_user_for_alias "$LOGIN_ALIAS")
+    if ! ensure_sherlock_password_in_keychain "$SHERLOCK_USER"; then
+        return 1
+    fi
+    echo "Auto-selecting Duo prompt option: ${DUO_OPTION} (override with NEURODESKTOP_DUO_OPTION=<option-number>)."
+
+    ASKPASS_SCRIPT=$(mktemp "${TMPDIR:-/tmp}/neurodesk_askpass_XXXXXX")
+    if [ -z "$ASKPASS_SCRIPT" ]; then
+        return 1
+    fi
+
+    cat > "$ASKPASS_SCRIPT" <<'EOF'
+#!/bin/sh
+PROMPT_TEXT="$1"
+
+case "$PROMPT_TEXT" in
+    *assword*|*ASSWORD*)
+        security find-generic-password -a "$NEURODESKTOP_SSH_ACCOUNT" -s "$NEURODESKTOP_SSH_SERVICE" -w 2>/dev/null
+        ;;
+    *Passcode*|*passcode*|*Verification*|*verification*|*option*|*Option*)
+        printf '%s\n' "${NEURODESKTOP_DUO_OPTION:-1}"
+        ;;
+    *)
+        printf '\n'
+        ;;
+esac
+EOF
+    chmod 700 "$ASKPASS_SCRIPT" 2>/dev/null || true
+
+    NEURODESKTOP_SSH_ACCOUNT="$SHERLOCK_USER" \
+    NEURODESKTOP_SSH_SERVICE="$KEYCHAIN_SERVICE" \
+    NEURODESKTOP_DUO_OPTION="$DUO_OPTION" \
+    DISPLAY="${DISPLAY:-neurodesk-askpass}" \
+    SSH_ASKPASS="$ASKPASS_SCRIPT" \
+    SSH_ASKPASS_REQUIRE=force \
+    ssh -M -f -N -S "$CTRL_SOCKET" "$LOGIN_ALIAS"
+    local AUTH_STATUS=$?
+
+    rm -f "$ASKPASS_SCRIPT"
+    return "$AUTH_STATUS"
+}
+
 function connectSherlock() {
     local LOGIN_NODE="sherlock"
     local JOB_NAME="neurodesktop"
@@ -191,10 +310,12 @@ function connectSherlock() {
 
     # Start master connection
     # -M: master mode, -f: background, -N: no command, -S: socket path
-    ssh -M -f -N -S "$CTRL_SOCKET" "$LOGIN_NODE"
-    if [ $? -ne 0 ]; then
-        echo "Authentication failed."
-        return 1
+    if ! start_master_connection_with_password_autofill "$LOGIN_NODE" "$CTRL_SOCKET"; then
+        ssh -M -f -N -S "$CTRL_SOCKET" "$LOGIN_NODE"
+        if [ $? -ne 0 ]; then
+            echo "Authentication failed."
+            return 1
+        fi
     fi
     # Close master connection on return.
     trap 'ssh -S "'"$CTRL_SOCKET"'" -O exit "'"$LOGIN_NODE"'" 2>/dev/null' RETURN
