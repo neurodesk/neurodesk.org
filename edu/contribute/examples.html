@@ -501,6 +501,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-and-submitting">Saving and Submitting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-process">Review Process</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-review-works">How the review works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-checklist">Review checklist</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">Attribution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#need-help">Need Help?</a></li>
 </ul>
@@ -573,7 +578,48 @@ neurodeskedu repository
 <li><p>Any dependencies or expected output</p></li>
 </ul>
 </li>
+<li><p>Once your pull request is submitted, a GitHub Action will automatically run your notebook to confirm it executes successfully. Once the action passes and your pull request is merged, your notebook will be <strong>published immediately</strong> on the NeurodeskEDU site.</p></li>
 </ol>
+</section>
+<section id="review-process">
+<h2>Review Process<a class="headerlink" href="#review-process" title="Link to this heading">#</a></h2>
+<p>Publishing and review are separate processes. Your notebook does not need to be reviewed before it is published — it goes live as soon as the automated checks pass and the pull request is merged. The review process happens afterwards to ensure quality and provide feedback.</p>
+<p>Each notebook on the NeurodeskEDU site displays a review badge indicating its current review status:</p>
+<ul class="simple">
+<li><p><strong>Unreviewed</strong> — the notebook has been published but has not yet been through peer review.</p></li>
+<li><p><strong>In Revision</strong> — the notebook is currently being reviewed and may have changes requested.</p></li>
+<li><p><strong>Reviewed</strong> — the notebook has passed peer review. The badge displays the name of the reviewer.</p></li>
+</ul>
+<section id="how-the-review-works">
+<h3>How the review works<a class="headerlink" href="#how-the-review-works" title="Link to this heading">#</a></h3>
+<p>Reviews are managed via the <a href="https://github.com/neurodesk/neurodeskedu-reviews" target="_blank" rel="noopener">neurodeskedu-reviews</a> repository and take place publicly in GitHub issues and pull requests.</p>
+<ol class="arabic simple">
+<li><p><strong>A review issue is created</strong> — your notebook is assigned a unique Review ID and queued for review.</p></li>
+<li><p><strong>Reviewers are assigned</strong> — one or more reviewers evaluate your notebook against the review checklist.</p></li>
+<li><p><strong>Feedback is provided</strong> — reviewers leave comments and suggestions directly on the pull request. We ask reviewers to complete their review within 2 weeks, and contributors to respond to feedback within 1 week.</p></li>
+<li><p><strong>Revisions (if needed)</strong> — address any requested changes and push updates. The badge will show <strong>In Revision</strong> during this stage.</p></li>
+<li><p><strong>Acceptance</strong> — once the reviewers are satisfied, the badge is updated to <strong>Reviewed</strong> with the reviewer’s name.</p></li>
+</ol>
+</section>
+<section id="review-checklist">
+<h3>Review checklist<a class="headerlink" href="#review-checklist" title="Link to this heading">#</a></h3>
+<p>Reviewers evaluate submissions based on the following criteria:</p>
+<ul class="simple">
+<li><p><strong>License:</strong> Does the notebook contain a LICENSE statement with a standard license (OSI-approved for code, Creative Commons for content)?</p></li>
+<li><p><strong>Authorship and date:</strong> Are authors and date properly listed?</p></li>
+<li><p><strong>Citations and references:</strong> Is the software properly cited? Do archival references include DOIs?</p></li>
+<li><p><strong>Format:</strong> Does the notebook follow the NeurodeskEDU template?</p></li>
+<li><p><strong>Functionality:</strong> Does the analysis run as outlined? Does it complete in a reasonable time?</p></li>
+<li><p><strong>Statement of need:</strong> Is the purpose of the notebook clearly stated?</p></li>
+<li><p><strong>Dependencies:</strong> Is there a clear list of dependencies, ideally with automated installation?</p></li>
+<li><p><strong>Learning objectives:</strong> Are the learning objectives evident from the content and design?</p></li>
+<li><p><strong>Content scope:</strong> Is the content substantial and appropriately scoped for the topic?</p></li>
+<li><p><strong>Explanations:</strong> Are the analysis steps sufficiently documented?</p></li>
+<li><p><strong>Pedagogy:</strong> Is the notebook easy to follow and mindful of cognitive load?</p></li>
+<li><p><strong>Content quality:</strong> Is the writing concise and engaging? Is the code well crafted?</p></li>
+</ul>
+<p>The full checklist is available in the <a href="https://github.com/neurodesk/neurodeskedu-reviews/blob/master/.buffy/templates/reviewer_checklist.md" target="_blank" rel="noopener">neurodeskedu-reviews repository</a>. For more details on the review process, including the conflict of interest policy, see the <a class="reference internal" href="review.html"><span class="doc std std-doc">Reviewing for NeurodeskEDU</span></a> page.</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="attribution">
@@ -666,6 +712,11 @@ this format
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-and-submitting">Saving and Submitting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-process">Review Process</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-review-works">How the review works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-checklist">Review checklist</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribution">Attribution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#need-help">Need Help?</a></li>
 </ul>

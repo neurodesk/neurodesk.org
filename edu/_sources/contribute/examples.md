@@ -69,6 +69,47 @@ For more detail, consult the <a href="https://github.com/neurodesk/neurodeskedu/
    - A short description of your notebook
    - Any dependencies or expected output
 
+4. Once your pull request is submitted, a GitHub Action will automatically run your notebook to confirm it executes successfully. Once the action passes and your pull request is merged, your notebook will be **published immediately** on the NeurodeskEDU site.
+
+## Review Process
+
+Publishing and review are separate processes. Your notebook does not need to be reviewed before it is published — it goes live as soon as the automated checks pass and the pull request is merged. The review process happens afterwards to ensure quality and provide feedback.
+
+Each notebook on the NeurodeskEDU site displays a review badge indicating its current review status:
+
+- **Unreviewed** — the notebook has been published but has not yet been through peer review.
+- **In Revision** — the notebook is currently being reviewed and may have changes requested.
+- **Reviewed** — the notebook has passed peer review. The badge displays the name of the reviewer.
+
+### How the review works
+
+Reviews are managed via the <a href="https://github.com/neurodesk/neurodeskedu-reviews" target="_blank" rel="noopener">neurodeskedu-reviews</a> repository and take place publicly in GitHub issues and pull requests.
+
+1. **A review issue is created** — your notebook is assigned a unique Review ID and queued for review.
+2. **Reviewers are assigned** — one or more reviewers evaluate your notebook against the review checklist.
+3. **Feedback is provided** — reviewers leave comments and suggestions directly on the pull request. We ask reviewers to complete their review within 2 weeks, and contributors to respond to feedback within 1 week.
+4. **Revisions (if needed)** — address any requested changes and push updates. The badge will show **In Revision** during this stage.
+5. **Acceptance** — once the reviewers are satisfied, the badge is updated to **Reviewed** with the reviewer's name.
+
+### Review checklist
+
+Reviewers evaluate submissions based on the following criteria:
+
+- **License:** Does the notebook contain a LICENSE statement with a standard license (OSI-approved for code, Creative Commons for content)?
+- **Authorship and date:** Are authors and date properly listed?
+- **Citations and references:** Is the software properly cited? Do archival references include DOIs?
+- **Format:** Does the notebook follow the NeurodeskEDU template?
+- **Functionality:** Does the analysis run as outlined? Does it complete in a reasonable time?
+- **Statement of need:** Is the purpose of the notebook clearly stated?
+- **Dependencies:** Is there a clear list of dependencies, ideally with automated installation?
+- **Learning objectives:** Are the learning objectives evident from the content and design?
+- **Content scope:** Is the content substantial and appropriately scoped for the topic?
+- **Explanations:** Are the analysis steps sufficiently documented?
+- **Pedagogy:** Is the notebook easy to follow and mindful of cognitive load?
+- **Content quality:** Is the writing concise and engaging? Is the code well crafted?
+
+The full checklist is available in the <a href="https://github.com/neurodesk/neurodeskedu-reviews/blob/master/.buffy/templates/reviewer_checklist.md" target="_blank" rel="noopener">neurodeskedu-reviews repository</a>. For more details on the review process, including the conflict of interest policy, see the [Reviewing for NeurodeskEDU](review) page.
+
 ---
 
 ## Attribution
