@@ -1034,6 +1034,10 @@ NEURODESKTOP_ENABLE_GPU="${NEURODESKTOP_ENABLE_GPU:-0}"
 APPTAINER_GPU_ARGS=()
 if [ "${NEURODESKTOP_ENABLE_GPU}" = "1" ]; then
     APPTAINER_GPU_ARGS+=(--nv)
+    if [ -d /dev/dri ]; then
+        APPTAINER_GPU_ARGS+=(--bind /dev/dri:/dev/dri)
+    fi
+    export APPTAINERENV_NVIDIA_DRIVER_CAPABILITIES=all
     if [ -n "${CUDA_VISIBLE_DEVICES:-}" ]; then
         export APPTAINERENV_CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}"
     fi
