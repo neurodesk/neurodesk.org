@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-03-06T04:12:08+00:00",
+  "generated_at": "2026-03-06T04:36:42+00:00",
   "source": {
     "type": "github-issues",
     "repo": "neurodesk/neurodeskedu-reviews"
@@ -104,6 +104,14 @@
       ],
       "source_path": "examples/diffusion_imaging/MRtrix_1.ipynb"
     },
+    "3334c019-8478-4eb9-8ed4-9a76f2dc6ba1": {
+      "state": "in-progress",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/34",
+      "reviewers": [
+        "MoniDoerig"
+      ],
+      "source_path": "examples/workflows/papermill-slurm-submission-example.ipynb"
+    },
     "e166a1f9-f4bd-429b-b497-fbc862211eea": {
       "state": "in-progress",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/15",
@@ -186,11 +194,6 @@
       ],
       "source_path": "examples/functional_imaging/AFNI_preprocessing_plus_glm.ipynb"
     },
-    "3334c019-8478-4eb9-8ed4-9a76f2dc6ba1": {
-      "state": "queued",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/34",
-      "source_path": "examples/workflows/papermill-slurm-submission-example.ipynb"
-    },
     "01b9bb47-e439-4b5e-8af8-73058cd6df87": {
       "state": "in-progress",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/44",
@@ -198,6 +201,26 @@
         "stebo85"
       ],
       "source_path": "examples/functional_imaging/fMRI_tutorial_in_R_magic.ipynb"
+    },
+    "38be8dd8-a1c1-4e9d-b151-9bbd24c77534": {
+      "state": "reviewed",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/23",
+      "reviewers": [
+        "MoniDoerig"
+      ],
+      "reviewed_at": "2026-03-06",
+      "review_commit_sha": "43ebdf3fdbd0045d2994e70605d2b04864c20c8d",
+      "source_path": "examples/quantitative_imaging/qsmxt.ipynb"
+    },
+    "1b898d09-a15e-466a-b6f2-d7b1f48b5042": {
+      "state": "reviewed",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/10",
+      "reviewers": [
+        "MoniDoerig"
+      ],
+      "reviewed_at": "2026-03-06",
+      "review_commit_sha": "fd7705e44f378a44314212fa73c7956504978793",
+      "source_path": "examples/functional_imaging/deepretinotopy.ipynb"
     },
     "ae2af25f-cf27-440b-a0d8-884a7b7e1703": {
       "state": "reviewed",
@@ -239,6 +262,26 @@
       "review_commit_sha": "62a503b00a5ee77872135733d944ec0b31991d46",
       "source_path": "examples/spectroscopy/osprey.ipynb"
     },
+    "61b2682e-754e-42f0-86f7-f84192adef0b": {
+      "state": "reviewed",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/17",
+      "reviewers": [
+        "MoniDoerig"
+      ],
+      "reviewed_at": "2026-03-06",
+      "review_commit_sha": "fd7705e44f378a44314212fa73c7956504978793",
+      "source_path": "examples/functional_imaging/mri_vol2surf.ipynb"
+    },
+    "f4439cdb-8be0-42e6-ba12-eb96f736f304": {
+      "state": "reviewed",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/4",
+      "reviewers": [
+        "giuliabaracc"
+      ],
+      "reviewed_at": "2026-03-06",
+      "review_commit_sha": "fd7705e44f378a44314212fa73c7956504978793",
+      "source_path": "examples/diffusion_imaging/MRtrix_3.ipynb"
+    },
     "309d5842-9df4-47d5-a962-60fc90699c48": {
       "state": "reviewed",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/12",
@@ -248,39 +291,6 @@
       "reviewed_at": "2026-03-04",
       "review_commit_sha": "f603bae2f6824ff445965109c4e193281d38a4ae",
       "source_path": "examples/functional_imaging/fmriprep.ipynb"
-    },
-    "f4439cdb-8be0-42e6-ba12-eb96f736f304": {
-      "state": "stale",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/4",
-      "reviewers": [
-        "giuliabaracc"
-      ],
-      "reviewed_at": "2026-03-05",
-      "review_commit_sha": "62a503b00a5ee77872135733d944ec0b31991d46",
-      "source_path": "examples/diffusion_imaging/MRtrix_3.ipynb",
-      "stale_reason": "File modified after review (latest: fd7705e44f37, reviewed at: 62a503b00a5e)"
-    },
-    "38be8dd8-a1c1-4e9d-b151-9bbd24c77534": {
-      "state": "stale",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/23",
-      "reviewers": [
-        "MoniDoerig"
-      ],
-      "reviewed_at": "2026-03-03",
-      "review_commit_sha": "fa4d6c4071dc8c55cc2c367b9c05795bd27122d2",
-      "source_path": "examples/quantitative_imaging/qsmxt.ipynb",
-      "stale_reason": "File modified after review (latest: 43ebdf3fdbd0, reviewed at: fa4d6c4071dc)"
-    },
-    "1b898d09-a15e-466a-b6f2-d7b1f48b5042": {
-      "state": "stale",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/10",
-      "reviewers": [
-        "MoniDoerig"
-      ],
-      "reviewed_at": "2026-03-03",
-      "review_commit_sha": "c50b3f9b8078eda2654b986050d9fadfc20165ee",
-      "source_path": "examples/functional_imaging/deepretinotopy.ipynb",
-      "stale_reason": "File modified after review (latest: fd7705e44f37, reviewed at: c50b3f9b8078)"
     },
     "b8f472e3-3d87-45da-80d8-086501ffb91a": {
       "state": "reviewed",
@@ -321,17 +331,6 @@
       "reviewed_at": "2026-03-04",
       "review_commit_sha": "00e7e122b7fe24109427a11e634ce4edb0146b93",
       "source_path": "examples/structural_imaging/sct_toolbox.ipynb"
-    },
-    "61b2682e-754e-42f0-86f7-f84192adef0b": {
-      "state": "stale",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/17",
-      "reviewers": [
-        "MoniDoerig"
-      ],
-      "reviewed_at": "2026-03-03",
-      "review_commit_sha": "c50b3f9b8078eda2654b986050d9fadfc20165ee",
-      "source_path": "examples/functional_imaging/mri_vol2surf.ipynb",
-      "stale_reason": "File modified after review (latest: fd7705e44f37, reviewed at: c50b3f9b8078)"
     },
     "f578f799-150b-4e54-a9d7-e168596d782f": {
       "state": "reviewed",
