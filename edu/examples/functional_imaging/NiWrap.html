@@ -11,20 +11,22 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079">
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062">
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc">
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be">
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b">
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css">
@@ -32,17 +34,18 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e">
     <link rel="stylesheet" type="text/css" href="../../_static/review-badge.css?v=66080ea3">
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b">
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b">
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf">
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -76,6 +79,7 @@
     <link rel="prev" title="Resting state with FSLnets" href="FSLnets_course_practical.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
   <meta name="author" content="Monika Doerig"><meta property="article:author" content="Monika Doerig"><meta name="citation_author" content="Monika Doerig"></head>
   
   
@@ -91,21 +95,14 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox" class="sidebar-toggle" id="pst-primary-sidebar-checkbox">
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox" class="sidebar-toggle" id="pst-secondary-sidebar-checkbox">
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search" class="form-control" name="q" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -121,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,7 +149,7 @@
     
     
     <img src="../../_static/neurodesk_logo.svg" class="logo__image only-light" alt="Neurodesk - Home">
-    <script>document.write(`<img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark" alt="Neurodesk - Home"/>`);</script>
+    <img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark pst-js-only" alt="Neurodesk - Home">
   
   
 </a></div>
@@ -171,15 +169,11 @@
 </ul></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -334,9 +328,10 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -493,7 +488,7 @@
 
 
 
-<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button pst-navbar-icon" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
   
 
 <span class="btn__icon-container">
@@ -504,25 +499,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark" title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -725,44 +712,73 @@ echo "Datalad download complete for ds004496."
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>install(ok): /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds004496 (dataset)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>install(ok): /home/jovyan/workspace/books/examples/functional_imaging/ds004496 (dataset)
 Downloading Ciftify derivative files for sub-01 from ds004496...
-get(ok): derivatives/ciftify/sub-01/results/ses-floc_task-floc/ses-floc_task-floc_beta.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.ArealDistortion_FS.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.ArealDistortion_MSMSulc.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.BA_exvivo.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.EdgeDistortion_MSMSulc.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.pial.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.very_inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.white.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.pial.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.very_inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.white.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.aparc.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.aparc.DKTatlas.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.aparc.a2009s.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.curvature.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.thickness.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface (directory)
+get(ok): derivatives/ciftify/sub-01/results/ses-floc_task-floc/ses-floc_task-floc_beta.dscalar.nii (
+file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.ArealDistortion_FS.32k_fs_LR.dscala
+r.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.ArealDistortion_MSMSulc.32k_fs_LR.d
+scalar.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-
+01.BA_exvivo.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/sta
+ndard_fsLR_surface/sub-01.EdgeDistortion_MSMSulc.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
+ge
+t(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.inflated.32k_fs_LR.surf.gii (file)
+[from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.
+32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surf
+ace/sub-01.L.pial.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/
+standard_fsLR_surface/sub-01.L.very_inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok):
+derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.white.32k_fs_LR.surf.gii (file) [from s3-P
+UBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.inflated.32k_fs_LR.surf.gii (file
+) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthicknes
+s.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_su
+rface/sub-01.R.pial.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-0
+1/standard_fsLR_surface/sub-01.R.very_inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok)
+: derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.white.32k_fs_LR.surf.gii (file) [from s3
+-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.aparc.32k_fs_LR.dlabel.
+nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.apar
+c.DKTatlas.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/stand
+ard_fsLR_surface/sub-01.aparc.a2009s.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
+get(ok): deriva
+tives/ciftify/sub-01/standard_fsLR_surface/sub-01.curvature.32k_fs_LR.dscalar.nii (file) [from s3-PU
+BLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii
+ (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.thickne
+ss.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsL
+R_surface (directory)
 action summary:
   get (ok: 21)
 Datalad download complete for ds004496.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO] Attempting a clone into /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds004496 
-[INFO] Attempting to clone from https://github.com/OpenNeuroDatasets/ds004496.git to /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds004496 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO] Attempting a clone into /home/jovyan/workspace/books/examples/functional_imaging/ds004496 
+[I
+NFO] Attempting to clone from https://github.com/OpenNeuroDatasets/ds004496.git to /home/jovyan/work
+space/books/examples/functional_imaging/ds004496
 [INFO] Start enumerating objects 
-[INFO] Start counting objects 
-[INFO] Start compressing objects 
-[INFO] Start receiving objects 
-[INFO] Start resolving deltas 
-[INFO] Completed clone attempts for Dataset(/home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds004496) 
-[INFO] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO] Start counting objects
+[INFO] Start compressing objects
+[INFO] Start receiving objects
+[INFO] Start resolving deltas
+[INFO] Completed clone attempts for Dataset(/home/jovyan/workspace/books/examples/functional_imaging
+/ds004496)
+[INFO] Remote origin not usable by git-annex; setting annex-ignore
 [INFO] https://github.com/OpenNeuroDatasets/ds004496.git/config download failed: Not Found
 </pre></div>
 </div>
@@ -819,7 +835,7 @@ Datalad download complete for ds004496.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Schaefer2018_400Par 100%[===================&gt;] 667.06K  --.-KB/s    in 0.04s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Schaefer2018_400Par 100%[===================&gt;] 667.06K  --.-KB/s    in 0.01s
 </pre></div>
 </div>
 </div>
@@ -933,9 +949,9 @@ Object - others
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-math 'x * (x &gt; 1.081139940023422)' /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -var x /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/beta_face.dscalar.nii
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-math 'x * (x &gt; 1.081139940023422)' /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -var x /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face.dscalar.nii
 [I] parsed 'x * (x &gt; 1.081139940023422)' as 'x * (x &gt; 1.08113994002342)'
-[I] Executed cifti-math in 0:00:00.830756
+[I] Executed cifti-math in 0:00:00.464403
 </pre></div>
 </div>
 </div>
@@ -966,8 +982,8 @@ Object - others
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii
-[I] Executed cifti-separate in 0:00:00.663019
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii -metric CORTEX_RIGHT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii
+[I] Executed cifti-separate in 0:00:00.332116
 </pre></div>
 </div>
 </div>
@@ -998,8 +1014,8 @@ Object - others
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01.L.sulc.func.gii -metric CORTEX_RIGHT /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01.R.sulc.func.gii
-[I] Executed cifti-separate in 0:00:00.728753
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/workspace/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01.L.sulc.func.gii -metric CORTEX_RIGHT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01.R.sulc.func.gii
+[I] Executed cifti-separate in 0:00:00.352300
 </pre></div>
 </div>
 </div>
@@ -1419,9 +1435,9 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-stats /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -reduce COUNT_NONZERO -show-map-name
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-stats /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -reduce COUNT_NONZERO -show-map-name
 [I] 1:	Face - others:	2971
-[I] Executed cifti-stats in 0:00:00.870442
+[I] Executed cifti-stats in 0:00:00.301622
 </pre></div>
 </div>
 </div>
@@ -1455,10 +1471,10 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii 2.0 /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01_thresh_smooth.L.func.gii
-[I] Executed metric-smoothing in 0:00:01.175587
-[D] Running command: wb_command -metric-smoothing /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii 2.0 /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01_thresh_smooth.R.func.gii
-[I] Executed metric-smoothing in 0:00:00.807309
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -metric-smoothing /home/jovyan/workspace/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii 2.0 /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_smooth.L.func.gii
+[I] Executed metric-smoothing in 0:00:00.791319
+[D] Running command: wb_command -metric-smoothing /home/jovyan/workspace/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii 2.0 /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_smooth.R.func.gii
+[I] Executed metric-smoothing in 0:00:00.838928
 </pre></div>
 </div>
 </div>
@@ -1512,8 +1528,8 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-parcellate /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii COLUMN /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/sub-01_parcellated.pscalar.nii
-[I] Executed cifti-parcellate in 0:00:00.816391
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-parcellate /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii /home/jovyan/workspace/books/examples/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii COLUMN /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_parcellated.pscalar.nii
+[I] Executed cifti-parcellate in 0:00:00.598195
 </pre></div>
 </div>
 </div>
@@ -1529,8 +1545,8 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-label-export-table /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii parcels /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/niwrap_results/schaefer_labels.txt
-[I] Executed cifti-label-export-table in 0:00:00.812803
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-label-export-table /home/jovyan/workspace/books/examples/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii parcels /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/schaefer_labels.txt
+[I] Executed cifti-label-export-table in 0:00:00.350612
 </pre></div>
 </div>
 </div>
@@ -1722,7 +1738,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found networks: ['SomMotA', 'DorsAttnA', 'DefaultC', 'LimbicB', 'ContA', 'SalVentAttnA', 'SalVentAttnB', 'DefaultA', 'DorsAttnB', 'ContB', 'SomMotB', 'TempPar', 'DefaultB', 'ContC', 'VisPeri', 'LimbicA', 'VisCent']
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found networks: ['SomMotB', 'ContA', 'SalVentAttnA', 'SalVentAttnB', 'LimbicB', 'VisCent', 'ContB', 'DefaultA', 'DefaultB', 'DefaultC', 'DorsAttnA', 'SomMotA', 'ContC', 'LimbicA', 'TempPar', 'DorsAttnB', 'VisPeri']
 </pre></div>
 </div>
 </div>
@@ -1755,7 +1771,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2266d3da92a79dfc2afe0a7101b7ada11dede23834cae6ed807d9e5f14f1e7d1.png" src="../../_images/2266d3da92a79dfc2afe0a7101b7ada11dede23834cae6ed807d9e5f14f1e7d1.png">
+<img alt="../../_images/a6615bf9edf5460e2c400a988bfeb0ea7afa4f41862560601c4e9db3689836e4.png" src="../../_images/a6615bf9edf5460e2c400a988bfeb0ea7afa4f41862560601c4e9db3689836e4.png">
 </div>
 </div>
 </section>
@@ -1825,7 +1841,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/45985f10d1b91d324339336eb6ca51c86c6be6319c242d6efa229fb4709eff3e.png" src="../../_images/45985f10d1b91d324339336eb6ca51c86c6be6319c242d6efa229fb4709eff3e.png">
+<img alt="../../_images/2ab7f091f5d040aaa1ec60d26f3d8d53162d3b78ebb5f745a966385f80e207f5.png" src="../../_images/2ab7f091f5d040aaa1ec60d26f3d8d53162d3b78ebb5f745a966385f80e207f5.png">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Top 10 Face-Selective Parcels:
 ------------------------------------------------------------
  1. 17Networks_RH_DorsAttnA_TempOcc_2        |  2.771 | DorsAttnA
@@ -1858,15 +1874,15 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-26T05:17:22.498078+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-28T04:23:42.704003+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.11
+IPython version      : 9.9.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-164-generic
+Release     : 5.15.0-170-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
@@ -1876,7 +1892,7 @@ matplotlib      : 3.10.8
 nibabel         : 5.3.2
 nilearn         : 0.12.0
 niwrap_workbench: 0.6.1
-numpy           : 2.3.5
+numpy           : 2.4.2
 pandas          : 2.2.3
 re              : 2.2.1
 </pre></div>
@@ -1939,14 +1955,14 @@ re              : 2.2.1
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-based-visualization-workflow-for-single-subject-cifti">Surface-Based Visualization Workflow for Single-Subject CIFTI</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
@@ -2038,8 +2054,8 @@ By Neurodesk Team
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer="" src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer="" src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

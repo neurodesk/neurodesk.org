@@ -11,20 +11,22 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079">
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062">
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc">
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be">
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b">
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css">
@@ -32,17 +34,18 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e">
     <link rel="stylesheet" type="text/css" href="../../_static/review-badge.css?v=66080ea3">
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b">
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b">
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf">
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -76,6 +79,7 @@
     <link rel="prev" title="Papermill Slurm Job Submission" href="papermill-slurm-submission-example.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
   <meta name="author" content="Monika Doerig"><meta property="article:author" content="Monika Doerig"><meta name="citation_author" content="Monika Doerig"></head>
   
   
@@ -91,21 +95,14 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox" class="sidebar-toggle" id="pst-primary-sidebar-checkbox">
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox" class="sidebar-toggle" id="pst-secondary-sidebar-checkbox">
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search" class="form-control" name="q" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -121,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,7 +149,7 @@
     
     
     <img src="../../_static/neurodesk_logo.svg" class="logo__image only-light" alt="Neurodesk - Home">
-    <script>document.write(`<img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark" alt="Neurodesk - Home"/>`);</script>
+    <img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark pst-js-only" alt="Neurodesk - Home">
   
   
 </a></div>
@@ -171,15 +169,11 @@
 </ul></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -334,9 +328,10 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -493,7 +488,7 @@
 
 
 
-<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button pst-navbar-icon" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
   
 
 <span class="btn__icon-container">
@@ -504,25 +499,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark" title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -738,6 +725,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning:   0%|                             | 0.00/2.00 [00:00&lt;?, ? candidates/s]
+
 Enumerating: 0.00 Objects [00:00, ? Objects/s]
                                               
 Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects/s]
@@ -745,60 +733,101 @@ Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects
 Compressing:   0%|                            | 0.00/23.0 [00:00&lt;?, ? Objects/s]
                                                                                 
 Receiving:   0%|                             | 0.00/2.15k [00:00&lt;?, ? Objects/s]
+
                                                                                 
 Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas/s]
-[INFO   ] Remote origin not usable by git-annex; setting annex-ignore           
-[INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found 
+                                                                                
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
-| 		datalad siblings -d "/home/jovyan/Git_repositories/neurodeskedu/books/examples/workflows/ds000102" enable -s s3-PRIVATE 
-<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/neurodeskedu/books/examples/workflows/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+| 		datalad siblings -d "/home/jovyan/workspace/books/examples/workflows/ds000102" enable -s s3-PRIVATE 
+<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/workspace/books/examples/workflows/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+
 Total:   0%|                                   | 0.00/66.8M [00:00&lt;?, ? Bytes/s]
+
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 85.6k/10.6M [00:00&lt;00:25, 407k Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 312k/10.6M [00:00&lt;00:11, 892k Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:   6%|▏   | 660k/10.6M [00:00&lt;00:06, 1.54M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  21%|▋  | 2.26M/10.6M [00:00&lt;00:01, 4.59M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  38%|█▏ | 3.99M/10.6M [00:00&lt;00:00, 7.77M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  49%|█▍ | 5.17M/10.6M [00:00&lt;00:00, 8.76M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  65%|█▉ | 6.93M/10.6M [00:01&lt;00:00, 11.0M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  82%|██▍| 8.66M/10.6M [00:01&lt;00:00, 12.7M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  96%|██▊| 10.1M/10.6M [00:01&lt;00:00, 13.2M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.3k/10.6M [00:00&lt;01:05, 160k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 78.9k/10.6M [00:00&lt;00:54, 192k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   2%|     | 166k/10.6M [00:00&lt;00:36, 289k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 357k/10.6M [00:00&lt;00:19, 537k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   7%|▎    | 740k/10.6M [00:01&lt;00:09, 997k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  14%|▍  | 1.49M/10.6M [00:01&lt;00:04, 1.87M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  28%|▊  | 3.00M/10.6M [00:01&lt;00:02, 3.58M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  50%|█▍ | 5.24M/10.6M [00:01&lt;00:00, 5.86M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  69%|██ | 7.27M/10.6M [00:01&lt;00:00, 7.05M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  86%|██▌| 9.06M/10.6M [00:02&lt;00:00, 8.85M Bytes/s]
+
                                                                                 
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-Total:  16%|████                      | 10.6M/66.8M [00:02&lt;00:12, 4.66M Bytes/s]
+
+Total:  16%|████                      | 10.6M/66.8M [00:03&lt;00:18, 3.09M Bytes/s]
+
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Get sub-01/f .. _bold.nii.gz:   4%|▏  | 1.21M/28.1M [00:00&lt;00:02, 11.5M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:   9%|▎  | 2.66M/28.1M [00:00&lt;00:01, 12.9M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  15%|▍  | 4.24M/28.1M [00:00&lt;00:01, 14.2M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  20%|▌  | 5.68M/28.1M [00:00&lt;00:01, 14.3M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  26%|▊  | 7.37M/28.1M [00:00&lt;00:01, 11.0M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  34%|█  | 9.60M/28.1M [00:00&lt;00:01, 10.9M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  38%|█▏ | 10.8M/28.1M [00:00&lt;00:01, 11.1M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  43%|█▎ | 12.1M/28.1M [00:01&lt;00:01, 11.3M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  47%|█▍ | 13.3M/28.1M [00:01&lt;00:01, 11.1M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  59%|█▊ | 16.6M/28.1M [00:01&lt;00:00, 13.4M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  69%|██ | 19.2M/28.1M [00:01&lt;00:00, 13.4M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  75%|██▏| 21.0M/28.1M [00:01&lt;00:00, 14.1M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  80%|██▍| 22.6M/28.1M [00:01&lt;00:00, 14.4M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.4M/28.1M [00:01&lt;00:00, 15.4M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  95%|██▊| 26.6M/28.1M [00:01&lt;00:00, 16.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.69M/28.1M [00:00&lt;00:00, 26.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  24%|▋  | 6.60M/28.1M [00:00&lt;00:01, 14.2M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  31%|▉  | 8.76M/28.1M [00:00&lt;00:01, 12.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  40%|█▏ | 11.1M/28.1M [00:00&lt;00:01, 12.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  49%|█▍ | 13.6M/28.1M [00:01&lt;00:01, 12.2M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  58%|█▋ | 16.2M/28.1M [00:01&lt;00:00, 12.1M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  66%|█▉ | 18.6M/28.1M [00:01&lt;00:00, 12.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  71%|██▏| 20.0M/28.1M [00:01&lt;00:00, 12.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  80%|██▍| 22.5M/28.1M [00:01&lt;00:00, 12.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  89%|██▋| 25.0M/28.1M [00:02&lt;00:00, 12.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  94%|██▊| 26.4M/28.1M [00:02&lt;00:00, 12.3M Bytes/s]
+
                                                                                 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Total:  58%|███████████████           | 38.6M/66.8M [00:04&lt;00:03, 8.13M Bytes/s]
+
+Total:  58%|███████████████           | 38.6M/66.8M [00:06&lt;00:04, 6.41M Bytes/s]
+
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Get sub-01/f .. _bold.nii.gz:   6%|▏  | 1.65M/28.1M [00:00&lt;00:01, 13.7M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  14%|▍  | 3.88M/28.1M [00:00&lt;00:02, 11.7M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.12M/28.1M [00:00&lt;00:01, 15.3M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  29%|▊  | 8.10M/28.1M [00:00&lt;00:01, 16.7M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  36%|█  | 10.2M/28.1M [00:00&lt;00:01, 17.9M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  49%|█▍ | 13.7M/28.1M [00:00&lt;00:00, 17.7M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  55%|█▋ | 15.5M/28.1M [00:00&lt;00:00, 17.9M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  68%|██ | 19.0M/28.1M [00:01&lt;00:00, 17.6M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  79%|██▎| 22.2M/28.1M [00:01&lt;00:00, 16.8M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  85%|██▌| 24.0M/28.1M [00:01&lt;00:00, 17.1M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  98%|██▉| 27.5M/28.1M [00:01&lt;00:00, 17.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  11%|▎  | 2.96M/28.1M [00:00&lt;00:00, 29.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  26%|▊  | 7.25M/28.1M [00:00&lt;00:01, 10.6M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  33%|▉  | 9.31M/28.1M [00:00&lt;00:01, 10.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  41%|█▏ | 11.6M/28.1M [00:01&lt;00:01, 10.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  49%|█▍ | 13.7M/28.1M [00:01&lt;00:01, 10.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  56%|█▋ | 15.8M/28.1M [00:01&lt;00:01, 10.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  64%|█▉ | 18.1M/28.1M [00:01&lt;00:00, 10.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  72%|██▏| 20.2M/28.1M [00:01&lt;00:00, 10.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  79%|██▍| 22.4M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.6M/28.1M [00:02&lt;00:00, 10.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  96%|██▊| 26.9M/28.1M [00:02&lt;00:00, 10.6M Bytes/s]
+
                                                                                 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+
+                                                                                
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/anat/sub-01_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
@@ -825,7 +854,7 @@ action summary:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/Git_repositories/neurodeskedu/books/examples/workflows/mni_template.nii.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/workspace/books/examples/workflows/mni_template.nii.gz
 </pre></div>
 </div>
 </div>
@@ -1211,7 +1240,7 @@ Outputs:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SplitOutputs(anat_brain=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/brain_stripped.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/brain_stripped.nii (1).gz')], bold_preproc=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/sub-01_task-flanker_run-2_bold_mc_mni.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/sub-01_task-flanker_run-1_bold_mc_mni.nii.gz')])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SplitOutputs(anat_brain=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/brain_stripped.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/brain_stripped.nii (1).gz')], bold_preproc=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/sub-01_task-flanker_run-1_bold_mc_mni.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/sub-01_task-flanker_run-2_bold_mc_mni.nii.gz')])
 </pre></div>
 </div>
 </div>
@@ -1249,7 +1278,7 @@ Outputs:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Split(defn=PreprocWorkflow(anat='/home/jovyan/Git_repositories/neurodeskedu/books/examples/workflows/ds000102/.git/annex/objects/Pf/6k/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz', func=StateArray('/home/jovyan/Git_repositories/neurodeskedu/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz', '/home/jovyan/Git_repositories/neurodeskedu/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz'), template='/home/jovyan/Git_repositories/neurodeskedu/books/examples/workflows/mni_template.nii.gz', constructor=&lt;function PreprocWorkflow at 0x7fd02e1cc5e0&gt;), output_types={'anat_brain': out(name='anat_brain', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False), 'bold_preproc': out(name='bold_preproc', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False)}, environment=Native())
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Split(defn=PreprocWorkflow(anat='/home/jovyan/workspace/books/examples/workflows/ds000102/.git/annex/objects/Pf/6k/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz', func=StateArray('/home/jovyan/workspace/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz', '/home/jovyan/workspace/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz'), template='/home/jovyan/workspace/books/examples/workflows/mni_template.nii.gz', constructor=&lt;function PreprocWorkflow at 0x7f69c0286480&gt;), output_types={'anat_brain': out(name='anat_brain', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False), 'bold_preproc': out(name='bold_preproc', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False)}, environment=Native())
 </pre></div>
 </div>
 </div>
@@ -1261,7 +1290,7 @@ Outputs:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938')
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1')
 </pre></div>
 </div>
 </div>
@@ -1273,7 +1302,7 @@ Outputs:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SplitOutputs(anat_brain=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/brain_stripped.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/brain_stripped.nii (1).gz')], bold_preproc=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/sub-01_task-flanker_run-2_bold_mc_mni.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/sub-01_task-flanker_run-1_bold_mc_mni.nii.gz')])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SplitOutputs(anat_brain=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/brain_stripped.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/brain_stripped.nii (1).gz')], bold_preproc=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/sub-01_task-flanker_run-1_bold_mc_mni.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/sub-01_task-flanker_run-2_bold_mc_mni.nii.gz')])
 </pre></div>
 </div>
 </div>
@@ -1312,7 +1341,7 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SplitOutputs(anat_brain=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/brain_stripped.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/brain_stripped.nii (1).gz')], bold_preproc=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/sub-01_task-flanker_run-2_bold_mc_mni.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-45b839052fb75c51da4342683a379938/sub-01_task-flanker_run-1_bold_mc_mni.nii.gz')])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SplitOutputs(anat_brain=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/brain_stripped.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/brain_stripped.nii (1).gz')], bold_preproc=[File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/sub-01_task-flanker_run-1_bold_mc_mni.nii.gz'), File('/home/jovyan/.cache/pydra/1.0a7/run-cache/workflow-04b8e9d8003cb1067a181c22a82517f1/sub-01_task-flanker_run-2_bold_mc_mni.nii.gz')])
 </pre></div>
 </div>
 </div>
@@ -1357,10 +1386,10 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays._slicers.OrthoSlicer at 0x7fd01cc9e510&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays._slicers.OrthoSlicer at 0x7f69222212b0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/54fd13669bb4697a9839aaf5919f56c62d9d55e97dabde7a7990c8e539d014c6.png" src="../../_images/54fd13669bb4697a9839aaf5919f56c62d9d55e97dabde7a7990c8e539d014c6.png">
+<img alt="../../_images/b0dd373008774f755c082b485b51a61608b39a6fe2945dae3c2e23a1fd16316f.png" src="../../_images/b0dd373008774f755c082b485b51a61608b39a6fe2945dae3c2e23a1fd16316f.png">
 </div>
 </div>
 <p>Let’s use <code class="docutils literal notranslate"><span class="pre">add_contours</span></code> as another visualization option for checking coregistration by overlaying the MNI template as contour (red) on top of mean functional image (background):</p>
@@ -1375,7 +1404,7 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ea8e0a059575094c6df9b0a5532a68e96425e76f513b8737d616b710b2c7185a.png" src="../../_images/ea8e0a059575094c6df9b0a5532a68e96425e76f513b8737d616b710b2c7185a.png">
+<img alt="../../_images/a779827dfaa368160899275af2b5ede90a5db7e8356c6407aa2fe196de19f931.png" src="../../_images/a779827dfaa368160899275af2b5ede90a5db7e8356c6407aa2fe196de19f931.png">
 </div>
 </div>
 <section id="dependencies-in-jupyter-python">
@@ -1393,26 +1422,26 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-13T12:57:15.152084+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-28T06:10:41.595715+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.11
+IPython version      : 9.9.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-164-generic
+Release     : 5.15.0-170-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
 ants        : 0.6.1
-fileformats : 0.17.0
+fileformats : 0.17.3
 nest_asyncio: 1.6.0
 nibabel     : 5.3.3
 nilearn     : 0.13.1
-numpy       : 2.3.5
+numpy       : 2.4.2
 pydra       : 1.0a7
 </pre></div>
 </div>
@@ -1474,14 +1503,14 @@ pydra       : 1.0a7
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registration-workflow-with-antspy-and-freesurfer-s-synthstrip">Registration Workflow with ANTsPy and FreeSurfer’s SynthStrip</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
@@ -1572,8 +1601,8 @@ By Neurodesk Team
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer="" src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer="" src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

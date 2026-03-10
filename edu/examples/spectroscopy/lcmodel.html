@@ -11,20 +11,22 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079">
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062">
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc">
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be">
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b">
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css">
@@ -32,17 +34,18 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e">
     <link rel="stylesheet" type="text/css" href="../../_static/review-badge.css?v=66080ea3">
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b">
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b">
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf">
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -76,6 +79,7 @@
     <link rel="prev" title="Spectroscopy" href="intro.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
   <meta name="author" content="Monika Doerig"><meta property="article:author" content="Monika Doerig"><meta name="citation_author" content="Monika Doerig"></head>
   
   
@@ -91,21 +95,14 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox" class="sidebar-toggle" id="pst-primary-sidebar-checkbox">
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox" class="sidebar-toggle" id="pst-secondary-sidebar-checkbox">
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search" class="form-control" name="q" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -121,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,7 +149,7 @@
     
     
     <img src="../../_static/neurodesk_logo.svg" class="logo__image only-light" alt="Neurodesk - Home">
-    <script>document.write(`<img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark" alt="Neurodesk - Home"/>`);</script>
+    <img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark pst-js-only" alt="Neurodesk - Home">
   
   
 </a></div>
@@ -171,15 +169,11 @@
 </ul></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -334,9 +328,10 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -493,7 +488,7 @@
 
 
 
-<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button pst-navbar-icon" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
   
 
 <span class="btn__icon-container">
@@ -504,25 +499,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark" title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -683,105 +670,198 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l[+] 0.0s
 ?25h?25l[+] 0.0s
 [+] 0.1s
-conda-forge/linux-64 ━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━━   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━  14.0kB /  24.6MB @ 194.9kB/s  0.0s[+] 0.2s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━   1.0MB /  50.8MB @   5.3MB/s  0.1s
-conda-forge/noarch   ━╸━━━━━━━━━━━━━━━━━━━━━   3.0MB /  24.6MB @  17.2MB/s  0.1s[+] 0.3s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━   1.9MB /  50.8MB @   7.6MB/s  0.2s
-conda-forge/noarch   ━━━╸━━━━━━━━━━━━━━━━━━━   4.8MB /  24.6MB @  17.1MB/s  0.2s[+] 0.4s
-conda-forge/linux-64 ╸━━━━━━━━━━━━━━━━━━━━━━   4.2MB /  50.8MB @  11.6MB/s  0.3s
-conda-forge/noarch   ━━━━╸━━━━━━━━━━━━━━━━━━   6.2MB /  24.6MB @  18.6MB/s  0.3s[+] 0.5s
-conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   5.3MB /  50.8MB @  10.9MB/s  0.4s
-conda-forge/noarch   ━━━━━╸━━━━━━━━━━━━━━━━━   7.4MB /  24.6MB @  15.8MB/s  0.4s[+] 0.6s
-conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   6.7MB /  50.8MB @  11.2MB/s  0.5s
-conda-forge/noarch   ━━━━━━━╸━━━━━━━━━━━━━━━   8.8MB /  24.6MB @  15.0MB/s  0.5s[+] 0.7s
-conda-forge/linux-64 ━━╸━━━━━━━━━━━━━━━━━━━━   7.4MB /  50.8MB @  11.1MB/s  0.6s
-conda-forge/noarch   ━━━━━━━╸━━━━━━━━━━━━━━━   9.6MB /  24.6MB @  14.6MB/s  0.6s[+] 0.8s
-conda-forge/linux-64 ━━╸━━━━━━━━━━━━━━━━━━━━   8.8MB /  50.8MB @  11.2MB/s  0.7s
-conda-forge/noarch   ━━━━━━━━╸━━━━━━━━━━━━━━  10.8MB /  24.6MB @  14.1MB/s  0.7s[+] 0.9s
-conda-forge/linux-64 ━━━╸━━━━━━━━━━━━━━━━━━━   9.3MB /  50.8MB @  11.0MB/s  0.8s
-conda-forge/noarch   ━━━━━━━━━━╸━━━━━━━━━━━━  12.2MB /  24.6MB @  13.6MB/s  0.8s[+] 1.0s
-conda-forge/linux-64 ━━━╸━━━━━━━━━━━━━━━━━━━  10.7MB /  50.8MB @  11.0MB/s  0.9s
-conda-forge/noarch   ━━━━━━━━━━╸━━━━━━━━━━━━  12.7MB /  24.6MB @  13.4MB/s  0.9s[+] 1.1s
-conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  12.1MB /  50.8MB @  11.2MB/s  1.0s
-conda-forge/noarch   ━━━━━━━━━━━━╸━━━━━━━━━━  14.2MB /  24.6MB @  13.4MB/s  1.0s[+] 1.2s
-conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  12.8MB /  50.8MB @  11.2MB/s  1.1s
-conda-forge/noarch   ━━━━━━━━━━━━━╸━━━━━━━━━  15.6MB /  24.6MB @  13.3MB/s  1.1s[+] 1.3s
-conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.4MB /  50.8MB @  11.3MB/s  1.2s
-conda-forge/noarch   ━━━━━━━━━━━━━━╸━━━━━━━━  16.8MB /  24.6MB @  13.1MB/s  1.2s[+] 1.4s
-conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  15.5MB /  50.8MB @  11.1MB/s  1.3s
-conda-forge/noarch   ━━━━━━━━━━━━━━━╸━━━━━━━  17.5MB /  24.6MB @  12.9MB/s  1.3s[+] 1.5s
-conda-forge/linux-64 ━━━━━━╸━━━━━━━━━━━━━━━━  15.8MB /  50.8MB @  10.9MB/s  1.4s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━╸━━━━━━  18.4MB /  24.6MB @  12.6MB/s  1.4s[+] 1.6s
-conda-forge/linux-64 ━━━━━━╸━━━━━━━━━━━━━━━━  17.4MB /  50.8MB @  11.1MB/s  1.5s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━╸━━━━━  19.8MB /  24.6MB @  12.6MB/s  1.5s[+] 1.7s
-conda-forge/linux-64 ━━━━━━━╸━━━━━━━━━━━━━━━  19.0MB /  50.8MB @  11.3MB/s  1.6s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━╸━━━━  20.7MB /  24.6MB @  12.7MB/s  1.6s[+] 1.8s
-conda-forge/linux-64 ━━━━━━━╸━━━━━━━━━━━━━━━  19.5MB /  50.8MB @  11.2MB/s  1.7s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━╸━━━  22.1MB /  24.6MB @  12.5MB/s  1.7s[+] 1.9s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  20.7MB /  50.8MB @  11.1MB/s  1.8s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━╸━━  23.2MB /  24.6MB @  12.4MB/s  1.8s[+] 2.0s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  50.8MB @  11.1MB/s  1.9s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  23.9MB /  24.6MB @  12.4MB/s  1.9s[+] 2.1s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  50.8MB @  11.1MB/s  2.0s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  23.9MB /  24.6MB @  12.4MB/s  2.0s[+] 2.2s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  50.8MB @  11.1MB/s  2.1s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  23.9MB /  24.6MB @  12.4MB/s  2.1sconda-forge/noarch                                  24.6MB @  12.4MB/s  2.2s
+conda-forge/linux-64 ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
+conda-forge/noarch   ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
+[+] 0.2s
+conda-forge/linux-64 ━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━   0.0 B /  ??.?MB @  ??.?MB/s  0.1s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━  12.6kB /  25.0MB @  72.2kB/s  0.1s
+[+] 0.3s
+conda-forge/linux-64 ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.2s
+conda-forge/noarch   ╸━━━━━━━━━━━━━━━━━━━━━━   1.9MB /  25.0MB @   6.6MB/s  0.2s
+[+] 0.4s
+conda-forge/linux-64 ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.3s
+conda-forge/noarch   ━━━╸━━━━━━━━━━━━━━━━━━━   5.2MB /  25.0MB @  13.2MB/s  0.3s
+[+] 0.5s
+conda-forge/linux-64 ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.4s
+conda-forge/noarch   ━━━━━━╸━━━━━━━━━━━━━━━━   8.0MB /  25.0MB @  16.2MB/s  0.4s
+[+] 0.6s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━  67.4kB /  51.6MB @ 124.5kB/s  0.5s
+conda-forge/noarch   ━━━━━━━╸━━━━━━━━━━━━━━━   9.3MB /  25.0MB @  16.9MB/s  0.5s
+[+] 0.7s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━   1.2MB /  51.6MB @   1.8MB/s  0.6s
+conda-forge/noarch   ━━━━━━━━╸━━━━━━━━━━━━━━  10.8MB /  25.0MB @  16.1MB/s  0.6s
+[+] 0.8s
+conda-forge/linux-64 ╸━━━━━━━━━━━━━━━━━━━━━━   2.6MB /  51.6MB @   3.3MB/s  0.7s
+conda-forge/noarch   ━━━━━━━━━━╸━━━━━━━━━━━━  12.3MB /  25.0MB @  15.4MB/s  0.7s
+[+] 0.9s
+conda-forge/linux-64 ╸━━━━━━━━━━━━━━━━━━━━━━   4.0MB /  51.6MB @   4.5MB/s  0.8s
+conda-forge/noarch   ━━━━━━━━━━╸━━━━━━━━━━━━  13.0MB /  25.0MB @  15.3MB/s  0.8s
+[+] 1.0s
+conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   4.8MB /  51.6MB @   5.0MB/s  0.9s
+conda-forge/noarch   ━━━━━━━━━━━━╸━━━━━━━━━━  14.4MB /  25.0MB @  15.1MB/s  0.9s
+[+] 1.1s
+conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   6.2MB /  51.6MB @   5.9MB/s  1.0s
+conda-forge/noarch   ━━━━━━━━━━━━━╸━━━━━━━━━  15.8MB /  25.0MB @  14.9MB/s  1.0s
+[+] 1.2s
+conda-forge/linux-64 ━━╸━━━━━━━━━━━━━━━━━━━━   7.8MB /  51.6MB @   6.6MB/s  1.1s
+conda-forge/noarch   ━━━━━━━━━━━━━━╸━━━━━━━━  17.4MB /  25.0MB @  14.8MB/s  1.1s
+[+] 1.3s
+conda-forge/linux-64 ━━━╸━━━━━━━━━━━━━━━━━━━   9.5MB /  51.6MB @   7.5MB/s  1.2s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━╸━━━━━━  19.2MB /  25.0MB @  15.0MB/s  1.2s
+[+] 1.4s
+conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  11.5MB /  51.6MB @   8.3MB/s  1.3s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━╸━━━━  21.2MB /  25.0MB @  15.2MB/s  1.3s
+[+] 1.5s
+conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  13.6MB /  51.6MB @   9.1MB/s  1.4s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━╸━━━  22.3MB /  25.0MB @  15.4MB/s  1.4s
+[+] 1.6s
+conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.7MB /  51.6MB @   9.5MB/s  1.5s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  24.4MB /  25.0MB @  15.7MB/s  1.5s
+[+] 1.7s
+conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.7MB /  51.6MB @   9.5MB/s  1.6s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  24.4MB /  25.0MB @  15.7MB/s  1.6s
+[+] 1.8s
+conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.7MB /  51.6MB @   9.5MB/s  1.7s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  24.4MB /  25.0MB @  15.7MB/s  1.7s
+conda-forge/noarch                                  25.0MB @  15.7MB/s  1.8s
+[+] 1.9s
+conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  15.6MB /  51.6MB @   8.4MB/s  1.8s
+[+] 2.0s
+conda-forge/linux-64 ━━━━━━━╸━━━━━━━━━━━━━━━  19.0MB /  51.6MB @   9.7MB/s  1.9s
+[+] 2.1s
+conda-forge/linux-64 ━━━━━━━━━╸━━━━━━━━━━━━━  23.1MB /  51.6MB @  11.2MB/s  2.0s
+[+] 2.2s
+conda-forge/linux-64 ━━━━━━━━━━╸━━━━━━━━━━━━  26.7MB /  51.6MB @  12.3MB/s  2.1s
 [+] 2.3s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  50.8MB @  11.1MB/s  2.2s[+] 2.4s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  50.8MB @  11.1MB/s  2.3s[+] 2.5s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  50.8MB @  11.1MB/s  2.4s[+] 2.6s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  50.8MB @  11.1MB/s  2.5s[+] 2.7s
-conda-forge/linux-64 ━━━━━━━━━╸━━━━━━━━━━━━━  23.7MB /  50.8MB @   8.9MB/s  2.6s[+] 2.8s
-conda-forge/linux-64 ━━━━━━━━━━╸━━━━━━━━━━━━  26.0MB /  50.8MB @   9.3MB/s  2.7s[+] 2.9s
-conda-forge/linux-64 ━━━━━━━━━━━╸━━━━━━━━━━━  28.3MB /  50.8MB @   9.8MB/s  2.8s[+] 3.0s
-conda-forge/linux-64 ━━━━━━━━━━━━╸━━━━━━━━━━  29.5MB /  50.8MB @  10.0MB/s  2.9s[+] 3.1s
-conda-forge/linux-64 ━━━━━━━━━━━━━╸━━━━━━━━━  32.2MB /  50.8MB @  10.5MB/s  3.0s[+] 3.2s
-conda-forge/linux-64 ━━━━━━━━━━━━━━╸━━━━━━━━  34.4MB /  50.8MB @  10.9MB/s  3.1s[+] 3.3s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━╸━━━━━━━  37.2MB /  50.8MB @  11.4MB/s  3.2s[+] 3.4s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━╸━━━━━━  39.9MB /  50.8MB @  11.8MB/s  3.3s[+] 3.5s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━╸━━━━  43.0MB /  50.8MB @  12.3MB/s  3.4s[+] 3.6s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━╸━━━  45.3MB /  50.8MB @  12.6MB/s  3.5s[+] 3.7s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━╸━━  47.1MB /  50.8MB @  12.9MB/s  3.6s[+] 3.8s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  3.7s[+] 3.9s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  3.8s[+] 4.0s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  3.9s[+] 4.1s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.0s[+] 4.2s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.1s[+] 4.3s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.2s[+] 4.4s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.3s[+] 4.5s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.4s[+] 4.6s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.5s[+] 4.7s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.6s[+] 4.8s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.7s[+] 4.9s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.8s[+] 5.0s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  4.9s[+] 5.1s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  50.8MB @  13.2MB/s  5.0sconda-forge/linux-64                                50.8MB @  13.2MB/s  5.1s
-[+] 5.2s
-[+] 5.3s
-[+] 5.4s
-[+] 5.5s
-[+] 5.6s
-[+] 5.7s
+conda-forge/linux-64 ━━━━━━━━━━━━╸━━━━━━━━━━  30.7MB /  51.6MB @  13.6MB/s  2.2s
+[+] 2.4s
+conda-forge/linux-64 ━━━━━━━━━━━━━━╸━━━━━━━━  35.2MB /  51.6MB @  14.9MB/s  2.3s
+[+] 2.5s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━╸━━━━━━  39.6MB /  51.6MB @  16.0MB/s  2.4s
+[+] 2.6s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━╸━━━━  44.3MB /  51.6MB @  17.2MB/s  2.5s
+[+] 2.7s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━╸━━  49.1MB /  51.6MB @  18.3MB/s  2.6s
+[+] 2.8s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  2.7s
+[+] 2.9s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  2.8s
+[+] 3.0s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  2.9s
+[+] 3.1s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  3.0s
+[+] 3.2s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  3.1s
+conda-forge/linux-64                                51.6MB @  18.8MB/s  3.2s
 ?25h
-Pinned packages:
-
-  - python=3.13
 
 Pinned packages:
 
   - python=3.13
 
+Pinned packages:
+
+  - python=3.13
 
 Transaction
 
   Prefix: /opt/conda
 
-  All requested packages already installed
+  Updating specs:
+
+   - ghostscript
+
+
+  Package        Version  Build       Channel         Size
+────────────────────────────────────────────────────────────
+  Install:
+────────────────────────────────────────────────────────────
+
+  <span class=" -Color -Color-Green">+ ghostscript</span>  10.06.0  hecca717_0  conda-forge     63MB
+
+  Summary:
+
+  Install: 1 packages
+
+  Total download: 63MB
+
+────────────────────────────────────────────────────────────
+
 
 
 Transaction starting
-?25l?25h
+?25l[+] 0.0s
+Downloading      ╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━</span>   0.0 B                            0.0s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.1s
+Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   0.0 B ghostscript                0.0s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.2s
+Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   9.6kB ghostscript                0.1s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.3s
+Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   2.9MB ghostscript                0.2s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.4s
+Downloading  (1) ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━</span>  14.7MB ghostscript                0.3s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.5s
+Downloading  (1) ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>  23.8MB ghostscript                0.4s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.6s
+Downloading  (1) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━</span>  29.7MB ghostscript                0.5s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.7s
+Downloading  (1) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━</span>  35.7MB ghostscript                0.6s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.8s
+Downloading  (1) ━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━</span>  40.8MB ghostscript                0.7s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 0.9s
+Downloading  (1) ━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━</span>  45.9MB ghostscript                0.8s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 1.0s
+Downloading  (1) ━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━</span>  51.2MB ghostscript                0.9s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 1.1s
+Downloading  (1) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━</span>  53.7MB ghostscript                1.0s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 1.2s
+Downloading  (1) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━</span>  57.3MB ghostscript                1.1s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 1.3s
+Downloading  (1) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span>  61.8MB ghostscript                1.2s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+ghostscript                                         62.8MB @  47.7MB/s  1.2s
+[+] 1.4s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+[+] 1.5s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━</span>       0 ghostscript                0.0s
+[+] 1.6s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━</span>       0 ghostscript                0.1s
+[+] 1.7s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━</span>       0 ghostscript                0.2s
+[+] 1.8s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━╸</span>━━━━━━━━━━━━━━━       0 ghostscript                0.3s
+[+] 1.9s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━╸</span>━━━━━━━━━━━━━━       0 ghostscript                0.4s
+[+] 2.0s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━╸</span>━━━━━━━━━━━━━       0 ghostscript                0.5s
+[+] 2.1s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━╸</span>━━━━━━━━━━━━       0 ghostscript                0.6s
+[+] 2.2s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━╸</span>━━━━━━━━━━━       0 ghostscript                0.7s
+?25hLinking ghostscript-10.06.0-hecca717_0
+
 Transaction finished
 </pre></div>
 </div>
@@ -1000,7 +1080,8 @@ BASIS file exists?  ✅
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>~/.lcmodel already exists — skipping setup.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Setting up lcmodel...
+done.
 </pre></div>
 </div>
 </div>
@@ -1136,8 +1217,8 @@ Visual inspection of the FID can help identify noise, artifacts, or unexpected d
 <span class="c1">#  Plot the data</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_points</span><span class="p">,</span> <span class="n">imag</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Imaginary'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_points</span><span class="p">,</span> <span class="n">real</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Real'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_points</span><span class="p">,</span> <span class="n">imag</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Imaginary'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_points</span><span class="p">,</span> <span class="n">real</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Real'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Raw Free Induction Decay (FID) Signal from LCModel .RAW File"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Data Point Index"</span><span class="p">)</span>
@@ -1149,7 +1230,7 @@ Visual inspection of the FID can help identify noise, artifacts, or unexpected d
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cf7ea5048758f484f038696ec690edfc304a5d507b7cdcce139431719e85a9ae.png" src="../../_images/cf7ea5048758f484f038696ec690edfc304a5d507b7cdcce139431719e85a9ae.png">
+<img alt="../../_images/7573b7fa080a8281459eb3c378eea716139232c90fb8dc2b8e57d6c1c7b0642b.png" src="../../_images/7573b7fa080a8281459eb3c378eea716139232c90fb8dc2b8e57d6c1c7b0642b.png">
 </div>
 </div>
 </section>
@@ -1231,8 +1312,8 @@ Visual inspection of the FID can help identify noise, artifacts, or unexpected d
 <p>With all required acquisition parameters parsed from the <code class="docutils literal notranslate"><span class="pre">.RAW</span></code> and <code class="docutils literal notranslate"><span class="pre">cpStart</span></code> files, we now generate the LCModel control file programmatically. This file defines the input data (.RAW), output locations (e.g., .TABLE, .PS, .CSV, .COORD), basis set, and sequence-specific parameters such as spectral width or echo time. The control file is written to disk using the <code class="docutils literal notranslate"><span class="pre">write_lcmodel_control()</span></code> function. Finally, LCModel is executed by piping the control file into the lcmodel command-line tool, launching the spectral fitting and quantification process.</p>
 <div style="background-color: #eab308; padding: 10px; border-left: 5px solid #facc15; color: #422006;">
     <strong style="color: #713f12;">Note:</strong> LCModel is now a free software, but still requires a license key for execution. The <b>key = 210387309</b> is a universal license key provided by the developer for non-commercial academic use. It must be included in the LCModel control file (typically under the <code>key</code> parameter).<br>
-For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-provencher.com/lcmodel.shtml
-</a></div><div class="cell docutils container"><a href="http://s-provencher.com/lcmodel.shtml">
+For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-provencher.com/lcmodel.shtml</a>
+</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define file paths for LCModel output organization</span>
 
@@ -1265,101 +1346,63 @@ For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-prove
 </pre></div>
 </div>
 </div>
-</a></div><a href="http://s-provencher.com/lcmodel.shtml">
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_lcmodel_control</span><span class="p">(</span><span class="n">control_path</span><span class="p">,</span>
-                          <span class="n">raw_path</span><span class="p">,</span>
-                          <span class="n">srcraw</span><span class="p">,</span>
-                          <span class="n">basis_path</span><span class="p">,</span>
-                          <span class="n">ps_path</span><span class="p">,</span>
-                          <span class="n">table_path</span><span class="p">,</span>
-                          <span class="n">csv_path</span><span class="p">,</span>
-                          <span class="n">coord_path</span><span class="p">,</span>
-                          <span class="n">title</span><span class="p">,</span>
-                          <span class="n">nunfil</span><span class="p">,</span>
-                          <span class="n">ndslic</span><span class="p">,</span>
-                          <span class="n">ndrows</span><span class="p">,</span>
-                          <span class="n">ndcols</span><span class="p">,</span>
-                          <span class="n">hzpppm</span><span class="p">,</span>
-                          <span class="n">echot</span><span class="p">,</span>
-                          <span class="n">deltat</span><span class="p">,</span>
-                          <span class="n">irowst</span><span class="p">,</span>
-                          <span class="n">irowen</span><span class="p">,</span>
-                          <span class="n">icolst</span><span class="p">,</span>
-                          <span class="n">icolen</span><span class="p">,</span>
-                          <span class="n">ppmst</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span>
-                          <span class="n">ppmend</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
-                          <span class="n">ltable</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
-                          <span class="n">lps</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
-                          <span class="n">lcsv</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
-                          <span class="n">lcoord</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
-                          <span class="n">islice</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                          <span class="n">key</span><span class="o">=</span><span class="mi">210387309</span> <span class="c1"># free license key</span>
-                         <span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">write_lcmodel_control</span><span class="p">(</span><span class="n">control_path</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Writes a formatted control file for an LCModel analysis.</span>
-
-<span class="sd">    This function generates the .CONTROL file that LCModel uses as its primary</span>
-<span class="sd">    input, specifying all file paths, acquisition parameters, and analysis options.</span>
 <span class="sd">    </span>
 <span class="sd">    Parameters:</span>
-<span class="sd">        Required:</span>
-<span class="sd">            control_path (str): Output path for the CONTROL file</span>
-<span class="sd">            raw_path (str): Path to the .RAW file that LCModel will analyze</span>
-<span class="sd">            srcraw (str): Path to original FID file (for reference)</span>
-<span class="sd">            basis_path (str): Path to BASIS file containing the metabolite basis spectra</span>
-<span class="sd">            ps_path (str): Output path for PS file</span>
-<span class="sd">            table_path (str): Output path for TABLE file</span>
-<span class="sd">            csv_path (str): Output path for CSV file</span>
-<span class="sd">            coord_path (str): Output path for COORD file</span>
-<span class="sd">            title (str): Title of the scan</span>
-<span class="sd">            nunfil (int):  Number of complex data points per FID transient</span>
-<span class="sd">            ndslic (int): Number of slices in the data (usually 1 for Single Voxel Spectroscopy)</span>
-<span class="sd">            ndrows (int): Number of rows (transients) in the .RAW file (automatically extracted from the FID conversion metadata)</span>
-<span class="sd">            ndcols (int): Number of columns (usually 1 for SVS)</span>
-<span class="sd">            hzpppm (float): Spectrometer frequency (MHz)</span>
-<span class="sd">            echot (float): Echo time (TE) in ms</span>
-<span class="sd">            deltat (float): Time between points (dwell time) in seconds</span>
-<span class="sd">            irowst (int), irowen (int): Start/end row for analysis</span>
-<span class="sd">            icolst (int), icolen (int): Start/end column for analysis</span>
-
-<span class="sd">        Optional:</span>
-<span class="sd">            ppmst (float): Upper limit of ppm window (default: 4.0)</span>
-<span class="sd">            ppmend (float): Lower limit of ppm window (default: 0.2)</span>
-<span class="sd">            islice (int): Slice to analyze (default: 1)</span>
-<span class="sd">            ltable (int), lps (int), lcsv (int), lcoord (int): Output switches to generate output files</span>
-<span class="sd">            islice (int): Slice to analyze (default: 1)</span>
-<span class="sd">            key (int): Free License key (hard coded)</span>
+<span class="sd">        control_path (str): Output path for the CONTROL file</span>
+<span class="sd">        params (dict): Dictionary containing all required and optional parameters.</span>
+<span class="sd">            Required keys: raw_path, srcraw, basis_path, ps_path, table_path,</span>
+<span class="sd">                           csv_path, coord_path, title, nunfil, ndslic, ndrows,</span>
+<span class="sd">                           ndcols, hzpppm, echot, deltat, irowst, irowen, icolst, icolen</span>
+<span class="sd">            Optional keys: ppmst (4.0), ppmend (0.2), ltable (7), lps (8),</span>
+<span class="sd">                           lcsv (11), lcoord (9), islice (1), key (210387309)</span>
 <span class="sd">    """</span>
+    <span class="c1"># Apply defaults for optional parameters</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'ppmst'</span><span class="p">:</span> <span class="mf">4.0</span><span class="p">,</span>
+        <span class="s1">'ppmend'</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
+        <span class="s1">'ltable'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s1">'lps'</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s1">'lcsv'</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+        <span class="s1">'lcoord'</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+        <span class="s1">'islice'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">'key'</span><span class="p">:</span> <span class="mi">210387309</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">params</span>  <span class="c1"># user values override defaults</span>
+    <span class="p">}</span>
+
     <span class="n">content</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">""" $LCMODL</span>
-<span class="s2"> title= '</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">'</span>
-<span class="s2"> srcraw= '</span><span class="si">{</span><span class="n">srcraw</span><span class="si">}</span><span class="s2">'</span>
-<span class="s2"> ppmst= </span><span class="si">{</span><span class="n">ppmst</span><span class="si">}</span>
-<span class="s2"> ppmend= </span><span class="si">{</span><span class="n">ppmend</span><span class="si">}</span>
-<span class="s2"> nunfil= </span><span class="si">{</span><span class="n">nunfil</span><span class="si">}</span>
-<span class="s2"> ndslic= </span><span class="si">{</span><span class="n">ndslic</span><span class="si">}</span>
-<span class="s2"> ndrows= </span><span class="si">{</span><span class="n">ndrows</span><span class="si">}</span>
-<span class="s2"> ndcols= </span><span class="si">{</span><span class="n">ndcols</span><span class="si">}</span>
-<span class="s2"> ltable= </span><span class="si">{</span><span class="n">ltable</span><span class="si">}</span>
-<span class="s2"> lps= </span><span class="si">{</span><span class="n">lps</span><span class="si">}</span>
-<span class="s2"> islice= </span><span class="si">{</span><span class="n">islice</span><span class="si">}</span>
-<span class="s2"> irowst= </span><span class="si">{</span><span class="n">irowst</span><span class="si">}</span>
-<span class="s2"> irowen= </span><span class="si">{</span><span class="n">irowen</span><span class="si">}</span>
-<span class="s2"> icolst= </span><span class="si">{</span><span class="n">icolst</span><span class="si">}</span>
-<span class="s2"> icolen= </span><span class="si">{</span><span class="n">icolen</span><span class="si">}</span>
-<span class="s2"> hzpppm= </span><span class="si">{</span><span class="n">hzpppm</span><span class="si">}</span>
-<span class="s2"> filtab= '</span><span class="si">{</span><span class="n">table_path</span><span class="si">}</span><span class="s2">'</span>
-<span class="s2"> filraw= '</span><span class="si">{</span><span class="n">raw_path</span><span class="si">}</span><span class="s2">'</span>
-<span class="s2"> filps= '</span><span class="si">{</span><span class="n">ps_path</span><span class="si">}</span><span class="s2">'</span>
-<span class="s2"> filbas= '</span><span class="si">{</span><span class="n">basis_path</span><span class="si">}</span><span class="s2">'</span>
-<span class="s2"> echot= </span><span class="si">{</span><span class="n">echot</span><span class="si">}</span>
-<span class="s2"> deltat= </span><span class="si">{</span><span class="n">deltat</span><span class="si">}</span>
-<span class="s2"> key= </span><span class="si">{</span><span class="n">key</span><span class="si">}</span>
-<span class="s2"> lcsv= </span><span class="si">{</span><span class="n">lcsv</span><span class="si">}</span>
-<span class="s2"> filcsv= '</span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2">'</span>
-<span class="s2"> lcoord= </span><span class="si">{</span><span class="n">lcoord</span><span class="si">}</span>
-<span class="s2"> filcoo= '</span><span class="si">{</span><span class="n">coord_path</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> title= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> srcraw= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'srcraw'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> ppmst= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'ppmst'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> ppmend= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'ppmend'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> nunfil= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'nunfil'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> ndslic= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'ndslic'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> ndrows= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'ndrows'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> ndcols= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'ndcols'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> ltable= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'ltable'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> lps= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'lps'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> islice= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'islice'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> irowst= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'irowst'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> irowen= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'irowen'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> icolst= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'icolst'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> icolen= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'icolen'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> hzpppm= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'hzpppm'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> filtab= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'table_path'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> filraw= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'raw_path'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> filps= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'ps_path'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> filbas= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'basis_path'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> echot= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'echot'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> deltat= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'deltat'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> key= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'key'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> lcsv= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'lcsv'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> filcsv= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'csv_path'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
+<span class="s2"> lcoord= </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'lcoord'</span><span class="p">]</span><span class="si">}</span>
+<span class="s2"> filcoo= '</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'coord_path'</span><span class="p">]</span><span class="si">}</span><span class="s2">'</span>
 <span class="s2"> $END</span>
 <span class="s2">"""</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">control_path</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"ascii"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -1371,34 +1414,29 @@ For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-prove
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">write_lcmodel_control</span><span class="p">(</span>
-    <span class="n">control_path</span><span class="o">=</span><span class="s1">'./lcmodel_outputs/control'</span><span class="p">,</span>
-    <span class="n">raw_path</span><span class="o">=</span><span class="n">raw_path</span><span class="p">,</span>
-    <span class="n">srcraw</span><span class="o">=</span><span class="n">fid_path</span><span class="p">,</span>
-    <span class="n">basis_path</span><span class="o">=</span><span class="n">local_basis_path</span><span class="p">,</span>  
-    <span class="n">ps_path</span><span class="o">=</span><span class="n">ps_path</span><span class="p">,</span>
-    <span class="n">table_path</span><span class="o">=</span><span class="n">table_path</span><span class="p">,</span>   
-    <span class="n">csv_path</span><span class="o">=</span><span class="n">csv_path</span><span class="p">,</span>       
-    <span class="n">coord_path</span><span class="o">=</span><span class="n">coord_path</span><span class="p">,</span>   
-    <span class="n">title</span><span class="o">=</span><span class="n">all_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'Default Title'</span><span class="p">),</span>
-    <span class="n">ppmst</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span>                                  <span class="c1"># Left edge of ppm window</span>
-    <span class="n">ppmend</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>                                 <span class="c1"># Right edge of ppm window</span>
-    <span class="n">nunfil</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'nunfil'</span><span class="p">],</span>
-    <span class="n">ndslic</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'ndslic'</span><span class="p">],</span>
-    <span class="n">ndrows</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'ndrows'</span><span class="p">],</span>                <span class="c1">#ndrows set automatically from cpStart metadata to reflect number of transients in .RAW file</span>
-    <span class="n">ndcols</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'ndcols'</span><span class="p">],</span>
-    <span class="n">ltable</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>                                   <span class="c1">#will create filtab</span>
-    <span class="n">lps</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>                                      <span class="c1">#will create filps</span>
-    <span class="n">irowst</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>                                   <span class="c1">#default - selecting row 1 through irowen for preview and analysis</span>
-    <span class="n">irowen</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'ndrows'</span><span class="p">],</span>               
-    <span class="n">icolst</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>                                   <span class="c1">#default - selecting columns 1 through icolen for preview an analysis</span>
-    <span class="n">icolen</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'ndcols'</span><span class="p">],</span>
-    <span class="n">hzpppm</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'hzpppm'</span><span class="p">],</span>
-    <span class="n">echot</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'echot'</span><span class="p">],</span>  
-    <span class="n">deltat</span><span class="o">=</span><span class="n">all_params</span><span class="p">[</span><span class="s1">'deltat'</span><span class="p">],</span>
-    <span class="n">lcsv</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>                                    <span class="c1">#will make filcsv</span>
-    <span class="n">lcoord</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>                                   <span class="c1">#will make filcoo</span>
-<span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lcmodel_params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'raw_path'</span><span class="p">:</span> <span class="n">raw_path</span><span class="p">,</span>
+    <span class="s1">'srcraw'</span><span class="p">:</span> <span class="n">fid_path</span><span class="p">,</span>
+    <span class="s1">'basis_path'</span><span class="p">:</span> <span class="n">local_basis_path</span><span class="p">,</span>
+    <span class="s1">'ps_path'</span><span class="p">:</span> <span class="n">ps_path</span><span class="p">,</span>
+    <span class="s1">'table_path'</span><span class="p">:</span> <span class="n">table_path</span><span class="p">,</span>
+    <span class="s1">'csv_path'</span><span class="p">:</span> <span class="n">csv_path</span><span class="p">,</span>
+    <span class="s1">'coord_path'</span><span class="p">:</span> <span class="n">coord_path</span><span class="p">,</span>
+    <span class="s1">'title'</span><span class="p">:</span> <span class="n">all_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'Default Title'</span><span class="p">),</span>
+    <span class="s1">'nunfil'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'nunfil'</span><span class="p">],</span>
+    <span class="s1">'ndslic'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'ndslic'</span><span class="p">],</span>
+    <span class="s1">'ndrows'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'ndrows'</span><span class="p">],</span>
+    <span class="s1">'ndcols'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'ndcols'</span><span class="p">],</span>
+    <span class="s1">'hzpppm'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'hzpppm'</span><span class="p">],</span>
+    <span class="s1">'echot'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'echot'</span><span class="p">],</span>
+    <span class="s1">'deltat'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'deltat'</span><span class="p">],</span>
+    <span class="s1">'irowst'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">'irowen'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'ndrows'</span><span class="p">],</span>
+    <span class="s1">'icolst'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">'icolen'</span><span class="p">:</span> <span class="n">all_params</span><span class="p">[</span><span class="s1">'ndcols'</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">write_lcmodel_control</span><span class="p">(</span><span class="s1">'./lcmodel_outputs/control'</span><span class="p">,</span> <span class="n">lcmodel_params</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1452,10 +1490,10 @@ For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-prove
 </div>
 </div>
 </div>
-</a></section><a href="http://s-provencher.com/lcmodel.shtml">
-</a></section><a href="http://s-provencher.com/lcmodel.shtml">
-</a><section id="run-lcmodel"><a href="http://s-provencher.com/lcmodel.shtml">
-</a><h2><a href="http://s-provencher.com/lcmodel.shtml">Run lcmodel</a><a class="headerlink" href="#run-lcmodel" title="Link to this heading">#</a></h2>
+</section>
+</section>
+<section id="run-lcmodel">
+<h2>Run lcmodel<a class="headerlink" href="#run-lcmodel" title="Link to this heading">#</a></h2>
 <p>The following command runs the LCModel software by feeding it the control file via standard input. This control file contains all necessary parameters and file references that LCModel needs to perform the spectral quantification analysis.</p>
 <p><em>Note</em>: Because the data contains multiple transients, LCModel generates separate output files for each transient, enabling detailed per-transient analysis.</p>
 <div class="cell docutils container">
@@ -1541,8 +1579,8 @@ This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
 see the file COPYING for details.
 Loading NimbusSans-Regular font from %rom%Resource/Font/NimbusSans-Regular... 3512976 2141161 1997048 697687 1 done.
 Loading NimbusSans-Italic font from %rom%Resource/Font/NimbusSans-Italic... 3673792 2350775 2017248 713785 1 done.
-Loading NimbusMonoPS-Bold font from %rom%Resource/Font/NimbusMonoPS-Bold... 3935608 2615440 2077848 766226 1 done.
-Loading NimbusMonoPS-Regular font from %rom%Resource/Font/NimbusMonoPS-Regular... 4177224 2858137 2098048 773416 1 done.
+Loading NimbusMonoPS-Bold font from %rom%Resource/Font/NimbusMonoPS-Bold... 3935608 2615440 2077848 766127 1 done.
+Loading NimbusMonoPS-Regular font from %rom%Resource/Font/NimbusMonoPS-Regular... 4177224 2858137 2098048 773317 1 done.
 </pre></div>
 </div>
 </div>
@@ -1556,8 +1594,8 @@ Loading NimbusMonoPS-Regular font from %rom%Resource/Font/NimbusMonoPS-Regular..
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c080bab04de3b56a510dde77cfaf5c18216b9591002166d048506084d1635823.png" src="../../_images/c080bab04de3b56a510dde77cfaf5c18216b9591002166d048506084d1635823.png">
-<img alt="../../_images/b791b239855cc68c6d95672f0721addc56bf294b7a19049487f7c357aff697b7.png" src="../../_images/b791b239855cc68c6d95672f0721addc56bf294b7a19049487f7c357aff697b7.png">
+<img alt="../../_images/3c49115caca3b68b21805c26f250e64581551c03abbaef14d80459f06a4e0cbc.png" src="../../_images/3c49115caca3b68b21805c26f250e64581551c03abbaef14d80459f06a4e0cbc.png">
+<img alt="../../_images/eb1a8decb395201682c3444036ff10f169176be15933111a181bf5f92de4586f.png" src="../../_images/eb1a8decb395201682c3444036ff10f169176be15933111a181bf5f92de4586f.png">
 </div>
 </div>
 <p><strong>Note on PDF viewing:</strong> PDFs can be displayed directly within Jupyter notebooks using <code class="docutils literal notranslate"><span class="pre">IFrame</span></code>, but this only works in interactive environments (local Jupyter, Colab, etc.). When viewing this notebook on GitHub Pages, the PDFs won’t render due to security restrictions.</p>
@@ -1602,24 +1640,24 @@ To download the output PNGs or PDFs, open the file browser in the <strong>Jupyte
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-10T05:06:24.791616+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-09T23:45:59.608019+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.11
+IPython version      : 9.9.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-164-generic
+Release     : 5.15.0-170-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
-IPython   : 9.7.0
+IPython   : 9.9.0
 matplotlib: 3.10.8
 nibabel   : 5.3.3
-numpy     : 2.3.5
+numpy     : 2.4.2
 re        : 2.2.1
 </pre></div>
 </div>
@@ -1681,14 +1719,14 @@ re        : 2.2.1
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-mr-spectra-from-rat-hippocampus">Analyzing MR Spectra from Rat Hippocampus</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
@@ -1772,8 +1810,8 @@ By Neurodesk Team
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer="" src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer="" src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

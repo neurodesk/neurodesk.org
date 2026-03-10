@@ -11,20 +11,22 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin="" href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079">
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062">
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc">
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be">
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b">
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css">
@@ -32,17 +34,18 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e">
     <link rel="stylesheet" type="text/css" href="../../_static/review-badge.css?v=66080ea3">
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b">
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b">
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf">
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -76,6 +79,7 @@
     <link rel="prev" title="Nipype-FSL fMRI Analysis" href="fsl_all_levels_flanker_nipype.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
   <meta name="author" content="Marla Pinkert"><meta property="article:author" content="Marla Pinkert"><meta name="citation_author" content="Marla Pinkert"></head>
   
   
@@ -91,21 +95,14 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox" class="sidebar-toggle" id="pst-primary-sidebar-checkbox">
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox" class="sidebar-toggle" id="pst-secondary-sidebar-checkbox">
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search" class="form-control" name="q" placeholder="Search..." aria-label="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -121,7 +118,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,7 +149,7 @@
     
     
     <img src="../../_static/neurodesk_logo.svg" class="logo__image only-light" alt="Neurodesk - Home">
-    <script>document.write(`<img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark" alt="Neurodesk - Home"/>`);</script>
+    <img src="../../_static/neurodesk_logo.svg" class="logo__image only-dark pst-js-only" alt="Neurodesk - Home">
   
   
 </a></div>
@@ -171,15 +169,11 @@
 </ul></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
@@ -334,9 +328,10 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -493,7 +488,7 @@
 
 
 
-<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button onclick="toggleFullScreen()" class="btn btn-sm btn-fullscreen-button pst-navbar-icon" title="Fullscreen mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
   
 
 <span class="btn__icon-container">
@@ -504,25 +499,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark" title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -627,6 +614,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning:   0%|                             | 0.00/2.00 [00:00&lt;?, ? candidates/s]
+
 Enumerating: 0.00 Objects [00:00, ? Objects/s]
                                               
 Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects/s]
@@ -634,55 +622,106 @@ Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects
 Compressing:   0%|                            | 0.00/23.0 [00:00&lt;?, ? Objects/s]
                                                                                 
 Receiving:   0%|                             | 0.00/2.15k [00:00&lt;?, ? Objects/s]
+
+Receiving:  19%|████▏                 | 409/2.15k [00:00&lt;00:00, 1.93k Objects/s]
+
+Receiving:  58%|███████████▌        | 1.25k/2.15k [00:00&lt;00:00, 3.16k Objects/s]
                                                                                 
 Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas/s]
-[INFO   ] Remote origin not usable by git-annex; setting annex-ignore           
-[INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found 
+
+                                                                                
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
-| 		datalad siblings -d "/home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds000102" enable -s s3-PRIVATE 
-<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+| 		datalad siblings -d "/home/jovyan/workspace/books/examples/functional_imaging/ds000102" enable -s s3-PRIVATE 
+<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/workspace/books/examples/functional_imaging/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
+
 Total:   0%|                                   | 0.00/66.8M [00:00&lt;?, ? Bytes/s]
+
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 85.6k/10.6M [00:00&lt;00:23, 443k Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:   3%|    | 277k/10.6M [00:00&lt;00:09, 1.07M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:   6%|▏   | 591k/10.6M [00:00&lt;00:05, 1.85M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  10%|▎  | 1.06M/10.6M [00:00&lt;00:03, 2.84M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  17%|▌  | 1.81M/10.6M [00:00&lt;00:02, 4.39M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  28%|▊  | 2.99M/10.6M [00:00&lt;00:01, 6.78M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  48%|█▍ | 5.04M/10.6M [00:00&lt;00:00, 9.25M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  76%|██▎| 8.09M/10.6M [00:00&lt;00:00, 15.0M Bytes/s]
-Get sub-01/a .. 1_T1w.nii.gz:  94%|██▊| 9.96M/10.6M [00:01&lt;00:00, 16.0M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.4k/10.6M [00:00&lt;01:06, 159k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 68.2k/10.6M [00:00&lt;01:04, 162k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   1%|     | 155k/10.6M [00:00&lt;00:37, 276k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 312k/10.6M [00:00&lt;00:22, 460k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   6%|▎    | 643k/10.6M [00:01&lt;00:11, 860k Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  12%|▎  | 1.29M/10.6M [00:01&lt;00:05, 1.60M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  19%|▌  | 1.98M/10.6M [00:01&lt;00:03, 2.15M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  32%|▉  | 3.44M/10.6M [00:01&lt;00:01, 4.40M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  51%|█▌ | 5.35M/10.6M [00:01&lt;00:00, 6.05M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  71%|██ | 7.47M/10.6M [00:01&lt;00:00, 7.38M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  90%|██▋| 9.50M/10.6M [00:02&lt;00:00, 8.12M Bytes/s]
+
                                                                                 
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-Total:  16%|████                      | 10.6M/66.8M [00:02&lt;00:11, 5.02M Bytes/s]
+
+Total:  16%|████                      | 10.6M/66.8M [00:03&lt;00:19, 2.88M Bytes/s]
+
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Get sub-01/f .. _bold.nii.gz:   5%|▏  | 1.47M/28.1M [00:00&lt;00:02, 12.1M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.72M/28.1M [00:00&lt;00:02, 12.3M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  19%|▌  | 5.27M/28.1M [00:00&lt;00:01, 18.0M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  28%|▊  | 7.74M/28.1M [00:00&lt;00:00, 20.5M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  37%|█  | 10.4M/28.1M [00:00&lt;00:00, 22.6M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  47%|█▍ | 13.1M/28.1M [00:00&lt;00:00, 24.0M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  56%|█▋ | 15.7M/28.1M [00:00&lt;00:00, 24.8M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  66%|█▉ | 18.4M/28.1M [00:00&lt;00:00, 25.4M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  85%|██▌| 23.8M/28.1M [00:01&lt;00:00, 26.2M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.13M/28.1M [00:00&lt;00:01, 15.6M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  21%|▋  | 5.91M/28.1M [00:00&lt;00:01, 11.8M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  30%|▉  | 8.43M/28.1M [00:00&lt;00:01, 11.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  37%|█  | 10.4M/28.1M [00:00&lt;00:01, 11.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  46%|█▎ | 12.8M/28.1M [00:01&lt;00:01, 11.1M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  54%|█▌ | 15.1M/28.1M [00:01&lt;00:01, 10.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  62%|█▊ | 17.3M/28.1M [00:01&lt;00:00, 10.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  70%|██ | 19.5M/28.1M [00:01&lt;00:00, 10.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  77%|██▎| 21.7M/28.1M [00:01&lt;00:00, 10.6M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  85%|██▌| 23.8M/28.1M [00:02&lt;00:00, 10.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  93%|██▊| 26.0M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
+
                                                                                 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Total:  58%|███████████████           | 38.6M/66.8M [00:03&lt;00:02, 10.3M Bytes/s]
+
+Total:  58%|███████████████           | 38.6M/66.8M [00:06&lt;00:04, 5.79M Bytes/s]
+
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Get sub-01/f .. _bold.nii.gz:   5%|▏  | 1.44M/28.1M [00:00&lt;00:02, 10.8M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.04M/28.1M [00:00&lt;00:01, 13.5M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  19%|▌  | 5.39M/28.1M [00:00&lt;00:01, 17.7M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  32%|▉  | 8.90M/28.1M [00:00&lt;00:01, 17.6M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  42%|█▏ | 11.7M/28.1M [00:00&lt;00:01, 15.0M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  49%|█▍ | 13.8M/28.1M [00:00&lt;00:01, 13.0M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  54%|█▋ | 15.3M/28.1M [00:01&lt;00:00, 13.3M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  60%|█▊ | 16.9M/28.1M [00:01&lt;00:00, 13.9M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  71%|██ | 19.9M/28.1M [00:01&lt;00:00, 14.3M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  76%|██▎| 21.4M/28.1M [00:01&lt;00:00, 14.5M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.5M/28.1M [00:01&lt;00:00, 14.8M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  97%|██▉| 27.4M/28.1M [00:01&lt;00:00, 14.1M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.05M/28.1M [00:00&lt;00:01, 15.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.22M/28.1M [00:00&lt;00:01, 12.4M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  30%|▉  | 8.50M/28.1M [00:00&lt;00:01, 11.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  37%|█  | 10.5M/28.1M [00:00&lt;00:01, 10.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  46%|█▎ | 12.9M/28.1M [00:01&lt;00:01, 11.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  54%|█▌ | 15.1M/28.1M [00:01&lt;00:01, 10.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  62%|█▊ | 17.3M/28.1M [00:01&lt;00:01, 10.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  69%|██ | 19.5M/28.1M [00:01&lt;00:00, 10.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  77%|██▎| 21.7M/28.1M [00:01&lt;00:00, 10.6M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  85%|██▌| 23.8M/28.1M [00:02&lt;00:00, 10.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  93%|██▊| 26.2M/28.1M [00:02&lt;00:00, 10.6M Bytes/s]
+
                                                                                 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+
+                                                                                
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/anat/sub-01_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
@@ -1001,8 +1040,8 @@ class MCFLIRT(nipype.interfaces.fsl.base.FSLCommand)
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mat_file = &lt;undefined&gt;
 mean_img = &lt;undefined&gt;
-out_file = /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_mcf.nii.gz
-par_file = /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_mcf.nii.gz.par
+out_file = /home/jovyan/workspace/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_mcf.nii.gz
+par_file = /home/jovyan/workspace/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_mcf.nii.gz.par
 rms_files = &lt;undefined&gt;
 std_img = &lt;undefined&gt;
 variance_img = &lt;undefined&gt;
@@ -1220,9 +1259,9 @@ variance_img = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>out_file = /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_outliers.txt
-out_metric_plot = /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/sub-01_task-flanker_run-1_bold_metrics.png
-out_metric_values = /home/jovyan/Git_repositories/neurodeskedu/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_fdrms.par
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>out_file = /home/jovyan/workspace/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_outliers.txt
+out_metric_plot = /home/jovyan/workspace/books/examples/functional_imaging/sub-01_task-flanker_run-1_bold_metrics.png
+out_metric_values = /home/jovyan/workspace/books/examples/functional_imaging/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold_fdrms.par
 </pre></div>
 </div>
 </div>
@@ -1262,15 +1301,15 @@ There is a mean framewise displacement of 0.05534307294520548 mm.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-26T00:15:58.941440+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-04T00:27:54.787338+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.11
+IPython version      : 9.9.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-164-generic
+Release     : 5.15.0-170-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
@@ -1278,7 +1317,7 @@ Architecture: 64bit
 
 matplotlib: 3.10.8
 nipype    : 1.10.0
-numpy     : 2.3.5
+numpy     : 2.4.2
 pandas    : 2.3.3
 </pre></div>
 </div>
@@ -1339,14 +1378,14 @@ pandas    : 2.3.3
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
@@ -1410,8 +1449,8 @@ By Neurodesk Team
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer="" src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer="" src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
