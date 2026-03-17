@@ -698,6 +698,26 @@ cmd=${slurm_cmd}|path=${cmd_path:-missing}|mtime=$(file_mtime_epoch "${cmd_path}
                 printf '%s\n' \
                     '#!/bin/bash' \
                     "export LD_LIBRARY_PATH=${SLURM_WRAPPER_LIB_PATH}\${LD_LIBRARY_PATH:+:\${LD_LIBRARY_PATH}}" \
+                    '# Prevent sbatch/srun/salloc from exporting the current Neurodesktop container runtime into new host jobs.' \
+                    "if [ \"${slurm_cmd}\" = \"sbatch\" ] || [ \"${slurm_cmd}\" = \"salloc\" ] || [ \"${slurm_cmd}\" = \"srun\" ]; then" \
+                    '    while IFS= read -r env_name; do' \
+                    '        case "${env_name}" in' \
+                    '            APPTAINER*|SINGULARITY*)' \
+                    '                unset "${env_name}"' \
+                    '                ;;' \
+                    '        esac' \
+                    '    done < <(compgen -e)' \
+                    '    for tmp_name in TMPDIR TMP TEMP TEMPDIR; do' \
+                    '        tmp_value="${!tmp_name:-}"' \
+                    '        case "${tmp_value}" in' \
+                    '            /tmp/apptainer_*|/var/tmp/apptainer_*)' \
+                    '                if [ ! -e "${tmp_value}" ]; then' \
+                    '                    unset "${tmp_name}"' \
+                    '                fi' \
+                    '                ;;' \
+                    '        esac' \
+                    '    done' \
+                    'fi' \
                     "exec /opt/slurm-host-bin-real/${slurm_cmd} \"\$@\"" \
                     > "${SLURM_HOST_BIN_STAGING}/${slurm_cmd}"
                 chmod +x "${SLURM_HOST_BIN_STAGING}/${slurm_cmd}" 2>/dev/null || true
