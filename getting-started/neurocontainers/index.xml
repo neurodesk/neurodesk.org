@@ -58,23 +58,39 @@ docker&lt;/p>
 
 &lt;div class="highlight">
  &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>Replace &lt;code>julia_1.6.1&lt;/code> with your selected application. You can find the available containers here: &lt;a href="https://neurodesk.org/applications/" target="_blank" rel="noopener">https://neurodesk.org/applications/&lt;/a>&lt;/p></description></item><item><title>Open Recon</title><link>https://neurodesk.org/getting-started/neurocontainers/openrecon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/openrecon/</guid><description>&lt;p>These instructions were tested on GitHub Codespaces, and we recommend this as a starting point.&lt;/p>
-&lt;p>For a local setup you need Docker (&lt;a href="https://www.docker.com/%29" target="_blank" rel="noopener">https://www.docker.com/)&lt;/a>, Python3 and you need to install neurodocker and add it to your path:&lt;/p>
-
-
-
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span style="display:flex;">&lt;span>python &lt;span style="color:#0550ae">-&lt;/span>m pip install neurodocker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#check if neurodocker is already on the path:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>which neurodocker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a"># if not:&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#57606a">#the path depends on your local setup&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> PATH&lt;span style="color:#0550ae">=$&lt;/span>PATH&lt;span style="color:#1f2328">:&lt;/span>&lt;span style="color:#0550ae">~/.&lt;/span>local&lt;span style="color:#0550ae">/&lt;/span>lib&lt;span style="color:#0550ae">/&lt;/span>python3&lt;span style="color:#0550ae">.&lt;/span>&lt;span style="color:#0550ae">12&lt;/span>&lt;span style="color:#0550ae">/&lt;/span>site&lt;span style="color:#0550ae">-&lt;/span>packages&lt;span style="color:#0550ae">/&lt;/span>bin
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> PATH&lt;span style="color:#0550ae">=$&lt;/span>PATH&lt;span style="color:#1f2328">:&lt;/span>&lt;span style="color:#0550ae">~/.&lt;/span>local&lt;span style="color:#0550ae">/&lt;/span>bin&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h2 id="1-add-the-installation-of-the-python-mrd-server-to-any-recipe-in-httpsgithubcomneurodeskneurocontainers">1) add the installation of the Python MRD server to any recipe in &lt;a href="https://github.com/neurodesk/neurocontainers/tree/main/recipes" target="_blank" rel="noopener">https://github.com/neurodesk/neurocontainers&lt;/a>&lt;/h2>
-&lt;p>Make sure to adjust invertcontrast.py to your pipeline needs (or replace/rename other files from the &lt;a href="https://github.com/kspaceKelvin/python-ismrmrd-server" target="_blank" rel="noopener">Python MRD server&lt;/a>:&lt;/p></description></item><item><title>Singularity/Apptainer</title><link>https://neurodesk.org/getting-started/neurocontainers/singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/singularity/</guid><description>&lt;p>Our docker containers are converted to singularity/apptainer containers and stored on Object storage.&lt;/p>
+&lt;/div>&lt;p>Replace &lt;code>julia_1.6.1&lt;/code> with your selected application. You can find the available containers here: &lt;a href="https://neurodesk.org/applications/" target="_blank" rel="noopener">https://neurodesk.org/applications/&lt;/a>&lt;/p></description></item><item><title>OpenRecon</title><link>https://neurodesk.org/getting-started/neurocontainers/openrecon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/openrecon/</guid><description>&lt;div>
+ &lt;nav id="TableOfContents">
+ &lt;ul>
+ &lt;li>&lt;a href="#building-an-openrecon-container">Building an OpenRecon Container&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#1-add-the-python-mrd-server-to-a-neurocontainers-recipe">1. Add the Python MRD server to a Neurocontainers recipe&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#2-test-the-tool-inside-the-container-and-then-through-the-mrd-server">2. Test the tool inside the container and then through the MRD server&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#convert-data-to-mrd-test-data">Convert data to MRD test data&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#3-submit-the-container-recipe-to-neurocontainers">3. Submit the container recipe to Neurocontainers&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#4-submit-the-container-to-openrecon">4. Submit the container to OpenRecon&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#detailed-instructions-for-building-on-github-directly">Detailed instructions for building on GitHub directly&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#prerequisites">Prerequisites&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#process">Process&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;li>&lt;a href="#tips-tricks-and-troubleshooting-for-openrecon">Tips, tricks, and troubleshooting for OpenRecon&lt;/a>
+ &lt;ul>
+ &lt;li>&lt;a href="#installing-and-testing-a-new-openrecon-package">Installing and testing a new OpenRecon package&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#do-not-use-prio-recon-with-openrecon">Do not use Prio Recon with OpenRecon&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#cuda-version">CUDA version&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#versioning-of-containers">Versioning of containers&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#high-performance-computing-license-side-effects">High-performance computing license side effects&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#cleaning-up-package-on-the-scanner">Cleaning up package on the scanner&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
+&lt;/nav>
+&lt;/div>
+&lt;h2 id="building-an-openrecon-container">Building an OpenRecon Container&lt;/h2>
+&lt;p>These instructions were tested on GitHub Codespaces, and we recommend Codespaces as a starting point.&lt;/p></description></item><item><title>Singularity/Apptainer</title><link>https://neurodesk.org/getting-started/neurocontainers/singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/singularity/</guid><description>&lt;p>Our docker containers are converted to singularity/apptainer containers and stored on Object storage.&lt;/p>
 &lt;h2 id="download-singularity-containers">Download Singularity Containers&lt;/h2>
 &lt;p>First get an overview of which containers are available as Singularity containers:
 &lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p>
