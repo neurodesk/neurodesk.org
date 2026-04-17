@@ -117,7 +117,8 @@ To get started, see: &lt;a href="https://neurodesk.org/docs/getting-started/neur
 &lt;li>and select switch model&lt;/li>
 &lt;li>then ctrl+a to connect a different provider&lt;/li>
 &lt;/ul>
-&lt;p>You can also self-host a model in Ollama on your computer (recommended Apple Silicon with at least 64GB RAM). For this install Ollama on your system and start the neurodesktop container with these additional docker parameters:&lt;/p></description></item><item><title>Play</title><link>https://neurodesk.org/getting-started/hosted/play/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/play/</guid><description>&lt;p>Neurodesk Play provides instant access to our neuroimaging analysis environment directly through your web browser. This service allows you to:&lt;/p>
+&lt;h2 id="self-host-a-model-in-ollama">Self-host a model in Ollama&lt;/h2>
+&lt;p>You can also self-host a model in Ollama on your computer (recommended hardware: Apple Silicon with at least 64GB RAM). For this install Ollama on your system and start the neurodesktop container with these additional docker parameters (the neurodesk app does this automatically):&lt;/p></description></item><item><title>Play</title><link>https://neurodesk.org/getting-started/hosted/play/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/hosted/play/</guid><description>&lt;p>Neurodesk Play provides instant access to our neuroimaging analysis environment directly through your web browser. This service allows you to:&lt;/p>
 &lt;ul>
 &lt;li>Start using Neurodesk immediately without any installation.&lt;/li>
 &lt;li>Access a wide range of pre-installed neuroimaging tools.&lt;/li>
@@ -941,12 +942,10 @@ Open VS Code and open the Remote Explorer. Then Attach to the running Neurodeskt
 &lt;p>&lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p></description></item><item><title>Data Storage</title><link>https://neurodesk.org/getting-started/neurodesktop/storage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/storage/</guid><description>&lt;div>
  &lt;nav id="TableOfContents">
  &lt;ul>
- &lt;li>&lt;a href="#drag-and-drop">Drag and Drop&lt;/a>
+ &lt;li>&lt;a href="#storage-overview">Storage overview&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#transferring-files">Transferring files&lt;/a>
  &lt;ul>
- &lt;li>&lt;a href="#uploading-files">Uploading files&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#downloading-files">Downloading files&lt;/a>&lt;/li>
- &lt;/ul>
- &lt;/li>
+ &lt;li>&lt;a href="#drag-and-drop">Drag and Drop&lt;/a>&lt;/li>
  &lt;li>&lt;a href="#local-storage">Local storage&lt;/a>
  &lt;ul>
  &lt;li>&lt;a href="#mounting-external-storage-on-your-host-computer">Mounting external storage on your host-computer&lt;/a>&lt;/li>
@@ -962,15 +961,15 @@ Open VS Code and open the Remote Explorer. Then Attach to the running Neurodeskt
  &lt;/ul>
  &lt;/li>
  &lt;/ul>
+ &lt;/li>
+ &lt;/ul>
 &lt;/nav>
 &lt;/div>
-&lt;h2 id="drag-and-drop">Drag and Drop&lt;/h2>
-&lt;h3 id="uploading-files">Uploading files&lt;/h3>
-&lt;p>You can drag-and-drop files into the browser window to get files into Neurodesktop. This will then start a file upload:&lt;/p>
-&lt;p>&lt;img src="https://user-images.githubusercontent.com/4021595/160577507-b5159bae-13c0-4fbf-85da-0ce55fd481f3.png" alt="{538BB51E-0FEB-46EA-B1B8-FDF122776735}"/>
-&lt;/p>
-&lt;h3 id="downloading-files">Downloading files&lt;/h3>
-&lt;p>To download files from the desktop using the same mechanism you will need to open the guacamole settings by pressing CTRL-ALT-SHIFT (Control-Command-Shift on Mac). This will open a menu on the side:&lt;/p></description></item><item><title>Metrics</title><link>https://neurodesk.org/overview/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/metrics/</guid><description>&lt;h2 id="docker-metrics">Docker metrics&lt;/h2>
+&lt;h2 id="storage-overview">Storage overview&lt;/h2>
+&lt;p>How your data is stored in Neurodesk depends on where you are running it:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Local (Neurodesk App on your own machine):&lt;/strong> Storage is directly linked to your host computer through the &lt;code>/neurodesktop-storage&lt;/code> directory. Your data persists for as long as you keep it — nothing is automatically deleted. The amount of available space depends on your local disk setup.&lt;/p></description></item><item><title>Metrics</title><link>https://neurodesk.org/overview/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/metrics/</guid><description>&lt;h2 id="docker-metrics">Docker metrics&lt;/h2>
 &lt;p>Total Neurodesktop container pulls: &lt;img src="https://img.shields.io/docker/pulls/vnmd/neurodesktop" alt="Docker Pulls"/>
 &lt;/p>
 &lt;h2 id="github-metrics">Github metrics&lt;/h2>
