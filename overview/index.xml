@@ -11,7 +11,7 @@
 &lt;p>Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J., &amp;hellip; Narayanan, A. &amp;amp; Bollmann, S. Neurodesk: an accessible, flexible and portable data analysis environment for reproducible neuroimaging. Nat Methods (2024). &lt;a href="https://doi.org/10.1038/s41592-023-02145-x" target="_blank" rel="noopener">https://doi.org/10.1038/s41592-023-02145-x&lt;/a>&lt;/p></description></item><item><title>How to cite us</title><link>https://neurodesk.org/overview/how-to-cite-us/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/how-to-cite-us/</guid><description>&lt;p>If you used Neurodesk in your research or teaching, please cite our main paper and the relevant containerized tools to ensure reproducibility and proper attribution.&lt;/p>
 &lt;h2 id="citing-neurodesk">Citing Neurodesk&lt;/h2>
 &lt;p>Please cite the &lt;a href="https://www.nature.com/articles/s41592-023-02145-x" target="_blank" rel="noopener">Neurodesk paper&lt;/a>. You can also access it via the &lt;a href="https://rdcu.be/eqro7" target="_blank" rel="noopener">open access link&lt;/a> or refer to the &lt;a href="https://www.biorxiv.org/content/10.1101/2022.12.23.521691v2" target="_blank" rel="noopener">preprint version&lt;/a>.&lt;/p>
-&lt;p>If you used &lt;strong>Neurodesktop&lt;/strong>, please include the version used (e.g., &lt;code>v2025-12-20&lt;/code>). See &lt;a href="#examples">examples below&lt;/a>.&lt;/p>
+&lt;p>If you used &lt;strong>Neurodesktop&lt;/strong>, please include the version used (e.g., &lt;code>v2026-04-21&lt;/code>). See &lt;a href="#examples">examples below&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>Full citation:&lt;/strong>
 Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J., &amp;hellip; Narayanan, A. &amp;amp; Bollmann, S. Neurodesk: an accessible, flexible and portable data analysis environment for reproducible neuroimaging. Nat Methods (2024). &lt;a href="https://doi.org/10.1038/s41592-023-02145-x" target="_blank" rel="noopener">https://doi.org/10.1038/s41592-023-02145-x&lt;/a>&lt;/p></description></item><item><title>Neurodesk FAQ</title><link>https://neurodesk.org/overview/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/faq/</guid><description>&lt;div>
  &lt;nav id="TableOfContents">
@@ -207,35 +207,55 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 
 &lt;/div></description></item><item><title>Release History</title><link>https://neurodesk.org/overview/release-history/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/overview/release-history/</guid><description>&lt;dl>
 &lt;dt>Latest Version&lt;/dt>
-&lt;dd>2025-12-20&lt;/dd>
+&lt;dd>2026-04-21&lt;/dd>
 &lt;/dl>
 &lt;p>Please consult &lt;a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md" target="_blank" rel="noopener">this page&lt;/a> for the template for new releases.&lt;/p>
-&lt;h2 id="2025-12-20">2025-12-20&lt;/h2>
+&lt;h2 id="2026-04-21">2026-04-21&lt;/h2>
 &lt;h3 id="new-features">New Features&lt;/h3>
+&lt;ul>
+&lt;li>added slurm&lt;/li>
+&lt;li>added opencode, codex, claude agent apps&lt;/li>
+&lt;li>vscode server&lt;/li>
+&lt;li>added webapps&lt;/li>
+&lt;li>added donation banner&lt;/li>
+&lt;/ul>
+&lt;h3 id="improvements">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>VNC and RDP desktops are now secured by random passwords&lt;/li>
+&lt;li>added pytest testing under /opt/tests&lt;/li>
+&lt;li>startup time optimization&lt;/li>
+&lt;li>size optimiziation&lt;/li>
+&lt;/ul>
+&lt;h3 id="bug-fixes">Bug Fixes&lt;/h3>
+&lt;ul>
+&lt;li>fixed NBI default model and instructions for notebooks&lt;/li>
+&lt;/ul>
+&lt;h2 id="2025-12-20">2025-12-20&lt;/h2>
+&lt;h3 id="new-features-1">New Features&lt;/h3>
 &lt;ul>
 &lt;li>added pydra&lt;/li>
 &lt;li>add jupyter-sshd-proxy to allow ssh and vscode connections&lt;/li>
 &lt;li>add nbdev&lt;/li>
 &lt;li>add nipoppy&lt;/li>
 &lt;/ul>
-&lt;h3 id="improvements">Improvements&lt;/h3>
+&lt;h3 id="improvements-1">Improvements&lt;/h3>
 &lt;ul>
 &lt;li>update examples&lt;/li>
 &lt;li>update ipyniivue&lt;/li>
 &lt;/ul>
-&lt;h3 id="bug-fixes">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-1">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>pin ipywidgets version to 7.8.5 in Dockerfile to get niivue to work in rise slideshow&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-06-10">2025-06-10&lt;/h2>
-&lt;h3 id="new-features-1">New Features&lt;/h3>
+&lt;h3 id="new-features-2">New Features&lt;/h3>
 &lt;ul>
 &lt;li>upgrade to jupyterhub 5.3.0&lt;/li>
 &lt;li>added nbgitpuller, tcsh&lt;/li>
 &lt;li>added neurodesk copilot: &lt;a href="https://neurodesk.org/developers/neurodesk-copilot/" target="_blank" rel="noopener">https://neurodesk.org/developers/neurodesk-copilot/&lt;/a>&lt;/li>
 &lt;li>added qsirecon&lt;/li>
 &lt;/ul>
-&lt;h3 id="improvements-1">Improvements&lt;/h3>
+&lt;h3 id="improvements-2">Improvements&lt;/h3>
 &lt;ul>
 &lt;li>updated niivue (with breaking interface change!)&lt;/li>
 &lt;li>updated jupyter-lmod (with breaking interface change!)&lt;/li>
@@ -243,62 +263,62 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;li>updated background to new Neurodesk logo&lt;/li>
 &lt;li>updated ants to 2.6.0&lt;/li>
 &lt;/ul>
-&lt;h3 id="bug-fixes-1">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-2">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>split cvmfs in 3 different regions&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-04-08">2025-04-08&lt;/h2>
-&lt;h3 id="new-features-2">New Features&lt;/h3>
+&lt;h3 id="new-features-3">New Features&lt;/h3>
 &lt;ul>
 &lt;li>Added &lt;a href="https://github.com/UNFmontreal/Dcm2Bids" target="_blank" rel="noopener">dcm2bids&lt;/a> support&lt;/li>
 &lt;li>Integrated &lt;a href="https://qsmxt.github.io/QSMxT/" target="_blank" rel="noopener">QSMxT&lt;/a> v8.0.2&lt;/li>
 &lt;/ul>
-&lt;h3 id="improvements-2">Improvements&lt;/h3>
+&lt;h3 id="improvements-3">Improvements&lt;/h3>
 &lt;ul>
 &lt;li>Replaced &lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a> 4.6.0 with 4.6.1 to fix GUI bug&lt;/li>
 &lt;li>Updated &lt;a href="https://qsiprep.readthedocs.io/" target="_blank" rel="noopener">qsiprep&lt;/a> to 1.0.1&lt;/li>
 &lt;/ul>
-&lt;h3 id="bug-fixes-2">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-3">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>Improved internet test by using DNS lookup instead of ping&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-03-14">2025-03-14&lt;/h2>
-&lt;h3 id="bug-fixes-3">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-4">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>Startup process was setting variables in different places&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-03-12">2025-03-12&lt;/h2>
-&lt;h3 id="new-features-3">New Features&lt;/h3>
+&lt;h3 id="new-features-4">New Features&lt;/h3>
 &lt;ul>
 &lt;li>Added neurodesk copilot dependencies&lt;/li>
 &lt;/ul>
-&lt;h3 id="bug-fixes-4">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-5">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>Apptainer didn&amp;rsquo;t mount binfmt, which was resulting in simg files not working in offline mode on apple silicon&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-03-07">2025-03-07&lt;/h2>
-&lt;h3 id="bug-fixes-5">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-6">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>CVMFS_DISABLED=false also disabled it.&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-03-06">2025-03-06&lt;/h2>
-&lt;h3 id="improvements-3">Improvements&lt;/h3>
+&lt;h3 id="improvements-4">Improvements&lt;/h3>
 &lt;ul>
 &lt;li>Add overlay directory on startup&lt;/li>
 &lt;/ul>
-&lt;h3 id="bug-fixes-6">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-7">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>Only link from cvmfs if cvmfs is not disabled&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-03-05">2025-03-05&lt;/h2>
-&lt;h3 id="new-features-4">New Features&lt;/h3>
+&lt;h3 id="new-features-5">New Features&lt;/h3>
 &lt;ul>
 &lt;li>Added support for downloading containers offline, can be activated by setting CVMFS_DISABLE=true&lt;/li>
 &lt;li>Add &lt;a href="https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/" target="_blank" rel="noopener">synthstrip&lt;/a> 7.4.1&lt;/li>
 &lt;li>Add &lt;a href="https://pypi.org/project/pydeface/" target="_blank" rel="noopener">pydeface&lt;/a> 2.0.2&lt;/li>
 &lt;li>Add [&lt;a href="https://fmriprep.org/en/stable/" target="_blank" rel="noopener">fmriprep&lt;/a>.org/en/stable/) 24.1.1 20250214&lt;/li>
 &lt;/ul>
-&lt;h3 id="improvements-4">Improvements&lt;/h3>
+&lt;h3 id="improvements-5">Improvements&lt;/h3>
 &lt;ul>
 &lt;li>update [&lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a>](https://&lt;a href="https://bidscoin.readthedocs.io/en/latest/" target="_blank" rel="noopener">BIDScoin&lt;/a>.readthedocs.io/en/latest/) to 4.5.0&lt;/li>
 &lt;li>update &lt;a href="https://aslprep.readthedocs.io/en/latest/" target="_blank" rel="noopener">aslprep&lt;/a> to 0.7.5&lt;/li>
@@ -310,40 +330,40 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
 &lt;li>tweaks in chown of files in homedirectory (#268 #269)&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-02-04">2025-02-04&lt;/h2>
-&lt;h3 id="new-features-5">New Features&lt;/h3>
+&lt;h3 id="new-features-6">New Features&lt;/h3>
 &lt;ul>
 &lt;li>Add latency check for cvmfs direct vs CDN&lt;/li>
 &lt;li>Add &lt;a href="https://fsl.fmrib.ox.ac.uk/fsl/docs/" target="_blank" rel="noopener">fsl&lt;/a> 6.0.7.16&lt;/li>
 &lt;li>Add &lt;a href="https://wfwiggins.github.io/dicomtools/" target="_blank" rel="noopener">dicomtools&lt;/a> container&lt;/li>
 &lt;/ul>
-&lt;h3 id="improvements-5">Improvements&lt;/h3>
+&lt;h3 id="improvements-6">Improvements&lt;/h3>
 &lt;ul>
 &lt;li>update &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> 8.0.0 and nighres&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-01-29">2025-01-29&lt;/h2>
-&lt;h3 id="new-features-6">New Features&lt;/h3>
+&lt;h3 id="new-features-7">New Features&lt;/h3>
 &lt;ul>
 &lt;li>Add &lt;a href="https://surfer.nmr.mgh.harvard.edu/" target="_blank" rel="noopener">freesurfer&lt;/a> 8.0.0&lt;/li>
 &lt;/ul>
-&lt;h3 id="bug-fixes-7">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-8">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>In JVM - parameters only worked for arm64, not x86&lt;/li>
 &lt;/ul>
 &lt;h2 id="2025-01-24">2025-01-24&lt;/h2>
-&lt;h3 id="new-features-7">New Features&lt;/h3>
+&lt;h3 id="new-features-8">New Features&lt;/h3>
 &lt;ul>
 &lt;li>add &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> 2023b&lt;/li>
 &lt;li>add &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> 2022b&lt;/li>
 &lt;li>new Quay.io jupyter baseimage&lt;/li>
 &lt;/ul>
-&lt;h3 id="improvements-6">Improvements&lt;/h3>
+&lt;h3 id="improvements-7">Improvements&lt;/h3>
 &lt;ul>
 &lt;li>update version in neurodesk.yml&lt;/li>
 &lt;li>Change TinyRange share path to /data instead of /share&lt;/li>
 &lt;li>updated &lt;a href="https://github.com/Puckett-Lab/deepRetinotopy" target="_blank" rel="noopener">deepRetinotopy&lt;/a> version by&lt;/li>
 &lt;li>update &lt;a href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener">Matlab&lt;/a> 2024b&lt;/li>
 &lt;/ul>
-&lt;h3 id="bug-fixes-8">Bug Fixes&lt;/h3>
+&lt;h3 id="bug-fixes-9">Bug Fixes&lt;/h3>
 &lt;ul>
 &lt;li>Added workaround for JVM bug on Apple M4&lt;/li>
 &lt;li>added docker fix for MacOS to desktop&lt;/li>

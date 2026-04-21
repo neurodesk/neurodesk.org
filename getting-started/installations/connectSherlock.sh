@@ -1119,7 +1119,6 @@ apptainer run \
    --env NB_GID="${NEURODESKTOP_GID}" \
    --env PS1="${NEURODESKTOP_SHELL_PROMPT}" \
    --env NEURODESKTOP_LOCAL_CONTAINERS="${GROUP_HOME}/neurodesk/local/containers" \
-   --env NEURODESKTOP_VERSION=latest \
    $GROUP_HOME/neurodesk/neurodesktop_latest.sif \
    start-notebook.py \
       --ServerApp.port="${NEURODESKTOP_NOTEBOOK_PORT}" \
