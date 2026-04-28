@@ -56,7 +56,30 @@ Change &lt;code>port=3389&lt;/code> to &lt;code>port=3390&lt;/code> and save&lt;
 &lt;li>Connect to &lt;code>localhost:3390&lt;/code>&lt;/li>
 &lt;li>In the next login page, leave Session as &lt;code>Xorg&lt;/code>. Enter your WSL username and password and click &lt;code>OK&lt;/code>&lt;/li>
 &lt;li>This should open an LXDE Linux Desktop environment. Follow &lt;a href="https://neurodesk.org/docs/getting-started/neurocommand/linux">Linux guide&lt;/a> from here on&lt;/li>
-&lt;/ol></description></item><item><title>Visual Studio Code</title><link>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</guid><description>&lt;p>The following guide is for connecting to Neurodesktop using a VS Code installation running on your host machine.&lt;/p>
+&lt;/ol></description></item><item><title>PyNeurodesk</title><link>https://neurodesk.org/getting-started/neurocommand/pyneurodesk/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/pyneurodesk/</guid><description>&lt;p>PyNeurodesk is the Python interface to Neurodesk containers. It lets you search for containers, start a local container runtime, run commands from Python, and load Neurodesk tools into an interactive shell.&lt;/p>
+&lt;p>Use PyNeurodesk when you want to:&lt;/p>
+&lt;ul>
+&lt;li>call Neurodesk tools from a Python script or notebook&lt;/li>
+&lt;li>avoid managing container paths by hand&lt;/li>
+&lt;li>load tools such as &lt;code>niimath&lt;/code> into your terminal with &lt;code>nd load&lt;/code>&lt;/li>
+&lt;li>connect to an existing Neurodesk container daemon&lt;/li>
+&lt;/ul>
+
+
+&lt;div class="alert alert-info" role="alert">
+
+
+ PyNeurodesk is installed from the Python package named &lt;code>neurodesk&lt;/code>. After installation, both &lt;code>import neurodesk&lt;/code> and &lt;code>import pyneurodesk&lt;/code> work.
+
+&lt;/div>
+
+&lt;h2 id="requirements">Requirements&lt;/h2>
+&lt;ul>
+&lt;li>Python 3.9 or newer&lt;/li>
+&lt;li>a machine that can run the Neurodesk container daemon&lt;/li>
+&lt;li>internet access for the first download of a container, Linux kernel, and emulator files&lt;/li>
+&lt;/ul>
+&lt;p>Live container execution depends on host virtualization support. On Linux systems this usually means KVM needs to be available. If you are on an HPC system, check with your system administrator before using PyNeurodesk on compute nodes.&lt;/p></description></item><item><title>Visual Studio Code</title><link>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/visual-studio-code/</guid><description>&lt;p>The following guide is for connecting to Neurodesktop using a VS Code installation running on your host machine.&lt;/p>
 &lt;blockquote>
 &lt;p>Please see additional instructions below if Neurodesktop is running remotely (i.e. Cloud, HPC, VM)&lt;/p>&lt;/blockquote>
 &lt;h2 id="pre-requisites">Pre-requisites&lt;/h2>
