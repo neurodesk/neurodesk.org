@@ -13,6 +13,7 @@ description: >
 
 Tutorials are grouped by topic.
 
+- {doc}`About Neurodesk <about_neurodesk/intro>`
 - {doc}`Electrophysiology <electrophysiology/intro>`
 - {doc}`Functional imaging <functional_imaging/intro>`
 - {doc}`Multimodal imaging <multimodal_imaging/intro>`

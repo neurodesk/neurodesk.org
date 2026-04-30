@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -251,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -259,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -279,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -596,7 +588,7 @@
 <section id="tools-included-in-this-workflow">
 <h4>Tools included in this workflow<a class="headerlink" href="#tools-included-in-this-workflow" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p><strong>tedana</strong>: The tedana Community, Ahmed, Z., Bandettini, P. A., Bottenhorn, K. L., Caballero-Gaudes, C., Dowdle, L. T., DuPre, E., Gonzalez-Castillo, J., Handwerker, D., Heunis, S., Kundu, P., Laird, A. R., Markello, R., Markiewicz, C. J., Maullin-Sapey, T., Moia, S., Molfese, P., Salo, T., Staden, I., … Whitaker, K. (2025). ME-ICA/tedana: 25.0.1 (25.0.1). Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.15610868">https://doi.org/10.5281/zenodo.15610868</a></p></li>
+<li><p><strong>tedana</strong>: The tedana Community, Ahmed, Z., Bandettini, P. A., Bottenhorn, K. L., Caballero-Gaudes, C., Dowdle, L. T., DuPre, E., Gonzalez-Castillo, J., Handwerker, D., Heunis, S., Kundu, P., Laird, A. R., Markello, R., Markiewicz, C. J., Maullin-Sapey, T., Moia, S., Molfese, P., Salo, T., Staden, I., … Whitaker, K. (2026). ME-ICA/tedana: 26.0.3 (26.0.3). Zenodo. <a class="reference external" href="https://doi.org/10.5281/zenodo.19410167">https://doi.org/10.5281/zenodo.19410167</a></p></li>
 </ul>
 </section>
 <section id="publications">
@@ -626,7 +618,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">tedana</span><span class="o">==</span><span class="mf">25.0.1</span>
+<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">tedana</span><span class="o">==</span><span class="mf">26.0.3</span>
 </pre></div>
 </div>
 </div>
@@ -652,7 +644,8 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">os.path</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">webbrowser</span>
-
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVG</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">tedana.workflows</span><span class="w"> </span><span class="kn">import</span> <span class="n">tedana_workflow</span>
 </pre></div>
 </div>
@@ -679,21 +672,52 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100   162  100   162    0     0    457      0 --:--:-- --:--:-- --:--:--   456
-100   247  100   247    0     0    425      0 --:--:-- --:--:-- --:--:--   425
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   162  100   162    0     0    475      0 --:--:-- --:--:-- --:--:--   475
+100   247  100   247    0     0    409      0 --:--:-- --:--:-- --:--:--   409
   0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
   0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
-  0 68.5M    0  5551    0     0   1711      0 11:39:42  0:00:03 11:39:39  1711
-  0 68.5M    0  177k    0     0  44718      0  0:26:46  0:00:04  0:26:42  210k
-  6 68.5M    6 4381k    0     0   867k      0  0:01:20  0:00:05  0:01:15 2420k
- 33 68.5M   33 22.9M    0     0  3892k      0  0:00:18  0:00:06  0:00:12 8389k
- 60 68.5M   60 41.7M    0     0  6065k      0  0:00:11  0:00:07  0:00:04 10.9M
- 88 68.5M   88 60.8M    0     0  7718k      0  0:00:09  0:00:08  0:00:01 12.6M
-100 68.5M  100 68.5M    0     0  8280k      0  0:00:08  0:00:08 --:--:-- 15.4M
-CPU times: user 250 ms, sys: 82.4 ms, total: 333 ms
-Wall time: 9.02 s
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:0
+8 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:23 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:25 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:26 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:27 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:28 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:29 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:30 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:30 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:31 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:32 --:--:--     0
+  0 68.5M    0  5551    0     0    166      0   5d 00h  0:00:33   5d 00h 12474
+  0 68.5M    0  134k    0     0   4023      0  4:57:35  0:00:34  4:57:01  102k
+  2 68.5M    2 1806k    0     0  52472      0  0:22:48  0:00:35  0:22:13  780k
+ 22 68.5M   22 15.6M    0     0   441k      0  0:02:38  0:00:36  0:02:02 4830k
+ 46 68.5M   46 31.8M    0     0   876k      0  0:01:20  0:00:37  0:00:43 7561k
+ 67 68.5M   67 46.4M    0     0  1240k      0  0:00:56  0:00:38  0:00:18 9552k
+ 89 68.5M   89 61.1M    0     0  1594k      0  0:00:43  0:00:39  0:00:04 12.1M
+100 68.5M  100 68.5M    0     0  1765k      0  0:00:39  0:00:39 --:--:-- 14.9M
+CPU times: user 456 ms, sys: 144 ms, total: 600 ms
+Wall time: 40.3 s
 </pre></div>
 </div>
 </div>
@@ -711,22 +735,23 @@ Wall time: 9.02 s
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning into 'temp_repo'...
 remote: Enumerating objects: 156, done.
 remote: Counting objects: 100% (156/156), done.
-remote: Compressing objects:  34% (43/124)
 remote: Compressing objects: 100% (124/124), done.
+Receiving objects:  10% (16/156)
 Receiving objects:  25% (39/156)
+Receiving objects:  26% (41/156)
 Receiving objects:  28% (44/156)
-Receiving objects:  33% (52/156)
-Receiving objects:  39% (61/156)
-Receiving objects:  43% (68/156)
+Receiving objects:  37% (58/156)
 Receiving objects:  46% (72/156)
-Receiving objects:  49% (77/156)
-Receiving objects:  60% (94/156)
-Receiving objects:  71% (111/156)
-Receiving objects:  74% (116/156), 9.81 MiB | 19.61 MiB/s
-Receiving objects:  75% (117/156), 9.81 MiB | 19.61 MiB/s
-Receiving objects:  83% (130/156), 9.81 MiB | 19.61 MiB/s
+Receiving objects:  48% (75/156)
+Receiving objects:  55% (86/156)
+Receiving objects:  69% (108/156)
+Receiving objects:  74% (116/156)
+Receiving objects:  83% (130/156), 10.75 MiB | 21.49 MiB/s
+Receiving objects:  87% (136/156), 10.75 MiB | 21.49 MiB/s
 remote: Total 156 (delta 44), reused 141 (delta 32), pack-reused 0 (from 0)
-Receiving objects: 100% (156/156), 16.37 MiB | 19.47 MiB/s, done.
+Receiving objects: 100% (156/156), 16.37 MiB | 21.71 MiB/s, done.
+Resolving deltas:  68% (30/44)
+Resolving deltas:  88% (39/44)
 Resolving deltas: 100% (44/44), done.
 </pre></div>
 </div>
@@ -761,182 +786,174 @@ Clustering...
 Computing centroids...
 Computing Silhouettes...
 Computing Iq...
-CPU times: user 7h 2min 24s, sys: 50.9 s, total: 7h 3min 15s
-Wall time: 41min 5s
+CPU times: user 6h 15min 8s, sys: 27 s, total: 6h 15min 35s
+Wall time: 44min 3s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO     tedana:tedana_workflow:608 Using output directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed
-INFO     tedana:tedana_workflow:627 Initializing and validating component selection tree
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO     tedana:tedana_workflow:636 Using output directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed
+WARNING  utils:check_te_values:796 TE values appear to be in milliseconds. Per BIDS convention, echo times should be provided in seconds. Support for millisecond TE values is deprecated and will be removed in a future version. Please provide TE values in seconds.
+INFO     tedana:tedana_workflow:655 Initializing and validating component selection tree
 WARNING  component_selector:validate_tree:146 Decision tree includes fields that are not used or logged ['_comment']
-INFO     component_selector:__init__:333 Performing component selection with minimal_decision_tree
-INFO     component_selector:__init__:334 first version of minimal decision tree
-INFO     tedana:tedana_workflow:630 Loading input data: ['five-echo-dataset/p06.SBJ01_S09_Task11_e1.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e2.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e3.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e4.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e5.sm.nii.gz']
-INFO     io:__init__:156 Generating figures directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/figures
-WARNING  tedana:tedana_workflow:735 Computing EPI mask from first echo using nilearn's compute_epi_mask function. Most external pipelines include more reliable masking functions. It is strongly recommended to provide an external mask, and to visually confirm that mask accurately conforms to data boundaries.
-INFO     utils:make_adaptive_mask:202 Echo-wise intensity thresholds for adaptive mask: [5853.6399821  4862.62750244 4073.26911418 3377.14188232 2800.73880819]
-WARNING  utils:make_adaptive_mask:231 4 voxels in user-defined mask do not have good signal. Removing voxels from mask.
-INFO     tedana:tedana_workflow:774 Computing T2* map
-/opt/conda/lib/python3.13/site-packages/tedana/decay.py:541: RuntimeWarning: Mean of empty slice
-  rmse_map = np.nanmean(rmse, axis=1)
-INFO     combine:make_optcom:192 Optimally combining data with voxel-wise T2* estimates
-INFO     tedana:tedana_workflow:822 Writing optimally combined data set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-optcom_bold.nii.gz
-INFO     pca:tedpca:208 Computing PCA of optimally combined multi-echo data with selection criteria: 53
-INFO     collect:generate_metrics:161 Calculating weight maps
-INFO     collect:generate_metrics:173 Calculating parameter estimate maps for optimally combined data
-INFO     collect:generate_metrics:193 Calculating z-statistic maps
+INFO     component_selector:__init__:345 Performing component selection with minimal_decision_tree
+INFO     component_selector:__init__:346 first version of minimal decision tree
+INFO     io:__init__:164 Generating figures directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/figures
+WARNING  utils:load_mask:943 Computing EPI mask from first echo using nilearn's compute_epi_mask function. Most external pipelines include more reliable masking functions. It is strongly recommended to provide an external mask, and to visually confirm that mask accurately conforms to data boundaries.
+INFO     tedana:tedana_workflow:690 Loading input data: ['five-echo-dataset/p06.SBJ01_S09_Task11_e1.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e2.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e3.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e4.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e5.sm.nii.gz']
+INFO     utils:make_adaptive_mask:167 Echo-wise intensity thresholds for adaptive mask: [5853.639  4862.627  4073.2693 3377.1418 2800.739 ]
+WARNING  utils:make_adaptive_mask:195 4 voxels in user-defined mask do not have good signal. Removing voxels from mask.
+INFO     tedana:tedana_workflow:780 Computing T2* map
+INFO     combine:make_optcom:202 Optimally combining data with voxel-wise T2* estimates
+INFO     tedana:tedana_workflow:859 Writing optimally combined data set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-optcom_bold.nii.gz
+INFO     pca:tedpca:212 Computing PCA of optimally combined multi-echo data with selection criteria: 53
+INFO     collect:generate_metrics:153 Calculating standardized parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:171 Calculating unstandardized parameter estimate maps for optimally combined data
 INFO     collect:generate_metrics:203 Calculating F-statistic maps
-INFO     collect:generate_metrics:228 Thresholding z-statistic maps
-INFO     collect:generate_metrics:238 Calculating T2* F-statistic maps
-INFO     collect:generate_metrics:248 Calculating S0 F-statistic maps
-INFO     collect:generate_metrics:259 Counting significant voxels in T2* F-statistic maps
-INFO     collect:generate_metrics:265 Counting significant voxels in S0 F-statistic maps
-INFO     collect:generate_metrics:272 Thresholding optimal combination beta maps to match T2* F-statistic maps
-INFO     collect:generate_metrics:281 Thresholding optimal combination beta maps to match S0 F-statistic maps
-INFO     collect:generate_metrics:291 Calculating kappa and rho
-INFO     collect:generate_metrics:300 Calculating variance explained
-INFO     collect:generate_metrics:306 Calculating normalized variance explained
-INFO     collect:generate_metrics:313 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
-INFO     collect:generate_metrics:323 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
-INFO     collect:generate_metrics:334 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:229 Thresholding standardized parameter estimate maps
+INFO     collect:generate_metrics:237 Thresholding T2* F-statistic maps
+INFO     collect:generate_metrics:245 Thresholding S0 F-statistic maps
+INFO     collect:generate_metrics:254 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:260 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:267 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:275 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:284 Calculating kappa and rho
+INFO     collect:generate_metrics:293 Calculating variance explained
+INFO     collect:generate_metrics:299 Calculating normalized variance explained
+INFO     collect:generate_metrics:328 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:338 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:349 Calculating signal-noise t-statistics
 /opt/conda/lib/python3.13/site-packages/scipy/_lib/deprecation.py:234: SmallSampleWarning: One or more sample arguments is too small; all returned values will be NaN. See documentation for sample size requirements.
   return f(*args, **kwargs)
-INFO     collect:generate_metrics:368 Counting significant noise voxels from z-statistic maps
-INFO     collect:generate_metrics:380 Calculating decision table score
-INFO     pca:tedpca:412 Selected 53 components with 88.73% normalized variance explained using a fixed number of components and no dimensionality estimate
-/opt/conda/lib/python3.13/site-packages/tedana/io.py:355: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
-  deblanked = data.replace("", np.nan)
+INFO     collect:generate_metrics:385 Counting significant noise voxels from z-statistic maps
+INFO     collect:generate_metrics:398 Calculating decision table score
+INFO     pca:tedpca:425 Selected 53 components with 88.73% normalized variance explained using a fixed number of components and no dimensionality estimate
+/opt/conda/lib/python3.13/site-packages/tedana/io.py:394: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  deblanked = data.replace("", np.nan).infer_objects(copy=False)
   0%|          | 0/30 [00:00&lt;?, ?it/s]
-  3%|▎         | 1/30 [00:16&lt;08:05, 16.74s/it]
-  7%|▋         | 2/30 [00:35&lt;08:22, 17.96s/it]
- 10%|█         | 3/30 [00:54&lt;08:20, 18.54s/it]
- 13%|█▎        | 4/30 [01:14&lt;08:17, 19.14s/it]
- 17%|█▋        | 5/30 [02:15&lt;14:09, 33.99s/it]
- 20%|██        | 6/30 [03:01&lt;15:16, 38.20s/it]
- 23%|██▎       | 7/30 [03:44&lt;15:15, 39.82s/it]
- 27%|██▋       | 8/30 [04:35&lt;15:54, 43.38s/it]
- 30%|███       | 9/30 [07:07&lt;27:02, 77.26s/it]
- 33%|███▎      | 10/30 [08:01&lt;23:24, 70.24s/it]
- 37%|███▋      | 11/30 [08:55&lt;20:40, 65.27s/it]
- 40%|████      | 12/30 [09:52&lt;18:45, 62.55s/it]
- 43%|████▎     | 13/30 [10:35&lt;16:02, 56.63s/it]
- 47%|████▋     | 14/30 [11:14&lt;13:41, 51.32s/it]
- 50%|█████     | 15/30 [12:02&lt;12:34, 50.27s/it]
- 53%|█████▎    | 16/30 [14:32&lt;18:45, 80.42s/it]
- 57%|█████▋    | 17/30 [15:02&lt;14:06, 65.13s/it]
- 60%|██████    | 18/30 [15:42&lt;11:30, 57.53s/it]
- 63%|██████▎   | 19/30 [16:23&lt;09:41, 52.83s/it]
- 67%|██████▋   | 20/30 [16:59&lt;07:55, 47.53s/it]
- 70%|███████   | 21/30 [17:31&lt;06:28, 43.13s/it]
- 73%|███████▎  | 22/30 [18:05&lt;05:21, 40.20s/it]
- 77%|███████▋  | 23/30 [18:50&lt;04:51, 41.71s/it]
- 80%|████████  | 24/30 [20:30&lt;05:54, 59.16s/it]
- 83%|████████▎ | 25/30 [21:04&lt;04:18, 51.71s/it]
- 87%|████████▋ | 26/30 [21:37&lt;03:03, 45.96s/it]
- 90%|█████████ | 27/30 [22:25&lt;02:20, 46.68s/it]
- 93%|█████████▎| 28/30 [23:11&lt;01:32, 46.36s/it]
- 97%|█████████▋| 29/30 [24:01&lt;00:47, 47.40s/it]
-100%|██████████| 30/30 [24:58&lt;00:00, 50.41s/it]
-100%|██████████| 30/30 [24:58&lt;00:00, 49.95s/it]
-INFO     ica:r_ica:204 For RobustICA, FastICA did not converge in 3 of 30 interations.
-INFO     ica:r_ica:225 The DBSCAN clustering algorithm was used for clustering components across different runs
-INFO     ica:r_ica:243 RobustICA with 30 robust runs and seed 42 was used. 39 components identified. The mean Index Quality is 0.9508220000275611.
-INFO     ica:r_ica:251 The DBSCAN clustering algorithm detected outliers when clustering components for different runs. These outliers are excluded when calculating the index quality and the mixing matrix to maximise the robustness of the decomposition.
-/opt/conda/lib/python3.13/site-packages/sklearn/manifold/_t_sne.py:1164: FutureWarning: 'n_iter' was renamed to 'max_iter' in version 1.5 and will be removed in 1.7.
-  warnings.warn(
-INFO     collect:generate_metrics:161 Calculating weight maps
-INFO     collect:generate_metrics:173 Calculating parameter estimate maps for optimally combined data
-INFO     collect:generate_metrics:193 Calculating z-statistic maps
+  3%|▎         | 1/30 [00:52&lt;25:23, 52.52s/it]
+  7%|▋         | 2/30 [02:08&lt;30:55, 66.28s/it]
+ 10%|█         | 3/30 [03:02&lt;27:24, 60.89s/it]
+ 13%|█▎        | 4/30 [04:07&lt;27:03, 62.45s/it]
+ 17%|█▋        | 5/30 [06:47&lt;40:37, 97.49s/it]
+ 20%|██        | 6/30 [08:12&lt;37:15, 93.16s/it]
+ 23%|██▎       | 7/30 [09:15&lt;31:55, 83.27s/it]
+ 27%|██▋       | 8/30 [10:33&lt;29:58, 81.73s/it]
+ 30%|███       | 9/30 [13:18&lt;37:45, 107.89s/it]
+ 33%|███▎      | 10/30 [14:18&lt;30:59, 92.97s/it]
+ 37%|███▋      | 11/30 [15:06&lt;25:04, 79.17s/it]
+ 40%|████      | 12/30 [15:42&lt;19:51, 66.20s/it]
+ 43%|████▎     | 13/30 [16:13&lt;15:44, 55.57s/it]
+ 47%|████▋     | 14/30 [16:47&lt;13:02, 48.90s/it]
+ 50%|█████     | 15/30 [17:32&lt;11:54, 47.62s/it]
+ 53%|█████▎    | 16/30 [19:48&lt;17:22, 74.49s/it]
+ 57%|█████▋    | 17/30 [20:29&lt;13:56, 64.34s/it]
+ 60%|██████    | 18/30 [21:04&lt;11:03, 55.32s/it]
+ 63%|██████▎   | 19/30 [21:44&lt;09:18, 50.80s/it]
+ 67%|██████▋   | 20/30 [22:14&lt;07:24, 44.46s/it]
+ 70%|███████   | 21/30 [22:45&lt;06:04, 40.49s/it]
+ 73%|███████▎  | 22/30 [23:14&lt;04:57, 37.23s/it]
+ 77%|███████▋  | 23/30 [23:56&lt;04:30, 38.63s/it]
+ 80%|████████  | 24/30 [26:11&lt;06:45, 67.56s/it]
+ 83%|████████▎ | 25/30 [26:55&lt;05:02, 60.43s/it]
+ 87%|████████▋ | 26/30 [27:49&lt;03:53, 58.48s/it]
+ 90%|█████████ | 27/30 [28:43&lt;02:50, 57.00s/it]
+ 93%|█████████▎| 28/30 [29:35&lt;01:51, 55.72s/it]
+ 97%|█████████▋| 29/30 [30:45&lt;01:00, 60.02s/it]
+100%|██████████| 30/30 [31:39&lt;00:00, 58.02s/it]
+100%|██████████| 30/30 [31:39&lt;00:00, 63.31s/it]
+INFO     ica:r_ica:213 For RobustICA, FastICA did not converge in 3 of 30 interations.
+INFO     ica:r_ica:234 The DBSCAN clustering algorithm was used for clustering components across different runs
+INFO     ica:r_ica:252 RobustICA with 30 robust runs and seed 42 was used. 40 components identified. The mean Index Quality is 0.9525780651557195.
+INFO     ica:r_ica:260 The DBSCAN clustering algorithm detected outliers when clustering components for different runs. These outliers are excluded when calculating the index quality and the mixing matrix to maximise the robustness of the decomposition.
+INFO     collect:generate_metrics:153 Calculating standardized parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:171 Calculating unstandardized parameter estimate maps for optimally combined data
 INFO     collect:generate_metrics:203 Calculating F-statistic maps
-INFO     collect:generate_metrics:228 Thresholding z-statistic maps
-INFO     collect:generate_metrics:238 Calculating T2* F-statistic maps
-INFO     collect:generate_metrics:248 Calculating S0 F-statistic maps
-INFO     collect:generate_metrics:259 Counting significant voxels in T2* F-statistic maps
-INFO     collect:generate_metrics:265 Counting significant voxels in S0 F-statistic maps
-INFO     collect:generate_metrics:272 Thresholding optimal combination beta maps to match T2* F-statistic maps
-INFO     collect:generate_metrics:281 Thresholding optimal combination beta maps to match S0 F-statistic maps
-INFO     collect:generate_metrics:291 Calculating kappa and rho
-INFO     collect:generate_metrics:300 Calculating variance explained
-INFO     collect:generate_metrics:306 Calculating normalized variance explained
-INFO     collect:generate_metrics:313 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
-INFO     collect:generate_metrics:323 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
-INFO     collect:generate_metrics:334 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:229 Thresholding standardized parameter estimate maps
+INFO     collect:generate_metrics:237 Thresholding T2* F-statistic maps
+INFO     collect:generate_metrics:245 Thresholding S0 F-statistic maps
+INFO     collect:generate_metrics:254 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:260 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:267 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:275 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:284 Calculating kappa and rho
+INFO     collect:generate_metrics:293 Calculating variance explained
+INFO     collect:generate_metrics:299 Calculating normalized variance explained
+INFO     collect:generate_metrics:328 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:338 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:349 Calculating signal-noise t-statistics
 /opt/conda/lib/python3.13/site-packages/scipy/_lib/deprecation.py:234: SmallSampleWarning: One or more sample arguments is too small; all returned values will be NaN. See documentation for sample size requirements.
   return f(*args, **kwargs)
-INFO     tedana:tedana_workflow:894 Selecting components from ICA results
+INFO     tedana:tedana_workflow:933 Selecting components from ICA results
 INFO     tedica:automatic_selection:54 Performing ICA component selection with tree: minimal
 INFO     selection_nodes:manual_classify:104 Step 0: manual_classify: Set all to unclassified
 INFO     selection_utils:comptable_classification_changer:293 Step 0: No components fit criterion False to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 0: manual_classify applied to 39 components. 39 True -&gt; unclassified. 0 False -&gt; nochange.
+INFO     selection_utils:log_decision_tree_step:447 Step 0: manual_classify applied to 40 components. 40 True -&gt; unclassified. 0 False -&gt; nochange.
 INFO     selection_nodes:manual_classify:136 Step 0: manual_classify component classification tags are cleared
-INFO     selection_utils:log_classification_counts:492 Step 0: Total component classifications: 39 unclassified
+INFO     selection_utils:log_classification_counts:492 Step 0: Total component classifications: 40 unclassified
 INFO     selection_nodes:dec_left_op_right:389 Step 1: left_op_right: rejected if rho&gt;kappa, else nochange
-INFO     selection_utils:log_decision_tree_step:447 Step 1: left_op_right applied to 39 components. 5 True -&gt; rejected. 34 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 1: Total component classifications: 5 rejected, 34 unclassified
+INFO     selection_utils:log_decision_tree_step:447 Step 1: left_op_right applied to 40 components. 5 True -&gt; rejected. 35 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 1: Total component classifications: 5 rejected, 35 unclassified
 INFO     selection_nodes:dec_left_op_right:389 Step 2: left_op_right: rejected if ['countsigFS0&gt;countsigFT2 &amp; countsigFT2&gt;0'], else nochange
-INFO     selection_utils:log_decision_tree_step:447 Step 2: left_op_right applied to 39 components. 2 True -&gt; rejected. 37 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 2: Total component classifications: 5 rejected, 34 unclassified
+INFO     selection_utils:log_decision_tree_step:447 Step 2: left_op_right applied to 40 components. 2 True -&gt; rejected. 38 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 2: Total component classifications: 5 rejected, 35 unclassified
 INFO     selection_nodes:calc_median:653 Step 3: calc_median: Median(median_varex)
-INFO     selection_utils:log_decision_tree_step:459 Step 3: calc_median calculated: median_varex=0.5933764147808378
-INFO     selection_utils:log_classification_counts:492 Step 3: Total component classifications: 5 rejected, 34 unclassified
-INFO     selection_nodes:dec_left_op_right:389 Step 4: left_op_right: rejected if ['dice_FS0&gt;dice_FT2 &amp; variance explained&gt;0.59'], else nochange
+INFO     selection_utils:log_decision_tree_step:459 Step 3: calc_median calculated: median_varex=0.6119923398094267
+INFO     selection_utils:log_classification_counts:492 Step 3: Total component classifications: 5 rejected, 35 unclassified
+INFO     selection_nodes:dec_left_op_right:389 Step 4: left_op_right: rejected if ['dice_FS0&gt;dice_FT2 &amp; variance explained&gt;0.61'], else nochange
 INFO     selection_utils:comptable_classification_changer:293 Step 4: No components fit criterion True to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 4: left_op_right applied to 39 components. 0 True -&gt; rejected. 39 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 4: Total component classifications: 5 rejected, 34 unclassified
-INFO     selection_nodes:dec_left_op_right:389 Step 5: left_op_right: rejected if ['0&gt;signal-noise_t &amp; variance explained&gt;0.59'], else nochange
-INFO     selection_utils:log_decision_tree_step:447 Step 5: left_op_right applied to 39 components. 4 True -&gt; rejected. 35 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 5: Total component classifications: 7 rejected, 32 unclassified
+INFO     selection_utils:log_decision_tree_step:447 Step 4: left_op_right applied to 40 components. 0 True -&gt; rejected. 40 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 4: Total component classifications: 5 rejected, 35 unclassified
+INFO     selection_nodes:dec_left_op_right:389 Step 5: left_op_right: rejected if ['0&gt;signal-noise_t &amp; variance explained&gt;0.61'], else nochange
+INFO     selection_utils:log_decision_tree_step:447 Step 5: left_op_right applied to 40 components. 4 True -&gt; rejected. 36 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 5: Total component classifications: 7 rejected, 33 unclassified
 INFO     selection_nodes:calc_kappa_elbow:767 Step 6: calc_kappa_elbow: Calc Kappa Elbow
 INFO     selection_utils:kappa_elbow_kundu:668 Calculating kappa elbow based on all components.
-INFO     selection_utils:log_decision_tree_step:459 Step 6: calc_kappa_elbow calculated: kappa_elbow_kundu=72.01029540010363, kappa_allcomps_elbow=72.01029540010363, kappa_nonsig_elbow=None, varex_upper_p=0.7008466697871423
-INFO     selection_utils:log_classification_counts:492 Step 6: Total component classifications: 7 rejected, 32 unclassified
+INFO     selection_utils:log_decision_tree_step:459 Step 6: calc_kappa_elbow calculated: kappa_elbow_kundu=73.5238412168861, kappa_allcomps_elbow=73.5238412168861, kappa_nonsig_elbow=None, varex_upper_p=0.9381300999030646
+INFO     selection_utils:log_classification_counts:492 Step 6: Total component classifications: 7 rejected, 33 unclassified
 INFO     selection_nodes:calc_rho_elbow:902 Step 7: calc_rho_elbow: Calc Rho Elbow
-INFO     selection_utils:log_decision_tree_step:459 Step 7: calc_rho_elbow calculated: rho_elbow_liberal=20.05564798053916, rho_allcomps_elbow=20.05564798053916, rho_unclassified_elbow=19.716371799613857, elbow_f05=7.708647422176786
-INFO     selection_utils:log_classification_counts:492 Step 7: Total component classifications: 7 rejected, 32 unclassified
-INFO     selection_nodes:dec_left_op_right:389 Step 8: left_op_right: provisionalaccept if kappa&gt;=72.01, else provisionalreject
-INFO     selection_utils:log_decision_tree_step:447 Step 8: left_op_right applied to 32 components. 13 True -&gt; provisionalaccept. 19 False -&gt; provisionalreject.
-INFO     selection_utils:log_classification_counts:492 Step 8: Total component classifications: 13 provisionalaccept, 19 provisionalreject, 7 rejected
+INFO     selection_utils:log_decision_tree_step:459 Step 7: calc_rho_elbow calculated: rho_elbow_liberal=20.376565983429877, rho_allcomps_elbow=20.376565983429877, rho_unclassified_elbow=20.327098798245938, elbow_f05=7.708647422176786
+INFO     selection_utils:log_classification_counts:492 Step 7: Total component classifications: 7 rejected, 33 unclassified
+INFO     selection_nodes:dec_left_op_right:389 Step 8: left_op_right: provisionalaccept if kappa&gt;=73.52, else provisionalreject
+INFO     selection_utils:log_decision_tree_step:447 Step 8: left_op_right applied to 33 components. 11 True -&gt; provisionalaccept. 22 False -&gt; provisionalreject.
+INFO     selection_utils:log_classification_counts:492 Step 8: Total component classifications: 11 provisionalaccept, 22 provisionalreject, 7 rejected
 INFO     selection_nodes:dec_left_op_right:389 Step 9: left_op_right: accepted if kappa&gt;2*rho, else nochange
 INFO     selection_utils:comptable_classification_changer:293 Step 9: No components fit criterion False to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 9: left_op_right applied to 13 components. 13 True -&gt; accepted. 0 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 9: Total component classifications: 13 accepted, 19 provisionalreject, 7 rejected
-INFO     selection_nodes:dec_left_op_right:389 Step 10: left_op_right: provisionalreject if rho&gt;20.06, else nochange
-INFO     selection_utils:log_decision_tree_step:447 Step 10: left_op_right applied to 19 components. 3 True -&gt; provisionalreject. 16 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 10: Total component classifications: 13 accepted, 19 provisionalreject, 7 rejected
+INFO     selection_utils:log_decision_tree_step:447 Step 9: left_op_right applied to 11 components. 11 True -&gt; accepted. 0 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 9: Total component classifications: 11 accepted, 22 provisionalreject, 7 rejected
+INFO     selection_nodes:dec_left_op_right:389 Step 10: left_op_right: provisionalreject if rho&gt;20.38, else nochange
+INFO     selection_utils:log_decision_tree_step:447 Step 10: left_op_right applied to 22 components. 3 True -&gt; provisionalreject. 19 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 10: Total component classifications: 11 accepted, 22 provisionalreject, 7 rejected
 INFO     selection_nodes:dec_variance_lessthan_thresholds:533 Step 11: variance_lt_thresholds: accepted if variance explained&lt;0.1. All variance&lt;1.0, else nochange
 INFO     selection_utils:comptable_classification_changer:293 Step 11: No components fit criterion True to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 11: variance_lt_thresholds applied to 19 components. 0 True -&gt; accepted. 19 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 11: Total component classifications: 13 accepted, 19 provisionalreject, 7 rejected
+INFO     selection_utils:log_decision_tree_step:447 Step 11: variance_lt_thresholds applied to 22 components. 0 True -&gt; accepted. 22 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 11: Total component classifications: 11 accepted, 22 provisionalreject, 7 rejected
 INFO     selection_nodes:manual_classify:104 Step 12: manual_classify: Set provisionalaccept to accepted
 INFO     selection_utils:log_decision_tree_step:441 Step 12: manual_classify not applied because no remaining components were classified as provisionalaccept
-INFO     selection_utils:log_classification_counts:492 Step 12: Total component classifications: 13 accepted, 19 provisionalreject, 7 rejected
+INFO     selection_utils:log_classification_counts:492 Step 12: Total component classifications: 11 accepted, 22 provisionalreject, 7 rejected
 INFO     selection_nodes:manual_classify:104 Step 13: manual_classify: Set ['provisionalreject', 'unclassified'] to rejected
 INFO     selection_utils:comptable_classification_changer:293 Step 13: No components fit criterion False to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 13: manual_classify applied to 19 components. 19 True -&gt; rejected. 0 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 13: Total component classifications: 13 accepted, 26 rejected
-INFO     io:denoise_ts:613 Variance explained by decomposition: 94.68%
-INFO     io:write_split_ts:700 Writing denoised time series: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-denoised_bold.nii.gz
-INFO     io:writeresults:749 Writing full ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-ICA_components.nii.gz
-INFO     io:writeresults:753 Writing denoised ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-ICAAccepted_components.nii.gz
-INFO     io:writeresults:759 Writing Z-normalized spatial component maps: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-ICAAccepted_stat-z_components.nii.gz
-INFO     tedana:tedana_workflow:1116 Making figures folder with static component maps and timecourse plots.
-INFO     io:denoise_ts:613 Variance explained by decomposition: 94.68%
-/opt/conda/lib/python3.13/site-packages/tedana/io.py:904: UserWarning: Data array used to create a new image contains 64-bit ints. This is likely due to creating the array with numpy and passing `int` as the `dtype`. Many tools such as FSL and SPM cannot deal with int64 in Nifti images, so for compatibility the data has been converted to int32.
-  nii = new_img_like(ref_img, newdata, affine=affine, copy_header=copy_header)
-/opt/conda/lib/python3.13/site-packages/tedana/io.py:904: UserWarning: Data array used to create a new image contains 64-bit ints. This is likely due to creating the array with numpy and passing `int` as the `dtype`. Many tools such as FSL and SPM cannot deal with int64 in Nifti images, so for compatibility the data has been converted to int32.
-  nii = new_img_like(ref_img, newdata, affine=affine, copy_header=copy_header)
-/opt/conda/lib/python3.13/site-packages/tedana/io.py:904: UserWarning: Data array used to create a new image contains 64-bit ints. This is likely due to creating the array with numpy and passing `int` as the `dtype`. Many tools such as FSL and SPM cannot deal with int64 in Nifti images, so for compatibility the data has been converted to int32.
-  nii = new_img_like(ref_img, newdata, affine=affine, copy_header=copy_header)
-/opt/conda/lib/python3.13/site-packages/nilearn/plotting/img_plotting.py:1416: UserWarning: Non-finite values detected. These values will be replaced with zeros.
-  safe_get_data(stat_map_img, ensure_finite=True),
-INFO     tedana:tedana_workflow:1172 Generating dynamic report
+INFO     selection_utils:log_decision_tree_step:447 Step 13: manual_classify applied to 22 components. 22 True -&gt; rejected. 0 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 13: Total component classifications: 11 accepted, 29 rejected
+INFO     io:denoise_ts:682 Variance explained by decomposition: 95.19%
+INFO     io:write_split_ts:769 Writing denoised time series: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-denoised_bold.nii.gz
+INFO     io:writeresults:817 Writing full ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-ICA_components.nii.gz
+INFO     io:writeresults:824 Writing Z-normalized spatial component maps: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-ICA_stat-z_components.nii.gz
+INFO     io:writeresults:828 Writing denoised ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-ICAAccepted_components.nii.gz
+INFO     io:writeresults:835 Writing Z-normalized spatial component maps: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/desc-ICAAccepted_stat-z_components.nii.gz
+INFO     tedana:tedana_workflow:1153 Making figures folder with static component maps and timecourse plots.
+INFO     io:denoise_ts:682 Variance explained by decomposition: 95.19%
+/opt/conda/lib/python3.13/site-packages/tedana/reporting/static_figures.py:734: UserWarning: Non-finite values detected. These values will be replaced with zeros.
+  plotting.plot_stat_map(
+INFO     tedana:tedana_workflow:1236 Generating dynamic report
 INFO     html_report:_update_template_bokeh:164 Checking for adaptive mask: adaptive_mask.svg, exists: True
-INFO     html_report:_update_template_bokeh:204 T2* files exist: True
-INFO     html_report:_update_template_bokeh:205 S0 files exist: True
-INFO     html_report:_update_template_bokeh:206 RMSE files exist: True
-INFO     html_report:_update_template_bokeh:212 External regressors exist: False
-INFO     tedana:tedana_workflow:1175 Workflow completed
-INFO     utils:log_newsletter_info:705 Don't forget to subscribe to the tedana newsletter for updates! This is a very low volume email list.
-INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsletter
+INFO     html_report:_update_template_bokeh:208 T2* files exist: True
+INFO     html_report:_update_template_bokeh:209 S0 files exist: True
+INFO     html_report:_update_template_bokeh:210 RMSE files exist: True
+INFO     html_report:_update_template_bokeh:217 Variance files exist: False
+INFO     html_report:_update_template_bokeh:223 External regressors exist: False
+INFO     rica:setup_rica_report:787 Rica launcher created. Run 'python /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/open_rica_report.py' to visualize results.
+INFO     tedana:tedana_workflow:1242 Workflow completed
+INFO     utils:log_newsletter_info:812 Don't forget to subscribe to the tedana newsletter for updates! This is a very low volume email list.
+INFO     utils:log_newsletter_info:816 https://groups.google.com/g/tedana-newsletter
 </pre></div>
 </div>
 </div>
@@ -945,36 +962,45 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 <section id="tedana-report-of-5-echo-data">
 <h2>Tedana report of 5 echo data<a class="headerlink" href="#tedana-report-of-5-echo-data" title="Link to this heading">#</a></h2>
 <p>You can explore an example of an interactive tedana report <a class="reference external" href="https://me-ica.github.io/ohbm-2023-multiecho/tedana/tedana_results_minimal_five-echo/tedana_report.html">here</a>.</p>
-<p>The tedana report for the current dataset was generated at the following location:</p>
+<p>The interactive tedana report for the current dataset can be opened via the link below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is the path of the tedana report</span>
-<span class="n">url</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">dset_dir5_out</span> <span class="o">+</span> <span class="s1">'/tedana_report.html'</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">report_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">dset_dir5_out</span> <span class="o">+</span> <span class="s1">'/tedana_report.html'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report_path</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_processed/tedana_report.html
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>five-echo-dataset/tedana_processed/tedana_report.html
 </pre></div>
 </div>
 </div>
 </div>
-<p>To properly view the interactive <em>tedana html report</em> with all figures displayed correctly, right-click the file at the path shown above and select <strong>Open in New Browser Tab</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s1">'📊 [Open interactive tedana report](</span><span class="si">{</span><span class="n">report_path</span><span class="si">}</span><span class="s1">) '</span>
+    <span class="sa">f</span><span class="s1">'*(local/JupyterLab only — not available on GitHub Pages)*'</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>📊 <a class="reference external" href="five-echo-dataset/tedana_processed/tedana_report.html">Open interactive tedana report</a> <em>(local/JupyterLab only — not available on GitHub Pages)</em></p>
+</div>
+</div>
 <p>Below, selected components from the generated tedana report are visualized.</p>
 <section id="carpet-plot">
 <h3>Carpet plot<a class="headerlink" href="#carpet-plot" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVG</span>
-
-<span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'five-echo-dataset/tedana_processed/figures/carpet_optcom.svg'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SVG</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'five-echo-dataset/tedana_processed/figures/carpet_optcom.svg'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ba79d00a6ab98057007fa20f8895489b5821a8f74875cebeaea60935076efbaa.svg" src="../../_images/ba79d00a6ab98057007fa20f8895489b5821a8f74875cebeaea60935076efbaa.svg">
+<img alt="../../_images/0c624528449f9d3d7d498a94888983a380fa22a39b3080be5786cf08ab27e1de.svg" src="../../_images/0c624528449f9d3d7d498a94888983a380fa22a39b3080be5786cf08ab27e1de.svg">
 </div>
 </div>
 </section>
@@ -987,7 +1013,7 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/45900f20c14a4122f98d1b20743e67865763d720e4e93417226f72fe8059d77f.svg" src="../../_images/45900f20c14a4122f98d1b20743e67865763d720e4e93417226f72fe8059d77f.svg">
+<img alt="../../_images/65d02c62bb63b8ccdfc87942bbdf66a2714d0bdd754013382090a883cf58b746.svg" src="../../_images/65d02c62bb63b8ccdfc87942bbdf66a2714d0bdd754013382090a883cf58b746.svg">
 </div>
 </div>
 </section>
@@ -1003,8 +1029,8 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ae4c4af1e34ab5277eeef1b0c2b53a35b86a264c4cfa524326656913ccd4e63d.svg" src="../../_images/ae4c4af1e34ab5277eeef1b0c2b53a35b86a264c4cfa524326656913ccd4e63d.svg">
-<img alt="../../_images/644bdfc68dba30d5e13b29dd031e7cc6a2bec5f25f905ce6540d46f0c8fd7efe.svg" src="../../_images/644bdfc68dba30d5e13b29dd031e7cc6a2bec5f25f905ce6540d46f0c8fd7efe.svg">
+<img alt="../../_images/f4a6cedeed050034e2f4508d5d6072fd4beab771ae78bb74a66c276367a3172d.svg" src="../../_images/f4a6cedeed050034e2f4508d5d6072fd4beab771ae78bb74a66c276367a3172d.svg">
+<img alt="../../_images/2c0abacc0d8e5d253983fd640d469376eb8923537f2b7e51c85d407c05c6d9b8.svg" src="../../_images/2c0abacc0d8e5d253983fd640d469376eb8923537f2b7e51c85d407c05c6d9b8.svg">
 </div>
 </div>
 </section>
@@ -1020,8 +1046,8 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ebdf98b9d5fef107d1bed493f78b002e86501c1c8b2b8b69118b92181813aef8.svg" src="../../_images/ebdf98b9d5fef107d1bed493f78b002e86501c1c8b2b8b69118b92181813aef8.svg">
-<img alt="../../_images/2b10124ee2d0614f15f49927fc6803127b174db56b44c39a261c80d9065b5ea7.svg" src="../../_images/2b10124ee2d0614f15f49927fc6803127b174db56b44c39a261c80d9065b5ea7.svg">
+<img alt="../../_images/455b7a338a68689c5e797499749c4be75eac76698e22db1fdf19f702ffe3c0ed.svg" src="../../_images/455b7a338a68689c5e797499749c4be75eac76698e22db1fdf19f702ffe3c0ed.svg">
+<img alt="../../_images/926ab5ed721da807024e20f5a3c51f8e6142bd71a6e8bffbae45843b7b8a4455.svg" src="../../_images/926ab5ed721da807024e20f5a3c51f8e6142bd71a6e8bffbae45843b7b8a4455.svg">
 </div>
 </div>
 </section>
@@ -1037,8 +1063,8 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e2cdd0875b95510522172234195e5a042fed7c3cf0f36f72627edd7f22003b2c.svg" src="../../_images/e2cdd0875b95510522172234195e5a042fed7c3cf0f36f72627edd7f22003b2c.svg">
-<img alt="../../_images/bac632f88688b0b5002cf55c9053cb2cb174f4282c7ae2c0830f09b11acef6ff.svg" src="../../_images/bac632f88688b0b5002cf55c9053cb2cb174f4282c7ae2c0830f09b11acef6ff.svg">
+<img alt="../../_images/d4c7c88fb42b3ff08afe901a9970b8f1018d561d0a6f23bfe274d89b584b4af3.svg" src="../../_images/d4c7c88fb42b3ff08afe901a9970b8f1018d561d0a6f23bfe274d89b584b4af3.svg">
+<img alt="../../_images/d4a3f32080b3cd683b67ed19bb8fc477268729543113f45c4e6fc3af2fede353.svg" src="../../_images/d4a3f32080b3cd683b67ed19bb8fc477268729543113f45c4e6fc3af2fede353.svg">
 </div>
 </div>
 </section>
@@ -1099,25 +1125,23 @@ rm tmp.tsv tmp_clean.tsv
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*+ WARNING: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*+ WARNING:
-ss.cp+tlrc[0] scale to shorts mean misfit error = 38.4% -- **** Red Alert ****
- + a) Numerical preci
-sion has been lost when truncating results
-       from 32-bit floating point to 16-bit integers (sho
-rts).
+*+ WARNING: ss.cp+tlrc[0] scale to shorts mean misfit error = 38.4% -- **** Red Alert ****
++ a) Numerical precision has been lost when truncating results
+       from 32-bit floating point to
+16-bit integers (shorts).
  + b) Consider writing datasets out in float format.
-       In most AFNI programs, use the '-f
-loat' option.
+       In most AFNI p
+rograms, use the '-float' option.
  + c) This warning is a new message, but is an old issue
-       that arises when stori
-ng results in an integer format.
- + d) Don't panic! These messages likely originate in peripheral
-     or unimportant voxels. They mean that you must examine your output.
-       "Assess the situatio
-n and keep a calm head about you,
-        because it doesn't do anybody any good to panic."
-++ +++++
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+       th
+at arises when storing results in an integer format.
+ + d) Don't panic! These messages likely origin
+ate in peripheral
+       or unimportant voxels. They mean that you must examine your output.
+"Assess the situation and keep a calm head about you,
+        because it doesn't do anybody any good
+ to panic."
+++ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 *+ WARNING: GenPriorsOut.x+tlrc[0] scale to shorts mean misfit error = 40.0% -- ***** Purple
  Alert! *****
 *+ WARNING: GenPriorsOut.x+tlrc[0] scale to shorts mean misfit error = 39.8% -- ***** Purple
@@ -1133,8 +1157,7 @@ rt ****
 ++ Output dataset ./CSF_anatresolution.nii.gz
 ++ no -frac option: defaulting to -union
 ++ processing 1 input dataset(s), NN=2...
-++ padding all da
-tasets by 0 (for dilations)
+++ padding all datasets by 0 (for dilations)
 ++ have 1 volumes of input to combine
 ++ frac 0 over 1 volumes gives min count 0
 ++ voxel limits: 0 clipped, 135363 survived, 11398973 were zero
@@ -1169,155 +1192,148 @@ tasets by 0 (for dilations)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(160, 39)
-(160, 39)
-(160, 39)
-(160, 39)
-CPU times: user 8min 40s, sys: 2.22 s, total: 8min 42s
-Wall time: 2min 40s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(160, 40)
+(160, 40)
+(160, 40)
+(160, 40)
+CPU times: user 9min 27s, sys: 2.22 s, total: 9min 29s
+Wall time: 2min 43s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO     tedana:tedana_workflow:608 Using output directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed
-INFO     tedana:tedana_workflow:627 Initializing and validating component selection tree
-INFO     component_selector:__init__:333 Performing component selection with demo_external_regressors_motion_task_models
-INFO     component_selector:__init__:334 Demonstration based on the minimal decision tree that uses partial F stats on a model with multiple external regressors divided by category and task regressors to bias towards keeping.
-INFO     tedana:tedana_workflow:630 Loading input data: ['five-echo-dataset/p06.SBJ01_S09_Task11_e1.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e2.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e3.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e4.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e5.sm.nii.gz']
-INFO     io:__init__:156 Generating figures directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/figures
-WARNING  tedana:tedana_workflow:735 Computing EPI mask from first echo using nilearn's compute_epi_mask function. Most external pipelines include more reliable masking functions. It is strongly recommended to provide an external mask, and to visually confirm that mask accurately conforms to data boundaries.
-INFO     utils:make_adaptive_mask:202 Echo-wise intensity thresholds for adaptive mask: [5853.6399821  4862.62750244 4073.26911418 3377.14188232 2800.73880819]
-WARNING  utils:make_adaptive_mask:231 4 voxels in user-defined mask do not have good signal. Removing voxels from mask.
-INFO     tedana:tedana_workflow:774 Computing T2* map
-/opt/conda/lib/python3.13/site-packages/tedana/decay.py:541: RuntimeWarning: Mean of empty slice
-  rmse_map = np.nanmean(rmse, axis=1)
-INFO     combine:make_optcom:192 Optimally combining data with voxel-wise T2* estimates
-INFO     tedana:tedana_workflow:822 Writing optimally combined data set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-optcom_bold.nii.gz
-INFO     tedana:tedana_workflow:931 Using supplied mixing matrix from ICA
-INFO     collect:generate_metrics:161 Calculating weight maps
-INFO     collect:generate_metrics:173 Calculating parameter estimate maps for optimally combined data
-INFO     collect:generate_metrics:193 Calculating z-statistic maps
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO     tedana:tedana_workflow:636 Using output directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed
+WARNING  utils:check_te_values:796 TE values appear to be in milliseconds. Per BIDS convention, echo times should be provided in seconds. Support for millisecond TE values is deprecated and will be removed in a future version. Please provide TE values in seconds.
+INFO     tedana:tedana_workflow:655 Initializing and validating component selection tree
+INFO     component_selector:__init__:345 Performing component selection with demo_external_regressors_motion_task_models
+INFO     component_selector:__init__:346 Demonstration based on the minimal decision tree that uses partial F stats on a model with multiple external regressors divided by category and task regressors to bias towards keeping.
+INFO     io:__init__:164 Generating figures directory: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/figures
+WARNING  utils:load_mask:943 Computing EPI mask from first echo using nilearn's compute_epi_mask function. Most external pipelines include more reliable masking functions. It is strongly recommended to provide an external mask, and to visually confirm that mask accurately conforms to data boundaries.
+INFO     tedana:tedana_workflow:690 Loading input data: ['five-echo-dataset/p06.SBJ01_S09_Task11_e1.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e2.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e3.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e4.sm.nii.gz', 'five-echo-dataset/p06.SBJ01_S09_Task11_e5.sm.nii.gz']
+INFO     utils:make_adaptive_mask:167 Echo-wise intensity thresholds for adaptive mask: [5853.639  4862.627  4073.2693 3377.1418 2800.739 ]
+WARNING  utils:make_adaptive_mask:195 4 voxels in user-defined mask do not have good signal. Removing voxels from mask.
+INFO     tedana:tedana_workflow:780 Computing T2* map
+INFO     combine:make_optcom:202 Optimally combining data with voxel-wise T2* estimates
+INFO     tedana:tedana_workflow:859 Writing optimally combined data set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-optcom_bold.nii.gz
+INFO     tedana:tedana_workflow:970 Using supplied mixing matrix from ICA
+INFO     collect:generate_metrics:153 Calculating standardized parameter estimate maps for optimally combined data
+INFO     collect:generate_metrics:171 Calculating unstandardized parameter estimate maps for optimally combined data
 INFO     collect:generate_metrics:203 Calculating F-statistic maps
-INFO     collect:generate_metrics:228 Thresholding z-statistic maps
-INFO     collect:generate_metrics:238 Calculating T2* F-statistic maps
-INFO     collect:generate_metrics:248 Calculating S0 F-statistic maps
-INFO     collect:generate_metrics:259 Counting significant voxels in T2* F-statistic maps
-INFO     collect:generate_metrics:265 Counting significant voxels in S0 F-statistic maps
-INFO     collect:generate_metrics:272 Thresholding optimal combination beta maps to match T2* F-statistic maps
-INFO     collect:generate_metrics:281 Thresholding optimal combination beta maps to match S0 F-statistic maps
-INFO     collect:generate_metrics:291 Calculating kappa and rho
-INFO     collect:generate_metrics:300 Calculating variance explained
-INFO     collect:generate_metrics:306 Calculating normalized variance explained
-INFO     collect:generate_metrics:313 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
-INFO     collect:generate_metrics:323 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
-INFO     collect:generate_metrics:334 Calculating signal-noise t-statistics
+INFO     collect:generate_metrics:229 Thresholding standardized parameter estimate maps
+INFO     collect:generate_metrics:237 Thresholding T2* F-statistic maps
+INFO     collect:generate_metrics:245 Thresholding S0 F-statistic maps
+INFO     collect:generate_metrics:254 Counting significant voxels in T2* F-statistic maps
+INFO     collect:generate_metrics:260 Counting significant voxels in S0 F-statistic maps
+INFO     collect:generate_metrics:267 Thresholding optimal combination beta maps to match T2* F-statistic maps
+INFO     collect:generate_metrics:275 Thresholding optimal combination beta maps to match S0 F-statistic maps
+INFO     collect:generate_metrics:284 Calculating kappa and rho
+INFO     collect:generate_metrics:293 Calculating variance explained
+INFO     collect:generate_metrics:299 Calculating normalized variance explained
+INFO     collect:generate_metrics:328 Calculating DSI between thresholded T2* F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:338 Calculating DSI between thresholded S0 F-statistic and optimal combination beta maps
+INFO     collect:generate_metrics:349 Calculating signal-noise t-statistics
 /opt/conda/lib/python3.13/site-packages/scipy/_lib/deprecation.py:234: SmallSampleWarning: One or more sample arguments is too small; all returned values will be NaN. See documentation for sample size requirements.
   return f(*args, **kwargs)
-INFO     collect:generate_metrics:393 Calculating external regressor fits. Fits all external nuisance regressors to a single model using an F statistic
-INFO     collect:generate_metrics:393 Calculating external regressor fits. Fits all task regressors to a single model using an F statistic
-INFO     external:fit_regressors:286 External regressors fit for nuisance includes detrending with 2 Legendre Polynomial regressors.
-INFO     external:fit_mixing_to_regressors:380 Running fit_mixing_to_regressors for nuisance
-INFO     external:fit_mixing_to_regressors:381 ICA matrix has 160 time points and 39 components
-INFO     external:build_fstat_regressor_models:473 Size for base regressor model for nuisance: (160, 2)
-INFO     external:build_fstat_regressor_models:488 Size for full regressor model for nuisance: (160, 17)
-INFO     external:build_fstat_regressor_models:489 Regressors in full model for nuisance: ['baseline 0', 'baseline 1', 'csf1', 'csf2', 'csf3', 'mot_dpitch', 'mot_droll', 'mot_dx', 'mot_dy', 'mot_dyaw', 'mot_dz', 'mot_pitch', 'mot_roll', 'mot_x', 'mot_y', 'mot_yaw', 'mot_z']
-INFO     external:build_fstat_regressor_models:511 Size of external regressor partial model 'no Motion': (160, 5)
-INFO     external:build_fstat_regressor_models:515 Regressors in partial model (everything but regressors of interest) 'no Motion': ['baseline 0', 'baseline 1', 'csf1', 'csf2', 'csf3']
-INFO     external:build_fstat_regressor_models:511 Size of external regressor partial model 'no CSF': (160, 14)
-INFO     external:build_fstat_regressor_models:515 Regressors in partial model (everything but regressors of interest) 'no CSF': ['baseline 0', 'baseline 1', 'mot_dpitch', 'mot_droll', 'mot_dx', 'mot_dy', 'mot_dyaw', 'mot_dz', 'mot_pitch', 'mot_roll', 'mot_x', 'mot_y', 'mot_yaw', 'mot_z']
-INFO     external:fit_regressors:286 External regressors fit for task includes detrending with 2 Legendre Polynomial regressors.
-INFO     external:fit_mixing_to_regressors:380 Running fit_mixing_to_regressors for task
-INFO     external:fit_mixing_to_regressors:381 ICA matrix has 160 time points and 39 components
-INFO     external:build_fstat_regressor_models:473 Size for base regressor model for task: (160, 2)
-INFO     external:build_fstat_regressor_models:488 Size for full regressor model for task: (160, 3)
-INFO     external:build_fstat_regressor_models:489 Regressors in full model for task: ['baseline 0', 'baseline 1', 'signal_checkerboard']
+INFO     collect:generate_metrics:422 Calculating external regressor fits. Fits all external nuisance regressors to a single model using an F statistic
+INFO     collect:generate_metrics:422 Calculating external regressor fits. Fits all task regressors to a single model using an F statistic
+INFO     external:fit_regressors:285 External regressors fit for nuisance includes detrending with 2 Legendre Polynomial regressors.
+INFO     external:fit_mixing_to_regressors:379 Running fit_mixing_to_regressors for nuisance
+INFO     external:fit_mixing_to_regressors:380 ICA matrix has 160 time points and 40 components
+INFO     external:build_fstat_regressor_models:472 Size for base regressor model for nuisance: (160, 2)
+INFO     external:build_fstat_regressor_models:487 Size for full regressor model for nuisance: (160, 17)
+INFO     external:build_fstat_regressor_models:488 Regressors in full model for nuisance: ['baseline 0', 'baseline 1', 'csf1', 'csf2', 'csf3', 'mot_dpitch', 'mot_droll', 'mot_dx', 'mot_dy', 'mot_dyaw', 'mot_dz', 'mot_pitch', 'mot_roll', 'mot_x', 'mot_y', 'mot_yaw', 'mot_z']
+INFO     external:build_fstat_regressor_models:510 Size of external regressor partial model 'no Motion': (160, 5)
+INFO     external:build_fstat_regressor_models:514 Regressors in partial model (everything but regressors of interest) 'no Motion': ['baseline 0', 'baseline 1', 'csf1', 'csf2', 'csf3']
+INFO     external:build_fstat_regressor_models:510 Size of external regressor partial model 'no CSF': (160, 14)
+INFO     external:build_fstat_regressor_models:514 Regressors in partial model (everything but regressors of interest) 'no CSF': ['baseline 0', 'baseline 1', 'mot_dpitch', 'mot_droll', 'mot_dx', 'mot_dy', 'mot_dyaw', 'mot_dz', 'mot_pitch', 'mot_roll', 'mot_x', 'mot_y', 'mot_yaw', 'mot_z']
+INFO     external:fit_regressors:285 External regressors fit for task includes detrending with 2 Legendre Polynomial regressors.
+INFO     external:fit_mixing_to_regressors:379 Running fit_mixing_to_regressors for task
+INFO     external:fit_mixing_to_regressors:380 ICA matrix has 160 time points and 40 components
+INFO     external:build_fstat_regressor_models:472 Size for base regressor model for task: (160, 2)
+INFO     external:build_fstat_regressor_models:487 Size for full regressor model for task: (160, 3)
+INFO     external:build_fstat_regressor_models:488 Regressors in full model for task: ['baseline 0', 'baseline 1', 'signal_checkerboard']
 INFO     tedica:automatic_selection:54 Performing ICA component selection with tree: demo_external_regressors_motion_task_models
 INFO     selection_nodes:manual_classify:104 Step 0: manual_classify: Set all to unclassified
 INFO     selection_utils:comptable_classification_changer:293 Step 0: No components fit criterion False to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 0: manual_classify applied to 39 components. 39 True -&gt; unclassified. 0 False -&gt; nochange.
+INFO     selection_utils:log_decision_tree_step:447 Step 0: manual_classify applied to 40 components. 40 True -&gt; unclassified. 0 False -&gt; nochange.
 INFO     selection_nodes:manual_classify:136 Step 0: manual_classify component classification tags are cleared
-INFO     selection_utils:log_classification_counts:492 Step 0: Total component classifications: 39 unclassified
+INFO     selection_utils:log_classification_counts:492 Step 0: Total component classifications: 40 unclassified
 INFO     selection_nodes:dec_left_op_right:389 Step 1: left_op_right: provisionalreject if rho&gt;kappa, else nochange
-INFO     selection_utils:log_decision_tree_step:447 Step 1: left_op_right applied to 39 components. 5 True -&gt; provisionalreject. 34 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 1: Total component classifications: 5 provisionalreject, 34 unclassified
+INFO     selection_utils:log_decision_tree_step:447 Step 1: left_op_right applied to 40 components. 5 True -&gt; provisionalreject. 35 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 1: Total component classifications: 5 provisionalreject, 35 unclassified
 INFO     selection_nodes:dec_left_op_right:389 Step 2: left_op_right: provisionalreject if ['countsigFS0&gt;countsigFT2 &amp; countsigFT2&gt;0'], else nochange
-INFO     selection_utils:log_decision_tree_step:447 Step 2: left_op_right applied to 39 components. 2 True -&gt; provisionalreject. 37 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 2: Total component classifications: 5 provisionalreject, 34 unclassified
+INFO     selection_utils:log_decision_tree_step:447 Step 2: left_op_right applied to 40 components. 2 True -&gt; provisionalreject. 38 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 2: Total component classifications: 5 provisionalreject, 35 unclassified
 INFO     selection_nodes:calc_median:653 Step 3: calc_median: Median(median_varex)
-INFO     selection_utils:log_decision_tree_step:459 Step 3: calc_median calculated: median_varex=0.5933764147808385
-INFO     selection_utils:log_classification_counts:492 Step 3: Total component classifications: 5 provisionalreject, 34 unclassified
-INFO     selection_nodes:dec_left_op_right:389 Step 4: left_op_right: provisionalreject if ['dice_FS0&gt;dice_FT2 &amp; variance explained&gt;0.59'], else nochange
+INFO     selection_utils:log_decision_tree_step:459 Step 3: calc_median calculated: median_varex=0.6119923398094282
+INFO     selection_utils:log_classification_counts:492 Step 3: Total component classifications: 5 provisionalreject, 35 unclassified
+INFO     selection_nodes:dec_left_op_right:389 Step 4: left_op_right: provisionalreject if ['dice_FS0&gt;dice_FT2 &amp; variance explained&gt;0.61'], else nochange
 INFO     selection_utils:comptable_classification_changer:293 Step 4: No components fit criterion True to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 4: left_op_right applied to 39 components. 0 True -&gt; provisionalreject. 39 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 4: Total component classifications: 5 provisionalreject, 34 unclassified
-INFO     selection_nodes:dec_left_op_right:389 Step 5: left_op_right: provisionalreject if ['0&gt;signal-noise_t &amp; variance explained&gt;0.59'], else nochange
-INFO     selection_utils:log_decision_tree_step:447 Step 5: left_op_right applied to 39 components. 4 True -&gt; provisionalreject. 35 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 5: Total component classifications: 7 provisionalreject, 32 unclassified
+INFO     selection_utils:log_decision_tree_step:447 Step 4: left_op_right applied to 40 components. 0 True -&gt; provisionalreject. 40 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 4: Total component classifications: 5 provisionalreject, 35 unclassified
+INFO     selection_nodes:dec_left_op_right:389 Step 5: left_op_right: provisionalreject if ['0&gt;signal-noise_t &amp; variance explained&gt;0.61'], else nochange
+INFO     selection_utils:log_decision_tree_step:447 Step 5: left_op_right applied to 40 components. 4 True -&gt; provisionalreject. 36 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 5: Total component classifications: 7 provisionalreject, 33 unclassified
 INFO     selection_nodes:calc_kappa_elbow:767 Step 6: calc_kappa_elbow: Calc Kappa Elbow
 INFO     selection_utils:kappa_elbow_kundu:668 Calculating kappa elbow based on all components.
-INFO     selection_utils:log_decision_tree_step:459 Step 6: calc_kappa_elbow calculated: kappa_elbow_kundu=72.01029540016907, kappa_allcomps_elbow=72.01029540016907, kappa_nonsig_elbow=None, varex_upper_p=0.7008466697871414
-INFO     selection_utils:log_classification_counts:492 Step 6: Total component classifications: 7 provisionalreject, 32 unclassified
+INFO     selection_utils:log_decision_tree_step:459 Step 6: calc_kappa_elbow calculated: kappa_elbow_kundu=73.52384121688529, kappa_allcomps_elbow=73.52384121688529, kappa_nonsig_elbow=None, varex_upper_p=0.9381300999030658
+INFO     selection_utils:log_classification_counts:492 Step 6: Total component classifications: 7 provisionalreject, 33 unclassified
 INFO     selection_nodes:calc_rho_elbow:902 Step 7: calc_rho_elbow: Calc Rho Elbow
-INFO     selection_utils:log_decision_tree_step:459 Step 7: calc_rho_elbow calculated: rho_elbow_liberal=20.055647980546865, rho_allcomps_elbow=20.055647980546865, rho_unclassified_elbow=19.71637179968064, elbow_f05=7.708647422176786
-INFO     selection_utils:log_classification_counts:492 Step 7: Total component classifications: 7 provisionalreject, 32 unclassified
-INFO     selection_nodes:dec_left_op_right:389 Step 8: left_op_right: provisionalaccept if ['kappa&gt;=72.01 &amp; rho&lt;20.06'], else provisionalreject
+INFO     selection_utils:log_decision_tree_step:459 Step 7: calc_rho_elbow calculated: rho_elbow_liberal=20.376565983430464, rho_allcomps_elbow=20.376565983430464, rho_unclassified_elbow=20.32709879825412, elbow_f05=7.708647422176786
+INFO     selection_utils:log_classification_counts:492 Step 7: Total component classifications: 7 provisionalreject, 33 unclassified
+INFO     selection_nodes:dec_left_op_right:389 Step 8: left_op_right: provisionalaccept if ['kappa&gt;=73.52 &amp; rho&lt;20.38'], else provisionalreject
 INFO     selection_nodes:dec_left_op_right:391 Step 8: left_op_right If kappa&gt; kappa elbow and rho&lt;rho elbow, provisional accept. Otherwise provisional reject
-INFO     selection_utils:log_decision_tree_step:447 Step 8: left_op_right applied to 32 components. 12 True -&gt; provisionalaccept. 20 False -&gt; provisionalreject.
-INFO     selection_utils:log_classification_counts:492 Step 8: Total component classifications: 12 provisionalaccept, 27 provisionalreject
-INFO     selection_nodes:dec_left_op_right:389 Step 9: left_op_right: provisionalaccept if ['kappa&gt;2*rho &amp; kappa&gt;72.01'], else nochange
+INFO     selection_utils:log_decision_tree_step:447 Step 8: left_op_right applied to 33 components. 10 True -&gt; provisionalaccept. 23 False -&gt; provisionalreject.
+INFO     selection_utils:log_classification_counts:492 Step 8: Total component classifications: 10 provisionalaccept, 30 provisionalreject
+INFO     selection_nodes:dec_left_op_right:389 Step 9: left_op_right: provisionalaccept if ['kappa&gt;2*rho &amp; kappa&gt;73.52'], else nochange
 INFO     selection_nodes:dec_left_op_right:391 Step 9: left_op_right If kappa&gt;elbow and kappa&gt;2*rho accept even if rho&gt;elbow
-INFO     selection_utils:log_decision_tree_step:447 Step 9: left_op_right applied to 27 components. 1 True -&gt; provisionalaccept. 26 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 9: Total component classifications: 13 provisionalaccept, 26 provisionalreject
+INFO     selection_utils:log_decision_tree_step:447 Step 9: left_op_right applied to 30 components. 1 True -&gt; provisionalaccept. 29 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 9: Total component classifications: 11 provisionalaccept, 29 provisionalreject
 INFO     selection_nodes:dec_left_op_right:389 Step 10: left_op_right: provisionalreject if ['pval nuisance model&lt;0.05 &amp; R2stat nuisance model&gt;0.5'], else nochange
 INFO     selection_nodes:dec_left_op_right:391 Step 10: left_op_right If external regressors fit with p&lt;0.05 and model R2&gt;0.5 of the variance, then reject.
-INFO     selection_utils:log_decision_tree_step:447 Step 10: left_op_right applied to 39 components. 10 True -&gt; provisionalreject. 29 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 10: Total component classifications: 11 provisionalaccept, 28 provisionalreject
+INFO     selection_utils:log_decision_tree_step:447 Step 10: left_op_right applied to 40 components. 10 True -&gt; provisionalreject. 30 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 10: Total component classifications: 9 provisionalaccept, 31 provisionalreject
 INFO     selection_nodes:dec_left_op_right:389 Step 11: left_op_right: nochange if ['pval nuisance model&lt;0.05 &amp; R2stat nuisance model&gt;0.5 &amp; pval nuisance Motion partial model&lt;0.05'], else nochange
-INFO     selection_utils:comptable_classification_changer:293 Step 11: No components fit criterion True to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 11: left_op_right applied to 28 components. 0 True -&gt; nochange. 28 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 11: Total component classifications: 11 provisionalaccept, 28 provisionalreject
+INFO     selection_utils:log_decision_tree_step:447 Step 11: left_op_right applied to 31 components. 10 True -&gt; nochange. 21 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 11: Total component classifications: 9 provisionalaccept, 31 provisionalreject
 INFO     selection_nodes:dec_left_op_right:389 Step 12: left_op_right: nochange if ['pval nuisance model&lt;0.05 &amp; R2stat nuisance model&gt;0.5 &amp; pval nuisance CSF partial model&lt;0.05'], else nochange
-INFO     selection_utils:comptable_classification_changer:293 Step 12: No components fit criterion True to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 12: left_op_right applied to 28 components. 0 True -&gt; nochange. 28 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 12: Total component classifications: 11 provisionalaccept, 28 provisionalreject
-INFO     selection_nodes:dec_left_op_right:389 Step 13: left_op_right: accepted if ['pval task model&lt;0.05 &amp; R2stat task model&gt;0.5 &amp; kappa&gt;=72.01'], else nochange
+INFO     selection_utils:log_decision_tree_step:447 Step 12: left_op_right applied to 31 components. 10 True -&gt; nochange. 21 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 12: Total component classifications: 9 provisionalaccept, 31 provisionalreject
+INFO     selection_nodes:dec_left_op_right:389 Step 13: left_op_right: accepted if ['pval task model&lt;0.05 &amp; R2stat task model&gt;0.5 &amp; kappa&gt;=73.52'], else nochange
 INFO     selection_utils:comptable_classification_changer:293 Step 13: No components fit criterion True to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 13: left_op_right applied to 28 components. 0 True -&gt; accepted. 28 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 13: Total component classifications: 11 provisionalaccept, 28 provisionalreject
+INFO     selection_utils:log_decision_tree_step:447 Step 13: left_op_right applied to 31 components. 0 True -&gt; accepted. 31 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 13: Total component classifications: 9 provisionalaccept, 31 provisionalreject
 INFO     selection_nodes:dec_variance_lessthan_thresholds:533 Step 14: variance_lt_thresholds: accepted if variance explained&lt;0.1. All variance&lt;1.0, else nochange
 INFO     selection_utils:comptable_classification_changer:293 Step 14: No components fit criterion True to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 14: variance_lt_thresholds applied to 28 components. 0 True -&gt; accepted. 28 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 14: Total component classifications: 11 provisionalaccept, 28 provisionalreject
+INFO     selection_utils:log_decision_tree_step:447 Step 14: variance_lt_thresholds applied to 31 components. 0 True -&gt; accepted. 31 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 14: Total component classifications: 9 provisionalaccept, 31 provisionalreject
 INFO     selection_nodes:manual_classify:104 Step 15: manual_classify: Set provisionalaccept to accepted
 INFO     selection_utils:comptable_classification_changer:293 Step 15: No components fit criterion False to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 15: manual_classify applied to 11 components. 11 True -&gt; accepted. 0 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 15: Total component classifications: 11 accepted, 28 provisionalreject
+INFO     selection_utils:log_decision_tree_step:447 Step 15: manual_classify applied to 9 components. 9 True -&gt; accepted. 0 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 15: Total component classifications: 9 accepted, 31 provisionalreject
 INFO     selection_nodes:manual_classify:104 Step 16: manual_classify: Set ['provisionalreject', 'unclassified'] to rejected
 INFO     selection_utils:comptable_classification_changer:293 Step 16: No components fit criterion False to change classification
-INFO     selection_utils:log_decision_tree_step:447 Step 16: manual_classify applied to 28 components. 28 True -&gt; rejected. 0 False -&gt; nochange.
-INFO     selection_utils:log_classification_counts:492 Step 16: Total component classifications: 11 accepted, 28 rejected
-INFO     io:denoise_ts:613 Variance explained by decomposition: 94.68%
-INFO     io:write_split_ts:700 Writing denoised time series: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-denoised_bold.nii.gz
-INFO     io:writeresults:749 Writing full ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-ICA_components.nii.gz
-INFO     io:writeresults:753 Writing denoised ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-ICAAccepted_components.nii.gz
-INFO     io:writeresults:759 Writing Z-normalized spatial component maps: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-ICAAccepted_stat-z_components.nii.gz
-INFO     tedana:tedana_workflow:1116 Making figures folder with static component maps and timecourse plots.
-INFO     io:denoise_ts:613 Variance explained by decomposition: 94.68%
-/opt/conda/lib/python3.13/site-packages/tedana/io.py:904: UserWarning: Data array used to create a new image contains 64-bit ints. This is likely due to creating the array with numpy and passing `int` as the `dtype`. Many tools such as FSL and SPM cannot deal with int64 in Nifti images, so for compatibility the data has been converted to int32.
-  nii = new_img_like(ref_img, newdata, affine=affine, copy_header=copy_header)
-/opt/conda/lib/python3.13/site-packages/tedana/io.py:904: UserWarning: Data array used to create a new image contains 64-bit ints. This is likely due to creating the array with numpy and passing `int` as the `dtype`. Many tools such as FSL and SPM cannot deal with int64 in Nifti images, so for compatibility the data has been converted to int32.
-  nii = new_img_like(ref_img, newdata, affine=affine, copy_header=copy_header)
-/opt/conda/lib/python3.13/site-packages/tedana/io.py:904: UserWarning: Data array used to create a new image contains 64-bit ints. This is likely due to creating the array with numpy and passing `int` as the `dtype`. Many tools such as FSL and SPM cannot deal with int64 in Nifti images, so for compatibility the data has been converted to int32.
-  nii = new_img_like(ref_img, newdata, affine=affine, copy_header=copy_header)
-/opt/conda/lib/python3.13/site-packages/nilearn/plotting/img_plotting.py:1416: UserWarning: Non-finite values detected. These values will be replaced with zeros.
-  safe_get_data(stat_map_img, ensure_finite=True),
-INFO     tedana:tedana_workflow:1172 Generating dynamic report
+INFO     selection_utils:log_decision_tree_step:447 Step 16: manual_classify applied to 31 components. 31 True -&gt; rejected. 0 False -&gt; nochange.
+INFO     selection_utils:log_classification_counts:492 Step 16: Total component classifications: 9 accepted, 31 rejected
+INFO     io:denoise_ts:682 Variance explained by decomposition: 95.19%
+INFO     io:write_split_ts:769 Writing denoised time series: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-denoised_bold.nii.gz
+INFO     io:writeresults:817 Writing full ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-ICA_components.nii.gz
+INFO     io:writeresults:824 Writing Z-normalized spatial component maps: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-ICA_stat-z_components.nii.gz
+INFO     io:writeresults:828 Writing denoised ICA coefficient feature set: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-ICAAccepted_components.nii.gz
+INFO     io:writeresults:835 Writing Z-normalized spatial component maps: /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/desc-ICAAccepted_stat-z_components.nii.gz
+INFO     tedana:tedana_workflow:1153 Making figures folder with static component maps and timecourse plots.
+INFO     io:denoise_ts:682 Variance explained by decomposition: 95.19%
+/opt/conda/lib/python3.13/site-packages/tedana/reporting/static_figures.py:734: UserWarning: Non-finite values detected. These values will be replaced with zeros.
+  plotting.plot_stat_map(
+INFO     tedana:tedana_workflow:1236 Generating dynamic report
 INFO     html_report:_update_template_bokeh:164 Checking for adaptive mask: adaptive_mask.svg, exists: True
-INFO     html_report:_update_template_bokeh:204 T2* files exist: True
-INFO     html_report:_update_template_bokeh:205 S0 files exist: True
-INFO     html_report:_update_template_bokeh:206 RMSE files exist: True
-INFO     html_report:_update_template_bokeh:212 External regressors exist: True
-INFO     tedana:tedana_workflow:1175 Workflow completed
-INFO     utils:log_newsletter_info:705 Don't forget to subscribe to the tedana newsletter for updates! This is a very low volume email list.
-INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsletter
+INFO     html_report:_update_template_bokeh:208 T2* files exist: True
+INFO     html_report:_update_template_bokeh:209 S0 files exist: True
+INFO     html_report:_update_template_bokeh:210 RMSE files exist: True
+INFO     html_report:_update_template_bokeh:217 Variance files exist: False
+INFO     html_report:_update_template_bokeh:223 External regressors exist: True
+INFO     rica:setup_rica_report:787 Rica launcher created. Run 'python /home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/open_rica_report.py' to visualize results.
+INFO     tedana:tedana_workflow:1242 Workflow completed
+INFO     utils:log_newsletter_info:812 Don't forget to subscribe to the tedana newsletter for updates! This is a very low volume email list.
+INFO     utils:log_newsletter_info:816 https://groups.google.com/g/tedana-newsletter
 </pre></div>
 </div>
 </div>
@@ -1328,18 +1344,30 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here is the path to the second TEDANA report</span>
-<span class="n">url</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">dset_dir5_extern_out</span> <span class="o">+</span> <span class="s1">'/tedana_report.html'</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">report_path_ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">dset_dir5_extern_out</span> <span class="o">+</span> <span class="s1">'/tedana_report.html'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report_path_ext</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/workspace/books/examples/functional_imaging/five-echo-dataset/tedana_external_regress_processed/tedana_report.html
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>five-echo-dataset/tedana_external_regress_processed/tedana_report.html
 </pre></div>
 </div>
 </div>
 </div>
-<p>To view this report with all figures displayed properly, right-click the file path and choose <strong>Open in New Browser Tab</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s1">'📊 [Open interactive tedana report with external regressors](</span><span class="si">{</span><span class="n">report_path_ext</span><span class="si">}</span><span class="s1">) '</span>
+    <span class="sa">f</span><span class="s1">'*(local/JupyterLab only — not available on GitHub Pages)*'</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>📊 <a class="reference external" href="five-echo-dataset/tedana_external_regress_processed/tedana_report.html">Open interactive tedana report with external regressors</a> <em>(local/JupyterLab only — not available on GitHub Pages)</em></p>
+</div>
+</div>
 <section id="id1">
 <h3>Carpet plot<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -1349,7 +1377,7 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d7f3360e16d4b34313674f48c2ac1d91b5e61eed861f0dd0a612cc5b1ba75380.svg" src="../../_images/d7f3360e16d4b34313674f48c2ac1d91b5e61eed861f0dd0a612cc5b1ba75380.svg">
+<img alt="../../_images/7047d17da685294e40e12c46e95f243a2dde6519bbeeded7b87dde9b834ef539.svg" src="../../_images/7047d17da685294e40e12c46e95f243a2dde6519bbeeded7b87dde9b834ef539.svg">
 </div>
 </div>
 </section>
@@ -1362,7 +1390,7 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/27f62445533b141588ee49426846d1812591ebe8681a35f66a960962c2890848.svg" src="../../_images/27f62445533b141588ee49426846d1812591ebe8681a35f66a960962c2890848.svg">
+<img alt="../../_images/f2414c10574904de42044eb71a76a18cb56b5f48646fd2d6f8f9430d4efb2e05.svg" src="../../_images/f2414c10574904de42044eb71a76a18cb56b5f48646fd2d6f8f9430d4efb2e05.svg">
 </div>
 </div>
 </section>
@@ -1378,8 +1406,8 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5f081d45b54778201427c6597a5350c9592dccf00e7060ea9389029f9c12e0b0.svg" src="../../_images/5f081d45b54778201427c6597a5350c9592dccf00e7060ea9389029f9c12e0b0.svg">
-<img alt="../../_images/8f732207c90a5e6e1a1cb89302dab10726e49c783da3b815d7d8336204937dda.svg" src="../../_images/8f732207c90a5e6e1a1cb89302dab10726e49c783da3b815d7d8336204937dda.svg">
+<img alt="../../_images/4ebfcb8bc80d392da4661c27c17170f7318a11ffb1fefbbcb6850b732eded954.svg" src="../../_images/4ebfcb8bc80d392da4661c27c17170f7318a11ffb1fefbbcb6850b732eded954.svg">
+<img alt="../../_images/ebcab76c8c3252533c8c1518f1db3a27b643171298afabb3b56c565c9e61cdc4.svg" src="../../_images/ebcab76c8c3252533c8c1518f1db3a27b643171298afabb3b56c565c9e61cdc4.svg">
 </div>
 </div>
 </section>
@@ -1395,8 +1423,8 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9f3409f1e413ef0eb91444f73da3fe5796bb69996e94e5bfeacda8bd221348c2.svg" src="../../_images/9f3409f1e413ef0eb91444f73da3fe5796bb69996e94e5bfeacda8bd221348c2.svg">
-<img alt="../../_images/0adf99d36bdbbb739af4cfca8cd3cd05734f5bf2480bea5d467abea86dccbe8c.svg" src="../../_images/0adf99d36bdbbb739af4cfca8cd3cd05734f5bf2480bea5d467abea86dccbe8c.svg">
+<img alt="../../_images/7381e42e4beebe627f9600cec23b4b0cce6e59eca1ef1813594dc6c433dd5e68.svg" src="../../_images/7381e42e4beebe627f9600cec23b4b0cce6e59eca1ef1813594dc6c433dd5e68.svg">
+<img alt="../../_images/bc4b41de58fe32b753bb328f5fceb5b68b1b084764437c4c5dcef348d00d4423.svg" src="../../_images/bc4b41de58fe32b753bb328f5fceb5b68b1b084764437c4c5dcef348d00d4423.svg">
 </div>
 </div>
 </section>
@@ -1412,8 +1440,8 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/94e4c3d9be87217205b9a01eeeff6eafb14cdbaf9a149b49ce47ed41ecd21f48.svg" src="../../_images/94e4c3d9be87217205b9a01eeeff6eafb14cdbaf9a149b49ce47ed41ecd21f48.svg">
-<img alt="../../_images/923f4ceff4b1a7258bf750567363d503f19abe04f47e58c724e9693882ff1fdb.svg" src="../../_images/923f4ceff4b1a7258bf750567363d503f19abe04f47e58c724e9693882ff1fdb.svg">
+<img alt="../../_images/1fd0761a75a2e4a471458c0cb5dda78edc21757b11f166522ef10e81b8695202.svg" src="../../_images/1fd0761a75a2e4a471458c0cb5dda78edc21757b11f166522ef10e81b8695202.svg">
+<img alt="../../_images/935e2832cd674052cfbefd66b324d71edcb4e17dc1032dce6481129871ea3767.svg" src="../../_images/935e2832cd674052cfbefd66b324d71edcb4e17dc1032dce6481129871ea3767.svg">
 </div>
 </div>
 </section>
@@ -1426,40 +1454,51 @@ INFO     utils:log_newsletter_info:709 https://groups.google.com/g/tedana-newsle
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b30df3fc55cd8718f23ad2c31a44d90d70f50e4dabc14efa4c219ed0985ca5bc.svg" src="../../_images/b30df3fc55cd8718f23ad2c31a44d90d70f50e4dabc14efa4c219ed0985ca5bc.svg">
+<img alt="../../_images/f4f4e2dd58d4817c38c5730e6a7df706adebe51983cdcb70f5c81241e7c35f5d.svg" src="../../_images/f4f4e2dd58d4817c38c5730e6a7df706adebe51983cdcb70f5c81241e7c35f5d.svg">
 </div>
 </div>
 <section id="dependencies-in-jupyter-python">
 <h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-10T06:13:41.576779+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T07:56:46.389931+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
-IPython: 9.9.0
-tedana : 25.0.1
+IPython: 9.7.0
+tedana : 26.0.3
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>

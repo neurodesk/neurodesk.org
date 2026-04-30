@@ -48,7 +48,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -197,6 +197,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -250,6 +252,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -258,17 +264,9 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Functional Imaging</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="physio.html">PhysIO</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -278,18 +276,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -448,13 +440,11 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A batch scripting example for PhysIO toolbox</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-an-example-script-for-batching">1. Generate an example script for batching</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#generalise-the-script-for-use-with-any-participant">2. Generalise the script for use with any participant</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ready-to-run-on-neurodesk">3. Ready to run on Neurodesk!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-an-example-script-for-batching">1. Generate an example script for batching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalise-the-script-for-use-with-any-participant">2. Generalise the script for use with any participant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ready-to-run-on-neurodesk">3. Ready to run on Neurodesk!</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -479,9 +469,8 @@
 <p>This tutorial walks through 1 way to batch script the use of the PhysIO toolbox with Neurodesk.
 The goal is to use the toolbox to generate physiological regressors to use when modelling fMRI data.
 The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. </p><p></p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="getting-started">
-<h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
 <p>This tutorial assumes the following:</p>
 <ol class="arabic simple">
 <li><p>Your data are (largely) in <a class="reference external" href="https://bids.neuroimaging.io/">BIDS format</a></p></li>
@@ -492,8 +481,8 @@ The output format of the regressor files are directly compatible for use with SP
 </ol>
 <p>NB. You can see the code generated from this tutorial <a class="reference external" href="https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress">here</a> </p><p></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="generate-an-example-script-for-batching">
-<h1>1. Generate an example script for batching<a class="headerlink" href="#generate-an-example-script-for-batching" title="Link to this heading">#</a></h1>
+<section id="generate-an-example-script-for-batching">
+<h2>1. Generate an example script for batching<a class="headerlink" href="#generate-an-example-script-for-batching" title="Link to this heading">#</a></h2>
 <p>First you will create an example batch script that is specific to one of your participants. To achieve this I downloaded locally the relevant ‘.log’ files for one participant, as well as the ‘…desc-confounds_timeseries.tsv’ output for fmriprep for each run. PhysIO is nice in that it will append the regressors from your physiological data to your movement parameters, so that you have a single file of regressors to add to your design matrix in SPM etc (other toolboxes are available). </p><p></p>
 <p>To work with PhysIO toolbox, your motion parameters need to be in the .txt format as required by SPM.</p>
 <p>I made some simple functions in python that would extract my desired movement regressors and save them to the space separated .txt file as is required by SPM. They can be found <a class="reference external" href="https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress/get_movement_regressors">here</a>.</p>
@@ -501,8 +490,8 @@ The output format of the regressor files are directly compatible for use with SP
 <p>I wound up with a Batch script for the PhysIO toolbox that looked a little bit like this:</p>
 <p><img alt="PhysIOBatch1" src="../../_images/PhysIOBatch1.png"> <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  --></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="generalise-the-script-for-use-with-any-participant">
-<h1>2. Generalise the script for use with any participant<a class="headerlink" href="#generalise-the-script-for-use-with-any-participant" title="Link to this heading">#</a></h1>
+<section id="generalise-the-script-for-use-with-any-participant">
+<h2>2. Generalise the script for use with any participant<a class="headerlink" href="#generalise-the-script-for-use-with-any-participant" title="Link to this heading">#</a></h2>
 <p>Now that you have an example script that contains the specific details for a single participant, you are ready to generalise this code so that you can run it for any participant you choose. I decided to do this by doing the following:</p>
 <ul class="simple">
 <li><p>First I generate an ‘info’ structure for each participant. This is a structure saved as a matfile for each participant under ‘derivatives’, in the relevant sub-z/ses-y/func/ folder. This structure contains the subject specific details that PhysIO needs to know to run. Thus I wrote a matlab function that saves a structure called info with the following fields:</p></li>
@@ -612,8 +601,8 @@ The output format of the regressor files are directly compatible for use with SP
 </pre></div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="ready-to-run-on-neurodesk">
-<h1>3. Ready to run on Neurodesk!<a class="headerlink" href="#ready-to-run-on-neurodesk" title="Link to this heading">#</a></h1>
+<section id="ready-to-run-on-neurodesk">
+<h2>3. Ready to run on Neurodesk!<a class="headerlink" href="#ready-to-run-on-neurodesk" title="Link to this heading">#</a></h2>
 <p>Now we have a batch script, we’re ready to run this on Neurodesk - yay! </p><p></p>
 <p>First make sure the details at the top of the script are correct. You can see that this script could easily be amended to run multiple subjects.</p>
 <p>On Neurodesk, go to the PhysIO toolbox, but select the command line tool rather than the GUI interface (‘physio r7771 instead of physioGUI r7771). This will take you to the container for the PhysIO toolbox </p><p></p>
@@ -624,6 +613,7 @@ The output format of the regressor files are directly compatible for use with SP
 </pre></div>
 </div>
 <p>Et Voila! Physiological regressors are now yours - mua ha ha!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -686,13 +676,11 @@ The output format of the regressor files are directly compatible for use with SP
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">A batch scripting example for PhysIO toolbox</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-an-example-script-for-batching">1. Generate an example script for batching</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#generalise-the-script-for-use-with-any-participant">2. Generalise the script for use with any participant</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ready-to-run-on-neurodesk">3. Ready to run on Neurodesk!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-an-example-script-for-batching">1. Generate an example script for batching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalise-the-script-for-use-with-any-participant">2. Generalise the script for use with any participant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ready-to-run-on-neurodesk">3. Ready to run on Neurodesk!</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

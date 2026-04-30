@@ -31,7 +31,7 @@ A brief guide to using fmriprep with Neurodesk.
 >
 ---
 
-# Assumptions
+## Assumptions
 
 - [ ] Your data is already in [BIDS format](https://bids.neuroimaging.io/)
 - [ ] You plan to run fmriprep using Neurodesk
@@ -39,15 +39,15 @@ A brief guide to using fmriprep with Neurodesk.
 
 ---
 
-# Steps
+## Steps
 
-## Launch Neurodesk
+### Launch Neurodesk
 
 From the launcher, click the Neurodesktop icon:
 
 ![launch_neurodesk](/static/tutorials/functional_imaging/fmriprep/launch_neurodesk.png 'launch_neurodesk') <!-- ![filename without extension](/static/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
 
-## Open fmriprep 
+### Open fmriprep 
 
 Now you're in Neurodesk, use the menus to first open the neurodesk options
 
@@ -62,7 +62,7 @@ This will open a terminal window where fMRIPrep is ready and waiting at your fin
 ![fmriprep_bash](/static/tutorials/functional_imaging/fmriprep/fmriprep_bash.png 'fmriprep_bash') <!-- ![filename without extension](/static/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
 
 
-## Setting up fmriprep command
+### Setting up fmriprep command
 
 You can now enter your fmriprep command straight into the command line in the newly opened terminal. Here is a quick guide to the command I have used with the options I have found most useful. Note that fMRIPrep requests the path to the freesurfer license file, which should be somewhere in your system for neurodesk to read - e.g. in 'neurodesktop-storage'.
 
@@ -86,7 +86,7 @@ Then hit return and fMRIPrep should now be merrily working away on your data :)
 
 ---
 
-## Some common pitfalls I have learned from my mistakes (and sometimes from others)
+### Some common pitfalls I have learned from my mistakes (and sometimes from others)
 
 1. If fmriprep hangs it could well be that you are out of disk space. Sometimes this is because fmriprep created a work directory in your home folder which is often limited on the HPC. Make sure fmriprep knows to use a work drectory in your scratch. you can specify this in the fmriprep command by using -w /path/to/the/work/directory/you/made
 

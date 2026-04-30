@@ -24,7 +24,7 @@ Using datalad to publish and access open data on OSF.
 
 DataLad is an open-source tool to publish and access open datasets. In addition to many open data sources (OpenNeuro, CBRAIN, brainlife.io, CONP, DANDI, Courtois Neuromod, Dataverse, Neurobagel), it can also connect to the Open Science Framework (OSF): http://osf.io/
 
-# Publish a dataset
+## Publish a dataset
 
 First we have to create a DataLad dataset:
 ```Bash
@@ -67,7 +67,7 @@ git-annex export HEAD --to osf-export-storage
 
 ```
 
-# Access a dataset
+## Access a dataset
 
 To download a dataset from the OSF (if it was uploaded as a DataLad dataset before):
 ```Bash

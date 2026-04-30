@@ -1,8 +1,9 @@
 <!DOCTYPE html><html lang="en" data-content_root="../../"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="nd-review-id" content="32396a98-ed0b-424e-8dd9-8abdeb3eb4d6">
 
-    <title>Unwrapping — Neurodesk</title>
+    <title>MRI Phase Unwrapping with ROMEO — Neurodesk</title>
   
   
   
@@ -48,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -68,6 +69,8 @@
                 gtag('config', 'G-4Z9774J59Y');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/phase_processing/unwrapping';</script>
     <script src="../../_static/review-badge.js?v=e2204dae"></script>
     <link rel="canonical" href="https://neurodesk.org/edu/tutorials/phase_processing/unwrapping.html">
@@ -75,11 +78,11 @@
     <link rel="index" title="Index" href="../../genindex.html">
     <link rel="search" title="Search" href="../../search.html">
     <link rel="next" title="Programming" href="../programming/intro.html">
-    <link rel="prev" title="SWI" href="swi.html">
+    <link rel="prev" title="Susceptibility-Weighted Imaging (SWI)" href="swi.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
   <meta name="docsearch:version" content="">
-  <meta name="author" content="Steffen Bollmann"><meta property="article:author" content="Steffen Bollmann"><meta name="citation_author" content="Steffen Bollmann"></head>
+  </head>
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -197,6 +200,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -250,6 +255,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -258,17 +267,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -278,18 +279,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Phase Processing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swi.html">SWI</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -366,6 +361,89 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://play.neurodesk.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/unwrapping.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Australia" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Australia logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Australia</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/unwrapping.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Europe" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Europe logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Europe</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/unwrapping.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in America" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in America logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in America</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/unwrapping.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 1" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 1 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 1</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://edu.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/unwrapping.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 2" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 2 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 2</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -374,13 +452,13 @@
       
       
       
-      <li><a href="../../_sources/tutorials/phase_processing/unwrapping.md" target="_blank" class="btn btn-sm btn-download-source-button dropdown-item" title="Download source file" data-bs-placement="left" data-bs-toggle="tooltip">
+      <li><a href="../../_sources/tutorials/phase_processing/unwrapping.ipynb" target="_blank" class="btn btn-sm btn-download-source-button dropdown-item" title="Download source file" data-bs-placement="left" data-bs-toggle="tooltip">
   
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -438,7 +516,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unwrapping</h1>
+    <h1>MRI Phase Unwrapping with ROMEO</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -448,10 +526,17 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-demo-data">Download demo data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-romeo-for-phase-unwrapping">Using ROMEO for phase unwrapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-used-in-this-workflow">Tools used in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools-and-download-demo-data">Load software tools and download demo data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-romeo-for-phase-unwrapping">Run ROMEO for phase unwrapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-results">Inspect the results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -463,46 +548,158 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="unwrapping">
-<h1>Unwrapping<a class="headerlink" href="#unwrapping" title="Link to this heading">#</a></h1>
-<p>A tutorial for MRI Phase Unwrapping.</p>
-<blockquote>
-<div><p><em>This tutorial was created by Steffen Bollmann.</em></p>
-<p>Github: <a class="reference external" href="https://github.com/stebo85">@stebo85</a>
-Web: <a class="reference external" href="https://mri.sbollmann.net/">mri.sbollmann.net</a>
-Twitter: <a class="reference external" href="https://twitter.com/sbollmann_MRI">@sbollmann_MRI</a></p>
-</div></blockquote>
-<!-- Following line adds a link to getting set up with Neurodesk -->
-<p><a class="reference external" href="https://neurodesk.org/getting-started/">Getting Set Up with Neurodesk</a></p>
-<!-- -->
-<section id="download-demo-data">
-<h2>Download demo data<a class="headerlink" href="#download-demo-data" title="Link to this heading">#</a></h2>
-<p>Open a terminal and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">osfclient</span>
-<span class="n">cd</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span>
-<span class="n">osf</span> <span class="o">-</span><span class="n">p</span> <span class="n">ru43c</span> <span class="n">fetch</span> <span class="mi">01</span><span class="n">_bids</span><span class="o">.</span><span class="n">zip</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="mi">01</span><span class="n">_bids</span><span class="o">.</span><span class="n">zip</span>
-
-<span class="n">unzip</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="mi">01</span><span class="n">_bids</span><span class="o">.</span><span class="n">zip</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span>
-
-
-<span class="n">mkdir</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span>
-
-<span class="n">cp</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="mi">01</span><span class="n">_bids</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="mi">170705134431</span><span class="n">std1312211075243167001</span><span class="o">/</span><span class="n">ses</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">anat</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="mi">170705134431</span><span class="n">std1312211075243167001_ses</span><span class="o">-</span><span class="mi">1</span><span class="n">_acq</span><span class="o">-</span><span class="n">qsmPH00_run</span><span class="o">-</span><span class="mi">1</span><span class="n">_phase</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="n">phase</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-
-<span class="n">cp</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="mi">01</span><span class="n">_bids</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="mi">170705134431</span><span class="n">std1312211075243167001</span><span class="o">/</span><span class="n">ses</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">anat</span><span class="o">/</span><span class="n">sub</span><span class="o">-</span><span class="mi">170705134431</span><span class="n">std1312211075243167001_ses</span><span class="o">-</span><span class="mi">1</span><span class="n">_acq</span><span class="o">-</span><span class="n">qsm_run</span><span class="o">-</span><span class="mi">1</span><span class="n">_magnitude</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="n">mag</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-
-<span class="n">gunzip</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="n">mag</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">gunzip</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="n">phase</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="mri-phase-unwrapping-with-romeo">
+<h1>MRI Phase Unwrapping with ROMEO<a class="headerlink" href="#mri-phase-unwrapping-with-romeo" title="Link to this heading">#</a></h1>
+<p><strong>Author</strong>: Steffen Bollmann, Michèle Masson-Trottier</p>
+<p>The University of Queensland<br></p>
+<div style="line-height: 2;">
+<a href="https://github.com/stebo85"><img src="https://img.shields.io/badge/-Steffen_Bollmann-181717?logo=github" alt="GitHub"></a> <a href="https://orcid.org/0000-0002-2909-0906"><img src="https://img.shields.io/badge/ORCID-0000--0002--2909--0906-green?logo=orcid" alt="ORCID"></a><br>
+<a href="https://github.com/micmas"><img src="https://img.shields.io/badge/-Michèle_Masson--Trottier-181717?logo=github" alt="GitHub"></a> <a href="https://orcid.org/0000-0002-0642-5662"><img src="https://img.shields.io/badge/ORCID-0000--0002--0642--5662-green?logo=orcid" alt="ORCID"></a>
+</div><p><strong>Date</strong>: 16/03/2026</p>
+<p><strong>License:</strong></p>
+<div style="margin-top: 10px;">
+    <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #0066cc;">
+        <i class="fas fa-balance-scale"></i> MIT License
+    </a>
+</div><section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
+<p>MRI phase data are inherently <strong>wrapped</strong> — phase values outside the range <span class="math notranslate nohighlight">\([-\pi, \pi]\)</span> “wrap around”, creating artificial discontinuities. <strong>Phase unwrapping</strong> recovers the true, continuous phase signal, which is essential for downstream analyses such as quantitative susceptibility mapping (QSM) and field mapping.</p>
+<p>This tutorial demonstrates how to:</p>
+<ol class="arabic simple">
+<li><p>Download a demo dataset with magnitude and phase images</p></li>
+<li><p>Prepare the data for unwrapping</p></li>
+<li><p>Run <strong>ROMEO</strong> (Robust phase unwrapping) to recover continuous phase</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Learning Objectives</p>
+<p>By the end of this tutorial you will be able to:</p>
+<ul class="simple">
+<li><p>Explain why MRI phase data need unwrapping</p></li>
+<li><p>Use ROMEO for robust, magnitude-guided phase unwrapping</p></li>
+<li><p>Interpret the unwrapped phase output</p></li>
+</ul>
 </div>
-<section id="using-romeo-for-phase-unwrapping">
-<h3>Using ROMEO for phase unwrapping<a class="headerlink" href="#using-romeo-for-phase-unwrapping" title="Link to this heading">#</a></h3>
-<p>Open the ROMEO tool from the application menu and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">romeo</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="n">phase</span><span class="o">.</span><span class="n">nii</span> <span class="o">-</span><span class="n">m</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="n">mag</span><span class="o">.</span><span class="n">nii</span> <span class="o">-</span><span class="n">k</span> <span class="n">nomask</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">romeo</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span>
-</pre></div>
-</div>
-<p><img alt="Romeo" src="../../_images/romeo.PNG"></p>
 </section>
+<section id="citation-and-resources">
+<h2>Citation and Resources<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h2>
+<section id="tools-used-in-this-workflow">
+<h3>Tools used in this workflow<a class="headerlink" href="#tools-used-in-this-workflow" title="Link to this heading">#</a></h3>
+<dl class="simple myst">
+<dt><strong>ROMEO</strong></dt><dd><p>Dymerska, B., Eckstein, K., et al. (2021). Phase unwrapping with a rapid opensource minimum spanning tree algorithm (ROMEO). <em>Magnetic Resonance in Medicine</em>, 85(4), 2294–2308. <a class="reference external" href="https://doi.org/10.1002/mrm.28563">https://doi.org/10.1002/mrm.28563</a></p>
+</dd>
+</dl>
+</section>
+<section id="educational-resources">
+<h3>Educational resources<a class="headerlink" href="#educational-resources" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/korbinian90/ROMEO.jl">ROMEO on GitHub</a></p></li>
+<li><p><a class="reference external" href="https://neurodesk.org">Neurodesk documentation</a></p></li>
+</ul>
+</section>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Before you begin</p>
+<p>Make sure you have access to a running Neurodesk instance. See <a class="reference external" href="https://neurodesk.org/getting-started/">Getting Set Up with Neurodesk</a> for instructions.</p>
+</div>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> A running Neurodesk environment</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Familiarity with basic terminal commands</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> No additional installation required — ROMEO is pre-installed in Neurodesk</p></li>
+</ul>
+</section>
+<section id="load-software-tools-and-download-demo-data">
+<h2>Load software tools and download demo data<a class="headerlink" href="#load-software-tools-and-download-demo-data" title="Link to this heading">#</a></h2>
+<p>We use the same demo dataset as the <a class="reference internal" href="swi.html"><span class="std std-doc">SWI tutorial</span></a>. Open a terminal in Neurodesktop and run the following commands to download the data, then copy and prepare the magnitude and phase files for ROMEO.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To paste in Neurodesktop, best to use the right click on your mouse!</p>
+</div>
+<p><img alt="The terminal in Neurodesktop" src="../../_images/neurodesktop-terminal.png">
+<em>The terminal in Neurodesktop.</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>osfclient
+<span class="nb">cd</span><span class="w"> </span>~/neurodesktop-storage/
+osf<span class="w"> </span>-p<span class="w"> </span>ru43c<span class="w"> </span>fetch<span class="w"> </span>-f<span class="w"> </span>01_bids.zip<span class="w"> </span>~/neurodesktop-storage/swi-demo/01_bids.zip
+
+unzip<span class="w"> </span>-o<span class="w"> </span>~/neurodesktop-storage/swi-demo/01_bids.zip<span class="w"> </span>-d<span class="w"> </span>~/neurodesktop-storage/swi-demo/
+</pre></div>
+</div>
+<p>Now copy the magnitude and phase files into a dedicated working directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/neurodesktop-storage/romeo-demo/
+
+cp<span class="w"> </span>~/neurodesktop-storage/swi-demo/01_bids/sub-170705134431std1312211075243167001/ses-1/anat/sub-170705134431std1312211075243167001_ses-1_run-1_part-phase_T2starw.nii<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>~/neurodesktop-storage/romeo-demo/phase.nii
+
+cp<span class="w"> </span>~/neurodesktop-storage/swi-demo/01_bids/sub-170705134431std1312211075243167001/ses-1/anat/sub-170705134431std1312211075243167001_ses-1_run-1_part-mag_T2starw.nii<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>~/neurodesktop-storage/romeo-demo/mag.nii
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The files are already uncompressed <code class="docutils literal notranslate"><span class="pre">.nii</span></code> format, which is what ROMEO expects. No need to gunzip.</p>
+</div>
+<p><img alt="Terminal output after downloading and preparing data" src="../../_images/terminal_download.png">
+<em>Terminal output after downloading and preparing the data.</em></p>
+</section>
+<section id="run-romeo-for-phase-unwrapping">
+<h2>Run ROMEO for phase unwrapping<a class="headerlink" href="#run-romeo-for-phase-unwrapping" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id1">
+<img alt="../../_images/open-romeo.png" class="hidden" src="../../_images/open-romeo.png">
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Opening ROMEO from the Neurodesk application menu.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Open the <a class="reference internal" href="#fig-open-romeo"><span class="xref myst">ROMEO tool from the Neurodesk application menu</span></a>, then run the following command in the ROMEO container terminal:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">-k</span> <span class="pre">nomask</span></code> flag disables brain masking so all voxels are unwrapped. For most applications you would want to use a brain mask — see the <a class="reference external" href="https://github.com/korbinian90/ROMEO.jl">ROMEO documentation</a> for options.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>romeo<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span>~/neurodesktop-storage/romeo-demo/phase.nii<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-m<span class="w"> </span>~/neurodesktop-storage/romeo-demo/mag.nii<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-k<span class="w"> </span>nomask<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-o<span class="w"> </span>~/neurodesktop-storage/romeo-demo/
+</pre></div>
+</div>
+<p><img alt="Terminal output after running ROMEO" src="../../_images/terminal_romeo.png">
+<em>Terminal output after running ROMEO.</em></p>
+</section>
+<section id="inspect-the-results">
+<h2>Inspect the results<a class="headerlink" href="#inspect-the-results" title="Link to this heading">#</a></h2>
+<p>The unwrapped phase image is saved in the output directory. You can verify it was created in the LXTerminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>~/neurodesktop-storage/romeo-demo/
+</pre></div>
+</div>
+<figure class="align-default" id="id2">
+<img alt="../../_images/open-itksnap.png" class="hidden" src="../../_images/open-itksnap.png">
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Opening ITK-SNAP from the Neurodesk Visualisation menu.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Open <a class="reference internal" href="#fig-unwrap-open-itksnap"><span class="xref myst">ITK-SNAP from the Neurodesk Visualisation menu</span></a> and load the original wrapped phase (<code class="docutils literal notranslate"><span class="pre">phase.nii</span></code>) alongside the unwrapped output to compare.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Look for the removal of the sharp <span class="math notranslate nohighlight">\(2\pi\)</span> jumps that were visible in the wrapped phase. The unwrapped phase should show smooth, continuous variation across the brain.</p>
+</div>
+<p><img alt="ROMEO unwrapping result — wrapped vs unwrapped phase" src="../../_images/romeo_result.png">
+<em>Comparison of wrapped (left) and unwrapped (right) phase in ITK-SNAP.</em></p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>In this tutorial you:</p>
+<ol class="arabic simple">
+<li><p>Downloaded and prepared magnitude and phase MRI data</p></li>
+<li><p>Used ROMEO to perform robust phase unwrapping</p></li>
+<li><p>Compared the wrapped and unwrapped phase images</p></li>
+</ol>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="swi.html"><span class="std std-doc">SWI tutorial</span></a> — for susceptibility-weighted imaging using the same dataset</p></li>
+<li><p><a class="reference internal" href="#qsm.ipynb"><span class="xref myst">QSM tutorial</span></a> — for quantitative susceptibility mapping with QSMxT</p></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -540,7 +737,7 @@ Twitter: <a class="reference external" href="https://twitter.com/sbollmann_MRI">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">SWI</p>
+        <p class="prev-next-title">Susceptibility-Weighted Imaging (SWI)</p>
       </div>
     </a>
     <a class="right-next" href="../programming/intro.html" title="next page">
@@ -566,10 +763,17 @@ Twitter: <a class="reference external" href="https://twitter.com/sbollmann_MRI">
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-demo-data">Download demo data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-romeo-for-phase-unwrapping">Using ROMEO for phase unwrapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-used-in-this-workflow">Tools used in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools-and-download-demo-data">Load software tools and download demo data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-romeo-for-phase-unwrapping">Run ROMEO for phase unwrapping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-results">Inspect the results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>
 

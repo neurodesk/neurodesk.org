@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -251,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -259,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -279,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -535,13 +527,22 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-notebook-analyses-with-papermill-and-slurm">Scaling Notebook Analyses with Papermill and SLURM</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools">Load software tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download">Data download</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-it-on-the-hpc">Running it on the HPC</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-test-locally-in-the-terminal">Step 1: Test locally in the terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-submit-to-the-hpc-cluster">Step 2: Submit to the HPC cluster</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -574,12 +575,47 @@
 <ul class="simple">
 <li><p>Jenkinson, M., Beckmann, C. F., Behrens, T. E. J., Woolrich, M. W., &amp; Smith, S. M. (2012). FSL. NeuroImage, 62(2), 782–790. <a class="reference external" href="https://doi.org/10.1016/j.neuroimage.2011.09.015">https://doi.org/10.1016/j.neuroimage.2011.09.015</a></p></li>
 </ul>
+<p><strong>Papermill</strong></p>
+<ul class="simple">
+<li><p>nteract. Papermill [Software]: Parameterize and execute Jupyter Notebooks. <a class="github reference external" href="https://github.com/nteract/papermill">nteract/papermill</a></p></li>
+</ul>
+<p><strong>SLURM</strong></p>
+<ul class="simple">
+<li><p>Yoo, A.B., Jette, M.A., Grondona, M. (2003). SLURM: Simple Linux Utility for Resource Management. In: Feitelson, D., Rudolph, L., Schwiegelshohn, U. (eds) Job Scheduling Strategies for Parallel Processing. JSSPP 2003. Lecture Notes in Computer Science, vol 2862. Springer, Berlin, Heidelberg. <a class="reference external" href="https://doi.org/10.1007/10968987_3">https://doi.org/10.1007/10968987_3</a></p></li>
+</ul>
 </section>
 <section id="dataset">
 <h3>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h3>
 <p><strong>MP2RAGE T1-weighted average 7T model (human brain model)</strong></p>
 <ul class="simple">
 <li><p>Bollmann, Steffen, Andrew Janke, Lars Marstaller, David Reutens, Kieran O’Brien, and Markus Barth. “MP2RAGE T1-weighted average 7T model” January 1, 2017. <a class="reference external" href="https://espace.library.uq.edu.au/view/UQ:480383">doi:10.14264/uql.2017.266</a></p></li>
+</ul>
+</section>
+<section id="educational-resources">
+<h3>Educational resources<a class="headerlink" href="#educational-resources" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://papermill.readthedocs.io/en/latest/">Papermill Documentation</a></p></li>
+<li><p><a class="reference external" href="https://papermill.readthedocs.io/_/downloads/en/latest/pdf/">Papermill Documentation downloadable version</a></p></li>
+</ul>
+</section>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<section id="scaling-notebook-analyses-with-papermill-and-slurm">
+<h3>Scaling Notebook Analyses with Papermill and SLURM<a class="headerlink" href="#scaling-notebook-analyses-with-papermill-and-slurm" title="Link to this heading">#</a></h3>
+<p>When running the same analysis across many subjects, manually re-running a notebook for each one quickly becomes impractical. Papermill solves this by allowing you to parameterise and execute Jupyter notebooks programmatically — you define which variables can be swapped out (e.g. a subject ID), and Papermill handles the rest. SLURM (Simple Linux Utility for Resource Management) is a job scheduling system used on most HPC (High Performance Computing) clusters. It allows you to submit jobs to a queue, allocating compute resources automatically across many tasks in parallel.
+This notebook demonstrates how to combine both tools: a neuroimaging analysis (brain extraction with FSL BET) is wrapped in a parameterised notebook and submitted as a SLURM job array, processing multiple subjects in parallel. As this example notebook runs on Neurodesk, Papermill does not need to be installed separately — it is pre-installed. Note that Papermill does not need to be imported in the notebook itself either
+— the only requirement is tagging the parameters cell as described below.</p>
+<p>By the end of this notebook, you will be able to:</p>
+<ul class="simple">
+<li><p>Parameterise a Jupyter notebook using Papermill cell tagging</p></li>
+<li><p>Test a parameterised notebook locally from the terminal</p></li>
+<li><p>Write a SLURM job array script to run the notebook across multiple subjects on an HPC cluster</p></li>
+</ul>
+<p><strong>Prerequisites:</strong></p>
+<ul class="simple">
+<li><p>This notebook requires a Python 3 kernel. Papermill must be called with the <code class="docutils literal notranslate"><span class="pre">-k</span></code> flag matching the registered kernelspec name on your system. On Neurodesk Play, use <code class="docutils literal notranslate"><span class="pre">-k</span> <span class="pre">python3</span></code>. Run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">kernelspec</span> <span class="pre">list</span></code> in a terminal to check available kernels on your system.</p></li>
+<li><p>Running the SLURM section requires access to an HPC cluster with SLURM. The Papermill terminal command can be tested locally without HPC access.</p></li>
 </ul>
 </section>
 </section>
@@ -600,51 +636,119 @@
 </div>
 </div>
 </div>
-</section>
-<section id="data-preparation">
-<h2>Data preparation<a class="headerlink" href="#data-preparation" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">![</span><span class="w"> </span>-f<span class="w"> </span>./mp2rage-01.nii<span class="w">  </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$FILE</span><span class="s2"> exist."</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>wget<span class="w"> </span>https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii<span class="w"> </span>-O<span class="w"> </span>./mp2rage-01.nii<span class="w"> </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+
+# Check papermill version - papermill is a Python package but is called as a 
+# command line tool here, so it does not need to be imported in the notebook
+papermill --version
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.6.0 from /opt/conda/lib/python3.13/site-packages/papermill/cli.py (3.13.9)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-download">
+<h2>Data download<a class="headerlink" href="#data-download" title="Link to this heading">#</a></h2>
+<div class="cell tag_scroll-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if the file already exists before downloading - avoids re-downloading on repeated runs</span>
+<span class="c1"># If mp2rage-01.nii exists: print "exist.", otherwise download it</span>
+<span class="o">![</span><span class="w"> </span>-f<span class="w"> </span>./mp2rage-01.nii<span class="w">  </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$FILE</span><span class="s2"> exist."</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>wget<span class="w"> </span>https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii<span class="w"> </span>-O<span class="w"> </span>./mp2rage-01.nii<span class="w"> </span>
+
+<span class="c1"># Create a second subject file by copying mp2rage-01.nii to simulate a two-subject dataset</span>
+<span class="c1"># If mp2rage-02.nii exists: print "exist.", otherwise copy from mp2rage-01.nii</span>
 <span class="o">![</span><span class="w"> </span>-f<span class="w"> </span>./mp2rage-02.nii<span class="w">  </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$FILE</span><span class="s2"> exist."</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>cp<span class="w"> </span>./mp2rage-01.nii<span class="w"> </span>./mp2rage-02.nii<span class="w"> </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-02-28 05:29:19--  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2026-04-09 04:11:24--  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
 Resolving imaging.org.au (imaging.org.au)... 203.101.229.7
 Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
-connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 1536000352 (1.4G) [application/octet-stream]
-Saving to: ‘./mp2rage-01.nii’
-
-./mp2rage-01.nii      0%[                    ]       0  --.-KB/s
-./mp2rage-01.nii      4%[                    ]  60.56M   303MB/s
-./mp2rage-01.nii      8%[&gt;                   ] 118.26M   296MB/s
-./mp2rage-01.nii     12%[=&gt;                  ] 178.83M   298MB/s
-./mp2rage-01.nii     15%[==&gt;                 ] 228.12M   285MB/s
-./mp2rage-01.nii     19%[==&gt;                 ] 281.87M   282MB/s
-./mp2rage-01.nii     24%[===&gt;                ] 351.75M   293MB/s
-./mp2rage-01.nii     29%[====&gt;               ] 429.01M   306MB/s
-./mp2rage-01.nii     35%[======&gt;             ] 518.69M   324MB/s
-./mp2rage-01.nii     41%[=======&gt;            ] 609.30M   338MB/s
-./mp2rage-01.nii     46%[========&gt;           ] 680.94M   340MB/s
-./mp2rage-01.nii     50%[=========&gt;          ] 735.37M   334MB/s
-./mp2rage-01.nii     54%[=========&gt;          ] 803.22M   335MB/s
-./mp2rage-01.nii     59%[==========&gt;         ] 864.98M   333MB/s
-./mp2rage-01.nii     63%[===========&gt;        ] 932.01M   333MB/s
-./mp2rage-01.nii     67%[============&gt;       ] 994.23M   331MB/s    eta 1s
-./mp2rage-01.nii     72%[=============&gt;      ]   1.03G   331MB/s    eta 1s
-./mp2rage-01.nii     75%[==============&gt;     ]   1.08G   326MB/s    eta 1s
-./mp2rage-01.nii     79%[==============&gt;     ]   1.13G   326MB/s    eta 1s
-./mp2rage-01.nii     84%[===============&gt;    ]   1.20G   333MB/s    eta 1s
-./mp2rage-01.nii     90%[=================&gt;  ]   1.30G   345MB/s    eta 0s
-./mp2rage-01.nii     94%[=================&gt;  ]   1.35G   343MB/s    eta 0s
-./mp2rage-01.nii     97%[==================&gt; ]   1.40G   337MB/s    eta 0s
-./mp2rage-01.nii    100%[===================&gt;]   1.43G   329MB/s    in 4.5s    
-
-2026-02-28 05:29:39 (325 MB/s) - ‘./mp2rage-01.nii’ saved [1536000352/1536000352]
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:13:36--  (try: 2)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:15:48--  (try: 3)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:18:02--  (try: 4)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:20:16--  (try: 5)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:22:33--  (try: 6)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:24:49--  (try: 7)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:27:05--  (try: 8)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:29:23--  (try: 9)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:31:41--  (try:10)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:34:02--  (try:11)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:36:21--  (try:12)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:38:40--  (try:13)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:40:59--  (try:14)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:43:19--  (try:15)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:45:38--  (try:16)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:47:57--  (try:17)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:50:16--  (try:18)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:52:36--  (try:19)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Retrying.
+--2026-04-09 04:54:55--  (try:20)  https://imaging.org.au/uploads/Human7T/mp2rageModel_L13_work03-plus-hippocampus-7T-sym-norm-mincanon_v0.8.nii
+Connecting to imaging.org.au (imaging.org.au)|203.101.229.7|:443...
+failed: Connection timed out.
+Giving up.
 </pre></div>
 </div>
 </div>
@@ -654,7 +758,11 @@ Saving to: ‘./mp2rage-01.nii’
 <h2>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
 <div class="cell tag_parameters docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This cell needs to be tagged as "parameters" and it will be replaced at runtime - this can be done by clicking the little cog-wheels in the top right and then tagging the cell</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This cell defines the analysis parameters. It must be tagged as "parameters" </span>
+<span class="c1"># so Papermill can inject new values at runtime (e.g. a different subject ID).</span>
+<span class="c1"># To tag this cell in JupyterLab: click the property inspector (⚙️ icon, right sidebar),</span>
+<span class="c1"># type "parameters" in the Add Tag box and press Enter.</span>
+
 <span class="n">subject_id</span><span class="o">=</span><span class="s1">'01'</span>
 </pre></div>
 </div>
@@ -662,7 +770,27 @@ Saving to: ‘./mp2rage-01.nii’
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>bet<span class="w"> </span>mp2rage-<span class="o">{</span>subject_id<span class="o">}</span>.nii<span class="w"> </span>mask-sub-<span class="o">{</span>subject_id<span class="o">}</span>.nii<span class="w"> </span>-R
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run FSL BET (Brain Extraction Tool) with robust brain centre estimation (-R flag) on the mp2rage image for the current subject.</span>
+<span class="c1"># This strips the skull and produces a brain mask saved as mask-sub-{subject_id}.nii</span>
+
+<span class="o">!</span>bet<span class="w"> </span>mp2rage-<span class="o">{</span>subject_id<span class="o">}</span>.nii<span class="w"> </span>mask-sub-<span class="o">{</span>subject_id<span class="o">}</span>.nii<span class="w"> </span>-R
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error: short read, file may be truncated
+Error: short read, file may be truncated
+Error: short read, file may be truncated
+Error: short read, file may be truncated
+Error: short read, file may be truncated
+Error: short read, file may be truncated
+Image Exception : #22 :: Failed to read volume mp2rage-01
+Error : Error: short read, file may be truncated
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Failed to read volume mp2rage-01
+Error : Error: short read, file may be truncated
+/opt/fsl-6.0.4/bin/bet: line 399:  7174 Aborted                 (core dumped) ${FSLDIR}/bin/bet2 $IN $OUT $bet2opts
+/opt/fsl-6.0.4/bin/bet failed during command:mp2rage-01.nii mask-sub-01.nii -R
 </pre></div>
 </div>
 </div>
@@ -670,61 +798,153 @@ Saving to: ‘./mp2rage-01.nii’
 </section>
 <section id="running-it-on-the-hpc">
 <h2>Running it on the HPC<a class="headerlink" href="#running-it-on-the-hpc" title="Link to this heading">#</a></h2>
+<section id="step-1-test-locally-in-the-terminal">
+<h3>Step 1: Test locally in the terminal<a class="headerlink" href="#step-1-test-locally-in-the-terminal" title="Link to this heading">#</a></h3>
+<p>Before submitting to the cluster, test that Papermill runs the notebook correctly for a single subject. Save the notebook, open a <strong>terminal</strong>, navigate to this notebook’s directory, and run the following command.</p>
+<p>Run this cell to check your available kernels:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save Notebook and Run this on the terminal to test</span>
-<span class="c1"># papermill papermill-slurm-submission-example.ipynb papermill_output.ipynb --parameters_raw subject_id 02</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>jupyter<span class="w"> </span>kernelspec<span class="w"> </span>list
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available kernels:
+  python3    /opt/conda/share/jupyter/kernels/python3
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Note:</strong> Set the <code class="docutils literal notranslate"><span class="pre">-k</span> <span class="pre">flag</span></code> to specify the kernel to use. On Neurodesk, use <code class="docutils literal notranslate"><span class="pre">-k</span> <span class="pre">python3</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create sbat file with the following content and make sure to replace account string and and execution times and modules loaded:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># papermill papermill-slurm-submission-example.ipynb papermill_output.ipynb --parameters_raw subject_id 02 -k python3</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Once the command completes, Papermill creates <code class="docutils literal notranslate"><span class="pre">papermill_output.ipynb</span></code> — a fully executed copy of the notebook where the injected parameters cell has been set to <code class="docutils literal notranslate"><span class="pre">subject_id</span> <span class="pre">=</span> <span class="pre">"02"</span></code> and all cells have been run in sequence.</p>
+<p>Note that the data preparation cells will also re-run, though the download  will be skipped if the files already exist. This output notebook serves as  a reproducible record of that specific run.</p>
+</section>
+<section id="step-2-submit-to-the-hpc-cluster">
+<h3>Step 2: Submit to the HPC cluster<a class="headerlink" href="#step-2-submit-to-the-hpc-cluster" title="Link to this heading">#</a></h3>
+<p>Create sbat file and save the following content as <code class="docutils literal notranslate"><span class="pre">papermill.sbat</span></code>, adapting the account, time limit, and modules to match your cluster environment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># --- Job settings ---</span>
+<span class="c1">#SBATCH --job-name=papermill_analysis       # Name shown in the job queue</span>
+<span class="c1">#SBATCH --output=papermill_%A_%a.out        # Standard output log (%A = job ID, %a = array index)</span>
+<span class="c1">#SBATCH --error=papermill_%A_%a.err         # Error log</span>
+<span class="c1">#SBATCH --time=00:05:00                     # Maximum runtime (hh:mm:ss) - adjust to your analysis</span>
+<span class="c1">#SBATCH --nodes=1                           # Number of compute nodes</span>
+<span class="c1">#SBATCH --ntasks-per-node=1                 # Tasks per node</span>
+<span class="c1">#SBATCH --cpus-per-task=4                   # CPU cores per task</span>
+<span class="c1">#SBATCH --mem=20G                           # Memory per job</span>
+<span class="c1">#SBATCH --partition=general                 # Cluster partition to use - check with your HPC admins</span>
+<span class="c1">#SBATCH --account=a_barth                   # Your HPC account - replace with your own</span>
+<span class="c1">#SBATCH --array=1-2                         # Job array: one job per subject (here: 2 subjects)</span>
+
+
+<span class="c1"># --- Load modules ---</span>
+<span class="c1"># Load the same modules active in your Jupyter session.</span>
+<span class="c1"># Find out which modules you have loaded by running "ml" in the terminal.</span>
+module<span class="w"> </span>load<span class="w"> </span>julia/1.10.4
+module<span class="w"> </span>load<span class="w"> </span>openssl/1.1
+module<span class="w"> </span>load<span class="w"> </span>python/3.10.4-gcccore-11.3.0
+module<span class="w"> </span>load<span class="w"> </span>libxslt/1.1.34-gcccore-11.3.0
+module<span class="w"> </span>load<span class="w"> </span>lxml/4.9.1-gcccore-11.3.0
+module<span class="w"> </span>load<span class="w"> </span>beautifulsoup/4.10.0-gcccore-11.3.0
+module<span class="w"> </span>load<span class="w"> </span>jupyter-server/1.21.0-gcccore-11.3.0
+module<span class="w"> </span>load<span class="w"> </span>jupyterlab/3.5.0-gcccore-11.3.0
+
+<span class="c1"># --- Setup ---</span>
+<span class="c1"># Create output directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>papermill_outputs
+
+<span class="c1"># --- Subject selection ---</span>
+<span class="c1"># Define the list of subject IDs to process</span>
+<span class="nv">subjects</span><span class="o">=(</span><span class="m">01</span><span class="w"> </span><span class="m">02</span><span class="o">)</span>
+
+<span class="c1"># SLURM_ARRAY_TASK_ID is automatically set by SLURM (1 for first job, 2 for second, etc.)</span>
+<span class="c1"># This maps the array index to the corresponding subject ID</span>
+<span class="nv">subject_id</span><span class="o">=</span><span class="si">${</span><span class="nv">subjects</span><span class="p">[</span><span class="k">$((</span><span class="nv">SLURM_ARRAY_TASK_ID</span><span class="o">-</span><span class="m">1</span><span class="k">))</span><span class="p">]</span><span class="si">}</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Processing subject: </span><span class="nv">$subject_id</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Job ID: </span><span class="nv">$SLURM_JOB_ID</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Array Task ID: </span><span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Started at: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">"</span>
+
+<span class="c1"># --- Run Papermill ---</span>
+<span class="c1"># Execute the notebook for this subject, saving the output as a separate notebook</span>
+papermill<span class="w"> </span>papermill-slurm-submission-example.ipynb<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>papermill_outputs/papermill_output_sub-<span class="si">${</span><span class="nv">subject_id</span><span class="si">}</span>.ipynb<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--parameters_raw<span class="w"> </span>subject_id<span class="w"> </span><span class="si">${</span><span class="nv">subject_id</span><span class="si">}</span>
+
+<span class="c1"># --- Check result ---</span>
+<span class="c1"># $? holds the exit code of the last command (0 = success, anything else = failure)</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Successfully processed subject </span><span class="nv">$subject_id</span><span class="s2">"</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"ERROR: Failed to process subject </span><span class="nv">$subject_id</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Completed subject </span><span class="nv">$subject_id</span><span class="s2"> at </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">"</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#then run the sbat file:</span>
-<span class="c1">#sbatch papermill.sbat</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Submit the job to SLURM by running this command in the terminal:</span>
+<span class="c1"># sbatch papermill.sbat</span>
 </pre></div>
 </div>
 </div>
 </div>
 <section id="dependencies-in-jupyter-python">
-<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
+<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-28T05:32:05.128210+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T04:57:07.779556+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
+
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -792,13 +1012,22 @@ Architecture: 64bit
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-notebook-analyses-with-papermill-and-slurm">Scaling Notebook Analyses with Papermill and SLURM</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools">Load software tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-download">Data download</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-it-on-the-hpc">Running it on the HPC</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-test-locally-in-the-terminal">Step 1: Test locally in the terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-submit-to-the-hpc-cluster">Step 2: Submit to the HPC cluster</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

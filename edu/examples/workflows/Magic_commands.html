@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -251,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -259,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -279,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -540,30 +532,40 @@
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Magic Commands</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-magics">2. Line Magics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-magics">2.1 Information Magics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lsmagic">%lsmagic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic">%magic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickref">%quickref</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-operation-magics-and-alternatives">2.2 Directory Operation Magics and Alternatives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd">%pwd</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">%ls</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">%mkdir</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir">%rmdir</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">%cd</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bookmark">%bookmark</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-magics">2.1 Information Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lsmagic">%lsmagic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#magic">%magic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quickref">%quickref</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-operation-magics">2.3. System Operation Magics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-magic">%pip magic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-operation-magics-and-alternatives">2.2 Directory Operation Magics and Alternatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd">%pwd</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">%ls</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">%mkdir</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir">%rmdir</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">%cd</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bookmark">%bookmark</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#system-operation-magics">2.3. System Operation Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-magic">%pip magic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#debug-magic">%debug magic</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magics-on-python-files">2.4. Magics on Python files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-magics">2.5. Variable Magics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-whos-and-who-ls">%who, %whos and %who_ls</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timing-magics">2.6. Timing Magics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-magic">%time magic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeit">%timeit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#history-magics">History magics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-magics">2.5. Variable Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#who-whos-and-who-ls">%who, %whos and %who_ls</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timing-magics">2.6. Timing Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-magic">%time magic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#timeit">%timeit</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#history-magics">2.7. History magics</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-magics">3. Cell Magics</a><ul class="nav section-nav flex-column">
@@ -574,15 +576,16 @@
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-magics">3.2. Programming Magics</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-r-in-jupyter-notebooks">Running R in Jupyter Notebooks:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-python-kernel">1. Use Python Kernel</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-native-r-kernel">2. Use a native R kernel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-python-kernel">3.2.1. Use Python Kernel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-native-r-kernel">3.2.2. Use a native R kernel</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#which-approach-should-you-use">Which approach should you use?</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magics-on-python">3.3. Magics on Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magics-on-python">3.3. Magics on Python</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-magic-commands">4. Custom Magic Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>
@@ -631,9 +634,13 @@
 </section>
 </section>
 </section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>This notebook provides a practical guide to using magic commands in Jupyter Notebooks, covering the most commonly used line and cell magics along with their alternatives.</p>
+</section>
 <section id="id1">
 <h2>1. Magic Commands<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p>Magic commands, often referred to as magics, are special commands available in the IPython kernel that streamline various tasks, such as connecting Python with the operating system, other languages, or different kernels. Jupyter notebooks offer a wide range of these commands, which are generally categorized into two groups:</p>
+<p>Magic commands, often referred to as magics, are special commands available in the IPython kernel (the computational engine that executes code in Jupyter Notebooks and is included by default) that streamline various tasks, such as connecting Python with the operating system, other languages, or different kernels. Jupyter notebooks offer a wide range of these commands, which are generally categorized into two groups:</p>
 <ul class="simple">
 <li><p>Line magics: commands that affect a single line within a cell</p></li>
 <li><p>Cell magics: commands that operate on the entire cell</p></li>
@@ -652,9 +659,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">%quickref</span></code></p></li>
 </ul>
 <p>that provide information about the available magic commands in the notebook.</p>
-</section>
 <section id="lsmagic">
-<h3>%lsmagic<a class="headerlink" href="#lsmagic" title="Link to this heading">#</a></h3>
+<h4>%lsmagic<a class="headerlink" href="#lsmagic" title="Link to this heading">#</a></h4>
 <p>Gives a list of all available magic commands in the Jupyter Notebook, including both line and cell magics.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -676,7 +682,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </section>
 <section id="magic">
-<h3>%magic<a class="headerlink" href="#magic" title="Link to this heading">#</a></h3>
+<h4>%magic<a class="headerlink" href="#magic" title="Link to this heading">#</a></h4>
 <p>Prints a list of all available magic commands and their descriptions.</p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
@@ -687,7 +693,7 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </section>
 <section id="quickref">
-<h3>%quickref<a class="headerlink" href="#quickref" title="Link to this heading">#</a></h3>
+<h4>%quickref<a class="headerlink" href="#quickref" title="Link to this heading">#</a></h4>
 <p>Gives a quick reference of the magic commands available in the Jupyter Notebook.</p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
@@ -697,12 +703,12 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </div>
 </section>
+</section>
 <section id="directory-operation-magics-and-alternatives">
 <h3>2.2 Directory Operation Magics and Alternatives<a class="headerlink" href="#directory-operation-magics-and-alternatives" title="Link to this heading">#</a></h3>
 <p>Certain magic commands allow interaction with the operating system, enabling tasks like displaying the contents of a directory or switching the current working directory. The following are some of the most commonly used commands for these purposes:</p>
-</section>
 <section id="pwd">
-<h3>%pwd<a class="headerlink" href="#pwd" title="Link to this heading">#</a></h3>
+<h4>%pwd<a class="headerlink" href="#pwd" title="Link to this heading">#</a></h4>
 <p>As its name suggests, this magic command prints the current working directory of the Jupyter Notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -730,10 +736,10 @@ Automagic is ON, % prefix IS NOT needed for line magics.
 </div>
 </div>
 <p>The difference between the two commands on Linux is that <code class="docutils literal notranslate"><span class="pre">%pwd</span></code> is provided by the IPython kernel, while <code class="docutils literal notranslate"><span class="pre">!pwd</span></code> is provided by Jupyter, which allows shell commands to be run within cells.
-However, on Windows, <code class="docutils literal notranslate"><span class="pre">!pwd</span></code> is not recognized as an internal or external command, operable program or batch file, so it is not a valid alternative to <code class="docutils literal notranslate"><span class="pre">%pwd</span></code>.</p>
+However, on Windows using the default Command Prompt, <code class="docutils literal notranslate"><span class="pre">!pwd</span></code> is not a valid alternative to <code class="docutils literal notranslate"><span class="pre">%pwd</span></code> as it is not a recognised command.</p>
 </section>
 <section id="ls">
-<h3>%ls<a class="headerlink" href="#ls" title="Link to this heading">#</a></h3>
+<h4>%ls<a class="headerlink" href="#ls" title="Link to this heading">#</a></h4>
 <p>This command is used to list the files and directories in the current working directory. We can also use <code class="docutils literal notranslate"><span class="pre">!ls</span></code> command in Linux, but again, it is not recognized on Windows.</p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
@@ -773,37 +779,52 @@ bids_conversion.ipynb         pydra_preproc_ants.ipynb
 </div>
 </section>
 <section id="mkdir">
-<h3>%mkdir<a class="headerlink" href="#mkdir" title="Link to this heading">#</a></h3>
+<h4>%mkdir<a class="headerlink" href="#mkdir" title="Link to this heading">#</a></h4>
 <p>This magic command is used to create a new directory in the current working directory.
-If the directory already exists, it will raise an error.</p>
+If the directory already exists, it will raise an error. To avoid this, use <code class="docutils literal notranslate"><span class="pre">%mkdir</span> <span class="pre">-p</span> <span class="pre">data_dir</span></code>, which skips creation if the directory already exists.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">mkdir</span> data_dir
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this will create the directory</span>
+<span class="o">%</span><span class="k">mkdir</span> data_dir
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now it will raise an error</span>
+<span class="o">%</span><span class="k">mkdir</span> data_dir
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: cannot create directory ‘data_dir’: File exists
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># if the directory already exists, it does nothing and exits without an error</span>
+<span class="o">%</span><span class="k">mkdir</span> -p data_dir
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="rmdir">
-<h3>%rmdir<a class="headerlink" href="#rmdir" title="Link to this heading">#</a></h3>
-<p>This magic command does the opposite and is used to remove a directory in the current working directory.</p>
+<h4>%rmdir<a class="headerlink" href="#rmdir" title="Link to this heading">#</a></h4>
+<p>This magic command does the opposite and is used to remove a directory in the current working directory. <code class="docutils literal notranslate"><span class="pre">%rmdir</span></code> can only remove empty directories. To remove a directory and all its contents, use <code class="docutils literal notranslate"><span class="pre">!rm</span> <span class="pre">-rf</span> <span class="pre">data_dir</span></code> instead.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">rmdir</span> data_dir
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>data_dir
 </pre></div>
 </div>
 </div>
 </div>
-<blockquote>
-<div><p>In Jupyter notebooks, the <code class="docutils literal notranslate"><span class="pre">%mkdir</span></code> and <code class="docutils literal notranslate"><span class="pre">%rmdir</span></code> magic commands have limited functionality:
-<code class="docutils literal notranslate"><span class="pre">%mkdir</span></code> will raise an error if the directory already exists, and <code class="docutils literal notranslate"><span class="pre">%rmdir</span></code> can only remove empty directories.</p>
-<p>To safely create a directory without error if it exists, or to remove a directory and all its contents, you can use shell commands with the <code class="docutils literal notranslate"><span class="pre">!</span></code> operator.</p>
-<p>For example, <code class="docutils literal notranslate"><span class="pre">!mkdir</span> <span class="pre">-p</span> <span class="pre">data_dir</span></code> will create the directory only if it does not already exist, and <code class="docutils literal notranslate"><span class="pre">!rm</span> <span class="pre">-rf</span> <span class="pre">data_dir</span></code> will remove the directory and all its contents.</p>
-<p>These commands can be used directly in notebook cells as a more robust alternative to the magic commands.</p>
-</div></blockquote>
 </section>
 <section id="cd">
-<h3>%cd<a class="headerlink" href="#cd" title="Link to this heading">#</a></h3>
+<h4>%cd<a class="headerlink" href="#cd" title="Link to this heading">#</a></h4>
 <p>This magic command is used to change the current working directory to a specified path.
 The shell command <code class="docutils literal notranslate"><span class="pre">!cd</span></code> works both on Linux and Windows.</p>
 <blockquote>
@@ -811,7 +832,7 @@ The shell command <code class="docutils literal notranslate"><span class="pre">!
 </div></blockquote>
 </section>
 <section id="bookmark">
-<h3>%bookmark<a class="headerlink" href="#bookmark" title="Link to this heading">#</a></h3>
+<h4>%bookmark<a class="headerlink" href="#bookmark" title="Link to this heading">#</a></h4>
 <p>This magic command is used to create a bookmark, an alias, for a directory, which can be used later to quickly navigate to that directory.
 We can run <code class="docutils literal notranslate"><span class="pre">%bookmark?</span></code>to see more options. This magic is especially useful for frequently changing between different directories.</p>
 <div class="cell docutils container">
@@ -821,7 +842,7 @@ We can run <code class="docutils literal notranslate"><span class="pre">%bookmar
 </div>
 </div>
 </div>
-<p>Let’s make a new directory named <code class="docutils literal notranslate"><span class="pre">test</span></code>, switch to it, and set a bookmark for easy access and change directory back to the current working directory.</p>
+<p>Let’s create a new directory named <code class="docutils literal notranslate"><span class="pre">test</span></code> and set a bookmark for easy access.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span> <span class="o">=</span> <span class="o">%</span><span class="k">pwd</span>
@@ -838,50 +859,28 @@ We can run <code class="docutils literal notranslate"><span class="pre">%bookmar
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> test
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">bookmark</span> test_bookmark test
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> test_bookmark
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/workspace/books/examples/workflows/test
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(bookmark:test_bookmark) -&gt; test
+/home/jovyan/workspace/books/examples/workflows/test
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">bookmark</span> test
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> $pwd
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/workspace/books/examples/workflows
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> test
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/jovyan/workspace/books/examples/workflows/test
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> $pwd
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># return to the original directory</span>
+<span class="o">%</span><span class="k">cd</span> $pwd
 </pre></div>
 </div>
 </div>
@@ -894,10 +893,10 @@ We can run <code class="docutils literal notranslate"><span class="pre">%bookmar
 </section>
 </section>
 <section id="system-operation-magics">
-<h2>2.3. System Operation Magics<a class="headerlink" href="#system-operation-magics" title="Link to this heading">#</a></h2>
+<h3>2.3. System Operation Magics<a class="headerlink" href="#system-operation-magics" title="Link to this heading">#</a></h3>
 <p>There are some magics for system opeartions, such as package installation or checking package versions and other information.</p>
 <section id="pip-magic">
-<h3>%pip magic<a class="headerlink" href="#pip-magic" title="Link to this heading">#</a></h3>
+<h4>%pip magic<a class="headerlink" href="#pip-magic" title="Link to this heading">#</a></h4>
 <p>It is used to install Python packages in the Jupyter Notebook. It can be used the following way:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">pip</span> <span class="n">intall</span> <span class="o">&lt;</span><span class="n">packageName</span><span class="o">&gt;</span>
 </pre></div>
@@ -911,11 +910,16 @@ We can run <code class="docutils literal notranslate"><span class="pre">%bookmar
 <span class="err">!</span><span class="n">pip</span> <span class="n">show</span> <span class="o">&lt;</span><span class="n">packageName</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Besides, it also works without % and !:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">packageName</span><span class="o">&gt;</span>
-<span class="n">pip</span> <span class="n">show</span> <span class="o">&lt;</span><span class="n">packageName</span><span class="o">&gt;</span>
-</pre></div>
-</div>
+</section>
+<section id="debug-magic">
+<h4>%debug magic<a class="headerlink" href="#debug-magic" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">%debug</span></code> opens an interactive <code class="docutils literal notranslate"><span class="pre">ipdb</span></code> debugger (IPython’s extended version of Python’s standard <code class="docutils literal notranslate"><span class="pre">pdb</span></code> debugger) at the last traceback. It supports two modes:</p>
+<ul class="simple">
+<li><p><strong>Post-mortem mode</strong>: Call <code class="docutils literal notranslate"><span class="pre">%debug</span></code> after an exception has occurred to inspect what went wrong at the point of failure. This is the most common use case.</p></li>
+<li><p><strong>Breakpoint mode</strong>: Call <code class="docutils literal notranslate"><span class="pre">%debug</span> <span class="pre">--breakpoint</span> <span class="pre">FILE:LINE</span></code> to pause execution at a specific line in a file and step through the code from that point.</p></li>
+</ul>
+<p>Once in the <code class="docutils literal notranslate"><span class="pre">ipdb&gt;</span></code> prompt, standard debugger commands are available such as <code class="docutils literal notranslate"><span class="pre">n</span></code> (next line), <code class="docutils literal notranslate"><span class="pre">s</span></code> (step into), <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">&lt;variable&gt;</span></code> (print variable), and <code class="docutils literal notranslate"><span class="pre">q</span></code> (quit). See the <a class="reference external" href="https://www.python4data.science/en/24.3.0/workspace/ipython/debugging.html">Python debugging documentation</a> for a full list of commands.</p>
+</section>
 </section>
 <section id="magics-on-python-files">
 <h3>2.4. Magics on Python files<a class="headerlink" href="#magics-on-python-files" title="Link to this heading">#</a></h3>
@@ -930,9 +934,8 @@ We can run <code class="docutils literal notranslate"><span class="pre">%bookmar
 </section>
 <section id="variable-magics">
 <h3>2.5. Variable Magics<a class="headerlink" href="#variable-magics" title="Link to this heading">#</a></h3>
-</section>
 <section id="who-whos-and-who-ls">
-<h3>%who, %whos and %who_ls<a class="headerlink" href="#who-whos-and-who-ls" title="Link to this heading">#</a></h3>
+<h4>%who, %whos and %who_ls<a class="headerlink" href="#who-whos-and-who-ls" title="Link to this heading">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">who</span></code> and <code class="docutils literal notranslate"><span class="pre">whos</span></code> are used to list the variables in the current namespace; <code class="docutils literal notranslate"><span class="pre">%whos</span></code> gives more detailed information about the variables, such as their type.
 <code class="docutils literal notranslate"><span class="pre">who_ls</span></code> is an alternative command that returns a sorted list of all interactive variables in the current namespace as a list.</p>
 <div class="cell docutils container">
@@ -998,12 +1001,12 @@ pwd        str      /home/jovyan/workspace/books/examples/workflows
 </div>
 </div>
 </section>
+</section>
 <section id="timing-magics">
 <h3>2.6. Timing Magics<a class="headerlink" href="#timing-magics" title="Link to this heading">#</a></h3>
 <p>There are two timing magics that can be used to measure the execution time of a line of code.</p>
-</section>
 <section id="time-magic">
-<h3>%time magic<a class="headerlink" href="#time-magic" title="Link to this heading">#</a></h3>
+<h4>%time magic<a class="headerlink" href="#time-magic" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">%time</span></code> magic measures the execution time of a single run of the code. It gives you the information about the wall time of execution.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1012,15 +1015,15 @@ pwd        str      /home/jovyan/workspace/books/examples/workflows
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 921 μs, sys: 0 ns, total: 921 μs
-Wall time: 926 μs
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 1.13 ms, sys: 238 μs, total: 1.37 ms
+Wall time: 1.38 ms
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="timeit">
-<h3>%timeit<a class="headerlink" href="#timeit" title="Link to this heading">#</a></h3>
+<h4>%timeit<a class="headerlink" href="#timeit" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">%timeit</span></code> magic uses the Python timeit module, which runs a statement of 7 runs, 1000 loops each and then provides the best of each iteration in each round and gives time measurement with the range of standard deviation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1029,14 +1032,15 @@ Wall time: 926 μs
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>562 μs ± 29.9 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>639 μs ± 93 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+</section>
 <section id="history-magics">
-<h3>History magics<a class="headerlink" href="#history-magics" title="Link to this heading">#</a></h3>
+<h3>2.7. History magics<a class="headerlink" href="#history-magics" title="Link to this heading">#</a></h3>
 <p>The %<code class="docutils literal notranslate"><span class="pre">history</span></code> magic is used to display the command history of the Jupyter Notebook. It can be limited to a specific number of lines or a specific range of lines.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1066,8 +1070,6 @@ Wall time: 926 μs
 0: /home/jovyan/workspace/books/examples/workflows
 1: /home/jovyan/workspace/books/examples/workflows/test
 2: /home/jovyan/workspace/books/examples/workflows
-3: /home/jovyan/workspace/books/examples/workflows/test
-4: /home/jovyan/workspace/books/examples/workflows
 </pre></div>
 </div>
 </div>
@@ -1167,7 +1169,7 @@ test
 <p>The differences between these methods are that we can run Python code and R in the same Jupyter notebook for the first method, while we can only run R code in a separate Jupyter notebook for the second method.</p>
 </section>
 <section id="use-python-kernel">
-<h4>1. Use Python Kernel<a class="headerlink" href="#use-python-kernel" title="Link to this heading">#</a></h4>
+<h4>3.2.1. Use Python Kernel<a class="headerlink" href="#use-python-kernel" title="Link to this heading">#</a></h4>
 <p><strong>Install R runtime and packages via mamba:</strong></p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
@@ -1180,57 +1182,66 @@ test
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l[+] 0.0s
 ?25h?25l[+] 0.0s
 [+] 0.1s
-conda-forge/linux-64 <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━╸</span>━━━━━━━━━   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
-conda-forge/noarch   ━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
+conda-forge/linux-64 ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
+conda-forge/noarch   ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
 [+] 0.2s
-conda-forge/linux-64 <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━╸</span>━━━━━━━━   0.0 B /  ??.?MB @  ??.?MB/s  0.1s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━   0.0 B /  24.9MB @  ??.?MB/s  0.1s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━ 347.4kB /  52.4MB @   1.9MB/s  0.1s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━ 118.6kB /  25.6MB @ 651.2kB/s  0.1s
 [+] 0.3s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━ 988.2kB /  51.4MB @   3.9MB/s  0.2s
-conda-forge/noarch   ╸━━━━━━━━━━━━━━━━━━━━━━   1.9MB /  24.9MB @   7.6MB/s  0.2s
+conda-forge/linux-64 ╸━━━━━━━━━━━━━━━━━━━━━━   2.7MB /  52.4MB @   9.1MB/s  0.2s
+conda-forge/noarch   ╸━━━━━━━━━━━━━━━━━━━━━━   2.0MB /  25.6MB @   6.9MB/s  0.2s
 [+] 0.4s
-conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   5.4MB /  51.4MB @  15.2MB/s  0.3s
-conda-forge/noarch   ━━━━╸━━━━━━━━━━━━━━━━━━   6.5MB /  24.9MB @  18.1MB/s  0.3s
+conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   4.1MB /  52.4MB @  13.8MB/s  0.3s
+conda-forge/noarch   ━━╸━━━━━━━━━━━━━━━━━━━━   3.6MB /  25.6MB @  10.4MB/s  0.3s
 [+] 0.5s
-conda-forge/linux-64 ━━━╸━━━━━━━━━━━━━━━━━━━   9.6MB /  51.4MB @  20.8MB/s  0.4s
-conda-forge/noarch   ━━━━━━━━╸━━━━━━━━━━━━━━  10.5MB /  24.9MB @  22.9MB/s  0.4s
+conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   6.9MB /  52.4MB @  15.4MB/s  0.4s
+conda-forge/noarch   ━━━━╸━━━━━━━━━━━━━━━━━━   6.4MB /  25.6MB @  14.3MB/s  0.4s
 [+] 0.6s
-conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.1MB /  51.4MB @  24.8MB/s  0.5s
-conda-forge/noarch   ━━━━━━━━━━━━╸━━━━━━━━━━  15.0MB /  24.9MB @  26.5MB/s  0.5s
+conda-forge/linux-64 ━━━╸━━━━━━━━━━━━━━━━━━━   9.8MB /  52.4MB @  17.7MB/s  0.5s
+conda-forge/noarch   ━━━━━━━╸━━━━━━━━━━━━━━━   9.2MB /  25.6MB @  16.6MB/s  0.5s
 [+] 0.7s
-conda-forge/linux-64 ━━━━━━━╸━━━━━━━━━━━━━━━  18.5MB /  51.4MB @  27.5MB/s  0.6s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━╸━━━━━━  19.4MB /  24.9MB @  28.9MB/s  0.6s
+conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  12.6MB /  52.4MB @  19.0MB/s  0.6s
+conda-forge/noarch   ━━━━━━━━━╸━━━━━━━━━━━━━  11.9MB /  25.6MB @  18.0MB/s  0.6s
 [+] 0.8s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  22.2MB /  51.4MB @  28.6MB/s  0.7s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━╸━━  23.1MB /  24.9MB @  29.7MB/s  0.7s
+conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  15.4MB /  52.4MB @  20.0MB/s  0.7s
+conda-forge/noarch   ━━━━━━━━━━━━╸━━━━━━━━━━  14.7MB /  25.6MB @  19.2MB/s  0.7s
 [+] 0.9s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  22.2MB /  51.4MB @  28.6MB/s  0.8s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━  24.9MB /  24.9MB @  30.1MB/s  0.8s
+conda-forge/linux-64 ━━━━━━╸━━━━━━━━━━━━━━━━  18.1MB /  52.4MB @  20.5MB/s  0.8s
+conda-forge/noarch   ━━━━━━━━━━━━━━╸━━━━━━━━  17.4MB /  25.6MB @  19.9MB/s  0.8s
 [+] 1.0s
-conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  22.2MB /  51.4MB @  28.6MB/s  0.9s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━  24.9MB /  24.9MB @  30.1MB/s  0.9s
-conda-forge/noarch                                  24.9MB @  30.1MB/s  1.0s
+conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.4MB /  52.4MB @  21.8MB/s  0.9s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━╸━━━━━  20.8MB /  25.6MB @  21.2MB/s  0.9s
 [+] 1.1s
-conda-forge/linux-64 ━━━━━━━━━╸━━━━━━━━━━━━━  24.2MB /  51.4MB @  22.2MB/s  1.0s
+conda-forge/linux-64 ━━━━━━━━━╸━━━━━━━━━━━━━  24.1MB /  52.4MB @  22.2MB/s  1.0s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━╸━━  23.6MB /  25.6MB @  21.6MB/s  1.0s
 [+] 1.2s
-conda-forge/linux-64 ━━━━━━━━━━━╸━━━━━━━━━━━  29.0MB /  51.4MB @  24.3MB/s  1.1s
+conda-forge/linux-64 ━━━━━━━━━━╸━━━━━━━━━━━━  25.4MB /  52.4MB @  22.3MB/s  1.1s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  25.0MB /  25.6MB @  21.7MB/s  1.1s
 [+] 1.3s
-conda-forge/linux-64 ━━━━━━━━━━━━━╸━━━━━━━━━  32.9MB /  51.4MB @  26.4MB/s  1.2s
+conda-forge/linux-64 ━━━━━━━━━━╸━━━━━━━━━━━━  25.4MB /  52.4MB @  22.3MB/s  1.2s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  25.0MB /  25.6MB @  21.7MB/s  1.2s
+conda-forge/noarch                                  25.6MB @  21.7MB/s  1.3s
 [+] 1.4s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━╸━━━━━  40.7MB /  51.4MB @  30.2MB/s  1.3s
+conda-forge/linux-64 ━━━━━━━━━━╸━━━━━━━━━━━━  26.4MB /  52.4MB @  19.4MB/s  1.3s
 [+] 1.5s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  51.4MB @  34.1MB/s  1.4s
+conda-forge/linux-64 ━━━━━━━━━━━━╸━━━━━━━━━━  30.9MB /  52.4MB @  21.1MB/s  1.4s
 [+] 1.6s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  51.4MB @  34.1MB/s  1.5s
+conda-forge/linux-64 ━━━━━━━━━━━━━━╸━━━━━━━━  35.3MB /  52.4MB @  22.5MB/s  1.5s
 [+] 1.7s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  51.4MB @  34.1MB/s  1.6s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━╸━━━━━━  39.4MB /  52.4MB @  23.6MB/s  1.6s
 [+] 1.8s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  51.4MB @  34.1MB/s  1.7s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━╸━━━━  44.3MB /  52.4MB @  25.0MB/s  1.7s
 [+] 1.9s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  51.4MB @  34.1MB/s  1.8s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  50.4MB /  52.4MB @  26.8MB/s  1.8s
 [+] 2.0s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  49.5MB /  51.4MB @  34.1MB/s  1.9s
-conda-forge/linux-64                                51.4MB @  34.1MB/s  2.0s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  50.4MB /  52.4MB @  26.8MB/s  1.9s
+[+] 2.1s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  50.4MB /  52.4MB @  26.8MB/s  2.0s
+[+] 2.2s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  50.4MB /  52.4MB @  26.8MB/s  2.1s
+[+] 2.3s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  50.4MB /  52.4MB @  26.8MB/s  2.2s
+conda-forge/linux-64                                52.4MB @  26.8MB/s  2.3s
 ?25h
 
 Pinned packages:
@@ -1249,18 +1260,16 @@ Transaction
 
    - r-essentials
    - rpy2
-
-
   Package                         Version  Build                 Channel          Size
 ────────────────────────────────────────────────────────────────────────────────────────
   Install:
 ────────────────────────────────────────────────────────────────────────────────────────
 
   <span class=" -Color -Color-Green">+ _r-mutex                 </span>       1.0.1  anacondar_1           conda-forge       4kB
-  <span class=" -Color -Color-Green">+ binutils_impl_linux-64   </span>        2.45  default_hfdba357_105  conda-forge       4MB
+  <span class=" -Color -Color-Green">+ binutils_impl_linux-64   </span>        2.45  default_hfdba357_104  conda-forge       4MB
   <span class=" -Color -Color-Green">+ bwidget                  </span>      1.10.1  ha770c72_1            conda-forge     130kB
   <span class=" -Color -Color-Green">+ cairo                    </span>      1.18.4  h3394656_0            conda-forge     978kB
-  <span class=" -Color -Color-Green">+ curl                     </span>      8.18.0  h4e3cde8_0            conda-forge     190kB
+  <span class=" -Color -Color-Green">+ curl                     </span>      8.17.0  h4e3cde8_0            conda-forge     186kB
   <span class=" -Color -Color-Green">+ font-ttf-dejavu-sans-mono</span>        2.37  hab24e00_0            conda-forge     397kB
   <span class=" -Color -Color-Green">+ font-ttf-inconsolata     </span>       3.000  h77eed37_0            conda-forge      97kB
   <span class=" -Color -Color-Green">+ font-ttf-source-code-pro </span>       2.038  h77eed37_0            conda-forge     701kB
@@ -1268,7 +1277,7 @@ Transaction
   <span class=" -Color -Color-Green">+ fontconfig               </span>      2.15.0  h7e30c49_1            conda-forge     266kB
   <span class=" -Color -Color-Green">+ fonts-conda-ecosystem    </span>           1  0                     conda-forge       4kB
   <span class=" -Color -Color-Green">+ fonts-conda-forge        </span>           1  hc364b38_1            conda-forge       4kB
-  <span class=" -Color -Color-Green">+ freetype                 </span>      2.14.1  ha770c72_0            conda-forge     173kB
+  <span class=" -Color -Color-Green">+ freetype                 </span>      2.14.3  ha770c72_0            conda-forge     174kB
   <span class=" -Color -Color-Green">+ fribidi                  </span>      1.0.16  hb03c661_0            conda-forge      61kB
   <span class=" -Color -Color-Green">+ gcc_impl_linux-64        </span>      15.2.0  he420e7e_18           conda-forge      82MB
   <span class=" -Color -Color-Green">+ gfortran_impl_linux-64   </span>      15.2.0  h281d09f_18           conda-forge      20MB
@@ -1276,22 +1285,23 @@ Transaction
   <span class=" -Color -Color-Green">+ gsl                      </span>         2.7  he838d99_0            conda-forge       3MB
   <span class=" -Color -Color-Green">+ gxx_impl_linux-64        </span>      15.2.0  hda75c37_18           conda-forge      16MB
   <span class=" -Color -Color-Green">+ harfbuzz                 </span>      12.2.0  h15599e2_0            conda-forge       2MB
-  <span class=" -Color -Color-Green">+ kernel-headers_linux-64  </span>      6.12.0  he073ed8_5            conda-forge       2MB
-  <span class=" -Color -Color-Green">+ lerc                     </span>       4.0.0  h0aef613_1            conda-forge     264kB
-  <span class=" -Color -Color-Green">+ libblas                  </span>      3.11.0  5_h4a7cf45_openblas   conda-forge      18kB
-  <span class=" -Color -Color-Green">+ libcblas                 </span>      3.11.0  5_h0358290_openblas   conda-forge      18kB
+  <span class=" -Color -Color-Green">+ icu                      </span>        75.1  he02047a_0            conda-forge      12MB
+  <span class=" -Color -Color-Green">+ kernel-headers_linux-64  </span>      6.12.0  he073ed8_6            conda-forge       2MB
+  <span class=" -Color -Color-Green">+ lerc                     </span>       4.1.0  hdb68285_0            conda-forge     262kB
+  <span class=" -Color -Color-Green">+ libblas                  </span>      3.11.0  6_h4a7cf45_openblas   conda-forge      19kB
+  <span class=" -Color -Color-Green">+ libcblas                 </span>      3.11.0  6_h0358290_openblas   conda-forge      19kB
   <span class=" -Color -Color-Green">+ libdeflate               </span>        1.25  h17f619e_0            conda-forge      73kB
-  <span class=" -Color -Color-Green">+ libfreetype              </span>      2.14.1  ha770c72_0            conda-forge       8kB
-  <span class=" -Color -Color-Green">+ libfreetype6             </span>      2.14.1  h73754d4_0            conda-forge     387kB
+  <span class=" -Color -Color-Green">+ libfreetype              </span>      2.14.3  ha770c72_0            conda-forge       8kB
+  <span class=" -Color -Color-Green">+ libfreetype6             </span>      2.14.3  h73754d4_0            conda-forge     385kB
   <span class=" -Color -Color-Green">+ libgcc-devel_linux-64    </span>      15.2.0  hcc6f6b0_118          conda-forge       3MB
   <span class=" -Color -Color-Green">+ libgfortran              </span>      15.2.0  h69a702a_18           conda-forge      28kB
   <span class=" -Color -Color-Green">+ libgfortran-ng           </span>      15.2.0  h69a702a_18           conda-forge      28kB
   <span class=" -Color -Color-Green">+ libgfortran5             </span>      15.2.0  h68bc16d_18           conda-forge       2MB
   <span class=" -Color -Color-Green">+ libglib                  </span>      2.86.4  h6548e54_1            conda-forge       4MB
   <span class=" -Color -Color-Green">+ libjpeg-turbo            </span>       3.1.2  hb03c661_0            conda-forge     634kB
-  <span class=" -Color -Color-Green">+ liblapack                </span>      3.11.0  5_h47877c9_openblas   conda-forge      18kB
-  <span class=" -Color -Color-Green">+ libopenblas              </span>      0.3.30  pthreads_h94d23a6_4   conda-forge       6MB
-  <span class=" -Color -Color-Green">+ libpng                   </span>      1.6.55  h421ea60_0            conda-forge     318kB
+  <span class=" -Color -Color-Green">+ liblapack                </span>      3.11.0  6_h47877c9_openblas   conda-forge      19kB
+  <span class=" -Color -Color-Green">+ libopenblas              </span>      0.3.32  pthreads_h94d23a6_0   conda-forge       6MB
+  <span class=" -Color -Color-Green">+ libpng                   </span>      1.6.57  h421ea60_0            conda-forge     318kB
   <span class=" -Color -Color-Green">+ libsanitizer             </span>      15.2.0  h90f66d4_18           conda-forge       8MB
   <span class=" -Color -Color-Green">+ libstdcxx-devel_linux-64 </span>      15.2.0  hd446a21_118          conda-forge      21MB
   <span class=" -Color -Color-Green">+ libtiff                  </span>       4.7.1  h9d88235_1            conda-forge     435kB
@@ -1299,15 +1309,15 @@ Transaction
   <span class=" -Color -Color-Green">+ libwebp-base             </span>       1.6.0  hd42ef1d_0            conda-forge     429kB
   <span class=" -Color -Color-Green">+ libxcb                   </span>      1.17.0  h8a09558_0            conda-forge     396kB
   <span class=" -Color -Color-Green">+ make                     </span>       4.4.1  hb9d3cd8_2            conda-forge     513kB
-  <span class=" -Color -Color-Green">+ pandoc                   </span>         3.9  ha770c72_0            conda-forge      22MB
+  <span class=" -Color -Color-Green">+ pandoc                   </span>     3.9.0.2  ha770c72_0            conda-forge      22MB
   <span class=" -Color -Color-Green">+ pango                    </span>      1.56.4  hadf4263_0            conda-forge     455kB
   <span class=" -Color -Color-Green">+ pcre2                    </span>       10.47  haa7fec5_0            conda-forge       1MB
   <span class=" -Color -Color-Green">+ pixman                   </span>      0.46.4  h54a6638_1            conda-forge     451kB
   <span class=" -Color -Color-Green">+ pthread-stubs            </span>         0.4  hb9d3cd8_1002         conda-forge       8kB
   <span class=" -Color -Color-Green">+ r-askpass                </span>       1.2.1  r45h54b55ab_1         conda-forge      32kB
   <span class=" -Color -Color-Green">+ r-assertthat             </span>       0.2.1  r45hc72bb7e_6         conda-forge      73kB
-  <span class=" -Color -Color-Green">+ r-backports              </span>       1.5.0  r45h54b55ab_2         conda-forge     131kB
-  <span class=" -Color -Color-Green">+ r-base                   </span>       4.5.2  h835929b_3            conda-forge      27MB
+  <span class=" -Color -Color-Green">+ r-backports              </span>       1.5.1  r45h54b55ab_0         conda-forge     131kB
+  <span class=" -Color -Color-Green">+ r-base                   </span>       4.5.2  h835929b_2            conda-forge      27MB
   <span class=" -Color -Color-Green">+ r-base64enc              </span>       0.1_6  r45h54b55ab_0         conda-forge      49kB
   <span class=" -Color -Color-Green">+ r-bit                    </span>       4.6.0  r45h54b55ab_1         conda-forge     621kB
   <span class=" -Color -Color-Green">+ r-bit64                  </span>     4.6.0_1  r45h54b55ab_1         conda-forge     504kB
@@ -1328,7 +1338,7 @@ Transaction
   <span class=" -Color -Color-Green">+ r-colorspace             </span>       2.1_2  r45h54b55ab_0         conda-forge       3MB
   <span class=" -Color -Color-Green">+ r-commonmark             </span>       2.0.0  r45h54b55ab_1         conda-forge     140kB
   <span class=" -Color -Color-Green">+ r-conflicted             </span>       1.2.0  r45h785f33e_3         conda-forge      64kB
-  <span class=" -Color -Color-Green">+ r-cpp11                  </span>       0.5.3  r45h785f33e_0         conda-forge     243kB
+  <span class=" -Color -Color-Green">+ r-cpp11                  </span>       0.5.4  r45h785f33e_0         conda-forge     244kB
   <span class=" -Color -Color-Green">+ r-crayon                 </span>       1.5.3  r45hc72bb7e_2         conda-forge     168kB
   <span class=" -Color -Color-Green">+ r-crul                   </span>       1.6.0  r45hc72bb7e_1         conda-forge     646kB
   <span class=" -Color -Color-Green">+ r-curl                   </span>       7.0.0  r45h10955f1_1         conda-forge     479kB
@@ -1337,10 +1347,10 @@ Transaction
   <span class=" -Color -Color-Green">+ r-dbplyr                 </span>       2.5.2  r45hc72bb7e_0         conda-forge       1MB
   <span class=" -Color -Color-Green">+ r-diagram                </span>       1.6.5  r45ha770c72_4         conda-forge     678kB
   <span class=" -Color -Color-Green">+ r-digest                 </span>      0.6.39  r45h3697838_0         conda-forge     218kB
-  <span class=" -Color -Color-Green">+ r-dplyr                  </span>       1.2.0  r45h3697838_0         conda-forge       1MB
+  <span class=" -Color -Color-Green">+ r-dplyr                  </span>       1.2.1  r45h3697838_0         conda-forge       1MB
   <span class=" -Color -Color-Green">+ r-dtplyr                 </span>       1.3.3  r45hc72bb7e_0         conda-forge     411kB
   <span class=" -Color -Color-Green">+ r-e1071                  </span>      1.7_17  r45h3697838_0         conda-forge     598kB
-  <span class=" -Color -Color-Green">+ r-ellipsis               </span>       0.3.2  r45h54b55ab_4         conda-forge      44kB
+  <span class=" -Color -Color-Green">+ r-ellipsis               </span>       0.3.3  r45h54b55ab_0         conda-forge      33kB
   <span class=" -Color -Color-Green">+ r-essentials             </span>         4.5  r45hd8ed1ab_2006      conda-forge       8kB
   <span class=" -Color -Color-Green">+ r-evaluate               </span>       1.0.5  r45hc72bb7e_1         conda-forge     112kB
   <span class=" -Color -Color-Green">+ r-fansi                  </span>       1.0.7  r45h54b55ab_0         conda-forge     329kB
@@ -1351,29 +1361,29 @@ Transaction
   <span class=" -Color -Color-Green">+ r-foreach                </span>       1.5.2  r45hc72bb7e_4         conda-forge     141kB
   <span class=" -Color -Color-Green">+ r-foreign                </span>      0.8_91  r45h54b55ab_0         conda-forge     270kB
   <span class=" -Color -Color-Green">+ r-formatr                </span>        1.14  r45hc72bb7e_3         conda-forge     166kB
-  <span class=" -Color -Color-Green">+ r-fs                     </span>       1.6.6  r45h3697838_1         conda-forge     511kB
-  <span class=" -Color -Color-Green">+ r-future                 </span>      1.69.0  r45h785f33e_0         conda-forge     949kB
+  <span class=" -Color -Color-Green">+ r-fs                     </span>       1.6.7  r45h3697838_0         conda-forge     518kB
+  <span class=" -Color -Color-Green">+ r-future                 </span>      1.70.0  r45hc72bb7e_0         conda-forge     953kB
   <span class=" -Color -Color-Green">+ r-future.apply           </span>      1.20.2  r45hc72bb7e_0         conda-forge     208kB
   <span class=" -Color -Color-Green">+ r-gargle                 </span>       1.6.1  r45h785f33e_0         conda-forge     724kB
   <span class=" -Color -Color-Green">+ r-generics               </span>       0.1.4  r45hc72bb7e_1         conda-forge      88kB
   <span class=" -Color -Color-Green">+ r-ggplot2                </span>       4.0.2  r45h785f33e_0         conda-forge       8MB
   <span class=" -Color -Color-Green">+ r-gistr                  </span>       0.9.0  r45hc72bb7e_4         conda-forge     775kB
   <span class=" -Color -Color-Green">+ r-glmnet                 </span>      4.1_10  r45ha36cffa_1         conda-forge       2MB
-  <span class=" -Color -Color-Green">+ r-globals                </span>      0.19.0  r45hc72bb7e_0         conda-forge     177kB
+  <span class=" -Color -Color-Green">+ r-globals                </span>      0.19.1  r45hc72bb7e_0         conda-forge     182kB
   <span class=" -Color -Color-Green">+ r-glue                   </span>       1.8.0  r45h54b55ab_1         conda-forge     165kB
   <span class=" -Color -Color-Green">+ r-googledrive            </span>       2.1.2  r45hc72bb7e_1         conda-forge       1MB
   <span class=" -Color -Color-Green">+ r-googlesheets4          </span>       1.1.2  r45h785f33e_1         conda-forge     524kB
   <span class=" -Color -Color-Green">+ r-gower                  </span>       1.0.2  r45h54b55ab_0         conda-forge     227kB
   <span class=" -Color -Color-Green">+ r-gtable                 </span>       0.3.6  r45hc72bb7e_1         conda-forge     229kB
-  <span class=" -Color -Color-Green">+ r-hardhat                </span>       1.4.2  r45hc72bb7e_1         conda-forge     846kB
+  <span class=" -Color -Color-Green">+ r-hardhat                </span>       1.4.3  r45hc72bb7e_0         conda-forge     867kB
   <span class=" -Color -Color-Green">+ r-haven                  </span>       2.5.5  r45h6d565e7_1         conda-forge     385kB
   <span class=" -Color -Color-Green">+ r-hexbin                 </span>      1.28.5  r45heaba542_1         conda-forge       2MB
-  <span class=" -Color -Color-Green">+ r-highr                  </span>        0.11  r45hc72bb7e_2         conda-forge      57kB
+  <span class=" -Color -Color-Green">+ r-highr                  </span>        0.12  r45hc72bb7e_0         conda-forge      57kB
   <span class=" -Color -Color-Green">+ r-hms                    </span>       1.1.4  r45hc72bb7e_0         conda-forge     113kB
   <span class=" -Color -Color-Green">+ r-htmltools              </span>       0.5.9  r45h3697838_0         conda-forge     367kB
   <span class=" -Color -Color-Green">+ r-htmlwidgets            </span>       1.6.4  r45h785f33e_4         conda-forge     426kB
   <span class=" -Color -Color-Green">+ r-httpcode               </span>       0.3.0  r45ha770c72_5         conda-forge      40kB
-  <span class=" -Color -Color-Green">+ r-httpuv                 </span>      1.6.16  r45h6d565e7_1         conda-forge     548kB
+  <span class=" -Color -Color-Green">+ r-httpuv                 </span>      1.6.17  r45h6d565e7_0         conda-forge     554kB
   <span class=" -Color -Color-Green">+ r-httr                   </span>       1.4.8  r45hc72bb7e_0         conda-forge     474kB
   <span class=" -Color -Color-Green">+ r-ids                    </span>       1.0.1  r45hc72bb7e_5         conda-forge     130kB
   <span class=" -Color -Color-Green">+ r-ipred                  </span>      0.9_15  r45h54b55ab_2         conda-forge     397kB
@@ -1386,25 +1396,25 @@ Transaction
   <span class=" -Color -Color-Green">+ r-kernsmooth             </span>     2.23_26  r45ha0a88a1_1         conda-forge     102kB
   <span class=" -Color -Color-Green">+ r-knitr                  </span>        1.51  r45hc72bb7e_0         conda-forge     989kB
   <span class=" -Color -Color-Green">+ r-labeling               </span>       0.4.3  r45hc72bb7e_2         conda-forge      70kB
-  <span class=" -Color -Color-Green">+ r-later                  </span>       1.4.7  r45h3697838_0         conda-forge     154kB
+  <span class=" -Color -Color-Green">+ r-later                  </span>       1.4.8  r45h3697838_0         conda-forge     153kB
   <span class=" -Color -Color-Green">+ r-lattice                </span>      0.22_9  r45h54b55ab_0         conda-forge       1MB
-  <span class=" -Color -Color-Green">+ r-lava                   </span>       1.8.2  r45hc72bb7e_0         conda-forge       2MB
-  <span class=" -Color -Color-Green">+ r-lazyeval               </span>       0.2.2  r45h54b55ab_6         conda-forge     161kB
+  <span class=" -Color -Color-Green">+ r-lava                   </span>       1.9.0  r45hc72bb7e_0         conda-forge       2MB
+  <span class=" -Color -Color-Green">+ r-lazyeval               </span>       0.2.3  r45h54b55ab_0         conda-forge     192kB
   <span class=" -Color -Color-Green">+ r-lifecycle              </span>       1.0.5  r45hc72bb7e_0         conda-forge     133kB
-  <span class=" -Color -Color-Green">+ r-listenv                </span>      0.10.0  r45hc72bb7e_0         conda-forge     122kB
-  <span class=" -Color -Color-Green">+ r-lobstr                 </span>       1.2.0  r45h3697838_0         conda-forge     215kB
+  <span class=" -Color -Color-Green">+ r-listenv                </span>      0.10.1  r45hc72bb7e_0         conda-forge     141kB
+  <span class=" -Color -Color-Green">+ r-lobstr                 </span>       1.2.1  r45h3697838_0         conda-forge     216kB
   <span class=" -Color -Color-Green">+ r-lubridate              </span>       1.9.5  r45h54b55ab_0         conda-forge     977kB
-  <span class=" -Color -Color-Green">+ r-magrittr               </span>       2.0.4  r45h54b55ab_0         conda-forge     212kB
+  <span class=" -Color -Color-Green">+ r-magrittr               </span>       2.0.5  r45h54b55ab_0         conda-forge     211kB
   <span class=" -Color -Color-Green">+ r-maps                   </span>       3.4.3  r45h54b55ab_1         conda-forge       2MB
   <span class=" -Color -Color-Green">+ r-mass                   </span>      7.3_65  r45h54b55ab_0         conda-forge       1MB
-  <span class=" -Color -Color-Green">+ r-matrix                 </span>       1.7_4  r45h0e4624f_1         conda-forge       4MB
+  <span class=" -Color -Color-Green">+ r-matrix                 </span>       1.7_5  r45h0e4624f_0         conda-forge       4MB
   <span class=" -Color -Color-Green">+ r-memoise                </span>       2.0.1  r45hc72bb7e_4         conda-forge      58kB
   <span class=" -Color -Color-Green">+ r-mgcv                   </span>       1.9_4  r45h0e4624f_0         conda-forge       4MB
   <span class=" -Color -Color-Green">+ r-mime                   </span>        0.13  r45h54b55ab_1         conda-forge      65kB
   <span class=" -Color -Color-Green">+ r-modelmetrics           </span>     1.2.2.2  r45h3697838_5         conda-forge     179kB
   <span class=" -Color -Color-Green">+ r-modelr                 </span>      0.1.11  r45hc72bb7e_3         conda-forge     221kB
   <span class=" -Color -Color-Green">+ r-munsell                </span>       0.5.1  r45hc72bb7e_2         conda-forge     247kB
-  <span class=" -Color -Color-Green">+ r-nlme                   </span>     3.1_168  r45heaba542_1         conda-forge       2MB
+  <span class=" -Color -Color-Green">+ r-nlme                   </span>     3.1_169  r45heaba542_0         conda-forge       2MB
   <span class=" -Color -Color-Green">+ r-nnet                   </span>      7.3_20  r45h54b55ab_1         conda-forge     132kB
   <span class=" -Color -Color-Green">+ r-numderiv               </span>  2016.8_1.1  r45hc72bb7e_7         conda-forge     129kB
   <span class=" -Color -Color-Green">+ r-openssl                </span>       2.3.5  r45h68c19f5_0         conda-forge     682kB
@@ -1416,18 +1426,18 @@ Transaction
   <span class=" -Color -Color-Green">+ r-plyr                   </span>       1.8.9  r45h3697838_3         conda-forge     788kB
   <span class=" -Color -Color-Green">+ r-prettyunits            </span>       1.2.0  r45hc72bb7e_2         conda-forge     161kB
   <span class=" -Color -Color-Green">+ r-proc                   </span>    1.19.0.1  r45h3697838_1         conda-forge     842kB
-  <span class=" -Color -Color-Green">+ r-processx               </span>       3.8.6  r45h54b55ab_1         conda-forge     341kB
-  <span class=" -Color -Color-Green">+ r-prodlim                </span>  2025.04.28  r45h3697838_1         conda-forge     463kB
+  <span class=" -Color -Color-Green">+ r-processx               </span>       3.8.7  r45h54b55ab_0         conda-forge     342kB
+  <span class=" -Color -Color-Green">+ r-prodlim                </span>  2026.03.11  r45h3697838_0         conda-forge     551kB
   <span class=" -Color -Color-Green">+ r-progress               </span>       1.2.3  r45hc72bb7e_2         conda-forge      96kB
-  <span class=" -Color -Color-Green">+ r-progressr              </span>      0.18.0  r45hc72bb7e_0         conda-forge     398kB
+  <span class=" -Color -Color-Green">+ r-progressr              </span>      0.19.0  r45hc72bb7e_0         conda-forge     502kB
   <span class=" -Color -Color-Green">+ r-promises               </span>       1.5.0  r45hc72bb7e_1         conda-forge       2MB
   <span class=" -Color -Color-Green">+ r-proxy                  </span>      0.4_29  r45h54b55ab_0         conda-forge     184kB
   <span class=" -Color -Color-Green">+ r-pryr                   </span>       0.1.6  r45h3697838_3         conda-forge     225kB
-  <span class=" -Color -Color-Green">+ r-ps                     </span>       1.9.1  r45h54b55ab_1         conda-forge     408kB
+  <span class=" -Color -Color-Green">+ r-ps                     </span>       1.9.2  r45h54b55ab_0         conda-forge     411kB
   <span class=" -Color -Color-Green">+ r-purrr                  </span>       1.2.1  r45h54b55ab_0         conda-forge     547kB
   <span class=" -Color -Color-Green">+ r-quantmod               </span>      0.4.28  r45hc72bb7e_1         conda-forge       1MB
   <span class=" -Color -Color-Green">+ r-r6                     </span>       2.6.1  r45hc72bb7e_1         conda-forge      95kB
-  <span class=" -Color -Color-Green">+ r-ragg                   </span>       1.5.0  r45h9f1dc4d_1         conda-forge     593kB
+  <span class=" -Color -Color-Green">+ r-ragg                   </span>       1.5.2  r45h9f1dc4d_0         conda-forge     597kB
   <span class=" -Color -Color-Green">+ r-randomforest           </span>     4.7_1.2  r45heaba542_1         conda-forge     239kB
   <span class=" -Color -Color-Green">+ r-rappdirs               </span>       0.3.4  r45h54b55ab_0         conda-forge      54kB
   <span class=" -Color -Color-Green">+ r-rbokeh                 </span>       0.5.2  r45hc72bb7e_5         conda-forge       1MB
@@ -1436,16 +1446,16 @@ Transaction
   <span class=" -Color -Color-Green">+ r-rcppeigen              </span>   0.3.4.0.2  r45h3704496_1         conda-forge       1MB
   <span class=" -Color -Color-Green">+ r-readr                  </span>       2.2.0  r45h3697838_0         conda-forge     809kB
   <span class=" -Color -Color-Green">+ r-readxl                 </span>       1.4.5  r45h10e25cc_1         conda-forge     371kB
-  <span class=" -Color -Color-Green">+ r-recipes                </span>       1.3.1  r45hc72bb7e_1         conda-forge       2MB
+  <span class=" -Color -Color-Green">+ r-recipes                </span>       1.3.2  r45hc72bb7e_0         conda-forge       2MB
   <span class=" -Color -Color-Green">+ r-recommended            </span>         4.5  r45hd8ed1ab_1008      conda-forge      19kB
   <span class=" -Color -Color-Green">+ r-rematch                </span>       2.0.0  r45hc72bb7e_2         conda-forge      26kB
   <span class=" -Color -Color-Green">+ r-rematch2               </span>       2.1.2  r45hc72bb7e_5         conda-forge      56kB
   <span class=" -Color -Color-Green">+ r-repr                   </span>       1.1.7  r45h785f33e_2         conda-forge     147kB
   <span class=" -Color -Color-Green">+ r-reprex                 </span>       2.1.1  r45hc72bb7e_2         conda-forge     502kB
   <span class=" -Color -Color-Green">+ r-reshape2               </span>       1.4.5  r45h3697838_0         conda-forge     128kB
-  <span class=" -Color -Color-Green">+ r-rlang                  </span>       1.1.7  r45h3697838_0         conda-forge       2MB
-  <span class=" -Color -Color-Green">+ r-rmarkdown              </span>        2.30  r45hc72bb7e_0         conda-forge       2MB
-  <span class=" -Color -Color-Green">+ r-rpart                  </span>      4.1.24  r45h54b55ab_1         conda-forge     705kB
+  <span class=" -Color -Color-Green">+ r-rlang                  </span>       1.2.0  r45h3697838_0         conda-forge       2MB
+  <span class=" -Color -Color-Green">+ r-rmarkdown              </span>        2.31  r45hc72bb7e_0         conda-forge       2MB
+  <span class=" -Color -Color-Green">+ r-rpart                  </span>      4.1.27  r45h54b55ab_0         conda-forge     704kB
   <span class=" -Color -Color-Green">+ r-rstudioapi             </span>      0.18.0  r45hc72bb7e_0         conda-forge     346kB
   <span class=" -Color -Color-Green">+ r-rvest                  </span>       1.0.5  r45hc72bb7e_1         conda-forge     305kB
   <span class=" -Color -Color-Green">+ r-s7                     </span>       0.2.1  r45h54b55ab_0         conda-forge     311kB
@@ -1454,15 +1464,15 @@ Transaction
   <span class=" -Color -Color-Green">+ r-selectr                </span>       0.5_1  r45hc72bb7e_0         conda-forge     479kB
   <span class=" -Color -Color-Green">+ r-shape                  </span>     1.4.6.1  r45ha770c72_2         conda-forge     766kB
   <span class=" -Color -Color-Green">+ r-shiny                  </span>      1.13.0  r45h785f33e_0         conda-forge       4MB
-  <span class=" -Color -Color-Green">+ r-sourcetools            </span>     0.1.7_1  r45h3697838_3         conda-forge      54kB
+  <span class=" -Color -Color-Green">+ r-sourcetools            </span>     0.1.7_2  r45h3697838_0         conda-forge      55kB
   <span class=" -Color -Color-Green">+ r-sparsevctrs            </span>       0.3.6  r45h54b55ab_0         conda-forge     205kB
   <span class=" -Color -Color-Green">+ r-spatial                </span>      7.3_18  r45h54b55ab_1         conda-forge     156kB
-  <span class=" -Color -Color-Green">+ r-squarem                </span>      2021.1  r45hc72bb7e_4         conda-forge     195kB
+  <span class=" -Color -Color-Green">+ r-squarem                </span>      2026.1  r45hc72bb7e_0         conda-forge     197kB
   <span class=" -Color -Color-Green">+ r-stringi                </span>       1.8.7  r45h2dae267_1         conda-forge     940kB
   <span class=" -Color -Color-Green">+ r-stringr                </span>       1.6.0  r45h785f33e_0         conda-forge     319kB
   <span class=" -Color -Color-Green">+ r-survival               </span>       3.8_6  r45h54b55ab_0         conda-forge       8MB
   <span class=" -Color -Color-Green">+ r-sys                    </span>       3.4.3  r45h54b55ab_1         conda-forge      50kB
-  <span class=" -Color -Color-Green">+ r-systemfonts            </span>       1.3.1  r45h74f4acd_0         conda-forge     706kB
+  <span class=" -Color -Color-Green">+ r-systemfonts            </span>       1.3.2  r45h74f4acd_0         conda-forge     710kB
   <span class=" -Color -Color-Green">+ r-textshaping            </span>       1.0.4  r45h74f4acd_0         conda-forge     188kB
   <span class=" -Color -Color-Green">+ r-tibble                 </span>       3.3.1  r45h54b55ab_0         conda-forge     590kB
   <span class=" -Color -Color-Green">+ r-tidyr                  </span>       1.3.2  r45h3697838_0         conda-forge       1MB
@@ -1470,27 +1480,27 @@ Transaction
   <span class=" -Color -Color-Green">+ r-tidyverse              </span>       2.0.0  r45h785f33e_3         conda-forge     427kB
   <span class=" -Color -Color-Green">+ r-timechange             </span>       0.4.0  r45h3697838_0         conda-forge     194kB
   <span class=" -Color -Color-Green">+ r-timedate               </span>    4052.112  r45hc72bb7e_0         conda-forge       1MB
-  <span class=" -Color -Color-Green">+ r-tinytex                </span>        0.58  r45hc72bb7e_0         conda-forge     153kB
+  <span class=" -Color -Color-Green">+ r-tinytex                </span>        0.59  r45hc72bb7e_0         conda-forge     157kB
   <span class=" -Color -Color-Green">+ r-triebeard              </span>       0.4.1  r45h3697838_4         conda-forge     185kB
   <span class=" -Color -Color-Green">+ r-ttr                    </span>      0.24.4  r45h54b55ab_2         conda-forge     537kB
   <span class=" -Color -Color-Green">+ r-tzdb                   </span>       0.5.0  r45h3697838_2         conda-forge     555kB
   <span class=" -Color -Color-Green">+ r-urltools               </span>     1.7.3.1  r45h3697838_1         conda-forge     305kB
   <span class=" -Color -Color-Green">+ r-utf8                   </span>       1.2.6  r45h54b55ab_1         conda-forge     147kB
   <span class=" -Color -Color-Green">+ r-uuid                   </span>       1.2_2  r45h54b55ab_0         conda-forge      58kB
-  <span class=" -Color -Color-Green">+ r-vctrs                  </span>       0.7.1  r45h3697838_0         conda-forge       1MB
+  <span class=" -Color -Color-Green">+ r-vctrs                  </span>       0.7.2  r45h3697838_0         conda-forge       1MB
   <span class=" -Color -Color-Green">+ r-viridislite            </span>       0.4.3  r45hc72bb7e_0         conda-forge       1MB
-  <span class=" -Color -Color-Green">+ r-vroom                  </span>       1.7.0  r45h3697838_0         conda-forge     936kB
+  <span class=" -Color -Color-Green">+ r-vroom                  </span>       1.7.1  r45h3697838_0         conda-forge     934kB
   <span class=" -Color -Color-Green">+ r-withr                  </span>       3.0.2  r45hc72bb7e_1         conda-forge     235kB
-  <span class=" -Color -Color-Green">+ r-xfun                   </span>        0.56  r45h3697838_0         conda-forge     595kB
+  <span class=" -Color -Color-Green">+ r-xfun                   </span>        0.57  r45h3697838_0         conda-forge     597kB
   <span class=" -Color -Color-Green">+ r-xml2                   </span>       1.5.2  r45he78afff_0         conda-forge     355kB
   <span class=" -Color -Color-Green">+ r-xtable                 </span>       1.8_8  r45hc72bb7e_0         conda-forge     744kB
-  <span class=" -Color -Color-Green">+ r-xts                    </span>      0.14.1  r45h54b55ab_1         conda-forge       1MB
+  <span class=" -Color -Color-Green">+ r-xts                    </span>      0.14.2  r45h54b55ab_0         conda-forge       1MB
   <span class=" -Color -Color-Green">+ r-yaml                   </span>      2.3.12  r45h54b55ab_0         conda-forge     124kB
   <span class=" -Color -Color-Green">+ r-zoo                    </span>      1.8_15  r45h54b55ab_0         conda-forge       1MB
-  <span class=" -Color -Color-Green">+ rpy2                     </span>       3.6.4  py313r45h67dc6d7_1    conda-forge       2MB
+  <span class=" -Color -Color-Green">+ rpy2                     </span>       3.6.6  py313r45h269ec90_1    conda-forge       2MB
   <span class=" -Color -Color-Green">+ sed                      </span>         4.9  h6688a6e_0            conda-forge     229kB
-  <span class=" -Color -Color-Green">+ sysroot_linux-64         </span>        2.39  hc4b9eeb_5            conda-forge      42MB
-  <span class=" -Color -Color-Green">+ tktable                  </span>        2.10  h8d826fa_7            conda-forge      92kB
+  <span class=" -Color -Color-Green">+ sysroot_linux-64         </span>        2.39  hc4b9eeb_6            conda-forge      42MB
+  <span class=" -Color -Color-Green">+ tktable                  </span>        2.10  h5a7a40f_8            conda-forge     103kB
   <span class=" -Color -Color-Green">+ tzlocal                  </span>       5.3.1  pyh8f84b5b_0          conda-forge      24kB
   <span class=" -Color -Color-Green">+ xorg-libice              </span>       1.1.2  hb9d3cd8_0            conda-forge      59kB
   <span class=" -Color -Color-Green">+ xorg-libsm               </span>       1.2.6  he73a12e_0            conda-forge      28kB
@@ -1504,24 +1514,24 @@ Transaction
   Change:
 ────────────────────────────────────────────────────────────────────────────────────────
 
-  <span class=" -Color -Color-Red">- libsqlite                </span>      3.51.2  hf4e2dac_0            conda-forge     943kB
-  <span class=" -Color -Color-Green">+ libsqlite                </span>      3.51.2  h0c1763c_0            conda-forge     939kB
-  <span class=" -Color -Color-Red">- libxml2                  </span>      2.15.1  he237659_1            conda-forge      45kB
+  <span class=" -Color -Color-Red">- libxml2                  </span>      2.15.1  h031cc0b_0            conda-forge      45kB
   <span class=" -Color -Color-Green">+ libxml2                  </span>      2.15.1  h26afc86_0            conda-forge      45kB
-  <span class=" -Color -Color-Red">- libxml2-16               </span>      2.15.1  hca6bf5a_1            conda-forge     556kB
+  <span class=" -Color -Color-Red">- libxml2-16               </span>      2.15.1  hf2a90c1_0            conda-forge     555kB
   <span class=" -Color -Color-Green">+ libxml2-16               </span>      2.15.1  ha9997c6_0            conda-forge     556kB
 
-  Downgrade:
+  Upgrade:
 ────────────────────────────────────────────────────────────────────────────────────────
 
-  <span class=" -Color -Color-Red">- icu                      </span>        78.2  h33c6efd_0            conda-forge      13MB
-  <span class=" -Color -Color-Green">+ icu                      </span>        75.1  he02047a_0            conda-forge      12MB
+  <span class=" -Color -Color-Red">- liblzma                  </span>       5.8.1  hb9d3cd8_2            conda-forge     113kB
+  <span class=" -Color -Color-Green">+ liblzma                  </span>       5.8.2  hb03c661_0            conda-forge     113kB
+  <span class=" -Color -Color-Red">- libzlib                  </span>       1.3.1  hb9d3cd8_2            conda-forge      61kB
+  <span class=" -Color -Color-Green">+ libzlib                  </span>       1.3.2  h25fd6f3_2            conda-forge      64kB
 
   Summary:
 
-  Install: 244 packages
-  Change: 3 packages
-  Downgrade: 1 packages
+  Install: 245 packages
+  Change: 2 packages
+  Upgrade: 2 packages
 
   Total download: 431MB
 
@@ -1537,453 +1547,498 @@ Extracting       ━━━━━━━━━━━━━━━━━━━━━
 Downloading  (5) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   0.0 B gcc_impl_linux-64          0.0s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.2s
-Downloading  (5) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span> 237.7kB gcc_impl_linux-64          0.1s
+Downloading  (5) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   2.2MB gcc_impl_linux-64          0.1s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.3s
-Downloading  (5) ╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━</span>  13.4MB gcc_impl_linux-64          0.2s
+Downloading  (5) ╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━</span>  11.6MB gcc_impl_linux-64          0.2s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.4s
-Downloading  (5) ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━</span>  44.9MB gcc_impl_linux-64          0.3s
+Downloading  (5) ━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━</span>  32.3MB gcc_impl_linux-64          0.3s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
-pandoc                                              22.5MB @  38.6MB/s  0.4s
 [+] 0.5s
-Downloading  (5) ━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━</span>  88.3MB gfortran_impl_linux-64     0.4s
+Downloading  (5) ━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━</span>  55.5MB libstdcxx-devel_linux-64   0.4s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
-libstdcxx-devel_linux-64                            20.7MB @  32.1MB/s  0.5s
-r-base                                              27.3MB @  48.6MB/s  0.5s
+libstdcxx-devel_linux-64                            20.7MB @  37.3MB/s  0.5s
+pandoc                                              22.4MB @  38.6MB/s  0.5s
 [+] 0.6s
-Downloading  (5) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━</span> 134.1MB gfortran_impl_linux-64     0.5s
-Extracting   (3) ━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━       0 libstdcxx-devel_linux-64   0.0s
+Downloading  (5) ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>  89.8MB gcc_impl_linux-64          0.5s
+Extracting   (2) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━╸</span>━━━━━━━━       0 libstdcxx-devel_linux-64   0.0s
 [+] 0.7s
-Downloading  (5) ━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━</span> 166.9MB gfortran_impl_linux-64     0.6s
-Extracting   (3) ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━       0 libstdcxx-devel_linux-64   0.1s
-icu                                                 12.1MB @  45.8MB/s  0.2s
-sysroot_linux-64                                    41.5MB @  52.4MB/s  0.7s
-gfortran_impl_linux-64                              20.0MB @  65.5MB/s  0.3s
-gxx_impl_linux-64                                   15.6MB @  58.4MB/s  0.3s
+Downloading  (5) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━</span> 112.1MB gcc_impl_linux-64          0.6s
+Extracting   (2) ╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━━━━       0 libstdcxx-devel_linux-64   0.1s
 [+] 0.8s
-Downloading  (5) ━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━</span> 213.0MB gcc_impl_linux-64          0.7s
-Extracting   (5) ━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━       0 libstdcxx-devel_linux-64   0.2s
-r-survival                                           8.3MB @  32.9MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━</span> 141.1MB gcc_impl_linux-64          0.7s
+Extracting   (2) ━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━━━       0 libstdcxx-devel_linux-64   0.2s
+sysroot_linux-64                                    42.0MB @  49.5MB/s  0.8s
+gxx_impl_linux-64                                   15.6MB @  49.5MB/s  0.3s
 [+] 0.9s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━</span> 235.4MB gcc_impl_linux-64          0.8s
-Extracting   (5) ━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━</span>       3 gfortran_impl_linux-64     0.3s
-r-ggplot2                                            7.8MB @  49.7MB/s  0.1s
-libopenblas                                          5.9MB @  38.2MB/s  0.1s
-libsanitizer                                         8.1MB @  39.1MB/s  0.2s
+Downloading  (4) ━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━</span> 165.8MB gcc_impl_linux-64          0.8s
+Extracting   (3) ━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━━       0 libstdcxx-devel_linux-64   0.3s
+gfortran_impl_linux-64                              20.0MB @  53.4MB/s  0.4s
 [+] 1.0s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━</span> 263.5MB gcc_impl_linux-64          0.9s
-Extracting   (5) ━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━</span>       6 gfortran_impl_linux-64     0.4s
-libglib                                              4.4MB @  36.0MB/s  0.1s
-r-matrix                                             4.3MB @  33.7MB/s  0.1s
-r-bslib                                              5.5MB @  30.8MB/s  0.2s
-gcc_impl_linux-64                                   81.8MB @  76.6MB/s  1.0s
-r-shiny                                              3.7MB @  19.5MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━</span> 178.7MB icu                        0.9s
+Extracting   (5) ━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━       0 pandoc                     0.4s
 [+] 1.1s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━</span> 289.8MB binutils_impl_linux-64     1.0s
-Extracting   (7) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━</span>       8 libglib                    0.5s
-binutils_impl_linux-64                               3.7MB @  32.5MB/s  0.1s
-r-mgcv                                               3.6MB @   3.2MB/s  0.1s
-r-caret                                              3.6MB @  16.1MB/s  0.1s
-libgcc-devel_linux-64                                3.1MB @  16.4MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━</span> 201.0MB icu                        1.0s
+Extracting   (5) ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━       0 pandoc                     0.5s
+r-survival                                           8.3MB @  32.1MB/s  0.2s
+libsanitizer                                         8.1MB @  32.3MB/s  0.2s
+icu                                                 12.1MB @  38.7MB/s  0.3s
 [+] 1.2s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 305.0MB gsl                        1.1s
-Extracting   (9) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━</span>      10 libglib                    0.6s
-r-colorspace                                         2.5MB @  ??.?MB/s  0.1s
-r-lava                                               2.5MB @  18.4MB/s  0.1s
-libgfortran5                                         2.5MB @  ??.?MB/s  0.1s
-harfbuzz                                             2.4MB @   3.0MB/s  0.1s
-r-maps                                               2.4MB @  ??.?MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━</span> 221.4MB gcc_impl_linux-64          1.1s
+Extracting   (8) ━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━       0 pandoc                     0.6s
 [+] 1.3s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 319.1MB gsl                        1.2s
-Extracting   (8) ╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━━━      17 gcc_impl_linux-64          0.7s
-r-nlme                                               2.4MB @  ??.?MB/s  0.1s
-r-sass                                               2.3MB @   3.0MB/s  0.1s
-r-data.table                                         2.3MB @  ??.?MB/s  0.1s
-gsl                                                  3.4MB @  11.8MB/s  0.3s
-r-rcpp                                               2.1MB @   3.3MB/s  0.1s
-r-glmnet                                             2.0MB @  10.2MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━</span> 230.8MB gcc_impl_linux-64          1.2s
+Extracting   (6) ━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━</span>       2 pandoc                     0.7s
+libopenblas                                          5.9MB @  24.4MB/s  0.2s
 [+] 1.4s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 330.5MB r-broom                    1.3s
-Extracting   (6) ━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━━━━━━━━      25 gcc_impl_linux-64          0.8s
-r-rmarkdown                                          2.1MB @  ??.?MB/s  0.1s
-rpy2                                                 1.9MB @   1.0MB/s  0.1s
-r-broom                                              1.7MB @   3.0MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━</span> 249.4MB gcc_impl_linux-64          1.3s
+Extracting   (5) ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>       4 gfortran_impl_linux-64     0.8s
+r-bslib                                              5.5MB @  19.3MB/s  0.3s
+r-ggplot2                                            7.8MB @  23.5MB/s  0.3s
+[+] 1.5s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━</span> 261.1MB gcc_impl_linux-64          1.4s
+Extracting   (6) ━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━</span>       5 icu                        0.9s
+libglib                                              4.4MB @  26.4MB/s  0.2s
+[+] 1.6s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━</span> 277.7MB r-base                     1.5s
+Extracting   (6) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━</span>       6 icu                        1.0s
+r-matrix                                             4.3MB @  22.0MB/s  0.2s
+r-base                                              27.3MB @  16.7MB/s  1.6s
+binutils_impl_linux-64                               3.7MB @  14.1MB/s  0.2s
+r-shiny                                              3.7MB @  29.1MB/s  0.1s
+[+] 1.7s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━</span> 290.4MB gcc_impl_linux-64          1.6s
+Extracting   (6) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━</span>       9 binutils_impl_linux-64     1.1s
+r-mgcv                                               3.6MB @  22.5MB/s  0.2s
+[+] 1.8s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 300.8MB gcc_impl_linux-64          1.7s
+Extracting   (6) ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━</span>      10 binutils_impl_linux-64     1.2s
+gcc_impl_linux-64                                   81.8MB @  45.6MB/s  1.8s
+r-caret                                              3.6MB @  17.2MB/s  0.2s
+gsl                                                  3.4MB @  15.7MB/s  0.2s
+libgcc-devel_linux-64                                3.1MB @  16.9MB/s  0.2s
+[+] 1.9s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 308.3MB harfbuzz                   1.8s
+Extracting  (10) ━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━</span>      10 binutils_impl_linux-64     1.3s
+r-colorspace                                         2.5MB @   2.7MB/s  0.1s
+libgfortran5                                         2.5MB @  20.3MB/s  0.1s
+harfbuzz                                             2.4MB @  16.8MB/s  0.2s
+[+] 2.0s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 317.2MB r-data.table               1.9s
+Extracting   (9) ╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━━━      15 gcc_impl_linux-64          1.4s
+r-maps                                               2.4MB @  10.7MB/s  0.2s
+r-lava                                               2.4MB @   9.1MB/s  0.1s
+r-sass                                               2.3MB @  ??.?MB/s  0.1s
+r-nlme                                               2.4MB @  19.9MB/s  0.2s
+r-data.table                                         2.3MB @  21.5MB/s  0.1s
+[+] 2.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 326.7MB r-clock                    2.0s
+Extracting  (10) ╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━━━      18 gcc_impl_linux-64          1.5s
+r-rcpp                                               2.1MB @  16.1MB/s  0.1s
+r-glmnet                                             2.0MB @  ??.?MB/s  0.1s
 r-clock                                              1.8MB @  ??.?MB/s  0.1s
+[+] 2.2s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 332.6MB r-broom                    2.1s
+Extracting   (8) ━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━━━━━━━━      24 gcc_impl_linux-64          1.6s
+r-broom                                              1.7MB @  ??.?MB/s  0.1s
 r-recipes                                            1.7MB @  ??.?MB/s  0.1s
 r-isoband                                            1.7MB @  ??.?MB/s  0.1s
-r-promises                                           1.6MB @   2.9MB/s  0.1s
-[+] 1.5s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 342.9MB font-ttf-ubuntu            1.4s
-Extracting   (9) ━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━━      28 gcc_impl_linux-64          0.9s
-r-hexbin                                             1.6MB @  ??.?MB/s  0.1s
-r-rlang                                              1.6MB @   3.2MB/s  0.1s
-r-rcppeigen                                          1.5MB @  14.7MB/s  0.1s
-font-ttf-ubuntu                                      1.6MB @  12.5MB/s  0.1s
-kernel-headers_linux-64                              1.5MB @   6.3MB/s  0.1s
-r-dplyr                                              1.4MB @   2.5MB/s  0.1s
-[+] 1.6s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 352.1MB r-farver                   1.5s
-Extracting   (7) ━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━      37 gcc_impl_linux-64          1.0s
-r-lattice                                            1.4MB @  ??.?MB/s  0.1s
-r-vctrs                                              1.4MB @  ??.?MB/s  0.1s
-r-farver                                             1.4MB @  14.2MB/s  0.1s
-r-fontawesome                                        1.3MB @   3.3MB/s  0.1s
+[+] 2.3s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 337.6MB font-ttf-ubuntu            2.2s
+Extracting   (9) ━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━━      26 gcc_impl_linux-64          1.7s
+font-ttf-ubuntu                                      1.6MB @  14.3MB/s  0.1s
+r-rmarkdown                                          2.1MB @ 533.2kB/s  0.3s
+r-promises                                           1.6MB @   8.5MB/s  0.1s
+kernel-headers_linux-64                              1.5MB @  24.3MB/s  0.1s
+[+] 2.4s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 344.5MB r-dplyr                    2.3s
+Extracting   (9) ━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━━      30 gsl                        1.8s
+r-rlang                                              1.6MB @  ??.?MB/s  0.1s
+rpy2                                                 1.9MB @   4.0MB/s  0.4s
+r-rcppeigen                                          1.5MB @  10.7MB/s  0.1s
+r-dplyr                                              1.4MB @   2.9MB/s  0.1s
+r-farver                                             1.4MB @  ??.?MB/s  0.1s
+[+] 2.5s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 352.3MB r-fontawesome              2.4s
+Extracting  (11) ━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━      33 gsl                        1.9s
+r-fontawesome                                        1.3MB @   6.7MB/s  0.1s
+r-lattice                                            1.4MB @   8.7MB/s  0.1s
 r-timedate                                           1.3MB @  ??.?MB/s  0.1s
-r-cli                                                1.3MB @   3.0MB/s  0.1s
-[+] 1.7s
-Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 361.8MB pcre2                      1.6s
-Extracting   (9) ━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━      41 gsl                        1.1s
-r-viridislite                                        1.3MB @   2.8MB/s  0.1s
-r-googledrive                                        1.2MB @   2.8MB/s  0.1s
-pcre2                                                1.2MB @  ??.?MB/s  0.1s
-r-dbplyr                                             1.2MB @  24.2MB/s  0.1s
-r-rbokeh                                             1.2MB @   2.8MB/s  0.1s
-r-tidyr                                              1.1MB @   9.5MB/s  0.1s
-r-xts                                                1.2MB @  ??.?MB/s  0.1s
-[+] 1.8s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 368.9MB cairo                      1.7s
-Extracting   (8) ━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━      49 gsl                        1.2s
+[+] 2.6s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 357.0MB r-cli                      2.5s
+Extracting  (12) ━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━      35 gsl                        2.0s
+r-vctrs                                              1.4MB @   8.5MB/s  0.2s
+r-cli                                                1.3MB @   3.2MB/s  0.1s
+r-hexbin                                             1.6MB @   4.3MB/s  0.4s
+[+] 2.7s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 361.7MB pcre2                      2.6s
+Extracting  (10) ━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━━      42 gsl                        2.1s
+r-viridislite                                        1.3MB @   3.1MB/s  0.2s
+r-googledrive                                        1.2MB @   3.0MB/s  0.2s
+r-rbokeh                                             1.2MB @   5.6MB/s  0.1s
+r-dbplyr                                             1.2MB @   2.5MB/s  0.1s
+r-tidyr                                              1.1MB @   2.9MB/s  0.1s
+[+] 2.8s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 367.3MB pcre2                      2.7s
+Extracting  (11) ━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━      44 kernel-headers_linux-64    2.2s
 r-mass                                               1.1MB @  ??.?MB/s  0.1s
-r-quantmod                                           1.1MB @   3.0MB/s  0.1s
-r-zoo                                                1.0MB @  ??.?MB/s  0.1s
-r-knitr                                            988.5kB @   8.6MB/s  0.1s
-r-future                                           948.6kB @   6.5MB/s  0.1s
-r-lubridate                                        977.1kB @  ??.?MB/s  0.1s
-r-stringi                                          939.5kB @  ??.?MB/s  0.1s
-[+] 1.9s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 376.0MB cairo                      1.8s
-Extracting   (7) ━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━━━━━      57 gsl                        1.3s
-r-vroom                                            935.5kB @  17.5MB/s  0.1s
-libsqlite                                          939.3kB @  ??.?MB/s  0.1s
-r-dbi                                              892.8kB @  11.0MB/s  0.1s
-libuv                                              895.1kB @  ??.?MB/s  0.1s
-r-hardhat                                          845.9kB @  ??.?MB/s  0.1s
-r-proc                                             841.7kB @  ??.?MB/s  0.1s
-[+] 2.0s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 381.3MB cairo                      1.9s
-Extracting   (7) ━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━      64 gsl                        1.4s
-xorg-libx11                                        839.7kB @  ??.?MB/s  0.1s
-r-readr                                            808.6kB @   6.0MB/s  0.1s
-r-plyr                                             787.5kB @   3.3MB/s  0.1s
-r-scales                                           777.8kB @  ??.?MB/s  0.1s
-r-gistr                                            775.2kB @  ??.?MB/s  0.1s
-r-xtable                                           744.3kB @   3.3MB/s  0.1s
-cairo                                              978.1kB @  ??.?MB/s  0.3s
+pcre2                                                1.2MB @   5.4MB/s  0.2s
+r-quantmod                                           1.1MB @   7.0MB/s  0.1s
+r-xts                                                1.2MB @   7.1MB/s  0.1s
+r-zoo                                                1.0MB @   6.2MB/s  0.1s
+[+] 2.9s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 372.5MB cairo                      2.8s
+Extracting  (10) ━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━━      50 kernel-headers_linux-64    2.3s
+r-knitr                                            988.5kB @  ??.?MB/s  0.1s
+r-stringi                                          939.5kB @  18.4MB/s  0.1s
+r-lubridate                                        977.1kB @  16.0MB/s  0.1s
+cairo                                              978.1kB @  ??.?MB/s  0.1s
+r-vroom                                            934.3kB @  ??.?MB/s  0.1s
+r-dbi                                              892.8kB @   3.4MB/s  0.1s
+r-future                                           953.2kB @  ??.?MB/s  0.1s
+[+] 3.0s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 379.2MB libuv                      2.9s
+Extracting  (12) ━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━      55 kernel-headers_linux-64    2.4s
+libuv                                              895.1kB @   7.7MB/s  0.1s
+r-hardhat                                          866.6kB @  ??.?MB/s  0.1s
+xorg-libx11                                        839.7kB @   3.4MB/s  0.1s
+r-plyr                                             787.5kB @  ??.?MB/s  0.1s
+[+] 3.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 382.5MB r-gistr                    3.0s
+Extracting  (11) ━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━━      60 cairo                      2.5s
+r-proc                                             841.7kB @   7.1MB/s  0.1s
+r-gistr                                            775.2kB @   3.3MB/s  0.1s
+r-readr                                            808.6kB @   8.1MB/s  0.1s
+r-scales                                           777.8kB @   6.7MB/s  0.1s
+r-xtable                                           744.3kB @   3.0MB/s  0.1s
 r-shape                                            765.7kB @  ??.?MB/s  0.1s
-[+] 2.1s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 388.0MB font-ttf-source-code-pro   2.0s
-Extracting   (9) ━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━      69 r-gistr                    1.5s
-r-gargle                                           724.1kB @   2.8MB/s  0.1s
-r-systemfonts                                      706.2kB @  ??.?MB/s  0.1s
-r-rpart                                            705.1kB @  ??.?MB/s  0.1s
+[+] 3.2s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 387.7MB font-ttf-source-code-pro   3.1s
+Extracting   (8) ━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━━      69 gcc_impl_linux-64          2.6s
+r-gargle                                           724.1kB @  10.4MB/s  0.1s
+r-systemfonts                                      710.1kB @  ??.?MB/s  0.1s
+r-rpart                                            704.0kB @   2.9MB/s  0.1s
 font-ttf-source-code-pro                           700.8kB @  ??.?MB/s  0.1s
 r-openssl                                          681.5kB @  ??.?MB/s  0.1s
 r-diagram                                          678.1kB @  ??.?MB/s  0.1s
-r-crul                                             646.4kB @  ??.?MB/s  0.1s
-[+] 2.2s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 392.6MB libjpeg-turbo              2.1s
-Extracting   (8) ━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━━━      77 font-ttf-source-code-pro   1.6s
-r-boot                                             644.8kB @  ??.?MB/s  0.1s
-r-jsonlite                                         638.6kB @  ??.?MB/s  0.1s
-libjpeg-turbo                                      633.7kB @  ??.?MB/s  0.1s
-r-pillar                                           629.9kB @  ??.?MB/s  0.1s
-r-e1071                                            598.4kB @  11.9MB/s  0.1s
-r-bit                                              621.5kB @  ??.?MB/s  0.1s
-r-parallelly                                       617.8kB @  ??.?MB/s  0.1s
-[+] 2.3s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 397.2MB libxml2-16                 2.2s
-Extracting   (8) ━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━      84 font-ttf-source-code-pro   1.7s
-r-xfun                                             594.5kB @   2.8MB/s  0.1s
-r-ragg                                             592.5kB @   3.3MB/s  0.1s
-r-tibble                                           589.7kB @  ??.?MB/s  0.1s
-r-cluster                                          592.3kB @  ??.?MB/s  0.1s
-r-tzdb                                             555.4kB @  ??.?MB/s  0.1s
-libxml2-16                                         556.3kB @  ??.?MB/s  0.1s
-r-httpuv                                           547.8kB @  ??.?MB/s  0.1s
-[+] 2.4s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 401.1MB make                       2.3s
-Extracting   (3) ━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━      96 libxml2-16                 1.8s
-r-ttr                                              537.0kB @  ??.?MB/s  0.1s
-r-purrr                                            547.2kB @  ??.?MB/s  0.1s
-r-googlesheets4                                    523.7kB @   3.2MB/s  0.1s
-r-pbdzmq                                           530.8kB @   3.2MB/s  0.1s
-r-fs                                               511.4kB @  ??.?MB/s  0.1s
-r-bit64                                            504.2kB @  ??.?MB/s  0.1s
-r-reprex                                           502.3kB @   3.4MB/s  0.1s
-r-curl                                             479.2kB @  ??.?MB/s  0.1s
-make                                               513.1kB @   1.5MB/s  0.1s
-[+] 2.5s
-Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 405.7MB pango                      2.4s
-Extracting   (4) ━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━     103 r-bit64                    1.9s
-r-httr                                             474.0kB @   3.4MB/s  0.1s
-r-selectr                                          478.9kB @  ??.?MB/s  0.1s
-r-prodlim                                          463.2kB @  ??.?MB/s  0.1s
-pango                                              455.4kB @  ??.?MB/s  0.1s
-pixman                                             451.0kB @  ??.?MB/s  0.1s
-[+] 2.6s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 408.0MB libtiff                    2.5s
-Extracting   (5) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━     108 make                       2.0s
-libtiff                                            435.3kB @  ??.?MB/s  0.1s
-libwebp-base                                       429.0kB @   2.9MB/s  0.1s
-r-tidyverse                                        427.3kB @   2.8MB/s  0.1s
-r-htmlwidgets                                      426.0kB @  ??.?MB/s  0.1s
-r-callr                                            454.1kB @  ??.?MB/s  0.2s
-r-dtplyr                                           411.1kB @  ??.?MB/s  0.1s
-r-ps                                               407.9kB @   2.7MB/s  0.1s
-r-forcats                                          424.1kB @  ??.?MB/s  0.1s
-r-progressr                                        398.2kB @  ??.?MB/s  0.0s
-[+] 2.7s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 411.8MB font-ttf-dejavu-sans-mono  2.6s
-Extracting   (6) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━     116 r-callr                    2.1s
-r-ipred                                            396.9kB @  ??.?MB/s  0.1s
-font-ttf-dejavu-sans-mono                          397.4kB @  ??.?MB/s  0.1s
-libxcb                                             395.9kB @   2.3MB/s  0.1s
-libfreetype6                                       386.7kB @   2.9MB/s  0.1s
-r-haven                                            384.6kB @   2.9MB/s  0.1s
-xorg-libxt                                         379.7kB @   3.1MB/s  0.1s
-[+] 2.8s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 414.2MB r-htmltools                2.7s
-Extracting   (5) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━     123 font-ttf-dejavu-sans-mono  2.2s
-r-htmltools                                        367.1kB @  ??.?MB/s  0.1s
-r-iterators                                        350.2kB @   3.1MB/s  0.1s
-r-readxl                                           370.9kB @  ??.?MB/s  0.1s
-r-xml2                                             354.8kB @  ??.?MB/s  0.1s
-r-rstudioapi                                       345.8kB @   3.1MB/s  0.1s
-r-processx                                         340.8kB @   2.9MB/s  0.1s
-r-fansi                                            329.4kB @   2.4MB/s  0.1s
-[+] 2.9s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 416.6MB libpng                     2.8s
-Extracting   (5) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━     129 r-fansi                    2.3s
-r-stringr                                          319.3kB @  ??.?MB/s  0.1s
-libpng                                             317.7kB @  ??.?MB/s  0.1s
-r-rvest                                            305.2kB @  ??.?MB/s  0.1s
-r-jquerylib                                        307.1kB @  ??.?MB/s  0.1s
-r-s7                                               311.0kB @  ??.?MB/s  0.1s
-r-otel                                             286.3kB @   2.7MB/s  0.1s
-r-foreign                                          269.6kB @  ??.?MB/s  0.0s
-[+] 3.0s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 418.8MB fontconfig                 2.9s
-Extracting   (5) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━     137 r-foreign                  2.4s
-lerc                                               264.2kB @   3.0MB/s  0.1s
-r-urltools                                         305.0kB @  ??.?MB/s  0.1s
-fontconfig                                         265.6kB @   2.9MB/s  0.1s
-r-munsell                                          247.2kB @   2.9MB/s  0.1s
-r-cpp11                                            243.0kB @  ??.?MB/s  0.0s
-r-gtable                                           228.9kB @  ??.?MB/s  0.0s
-r-randomforest                                     239.3kB @  ??.?MB/s  0.1s
-[+] 3.1s
-Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 420.6MB r-gower                    3.0s
-Extracting   (3) ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━     146 r-cpp11                    2.5s
-r-withr                                            235.2kB @  ??.?MB/s  0.1s
-sed                                                228.9kB @   2.6MB/s  0.1s
-r-irkernel                                         235.2kB @  ??.?MB/s  0.1s
-r-gower                                            226.9kB @   2.9MB/s  0.1s
-r-pryr                                             224.9kB @   3.0MB/s  0.1s
-r-tidyselect                                       220.2kB @   3.1MB/s  0.1s
-r-modelr                                           221.3kB @  ??.?MB/s  0.1s
-r-digest                                           218.4kB @   1.9MB/s  0.1s
-[+] 3.2s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 422.6MB r-future.apply             3.1s
-Extracting   (3) ━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━     154 r-digest                   2.6s
-r-lobstr                                           214.8kB @  ??.?MB/s  0.1s
-r-magrittr                                         211.8kB @  ??.?MB/s  0.1s
-r-future.apply                                     207.9kB @   2.4MB/s  0.1s
-r-sparsevctrs                                      205.4kB @   2.6MB/s  0.1s
-r-squarem                                          195.5kB @   2.8MB/s  0.1s
-r-timechange                                       193.8kB @  ??.?MB/s  0.1s
-curl                                               190.1kB @  ??.?MB/s  0.1s
-r-triebeard                                        185.3kB @   3.2MB/s  0.1s
-r-proxy                                            184.0kB @   3.2MB/s  0.1s
+r-crul                                             646.4kB @   2.7MB/s  0.1s
 [+] 3.3s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 424.2MB freetype                   3.2s
-Extracting   (3) ━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━     161 curl                       2.7s
-r-modelmetrics                                     178.7kB @  ??.?MB/s  0.1s
-r-globals                                          176.5kB @   2.8MB/s  0.1s
-r-textshaping                                      188.1kB @  ??.?MB/s  0.1s
-freetype                                           173.1kB @   3.4MB/s  0.1s
-r-formatr                                          165.7kB @   3.1MB/s  0.1s
-r-crayon                                           168.2kB @  ??.?MB/s  0.1s
-r-glue                                             165.4kB @  ??.?MB/s  0.0s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 392.7MB libjpeg-turbo              3.2s
+Extracting   (8) ━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━━━      76 gcc_impl_linux-64          2.7s
+r-boot                                             644.8kB @   2.6MB/s  0.1s
+r-pillar                                           629.9kB @  ??.?MB/s  0.0s
+libjpeg-turbo                                      633.7kB @   6.3MB/s  0.1s
+r-jsonlite                                         638.6kB @  ??.?MB/s  0.1s
+r-e1071                                            598.4kB @  ??.?MB/s  0.0s
+r-parallelly                                       617.8kB @  ??.?MB/s  0.1s
+r-xfun                                             597.0kB @   2.6MB/s  0.1s
 [+] 3.4s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 425.5MB r-later                    3.3s
-Extracting   (4) ━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━     170 r-crayon                   2.8s
-r-prettyunits                                      161.0kB @   3.0MB/s  0.1s
-r-lazyeval                                         161.2kB @  ??.?MB/s  0.1s
-r-later                                            154.1kB @  ??.?MB/s  0.0s
-r-spatial                                          156.0kB @  ??.?MB/s  0.1s
-r-tinytex                                          153.3kB @  ??.?MB/s  0.1s
-r-repr                                             147.3kB @   2.9MB/s  0.1s
-r-commonmark                                       139.8kB @  ??.?MB/s  0.1s
-r-utf8                                             147.2kB @  ??.?MB/s  0.1s
-r-foreach                                          140.9kB @  ??.?MB/s  0.1s
-r-lifecycle                                        132.6kB @   2.4MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 396.7MB libxml2-16                 3.3s
+Extracting   (8) ━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━━━━      83 gcc_impl_linux-64          2.8s
+r-tibble                                           589.7kB @  ??.?MB/s  0.0s
+r-bit                                              621.5kB @   2.3MB/s  0.1s
+r-cluster                                          592.3kB @   8.4MB/s  0.1s
+r-ragg                                             596.6kB @   4.7MB/s  0.1s
+libxml2-16                                         556.3kB @   3.3MB/s  0.1s
+r-tzdb                                             555.4kB @  ??.?MB/s  0.1s
 [+] 3.5s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 427.0MB bwidget                    3.4s
-Extracting   (3) ━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━     180 r-foreach                  2.9s
-r-nnet                                             132.3kB @   2.2MB/s  0.1s
-r-backports                                        130.9kB @  ??.?MB/s  0.1s
-bwidget                                            129.6kB @  ??.?MB/s  0.0s
-r-numderiv                                         128.9kB @  ??.?MB/s  0.1s
-r-ids                                              129.9kB @  ??.?MB/s  0.1s
-r-reshape2                                         127.8kB @   2.1MB/s  0.1s
-r-yaml                                             124.5kB @   2.0MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 400.2MB r-httpuv                   3.4s
+Extracting   (6) ━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━━      91 gcc_impl_linux-64          2.9s
+r-httpuv                                           553.9kB @   6.2MB/s  0.1s
+r-purrr                                            547.2kB @   3.3MB/s  0.1s
+r-prodlim                                          550.9kB @  ??.?MB/s  0.1s
+r-pbdzmq                                           530.8kB @  ??.?MB/s  0.1s
+r-googlesheets4                                    523.7kB @  ??.?MB/s  0.1s
+r-fs                                               518.1kB @   9.2MB/s  0.1s
 [+] 3.6s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 427.9MB r-cellranger               3.5s
-Extracting   (5) ━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━     186 r-ids                      3.0s
-r-listenv                                          122.4kB @  ??.?MB/s  0.1s
-r-hms                                              112.8kB @  ??.?MB/s  0.1s
-r-evaluate                                         111.9kB @  ??.?MB/s  0.1s
-r-class                                            109.6kB @  ??.?MB/s  0.1s
-r-codetools                                        109.2kB @  ??.?MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 403.3MB make                       3.5s
+Extracting   (5) ━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━      98 r-fs                       3.0s
+make                                               513.1kB @  ??.?MB/s  0.1s
+r-ttr                                              537.0kB @   3.2MB/s  0.2s
+r-bit64                                            504.2kB @  ??.?MB/s  0.1s
+r-reprex                                           502.3kB @   2.9MB/s  0.1s
+r-progressr                                        502.4kB @  ??.?MB/s  0.1s
 [+] 3.7s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 428.3MB r-cellranger               3.6s
-Extracting   (3) ━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━     192 r-class                    3.1s
-graphite2                                           99.6kB @  ??.?MB/s  0.0s
-r-kernsmooth                                       101.6kB @  ??.?MB/s  0.1s
-font-ttf-inconsolata                                96.5kB @   1.7MB/s  0.1s
-r-progress                                          96.3kB @  ??.?MB/s  0.1s
-r-r6                                                95.1kB @  ??.?MB/s  0.1s
-tktable                                             92.3kB @   1.7MB/s  0.1s
-r-generics                                          88.2kB @   1.7MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 405.7MB pango                      3.6s
+Extracting   (6) ━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━━     102 gcc_impl_linux-64          3.1s
+pango                                              455.4kB @  ??.?MB/s  0.0s
+r-selectr                                          478.9kB @  ??.?MB/s  0.1s
+r-callr                                            454.1kB @  ??.?MB/s  0.1s
+r-httr                                             474.0kB @  ??.?MB/s  0.1s
+r-curl                                             479.2kB @   2.1MB/s  0.1s
+pixman                                             451.0kB @  ??.?MB/s  0.1s
 [+] 3.8s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 429.1MB r-cellranger               3.7s
-Extracting   (4) ━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━     198 font-ttf-inconsolata       3.2s
-r-cachem                                            76.9kB @   1.4MB/s  0.1s
-r-fastmap                                           73.9kB @   1.4MB/s  0.1s
-libdeflate                                          73.5kB @   1.4MB/s  0.1s
-r-assertthat                                        72.5kB @  ??.?MB/s  0.1s
-r-labeling                                          70.2kB @  ??.?MB/s  0.0s
-r-clipr                                             70.8kB @  ??.?MB/s  0.1s
-r-rcolorbrewer                                      68.0kB @  ??.?MB/s  0.0s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 408.5MB libtiff                    3.7s
+Extracting   (5) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━━     109 gcc_impl_linux-64          3.2s
+r-tidyverse                                        427.3kB @   7.4MB/s  0.1s
+libwebp-base                                       429.0kB @   3.1MB/s  0.1s
+r-forcats                                          424.1kB @  ??.?MB/s  0.0s
+r-htmlwidgets                                      426.0kB @   2.8MB/s  0.1s
+libtiff                                            435.3kB @   2.3MB/s  0.1s
+r-ps                                               411.2kB @  ??.?MB/s  0.1s
+r-dtplyr                                           411.1kB @  ??.?MB/s  0.1s
+font-ttf-dejavu-sans-mono                          397.4kB @   2.8MB/s  0.1s
 [+] 3.9s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 429.5MB r-cellranger               3.8s
-Extracting   (3) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━     206 r-clipr                    3.3s
-r-cellranger                                       111.8kB @  ??.?MB/s  0.3s
-r-mime                                              64.9kB @   1.1MB/s  0.1s
-r-blob                                              70.1kB @  ??.?MB/s  0.1s
-fribidi                                             61.2kB @  ??.?MB/s  0.0s
-r-conflicted                                        64.1kB @  ??.?MB/s  0.1s
-xorg-libice                                         58.6kB @  ??.?MB/s  0.1s
-r-memoise                                           57.8kB @   1.0MB/s  0.1s
-r-uuid                                              57.6kB @   1.1MB/s  0.1s
-r-highr                                             57.1kB @  ??.?MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 412.3MB libxcb                     3.8s
+Extracting   (4) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━━━     118 font-ttf-dejavu-sans-mono  3.3s
+libfreetype6                                       384.6kB @   3.1MB/s  0.1s
+libxcb                                             395.9kB @  ??.?MB/s  0.1s
+r-ipred                                            396.9kB @  ??.?MB/s  0.1s
+r-haven                                            384.6kB @   7.1MB/s  0.1s
+xorg-libxt                                         379.7kB @  ??.?MB/s  0.1s
+r-readxl                                           370.9kB @  ??.?MB/s  0.1s
 [+] 4.0s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.1MB r-rappdirs                 3.9s
-Extracting   (4) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━     214 r-highr                    3.4s
-r-rematch2                                          56.2kB @  ??.?MB/s  0.1s
-r-rappdirs                                          54.4kB @  ??.?MB/s  0.1s
-r-sourcetools                                       54.2kB @ 975.7kB/s  0.1s
-r-sys                                               50.4kB @ 905.3kB/s  0.1s
-xorg-libxext                                        50.3kB @  ??.?MB/s  0.1s
-r-base64enc                                         48.6kB @ 308.1kB/s  0.1s
-r-irdisplay                                         39.9kB @  ??.?MB/s  0.0s
-r-ellipsis                                          44.0kB @  ??.?MB/s  0.1s
-r-httpcode                                          40.4kB @ 691.3kB/s  0.1s
-libxml2                                             45.3kB @  ??.?MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 414.2MB r-htmltools                3.9s
+Extracting   (6) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━━     122 font-ttf-dejavu-sans-mono  3.4s
+r-rstudioapi                                       345.8kB @  ??.?MB/s  0.0s
+r-htmltools                                        367.1kB @  ??.?MB/s  0.1s
+r-xml2                                             354.8kB @  ??.?MB/s  0.1s
+r-iterators                                        350.2kB @  ??.?MB/s  0.1s
+r-fansi                                            329.4kB @  ??.?MB/s  0.0s
+r-processx                                         341.6kB @  ??.?MB/s  0.1s
 [+] 4.1s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.6MB libgfortran                4.0s
-Extracting   (4) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━     223 libxml2                    3.5s
-r-askpass                                           32.0kB @  ??.?MB/s  0.1s
-libgfortran-ng                                      27.5kB @  ??.?MB/s  0.0s
-libgfortran                                         27.5kB @  ??.?MB/s  0.0s
-xorg-libsm                                          27.6kB @ 430.8kB/s  0.1s
-xorg-libxrender                                     33.0kB @  ??.?MB/s  0.1s
-r-pkgconfig                                         27.2kB @  ??.?MB/s  0.0s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 416.3MB libpng                     4.0s
+Extracting   (3) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━━     131 r-fansi                    3.5s
+libpng                                             317.8kB @  ??.?MB/s  0.0s
+r-stringr                                          319.3kB @  ??.?MB/s  0.1s
+r-jquerylib                                        307.1kB @  ??.?MB/s  0.0s
+r-s7                                               311.0kB @  ??.?MB/s  0.1s
+r-rvest                                            305.2kB @   3.0MB/s  0.1s
+r-urltools                                         305.0kB @   3.3MB/s  0.1s
+r-otel                                             286.3kB @   3.0MB/s  0.1s
+r-foreign                                          269.6kB @  ??.?MB/s  0.0s
 [+] 4.2s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.8MB libblas                    4.1s
-Extracting   (3) ━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━     231 r-pkgconfig                3.6s
-tzlocal                                             23.9kB @  ??.?MB/s  0.0s
-r-rematch                                           25.7kB @  ??.?MB/s  0.1s
-r-recommended                                       18.6kB @  ??.?MB/s  0.1s
-libblas                                             18.2kB @ 333.0kB/s  0.1s
-xorg-libxdmcp                                       20.6kB @  ??.?MB/s  0.1s
-libcblas                                            18.2kB @  ??.?MB/s  0.0s
-liblapack                                           18.2kB @  ??.?MB/s  0.1s
-pthread-stubs                                        8.3kB @  ??.?MB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 418.8MB fontconfig                 4.1s
+Extracting   (5) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━━     137 r-foreign                  3.6s
+fontconfig                                         265.6kB @   1.1MB/s  0.1s
+lerc                                               261.5kB @  ??.?MB/s  0.1s
+r-randomforest                                     239.3kB @   4.2MB/s  0.1s
+r-munsell                                          247.2kB @  ??.?MB/s  0.1s
+r-cpp11                                            243.9kB @   3.0MB/s  0.1s
+r-irkernel                                         235.2kB @   3.1MB/s  0.1s
+r-gtable                                           228.9kB @  ??.?MB/s  0.0s
 [+] 4.3s
-Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.9MB fonts-conda-ecosystem      4.2s
-Extracting   (2) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span>     239 libcblas                   3.7s
-xorg-libxau                                         15.3kB @  ??.?MB/s  0.1s
-r-essentials                                         8.1kB @  ??.?MB/s  0.1s
-fonts-conda-forge                                    4.1kB @  74.4kB/s  0.1s
-libfreetype                                          7.7kB @  ??.?MB/s  0.1s
-fonts-conda-ecosystem                                3.7kB @  69.7kB/s  0.1s
-_r-mutex                                             3.6kB @  64.8kB/s  0.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 420.4MB r-gower                    4.2s
+Extracting   (2) ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━━━     147 r-cpp11                    3.7s
+r-withr                                            235.2kB @  ??.?MB/s  0.1s
+sed                                                228.9kB @  ??.?MB/s  0.1s
+r-gower                                            226.9kB @  ??.?MB/s  0.1s
+r-pryr                                             224.9kB @   3.3MB/s  0.1s
+r-modelr                                           221.3kB @  ??.?MB/s  0.1s
+r-tidyselect                                       220.2kB @  ??.?MB/s  0.0s
+r-magrittr                                         211.1kB @  ??.?MB/s  0.0s
 [+] 4.4s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━ 431.0MB                            4.3s
-Extracting   (1) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span>     247 _r-mutex                   3.8s
-?25hUnlinking icu-78.2-h33c6efd_0
-Unlinking libsqlite-3.51.2-hf4e2dac_0
-Unlinking libxml2-16-2.15.1-hca6bf5a_1
-Unlinking libxml2-2.15.1-he237659_1
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 422.0MB r-digest                   4.3s
+Extracting   (5) ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━━     151 r-gower                    3.8s
+r-future.apply                                     207.9kB @  ??.?MB/s  0.1s
+r-sparsevctrs                                      205.4kB @  ??.?MB/s  0.1s
+r-digest                                           218.4kB @   2.1MB/s  0.1s
+r-lobstr                                           216.4kB @  ??.?MB/s  0.1s
+r-squarem                                          196.5kB @  ??.?MB/s  0.1s
+r-timechange                                       193.8kB @  ??.?MB/s  0.1s
+r-lazyeval                                         192.3kB @  ??.?MB/s  0.1s
+[+] 4.5s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 423.6MB curl                       4.4s
+Extracting   (3) ━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━━     160 r-lazyeval                 3.9s
+r-triebeard                                        185.3kB @  ??.?MB/s  0.0s
+r-textshaping                                      188.1kB @  ??.?MB/s  0.1s
+curl                                               186.2kB @  ??.?MB/s  0.1s
+r-globals                                          181.5kB @  ??.?MB/s  0.0s
+freetype                                           173.8kB @  ??.?MB/s  0.0s
+r-proxy                                            184.0kB @  ??.?MB/s  0.1s
+r-modelmetrics                                     178.7kB @  ??.?MB/s  0.1s
+[+] 4.6s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 424.7MB r-crayon                   4.5s
+Extracting   (3) ━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━━     167 freetype                   4.0s
+r-prettyunits                                      161.0kB @  ??.?MB/s  0.0s
+r-formatr                                          165.7kB @  ??.?MB/s  0.1s
+r-crayon                                           168.2kB @  ??.?MB/s  0.1s
+r-tinytex                                          157.3kB @  ??.?MB/s  0.1s
+r-spatial                                          156.0kB @   2.8MB/s  0.1s
+r-later                                            153.5kB @  ??.?MB/s  0.0s
+[+] 4.7s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 425.7MB r-foreach                  4.6s
+Extracting   (3) ━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━━━     173 r-later                    4.1s
+r-repr                                             147.3kB @  ??.?MB/s  0.1s
+r-listenv                                          141.0kB @  ??.?MB/s  0.0s
+r-foreach                                          140.9kB @  ??.?MB/s  0.1s
+r-lifecycle                                        132.6kB @  ??.?MB/s  0.0s
+r-commonmark                                       139.8kB @  ??.?MB/s  0.1s
+r-backports                                        131.4kB @  ??.?MB/s  0.0s
+[+] 4.8s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 426.6MB bwidget                    4.7s
+Extracting   (2) ━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━━     180 r-backports                4.2s
+r-nnet                                             132.3kB @  ??.?MB/s  0.1s
+r-ids                                              129.9kB @  ??.?MB/s  0.1s
+r-glue                                             165.4kB @  ??.?MB/s  0.3s
+bwidget                                            129.6kB @  ??.?MB/s  0.0s
+r-numderiv                                         128.9kB @  ??.?MB/s  0.0s
+r-yaml                                             124.5kB @  ??.?MB/s  0.0s
+liblzma                                            113.2kB @  ??.?MB/s  0.0s
+[+] 4.9s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 427.5MB r-cellranger               4.8s
+Extracting   (5) ━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━━     186 bwidget                    4.3s
+r-reshape2                                         127.8kB @  ??.?MB/s  0.1s
+r-hms                                              112.8kB @  ??.?MB/s  0.1s
+r-evaluate                                         111.9kB @  ??.?MB/s  0.0s
+r-cellranger                                       111.8kB @   1.7MB/s  0.1s
+r-class                                            109.6kB @   2.0MB/s  0.1s
+r-codetools                                        109.2kB @   1.9MB/s  0.1s
+tktable                                            102.5kB @  ??.?MB/s  0.1s
+[+] 5.0s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 428.2MB font-ttf-inconsolata       4.9s
+Extracting   (5) ━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━━━     191 r-cellranger               4.4s
+r-utf8                                             147.2kB @  ??.?MB/s  0.4s
+font-ttf-inconsolata                                96.5kB @  ??.?MB/s  0.1s
+r-kernsmooth                                       101.6kB @  ??.?MB/s  0.1s
+r-progress                                          96.3kB @  ??.?MB/s  0.1s
+graphite2                                           99.6kB @  ??.?MB/s  0.1s
+r-r6                                                95.1kB @   1.4MB/s  0.1s
+r-generics                                          88.2kB @  ??.?MB/s  0.0s
+[+] 5.1s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 429.0MB libdeflate                 5.0s
+Extracting   (5) ━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━━     198 font-ttf-inconsolata       4.5s
+r-cachem                                            76.9kB @   1.2MB/s  0.1s
+libdeflate                                          73.5kB @   1.4MB/s  0.1s
+r-fastmap                                           73.9kB @  ??.?MB/s  0.1s
+r-clipr                                             70.8kB @  ??.?MB/s  0.1s
+r-blob                                              70.1kB @  ??.?MB/s  0.0s
+r-assertthat                                        72.5kB @  ??.?MB/s  0.1s
+[+] 5.2s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 429.4MB libzlib                    5.1s
+Extracting   (5) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━━     206 libdeflate                 4.6s
+r-labeling                                          70.2kB @  ??.?MB/s  0.1s
+r-mime                                              64.9kB @  ??.?MB/s  0.0s
+r-rcolorbrewer                                      68.0kB @  ??.?MB/s  0.1s
+r-conflicted                                        64.1kB @  ??.?MB/s  0.0s
+libzlib                                             63.6kB @   1.1MB/s  0.1s
+fribidi                                             61.2kB @  ??.?MB/s  0.0s
+r-memoise                                           57.8kB @  ??.?MB/s  0.0s
+r-uuid                                              57.6kB @  ??.?MB/s  0.0s
+[+] 5.3s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 429.9MB r-highr                    5.2s
+Extracting   (5) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━━     213 fribidi                    4.7s
+r-sourcetools                                       54.6kB @  ??.?MB/s  0.0s
+r-rappdirs                                          54.4kB @  ??.?MB/s  0.0s
+r-highr                                             57.3kB @  ??.?MB/s  0.1s
+r-rematch2                                          56.2kB @  ??.?MB/s  0.1s
+xorg-libice                                         58.6kB @ 463.3kB/s  0.1s
+r-sys                                               50.4kB @ 917.8kB/s  0.1s
+xorg-libxext                                        50.3kB @  ??.?MB/s  0.1s
+[+] 5.4s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.2MB libxml2                    5.3s
+Extracting   (5) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━━     219 r-highr                    4.8s
+libxml2                                             45.3kB @  ??.?MB/s  0.0s
+r-irdisplay                                         39.9kB @  ??.?MB/s  0.0s
+r-base64enc                                         48.6kB @  ??.?MB/s  0.1s
+r-ellipsis                                          33.4kB @  ??.?MB/s  0.1s
+xorg-libxrender                                     33.0kB @ 565.1kB/s  0.1s
+r-askpass                                           32.0kB @  ??.?MB/s  0.0s
+r-httpcode                                          40.4kB @ 344.2kB/s  0.1s
+[+] 5.5s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.5MB libgfortran                5.4s
+Extracting   (4) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━╸</span>━     227 r-askpass                  4.9s
+libgfortran-ng                                      27.5kB @  ??.?MB/s  0.0s
+xorg-libsm                                          27.6kB @  ??.?MB/s  0.1s
+libgfortran                                         27.5kB @  ??.?MB/s  0.1s
+r-rematch                                           25.7kB @  ??.?MB/s  0.0s
+tzlocal                                             23.9kB @ 442.2kB/s  0.1s
+xorg-libxdmcp                                       20.6kB @  ??.?MB/s  0.0s
+[+] 5.6s
+Downloading  (5) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.7MB libblas                    5.5s
+Extracting   (5) ━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">╸</span>━     234 libgfortran                5.0s
+r-pkgconfig                                         27.2kB @ 228.8kB/s  0.1s
+liblapack                                           18.6kB @ 271.0kB/s  0.1s
+libcblas                                            18.6kB @ 350.6kB/s  0.1s
+libblas                                             18.6kB @ 328.3kB/s  0.1s
+r-recommended                                       18.6kB @  ??.?MB/s  0.1s
+xorg-libxau                                         15.3kB @  ??.?MB/s  0.1s
+r-essentials                                         8.1kB @  ??.?MB/s  0.0s
+libfreetype                                          8.0kB @ 141.9kB/s  0.1s
+[+] 5.7s
+Downloading  (4) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span> 430.8MB _r-mutex                   5.6s
+Extracting   (3) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span>     242 libfreetype                5.1s
+fonts-conda-forge                                    4.1kB @  76.2kB/s  0.1s
+fonts-conda-ecosystem                                3.7kB @  ??.?MB/s  0.0s
+pthread-stubs                                        8.3kB @  ??.?MB/s  0.1s
+_r-mutex                                             3.6kB @  52.1kB/s  0.1s
+[+] 5.8s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━ 430.8MB                            5.7s
+Extracting   (1) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span>     248 _r-mutex                   5.2s
+?25h
+Unlinking liblzma-5.8.1-hb9d3cd8_2
+Unlinking libzlib-1.3.1-hb9d3cd8_2
+Unlinking libxml2-16-2.15.1-hf2a90c1_0
+Unlinking libxml2-2.15.1-h031cc0b_0
+Linking liblzma-5.8.2-hb03c661_0
+Linking libzlib-1.3.2-h25fd6f3_2
 Linking icu-75.1-he02047a_0
-Linking libsqlite-3.51.2-h0c1763c_0
-Linking curl-8.18.0-h4e3cde8_0
 Linking libdeflate-1.25-h17f619e_0
 Linking libjpeg-turbo-3.1.2-hb03c661_0
-Linking pcre2-10.47-haa7fec5_0
 Linking xorg-libice-1.1.2-hb9d3cd8_0
 Linking libwebp-base-1.6.0-hd42ef1d_0
 Linking libgfortran5-15.2.0-h68bc16d_18
-Linking libpng-1.6.55-h421ea60_0
-Linking fribidi-1.0.16-hb03c661_0
-Linking libuv-1.51.0-hb03c661_1
 Linking bwidget-1.10.1-ha770c72_1
 Linking libsanitizer-15.2.0-h90f66d4_18
 Linking make-4.4.1-hb9d3cd8_2
 Linking sed-4.9-h6688a6e_0
-Linking tktable-2.10-h8d826fa_7
+Linking fribidi-1.0.16-hb03c661_0
 Linking pthread-stubs-0.4-hb9d3cd8_1002
 Linking xorg-libxau-1.0.12-hb03c661_1
 Linking xorg-libxdmcp-1.1.5-hb03c661_1
-Linking lerc-4.0.0-h0aef613_1
+Linking lerc-4.1.0-hdb68285_0
 Linking graphite2-1.3.14-hecca717_2
 Linking pixman-0.46.4-h54a6638_1
-Linking pandoc-3.9-ha770c72_0
+Linking pandoc-3.9.0.2-ha770c72_0
+Linking libuv-1.51.0-hb03c661_1
+Linking libpng-1.6.57-h421ea60_0
+Linking pcre2-10.47-haa7fec5_0
+Linking curl-8.17.0-h4e3cde8_0
 Linking libxml2-16-2.15.1-ha9997c6_0
-Linking libglib-2.86.4-h6548e54_1
 Linking xorg-libsm-1.2.6-he73a12e_0
 Linking libgfortran-15.2.0-h69a702a_18
-Linking libfreetype6-2.14.1-h73754d4_0
 Linking libxcb-1.17.0-h8a09558_0
 Linking libtiff-4.7.1-h9d88235_1
+Linking libfreetype6-2.14.3-h73754d4_0
+Linking libglib-2.86.4-h6548e54_1
 Linking libxml2-2.15.1-h26afc86_0
-Linking libopenblas-0.3.30-pthreads_h94d23a6_4
 Linking libgfortran-ng-15.2.0-h69a702a_18
-Linking libfreetype-2.14.1-ha770c72_0
+Linking libopenblas-0.3.32-pthreads_h94d23a6_0
 Linking xorg-libx11-1.8.13-he1eb515_0
-Linking libblas-3.11.0-5_h4a7cf45_openblas
-Linking freetype-2.14.1-ha770c72_0
+Linking libfreetype-2.14.3-ha770c72_0
+Linking libblas-3.11.0-6_h4a7cf45_openblas
 Linking xorg-libxext-1.3.7-hb03c661_0
 Linking xorg-libxt-1.3.1-hb9d3cd8_0
+Linking tktable-2.10-h5a7a40f_8
 Linking xorg-libxrender-0.9.12-hb9d3cd8_0
-Linking libcblas-3.11.0-5_h0358290_openblas
-Linking liblapack-3.11.0-5_h47877c9_openblas
+Linking freetype-2.14.3-ha770c72_0
+Linking libcblas-3.11.0-6_h0358290_openblas
+Linking liblapack-3.11.0-6_h47877c9_openblas
 Linking fontconfig-2.15.0-h7e30c49_1
 Linking gsl-2.7-he838d99_0
 Linking tzlocal-5.3.1-pyh8f84b5b_0
 Linking libgcc-devel_linux-64-15.2.0-hcc6f6b0_118
 Linking libstdcxx-devel_linux-64-15.2.0-hd446a21_118
 Linking _r-mutex-1.0.1-anacondar_1
-Linking kernel-headers_linux-64-6.12.0-he073ed8_5
+Linking kernel-headers_linux-64-6.12.0-he073ed8_6
 Linking font-ttf-dejavu-sans-mono-2.37-hab24e00_0
 Linking font-ttf-ubuntu-0.83-h77eed37_3
 Linking font-ttf-inconsolata-3.000-h77eed37_0
 Linking font-ttf-source-code-pro-2.038-h77eed37_0
-Linking sysroot_linux-64-2.39-hc4b9eeb_5
+Linking sysroot_linux-64-2.39-hc4b9eeb_6
 Linking fonts-conda-forge-1-hc364b38_1
 Linking fonts-conda-ecosystem-1-0
-Linking binutils_impl_linux-64-2.45-default_hfdba357_105
+Linking binutils_impl_linux-64-2.45-default_hfdba357_104
 Linking cairo-1.18.4-h3394656_0
 Linking gcc_impl_linux-64-15.2.0-he420e7e_18
 Linking harfbuzz-12.2.0-h15599e2_0
 Linking gfortran_impl_linux-64-15.2.0-h281d09f_18
 Linking gxx_impl_linux-64-15.2.0-hda75c37_18
 Linking pango-1.56.4-hadf4263_0
-Linking r-base-4.5.2-h835929b_3
-Linking r-proxy-0.4_29-r45h54b55ab_0
+Linking r-base-4.5.2-h835929b_2
 Linking r-parallelly-1.46.1-r45h54b55ab_0
+Linking r-proxy-0.4_29-r45h54b55ab_0
 Linking r-rappdirs-0.3.4-r45h54b55ab_0
 Linking r-s7-0.2.1-r45h54b55ab_0
 Linking r-sys-3.4.3-r45h54b55ab_1
@@ -1991,52 +2046,52 @@ Linking r-uuid-1.2_2-r45h54b55ab_0
 Linking r-colorspace-2.1_2-r45h54b55ab_0
 Linking r-digest-0.6.39-r45h3697838_0
 Linking r-gower-1.0.2-r45h54b55ab_0
+Linking r-rpart-4.1.27-r45h54b55ab_0
 Linking r-foreign-0.8_91-r45h54b55ab_0
 Linking r-cluster-2.1.8.2-r45heaba542_0
 Linking r-base64enc-0.1_6-r45h54b55ab_0
+Linking r-fs-1.6.7-r45h3697838_0
 Linking r-yaml-2.3.12-r45h54b55ab_0
-Linking r-xfun-0.56-r45h3697838_0
+Linking r-xfun-0.57-r45h3697838_0
+Linking r-sourcetools-0.1.7_2-r45h3697838_0
+Linking r-ps-1.9.2-r45h54b55ab_0
 Linking r-bit-4.6.0-r45h54b55ab_1
 Linking r-utf8-1.2.6-r45h54b55ab_1
 Linking r-fansi-1.0.7-r45h54b55ab_0
 Linking r-rcpp-1.1.1-r45h3697838_0
 Linking r-lattice-0.22_9-r45h54b55ab_0
-Linking r-rlang-1.1.7-r45h3697838_0
+Linking r-backports-1.5.1-r45h54b55ab_0
+Linking r-rlang-1.2.0-r45h3697838_0
 Linking r-stringi-1.8.7-r45h2dae267_1
-Linking r-sourcetools-0.1.7_1-r45h3697838_3
 Linking r-commonmark-2.0.0-r45h54b55ab_1
-Linking r-backports-1.5.0-r45h54b55ab_2
-Linking r-magrittr-2.0.4-r45h54b55ab_0
-Linking r-ps-1.9.1-r45h54b55ab_1
+Linking r-magrittr-2.0.5-r45h54b55ab_0
 Linking r-fastmap-1.2.0-r45h3697838_2
 Linking r-mime-0.13-r45h54b55ab_1
 Linking r-httpcode-0.3.0-r45ha770c72_5
-Linking r-fs-1.6.6-r45h3697838_1
 Linking r-farver-2.1.2-r45h3697838_2
 Linking r-glue-1.8.0-r45h54b55ab_1
 Linking r-spatial-7.3_18-r45h54b55ab_1
-Linking r-rpart-4.1.24-r45h54b55ab_1
 Linking r-mass-7.3_65-r45h54b55ab_0
 Linking r-kernsmooth-2.23_26-r45ha0a88a1_1
 Linking r-maps-3.4.3-r45h54b55ab_1
-Linking r-lazyeval-0.2.2-r45h54b55ab_6
 Linking r-curl-7.0.0-r45h10955f1_1
 Linking r-pbdzmq-0.3_14-r45hded8526_1
 Linking r-cli-3.6.5-r45h3697838_1
 Linking r-randomforest-4.7_1.2-r45heaba542_1
 Linking r-jsonlite-2.0.0-r45h54b55ab_1
 Linking r-data.table-1.17.8-r45h1c8cec4_1
-Linking rpy2-3.6.4-py313r45h67dc6d7_1
+Linking rpy2-3.6.6-py313r45h269ec90_1
 Linking r-askpass-1.2.1-r45h54b55ab_1
 Linking r-bit64-4.6.0_1-r45h54b55ab_1
 Linking r-triebeard-0.4.1-r45h3697838_4
 Linking r-plyr-1.8.9-r45h3697838_3
+Linking r-nlme-3.1_169-r45heaba542_0
+Linking r-matrix-1.7_5-r45h0e4624f_0
 Linking r-zoo-1.8_15-r45h54b55ab_0
-Linking r-nlme-3.1_168-r45heaba542_1
 Linking r-hexbin-1.28.5-r45heaba542_1
-Linking r-matrix-1.7_4-r45h0e4624f_1
-Linking r-later-1.4.7-r45h3697838_0
-Linking r-ellipsis-0.3.2-r45h54b55ab_4
+Linking r-lazyeval-0.2.3-r45h54b55ab_0
+Linking r-later-1.4.8-r45h3697838_0
+Linking r-ellipsis-0.3.3-r45h54b55ab_0
 Linking r-cachem-1.1.0-r45h54b55ab_2
 Linking r-nnet-7.3_20-r45h54b55ab_1
 Linking r-class-7.3_23-r45h54b55ab_1
@@ -2045,22 +2100,22 @@ Linking r-modelmetrics-1.2.2.2-r45h3697838_5
 Linking r-openssl-2.3.5-r45h68c19f5_0
 Linking r-urltools-1.7.3.1-r45h3697838_1
 Linking r-proc-1.19.0.1-r45h3697838_1
-Linking r-xts-0.14.1-r45h54b55ab_1
 Linking r-mgcv-1.9_4-r45h0e4624f_0
 Linking r-survival-3.8_6-r45h54b55ab_0
 Linking r-rcppeigen-0.3.4.0.2-r45h3704496_1
+Linking r-xts-0.14.2-r45h54b55ab_0
 Linking r-htmltools-0.5.9-r45h3697838_0
 Linking r-e1071-1.7_17-r45h3697838_0
 Linking r-ttr-0.24.4-r45h54b55ab_2
-Linking r-listenv-0.10.0-r45hc72bb7e_0
+Linking r-listenv-0.10.1-r45hc72bb7e_0
+Linking r-squarem-2026.1-r45hc72bb7e_0
+Linking r-numderiv-2016.8_1.1-r45hc72bb7e_7
 Linking r-timedate-4052.112-r45hc72bb7e_0
 Linking r-viridislite-0.4.3-r45hc72bb7e_0
 Linking r-xtable-1.8_8-r45hc72bb7e_0
-Linking r-rstudioapi-0.18.0-r45hc72bb7e_0
 Linking r-otel-0.2.0-r45hc72bb7e_1
-Linking r-squarem-2021.1-r45hc72bb7e_4
-Linking r-numderiv-2016.8_1.1-r45hc72bb7e_7
-Linking r-cpp11-0.5.3-r45h785f33e_0
+Linking r-rstudioapi-0.18.0-r45hc72bb7e_0
+Linking r-cpp11-0.5.4-r45h785f33e_0
 Linking r-dbi-1.3.0-r45hc72bb7e_0
 Linking r-pkgconfig-2.0.3-r45hc72bb7e_5
 Linking r-generics-0.1.4-r45hc72bb7e_1
@@ -2079,9 +2134,9 @@ Linking r-crayon-1.5.3-r45hc72bb7e_2
 Linking r-shape-1.4.6.1-r45ha770c72_2
 Linking r-formatr-1.14-r45hc72bb7e_3
 Linking r-munsell-0.5.1-r45hc72bb7e_2
-Linking r-progressr-0.18.0-r45hc72bb7e_0
-Linking r-tinytex-0.58-r45hc72bb7e_0
-Linking r-highr-0.11-r45hc72bb7e_2
+Linking r-progressr-0.19.0-r45hc72bb7e_0
+Linking r-highr-0.12-r45hc72bb7e_0
+Linking r-tinytex-0.59-r45hc72bb7e_0
 Linking r-lifecycle-1.0.5-r45hc72bb7e_0
 Linking r-memoise-2.0.1-r45hc72bb7e_4
 Linking r-ids-1.0.1-r45hc72bb7e_5
@@ -2090,7 +2145,7 @@ Linking r-fontawesome-0.5.3-r45hc72bb7e_1
 Linking r-quantmod-0.4.28-r45hc72bb7e_1
 Linking r-prettyunits-1.2.0-r45hc72bb7e_2
 Linking r-httr-1.4.8-r45hc72bb7e_0
-Linking r-globals-0.19.0-r45hc72bb7e_0
+Linking r-globals-0.19.1-r45hc72bb7e_0
 Linking r-foreach-1.5.2-r45hc72bb7e_4
 Linking r-recommended-4.5-r45hd8ed1ab_1008
 Linking r-diagram-1.6.5-r45ha770c72_4
@@ -2101,25 +2156,25 @@ Linking r-crul-1.6.0-r45hc72bb7e_1
 Linking r-scales-1.4.0-r45hc72bb7e_1
 Linking r-conflicted-1.2.0-r45h785f33e_3
 Linking r-gargle-1.6.1-r45h785f33e_0
-Linking r-future-1.69.0-r45h785f33e_0
+Linking r-future-1.70.0-r45hc72bb7e_0
 Linking r-future.apply-1.20.2-r45hc72bb7e_0
-Linking r-lava-1.8.2-r45hc72bb7e_0
+Linking r-lava-1.9.0-r45hc72bb7e_0
 Linking r-isoband-0.3.0-r45h3697838_0
 Linking r-tzdb-0.5.0-r45h3697838_2
 Linking r-timechange-0.4.0-r45h3697838_0
 Linking r-sass-0.4.10-r45h3697838_1
-Linking r-processx-3.8.6-r45h54b55ab_1
-Linking r-systemfonts-1.3.1-r45h74f4acd_0
-Linking r-vctrs-0.7.1-r45h3697838_0
-Linking r-lobstr-1.2.0-r45h3697838_0
+Linking r-processx-3.8.7-r45h54b55ab_0
+Linking r-systemfonts-1.3.2-r45h74f4acd_0
+Linking r-vctrs-0.7.2-r45h3697838_0
+Linking r-lobstr-1.2.1-r45h3697838_0
 Linking r-glmnet-4.1_10-r45ha36cffa_1
-Linking r-httpuv-1.6.16-r45h6d565e7_1
+Linking r-httpuv-1.6.17-r45h6d565e7_0
 Linking r-lubridate-1.9.5-r45h54b55ab_0
 Linking r-textshaping-1.0.4-r45h74f4acd_0
 Linking r-sparsevctrs-0.3.6-r45h54b55ab_0
 Linking r-clock-0.7.4-r45h3697838_0
 Linking r-purrr-1.2.1-r45h54b55ab_0
-Linking r-ragg-1.5.0-r45h9f1dc4d_1
+Linking r-ragg-1.5.2-r45h9f1dc4d_0
 Linking r-bslib-0.10.0-r45hc72bb7e_0
 Linking r-callr-3.7.6-r45hc72bb7e_2
 Linking r-blob-1.3.0-r45hc72bb7e_0
@@ -2129,7 +2184,7 @@ Linking r-hms-1.1.4-r45hc72bb7e_0
 Linking r-ggplot2-4.0.2-r45h785f33e_0
 Linking r-tidyselect-1.2.1-r45hc72bb7e_2
 Linking r-shiny-1.13.0-r45h785f33e_0
-Linking r-rmarkdown-2.30-r45hc72bb7e_0
+Linking r-rmarkdown-2.31-r45hc72bb7e_0
 Linking r-repr-1.1.7-r45h785f33e_2
 Linking r-selectr-0.5_1-r45hc72bb7e_0
 Linking r-progress-1.2.3-r45hc72bb7e_2
@@ -2140,14 +2195,14 @@ Linking r-irkernel-1.3.2-r45h785f33e_3
 Linking r-tibble-3.3.1-r45h54b55ab_0
 Linking r-reshape2-1.4.5-r45h3697838_0
 Linking r-pryr-0.1.6-r45h3697838_3
-Linking r-prodlim-2025.04.28-r45h3697838_1
-Linking r-vroom-1.7.0-r45h3697838_0
-Linking r-dplyr-1.2.0-r45h3697838_0
+Linking r-prodlim-2026.03.11-r45h3697838_0
+Linking r-vroom-1.7.1-r45h3697838_0
+Linking r-dplyr-1.2.1-r45h3697838_0
 Linking r-ipred-0.9_15-r45h54b55ab_2
 Linking r-readr-2.2.0-r45h3697838_0
 Linking r-tidyr-1.3.2-r45h3697838_0
+Linking r-hardhat-1.4.3-r45hc72bb7e_0
 Linking r-forcats-1.0.1-r45hc72bb7e_0
-Linking r-hardhat-1.4.2-r45hc72bb7e_1
 Linking r-rematch2-2.1.2-r45hc72bb7e_5
 Linking r-googledrive-2.1.2-r45hc72bb7e_1
 Linking r-cellranger-1.1.0-r45hc72bb7e_1008
@@ -2156,7 +2211,7 @@ Linking r-dtplyr-1.3.3-r45hc72bb7e_0
 Linking r-gistr-0.9.0-r45hc72bb7e_4
 Linking r-dbplyr-2.5.2-r45hc72bb7e_0
 Linking r-broom-1.0.12-r45hc72bb7e_0
-Linking r-recipes-1.3.1-r45hc72bb7e_1
+Linking r-recipes-1.3.2-r45hc72bb7e_0
 Linking r-googlesheets4-1.1.2-r45h785f33e_1
 Linking r-rbokeh-0.5.2-r45hc72bb7e_5
 Linking r-modelr-0.1.11-r45hc72bb7e_3
@@ -2207,15 +2262,11 @@ library(ggplot2)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Need help getting started? Try the R Graphics Cookbook:
-https://r-graphics.org
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>Example with Python and R</strong></p>
 <p>Let’s look at an example where we create a Pandas DataFrame in Python and then use it in R code within the same notebook.</p>
+<p>Let’s install the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library first, which is a Python library for data manipulation and analysis.</p>
+<p><code class="docutils literal notranslate"><span class="pre">%%capture</span></code> suppresses and captures all output (stdout, stderr) from a cell, preventing it from being displayed. It is used here to hide the installation output.</p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
@@ -2340,7 +2391,7 @@ ggplot(data = df, aes(x = x_var, y = y_var)) +
 </div>
 </section>
 <section id="use-a-native-r-kernel">
-<h4>2. Use a native R kernel<a class="headerlink" href="#use-a-native-r-kernel" title="Link to this heading">#</a></h4>
+<h4>3.2.2. Use a native R kernel<a class="headerlink" href="#use-a-native-r-kernel" title="Link to this heading">#</a></h4>
 <p>For a full R notebook experience, install the IRkernel:</p>
 <p><strong>Install the IRkernel) package</strong></p>
 <p>IRkernel can be installed from CRAN. Run this in a cell with R magic:</p>
@@ -2406,7 +2457,7 @@ ggplot(data = df, aes(x = x_var, y = y_var)) +
 </div>
 </div>
 <p>This will execute the <em>hello.py</em> file and call the hello function with “World” as the argument.</p>
-<p>You can also load the contents of <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> directly into a notebook cell using the <code class="docutils literal notranslate"><span class="pre">%load</span></code> magic command. When you run the cell with <code class="docutils literal notranslate"><span class="pre">%load</span> <span class="pre">hello.py</span></code>, the code from <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> will be inserted into the cell, allowing you to edit or run it interactively.</p>
+<p>You can also load the contents of <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> directly into a notebook cell using the <code class="docutils literal notranslate"><span class="pre">%load</span></code> magic command. When you run the cell with <code class="docutils literal notranslate"><span class="pre">%load</span> <span class="pre">hello.py</span></code>, the code from <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> will be inserted into the cell, allowing you to edit or run it interactively. Note that <code class="docutils literal notranslate"><span class="pre">%load</span></code> will automatically comment itself out once run, replacing the command with the loaded code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %load hello.py</span>
@@ -2446,37 +2497,53 @@ ggplot(data = df, aes(x = x_var, y = y_var)) +
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="custom-magic-commands">
+<h2>4. Custom Magic Commands<a class="headerlink" href="#custom-magic-commands" title="Link to this heading">#</a></h2>
+<p>In addition to the built-in magic commands, IPython allows you to define your own custom magic commands. This is useful when you have repetitive tasks that you want to encapsulate in a magic command. See the <a class="reference external" href="https://ipython.readthedocs.io/en/stable/config/custommagics.html">IPython documentation</a> for a full guide on how to create custom magic commands.</p>
 <section id="dependencies-in-jupyter-python">
-<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
+<h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-28T05:36:09.702885+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T04:06:43.022798+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
-IPython: 9.9.0
+IPython: 9.7.0
 pandas : 2.3.3
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>
@@ -2499,7 +2566,7 @@ Ubuntu 24.04.3 LTS
 Matrix products:
 default
 BLAS/LAPACK:
-/opt/conda/lib/libopenblasp-r0.3.30.so
+/opt/conda/lib/libopenblasp-r0.3.32.so
 ;  LAPACK version
 3.12.0
 locale:
@@ -2544,21 +2611,21 @@ loaded via a namespace (and not attached):
  labeling_0.4.3
  RColorBrewer_1.1-3
  R6_2.6.1
- Matrix_1.7-4
+ Matrix_1.7-5
  [5]
  mgcv_1.9-4
  tidyselect_1.2.1
  lattice_0.22-9
  farver_2.1.2
  [9]
- magrittr_2.0.4
+ magrittr_2.0.5
  splines_4.5.2
  gtable_0.3.6
  glue_1.8.0
 [13]
  tibble_3.3.1
  pkgconfig_2.0.3
- dplyr_1.2.0
+ dplyr_1.2.1
  generics_0.1.4
 [17]
  lifecycle_1.0.5
@@ -2567,18 +2634,17 @@ loaded via a namespace (and not attached):
  scales_1.4.0
 [21]
  grid_4.5.2
- vctrs_0.7.1
+ vctrs_0.7.2
  withr_3.0.2
  compiler_4.5.2
 [25]
- nlme_3.1-168
+ nlme_3.1-169
  pillar_1.11.1
- rlang_1.1.7
+ rlang_1.2.0
 </pre></div>
 </div>
 </div>
 </div>
-</section>
 </section>
 </section>
 </section>
@@ -2651,30 +2717,40 @@ loaded via a namespace (and not attached):
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1. Magic Commands</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-magics">2. Line Magics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-magics">2.1 Information Magics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lsmagic">%lsmagic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magic">%magic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickref">%quickref</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-operation-magics-and-alternatives">2.2 Directory Operation Magics and Alternatives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd">%pwd</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">%ls</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">%mkdir</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir">%rmdir</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">%cd</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bookmark">%bookmark</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#information-magics">2.1 Information Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lsmagic">%lsmagic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#magic">%magic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quickref">%quickref</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-operation-magics">2.3. System Operation Magics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-magic">%pip magic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-operation-magics-and-alternatives">2.2 Directory Operation Magics and Alternatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd">%pwd</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">%ls</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">%mkdir</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir">%rmdir</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">%cd</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bookmark">%bookmark</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#system-operation-magics">2.3. System Operation Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pip-magic">%pip magic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#debug-magic">%debug magic</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magics-on-python-files">2.4. Magics on Python files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-magics">2.5. Variable Magics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-whos-and-who-ls">%who, %whos and %who_ls</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timing-magics">2.6. Timing Magics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-magic">%time magic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeit">%timeit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#history-magics">History magics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-magics">2.5. Variable Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#who-whos-and-who-ls">%who, %whos and %who_ls</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timing-magics">2.6. Timing Magics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-magic">%time magic</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#timeit">%timeit</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#history-magics">2.7. History magics</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-magics">3. Cell Magics</a><ul class="nav section-nav flex-column">
@@ -2685,15 +2761,16 @@ loaded via a namespace (and not attached):
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-magics">3.2. Programming Magics</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-r-in-jupyter-notebooks">Running R in Jupyter Notebooks:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-python-kernel">1. Use Python Kernel</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-native-r-kernel">2. Use a native R kernel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-python-kernel">3.2.1. Use Python Kernel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-native-r-kernel">3.2.2. Use a native R kernel</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#which-approach-should-you-use">Which approach should you use?</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magics-on-python">3.3. Magics on Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magics-on-python">3.3. Magics on Python</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-magic-commands">4. Custom Magic Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
 </li>
 </ul>

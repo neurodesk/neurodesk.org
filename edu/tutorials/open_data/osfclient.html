@@ -48,7 +48,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -197,6 +197,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -250,6 +252,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -258,17 +264,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -278,18 +276,12 @@
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Open Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -448,16 +440,14 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">osfclient</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-an-osf-token">Setup an OSF token</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-a-dataset">Publish a dataset</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-for-those-who-have-used-orcid-to-create-their-account-log-in">Note for those who have used ORCID to create their account / log in</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-storage-for-osf">Note on storage for OSF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-an-osf-token">Setup an OSF token</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-a-dataset">Publish a dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-for-those-who-have-used-orcid-to-create-their-account-log-in">Note for those who have used ORCID to create their account / log in</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-storage-for-osf">Note on storage for OSF</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#access-a-dataset">Access a dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-a-dataset">Access a dataset</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -479,16 +469,15 @@
 <p><a class="reference external" href="https://neurodesk.org/getting-started/">Getting Set Up with Neurodesk</a></p>
 <!-- -->
 <p>The osfclient is an open-source tool to publish and access open datasets on the Open Science Framework (OSF): http://osf.io/</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="setup-an-osf-token">
-<h1>Setup an OSF token<a class="headerlink" href="#setup-an-osf-token" title="Link to this heading">#</a></h1>
+<section id="setup-an-osf-token">
+<h2>Setup an OSF token<a class="headerlink" href="#setup-an-osf-token" title="Link to this heading">#</a></h2>
 <p>You can generate an OSF token under your user <a class="reference external" href="https://osf.io/settings/tokens">settings</a>. Then, set the OSF token as an environment variable:</p>
 <div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OSF_TOKEN</span><span class="o">=</span>YOURTOKEN
 </pre></div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="publish-a-dataset">
-<h1>Publish a dataset<a class="headerlink" href="#publish-a-dataset" title="Link to this heading">#</a></h1>
+<section id="publish-a-dataset">
+<h2>Publish a dataset<a class="headerlink" href="#publish-a-dataset" title="Link to this heading">#</a></h2>
 <p>Here is an example how to publish a dataset on the OSF:</p>
 <div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/dataset
 osf<span class="w"> </span>init
@@ -501,21 +490,22 @@ osf<span class="w"> </span>upload<span class="w"> </span>-r<span class="w"> </sp
 </pre></div>
 </div>
 <section id="note-for-those-who-have-used-orcid-to-create-their-account-log-in">
-<h2>Note for those who have used ORCID to create their account / log in<a class="headerlink" href="#note-for-those-who-have-used-orcid-to-create-their-account-log-in" title="Link to this heading">#</a></h2>
+<h3>Note for those who have used ORCID to create their account / log in<a class="headerlink" href="#note-for-those-who-have-used-orcid-to-create-their-account-log-in" title="Link to this heading">#</a></h3>
 <p>You can still use OSF to upload, but you need to use the TOKEN as the username in osf init (from testing, you don’t need to export the OSF_TOKEN variable).
 It won’t ask you for a password.</p>
 </section>
 <section id="note-on-storage-for-osf">
-<h2>Note on storage for OSF<a class="headerlink" href="#note-on-storage-for-osf" title="Link to this heading">#</a></h2>
+<h3>Note on storage for OSF<a class="headerlink" href="#note-on-storage-for-osf" title="Link to this heading">#</a></h3>
 <p>The limits are now 5GB for private repo, 50gb for public repo as of 2025.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="access-a-dataset">
-<h1>Access a dataset<a class="headerlink" href="#access-a-dataset" title="Link to this heading">#</a></h1>
+<section id="access-a-dataset">
+<h2>Access a dataset<a class="headerlink" href="#access-a-dataset" title="Link to this heading">#</a></h2>
 <p>To download a dataset from the OSF:</p>
 <div class="highlight-Bash notranslate"><div class="highlight"><pre><span></span>osf<span class="w"> </span>-p<span class="w"> </span>PROJECTID_HERE_eg_y5cq9<span class="w"> </span>clone<span class="w"> </span>.
 </pre></div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -578,16 +568,14 @@ It won’t ask you for a password.</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">osfclient</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-an-osf-token">Setup an OSF token</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-a-dataset">Publish a dataset</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-for-those-who-have-used-orcid-to-create-their-account-log-in">Note for those who have used ORCID to create their account / log in</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-storage-for-osf">Note on storage for OSF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-an-osf-token">Setup an OSF token</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-a-dataset">Publish a dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-for-those-who-have-used-orcid-to-create-their-account-log-in">Note for those who have used ORCID to create their account / log in</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-storage-for-osf">Note on storage for OSF</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#access-a-dataset">Access a dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-a-dataset">Access a dataset</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

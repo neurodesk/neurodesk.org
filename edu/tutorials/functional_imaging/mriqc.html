@@ -48,7 +48,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -197,6 +197,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -250,6 +252,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -258,17 +264,9 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Functional Imaging</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -278,18 +276,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -448,16 +440,14 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Using mriqc with neurodesk on HPC</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-neurodesk">Launch Neurodesk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-mriqc">Open MRIQC</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-mriqc-command">Setting up mriqc command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-neurodesk">Launch Neurodesk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-mriqc">Open MRIQC</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-mriqc-command">Setting up mriqc command</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -481,13 +471,12 @@
 <!-- Following line adds a link to getting set up with Neurodesk -->
 <p><a class="reference external" href="https://neurodesk.org/getting-started/">Getting Set Up with Neurodesk</a></p>
 <!-- -->
-</section>
 <hr class="docutils">
-<section class="tex2jax_ignore mathjax_ignore" id="assumptions">
-<h1>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading">#</a></h1>
-<ul class="simple">
-<li><p>[ ] Your data is already in <a class="reference external" href="https://bids.neuroimaging.io/">BIDS format</a></p></li>
-<li><p>[ ] You plan to run mriqc using Neurodesk</p></li>
+<section id="assumptions">
+<h2>Assumptions<a class="headerlink" href="#assumptions" title="Link to this heading">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Your data is already in <a class="reference external" href="https://bids.neuroimaging.io/">BIDS format</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> You plan to run mriqc using Neurodesk</p></li>
 </ul>
 <p>NOTE: MRIQC has its $HOME variable hardcoded to be /home/mriqc. This leads to problems on some HPCs. A workaround is to run this before mriqc:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">neurodesk_singularity_opts</span><span class="o">=</span><span class="s2">"--home $HOME:/home"</span>
@@ -495,16 +484,16 @@
 </div>
 </section>
 <hr class="docutils">
-<section class="tex2jax_ignore mathjax_ignore" id="steps">
-<h1>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h1>
+<section id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h2>
 <hr class="docutils">
 <section id="launch-neurodesk">
-<h2>Launch Neurodesk<a class="headerlink" href="#launch-neurodesk" title="Link to this heading">#</a></h2>
+<h3>Launch Neurodesk<a class="headerlink" href="#launch-neurodesk" title="Link to this heading">#</a></h3>
 <p>From the launcher, click the Neurodesktop icon:</p>
 <p><img alt="launch_neurodesk" src="../../_images/launch_neurodesk1.png"> <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  --></p>
 </section>
 <section id="open-mriqc">
-<h2>Open MRIQC<a class="headerlink" href="#open-mriqc" title="Link to this heading">#</a></h2>
+<h3>Open MRIQC<a class="headerlink" href="#open-mriqc" title="Link to this heading">#</a></h3>
 <p>Now you’re in Neurodesk, use the menus to first open the neurodesk options</p>
 <p><img alt="neurodesk_menu" src="../../_images/neurodesk_menu1.png"> <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  --></p>
 <p>and then select MRIQC. Note that the latest version will be the lowest on the dropdown list:</p>
@@ -513,7 +502,7 @@
 <p><img alt="mriqc_bash" src="../../_images/mriqc_bash.png"> <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  --></p>
 </section>
 <section id="setting-up-mriqc-command">
-<h2>Setting up mriqc command<a class="headerlink" href="#setting-up-mriqc-command" title="Link to this heading">#</a></h2>
+<h3>Setting up mriqc command<a class="headerlink" href="#setting-up-mriqc-command" title="Link to this heading">#</a></h3>
 <p>You can now enter the following mriqc commands straight into the command line in the newly opened terminal window.</p>
 <div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="nx">export</span><span class="w"> </span><span class="nx">ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS</span><span class="p">=</span><span class="mi">6</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">specify</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">threads</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">want</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">use</span>
 
@@ -537,6 +526,7 @@
 </pre></div>
 </div>
 <p>Hit enter, and mriqc should now be merrily working away on your data :)</p>
+</section>
 </section>
 </section>
 
@@ -600,16 +590,14 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Using mriqc with neurodesk on HPC</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-neurodesk">Launch Neurodesk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-mriqc">Open MRIQC</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-mriqc-command">Setting up mriqc command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions">Assumptions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-neurodesk">Launch Neurodesk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-mriqc">Open MRIQC</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-mriqc-command">Setting up mriqc command</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>

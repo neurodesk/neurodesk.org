@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -251,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -259,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -279,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -667,92 +659,75 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l[+] 0.0s
-?25h?25l[+] 0.0s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l?25h
+?25l[+] 0.0s
 [+] 0.1s
-conda-forge/linux-64 ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
-conda-forge/noarch   ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
+conda-forge/linux-64 ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
+conda-forge/noarch   ━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.0s
 [+] 0.2s
-conda-forge/linux-64 ━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━   0.0 B /  ??.?MB @  ??.?MB/s  0.1s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━  12.6kB /  25.0MB @  72.2kB/s  0.1s
+conda-forge/linux-64 ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.1s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━━━ 417.0kB /  25.6MB @   2.5MB/s  0.1s
 [+] 0.3s
-conda-forge/linux-64 ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.2s
-conda-forge/noarch   ╸━━━━━━━━━━━━━━━━━━━━━━   1.9MB /  25.0MB @   6.6MB/s  0.2s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━ 753.7kB /  52.4MB @   2.6MB/s  0.2s
+conda-forge/noarch   ━━╸━━━━━━━━━━━━━━━━━━━━   4.4MB /  25.6MB @  16.1MB/s  0.2s
 [+] 0.4s
-conda-forge/linux-64 ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.3s
-conda-forge/noarch   ━━━╸━━━━━━━━━━━━━━━━━━━   5.2MB /  25.0MB @  13.2MB/s  0.3s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━   1.7MB /  52.4MB @   4.8MB/s  0.3s
+conda-forge/noarch   ━━━━╸━━━━━━━━━━━━━━━━━━   6.0MB /  25.6MB @  15.5MB/s  0.3s
 [+] 0.5s
-conda-forge/linux-64 ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━</span>   0.0 B /  ??.?MB @  ??.?MB/s  0.4s
-conda-forge/noarch   ━━━━━━╸━━━━━━━━━━━━━━━━   8.0MB /  25.0MB @  16.2MB/s  0.4s
+conda-forge/linux-64 ╸━━━━━━━━━━━━━━━━━━━━━━   3.4MB /  52.4MB @   7.6MB/s  0.4s
+conda-forge/noarch   ━━━━━━╸━━━━━━━━━━━━━━━━   8.1MB /  25.6MB @  16.4MB/s  0.4s
 [+] 0.6s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━  67.4kB /  51.6MB @ 124.5kB/s  0.5s
-conda-forge/noarch   ━━━━━━━╸━━━━━━━━━━━━━━━   9.3MB /  25.0MB @  16.9MB/s  0.5s
+conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   5.8MB /  52.4MB @  10.2MB/s  0.5s
+conda-forge/noarch   ━━━━━━━╸━━━━━━━━━━━━━━━   9.3MB /  25.6MB @  17.0MB/s  0.5s
 [+] 0.7s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━━━   1.2MB /  51.6MB @   1.8MB/s  0.6s
-conda-forge/noarch   ━━━━━━━━╸━━━━━━━━━━━━━━  10.8MB /  25.0MB @  16.1MB/s  0.6s
+conda-forge/linux-64 ━━╸━━━━━━━━━━━━━━━━━━━━   8.1MB /  52.4MB @  11.8MB/s  0.6s
+conda-forge/noarch   ━━━━━━━━╸━━━━━━━━━━━━━━  11.1MB /  25.6MB @  17.0MB/s  0.6s
 [+] 0.8s
-conda-forge/linux-64 ╸━━━━━━━━━━━━━━━━━━━━━━   2.6MB /  51.6MB @   3.3MB/s  0.7s
-conda-forge/noarch   ━━━━━━━━━━╸━━━━━━━━━━━━  12.3MB /  25.0MB @  15.4MB/s  0.7s
+conda-forge/linux-64 ━━━╸━━━━━━━━━━━━━━━━━━━  10.0MB /  52.4MB @  12.7MB/s  0.7s
+conda-forge/noarch   ━━━━━━━━━━╸━━━━━━━━━━━━  13.3MB /  25.6MB @  17.6MB/s  0.7s
 [+] 0.9s
-conda-forge/linux-64 ╸━━━━━━━━━━━━━━━━━━━━━━   4.0MB /  51.6MB @   4.5MB/s  0.8s
-conda-forge/noarch   ━━━━━━━━━━╸━━━━━━━━━━━━  13.0MB /  25.0MB @  15.3MB/s  0.8s
+conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  12.3MB /  52.4MB @  13.7MB/s  0.8s
+conda-forge/noarch   ━━━━━━━━━━━━━╸━━━━━━━━━  15.8MB /  25.6MB @  18.1MB/s  0.8s
 [+] 1.0s
-conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   4.8MB /  51.6MB @   5.0MB/s  0.9s
-conda-forge/noarch   ━━━━━━━━━━━━╸━━━━━━━━━━  14.4MB /  25.0MB @  15.1MB/s  0.9s
+conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  13.2MB /  52.4MB @  13.9MB/s  0.9s
+conda-forge/noarch   ━━━━━━━━━━━━━━╸━━━━━━━━  17.7MB /  25.6MB @  18.0MB/s  0.9s
 [+] 1.1s
-conda-forge/linux-64 ━╸━━━━━━━━━━━━━━━━━━━━━   6.2MB /  51.6MB @   5.9MB/s  1.0s
-conda-forge/noarch   ━━━━━━━━━━━━━╸━━━━━━━━━  15.8MB /  25.0MB @  14.9MB/s  1.0s
+conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  15.0MB /  52.4MB @  14.2MB/s  1.0s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━╸━━━━━━  19.3MB /  25.6MB @  17.7MB/s  1.0s
 [+] 1.2s
-conda-forge/linux-64 ━━╸━━━━━━━━━━━━━━━━━━━━   7.8MB /  51.6MB @   6.6MB/s  1.1s
-conda-forge/noarch   ━━━━━━━━━━━━━━╸━━━━━━━━  17.4MB /  25.0MB @  14.8MB/s  1.1s
+conda-forge/linux-64 ━━━━━━╸━━━━━━━━━━━━━━━━  17.2MB /  52.4MB @  14.7MB/s  1.1s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━╸━━━━  21.4MB /  25.6MB @  18.0MB/s  1.1s
 [+] 1.3s
-conda-forge/linux-64 ━━━╸━━━━━━━━━━━━━━━━━━━   9.5MB /  51.6MB @   7.5MB/s  1.2s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━╸━━━━━━  19.2MB /  25.0MB @  15.0MB/s  1.2s
+conda-forge/linux-64 ━━━━━━━╸━━━━━━━━━━━━━━━  19.5MB /  52.4MB @  15.2MB/s  1.2s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━╸━━━  22.7MB /  25.6MB @  18.2MB/s  1.2s
 [+] 1.4s
-conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  11.5MB /  51.6MB @   8.3MB/s  1.3s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━╸━━━━  21.2MB /  25.0MB @  15.2MB/s  1.3s
+conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  21.1MB /  52.4MB @  15.8MB/s  1.3s
+conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  25.5MB /  25.6MB @  18.8MB/s  1.3s
+conda-forge/noarch                                  25.6MB @  18.8MB/s  1.4s
 [+] 1.5s
-conda-forge/linux-64 ━━━━╸━━━━━━━━━━━━━━━━━━  13.6MB /  51.6MB @   9.1MB/s  1.4s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━╸━━━  22.3MB /  25.0MB @  15.4MB/s  1.4s
+conda-forge/linux-64 ━━━━━━━━╸━━━━━━━━━━━━━━  22.0MB /  52.4MB @  15.1MB/s  1.4s
 [+] 1.6s
-conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.7MB /  51.6MB @   9.5MB/s  1.5s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  24.4MB /  25.0MB @  15.7MB/s  1.5s
+conda-forge/linux-64 ━━━━━━━━━━╸━━━━━━━━━━━━  26.9MB /  52.4MB @  17.3MB/s  1.5s
 [+] 1.7s
-conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.7MB /  51.6MB @   9.5MB/s  1.6s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  24.4MB /  25.0MB @  15.7MB/s  1.6s
+conda-forge/linux-64 ━━━━━━━━━━━━╸━━━━━━━━━━  30.7MB /  52.4MB @  18.4MB/s  1.6s
 [+] 1.8s
-conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  14.7MB /  51.6MB @   9.5MB/s  1.7s
-conda-forge/noarch   ━━━━━━━━━━━━━━━━━━━━━╸━  24.4MB /  25.0MB @  15.7MB/s  1.7s
-conda-forge/noarch                                  25.0MB @  15.7MB/s  1.8s
+conda-forge/linux-64 ━━━━━━━━━━━━━╸━━━━━━━━━  34.4MB /  52.4MB @  19.4MB/s  1.7s
 [+] 1.9s
-conda-forge/linux-64 ━━━━━╸━━━━━━━━━━━━━━━━━  15.6MB /  51.6MB @   8.4MB/s  1.8s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━╸━━━━━━━  38.6MB /  52.4MB @  20.6MB/s  1.8s
 [+] 2.0s
-conda-forge/linux-64 ━━━━━━━╸━━━━━━━━━━━━━━━  19.0MB /  51.6MB @   9.7MB/s  1.9s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━╸━━━━━  42.7MB /  52.4MB @  21.5MB/s  1.9s
 [+] 2.1s
-conda-forge/linux-64 ━━━━━━━━━╸━━━━━━━━━━━━━  23.1MB /  51.6MB @  11.2MB/s  2.0s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━╸━━  49.0MB /  52.4MB @  23.5MB/s  2.0s
 [+] 2.2s
-conda-forge/linux-64 ━━━━━━━━━━╸━━━━━━━━━━━━  26.7MB /  51.6MB @  12.3MB/s  2.1s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.2MB /  52.4MB @  23.9MB/s  2.1s
 [+] 2.3s
-conda-forge/linux-64 ━━━━━━━━━━━━╸━━━━━━━━━━  30.7MB /  51.6MB @  13.6MB/s  2.2s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.2MB /  52.4MB @  23.9MB/s  2.2s
 [+] 2.4s
-conda-forge/linux-64 ━━━━━━━━━━━━━━╸━━━━━━━━  35.2MB /  51.6MB @  14.9MB/s  2.3s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.2MB /  52.4MB @  23.9MB/s  2.3s
 [+] 2.5s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━╸━━━━━━  39.6MB /  51.6MB @  16.0MB/s  2.4s
+conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.2MB /  52.4MB @  23.9MB/s  2.4s
+conda-forge/linux-64                                52.4MB @  23.9MB/s  2.5s
 [+] 2.6s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━╸━━━━  44.3MB /  51.6MB @  17.2MB/s  2.5s
-[+] 2.7s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━╸━━  49.1MB /  51.6MB @  18.3MB/s  2.6s
-[+] 2.8s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  2.7s
-[+] 2.9s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  2.8s
-[+] 3.0s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  2.9s
-[+] 3.1s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  3.0s
-[+] 3.2s
-conda-forge/linux-64 ━━━━━━━━━━━━━━━━━━━━━╸━  51.4MB /  51.6MB @  18.8MB/s  3.1s
-conda-forge/linux-64                                51.6MB @  18.8MB/s  3.2s
 ?25h
 
 Pinned packages:
@@ -777,7 +752,7 @@ Transaction
   Install:
 ────────────────────────────────────────────────────────────
 
-  <span class=" -Color -Color-Green">+ ghostscript</span>  10.06.0  hecca717_0  conda-forge     63MB
+  <span class=" -Color -Color-Green">+ ghostscript</span>  10.07.0  hecca717_0  conda-forge     63MB
 
   Summary:
 
@@ -797,70 +772,47 @@ Extracting       ━━━━━━━━━━━━━━━━━━━━━
 Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   0.0 B ghostscript                0.0s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.2s
-Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   9.6kB ghostscript                0.1s
+Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   5.8kB ghostscript                0.1s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.3s
-Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   2.9MB ghostscript                0.2s
+Downloading  (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━━━━</span>   2.8MB ghostscript                0.2s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.4s
-Downloading  (1) ━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━</span>  14.7MB ghostscript                0.3s
+Downloading  (1) ━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━━━━</span>   8.9MB ghostscript                0.3s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.5s
-Downloading  (1) ━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━</span>  23.8MB ghostscript                0.4s
+Downloading  (1) ━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━━━</span>  18.6MB ghostscript                0.4s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.6s
-Downloading  (1) ━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━</span>  29.7MB ghostscript                0.5s
+Downloading  (1) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━</span>  31.7MB ghostscript                0.5s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.7s
-Downloading  (1) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━</span>  35.7MB ghostscript                0.6s
+Downloading  (1) ━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━</span>  43.6MB ghostscript                0.6s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 0.8s
-Downloading  (1) ━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━</span>  40.8MB ghostscript                0.7s
+Downloading  (1) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━</span>  55.7MB ghostscript                0.7s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+ghostscript                                         62.8MB @  75.6MB/s  0.8s
 [+] 0.9s
-Downloading  (1) ━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━</span>  45.9MB ghostscript                0.8s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            0.8s
 Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
 [+] 1.0s
-Downloading  (1) ━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━</span>  51.2MB ghostscript                0.9s
-Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            0.8s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━╸</span>━━━━━━━━━━       0 ghostscript                0.0s
 [+] 1.1s
-Downloading  (1) ━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━</span>  53.7MB ghostscript                1.0s
-Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            0.8s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━╸</span>━━━━━━━━━       0 ghostscript                0.1s
 [+] 1.2s
-Downloading  (1) ━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━</span>  57.3MB ghostscript                1.1s
-Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            0.8s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━╸</span>━━━━━━━━       0 ghostscript                0.2s
 [+] 1.3s
-Downloading  (1) ━━━━━━━━━━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━</span>  61.8MB ghostscript                1.2s
-Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
-ghostscript                                         62.8MB @  47.7MB/s  1.2s
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            0.8s
+Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━━━━━       0 ghostscript                0.3s
 [+] 1.4s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting       ━━━━━━━━━━━━━━━━━━━━━━━       0                            0.0s
-[+] 1.5s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) ━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━</span>       0 ghostscript                0.0s
-[+] 1.6s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) ━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━</span>       0 ghostscript                0.1s
-[+] 1.7s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) ━━━━━━━━━━━━╸<span class=" -Color -Color-Yellow">━━━━━━━━━━</span>       0 ghostscript                0.2s
-[+] 1.8s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━╸</span>━━━━━━━━━━━━━━━       0 ghostscript                0.3s
-[+] 1.9s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━╸</span>━━━━━━━━━━━━━━       0 ghostscript                0.4s
-[+] 2.0s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━╸</span>━━━━━━━━━━━━━       0 ghostscript                0.5s
-[+] 2.1s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━╸</span>━━━━━━━━━━━━       0 ghostscript                0.6s
-[+] 2.2s
-Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            1.3s
-Extracting   (1) <span class=" -Color -Color-Yellow">━━━━━━━━━━━╸</span>━━━━━━━━━━━       0 ghostscript                0.7s
-?25hLinking ghostscript-10.06.0-hecca717_0
+Downloading      ━━━━━━━━━━━━━━━━━━━━━━━  62.8MB                            0.8s
+Extracting   (1) ╸<span class=" -Color -Color-Yellow">━━━━━━━━━━━━━━━╸</span>━━━━━━       0 ghostscript                0.4s
+?25h
+Linking ghostscript-10.07.0-hecca717_0
 
 Transaction finished
 </pre></div>
@@ -1573,14 +1525,15 @@ For details, see: <a href="http://s-provencher.com/lcmodel.shtml">http://s-prove
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GPL Ghostscript 10.06.0 (2025-09-09)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GPL Ghostscript 10.07.0 (2026-03-16)
 Copyright (C) 2025 Artifex Software, Inc.  All rights reserved.
 This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
 see the file COPYING for details.
-Loading NimbusSans-Regular font from %rom%Resource/Font/NimbusSans-Regular... 3512976 2141161 1997048 697687 1 done.
-Loading NimbusSans-Italic font from %rom%Resource/Font/NimbusSans-Italic... 3673792 2350775 2017248 713785 1 done.
-Loading NimbusMonoPS-Bold font from %rom%Resource/Font/NimbusMonoPS-Bold... 3935608 2615440 2077848 766127 1 done.
-Loading NimbusMonoPS-Regular font from %rom%Resource/Font/NimbusMonoPS-Regular... 4177224 2858137 2098048 773317 1 done.
+Loading NimbusSans-Regular font from %rom%Resource/Font/NimbusSans-Regular... 3512992 2141137 1997048 697687 1 done.
+Loading NimbusSans-Italic font from %rom%Resource/Font/NimbusSans-Italic... 3673808 2350487 2017248 713785 1 done.
+Loading NimbusMonoPS-Bold font from %rom%Resource/Font/NimbusMonoPS-Bold...
+3935624 2615152 2077848 766079 1 done.
+Loading NimbusMonoPS-Regular font from %rom%Resource/Font/NimbusMonoPS-Regular... 4177240 2857937 2098048 773269 1 done.
 </pre></div>
 </div>
 </div>
@@ -1594,8 +1547,8 @@ Loading NimbusMonoPS-Regular font from %rom%Resource/Font/NimbusMonoPS-Regular..
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/3c49115caca3b68b21805c26f250e64581551c03abbaef14d80459f06a4e0cbc.png" src="../../_images/3c49115caca3b68b21805c26f250e64581551c03abbaef14d80459f06a4e0cbc.png">
-<img alt="../../_images/eb1a8decb395201682c3444036ff10f169176be15933111a181bf5f92de4586f.png" src="../../_images/eb1a8decb395201682c3444036ff10f169176be15933111a181bf5f92de4586f.png">
+<img alt="../../_images/2ba84c13378f8bf20b159a6a4d2b268083e92740a489c6a973a02d03b6f10b79.png" src="../../_images/2ba84c13378f8bf20b159a6a4d2b268083e92740a489c6a973a02d03b6f10b79.png">
+<img alt="../../_images/e0be29bfd827d41be7128e668b0bca2b88ff5ec135f85687a5425bed107d81ff.png" src="../../_images/e0be29bfd827d41be7128e668b0bca2b88ff5ec135f85687a5425bed107d81ff.png">
 </div>
 </div>
 <p><strong>Note on PDF viewing:</strong> PDFs can be displayed directly within Jupyter notebooks using <code class="docutils literal notranslate"><span class="pre">IFrame</span></code>, but this only works in interactive environments (local Jupyter, Colab, etc.). When viewing this notebook on GitHub Pages, the PDFs won’t render due to security restrictions.</p>
@@ -1628,37 +1581,47 @@ To download the output PNGs or PDFs, open the file browser in the <strong>Jupyte
 <section id="dependencies-in-jupyter-python">
 <h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-09T23:45:59.608019+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T01:37:18.026389+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
-
-IPython   : 9.9.0
+IPython   : 9.7.0
 matplotlib: 3.10.8
 nibabel   : 5.3.3
-numpy     : 2.4.2
+numpy     : 2.3.5
 re        : 2.2.1
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>

@@ -1,8 +1,9 @@
 <!DOCTYPE html><html lang="en" data-content_root="../../"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="nd-review-id" content="5bf2221b-7324-4a1d-be9c-df07b9bb4d2a">
 
-    <title>SWI — Neurodesk</title>
+    <title>Susceptibility-Weighted Imaging (SWI) — Neurodesk</title>
   
   
   
@@ -48,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -74,12 +75,12 @@
     <link rel="icon" href="../../_static/neurodesk_logo.svg">
     <link rel="index" title="Index" href="../../genindex.html">
     <link rel="search" title="Search" href="../../search.html">
-    <link rel="next" title="Unwrapping" href="unwrapping.html">
-    <link rel="prev" title="Quantitative Susceptibility Mapping" href="qsm.html">
+    <link rel="next" title="MRI Phase Unwrapping with ROMEO" href="unwrapping.html">
+    <link rel="prev" title="Phase Processing" href="intro.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
   <meta name="docsearch:version" content="">
-  <meta name="author" content="Steffen Bollmann"><meta property="article:author" content="Steffen Bollmann"><meta name="citation_author" content="Steffen Bollmann"></head>
+  </head>
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -197,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -250,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -258,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -278,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="intro.html">Phase Processing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -366,6 +359,89 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://play.neurodesk.cloud.edu.au/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/swi.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Australia" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Australia logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Australia</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/swi.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Europe" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Europe logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Europe</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-america.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/swi.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in America" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in America logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in America</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://play-europe.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/swi.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 1" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 1 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 1</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://edu.neurodesk.org/hub/user-redirect/git-pull?repo=https%3A//github.com/neurodesk/neurodeskedu&amp;urlpath=lab/tree/neurodeskedu/books/tutorials/phase_processing/swi.ipynb&amp;branch=main" target="_blank" class="btn btn-sm dropdown-item" title="Launch on Run in Global Server 2" data-bs-placement="left" data-bs-toggle="tooltip">
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Run in Global Server 2 logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">Run in Global Server 2</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-download-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
@@ -374,13 +450,13 @@
       
       
       
-      <li><a href="../../_sources/tutorials/phase_processing/swi.md" target="_blank" class="btn btn-sm btn-download-source-button dropdown-item" title="Download source file" data-bs-placement="left" data-bs-toggle="tooltip">
+      <li><a href="../../_sources/tutorials/phase_processing/swi.ipynb" target="_blank" class="btn btn-sm btn-download-source-button dropdown-item" title="Download source file" data-bs-placement="left" data-bs-toggle="tooltip">
   
 
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -438,7 +514,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SWI</h1>
+    <h1>Susceptibility-Weighted Imaging (SWI)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -448,7 +524,17 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-demo-data">Download demo data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-used-in-this-workflow">Tools used in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools-and-download-demo-data">Load software tools and download demo data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-clear-swi">Run CLEAR-SWI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-results">Inspect the results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -460,60 +546,183 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="swi">
-<h1>SWI<a class="headerlink" href="#swi" title="Link to this heading">#</a></h1>
-<p>Example workflow for SWI processing</p>
-<blockquote>
-<div><p><em>This tutorial was created by Steffen Bollmann.</em></p>
-<p>Github: <a class="reference external" href="https://github.com/stebo85">@stebo85</a>
-Web: <a class="reference external" href="https://mri.sbollmann.net/">mri.sbollmann.net</a>
-Twitter: <a class="reference external" href="https://twitter.com/sbollmann_MRI">@sbollmann_MRI</a></p>
-</div></blockquote>
-<!-- Following line adds a link to getting set up with Neurodesk -->
-<p><a class="reference external" href="https://neurodesk.org/getting-started">Getting Set Up with Neurodesk</a></p>
-<!-- -->
-<section id="download-demo-data">
-<h2>Download demo data<a class="headerlink" href="#download-demo-data" title="Link to this heading">#</a></h2>
-<p>Open a terminal and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">osfclient</span>
-<span class="n">cd</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span>
-<span class="n">osf</span> <span class="o">-</span><span class="n">p</span> <span class="n">ru43c</span> <span class="n">fetch</span> <span class="mi">01</span><span class="n">_bids</span><span class="o">.</span><span class="n">zip</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="mi">01</span><span class="n">_bids</span><span class="o">.</span><span class="n">zip</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="susceptibility-weighted-imaging-swi">
+<h1>Susceptibility-Weighted Imaging (SWI)<a class="headerlink" href="#susceptibility-weighted-imaging-swi" title="Link to this heading">#</a></h1>
+<p><strong>Author</strong>: Steffen Bollmann, Michèle Masson-Trottier</p>
+<p>The University of Queensland<br></p>
+<div style="line-height: 2;">
+<a href="https://github.com/stebo85"><img src="https://img.shields.io/badge/-Steffen_Bollmann-181717?logo=github" alt="GitHub"></a> <a href="https://orcid.org/0000-0002-2909-0906"><img src="https://img.shields.io/badge/ORCID-0000--0002--2909--0906-green?logo=orcid" alt="ORCID"></a><br>
+<a href="https://github.com/micmas"><img src="https://img.shields.io/badge/-Michèle_Masson--Trottier-181717?logo=github" alt="GitHub"></a> <a href="https://orcid.org/0000-0002-0642-5662"><img src="https://img.shields.io/badge/ORCID-0000--0002--0642--5662-green?logo=orcid" alt="ORCID"></a>
+</div><p><strong>Date</strong>: 16/03/2026</p>
+<p><strong>License:</strong></p>
+<div style="margin-top: 10px;">
+    <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #0066cc;">
+        <i class="fas fa-balance-scale"></i> MIT License
+    </a>
+</div><section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">#</a></h2>
+<p><strong>Susceptibility-weighted imaging (SWI)</strong> is an MRI technique that exploits differences in magnetic susceptibility between tissues to generate contrast. It is particularly useful for visualising venous vasculature, microbleeds, calcifications, and iron deposits in the brain.</p>
+<p>This tutorial demonstrates how to:</p>
+<ol class="arabic simple">
+<li><p>Download a demo MRI dataset containing magnitude and phase images</p></li>
+<li><p>Use the <strong>CLEAR-SWI</strong> Julia package within Neurodesk to compute SWI maps</p></li>
+<li><p>Generate a <strong>minimum intensity projection (mIP)</strong> for enhanced vein visualisation</p></li>
+<li><p>Inspect the results in an image viewer</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">Learning Objectives</p>
+<p>By the end of this tutorial you will be able to:</p>
+<ul class="simple">
+<li><p>Understand what SWI is and why it is clinically relevant</p></li>
+<li><p>Run the CLEAR-SWI pipeline on magnitude and phase data</p></li>
+<li><p>Create and interpret minimum intensity projections</p></li>
+</ul>
+</div>
+</section>
+<section id="citation-and-resources">
+<h2>Citation and Resources<a class="headerlink" href="#citation-and-resources" title="Link to this heading">#</a></h2>
+<section id="tools-used-in-this-workflow">
+<h3>Tools used in this workflow<a class="headerlink" href="#tools-used-in-this-workflow" title="Link to this heading">#</a></h3>
+<dl class="simple myst">
+<dt><strong>CLEAR-SWI</strong></dt><dd><p>Eckstein, K., et al. (2023). CLEAR-SWI — Coil-combined Low-artifact Enhanced Arbitrary Resolution SWI. <em>Zeitschrift für Medizinische Physik</em>. <a class="reference external" href="https://doi.org/10.1016/j.zemedi.2023.01.001">https://doi.org/10.1016/j.zemedi.2023.01.001</a></p>
+</dd>
+</dl>
+</section>
+<section id="educational-resources">
+<h3>Educational resources<a class="headerlink" href="#educational-resources" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/korbinian90/CLEARSWI.jl">CLEAR-SWI documentation on GitHub</a></p></li>
+<li><p><a class="reference external" href="https://neurodesk.org">Neurodesk documentation</a></p></li>
+</ul>
+</section>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Before you begin</p>
+<p>Make sure you have access to a running Neurodesk instance. See <a class="reference external" href="https://neurodesk.org/getting-started/">Getting Set Up with Neurodesk</a> for instructions.</p>
+</div>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> A running Neurodesk environment</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Familiarity with basic terminal commands</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> No additional software installation required — CLEAR-SWI is pre-installed in Neurodesk</p></li>
+</ul>
+</section>
+<section id="load-software-tools-and-download-demo-data">
+<h2>Load software tools and download demo data<a class="headerlink" href="#load-software-tools-and-download-demo-data" title="Link to this heading">#</a></h2>
+<p>First, we install <code class="docutils literal notranslate"><span class="pre">osfclient</span></code> to download the demo dataset from the Open Science Framework, then fetch and unzip the BIDS-formatted data. We use the same demo dataset as the <a class="reference internal" href="unwrapping.html"><span class="std std-doc">Unwrapping tutorial</span></a>.</p>
+<p>To do so, open a Neurodesktop session, launch a terminal and run the following commands.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To paste in Neurodesktop, best to use the right click on your mouse!</p>
+</div>
+<p><img alt="The terminal in Neurodesktop" src="../../_images/neurodesktop-terminal.png">
+<em>The terminal in Neurodesktop.</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>osfclient
+<span class="nb">cd</span><span class="w"> </span>~/neurodesktop-storage/
+osf<span class="w"> </span>-p<span class="w"> </span>ru43c<span class="w"> </span>fetch<span class="w"> </span>-f<span class="w"> </span>01_bids.zip<span class="w"> </span>~/neurodesktop-storage/swi-demo/01_bids.zip
 
-<span class="n">unzip</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="mi">01</span><span class="n">_bids</span><span class="o">.</span><span class="n">zip</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span><span class="n">swi</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span>
+unzip<span class="w"> </span>-o<span class="w"> </span>~/neurodesktop-storage/swi-demo/01_bids.zip<span class="w"> </span>-d<span class="w"> </span>~/neurodesktop-storage/swi-demo/
 </pre></div>
 </div>
-<p>Open the CLEARSWI tool from the application menu:</p>
-<p>paste this julia script in a julia file and execute:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">neurodesktop</span><span class="o">-</span><span class="n">storage</span><span class="o">/</span>
-<span class="n">vi</span> <span class="n">clearswi</span><span class="o">.</span><span class="n">jl</span>
+<p><img alt="The Neurodesktop terminal outpu" src="../../_images/terminal_output1.png">
+<em>The Neurodesktop terminal outputs after running the command.</em></p>
+<p>You may wish to confirm the download was successful. You can locate the files in your <code class="docutils literal notranslate"><span class="pre">neurodesktop-storage</span></code> folder using the file manager. You will see the <code class="docutils literal notranslate"><span class="pre">swi-demo</span></code> folder containing a zipped and unzipped <code class="docutils literal notranslate"><span class="pre">01_bids</span></code> folder.</p>
+<p><img alt="The Neurodesktop file manager" src="../../_images/file-manager.png">
+<em>The Neurodesktop file manager showing the downloaded data.</em></p>
+</section>
+<section id="run-clear-swi">
+<h2>Run CLEAR-SWI<a class="headerlink" href="#run-clear-swi" title="Link to this heading">#</a></h2>
+<p>Write a Julia script that will perform three steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Read</strong> the magnitude and phase NIfTI files</p></li>
+<li><p><strong>Compute</strong> the SWI volume using <code class="docutils literal notranslate"><span class="pre">calculateSWI</span></code></p></li>
+<li><p><strong>Generate</strong> a minimum intensity projection (mIP) using <code class="docutils literal notranslate"><span class="pre">createMIP</span></code></p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The echo time (<code class="docutils literal notranslate"><span class="pre">TEs</span></code>) must match your acquisition. For this single-echo demo dataset, <code class="docutils literal notranslate"><span class="pre">TEs</span> <span class="pre">=</span> <span class="pre">[20]</span></code> (in ms).</p>
+</div>
+<p>Using the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>~/neurodesktop-storage/clearswi.jl
 </pre></div>
 </div>
-<p>hit a or i and then paste this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">CLEARSWI</span>
+<p>create a file called <code class="docutils literal notranslate"><span class="pre">clearswi.jl</span></code> with the following contents :</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">CLEARSWI</span>
 
-<span class="n">TEs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">]</span> 
-<span class="n">nifti_folder</span> <span class="o">=</span> <span class="s2">"/neurodesktop-storage/swi-demo/01_bids/sub-170705134431std1312211075243167001/ses-1/anat"</span>
-<span class="n">magfile</span> <span class="o">=</span> <span class="n">joinpath</span><span class="p">(</span><span class="n">nifti_folder</span><span class="p">,</span> <span class="s2">"sub-170705134431std1312211075243167001_ses-1_acq-qsm_run-1_magnitude.nii.gz"</span><span class="p">)</span>
-<span class="n">phasefile</span> <span class="o">=</span> <span class="n">joinpath</span><span class="p">(</span><span class="n">nifti_folder</span><span class="p">,</span> <span class="s2">"sub-170705134431std1312211075243167001_ses-1_acq-qsmPH00_run-1_phase.nii.gz"</span><span class="p">)</span> 
+<span class="n">TEs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">nifti_folder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">joinpath</span><span class="p">(</span><span class="n">homedir</span><span class="p">(),</span><span class="w"> </span><span class="s">"neurodesktop-storage/swi-demo/01_bids/sub-170705134431std1312211075243167001/ses-1/anat"</span><span class="p">)</span>
+<span class="n">magfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">joinpath</span><span class="p">(</span><span class="n">nifti_folder</span><span class="p">,</span><span class="w"> </span><span class="s">"sub-170705134431std1312211075243167001_ses-1_run-1_part-mag_T2starw.nii"</span><span class="p">)</span>
+<span class="n">phasefile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">joinpath</span><span class="p">(</span><span class="n">nifti_folder</span><span class="p">,</span><span class="w"> </span><span class="s">"sub-170705134431std1312211075243167001_ses-1_run-1_part-phase_T2starw.nii"</span><span class="p">)</span>
 
-<span class="n">mag</span> <span class="o">=</span> <span class="n">readmag</span><span class="p">(</span><span class="n">magfile</span><span class="p">);</span>
-<span class="n">phase</span> <span class="o">=</span> <span class="n">readphase</span><span class="p">(</span><span class="n">phasefile</span><span class="p">);</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">mag</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">mag</span><span class="o">.</span><span class="n">header</span><span class="p">,</span> <span class="n">TEs</span><span class="p">);</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Loading magnitude and phase data..."</span><span class="p">)</span>
+<span class="n">mag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readmag</span><span class="p">(</span><span class="n">magfile</span><span class="p">);</span>
+<span class="n">phase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readphase</span><span class="p">(</span><span class="n">phasefile</span><span class="p">);</span>
+<span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Data</span><span class="p">(</span><span class="n">mag</span><span class="p">,</span><span class="w"> </span><span class="n">phase</span><span class="p">,</span><span class="w"> </span><span class="n">mag</span><span class="o">.</span><span class="n">header</span><span class="p">,</span><span class="w"> </span><span class="n">TEs</span><span class="p">);</span>
 
-<span class="n">swi</span> <span class="o">=</span> <span class="n">calculateSWI</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-<span class="c1"># mip = createIntensityProjection(swi, minimum); # minimum intensity projection, other Julia functions can be used instead of minimum</span>
-<span class="n">mip</span> <span class="o">=</span> <span class="n">createMIP</span><span class="p">(</span><span class="n">swi</span><span class="p">);</span> <span class="c1"># shorthand for createIntensityProjection(swi, minimum)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Computing SWI..."</span><span class="p">)</span>
+<span class="n">swi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculateSWI</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
 
-<span class="n">savenii</span><span class="p">(</span><span class="n">swi</span><span class="p">,</span> <span class="s2">"/neurodesktop-storage/swi-demo/swi.nii"</span><span class="p">;</span> <span class="n">header</span><span class="o">=</span><span class="n">mag</span><span class="o">.</span><span class="n">header</span><span class="p">)</span> 
-<span class="n">savenii</span><span class="p">(</span><span class="n">mip</span><span class="p">,</span> <span class="s2">"/neurodesktop-storage/swi-demo/mip.nii"</span><span class="p">;</span> <span class="n">header</span><span class="o">=</span><span class="n">mag</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Creating minimum intensity projection..."</span><span class="p">)</span>
+<span class="n">mip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">createMIP</span><span class="p">(</span><span class="n">swi</span><span class="p">);</span>
+
+<span class="n">outdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">joinpath</span><span class="p">(</span><span class="n">homedir</span><span class="p">(),</span><span class="w"> </span><span class="s">"neurodesktop-storage/swi-demo"</span><span class="p">)</span>
+<span class="n">println</span><span class="p">(</span><span class="s">"Saving outputs..."</span><span class="p">)</span>
+<span class="n">savenii</span><span class="p">(</span><span class="n">swi</span><span class="p">,</span><span class="w"> </span><span class="n">joinpath</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span><span class="w"> </span><span class="s">"swi.nii"</span><span class="p">);</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="n">mag</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+<span class="n">savenii</span><span class="p">(</span><span class="n">mip</span><span class="p">,</span><span class="w"> </span><span class="n">joinpath</span><span class="p">(</span><span class="n">outdir</span><span class="p">,</span><span class="w"> </span><span class="s">"mip.nii"</span><span class="p">);</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="n">mag</span><span class="o">.</span><span class="n">header</span><span class="p">)</span>
+
+<span class="n">println</span><span class="p">(</span><span class="s">"Done! Output saved to ~/neurodesktop-storage/swi-demo/"</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>hit SHIFT-Z-Z and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">julia</span> <span class="n">clearswi</span><span class="o">.</span><span class="n">jl</span>
+<p>Save the file using <code class="docutils literal notranslate"><span class="pre">Ctrl+X</span></code> (confirm by hitting <code class="docutils literal notranslate"><span class="pre">Y</span></code> followed by <code class="docutils literal notranslate"><span class="pre">Enter</span></code>).</p>
+<p><img alt="The Neurodesktop terminal with the Julia script" src="../../_images/terminal_output2.png">
+<em>The Neurodesktop terminal with the Julia script.</em></p>
+<p>Open the <strong>CLEAR-SWI</strong> tool from the Neurodesk application menu.</p>
+<p><img alt="Opening CLEAR-SWI in Neurodesktop" src="../../_images/open-clear-swi.png">
+<em>Opening CLEAR-SWI in Neurodesktop.</em></p>
+<p>Then run your newly written file from the CLEAR-SWI container terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/neurodesktop-storage/
+julia<span class="w"> </span>clearswi.jl
 </pre></div>
 </div>
-<p>Open ITK snap from the Visualization Application’s menu and inspect the results (the outputs are in swi-demo/swi.nii and mip.nii)
-<img alt="image" src="https://user-images.githubusercontent.com/4021595/137708852-6b7dd2c7-3e6f-42fd-88e6-06afe87a72a9.png"></p>
+<p><img alt="The CLEAR-SWI container terminal after running the script" src="../../_images/terminal-output3.png">
+<em>The CLEAR-SWI container terminal after running the script.</em></p>
+</section>
+<section id="inspect-the-results">
+<h2>Inspect the results<a class="headerlink" href="#inspect-the-results" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id1">
+<img alt="../../_images/open-itksnap.png" class="hidden" src="../../_images/open-itksnap.png">
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Opening ITK-SNAP from the Neurodesk Visualisation menu.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Open <a class="reference internal" href="#fig-open-itksnap"><span class="xref myst">ITK-SNAP from the Neurodesk Visualisation menu</span></a> and load the output files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">~/neurodesktop-storage/swi-demo/swi.nii</span></code> — the susceptibility-weighted image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~/neurodesktop-storage/swi-demo/mip.nii</span></code> — the minimum intensity projection</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The mIP highlights venous structures as dark lines. Compare the SWI and mIP side by side to appreciate how the projection enhances vein visibility.</p>
+</div>
+<p><img alt="SWI result in ITK-SNAP" src="../../_images/itksnap-output.png"></p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>In this tutorial you:</p>
+<ol class="arabic simple">
+<li><p>Downloaded a demo magnitude/phase MRI dataset from the Open Science Framework</p></li>
+<li><p>Used the CLEAR-SWI Julia package to compute susceptibility-weighted images</p></li>
+<li><p>Generated a minimum intensity projection for enhanced venous visualisation</p></li>
+<li><p>Inspected the outputs using ITK-SNAP</p></li>
+</ol>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="unwrapping.html"><span class="std std-doc">Unwrapping tutorial</span></a> — for unwrapping phase using the same dataset</p></li>
+<li><p><a class="reference internal" href="#qsm.ipynb"><span class="xref myst">QSM tutorial</span></a> — for quantitative susceptibility mapping with QSMxT</p></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -547,17 +756,17 @@ Twitter: <a class="reference external" href="https://twitter.com/sbollmann_MRI">
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev" href="qsm.html" title="previous page">
+    <a class="left-prev" href="intro.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Quantitative Susceptibility Mapping</p>
+        <p class="prev-next-title">Phase Processing</p>
       </div>
     </a>
     <a class="right-next" href="unwrapping.html" title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Unwrapping</p>
+        <p class="prev-next-title">MRI Phase Unwrapping with ROMEO</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -577,7 +786,17 @@ Twitter: <a class="reference external" href="https://twitter.com/sbollmann_MRI">
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-demo-data">Download demo data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-used-in-this-workflow">Tools used in this workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-software-tools-and-download-demo-data">Load software tools and download demo data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-clear-swi">Run CLEAR-SWI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-results">Inspect the results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>
 

@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">NiWrap and Connectome Workbench</a></li>
@@ -251,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -259,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -279,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -718,50 +710,50 @@ get(ok): derivatives/ciftify/sub-01/results/ses-floc_task-floc/ses-floc_task-flo
 file) [from s3-PUBLIC...]
 get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.ArealDistortion_FS.32k_fs_LR.dscala
 r.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.ArealDistortion_MSMSulc.32k_fs_LR.d
-scalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-
-01.BA_exvivo.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/sta
-ndard_fsLR_surface/sub-01.EdgeDistortion_MSMSulc.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-ge
-t(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.inflated.32k_fs_LR.surf.gii (file)
-[from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.
-32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surf
-ace/sub-01.L.pial.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/
-standard_fsLR_surface/sub-01.L.very_inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok):
-derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.white.32k_fs_LR.surf.gii (file) [from s3-P
-UBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.inflated.32k_fs_LR.surf.gii (file
-) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthicknes
-s.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_su
-rface/sub-01.R.pial.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-0
-1/standard_fsLR_surface/sub-01.R.very_inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
-get(ok)
-: derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.white.32k_fs_LR.surf.gii (file) [from s3
--PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.aparc.32k_fs_LR.dlabel.
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.Ar
+ealDistortion_MSMSulc.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/
+sub-01/standard_fsLR_surface/sub-01.BA_exvivo.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
+get(ok
+): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.EdgeDistortion_MSMSulc.32k_fs_LR.dscalar.
 nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.apar
-c.DKTatlas.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/stand
-ard_fsLR_surface/sub-01.aparc.a2009s.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
-get(ok): deriva
-tives/ciftify/sub-01/standard_fsLR_surface/sub-01.curvature.32k_fs_LR.dscalar.nii (file) [from s3-PU
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.in
+flated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fs
+LR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/
+ciftify/sub-01/standard_fsLR_surface/sub-01.L.pial.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get
+(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.very_inflated.32k_fs_LR.surf.gii (fi
+le) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.white.32k
+_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface
+/sub-01.R.inflated.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01
+/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok):
+derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.pial.32k_fs_LR.surf.gii (file) [from s3-PU
 BLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii
- (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.thickne
-ss.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
-get(ok): derivatives/ciftify/sub-01/standard_fsL
-R_surface (directory)
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.very_inflated.32k_fs_LR.
+surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01
+.R.white.32k_fs_LR.surf.gii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_
+fsLR_surface/sub-01.aparc.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/cifti
+fy/sub-01/standard_fsLR_surface/sub-01.aparc.DKTatlas.32k_fs_LR.dlabel.nii (file) [from s3-PUBLIC...
+]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.aparc.a2009s.32k_fs_LR.dlabel.nii (
+file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.curvature
+.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/sub-01/standard_fsLR_
+surface/sub-01.sulc.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
+get(ok): derivatives/ciftify/su
+b-01/standard_fsLR_surface/sub-01.thickness.32k_fs_LR.dscalar.nii (file) [from s3-PUBLIC...]
+get(ok)
+: derivatives/ciftify/sub-01/standard_fsLR_surface (directory)
 action summary:
   get (ok: 21)
 Datalad download complete for ds004496.
@@ -771,7 +763,7 @@ Datalad download complete for ds004496.
 [I
 NFO] Attempting to clone from https://github.com/OpenNeuroDatasets/ds004496.git to /home/jovyan/work
 space/books/examples/functional_imaging/ds004496
-[INFO] Start enumerating objects 
+[INFO] Start enumerating objects
 [INFO] Start counting objects
 [INFO] Start compressing objects
 [INFO] Start receiving objects
@@ -835,7 +827,7 @@ space/books/examples/functional_imaging/ds004496
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Schaefer2018_400Par 100%[===================&gt;] 667.06K  --.-KB/s    in 0.01s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Schaefer2018_400Par 100%[===================&gt;] 667.06K  --.-KB/s    in 0.007s
 </pre></div>
 </div>
 </div>
@@ -951,7 +943,7 @@ Object - others
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-math 'x * (x &gt; 1.081139940023422)' /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -var x /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face.dscalar.nii
 [I] parsed 'x * (x &gt; 1.081139940023422)' as 'x * (x &gt; 1.08113994002342)'
-[I] Executed cifti-math in 0:00:00.464403
+[I] Executed cifti-math in 0:00:00.365303
 </pre></div>
 </div>
 </div>
@@ -983,7 +975,7 @@ Object - others
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii -metric CORTEX_RIGHT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii
-[I] Executed cifti-separate in 0:00:00.332116
+[I] Executed cifti-separate in 0:00:00.338143
 </pre></div>
 </div>
 </div>
@@ -1015,7 +1007,7 @@ Object - others
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-separate /home/jovyan/workspace/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.sulc.32k_fs_LR.dscalar.nii COLUMN -metric CORTEX_LEFT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01.L.sulc.func.gii -metric CORTEX_RIGHT /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01.R.sulc.func.gii
-[I] Executed cifti-separate in 0:00:00.352300
+[I] Executed cifti-separate in 0:00:00.345497
 </pre></div>
 </div>
 </div>
@@ -1437,7 +1429,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-stats /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii -reduce COUNT_NONZERO -show-map-name
 [I] 1:	Face - others:	2971
-[I] Executed cifti-stats in 0:00:00.301622
+[I] Executed cifti-stats in 0:00:00.304578
 </pre></div>
 </div>
 </div>
@@ -1472,9 +1464,9 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -metric-smoothing /home/jovyan/workspace/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.L.midthickness.32k_fs_LR.surf.gii /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_lh.func.gii 2.0 /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_smooth.L.func.gii
-[I] Executed metric-smoothing in 0:00:00.791319
+[I] Executed metric-smoothing in 0:00:00.930857
 [D] Running command: wb_command -metric-smoothing /home/jovyan/workspace/books/examples/functional_imaging/ds004496/derivatives/ciftify/sub-01/standard_fsLR_surface/sub-01.R.midthickness.32k_fs_LR.surf.gii /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_rh.func.gii 2.0 /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_thresh_smooth.R.func.gii
-[I] Executed metric-smoothing in 0:00:00.838928
+[I] Executed metric-smoothing in 0:00:00.832373
 </pre></div>
 </div>
 </div>
@@ -1529,7 +1521,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-parcellate /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/beta_face_thresholded.dscalar.nii /home/jovyan/workspace/books/examples/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii COLUMN /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/sub-01_parcellated.pscalar.nii
-[I] Executed cifti-parcellate in 0:00:00.598195
+[I] Executed cifti-parcellate in 0:00:00.547517
 </pre></div>
 </div>
 </div>
@@ -1546,7 +1538,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[D] Running command: wb_command -cifti-label-export-table /home/jovyan/workspace/books/examples/functional_imaging/Schaefer2018_400Parcels_17Networks_order.dlabel.nii parcels /home/jovyan/workspace/books/examples/functional_imaging/niwrap_results/schaefer_labels.txt
-[I] Executed cifti-label-export-table in 0:00:00.350612
+[I] Executed cifti-label-export-table in 0:00:00.351744
 </pre></div>
 </div>
 </div>
@@ -1738,7 +1730,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found networks: ['SomMotB', 'ContA', 'SalVentAttnA', 'SalVentAttnB', 'LimbicB', 'VisCent', 'ContB', 'DefaultA', 'DefaultB', 'DefaultC', 'DorsAttnA', 'SomMotA', 'ContC', 'LimbicA', 'TempPar', 'DorsAttnB', 'VisPeri']
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found networks: ['DorsAttnB', 'DefaultC', 'SalVentAttnB', 'VisCent', 'SomMotB', 'SalVentAttnA', 'ContB', 'SomMotA', 'ContA', 'DefaultA', 'DefaultB', 'TempPar', 'ContC', 'VisPeri', 'LimbicA', 'LimbicB', 'DorsAttnA']
 </pre></div>
 </div>
 </div>
@@ -1771,7 +1763,7 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a6615bf9edf5460e2c400a988bfeb0ea7afa4f41862560601c4e9db3689836e4.png" src="../../_images/a6615bf9edf5460e2c400a988bfeb0ea7afa4f41862560601c4e9db3689836e4.png">
+<img alt="../../_images/76fabf21d75e3b6222c86b48b40ba6fef94503095e76896e824e8d5d4d2fc9f5.png" src="../../_images/76fabf21d75e3b6222c86b48b40ba6fef94503095e76896e824e8d5d4d2fc9f5.png">
 </div>
 </div>
 </section>
@@ -1862,27 +1854,36 @@ function decodeHemisphere(surfaceInfo, surface, hemisphere){
 <section id="dependencies-in-jupyter-python">
 <h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-02-28T04:23:42.704003+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T05:56:38.954693+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
@@ -1892,9 +1893,11 @@ matplotlib      : 3.10.8
 nibabel         : 5.3.2
 nilearn         : 0.12.0
 niwrap_workbench: 0.6.1
-numpy           : 2.4.2
+numpy           : 2.3.5
 pandas          : 2.2.3
 re              : 2.2.1
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>

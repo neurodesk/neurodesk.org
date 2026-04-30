@@ -28,7 +28,7 @@ A brief guide to using mriqc with neurodesk.
 
 ---
 
-# Assumptions
+## Assumptions
 
 - [ ] Your data is already in [BIDS format](https://bids.neuroimaging.io/)
 - [ ] You plan to run mriqc using Neurodesk
@@ -39,17 +39,17 @@ export neurodesk_singularity_opts="--home $HOME:/home"
 ```
 ---
 
-# Steps
+## Steps
 
 ---
 
-## Launch Neurodesk
+### Launch Neurodesk
 
 From the launcher, click the Neurodesktop icon:
 
 ![launch_neurodesk](/static/tutorials/functional_imaging/mriqc/launch_neurodesk.png 'launch_neurodesk') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
-## Open MRIQC
+### Open MRIQC
 
 Now you're in Neurodesk, use the menus to first open the neurodesk options
 
@@ -63,7 +63,7 @@ This will open a terminal window where MRIQC is ready and waiting at your finger
 
 ![mriqc_bash](/static/tutorials/functional_imaging/mriqc/mriqc_bash.png 'mriqc_bash') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
-## Setting up mriqc command
+### Setting up mriqc command
 
 You can now enter the following mriqc commands straight into the command line in the newly opened terminal window. 
 

@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -251,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -259,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -279,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -623,14 +615,11 @@ Compressing:   0%|                            | 0.00/23.0 [00:00&lt;?, ? Objects
                                                                                 
 Receiving:   0%|                             | 0.00/2.15k [00:00&lt;?, ? Objects/s]
 
-Receiving:  19%|████▏                 | 409/2.15k [00:00&lt;00:00, 1.93k Objects/s]
-
-Receiving:  58%|███████████▌        | 1.25k/2.15k [00:00&lt;00:00, 3.16k Objects/s]
                                                                                 
 Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas/s]
 
                                                                                 
-[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore
 [INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
 | 		datalad siblings -d "/home/jovyan/workspace/books/examples/functional_imaging/ds000102" enable -s s3-PRIVATE 
@@ -644,83 +633,89 @@ Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.4k/10.6M [00:00&lt;01:06, 159k Bytes
 
 Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 68.2k/10.6M [00:00&lt;01:04, 162k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   1%|     | 155k/10.6M [00:00&lt;00:37, 276k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   1%|     | 138k/10.6M [00:00&lt;00:43, 239k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 312k/10.6M [00:00&lt;00:22, 460k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 294k/10.6M [00:00&lt;00:23, 438k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   6%|▎    | 643k/10.6M [00:01&lt;00:11, 860k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   6%|▎    | 590k/10.6M [00:01&lt;00:12, 788k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  12%|▎  | 1.29M/10.6M [00:01&lt;00:05, 1.60M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  11%|▎  | 1.20M/10.6M [00:01&lt;00:06, 1.51M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  19%|▌  | 1.98M/10.6M [00:01&lt;00:03, 2.15M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  23%|▋  | 2.42M/10.6M [00:01&lt;00:02, 2.90M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  32%|▉  | 3.44M/10.6M [00:01&lt;00:01, 4.40M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  45%|█▎ | 4.73M/10.6M [00:01&lt;00:00, 6.57M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  51%|█▌ | 5.35M/10.6M [00:01&lt;00:00, 6.05M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  63%|█▉ | 6.69M/10.6M [00:01&lt;00:00, 6.38M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  71%|██ | 7.47M/10.6M [00:01&lt;00:00, 7.38M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  90%|██▋| 9.50M/10.6M [00:02&lt;00:00, 8.12M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  83%|██▌| 8.82M/10.6M [00:02&lt;00:00, 7.50M Bytes/s]
 
                                                                                 
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
 
-Total:  16%|████                      | 10.6M/66.8M [00:03&lt;00:19, 2.88M Bytes/s]
+Total:  16%|████                      | 10.6M/66.8M [00:03&lt;00:18, 3.12M Bytes/s]
 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.13M/28.1M [00:00&lt;00:01, 15.6M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.14M/28.1M [00:00&lt;00:01, 15.0M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  21%|▋  | 5.91M/28.1M [00:00&lt;00:01, 11.8M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  30%|▉  | 8.43M/28.1M [00:00&lt;00:01, 11.9M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.04M/28.1M [00:00&lt;00:01, 14.3M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  37%|█  | 10.4M/28.1M [00:00&lt;00:01, 11.0M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  30%|▉  | 8.37M/28.1M [00:00&lt;00:01, 12.8M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  46%|█▎ | 12.8M/28.1M [00:01&lt;00:01, 11.1M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  35%|█  | 9.88M/28.1M [00:00&lt;00:01, 13.2M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  54%|█▌ | 15.1M/28.1M [00:01&lt;00:01, 10.9M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  44%|█▎ | 12.4M/28.1M [00:00&lt;00:01, 12.7M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  62%|█▊ | 17.3M/28.1M [00:01&lt;00:00, 10.9M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  53%|█▌ | 14.9M/28.1M [00:01&lt;00:01, 12.3M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  70%|██ | 19.5M/28.1M [00:01&lt;00:00, 10.7M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  62%|█▊ | 17.3M/28.1M [00:01&lt;00:00, 12.2M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  77%|██▎| 21.7M/28.1M [00:01&lt;00:00, 10.6M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  71%|██ | 19.8M/28.1M [00:01&lt;00:00, 12.0M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  85%|██▌| 23.8M/28.1M [00:02&lt;00:00, 10.5M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  80%|██▍| 22.4M/28.1M [00:01&lt;00:00, 12.1M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  93%|██▊| 26.0M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  89%|██▋| 24.9M/28.1M [00:01&lt;00:00, 12.1M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  98%|██▉| 27.4M/28.1M [00:02&lt;00:00, 12.0M Bytes/s]
 
                                                                                 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Total:  58%|███████████████           | 38.6M/66.8M [00:06&lt;00:04, 5.79M Bytes/s]
+Total:  58%|███████████████           | 38.6M/66.8M [00:06&lt;00:04, 6.38M Bytes/s]
 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.05M/28.1M [00:00&lt;00:01, 15.3M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.14M/28.1M [00:00&lt;00:01, 15.0M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.22M/28.1M [00:00&lt;00:01, 12.4M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  30%|▉  | 8.50M/28.1M [00:00&lt;00:01, 11.8M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.14M/28.1M [00:00&lt;00:01, 14.6M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  37%|█  | 10.5M/28.1M [00:00&lt;00:01, 10.9M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  30%|▉  | 8.45M/28.1M [00:00&lt;00:01, 12.8M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  46%|█▎ | 12.9M/28.1M [00:01&lt;00:01, 11.0M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  38%|█▏ | 10.8M/28.1M [00:00&lt;00:01, 12.3M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  54%|█▌ | 15.1M/28.1M [00:01&lt;00:01, 10.9M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  43%|█▎ | 12.2M/28.1M [00:00&lt;00:01, 12.4M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  62%|█▊ | 17.3M/28.1M [00:01&lt;00:01, 10.7M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  52%|█▌ | 14.6M/28.1M [00:01&lt;00:01, 12.0M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  69%|██ | 19.5M/28.1M [00:01&lt;00:00, 10.5M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  56%|█▋ | 15.9M/28.1M [00:01&lt;00:01, 12.0M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  77%|██▎| 21.7M/28.1M [00:01&lt;00:00, 10.6M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  65%|█▉ | 18.3M/28.1M [00:01&lt;00:00, 11.9M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  85%|██▌| 23.8M/28.1M [00:02&lt;00:00, 10.4M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  69%|██ | 19.5M/28.1M [00:01&lt;00:00, 11.8M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:  93%|██▊| 26.2M/28.1M [00:02&lt;00:00, 10.6M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  74%|██▏| 20.8M/28.1M [00:01&lt;00:00, 11.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  78%|██▎| 22.0M/28.1M [00:01&lt;00:00, 11.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  83%|██▍| 23.3M/28.1M [00:01&lt;00:00, 11.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.5M/28.1M [00:01&lt;00:00, 11.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  91%|██▋| 25.7M/28.1M [00:02&lt;00:00, 11.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  96%|██▉| 27.0M/28.1M [00:02&lt;00:00, 11.9M Bytes/s]
 
                                                                                 
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
                                                                                 
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/anat/sub-01_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
@@ -1289,27 +1284,36 @@ There is a mean framewise displacement of 0.05534307294520548 mm.
 <section id="dependencies-in-jupyter-python">
 <h3>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-04T00:27:54.787338+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T07:07:21.534711+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
@@ -1317,8 +1321,10 @@ Architecture: 64bit
 
 matplotlib: 3.10.8
 nipype    : 1.10.0
-numpy     : 2.4.2
+numpy     : 2.3.5
 pandas    : 2.3.3
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>

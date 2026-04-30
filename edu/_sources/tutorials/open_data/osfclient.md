@@ -24,14 +24,14 @@ Using osfclient to publish and access open data on OSF.
 
 The osfclient is an open-source tool to publish and access open datasets on the Open Science Framework (OSF): http://osf.io/
 
-# Setup an OSF token
+## Setup an OSF token
 
 You can generate an OSF token under your user [settings](https://osf.io/settings/tokens). Then, set the OSF token as an environment variable:
 ```Bash
 export OSF_TOKEN=YOURTOKEN
 ```
 
-# Publish a dataset
+## Publish a dataset
 
 Here is an example how to publish a dataset on the OSF:
 ```Bash
@@ -55,7 +55,7 @@ It won't ask you for a password.
 
 The limits are now 5GB for private repo, 50gb for public repo as of 2025. 
 
-# Access a dataset
+## Access a dataset
 
 To download a dataset from the OSF:
 ```Bash

@@ -28,7 +28,7 @@ This tutorial walks through 1 way to batch script the use of the PhysIO toolbox 
 The goal is to use the toolbox to generate physiological regressors to use when modelling fMRI data. 
 The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. <p>
 
-# Getting started
+## Getting started
 
 This tutorial assumes the following:
 1. Your data are (largely) in [BIDS format](https://bids.neuroimaging.io/)
@@ -39,7 +39,7 @@ This tutorial assumes the following:
 
 NB. You can see the code generated from this tutorial [here](https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) <p> 
 
-# 1. Generate an example script for batching
+## 1. Generate an example script for batching
 
 First you will create an example batch script that is specific to one of your participants. To achieve this I downloaded locally the relevant '.log' files for one participant, as well as the '...desc-confounds_timeseries.tsv' output for fmriprep for each run. PhysIO is nice in that it will append the regressors from your physiological data to your movement parameters, so that you have a single file of regressors to add to your design matrix in SPM etc (other toolboxes are available). <p> 
 
@@ -53,7 +53,7 @@ I wound up with a Batch script for the PhysIO toolbox that looked a little bit l
 
 ![PhysIOBatch1](/static/tutorials/functional_imaging/PhysIO_Batch/PhysIOBatch1.png 'PhysIOBatch1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
-# 2. Generalise the script for use with any participant
+## 2. Generalise the script for use with any participant
 
 Now that you have an example script that contains the specific details for a single participant, you are ready to generalise this code so that you can run it for any participant you choose. I decided to do this by doing the following:
 
@@ -165,7 +165,7 @@ for irun = 1:nrun
 end
 ```
 
-# 3. Ready to run on Neurodesk!
+## 3. Ready to run on Neurodesk!
 
 Now we have a batch script, we're ready to run this on Neurodesk - yay! <p>
 

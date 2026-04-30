@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -200,6 +200,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -253,6 +255,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -261,17 +267,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -281,18 +279,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -803,189 +795,186 @@ Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas
 
 Total:   0%|                                    | 0.00/136M [00:00&lt;?, ? Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.4k/10.6M [00:00&lt;01:06, 159k Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 68.2k/10.6M [00:00&lt;01:05, 161k Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:   1%|     | 138k/10.6M [00:00&lt;00:43, 239k Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 277k/10.6M [00:00&lt;00:25, 405k Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:   6%|▎    | 590k/10.6M [00:01&lt;00:12, 795k Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  11%|▎  | 1.18M/10.6M [00:01&lt;00:06, 1.48M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  18%|▌  | 1.88M/10.6M [00:01&lt;00:04, 2.08M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  31%|▉  | 3.24M/10.6M [00:01&lt;00:01, 4.17M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  52%|█▌ | 5.46M/10.6M [00:01&lt;00:00, 6.40M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  68%|██ | 7.18M/10.6M [00:02&lt;00:00, 6.98M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  87%|██▌| 9.18M/10.6M [00:02&lt;00:00, 7.79M Bytes/s]
-
-                                                                                
-Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-
-Total:   8%|██                         | 10.6M/136M [00:03&lt;00:44, 2.84M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.77M/28.1M [00:00&lt;00:01, 13.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  17%|▌  | 4.77M/28.1M [00:00&lt;00:02, 11.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.21M/28.1M [00:00&lt;00:01, 12.4M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  28%|▊  | 7.99M/28.1M [00:00&lt;00:01, 10.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  37%|█  | 10.4M/28.1M [00:00&lt;00:01, 11.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  45%|█▎ | 12.6M/28.1M [00:01&lt;00:01, 11.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  53%|█▌ | 14.8M/28.1M [00:01&lt;00:01, 10.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  60%|█▊ | 17.0M/28.1M [00:01&lt;00:01, 10.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  69%|██ | 19.3M/28.1M [00:01&lt;00:00, 10.6M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  76%|██▎| 21.4M/28.1M [00:01&lt;00:00, 10.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  84%|██▌| 23.6M/28.1M [00:02&lt;00:00, 10.5M Bytes/s]
-Get sub-01/f .. _bold.nii.gz:  95%|██▊| 26.6M/28.1M [00:02&lt;00:00, 11.6M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz: 100%|██▉| 28.0M/28.1M [00:02&lt;00:00, 10.2M Bytes/s]
-                                                                                
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Total:  28%|███████▋                   | 38.6M/136M [00:06&lt;00:16, 5.78M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.83M/28.1M [00:00&lt;00:01, 14.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  15%|▍  | 4.27M/28.1M [00:00&lt;00:01, 14.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  23%|▋  | 6.34M/28.1M [00:00&lt;00:01, 11.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  31%|▉  | 8.60M/28.1M [00:00&lt;00:01, 11.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  39%|█▏ | 10.9M/28.1M [00:00&lt;00:01, 11.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  46%|█▍ | 13.1M/28.1M [00:01&lt;00:01, 10.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  55%|█▋ | 15.4M/28.1M [00:01&lt;00:01, 11.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  63%|█▉ | 17.8M/28.1M [00:01&lt;00:00, 11.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  72%|██▏| 20.3M/28.1M [00:01&lt;00:00, 11.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  81%|██▍| 22.8M/28.1M [00:01&lt;00:00, 11.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.4M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  91%|██▋| 25.6M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  98%|██▉| 27.7M/28.1M [00:02&lt;00:00, 10.1M Bytes/s]
-
-                                                                                
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Total:  49%|█████████████▎             | 66.8M/136M [00:09&lt;00:09, 6.94M Bytes/s]
-
 Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:   0%|    | 33.3k/10.7M [00:00&lt;01:07, 158k Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  13%|▍  | 1.40M/10.7M [00:00&lt;00:00, 14.0M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:   1%|    | 68.2k/10.7M [00:00&lt;01:05, 162k Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  27%|▊  | 2.94M/10.7M [00:00&lt;00:00, 14.8M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:   1%|     | 155k/10.7M [00:00&lt;00:38, 277k Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  42%|█▏ | 4.46M/10.7M [00:00&lt;00:00, 15.0M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:   3%|▏    | 312k/10.7M [00:00&lt;00:22, 460k Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  57%|█▋ | 6.14M/10.7M [00:00&lt;00:00, 11.2M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:   6%|▎    | 643k/10.7M [00:01&lt;00:11, 859k Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  79%|██▎| 8.45M/10.7M [00:00&lt;00:00, 11.3M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  12%|▎  | 1.30M/10.7M [00:01&lt;00:05, 1.63M Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  95%|██▊| 10.2M/10.7M [00:00&lt;00:00, 10.0M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  18%|▌  | 1.98M/10.7M [00:01&lt;00:04, 2.15M Bytes/s]
+
+Get sub-02/a .. 2_T1w.nii.gz:  31%|▉  | 3.34M/10.7M [00:01&lt;00:01, 4.23M Bytes/s]
+
+Get sub-02/a .. 2_T1w.nii.gz:  37%|█  | 3.97M/10.7M [00:01&lt;00:01, 4.54M Bytes/s]
+
+Get sub-02/a .. 2_T1w.nii.gz:  50%|█▍ | 5.36M/10.7M [00:01&lt;00:00, 6.63M Bytes/s]
+
+Get sub-02/a .. 2_T1w.nii.gz:  75%|██▏| 8.03M/10.7M [00:02&lt;00:00, 7.48M Bytes/s]
+
+Get sub-02/a .. 2_T1w.nii.gz:  87%|██▌| 9.34M/10.7M [00:02&lt;00:00, 8.51M Bytes/s]
 
                                                                                 
 Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
 
-                                                                                
+Total:   8%|██▏                        | 10.7M/136M [00:03&lt;00:41, 2.99M Bytes/s]
 
 Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  10%|▎  | 2.83M/29.2M [00:00&lt;00:01, 14.2M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:   5%|▏  | 1.45M/29.2M [00:00&lt;00:01, 14.5M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  15%|▍  | 4.36M/29.2M [00:00&lt;00:01, 14.6M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  10%|▎  | 2.97M/29.2M [00:00&lt;00:01, 14.9M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  23%|▋  | 6.81M/29.2M [00:00&lt;00:02, 10.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  16%|▍  | 4.58M/29.2M [00:00&lt;00:02, 10.6M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  29%|▊  | 8.32M/29.2M [00:00&lt;00:01, 11.4M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  20%|▌  | 5.95M/29.2M [00:00&lt;00:02, 11.5M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  35%|█  | 10.3M/29.2M [00:00&lt;00:01, 10.5M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  30%|▉  | 8.66M/29.2M [00:00&lt;00:01, 12.2M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  43%|█▎ | 12.5M/29.2M [00:01&lt;00:01, 10.6M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  36%|█  | 10.5M/29.2M [00:00&lt;00:01, 10.9M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  50%|█▍ | 14.6M/29.2M [00:01&lt;00:01, 10.2M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  45%|█▎ | 13.1M/29.2M [00:01&lt;00:01, 11.2M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  57%|█▋ | 16.8M/29.2M [00:01&lt;00:01, 10.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  51%|█▌ | 15.0M/29.2M [00:01&lt;00:01, 10.6M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  64%|█▉ | 18.8M/29.2M [00:01&lt;00:01, 10.2M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  61%|█▊ | 17.7M/29.2M [00:01&lt;00:01, 11.3M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  72%|██▏| 21.0M/29.2M [00:01&lt;00:00, 10.2M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  67%|██ | 19.7M/29.2M [00:01&lt;00:00, 10.7M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  79%|██▍| 23.1M/29.2M [00:02&lt;00:00, 10.2M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  76%|██▎| 22.1M/29.2M [00:01&lt;00:00, 10.9M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  86%|██▌| 25.2M/29.2M [00:02&lt;00:00, 10.1M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  83%|██▍| 24.2M/29.2M [00:02&lt;00:00, 10.6M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  94%|██▊| 27.4M/29.2M [00:02&lt;00:00, 10.2M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  92%|██▊| 26.8M/29.2M [00:02&lt;00:00, 11.1M Bytes/s]
 
-                                                                                
-Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-Total:  79%|█████████████████████▉      | 107M/136M [00:14&lt;00:03, 7.55M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:   5%|▏  | 1.35M/29.2M [00:00&lt;00:02, 13.3M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  14%|▍  | 4.14M/29.2M [00:00&lt;00:01, 13.8M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  21%|▋  | 6.23M/29.2M [00:00&lt;00:01, 12.1M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  28%|▊  | 8.25M/29.2M [00:00&lt;00:01, 11.2M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  36%|█  | 10.6M/29.2M [00:00&lt;00:01, 11.3M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  44%|█▎ | 12.7M/29.2M [00:01&lt;00:01, 10.9M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  51%|█▌ | 14.9M/29.2M [00:01&lt;00:01, 10.7M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  59%|█▊ | 17.1M/29.2M [00:01&lt;00:01, 10.7M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  67%|█▉ | 19.4M/29.2M [00:01&lt;00:00, 10.7M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  74%|██▏| 21.5M/29.2M [00:01&lt;00:00, 10.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  81%|██▍| 23.8M/29.2M [00:02&lt;00:00, 10.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  89%|██▋| 25.9M/29.2M [00:02&lt;00:00, 10.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  97%|██▉| 28.2M/29.2M [00:02&lt;00:00, 10.6M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  98%|██▉| 28.7M/29.2M [00:02&lt;00:00, 10.5M Bytes/s]
 
                                                                                 
 Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
 
+Total:  29%|███████▉                   | 39.9M/136M [00:06&lt;00:16, 5.84M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:   5%|▏  | 1.57M/29.2M [00:00&lt;00:01, 15.7M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  11%|▎  | 3.14M/29.2M [00:00&lt;00:01, 15.2M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  24%|▋  | 6.89M/29.2M [00:00&lt;00:01, 15.0M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  32%|▉  | 9.23M/29.2M [00:00&lt;00:01, 13.2M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  39%|█▏ | 11.5M/29.2M [00:00&lt;00:01, 12.3M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  49%|█▍ | 14.3M/29.2M [00:01&lt;00:01, 12.6M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  58%|█▋ | 16.8M/29.2M [00:01&lt;00:00, 12.5M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  67%|██ | 19.6M/29.2M [00:01&lt;00:00, 12.7M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  75%|██▏| 21.9M/29.2M [00:01&lt;00:00, 12.1M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  84%|██▌| 24.6M/29.2M [00:01&lt;00:00, 12.3M Bytes/s]
+
+Get sub-02/f .. _bold.nii.gz:  94%|██▊| 27.5M/29.2M [00:02&lt;00:00, 12.8M Bytes/s]
+
                                                                                 
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/anat/sub-01_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
+Total:  51%|█████████████▋             | 69.1M/136M [00:09&lt;00:09, 7.31M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  30%|▉  | 3.15M/10.6M [00:00&lt;00:00, 15.0M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  46%|█▍ | 4.92M/10.6M [00:00&lt;00:00, 11.1M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  71%|██▏| 7.51M/10.6M [00:00&lt;00:00, 15.3M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  95%|██▊| 10.0M/10.6M [00:00&lt;00:00, 11.1M Bytes/s]
+
+                                                                                
+Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+                                                                                
+
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:   5%|▏  | 1.29M/28.1M [00:00&lt;00:02, 12.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.80M/28.1M [00:00&lt;00:01, 14.2M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  15%|▍  | 4.29M/28.1M [00:00&lt;00:01, 14.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.14M/28.1M [00:00&lt;00:02, 10.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  31%|▉  | 8.66M/28.1M [00:00&lt;00:01, 11.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  38%|█▏ | 10.7M/28.1M [00:00&lt;00:01, 10.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  43%|█▎ | 12.1M/28.1M [00:01&lt;00:01, 9.09M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  52%|█▌ | 14.7M/28.1M [00:01&lt;00:01, 7.74M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  59%|█▊ | 16.5M/28.1M [00:01&lt;00:01, 7.02M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  64%|█▉ | 18.0M/28.1M [00:01&lt;00:01, 7.99M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  72%|██▏| 20.1M/28.1M [00:02&lt;00:00, 8.67M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  79%|██▎| 22.1M/28.1M [00:02&lt;00:00, 8.86M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.4M/28.1M [00:02&lt;00:00, 9.53M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  96%|██▉| 27.0M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
+
+                                                                                
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+Total:  79%|██████████████████████▏     | 108M/136M [00:13&lt;00:03, 7.70M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:   8%|▏  | 2.18M/28.1M [00:00&lt;00:01, 21.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  18%|▌  | 5.06M/28.1M [00:00&lt;00:02, 11.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  25%|▊  | 7.14M/28.1M [00:00&lt;00:01, 13.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  35%|█  | 9.75M/28.1M [00:00&lt;00:01, 13.2M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  44%|█▎ | 12.3M/28.1M [00:01&lt;00:01, 10.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  50%|█▌ | 14.1M/28.1M [00:01&lt;00:01, 12.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  59%|█▊ | 16.7M/28.1M [00:01&lt;00:00, 12.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  66%|█▉ | 18.5M/28.1M [00:01&lt;00:00, 10.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  73%|██▏| 20.6M/28.1M [00:01&lt;00:00, 10.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  81%|██▍| 22.9M/28.1M [00:01&lt;00:00, 10.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  88%|██▋| 24.8M/28.1M [00:02&lt;00:00, 10.2M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  92%|██▊| 25.9M/28.1M [00:02&lt;00:00, 10.2M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  97%|██▉| 27.4M/28.1M [00:02&lt;00:00, 11.1M Bytes/s]
+
+                                                                                
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+                                                                                
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/anat/sub-02_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/func/sub-02_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/func/sub-02_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/anat/sub-01_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 action summary:
   get (ok: 8)
 
@@ -1321,12 +1310,12 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:52:44,125 nipype.workflow INFO:
-	 [Node] Setting-up "bet_node" in "/tmp/tmp9iwai6b6/bet_node".
-260304-06:52:44,128 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:32,463 nipype.workflow INFO:
+	 [Node] Setting-up "bet_node" in "/tmp/tmpybstfj53/bet_node".
+260409-04:10:32,469 nipype.workflow INFO:
 	 [Node] Executing "bet_node" &lt;nipype.interfaces.fsl.preprocess.BET&gt;
-260304-06:52:49,715 nipype.workflow INFO:
-	 [Node] Finished "bet_node", elapsed time 5.585144s.
+260409-04:10:36,898 nipype.workflow INFO:
+	 [Node] Finished "bet_node", elapsed time 4.427077s.
 </pre></div>
 </div>
 </div>
@@ -1368,12 +1357,12 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1278/101719549.py:2: UserWarning: Some of the specified cut_coords seem to be out of the image bounds:
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_560/101719549.py:2: UserWarning: Some of the specified cut_coords seem to be out of the image bounds:
 	x: [-172.83, 2.17]
 	y: [-128.95, 126.05]
 	z: [-127.50, 127.50]
   plotting.plot_anat(input_file, title='BET input', cut_coords=(10,10,10),
-/tmp/ipykernel_1278/101719549.py:6: UserWarning: Some of the specified cut_coords seem to be out of the image bounds:
+/tmp/ipykernel_560/101719549.py:6: UserWarning: Some of the specified cut_coords seem to be out of the image bounds:
 	x: [-172.83, 2.17]
 	y: [-128.95, 126.05]
 	z: [-127.50, 127.50]
@@ -1489,7 +1478,7 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:52:52,475 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:39,660 nipype.workflow INFO:
 	 Generated workflow graph: /home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/workflow_graph.png (graph2use=hierarchical, simple_form=True).
 </pre></div>
 </div>
@@ -1506,7 +1495,7 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:52:52,880 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:40,342 nipype.workflow INFO:
 	 Generated workflow graph: /home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/graph.png (graph2use=flat, simple_form=True).
 </pre></div>
 </div>
@@ -1521,31 +1510,31 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:52:52,903 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:40,369 nipype.workflow INFO:
 	 Workflow smoothflow settings: ['check', 'execution', 'logging', 'monitoring']
-260304-06:52:52,908 nipype.workflow INFO:
+260409-04:10:40,376 nipype.workflow INFO:
 	 Running serially.
-260304-06:52:52,910 nipype.workflow INFO:
+260409-04:10:40,377 nipype.workflow INFO:
 	 [Node] Setting-up "smoothflow.skullstrip" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/skullstrip".
-260304-06:52:52,913 nipype.workflow INFO:
+260409-04:10:40,381 nipype.workflow INFO:
 	 [Node] Executing "skullstrip" &lt;nipype.interfaces.fsl.preprocess.BET&gt;
-260304-06:52:56,808 nipype.workflow INFO:
-	 [Node] Finished "skullstrip", elapsed time 3.892309s.
-260304-06:52:56,815 nipype.workflow INFO:
+260409-04:10:44,659 nipype.workflow INFO:
+	 [Node] Finished "skullstrip", elapsed time 4.275586s.
+260409-04:10:44,664 nipype.workflow INFO:
 	 [Node] Setting-up "smoothflow.smooth" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/smooth".
-260304-06:52:56,819 nipype.workflow INFO:
+260409-04:10:44,668 nipype.workflow INFO:
 	 [Node] Executing "smooth" &lt;nipype.interfaces.fsl.maths.IsotropicSmooth&gt;
-260304-06:53:03,805 nipype.workflow INFO:
-	 [Node] Finished "smooth", elapsed time 6.984078s.
-260304-06:53:03,810 nipype.workflow INFO:
+260409-04:10:53,94 nipype.workflow INFO:
+	 [Node] Finished "smooth", elapsed time 8.424521s.
+260409-04:10:53,98 nipype.workflow INFO:
 	 [Node] Setting-up "smoothflow.mask" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/mask".
-260304-06:53:03,815 nipype.workflow INFO:
+260409-04:10:53,104 nipype.workflow INFO:
 	 [Node] Executing "mask" &lt;nipype.interfaces.fsl.maths.ApplyMask&gt;
-260304-06:53:05,115 nipype.workflow INFO:
-	 [Node] Finished "mask", elapsed time 1.298576s.
+260409-04:10:54,709 nipype.workflow INFO:
+	 [Node] Finished "mask", elapsed time 1.603172s.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7fc75058b650&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f97802d1250&gt;
 </pre></div>
 </div>
 </div>
@@ -2014,25 +2003,25 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:53:07,60 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:56,440 nipype.workflow INFO:
 	 Workflow data_input settings: ['check', 'execution', 'logging', 'monitoring']
-260304-06:53:07,72 nipype.workflow INFO:
+260409-04:10:56,451 nipype.workflow INFO:
 	 Running serially.
-260304-06:53:07,74 nipype.workflow INFO:
+260409-04:10:56,452 nipype.workflow INFO:
 	 [Node] Setting-up "data_input.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/data_input/_subject_id_01/dg".
-260304-06:53:07,81 nipype.workflow INFO:
+260409-04:10:56,458 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260304-06:53:07,84 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.000981s.
-260304-06:53:07,89 nipype.workflow INFO:
+260409-04:10:56,462 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.000878s.
+260409-04:10:56,465 nipype.workflow INFO:
 	 [Node] Setting-up "data_input.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/data_input/_subject_id_02/dg".
-260304-06:53:07,95 nipype.workflow INFO:
+260409-04:10:56,469 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260304-06:53:07,99 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.000894s.
+260409-04:10:56,471 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.00048s.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7fc7c4742250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f978026bb50&gt;
 </pre></div>
 </div>
 </div>
@@ -2193,7 +2182,7 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:53:07,584 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:56,929 nipype.workflow INFO:
 	 Generated workflow graph: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/graph.png (graph2use=colored, simple_form=True).
 </pre></div>
 </div>
@@ -2208,63 +2197,63 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:53:07,601 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:56,949 nipype.workflow INFO:
 	 Workflow preproc settings: ['check', 'execution', 'logging', 'monitoring']
-260304-06:53:07,606 nipype.workflow INFO:
+260409-04:10:56,955 nipype.workflow INFO:
 	 Running in parallel.
-260304-06:53:07,610 nipype.workflow INFO:
+260409-04:10:56,959 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260304-06:53:08,205 nipype.workflow INFO:
+260409-04:10:57,624 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/dg".
-260304-06:53:08,219 nipype.workflow INFO:
+260409-04:10:57,636 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260304-06:53:08,227 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.001729s.
-260304-06:53:09,613 nipype.workflow INFO:
+260409-04:10:57,641 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.000746s.
+260409-04:10:58,960 nipype.workflow INFO:
 	 [Job 0] Completed (preproc.dg).
-260304-06:53:09,620 nipype.workflow INFO:
+260409-04:10:58,966 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260304-06:53:09,943 nipype.workflow INFO:
+260409-04:10:59,234 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.mcflirt" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/mcflirt".
-260304-06:53:09,963 nipype.workflow INFO:
+260409-04:10:59,250 nipype.workflow INFO:
 	 [Node] Executing "mcflirt" &lt;nipype.interfaces.fsl.preprocess.MCFLIRT&gt;
-260304-06:53:11,612 nipype.workflow INFO:
+260409-04:11:00,961 nipype.workflow INFO:
 	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 113.01/113.21, Free processors: 31/32, Free GPU slot:0/0.
                      Currently running:
                        * preproc.mcflirt
-260304-06:53:36,353 nipype.workflow INFO:
-	 [Node] Finished "mcflirt", elapsed time 26.384395s.
-260304-06:53:37,616 nipype.workflow INFO:
+260409-04:11:26,344 nipype.workflow INFO:
+	 [Node] Finished "mcflirt", elapsed time 27.087849s.
+260409-04:11:26,963 nipype.workflow INFO:
 	 [Job 1] Completed (preproc.mcflirt).
-260304-06:53:37,621 nipype.workflow INFO:
+260409-04:11:26,966 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260304-06:53:37,804 nipype.workflow INFO:
+260409-04:11:27,127 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.smooth" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/smooth".
-260304-06:53:37,818 nipype.workflow INFO:
+260409-04:11:27,140 nipype.workflow INFO:
 	 [Node] Executing "smooth" &lt;nipype.interfaces.fsl.maths.IsotropicSmooth&gt;
-260304-06:53:39,618 nipype.workflow INFO:
+260409-04:11:28,965 nipype.workflow INFO:
 	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 113.01/113.21, Free processors: 31/32, Free GPU slot:0/0.
                      Currently running:
                        * preproc.smooth
-260304-06:53:48,948 nipype.workflow INFO:
-	 [Node] Finished "smooth", elapsed time 11.125735s.
-260304-06:53:49,619 nipype.workflow INFO:
+260409-04:11:37,693 nipype.workflow INFO:
+	 [Node] Finished "smooth", elapsed time 10.547782s.
+260409-04:11:38,967 nipype.workflow INFO:
 	 [Job 2] Completed (preproc.smooth).
-260304-06:53:49,623 nipype.workflow INFO:
+260409-04:11:38,969 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260304-06:53:49,812 nipype.workflow INFO:
+260409-04:11:39,148 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.sinker" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/sinker".
-260304-06:53:49,827 nipype.workflow INFO:
+260409-04:11:39,171 nipype.workflow INFO:
 	 [Node] Executing "sinker" &lt;nipype.interfaces.io.DataSink&gt;
-260304-06:53:49,834 nipype.workflow INFO:
-	 [Node] Finished "sinker", elapsed time 0.00185s.
-260304-06:53:51,619 nipype.workflow INFO:
+260409-04:11:39,192 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.001775s.
+260409-04:11:40,967 nipype.workflow INFO:
 	 [Job 3] Completed (preproc.sinker).
-260304-06:53:51,623 nipype.workflow INFO:
+260409-04:11:40,969 nipype.workflow INFO:
 	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7fc7504c5040&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f97802d5d60&gt;
 </pre></div>
 </div>
 </div>
@@ -2306,45 +2295,45 @@ For example, to get rid of the string 'bold' and to adapt the file ending of the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260304-06:53:53,844 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:11:43,228 nipype.workflow INFO:
 	 Workflow preproc settings: ['check', 'execution', 'logging', 'monitoring']
-260304-06:53:53,853 nipype.workflow INFO:
+260409-04:11:43,237 nipype.workflow INFO:
 	 Running serially.
-260304-06:53:53,854 nipype.workflow INFO:
+260409-04:11:43,240 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/dg".
-260304-06:53:53,860 nipype.workflow INFO:
+260409-04:11:43,246 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260304-06:53:53,863 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.000589s.
-260304-06:53:53,867 nipype.workflow INFO:
+260409-04:11:43,250 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.000534s.
+260409-04:11:43,254 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.mcflirt" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/mcflirt".
-260304-06:53:53,870 nipype.workflow INFO:
+260409-04:11:43,259 nipype.workflow INFO:
 	 [Node] Cached "preproc.mcflirt" - collecting precomputed outputs
-260304-06:53:53,871 nipype.workflow INFO:
+260409-04:11:43,261 nipype.workflow INFO:
 	 [Node] "preproc.mcflirt" found cached.
-260304-06:53:53,872 nipype.workflow INFO:
+260409-04:11:43,263 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.smooth" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/smooth".
-260304-06:53:53,876 nipype.workflow INFO:
+260409-04:11:43,267 nipype.workflow INFO:
 	 [Node] Cached "preproc.smooth" - collecting precomputed outputs
-260304-06:53:53,877 nipype.workflow INFO:
+260409-04:11:43,269 nipype.workflow INFO:
 	 [Node] "preproc.smooth" found cached.
-260304-06:53:53,878 nipype.workflow INFO:
+260409-04:11:43,271 nipype.workflow INFO:
 	 [Node] Setting-up "preproc.sinker" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/sinker".
-260304-06:53:53,882 nipype.workflow INFO:
+260409-04:11:43,275 nipype.workflow INFO:
 	 [Node] Outdated cache found for "preproc.sinker".
-260304-06:53:53,888 nipype.workflow INFO:
+260409-04:11:43,280 nipype.workflow INFO:
 	 [Node] Executing "sinker" &lt;nipype.interfaces.io.DataSink&gt;
-260304-06:53:53,891 nipype.interface INFO:
+260409-04:11:43,283 nipype.interface INFO:
 	 sub: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf_smooth.nii.gz -&gt; /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf_smooth.nii.gz
-260304-06:53:53,893 nipype.interface INFO:
+260409-04:11:43,285 nipype.interface INFO:
 	 sub: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz -&gt; /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.nii.gz
-260304-06:53:53,894 nipype.interface INFO:
+260409-04:11:43,286 nipype.interface INFO:
 	 sub: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz.par -&gt; /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.par
-260304-06:53:53,896 nipype.workflow INFO:
-	 [Node] Finished "sinker", elapsed time 0.005268s.
+260409-04:11:43,287 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.004373s.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7fc7504c4aa0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f97802d5040&gt;
 </pre></div>
 </div>
 </div>
@@ -2465,38 +2454,49 @@ For example, to get rid of the string 'bold' and to adapt the file ending of the
 <section id="dependencies-in-jupyter-python">
 <h2>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to print out computer characteristics and software versions.</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-04T06:53:54.075028+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T04:11:43.472231+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
 
-IPython   : 9.9.0
+IPython   : 9.7.0
 matplotlib: 3.10.8
 nibabel   : 5.3.3
 nilearn   : 0.13.1
 nipype    : 1.10.0
-numpy     : 2.4.2
+numpy     : 2.3.5
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>

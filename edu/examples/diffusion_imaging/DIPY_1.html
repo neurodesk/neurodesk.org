@@ -49,7 +49,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
@@ -198,6 +198,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
@@ -251,6 +253,10 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
@@ -259,17 +265,9 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio.html">PhysIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
-
-
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
 </ul>
 </details></li>
@@ -279,18 +277,12 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/datalad.html">datalad</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/open_data/osfclient.html">osfclient</a></li>
-
-
-
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/qsm.html">Quantitative Susceptibility Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">SWI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">Unwrapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -535,12 +527,13 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-probabilistic-tractography-using-basic-stopping-criteria">Deterministic and Probabilistic Tractography Using Basic Stopping Criteria</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-content">Table of Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goal">Goal</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
@@ -548,9 +541,9 @@
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-python-libraries">Install and import python libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-python-libraries">Install and import Python libraries</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data Preparation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-stanford-hardi-dataset-from-stanford-provided-by-dipy">Load Stanford HARDI dataset from Stanford provided by DIPY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-stanford-hardi-dataset-provided-by-dipy">Load Stanford HARDI dataset provided by DIPY</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-preprocessing">Minimal preprocessing</a></li>
 </ul>
 </li>
@@ -569,12 +562,10 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-local-tracking-probabilistic-and-deterministic-approaches">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-tractography">Probabilistic tractography</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-tractography">Deterministic tractography</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
             </nav>
         </div>
@@ -613,6 +604,12 @@
 <li><p><a class="reference external" href="https://fury.gl/latest/index.html">FURY Home</a></p></li>
 </ul>
 </section>
+<section id="dataset">
+<h4>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Stanford HARDI dataset, distributed with DIPY. Original acquisition described in: Rokem, A., Yeatman, J. D., Pestilli, F., Kay, K. N., Mezer, A., van der Walt, S., &amp; Wandell, B. A. (2015). Evaluating the accuracy of diffusion MRI models in white matter. PLoS ONE, 10(4), e0123272. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0123272">https://doi.org/10.1371/journal.pone.0123272</a></p></li>
+</ul>
+</section>
 <section id="educational-resources">
 <h4>Educational resources<a class="headerlink" href="#educational-resources" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -621,8 +618,8 @@
 </section>
 </section>
 </section>
-<section id="table-of-content">
-<h2>Table of Content<a class="headerlink" href="#table-of-content" title="Link to this heading">#</a></h2>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#Introduction"><span class="xref myst">Introduction</span></a><br>
 <a class="reference internal" href="#Data-Preparation"><span class="xref myst">Data Preparation</span></a><br>
 <a class="reference internal" href="#Step-1:-Diffusion-model"><span class="xref myst">Step 1: Diffusion model</span></a><br>
@@ -656,7 +653,7 @@
 </section>
 </section>
 <section id="install-and-import-python-libraries">
-<h2>Install and import python libraries<a class="headerlink" href="#install-and-import-python-libraries" title="Link to this heading">#</a></h2>
+<h2>Install and import Python libraries<a class="headerlink" href="#install-and-import-python-libraries" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span> 
@@ -691,31 +688,25 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  cos = np.divide(z, r, where=r &gt; 0)
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  cos = np.divide(z, r, where=r &gt; 0)
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="data-preparation">
 <h2>Data Preparation<a class="headerlink" href="#data-preparation" title="Link to this heading">#</a></h2>
-<section id="load-stanford-hardi-dataset-from-stanford-provided-by-dipy">
-<h3>Load Stanford HARDI dataset from Stanford provided by DIPY<a class="headerlink" href="#load-stanford-hardi-dataset-from-stanford-provided-by-dipy" title="Link to this heading">#</a></h3>
+<section id="load-stanford-hardi-dataset-provided-by-dipy">
+<h3>Load Stanford HARDI dataset provided by DIPY<a class="headerlink" href="#load-stanford-hardi-dataset-provided-by-dipy" title="Link to this heading">#</a></h3>
+<p>When we load the dataset, we get two key objects:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">img</span></code></strong>: the NIfTI image containing the 4D diffusion data (3D brain volume × diffusion-weighted directions).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">gtab</span></code></strong> (gradient table): encodes the acquisition scheme — specifically the <strong>b-values</strong> and <strong>gradient directions</strong> for each volume. <strong>B-values</strong> control the strength of diffusion weighting: b=0 means no diffusion weighting (a baseline image), while higher values (e.g., 2000 s/mm²) make the signal sensitive to water diffusion along the corresponding gradient direction.</p></li>
+</ul>
+<p>We also define an <strong>affine</strong> matrix — a 4×4 transformation that maps between voxel indices and world (scanner) coordinates. Here we use an identity matrix so that tractography operates directly in voxel space.</p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load example diffusion data</span>
 <span class="n">img</span><span class="p">,</span> <span class="n">gtab</span> <span class="o">=</span> <span class="n">read_stanford_hardi</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
 
-<span class="c1">#affine = img.affine</span>
+<span class="c1"># Use an identity affine so that streamline coordinates are in voxel space</span>
 <span class="n">affine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Data shape:"</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -730,7 +721,7 @@ b-values (unique): [   0. 2000.] …
 </div>
 </div>
 </div>
-<p>This dataset provides a label map in which all white matter tissues are labeled either 1 or 2. Let’s create a white matter mask to restrict tracking to the white matter.</p>
+<p>This dataset provides a label map in which white matter tissues are labeled as either 1 (corpus callosum) or 2 (other white matter regions). Let’s create a white matter mask to restrict tracking to the white matter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"stanford_labels"</span><span class="p">)</span>
@@ -748,7 +739,7 @@ b-values (unique): [   0. 2000.] …
 <section id="minimal-preprocessing">
 <h3>Minimal preprocessing<a class="headerlink" href="#minimal-preprocessing" title="Link to this heading">#</a></h3>
 <p>To keep things simple, we’ll compute a brain mask using <strong>median_otsu</strong>.</p>
-<p>This function is inspired from Mrtrix’s bet which has default values median_radius=3, numpass=2. However, from tests on multiple 1.5T and 3T data from GE, Philips, Siemens, the most robust choice is median_radius=4, numpass=4 (default)</p>
+<p>This function is inspired by MRtrix3’s bet which has default values median_radius=3, numpass=2. However, from tests on multiple 1.5T and 3T data from GE, Philips, and Siemens, the most robust choice is median_radius=4, numpass=4 (default).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute a quick brain mask</span>
@@ -780,7 +771,7 @@ b-values (unique): [   0. 2000.] …
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f4b6553b4d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9d197e6990&gt;
 </pre></div>
 </div>
 <img alt="../../_images/72b173b7ef27506f29cdcc21673e928eb294ff442fef9aa820668c8d9328790f.png" src="../../_images/72b173b7ef27506f29cdcc21673e928eb294ff442fef9aa820668c8d9328790f.png">
@@ -793,12 +784,12 @@ b-values (unique): [   0. 2000.] …
 <p>To reconstruct white matter pathways, we first need to estimate the <strong>local fiber directions</strong> within each voxel.
 In diffusion MRI, water molecules diffuse more easily along axons than across them — this directional dependence can be modeled to infer underlying fiber orientations.</p>
 <p>Several models can be used to represent this directional information. We will look into the following three models (for a complete overview of reconstruction models available in DIPY, see
-<a class="reference external" href="https://docs.dipy.org/1.9.0/examples_built/index.html#reconstruction">here</a>:</p>
+<a class="reference external" href="https://docs.dipy.org/1.9.0/examples_built/index.html#reconstruction">here</a>):</p>
 <p>A) <strong>DTI (Diffusion Tensor Imaging)</strong></p>
 <ul class="simple">
 <li><p>Estimates a single principal diffusion direction per voxel.</p></li>
 <li><p>Computes scalar measures such as Fractional Anisotropy (FA) and Mean Diffusivity (MD).</p></li>
-<li><p>Simple and fast, but cannot resolve crossing fibers, which are present in a substantial portion of white matter voxels</p></li>
+<li><p>Simple and fast, but cannot resolve crossing fibers, which are present in a substantial portion of white matter voxels.</p></li>
 </ul>
 <blockquote>
 <div><p>While FA is a scalar measure of anisotropy, you can also visualize a tensor ODF derived from the fitted tensor. This ODF is Gaussian-shaped and symmetric, representing the diffusion profile of a single tensor. It provides intuition about fiber orientation but is limited in regions with crossing or branching fibers.</p>
@@ -807,23 +798,30 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 <ul class="simple">
 <li><p>Estimates an Orientation Distribution Function (ODF) per voxel from the diffusion-weighted signal.</p></li>
 <li><p>Peaks of the ODF indicate likely fiber orientations.</p></li>
-<li><p>Can represent multiple orientations, but peaks may be less sharp than CSD, potentially leading to lower tracking precision</p></li>
+<li><p>Can represent multiple orientations, but peaks may be less sharp than CSD, potentially leading to lower tracking precision.</p></li>
 </ul>
 <blockquote>
 <div><p>The CSA model helps illustrate the transition from single-tensor representations to full ODFs, showing how we move toward richer, multi-directional voxel-wise information for tractography.</p>
 </div></blockquote>
 <p>C) <strong>CSD (Constrained Spherical Deconvolution)</strong>:</p>
 <ul class="simple">
-<li><p>Estimates the Fiber Orientation Distribution (FOD) by deconvolving the diffusion signal with a single-fiber response function. The FOD is represented using spherical harmonics (SH).</p></li>
+<li><p>Estimates the Fiber Orientation Distribution (FOD) by deconvolving the diffusion signal with a single-fiber response function. The FOD is represented using <strong>spherical harmonics (SH)</strong> — a mathematical basis for representing functions on a sphere, analogous to Fourier series on a circle.</p></li>
 <li><p>Resolves multiple distinct fiber populations per voxel (crossings, branchings).</p></li>
-<li><p>Produces sharper, more accurate orientation peaks, improving both deterministic and probabilistic tractography</p></li>
+<li><p>Produces sharper, more accurate orientation peaks, improving both deterministic and probabilistic tractography.</p></li>
 </ul>
+<blockquote>
+<div><p><strong>ODF vs FOD:</strong> An ODF describes the probability of diffusion in each direction, while a Fiber Orientation Distribution (FOD) specifically represents the underlying fiber orientations after deconvolving the single-fiber response from the signal. In practice, CSD produces FODs with sharper peaks than raw ODFs.</p>
+</div></blockquote>
 <blockquote>
 <div><p>In short: while DTI and CSA provide useful but simplified diffusion representations, CSD offers a more precise reconstruction of fiber orientations, especially in regions with complex microstructure.</p>
 </div></blockquote>
 <section id="a-reconstruction-of-the-diffusion-signal-with-dti-single-tensor-model">
 <h3>A) Reconstruction of the diffusion signal with DTI (single tensor) model<a class="headerlink" href="#a-reconstruction-of-the-diffusion-signal-with-dti-single-tensor-model" title="Link to this heading">#</a></h3>
 <p>Let’s start with DTI, the simplest diffusion model, before exploring more complex representations with CSA and CSD.</p>
+<p>In DTI, the diffusion profile within each voxel is modeled as an ellipsoid described by a 3×3 tensor. The tensor’s <strong>eigenvectors</strong> define the principal axes of diffusion, and the <strong>eigenvalues</strong> (<code class="docutils literal notranslate"><span class="pre">evals</span></code>) quantify the magnitude of diffusion along each axis. From these, we can derive scalar maps such as:</p>
+<ul class="simple">
+<li><p><strong>Fractional Anisotropy (FA)</strong>: ranges from 0 (isotropic — equal diffusion in all directions, e.g., CSF) to 1 (highly directional diffusion, e.g., along a coherent fiber bundle).</p></li>
+</ul>
 <p>We will visualize DTI results in several ways:</p>
 <ul class="simple">
 <li><p>FA map — highlights anisotropic regions like white matter.</p></li>
@@ -841,7 +839,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 </div>
-<p>The fitting will not be accurate in the background of the image as there is no signal and possibly we will find FA values with nans (not a number). We can easily remove these in the following way.</p>
+<p>The fitting will not be accurate in the background of the image as there is no signal and possibly we will find FA values with NaNs (not a number). We can easily remove these in the following way.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FA</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">FA</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
@@ -864,7 +862,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 <img alt="../../_images/452110d8e86d9c40d6448e39ba2d095c461cd3550edd968031bbe4682474f0f2.png" src="../../_images/452110d8e86d9c40d6448e39ba2d095c461cd3550edd968031bbe4682474f0f2.png">
 </div>
 </div>
-<p>We can also compute the colored FA or RGB-map. First, FA needs tob e scaled between 0 and 1, then the RGB map can be computed and visualized.</p>
+<p>We can also compute the colored FA or RGB-map. First, FA needs to be scaled between 0 and 1, then the RGB map can be computed and visualized.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">FA</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -904,19 +902,6 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/24f9f994a95a24259201bdddd073d650ed60e336dc8777b04d1e3e59a1cf0d63.png" src="../../_images/24f9f994a95a24259201bdddd073d650ed60e336dc8777b04d1e3e59a1cf0d63.png">
 </div>
 </div>
@@ -941,27 +926,14 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/d0c09c5cbef4ccbf2b5a29a3581062a95fbcd21f74fa031f6ffcde129cb28085.png" src="../../_images/d0c09c5cbef4ccbf2b5a29a3581062a95fbcd21f74fa031f6ffcde129cb28085.png">
 </div>
 </div>
 </section>
 <section id="b-csa-constant-solid-angle-odf">
 <h3>B) CSA (Constant Solid Angle) ODF<a class="headerlink" href="#b-csa-constant-solid-angle-odf" title="Link to this heading">#</a></h3>
-<p>Here, we’ll use <code class="docutils literal notranslate"><span class="pre">peaks_from_model</span></code> to apply the <code class="docutils literal notranslate"><span class="pre">CsaOdfModel</span></code> to each white matter voxel and estimate fiber orientations that we can use for tracking. This function requires a reconstruction model, the diffusion data, and a sphere as input. The sphere is an object that represents the spherical discrete grid where the ODF values will be evaluated.<br>
-The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span></code> object contains several useful attributes:  <code class="docutils literal notranslate"><span class="pre">gfa</span></code> (generalized fractional anisotropy), <code class="docutils literal notranslate"><span class="pre">peak_dirs</span></code> (peak directions), <code class="docutils literal notranslate"><span class="pre">peak_values</span></code> (maxima values of the ODF), <code class="docutils literal notranslate"><span class="pre">peak_indices</span></code> (position on the discrete sphere), <code class="docutils literal notranslate"><span class="pre">shm_coeff</span></code> (spherical harmonic coefficients) and <code class="docutils literal notranslate"><span class="pre">odf</span></code> (the full orientation distribution function).</p>
+<p>Here, we’ll use <code class="docutils literal notranslate"><span class="pre">peaks_from_model</span></code> to apply the <code class="docutils literal notranslate"><span class="pre">CsaOdfModel</span></code> to each white matter voxel and estimate fiber orientations that we can use for tracking. This function requires a reconstruction model, the diffusion data, and a <strong>sphere</strong> as input. The sphere defines a set of discrete directions on the unit sphere at which ODF values are evaluated — DIPY provides several pre-computed spheres (e.g., <code class="docutils literal notranslate"><span class="pre">default_sphere</span></code> with 362 points, <code class="docutils literal notranslate"><span class="pre">repulsion724</span></code> with 724 points) where the points are distributed to provide uniform angular coverage.<br>
+The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span></code> object contains several useful attributes:  <code class="docutils literal notranslate"><span class="pre">gfa</span></code> (generalized fractional anisotropy — a multi-shell generalization of FA), <code class="docutils literal notranslate"><span class="pre">peak_dirs</span></code> (peak directions), <code class="docutils literal notranslate"><span class="pre">peak_values</span></code> (maxima values of the ODF), <code class="docutils literal notranslate"><span class="pre">peak_indices</span></code> (position on the discrete sphere), <code class="docutils literal notranslate"><span class="pre">shm_coeff</span></code> (spherical harmonic coefficients) and <code class="docutils literal notranslate"><span class="pre">odf</span></code> (the full orientation distribution function).</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.dipy.org/stable/examples_built/reconstruction/reconst_csa.html#">DIPY’s example Reconstruction with Constant Solid Angle</a></p></li>
 </ul>
@@ -1000,21 +972,6 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/fury/colormap.py:234: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  orient = np.abs(np.divide(v, r, where=r != 0))
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/e401dd1b6d94fe4f2384165b5fef0c0fe2717a93e33004cc0ced94709a527f2c.png" src="../../_images/e401dd1b6d94fe4f2384165b5fef0c0fe2717a93e33004cc0ced94709a527f2c.png">
 </div>
 </div>
@@ -1055,15 +1012,14 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 </div>
-<p>With this dataset with multiple gradient directions, we can proceed with the two steps of CSD.</p>
+<p>Given the multiple gradient directions in this dataset, we can proceed with the two steps of CSD:</p>
 <ol class="arabic simple">
 <li><p>Estimation of the fiber response function</p></li>
-<li></li>
+<li><p>Use the response function to reconstruct the fODF</p></li>
 </ol>
-<p>Use the response function to reconstruct the fODF</p>
 <section id="step-1-estimation-of-the-fiber-response-function-from-a-local-brain-region">
 <h4>Step 1. Estimation of the fiber response function from a local brain region<a class="headerlink" href="#step-1-estimation-of-the-fiber-response-function-from-a-local-brain-region" title="Link to this heading">#</a></h4>
-<p>To estimate the <strong>single-fiber response function</strong>, we can use a brain region where fibers are known to be coherent and aligned, such as the <strong>corpus callosum</strong>. The <code class="docutils literal notranslate"><span class="pre">auto_response_ssst</span></code> function automates this process: it selects a it selects a small cuboid ROI (typically centered in the brain), computes FA values, and extracts the response function from voxels with <strong>FA &gt; 0.7</strong> — likely corresponding to single-fiber regions.</p>
+<p>To estimate the <strong>single-fiber response function</strong>, we can use a brain region where fibers are known to be coherent and aligned, such as the <strong>corpus callosum</strong>. The <code class="docutils literal notranslate"><span class="pre">auto_response_ssst</span></code> function automates this process: it selects a small cuboid ROI (typically centered in the brain), computes FA values, and extracts the response function from voxels with <strong>FA &gt; 0.7</strong> — likely corresponding to single-fiber regions.</p>
 <p>Internally, this function first creates a mask of suitable voxels (<code class="docutils literal notranslate"><span class="pre">mask_for_response_ssst</span></code>) and then computes the response function within that mask (<code class="docutils literal notranslate"><span class="pre">response_from_mask_ssst</span></code>). These two steps can also be performed manually; the resulting responses should be identical.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1120,26 +1076,13 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/de6801af88cbb153201f57478e0462825e2b4dde2b0cca6b832204c45718da69.png" src="../../_images/de6801af88cbb153201f57478e0462825e2b4dde2b0cca6b832204c45718da69.png">
 </div>
 </div>
 </section>
 <section id="step-2-fodf-reconstruction">
 <h4>Step 2. fODF reconstruction<a class="headerlink" href="#step-2-fodf-reconstruction" title="Link to this heading">#</a></h4>
-<p>After estimation the response function, we can start the deconvolution process:</p>
+<p>After estimating the response function, we can start the deconvolution process:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Instantiate the CSD model </span>
@@ -1173,19 +1116,6 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/d45e41ee005748181b0433df9d33bfc41a732a0f27c20146a9e9e5e161a05c75.png" src="../../_images/d45e41ee005748181b0433df9d33bfc41a732a0f27c20146a9e9e5e161a05c75.png">
 </div>
 </div>
@@ -1230,19 +1160,6 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/e0431602bb8df52f997a45c7b57ac89b59c64a0c4d37c0bfbe360dd212068884.png" src="../../_images/e0431602bb8df52f997a45c7b57ac89b59c64a0c4d37c0bfbe360dd212068884.png">
 </div>
 </div>
@@ -1259,24 +1176,11 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/9074060ddb34e03025e6ef30e9b7d968c7fd48464caf8bdb1f35c0b11e2fad26.png" src="../../_images/9074060ddb34e03025e6ef30e9b7d968c7fd48464caf8bdb1f35c0b11e2fad26.png">
 </div>
 </div>
 <blockquote>
-<div><p><strong>Why DTI, CSA and CSD?</strong> DTI provides intuitive scalar maps (FA/MD) but only estimates a single fiber direction per voxel. CSA and CSD can both resolve multiple fiber orientations, with CSD producing sharper FODs that improve tractography accuracy in complex white matter regions</p>
+<div><p><strong>Why DTI, CSA and CSD?</strong> DTI provides intuitive scalar maps (FA/MD) but only estimates a single fiber direction per voxel. CSA and CSD can both resolve multiple fiber orientations, with CSD producing sharper FODs that improve tractography accuracy in complex white matter regions.</p>
 </div></blockquote>
 </section>
 </section>
@@ -1333,7 +1237,7 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f4bced347d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9d7f623c50&gt;
 </pre></div>
 </div>
 <img alt="../../_images/87b7c1826322d33dc699e4eb3d4258a4ddb45baa5c4dc22ee9840d845f91d9e3.png" src="../../_images/87b7c1826322d33dc699e4eb3d4258a4ddb45baa5c4dc22ee9840d845f91d9e3.png">
@@ -1370,7 +1274,7 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f4bcedb9d10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9d7f61b110&gt;
 </pre></div>
 </div>
 <img alt="../../_images/d58ecb80264497373b92f24cdcc3faefa8ecc9396f7989f75215c9edfc33b7ae.png" src="../../_images/d58ecb80264497373b92f24cdcc3faefa8ecc9396f7989f75215c9edfc33b7ae.png">
@@ -1432,7 +1336,7 @@ Each seed acts as a starting location for streamline propagation based on local 
 <p>Both approaches use the same seeds and stopping criteria but differ in how the next tracking direction is chosen.</p>
 <section id="probabilistic-tractography">
 <h3>Probabilistic tractography<a class="headerlink" href="#probabilistic-tractography" title="Link to this heading">#</a></h3>
-<p>Probabilistic fiber tracking is one approach for reconstructing white matter connections using diffusion MRI. Unlike deterministic tractography, which follows the peak fiber orientation at each step, probabilistic tractography samples the direction of each step from a distribution of possible orien.taIn this approach, the Fiber Orientation Distribution (FOD) estimated by the CSD model encodes the relative strength of different fiber orientations within each voxel. The FOD can be discretized on a well-distributed sphere to obtain directional weights (akin to a probability mass function, PMF) for sampling tracking directions. Since a PMF cannot have negative values, any negative FOD amplitudes are clipped to zero.</p>
+<p>Probabilistic fiber tracking is one approach for reconstructing white matter connections using diffusion MRI. Unlike deterministic tractography, which follows the peak fiber orientation at each step, probabilistic tractography samples the direction of each step from a distribution of possible orientations. In this approach, the Fiber Orientation Distribution (FOD) estimated by the CSD model encodes the relative strength of different fiber orientations within each voxel. The FOD can be discretized on a well-distributed sphere to obtain directional weights (akin to a probability mass function, PMF) for sampling tracking directions. Since a PMF cannot have negative values, any negative FOD amplitudes are clipped to zero.</p>
 <p>This probabilistic sampling allows streamlines to explore multiple plausible pathways, capturing uncertainty in local fiber orientation. This is particularly valuable in complex white matter regions with crossing or branching fibers, where a single deterministic direction may oversimplify the underlying anatomy. As with deterministic tracking, probabilistic streamlines begin from seed points and are guided by stopping criteria such as white matter masks or FA thresholds.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1446,7 +1350,7 @@ Each seed acts as a starting location for streamline propagation based on local 
 </div>
 </div>
 </div>
-<p>Local Tracking is used for probabilistic tractography which takes the direction getter along with the stopping criterion and seeds as input.</p>
+<p>Local Tracking is used for probabilistic tractography, which takes the direction getter along with the stopping criterion and seeds as input.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">streamlines_prob</span> <span class="o">=</span> <span class="n">LocalTracking</span><span class="p">(</span><span class="n">direction_getter</span><span class="o">=</span><span class="n">prob_dg</span><span class="p">,</span>
@@ -1479,20 +1383,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
-<img alt="../../_images/853fbb3d594296d7ce26b6c28b7f708d5eda386fbfbb05a874af749032829454.png" src="../../_images/853fbb3d594296d7ce26b6c28b7f708d5eda386fbfbb05a874af749032829454.png">
+<img alt="../../_images/449f8f213d3fb2ef96b3715c9f9c748706e7dcf41f119f14a787bc4cf110f27e.png" src="../../_images/449f8f213d3fb2ef96b3715c9f9c748706e7dcf41f119f14a787bc4cf110f27e.png">
 </div>
 </div>
 </section>
@@ -1537,23 +1428,10 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/ef47e2eb26420316c6e6249a7f816db755612a13e3af83c563add2eb70ac5667.png" src="../../_images/ef47e2eb26420316c6e6249a7f816db755612a13e3af83c563add2eb70ac5667.png">
 </div>
 </div>
-<p>The following alternative visualizations display the corpus callosum streamlines overlaid on T1-weighted anatomical slices (axial at z=35 and sagittal at z=35), with the seed ROI shown as a semi-transparent yellow contour.</p>
+<p>The following alternative visualizations display the corpus callosum streamlines overlaid on T1-weighted anatomical slices (axial at z=35 and sagittal at x=40), with the seed ROI shown as a semi-transparent yellow contour.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make display objects</span>
@@ -1584,19 +1462,6 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/f7feea880fd13dda2fa89d65f3ae00e2ff95caa4c4d5790c95ce178f9484944b.png" src="../../_images/f7feea880fd13dda2fa89d65f3ae00e2ff95caa4c4d5790c95ce178f9484944b.png">
 </div>
 </div>
@@ -1612,19 +1477,6 @@ libEGL warning: failed to open /dev/dri/card0: Permission denied
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/renderD128: Permission denied
-
-libEGL warning: failed to open /dev/dri/card0: Permission denied
-</pre></div>
-</div>
 <img alt="../../_images/2ab57f30bf83f4a821a5762646322e9d9971286c80c7f0558b0d25078a032d2f.png" src="../../_images/2ab57f30bf83f4a821a5762646322e9d9971286c80c7f0558b0d25078a032d2f.png">
 </div>
 </div>
@@ -1660,53 +1512,65 @@ Streamline length is a basic metric that provides insight into the spatial exten
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Streamline Statistics:
 Deterministic  — n=  587, mean= 50.3 mm, median= 50.5 mm, std= 23.1 mm
-Probabilistic  — n=  587, mean= 49.7 mm, median= 51.5 mm, std= 21.9 mm
+Probabilistic  — n=  587, mean= 49.7 mm, median= 52.0 mm, std= 22.4 mm
 </pre></div>
 </div>
-<img alt="../../_images/c5f7a0c9798eea3ede12e3b65a4c459f1357197639df96a687501f1160c0ec30.png" src="../../_images/c5f7a0c9798eea3ede12e3b65a4c459f1357197639df96a687501f1160c0ec30.png">
+<img alt="../../_images/4cade8e624b4fb5bea6d895aa5438e5b45bedda369622a17a581c7830f7bc983.png" src="../../_images/4cade8e624b4fb5bea6d895aa5438e5b45bedda369622a17a581c7830f7bc983.png">
 </div>
 </div>
+</section>
+</section>
 <section id="dependencies-in-jupyter-python">
-<h4>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h4>
+<h2>Dependencies in Jupyter/Python<a class="headerlink" href="#dependencies-in-jupyter-python" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook</p></li>
+<li><p>Using the package <a class="reference external" href="https://github.com/rasbt/watermark">watermark</a> to document system environment and software versions used in this notebook, alongside the Neurodesktop version extracted from the <code class="docutils literal notranslate"><span class="pre">JUPYTER_IMAGE</span></code> or <code class="docutils literal notranslate"><span class="pre">NEURODESKTOP_VERSION</span></code> environment variables.</p></li>
 </ul>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="o">%</span><span class="k">load_ext</span> watermark
 
 <span class="o">%</span><span class="k">watermark</span>
 <span class="o">%</span><span class="k">watermark</span> --iversions
+
+<span class="n">neurodesktop_version</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'JUPYTER_IMAGE'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'NEURODESKTOP_VERSION'</span><span class="p">,</span> <span class="s1">'unknown'</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Neurodesktop version: </span><span class="si">{</span><span class="n">neurodesktop_version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-10T11:31:16.024245+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T02:25:56.182682+00:00
 
 Python implementation: CPython
-Python version       : 3.13.11
-IPython version      : 9.9.0
+Python version       : 3.13.9
+IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-170-generic
+Release     : 5.15.0-171-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
 Architecture: 64bit
-IPython   : 9.9.0
+
+IPython   : 9.7.0
 dipy      : 1.11.0
 fury      : 0.11.0
 matplotlib: 3.10.8
 nibabel   : 5.3.3
-numpy     : 2.4.2
-scipy     : 1.17.0
+numpy     : 2.3.5
+scipy     : 1.16.3
+
+Neurodesktop version: 2025-12-20
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-</section>
 </section>
 </section>
 
@@ -1773,12 +1637,13 @@ scipy     : 1.17.0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-probabilistic-tractography-using-basic-stopping-criteria">Deterministic and Probabilistic Tractography Using Basic Stopping Criteria</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-and-resources">Citation and Resources:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-included-in-this-workflow">Tools included in this workflow</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-resources">Educational resources</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-content">Table of Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#goal">Goal</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
@@ -1786,9 +1651,9 @@ scipy     : 1.17.0
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-python-libraries">Install and import python libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-python-libraries">Install and import Python libraries</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data Preparation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-stanford-hardi-dataset-from-stanford-provided-by-dipy">Load Stanford HARDI dataset from Stanford provided by DIPY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-stanford-hardi-dataset-provided-by-dipy">Load Stanford HARDI dataset provided by DIPY</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-preprocessing">Minimal preprocessing</a></li>
 </ul>
 </li>
@@ -1807,12 +1672,10 @@ scipy     : 1.17.0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-local-tracking-probabilistic-and-deterministic-approaches">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilistic-tractography">Probabilistic tractography</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-tractography">Deterministic tractography</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-comparison-of-tracking-methods">Quantitative Comparison of Tracking Methods</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies-in-jupyter-python">Dependencies in Jupyter/Python</a></li>
 </ul>
   </nav></div>
 

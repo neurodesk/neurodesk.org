@@ -63,6 +63,10 @@ chapters:
 
   - file: tutorials/intro
     sections:
+      - file: tutorials/about_neurodesk/intro
+        sections:
+          - file: tutorials/about_neurodesk/accessing_neurodesk_tools
+
       - file: tutorials/electrophysiology/intro
         sections:
           - file: tutorials/electrophysiology/EEG_mne-python
