@@ -348,6 +348,7 @@ function connectSherlock() {
     echo " normal      || 2d or 7d (owner) |      8GB  | 20-64"
     echo " bigmem      ||               1d |     64GB  | 24-256"
     echo " dev         ||               2h |      8GB  | 20-32"
+    echo " <sunetid>   || owner partition, usually the PI's SUNet ID"
     echo "--------------------------------------------------------------------------------"
     echo "================================================================================"
     
