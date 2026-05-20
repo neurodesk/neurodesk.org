@@ -230,6 +230,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brainageR.html">Brain Age Prediction with brainageR</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer.html">FreeSurfer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
@@ -242,6 +243,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../workflows/PyBIDS.html">PyBIDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/RISE_slideshow.html">RISE Slideshow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/bids_conversion.html">BIDS conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/container_paths_neurodesk.html">Container Resource Paths on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
@@ -254,6 +256,15 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/MySt_neurodesk.html">Citation and Resources</a></li>
+
+
+
+
+
+
+
+
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
 </ul>
 </details></li>
@@ -688,6 +699,18 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
+  cos = np.divide(z, r, where=r &gt; 0)
+/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
+  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
+/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
+  cos = np.divide(z, r, where=r &gt; 0)
+/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
+  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="data-preparation">
@@ -771,10 +794,10 @@ b-values (unique): [   0. 2000.] …
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9d197e6990&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ba52f317890&gt;
 </pre></div>
 </div>
-<img alt="../../_images/72b173b7ef27506f29cdcc21673e928eb294ff442fef9aa820668c8d9328790f.png" src="../../_images/72b173b7ef27506f29cdcc21673e928eb294ff442fef9aa820668c8d9328790f.png">
+<img alt="../../_images/228d42f2e2e24e18ea20c8f97e822ffeade7f8675d8deddcb32395d0c6f3077d.png" src="../../_images/228d42f2e2e24e18ea20c8f97e822ffeade7f8675d8deddcb32395d0c6f3077d.png">
 </div>
 </div>
 </section>
@@ -859,7 +882,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/452110d8e86d9c40d6448e39ba2d095c461cd3550edd968031bbe4682474f0f2.png" src="../../_images/452110d8e86d9c40d6448e39ba2d095c461cd3550edd968031bbe4682474f0f2.png">
+<img alt="../../_images/1b92dca385a02e0e9029ed410ba042dac4fa6231dd74a4f3f8533de6b1678bc6.png" src="../../_images/1b92dca385a02e0e9029ed410ba042dac4fa6231dd74a4f3f8533de6b1678bc6.png">
 </div>
 </div>
 <p>We can also compute the colored FA or RGB-map. First, FA needs to be scaled between 0 and 1, then the RGB map can be computed and visualized.</p>
@@ -875,7 +898,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d0b7715463be6ff446176b79f46d952c58f1d41bda4b511eb8556520c421739e.png" src="../../_images/d0b7715463be6ff446176b79f46d952c58f1d41bda4b511eb8556520c421739e.png">
+<img alt="../../_images/e6033832ae31c93581aa0c20edee0be466ddd0c5c56ceebdc40bfeee4d83ba2d.png" src="../../_images/e6033832ae31c93581aa0c20edee0be466ddd0c5c56ceebdc40bfeee4d83ba2d.png">
 </div>
 </div>
 <p>Let’s also visualize the tensor ellipsoids of a small rectangular area in an axial slice of the corpus callosum (CC):</p>
@@ -972,6 +995,10 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/fury/colormap.py:234: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
+  orient = np.abs(np.divide(v, r, where=r != 0))
+</pre></div>
+</div>
 <img alt="../../_images/e401dd1b6d94fe4f2384165b5fef0c0fe2717a93e33004cc0ced94709a527f2c.png" src="../../_images/e401dd1b6d94fe4f2384165b5fef0c0fe2717a93e33004cc0ced94709a527f2c.png">
 </div>
 </div>
@@ -1237,10 +1264,10 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9d7f623c50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ba52f0ebc50&gt;
 </pre></div>
 </div>
-<img alt="../../_images/87b7c1826322d33dc699e4eb3d4258a4ddb45baa5c4dc22ee9840d845f91d9e3.png" src="../../_images/87b7c1826322d33dc699e4eb3d4258a4ddb45baa5c4dc22ee9840d845f91d9e3.png">
+<img alt="../../_images/90115f8598dae739d5a297d8b73ef38820b2d6cd60a56ac0b1169e98782f1f70.png" src="../../_images/90115f8598dae739d5a297d8b73ef38820b2d6cd60a56ac0b1169e98782f1f70.png">
 </div>
 </div>
 <blockquote>
@@ -1274,10 +1301,10 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9d7f61b110&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ba529c7fc50&gt;
 </pre></div>
 </div>
-<img alt="../../_images/d58ecb80264497373b92f24cdcc3faefa8ecc9396f7989f75215c9edfc33b7ae.png" src="../../_images/d58ecb80264497373b92f24cdcc3faefa8ecc9396f7989f75215c9edfc33b7ae.png">
+<img alt="../../_images/6fceda49827e5aeacfe6e5f3cc0035e179a4e10125c55908d02ec75de0cb0552.png" src="../../_images/6fceda49827e5aeacfe6e5f3cc0035e179a4e10125c55908d02ec75de0cb0552.png">
 </div>
 </div>
 <blockquote>
@@ -1383,7 +1410,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/449f8f213d3fb2ef96b3715c9f9c748706e7dcf41f119f14a787bc4cf110f27e.png" src="../../_images/449f8f213d3fb2ef96b3715c9f9c748706e7dcf41f119f14a787bc4cf110f27e.png">
+<img alt="../../_images/5df5b140345c8c758aaed42817e2bee49887a0ae3fd64b00c43f97a520543116.png" src="../../_images/5df5b140345c8c758aaed42817e2bee49887a0ae3fd64b00c43f97a520543116.png">
 </div>
 </div>
 </section>
@@ -1512,10 +1539,10 @@ Streamline length is a basic metric that provides insight into the spatial exten
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Streamline Statistics:
 Deterministic  — n=  587, mean= 50.3 mm, median= 50.5 mm, std= 23.1 mm
-Probabilistic  — n=  587, mean= 49.7 mm, median= 52.0 mm, std= 22.4 mm
+Probabilistic  — n=  587, mean= 51.1 mm, median= 53.0 mm, std= 23.9 mm
 </pre></div>
 </div>
-<img alt="../../_images/4cade8e624b4fb5bea6d895aa5438e5b45bedda369622a17a581c7830f7bc983.png" src="../../_images/4cade8e624b4fb5bea6d895aa5438e5b45bedda369622a17a581c7830f7bc983.png">
+<img alt="../../_images/95da72abdb925cc8f756cdaf4d5c3533f6304e618ed12969543003f70af19094.png" src="../../_images/95da72abdb925cc8f756cdaf4d5c3533f6304e618ed12969543003f70af19094.png">
 </div>
 </div>
 </section>
@@ -1544,29 +1571,29 @@ Probabilistic  — n=  587, mean= 49.7 mm, median= 52.0 mm, std= 22.4 mm
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T02:25:56.182682+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-05-14T06:49:46.356912+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.13
+IPython version      : 9.12.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-171-generic
+Release     : 6.8.0-106-generic
 Machine     : x86_64
 Processor   : x86_64
-CPU cores   : 32
+CPU cores   : 16
 Architecture: 64bit
 
-IPython   : 9.7.0
+IPython   : 9.12.0
 dipy      : 1.11.0
 fury      : 0.11.0
-matplotlib: 3.10.8
-nibabel   : 5.3.3
-numpy     : 2.3.5
-scipy     : 1.16.3
+matplotlib: 3.10.9
+nibabel   : 5.4.2
+numpy     : 2.4.4
+scipy     : 1.17.1
 
-Neurodesktop version: 2025-12-20
+Neurodesktop version: 2026-04-28
 </pre></div>
 </div>
 </div>

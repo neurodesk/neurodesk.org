@@ -232,6 +232,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structural_imaging/brainageR.html">Brain Age Prediction with brainageR</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/freesurfer.html">FreeSurfer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
@@ -244,6 +245,7 @@
 <li class="toctree-l3"><a class="reference internal" href="PyBIDS.html">PyBIDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="RISE_slideshow.html">RISE Slideshow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bids_conversion.html">BIDS conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="container_paths_neurodesk.html">Container Resource Paths on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Nipype on Neurodesk</a></li>
@@ -256,6 +258,15 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/MySt_neurodesk.html">Citation and Resources</a></li>
+
+
+
+
+
+
+
+
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
 </ul>
 </details></li>
@@ -731,7 +742,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0.7.19
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260322-23:48:23,177 nipype.utils WARNING:
+	 A newer version (1.11.0) of nipy/nipype is available. You are using 1.10.0
+6.0.7.19
 NIFTI_GZ
 </pre></div>
 </div>
@@ -775,7 +788,6 @@ NIFTI_GZ
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cloning:   0%|                             | 0.00/2.00 [00:00&lt;?, ? candidates/s]
-
 Enumerating: 0.00 Objects [00:00, ? Objects/s]
                                               
 Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects/s]
@@ -783,198 +795,82 @@ Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects
 Compressing:   0%|                            | 0.00/23.0 [00:00&lt;?, ? Objects/s]
                                                                                 
 Receiving:   0%|                             | 0.00/2.15k [00:00&lt;?, ? Objects/s]
-
                                                                                 
 Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas/s]
-                                                                                
+[INFO   ] scanning for unlocked files (this may take some time)                 
 [INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
-[INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
-| 		datalad siblings -d "/home/jovyan/workspace/books/examples/workflows/ds000102" enable -s s3-PRIVATE 
-<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/workspace/books/examples/workflows/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
-
+| 		datalad siblings -d "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/ds000102" enable -s s3-PRIVATE 
+<span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/Git_repositories/neurodeskedu/books/workflows/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
 Total:   0%|                                    | 0.00/136M [00:00&lt;?, ? Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
-Get sub-02/a .. 2_T1w.nii.gz:   0%|    | 33.3k/10.7M [00:00&lt;01:07, 158k Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:   1%|    | 68.2k/10.7M [00:00&lt;01:05, 162k Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:   1%|     | 155k/10.7M [00:00&lt;00:38, 277k Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:   3%|▏    | 312k/10.7M [00:00&lt;00:22, 460k Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:   6%|▎    | 643k/10.7M [00:01&lt;00:11, 859k Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  12%|▎  | 1.30M/10.7M [00:01&lt;00:05, 1.63M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  18%|▌  | 1.98M/10.7M [00:01&lt;00:04, 2.15M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  31%|▉  | 3.34M/10.7M [00:01&lt;00:01, 4.23M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  37%|█  | 3.97M/10.7M [00:01&lt;00:01, 4.54M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  50%|█▍ | 5.36M/10.7M [00:01&lt;00:00, 6.63M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  75%|██▏| 8.03M/10.7M [00:02&lt;00:00, 7.48M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  87%|██▌| 9.34M/10.7M [00:02&lt;00:00, 8.51M Bytes/s]
-
-                                                                                
-Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
-
-Total:   8%|██▏                        | 10.7M/136M [00:03&lt;00:41, 2.99M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:   5%|▏  | 1.45M/29.2M [00:00&lt;00:01, 14.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  10%|▎  | 2.97M/29.2M [00:00&lt;00:01, 14.9M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  16%|▍  | 4.58M/29.2M [00:00&lt;00:02, 10.6M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  20%|▌  | 5.95M/29.2M [00:00&lt;00:02, 11.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  30%|▉  | 8.66M/29.2M [00:00&lt;00:01, 12.2M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  36%|█  | 10.5M/29.2M [00:00&lt;00:01, 10.9M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  45%|█▎ | 13.1M/29.2M [00:01&lt;00:01, 11.2M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  51%|█▌ | 15.0M/29.2M [00:01&lt;00:01, 10.6M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  61%|█▊ | 17.7M/29.2M [00:01&lt;00:01, 11.3M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  67%|██ | 19.7M/29.2M [00:01&lt;00:00, 10.7M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  76%|██▎| 22.1M/29.2M [00:01&lt;00:00, 10.9M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  83%|██▍| 24.2M/29.2M [00:02&lt;00:00, 10.6M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  92%|██▊| 26.8M/29.2M [00:02&lt;00:00, 11.1M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  98%|██▉| 28.7M/29.2M [00:02&lt;00:00, 10.5M Bytes/s]
-
-                                                                                
-Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-
-Total:  29%|███████▉                   | 39.9M/136M [00:06&lt;00:16, 5.84M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:   5%|▏  | 1.57M/29.2M [00:00&lt;00:01, 15.7M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  11%|▎  | 3.14M/29.2M [00:00&lt;00:01, 15.2M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  24%|▋  | 6.89M/29.2M [00:00&lt;00:01, 15.0M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  32%|▉  | 9.23M/29.2M [00:00&lt;00:01, 13.2M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  39%|█▏ | 11.5M/29.2M [00:00&lt;00:01, 12.3M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  49%|█▍ | 14.3M/29.2M [00:01&lt;00:01, 12.6M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  58%|█▋ | 16.8M/29.2M [00:01&lt;00:00, 12.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  67%|██ | 19.6M/29.2M [00:01&lt;00:00, 12.7M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  75%|██▏| 21.9M/29.2M [00:01&lt;00:00, 12.1M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  84%|██▌| 24.6M/29.2M [00:01&lt;00:00, 12.3M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  94%|██▊| 27.5M/29.2M [00:02&lt;00:00, 12.8M Bytes/s]
-
-                                                                                
-Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-Total:  51%|█████████████▋             | 69.1M/136M [00:09&lt;00:09, 7.31M Bytes/s]
-
 Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  30%|▉  | 3.15M/10.6M [00:00&lt;00:00, 15.0M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  46%|█▍ | 4.92M/10.6M [00:00&lt;00:00, 11.1M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  71%|██▏| 7.51M/10.6M [00:00&lt;00:00, 15.3M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  95%|██▊| 10.0M/10.6M [00:00&lt;00:00, 11.1M Bytes/s]
-
-                                                                                
-Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-                                                                                
-
+Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.4k/10.6M [00:00&lt;00:32, 323k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   1%|     | 139k/10.6M [00:00&lt;00:20, 503k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   5%|▏   | 538k/10.6M [00:00&lt;00:05, 1.70M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  15%|▍  | 1.58M/10.6M [00:00&lt;00:02, 3.52M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  28%|▊  | 2.98M/10.6M [00:00&lt;00:01, 6.29M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  47%|█▍ | 4.95M/10.6M [00:00&lt;00:00, 10.0M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  68%|██ | 7.23M/10.6M [00:00&lt;00:00, 13.6M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  88%|██▋| 9.34M/10.6M [00:00&lt;00:00, 15.7M Bytes/s]
+Total:   8%|██                         | 10.6M/136M [00:01&lt;00:21, 5.74M Bytes/s]
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   5%|▏  | 1.29M/28.1M [00:00&lt;00:02, 12.9M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.80M/28.1M [00:00&lt;00:01, 14.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  15%|▍  | 4.29M/28.1M [00:00&lt;00:01, 14.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.14M/28.1M [00:00&lt;00:02, 10.9M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  31%|▉  | 8.66M/28.1M [00:00&lt;00:01, 11.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  38%|█▏ | 10.7M/28.1M [00:00&lt;00:01, 10.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  43%|█▎ | 12.1M/28.1M [00:01&lt;00:01, 9.09M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  52%|█▌ | 14.7M/28.1M [00:01&lt;00:01, 7.74M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  59%|█▊ | 16.5M/28.1M [00:01&lt;00:01, 7.02M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  64%|█▉ | 18.0M/28.1M [00:01&lt;00:01, 7.99M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  72%|██▏| 20.1M/28.1M [00:02&lt;00:00, 8.67M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  79%|██▎| 22.1M/28.1M [00:02&lt;00:00, 8.86M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.4M/28.1M [00:02&lt;00:00, 9.53M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  96%|██▉| 27.0M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
-
-                                                                                
+Get sub-01/f .. _bold.nii.gz:  12%|▎  | 3.25M/28.1M [00:00&lt;00:01, 16.3M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  19%|▌  | 5.33M/28.1M [00:00&lt;00:01, 18.2M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  34%|█  | 9.54M/28.1M [00:00&lt;00:00, 19.7M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  41%|█▏ | 11.6M/28.1M [00:00&lt;00:00, 19.9M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  49%|█▍ | 13.7M/28.1M [00:00&lt;00:00, 20.1M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  60%|█▊ | 17.0M/28.1M [00:00&lt;00:00, 18.4M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  70%|██ | 19.6M/28.1M [00:01&lt;00:00, 20.2M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  82%|██▍| 22.9M/28.1M [00:01&lt;00:00, 18.3M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  90%|██▋| 25.4M/28.1M [00:01&lt;00:00, 19.7M Bytes/s]
+Total:  28%|███████▋                   | 38.6M/136M [00:03&lt;00:09, 10.8M Bytes/s]
 Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-Total:  79%|██████████████████████▏     | 108M/136M [00:13&lt;00:03, 7.70M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   8%|▏  | 2.18M/28.1M [00:00&lt;00:01, 21.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  18%|▌  | 5.06M/28.1M [00:00&lt;00:02, 11.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  25%|▊  | 7.14M/28.1M [00:00&lt;00:01, 13.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  35%|█  | 9.75M/28.1M [00:00&lt;00:01, 13.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  44%|█▎ | 12.3M/28.1M [00:01&lt;00:01, 10.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  50%|█▌ | 14.1M/28.1M [00:01&lt;00:01, 12.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  59%|█▊ | 16.7M/28.1M [00:01&lt;00:00, 12.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  66%|█▉ | 18.5M/28.1M [00:01&lt;00:00, 10.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  73%|██▏| 20.6M/28.1M [00:01&lt;00:00, 10.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  81%|██▍| 22.9M/28.1M [00:01&lt;00:00, 10.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  88%|██▋| 24.8M/28.1M [00:02&lt;00:00, 10.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  92%|██▊| 25.9M/28.1M [00:02&lt;00:00, 10.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  97%|██▉| 27.4M/28.1M [00:02&lt;00:00, 11.1M Bytes/s]
-
+Get sub-01/f .. _bold.nii.gz:   5%|▏  | 1.32M/28.1M [00:00&lt;00:02, 13.2M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.17M/28.1M [00:00&lt;00:01, 16.3M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  25%|▊  | 7.15M/28.1M [00:00&lt;00:01, 18.5M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  39%|█▏ | 11.1M/28.1M [00:00&lt;00:00, 19.0M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  51%|█▌ | 14.3M/28.1M [00:00&lt;00:00, 18.6M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  60%|█▊ | 16.9M/28.1M [00:00&lt;00:00, 19.4M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  75%|██▎| 21.2M/28.1M [00:01&lt;00:00, 20.2M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  87%|██▌| 24.6M/28.1M [00:01&lt;00:00, 19.7M Bytes/s]
+Get sub-01/f .. _bold.nii.gz:  97%|██▉| 27.3M/28.1M [00:01&lt;00:00, 20.3M Bytes/s]
+Total:  49%|█████████████▎             | 66.8M/136M [00:05&lt;00:05, 12.5M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  14%|▍  | 1.54M/10.7M [00:00&lt;00:00, 14.3M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  39%|█▏ | 4.16M/10.7M [00:00&lt;00:00, 13.4M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  58%|█▋ | 6.18M/10.7M [00:00&lt;00:00, 15.7M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  75%|██▎| 8.08M/10.7M [00:00&lt;00:00, 16.8M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  93%|██▊| 9.95M/10.7M [00:00&lt;00:00, 17.3M Bytes/s]
                                                                                 
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-                                                                                
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/anat/sub-02_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/func/sub-02_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/func/sub-02_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
+Get sub-02/f .. _bold.nii.gz:   6%|▏  | 1.84M/29.2M [00:00&lt;00:01, 18.4M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  13%|▍  | 3.75M/29.2M [00:00&lt;00:01, 18.7M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  26%|▊  | 7.60M/29.2M [00:00&lt;00:01, 19.0M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  33%|▉  | 9.59M/29.2M [00:00&lt;00:01, 19.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  46%|█▍ | 13.5M/29.2M [00:00&lt;00:00, 19.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  60%|█▊ | 17.5M/29.2M [00:00&lt;00:00, 19.5M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  72%|██▏| 21.1M/29.2M [00:01&lt;00:00, 19.0M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  79%|██▍| 23.2M/29.2M [00:01&lt;00:00, 19.4M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  92%|██▊| 26.8M/29.2M [00:01&lt;00:00, 18.9M Bytes/s]
+Total:  79%|█████████████████████▉      | 107M/136M [00:08&lt;00:02, 13.0M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
+Get sub-02/f .. _bold.nii.gz:   7%|▏  | 2.15M/29.2M [00:00&lt;00:01, 21.5M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  20%|▌  | 5.85M/29.2M [00:00&lt;00:01, 19.1M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  35%|█  | 10.1M/29.2M [00:00&lt;00:00, 20.2M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  48%|█▍ | 14.1M/29.2M [00:00&lt;00:00, 20.1M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  56%|█▋ | 16.4M/29.2M [00:00&lt;00:00, 20.7M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  69%|██ | 20.2M/29.2M [00:01&lt;00:00, 20.1M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  77%|██▎| 22.3M/29.2M [00:01&lt;00:00, 20.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  85%|██▌| 24.7M/29.2M [00:01&lt;00:00, 21.1M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  92%|██▊| 26.9M/29.2M [00:01&lt;00:00, 21.2M Bytes/s]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/anat/sub-01_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/anat/sub-02_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/func/sub-02_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02/func/sub-02_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 action summary:
   get (ok: 8)
 
@@ -1135,7 +1031,7 @@ Inputs::
                 mutually_exclusive: functional, reduce_bias, robust, padding,
                   remove_eyes, surfaces, t2_guided
         output_type: ('NIFTI' or 'NIFTI_PAIR' or 'NIFTI_GZ' or
-                  'NIFTI_PAIR_GZ' or 'GIFTI')
+                  'NIFTI_PAIR_GZ')
                 FSL output type
         args: (a string)
                 Additional parameters to the command
@@ -1205,7 +1101,7 @@ None
 inskull_mesh_file = &lt;undefined&gt;
 mask_file = &lt;undefined&gt;
 meshfile = &lt;undefined&gt;
-out_file = /home/jovyan/workspace/books/examples/workflows/output/T1w_nipype_bet.nii.gz
+out_file = /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/T1w_nipype_bet.nii.gz
 outline_file = &lt;undefined&gt;
 outskin_mask_file = &lt;undefined&gt;
 outskin_mesh_file = &lt;undefined&gt;
@@ -1310,12 +1206,12 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:32,463 nipype.workflow INFO:
-	 [Node] Setting-up "bet_node" in "/tmp/tmpybstfj53/bet_node".
-260409-04:10:32,469 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:21,111 nipype.workflow INFO:
+	 [Node] Setting-up "bet_node" in "/tmp/tmp1dkhodhh/bet_node".
+251031-00:46:21,116 nipype.workflow INFO:
 	 [Node] Executing "bet_node" &lt;nipype.interfaces.fsl.preprocess.BET&gt;
-260409-04:10:36,898 nipype.workflow INFO:
-	 [Node] Finished "bet_node", elapsed time 4.427077s.
+251031-00:46:25,77 nipype.workflow INFO:
+	 [Node] Finished "bet_node", elapsed time 3.959091s.
 </pre></div>
 </div>
 </div>
@@ -1330,9 +1226,9 @@ skull_mask_file = &lt;undefined&gt;
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>inskull_mask_file = &lt;undefined&gt;
 inskull_mesh_file = &lt;undefined&gt;
-mask_file = /home/jovyan/workspace/books/examples/workflows/output/T1w_nipype_bet_mask.nii.gz
+mask_file = /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/T1w_nipype_bet_mask.nii.gz
 meshfile = &lt;undefined&gt;
-out_file = /home/jovyan/workspace/books/examples/workflows/output/T1w_nipype_bet.nii.gz
+out_file = /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/T1w_nipype_bet.nii.gz
 outline_file = &lt;undefined&gt;
 outskin_mask_file = &lt;undefined&gt;
 outskin_mesh_file = &lt;undefined&gt;
@@ -1357,20 +1253,8 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_560/101719549.py:2: UserWarning: Some of the specified cut_coords seem to be out of the image bounds:
-	x: [-172.83, 2.17]
-	y: [-128.95, 126.05]
-	z: [-127.50, 127.50]
-  plotting.plot_anat(input_file, title='BET input', cut_coords=(10,10,10),
-/tmp/ipykernel_560/101719549.py:6: UserWarning: Some of the specified cut_coords seem to be out of the image bounds:
-	x: [-172.83, 2.17]
-	y: [-128.95, 126.05]
-	z: [-127.50, 127.50]
-  plotting.plot_anat(res.outputs.out_file, title='BET output', cut_coords=(10,10,10),
-</pre></div>
-</div>
-<img alt="../../_images/3a7f43966d9fb685be349c294d1e932e01e4527433629bf6080dd3f31baa10b8.png" src="../../_images/3a7f43966d9fb685be349c294d1e932e01e4527433629bf6080dd3f31baa10b8.png">
-<img alt="../../_images/92177ba8824306fb8908f4d35c4ec2457c19184959adb0c61678c6e85651de08.png" src="../../_images/92177ba8824306fb8908f4d35c4ec2457c19184959adb0c61678c6e85651de08.png">
+<img alt="../../_images/117c82f9a26472b87fa378819f45771476cf42663f6e1fb93acbdfe834224a9a.png" src="../../_images/117c82f9a26472b87fa378819f45771476cf42663f6e1fb93acbdfe834224a9a.png">
+<img alt="../../_images/3596bef69bf77f6ae3d830079c8c14bc204022eb63ef047f4c4797ed342b6c85.png" src="../../_images/3596bef69bf77f6ae3d830079c8c14bc204022eb63ef047f4c4797ed342b6c85.png">
 </div>
 </div>
 </section>
@@ -1478,11 +1362,11 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:39,660 nipype.workflow INFO:
-	 Generated workflow graph: /home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/workflow_graph.png (graph2use=hierarchical, simple_form=True).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:30,538 nipype.workflow INFO:
+	 Generated workflow graph: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/workflow_graph.png (graph2use=hierarchical, simple_form=True).
 </pre></div>
 </div>
-<img alt="../../_images/7a20f5ebb5252447c59c4470dd60b989e11cbb7f368d4711a6b0406978fefeb7.png" src="../../_images/7a20f5ebb5252447c59c4470dd60b989e11cbb7f368d4711a6b0406978fefeb7.png">
+<img alt="../../_images/32fcfb2329fe3d59a6dab0a41afe4f4a865b0b313875c6f4ad5ca857ac36427c.png" src="../../_images/32fcfb2329fe3d59a6dab0a41afe4f4a865b0b313875c6f4ad5ca857ac36427c.png">
 </div>
 </div>
 <div class="cell docutils container">
@@ -1495,11 +1379,11 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:40,342 nipype.workflow INFO:
-	 Generated workflow graph: /home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/graph.png (graph2use=flat, simple_form=True).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:30,929 nipype.workflow INFO:
+	 Generated workflow graph: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/graph.png (graph2use=flat, simple_form=True).
 </pre></div>
 </div>
-<img alt="../../_images/85bc249a8a7741b7d8a88b4b4647c55df616a6a98ef38c70d18b7198398a366c.png" src="../../_images/85bc249a8a7741b7d8a88b4b4647c55df616a6a98ef38c70d18b7198398a366c.png">
+<img alt="../../_images/633f4e5b88aaaf63d098dc5fa40c770829b503750804aa1f285e463f6566e4f4.png" src="../../_images/633f4e5b88aaaf63d098dc5fa40c770829b503750804aa1f285e463f6566e4f4.png">
 </div>
 </div>
 <div class="cell tag_scroll-output docutils container">
@@ -1510,31 +1394,31 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:40,369 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:30,941 nipype.workflow INFO:
 	 Workflow smoothflow settings: ['check', 'execution', 'logging', 'monitoring']
-260409-04:10:40,376 nipype.workflow INFO:
+251031-00:46:30,945 nipype.workflow INFO:
 	 Running serially.
-260409-04:10:40,377 nipype.workflow INFO:
-	 [Node] Setting-up "smoothflow.skullstrip" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/skullstrip".
-260409-04:10:40,381 nipype.workflow INFO:
+251031-00:46:30,946 nipype.workflow INFO:
+	 [Node] Setting-up "smoothflow.skullstrip" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/skullstrip".
+251031-00:46:30,949 nipype.workflow INFO:
 	 [Node] Executing "skullstrip" &lt;nipype.interfaces.fsl.preprocess.BET&gt;
-260409-04:10:44,659 nipype.workflow INFO:
-	 [Node] Finished "skullstrip", elapsed time 4.275586s.
-260409-04:10:44,664 nipype.workflow INFO:
-	 [Node] Setting-up "smoothflow.smooth" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/smooth".
-260409-04:10:44,668 nipype.workflow INFO:
+251031-00:46:34,891 nipype.workflow INFO:
+	 [Node] Finished "skullstrip", elapsed time 3.9415459999999998s.
+251031-00:46:34,895 nipype.workflow INFO:
+	 [Node] Setting-up "smoothflow.smooth" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/smooth".
+251031-00:46:34,897 nipype.workflow INFO:
 	 [Node] Executing "smooth" &lt;nipype.interfaces.fsl.maths.IsotropicSmooth&gt;
-260409-04:10:53,94 nipype.workflow INFO:
-	 [Node] Finished "smooth", elapsed time 8.424521s.
-260409-04:10:53,98 nipype.workflow INFO:
-	 [Node] Setting-up "smoothflow.mask" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/smoothflow/mask".
-260409-04:10:53,104 nipype.workflow INFO:
+251031-00:46:42,635 nipype.workflow INFO:
+	 [Node] Finished "smooth", elapsed time 7.737129s.
+251031-00:46:42,649 nipype.workflow INFO:
+	 [Node] Setting-up "smoothflow.mask" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/smoothflow/mask".
+251031-00:46:42,659 nipype.workflow INFO:
 	 [Node] Executing "mask" &lt;nipype.interfaces.fsl.maths.ApplyMask&gt;
-260409-04:10:54,709 nipype.workflow INFO:
-	 [Node] Finished "mask", elapsed time 1.603172s.
+251031-00:46:44,109 nipype.workflow INFO:
+	 [Node] Finished "mask", elapsed time 1.448766s.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f97802d1250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f0e75030c10&gt;
 </pre></div>
 </div>
 </div>
@@ -1564,7 +1448,7 @@ skull_mask_file = &lt;undefined&gt;
 ├── workflow_graph.dot
 └── workflow_graph.png
 
-4 directories, 12 files
+3 directories, 12 files
 </pre></div>
 </div>
 </div>
@@ -1601,7 +1485,7 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/82e01163d68d37ed12f0f744b48e6f94f37603490d5c039c1e5e5082aa6b67b1.png" src="../../_images/82e01163d68d37ed12f0f744b48e6f94f37603490d5c039c1e5e5082aa6b67b1.png">
+<img alt="../../_images/e23b762a19fa1ecd2413f1a7914a91c3d8e8cf1ec45dc213f5f61c520406dd47.png" src="../../_images/e23b762a19fa1ecd2413f1a7914a91c3d8e8cf1ec45dc213f5f61c520406dd47.png">
 </div>
 </div>
 </section>
@@ -1907,7 +1791,7 @@ skull_mask_file = &lt;undefined&gt;
 │&nbsp;&nbsp;     └── sub-26_task-flanker_run-2_events.tsv
 └── task-flanker_bold.json
 
-81 directories, 136 files
+80 directories, 136 files
 </pre></div>
 </div>
 </div>
@@ -2003,25 +1887,25 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:56,440 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:47,638 nipype.workflow INFO:
 	 Workflow data_input settings: ['check', 'execution', 'logging', 'monitoring']
-260409-04:10:56,451 nipype.workflow INFO:
+251031-00:46:47,645 nipype.workflow INFO:
 	 Running serially.
-260409-04:10:56,452 nipype.workflow INFO:
-	 [Node] Setting-up "data_input.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/data_input/_subject_id_01/dg".
-260409-04:10:56,458 nipype.workflow INFO:
+251031-00:46:47,646 nipype.workflow INFO:
+	 [Node] Setting-up "data_input.dg" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/data_input/_subject_id_01/dg".
+251031-00:46:47,656 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260409-04:10:56,462 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.000878s.
-260409-04:10:56,465 nipype.workflow INFO:
-	 [Node] Setting-up "data_input.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/data_input/_subject_id_02/dg".
-260409-04:10:56,469 nipype.workflow INFO:
+251031-00:46:47,658 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.000579s.
+251031-00:46:47,661 nipype.workflow INFO:
+	 [Node] Setting-up "data_input.dg" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/data_input/_subject_id_02/dg".
+251031-00:46:47,664 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260409-04:10:56,471 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.00048s.
+251031-00:46:47,666 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.000476s.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f978026bb50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f0e75148250&gt;
 </pre></div>
 </div>
 </div>
@@ -2064,7 +1948,7 @@ skull_mask_file = &lt;undefined&gt;
     ├── result_smooth.pklz
     └── <span class=" -Color -Color-Bold -Color-Bold-Red">sub-01_T1w_smooth.nii.gz</span>
 
-7 directories, 18 files
+6 directories, 18 files
 </pre></div>
 </div>
 </div>
@@ -2182,11 +2066,11 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:56,929 nipype.workflow INFO:
-	 Generated workflow graph: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/graph.png (graph2use=colored, simple_form=True).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:48,854 nipype.workflow INFO:
+	 Generated workflow graph: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/graph.png (graph2use=colored, simple_form=True).
 </pre></div>
 </div>
-<img alt="../../_images/8a6e1b8d01de16e0047db24c6aa54f03f9b729ad848cbb104c9139a1b7e777bc.png" src="../../_images/8a6e1b8d01de16e0047db24c6aa54f03f9b729ad848cbb104c9139a1b7e777bc.png">
+<img alt="../../_images/6684b0d309ede89a63ecb4e1a3b6c1a7349f9b5fbbf5f521832c1e69ac05369a.png" src="../../_images/6684b0d309ede89a63ecb4e1a3b6c1a7349f9b5fbbf5f521832c1e69ac05369a.png">
 </div>
 </div>
 <div class="cell tag_scroll-output docutils container">
@@ -2197,63 +2081,63 @@ skull_mask_file = &lt;undefined&gt;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:10:56,949 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:46:48,866 nipype.workflow INFO:
 	 Workflow preproc settings: ['check', 'execution', 'logging', 'monitoring']
-260409-04:10:56,955 nipype.workflow INFO:
+251031-00:46:48,870 nipype.workflow INFO:
 	 Running in parallel.
-260409-04:10:56,959 nipype.workflow INFO:
-	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260409-04:10:57,624 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/dg".
-260409-04:10:57,636 nipype.workflow INFO:
+251031-00:46:48,880 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
+251031-00:46:50,51 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.dg" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/dg".
+251031-00:46:50,62 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260409-04:10:57,641 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.000746s.
-260409-04:10:58,960 nipype.workflow INFO:
+251031-00:46:50,67 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.001017s.
+251031-00:46:50,876 nipype.workflow INFO:
 	 [Job 0] Completed (preproc.dg).
-260409-04:10:58,966 nipype.workflow INFO:
-	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260409-04:10:59,234 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.mcflirt" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/mcflirt".
-260409-04:10:59,250 nipype.workflow INFO:
+251031-00:46:50,880 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
+251031-00:46:51,113 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.mcflirt" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/mcflirt".
+251031-00:46:51,123 nipype.workflow INFO:
 	 [Node] Executing "mcflirt" &lt;nipype.interfaces.fsl.preprocess.MCFLIRT&gt;
-260409-04:11:00,961 nipype.workflow INFO:
-	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 113.01/113.21, Free processors: 31/32, Free GPU slot:0/0.
+251031-00:46:52,875 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 219.28/219.48, Free processors: 31/32.
                      Currently running:
                        * preproc.mcflirt
-260409-04:11:26,344 nipype.workflow INFO:
-	 [Node] Finished "mcflirt", elapsed time 27.087849s.
-260409-04:11:26,963 nipype.workflow INFO:
+251031-00:47:18,471 nipype.workflow INFO:
+	 [Node] Finished "mcflirt", elapsed time 27.344782s.
+251031-00:47:18,876 nipype.workflow INFO:
 	 [Job 1] Completed (preproc.mcflirt).
-260409-04:11:26,966 nipype.workflow INFO:
-	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260409-04:11:27,127 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.smooth" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/smooth".
-260409-04:11:27,140 nipype.workflow INFO:
+251031-00:47:18,879 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
+251031-00:47:19,18 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.smooth" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/smooth".
+251031-00:47:19,30 nipype.workflow INFO:
 	 [Node] Executing "smooth" &lt;nipype.interfaces.fsl.maths.IsotropicSmooth&gt;
-260409-04:11:28,965 nipype.workflow INFO:
-	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 113.01/113.21, Free processors: 31/32, Free GPU slot:0/0.
+251031-00:47:20,877 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 219.28/219.48, Free processors: 31/32.
                      Currently running:
                        * preproc.smooth
-260409-04:11:37,693 nipype.workflow INFO:
-	 [Node] Finished "smooth", elapsed time 10.547782s.
-260409-04:11:38,967 nipype.workflow INFO:
+251031-00:47:29,173 nipype.workflow INFO:
+	 [Node] Finished "smooth", elapsed time 10.140791s.
+251031-00:47:30,878 nipype.workflow INFO:
 	 [Job 2] Completed (preproc.smooth).
-260409-04:11:38,969 nipype.workflow INFO:
-	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
-260409-04:11:39,148 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.sinker" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/sinker".
-260409-04:11:39,171 nipype.workflow INFO:
+251031-00:47:30,881 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
+251031-00:47:31,15 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.sinker" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/sinker".
+251031-00:47:31,30 nipype.workflow INFO:
 	 [Node] Executing "sinker" &lt;nipype.interfaces.io.DataSink&gt;
-260409-04:11:39,192 nipype.workflow INFO:
-	 [Node] Finished "sinker", elapsed time 0.001775s.
-260409-04:11:40,967 nipype.workflow INFO:
+251031-00:47:31,41 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.007466s.
+251031-00:47:32,878 nipype.workflow INFO:
 	 [Job 3] Completed (preproc.sinker).
-260409-04:11:40,969 nipype.workflow INFO:
-	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 113.21/113.21, Free processors: 32/32, Free GPU slot:0/0.
+251031-00:47:32,881 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 219.48/219.48, Free processors: 32/32.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f97802d5d60&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f0e7504da50&gt;
 </pre></div>
 </div>
 </div>
@@ -2271,7 +2155,7 @@ skull_mask_file = &lt;undefined&gt;
     ├── sub-01_task-flanker_run-1_bold_mcf.nii.gz.par
     └── <span class=" -Color -Color-Bold -Color-Bold-Red">sub-01_task-flanker_run-1_bold_mcf_smooth.nii.gz</span>
 
-2 directories, 3 files
+1 directory, 3 files
 </pre></div>
 </div>
 </div>
@@ -2295,45 +2179,45 @@ For example, to get rid of the string 'bold' and to adapt the file ending of the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-04:11:43,228 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>251031-00:47:35,922 nipype.workflow INFO:
 	 Workflow preproc settings: ['check', 'execution', 'logging', 'monitoring']
-260409-04:11:43,237 nipype.workflow INFO:
+251031-00:47:35,928 nipype.workflow INFO:
 	 Running serially.
-260409-04:11:43,240 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.dg" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/dg".
-260409-04:11:43,246 nipype.workflow INFO:
+251031-00:47:35,929 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.dg" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/dg".
+251031-00:47:35,932 nipype.workflow INFO:
 	 [Node] Executing "dg" &lt;nipype.interfaces.io.DataGrabber&gt;
-260409-04:11:43,250 nipype.workflow INFO:
-	 [Node] Finished "dg", elapsed time 0.000534s.
-260409-04:11:43,254 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.mcflirt" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/mcflirt".
-260409-04:11:43,259 nipype.workflow INFO:
+251031-00:47:35,933 nipype.workflow INFO:
+	 [Node] Finished "dg", elapsed time 0.000376s.
+251031-00:47:35,936 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.mcflirt" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/mcflirt".
+251031-00:47:35,938 nipype.workflow INFO:
 	 [Node] Cached "preproc.mcflirt" - collecting precomputed outputs
-260409-04:11:43,261 nipype.workflow INFO:
+251031-00:47:35,938 nipype.workflow INFO:
 	 [Node] "preproc.mcflirt" found cached.
-260409-04:11:43,263 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.smooth" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/smooth".
-260409-04:11:43,267 nipype.workflow INFO:
+251031-00:47:35,939 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.smooth" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/smooth".
+251031-00:47:35,941 nipype.workflow INFO:
 	 [Node] Cached "preproc.smooth" - collecting precomputed outputs
-260409-04:11:43,269 nipype.workflow INFO:
+251031-00:47:35,942 nipype.workflow INFO:
 	 [Node] "preproc.smooth" found cached.
-260409-04:11:43,271 nipype.workflow INFO:
-	 [Node] Setting-up "preproc.sinker" in "/home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/sinker".
-260409-04:11:43,275 nipype.workflow INFO:
+251031-00:47:35,943 nipype.workflow INFO:
+	 [Node] Setting-up "preproc.sinker" in "/home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/sinker".
+251031-00:47:35,945 nipype.workflow INFO:
 	 [Node] Outdated cache found for "preproc.sinker".
-260409-04:11:43,280 nipype.workflow INFO:
+251031-00:47:35,948 nipype.workflow INFO:
 	 [Node] Executing "sinker" &lt;nipype.interfaces.io.DataSink&gt;
-260409-04:11:43,283 nipype.interface INFO:
-	 sub: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf_smooth.nii.gz -&gt; /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf_smooth.nii.gz
-260409-04:11:43,285 nipype.interface INFO:
-	 sub: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz -&gt; /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.nii.gz
-260409-04:11:43,286 nipype.interface INFO:
-	 sub: /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz.par -&gt; /home/jovyan/workspace/books/examples/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.par
-260409-04:11:43,287 nipype.workflow INFO:
-	 [Node] Finished "sinker", elapsed time 0.004373s.
+251031-00:47:35,949 nipype.interface INFO:
+	 sub: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf_smooth.nii.gz -&gt; /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf_smooth.nii.gz
+251031-00:47:35,950 nipype.interface INFO:
+	 sub: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz -&gt; /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.nii.gz
+251031-00:47:35,951 nipype.interface INFO:
+	 sub: /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_bold_mcf.nii.gz.par -&gt; /home/jovyan/Git_repositories/neurodeskedu/books/workflows/output/working_dir/preproc/results/sub-01/sub-01_task-flanker_run-1_mcf.par
+251031-00:47:35,952 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.003552s.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f97802d5040&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f0e7514a310&gt;
 </pre></div>
 </div>
 </div>
@@ -2354,7 +2238,7 @@ For example, to get rid of the string 'bold' and to adapt the file ending of the
     ├── sub-01_task-flanker_run-1_mcf.par
     └── <span class=" -Color -Color-Bold -Color-Bold-Red">sub-01_task-flanker_run-1_mcf_smooth.nii.gz</span>
 
-2 directories, 6 files
+1 directory, 6 files
 </pre></div>
 </div>
 </div>
@@ -2475,7 +2359,7 @@ For example, to get rid of the string 'bold' and to adapt the file ending of the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T04:11:43.472231+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-03-22T23:48:50.837949+00:00
 
 Python implementation: CPython
 Python version       : 3.13.9
@@ -2483,7 +2367,7 @@ IPython version      : 9.7.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-171-generic
+Release     : 5.15.0-164-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 32
@@ -2494,7 +2378,7 @@ matplotlib: 3.10.8
 nibabel   : 5.3.3
 nilearn   : 0.13.1
 nipype    : 1.10.0
-numpy     : 2.3.5
+numpy     : 1.26.4
 
 Neurodesktop version: 2025-12-20
 </pre></div>

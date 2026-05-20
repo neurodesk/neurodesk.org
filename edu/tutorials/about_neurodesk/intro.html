@@ -74,13 +74,15 @@
                 gtag('config', 'G-4Z9774J59Y');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/about_neurodesk/intro';</script>
     <script src="../../_static/review-badge.js?v=e2204dae"></script>
     <link rel="canonical" href="https://neurodesk.org/edu/tutorials/about_neurodesk/intro.html" />
     <link rel="icon" href="../../_static/neurodesk_logo.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Accessing Tools in Neurodesk" href="accessing_neurodesk_tools.html" />
+    <link rel="next" title="Citation and Resources" href="MySt_neurodesk.html" />
     <link rel="prev" title="Tutorials" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -246,6 +248,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/structural_imaging/SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/structural_imaging/brainageR.html">Brain Age Prediction with brainageR</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/structural_imaging/freesurfer.html">FreeSurfer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
@@ -258,6 +261,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../examples/workflows/PyBIDS.html">PyBIDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/workflows/RISE_slideshow.html">RISE Slideshow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/workflows/bids_conversion.html">BIDS conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../examples/workflows/container_paths_neurodesk.html">Container Resource Paths on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/workflows/ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/workflows/nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../examples/workflows/nipype_full.html">Nipype on Neurodesk</a></li>
@@ -270,6 +274,15 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">About Neurodesk</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="MySt_neurodesk.html">Citation and Resources</a></li>
+
+
+
+
+
+
+
+
 <li class="toctree-l3"><a class="reference internal" href="accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
 </ul>
 </details></li>
@@ -480,6 +493,15 @@
 <p>Tutorial pages related to Neurodesk workflows and tool access.</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html">Citation and Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#introduction">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#admonitions">2. Admonitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#tables-figures-and-code-blocks">3. Tables, figures, and code blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#math-and-equations">4. Math and equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#cross-references">5. Cross-references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#tabs-cards-and-grids">6. Tabs, cards, and grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#reference-myst-extensions-enabled-in-this-book">7. Reference: MyST extensions enabled in this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MySt_neurodesk.html#where-to-go-from-here">Where to go from here</a></li>
 <li class="toctree-l1"><a class="reference internal" href="accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
 </ul>
 </div>
@@ -525,11 +547,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="accessing_neurodesk_tools.html"
+       href="MySt_neurodesk.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Accessing Tools in Neurodesk</p>
+        <p class="prev-next-title">Citation and Resources</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

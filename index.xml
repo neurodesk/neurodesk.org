@@ -1685,7 +1685,7 @@ docker&lt;/p>
 
 
 &lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -X GET https://neurocontainers.s3.us-east-2.amazonaws.com/&lt;span style="color:#953800">$container&lt;/span>.simg -O&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -X GET https://neurocontainers.neurodesk.workers.dev/&lt;span style="color:#953800">$container&lt;/span>.simg -O&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;h2 id="singularity-containers-and-gpus">Singularity Containers and GPUs&lt;/h2>
 &lt;p>Some of our containers contain GPU-accelerated applications. Here is an example that tests the GPU accelerated program eddy in FSL:&lt;/p></description></item><item><title>Windows 11 and Windows Subsystem for Linux</title><link>https://neurodesk.org/getting-started/neurocontainers/windows11-wsl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/windows11-wsl/</guid><description>&lt;h2 id="1-install-wsl">1. Install WSL&lt;/h2>
 &lt;p>Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/windows/wsl/install&lt;/a>&lt;/p>

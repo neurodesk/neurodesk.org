@@ -74,6 +74,8 @@
                 gtag('config', 'G-4Z9774J59Y');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/structural_imaging/intro';</script>
     <script src="../../_static/review-badge.js?v=e2204dae"></script>
     <link rel="canonical" href="https://neurodesk.org/edu/examples/structural_imaging/intro.html" />
@@ -246,6 +248,7 @@
 <li class="toctree-l3"><a class="reference internal" href="FSL_course_bet.html">FSL course - BET</a></li>
 <li class="toctree-l3"><a class="reference internal" href="SYNcro.html">SYNcro</a></li>
 <li class="toctree-l3"><a class="reference internal" href="brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brainageR.html">Brain Age Prediction with brainageR</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 <li class="toctree-l3"><a class="reference internal" href="freesurfer.html">FreeSurfer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sct_toolbox.html">SCT Toolbox</a></li>
@@ -258,6 +261,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../workflows/PyBIDS.html">PyBIDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/RISE_slideshow.html">RISE Slideshow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/bids_conversion.html">BIDS conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../workflows/container_paths_neurodesk.html">Container Resource Paths on Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../workflows/nipype_full.html">Nipype on Neurodesk</a></li>
@@ -270,6 +274,15 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/MySt_neurodesk.html">Citation and Resources</a></li>
+
+
+
+
+
+
+
+
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
 </ul>
 </details></li>
@@ -483,6 +496,7 @@
 <li class="toctree-l1"><a class="reference internal" href="FSL_course_bet.html">FSL course - BET</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SYNcro.html">SYNcro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="brainageR.html">Brain Age Prediction with brainageR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
 <li class="toctree-l1"><a class="reference internal" href="freesurfer.html">FreeSurfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sct_toolbox.html">SCT Toolbox</a></li>
