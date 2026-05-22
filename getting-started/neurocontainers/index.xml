@@ -1,157 +1,157 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurocontainers on Neurodesk</title><link>https://neurodesk.org/getting-started/neurocontainers/</link><description>Recent content in Neurocontainers on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/neurocontainers/index.xml" rel="self" type="application/rss+xml"/><item><title>CVMFS</title><link>https://neurodesk.org/getting-started/neurocontainers/cvmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/cvmfs/</guid><description>&lt;h2 id="install-the-cernvm-file-system-cvmfs">Install the CernVM File System (CVMFS)&lt;/h2>
-&lt;p>To begin, install CVMFS. Follow the official instructions here: &lt;a href="https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software" target="_blank" rel="noopener">https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software&lt;/a>&lt;/p>
-&lt;p>An example installation for Ubuntu in Windows Subsystem for Linux (WSL) would look like this:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurocontainers on Neurodesk</title><link>https://neurodesk.org/getting-started/neurocontainers/</link><description>Recent content in Neurocontainers on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/neurocontainers/index.xml" rel="self" type="application/rss+xml"/><item><title>CVMFS</title><link>https://neurodesk.org/getting-started/neurocontainers/cvmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/cvmfs/</guid><description>&lt;h2 id="install-the-cernvm-file-system-cvmfs"&gt;Install the CernVM File System (CVMFS)&lt;/h2&gt;
+&lt;p&gt;To begin, install CVMFS. Follow the official instructions here: &lt;a href="https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software" target="_blank" rel="noopener"&gt;https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#getting-the-software&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;An example installation for Ubuntu in Windows Subsystem for Linux (WSL) would look like this:&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt-get install lsb-release
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo dpkg -i cvmfs-release-latest_all.deb
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -f cvmfs-release-latest_all.deb
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get update
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install build-essential
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt-get install cvmfs&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>Ubuntu 24.04 might have an issue with this, so try installing dependies manually:&lt;/p>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt-get install lsb-release
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo dpkg -i cvmfs-release-latest_all.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -f cvmfs-release-latest_all.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt-get install build-essential
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt-get install cvmfs&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Ubuntu 24.04 might have an issue with this, so try installing dependies manually:&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>sudo apt install libattr1=1:2.5.2-1build1 libuuid1=2.39.3-9ubuntu6&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h2 id="configure-cvmfs">Configure CVMFS&lt;/h2>
-&lt;p>Once installed create the keys and configure the servers used:&lt;/p></description></item><item><title>DataLad</title><link>https://neurodesk.org/getting-started/neurocontainers/datalad/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/datalad/</guid><description>&lt;h1 id="using-neurodesk-containers-with-datalad">Using Neurodesk Containers with DataLad&lt;/h1>
-&lt;p>This page explains how to use &lt;a href="https://www.datalad.org/" target="_blank" rel="noopener">DataLad&lt;/a> and the &lt;a href="https://github.com/ReproNim/containers" target="_blank" rel="noopener">ReproNim containers&lt;/a> with Neurodesk tools.&lt;/p>
-&lt;h2 id="install-datalad-datalad-container-and-the-repronim-containers-repository">Install DataLad, datalad-container, and the ReproNim containers repository&lt;/h2>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install libattr1=1:2.5.2-1build1 libuuid1=2.39.3-9ubuntu6&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="configure-cvmfs"&gt;Configure CVMFS&lt;/h2&gt;
+&lt;p&gt;Once installed create the keys and configure the servers used:&lt;/p&gt;</description></item><item><title>DataLad</title><link>https://neurodesk.org/getting-started/neurocontainers/datalad/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/datalad/</guid><description>&lt;h1 id="using-neurodesk-containers-with-datalad"&gt;Using Neurodesk Containers with DataLad&lt;/h1&gt;
+&lt;p&gt;This page explains how to use &lt;a href="https://www.datalad.org/" target="_blank" rel="noopener"&gt;DataLad&lt;/a&gt; and the &lt;a href="https://github.com/ReproNim/containers" target="_blank" rel="noopener"&gt;ReproNim containers&lt;/a&gt; with Neurodesk tools.&lt;/p&gt;
+&lt;h2 id="install-datalad-datalad-container-and-the-repronim-containers-repository"&gt;Install DataLad, datalad-container, and the ReproNim containers repository&lt;/h2&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>conda install datalad
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pip install datalad_container
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>datalad install https://github.com/ReproNim/containers.git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> containers&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h2 id="list-all-default-available-containers">List all default available containers&lt;/h2>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;conda install datalad
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pip install datalad_container
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;datalad install https://github.com/ReproNim/containers.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;cd&lt;/span&gt; containers&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="list-all-default-available-containers"&gt;List all default available containers&lt;/h2&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>datalad containers-list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h2 id="download-and-run-the-latest-container-version">Download and run the latest container version&lt;/h2>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;datalad containers-list&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="download-and-run-the-latest-container-version"&gt;Download and run the latest container version&lt;/h2&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>datalad containers-run -n neurodesk-romeo&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h2 id="change-version-of-container">Change version of container&lt;/h2>
-&lt;p>You can change which version of a container is used in two ways:&lt;/p></description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p>Our containers are automatically built in &lt;a href="https://github.com/neurodesk/neurocontainers/" target="_blank" rel="noopener">https://github.com/neurodesk/neurocontainers/&lt;/a> and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener">dockerhub&lt;/a> and on &lt;a href="https://github.com/neurodesk/neurocontainers/packages" target="_blank" rel="noopener">github&lt;/a>&lt;/p>
-&lt;h2 id="pull-docker-containers">Pull Docker containers&lt;/h2>
-&lt;p>e.g. for a julia container
-docker&lt;/p>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;datalad containers-run -n neurodesk-romeo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="change-version-of-container"&gt;Change version of container&lt;/h2&gt;
+&lt;p&gt;You can change which version of a container is used in two ways:&lt;/p&gt;</description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p&gt;Our containers are automatically built in &lt;a href="https://github.com/neurodesk/neurocontainers/" target="_blank" rel="noopener"&gt;https://github.com/neurodesk/neurocontainers/&lt;/a&gt; and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener"&gt;dockerhub&lt;/a&gt; and on &lt;a href="https://github.com/neurodesk/neurocontainers/packages" target="_blank" rel="noopener"&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="pull-docker-containers"&gt;Pull Docker containers&lt;/h2&gt;
+&lt;p&gt;e.g. for a julia container
+docker&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker pull vnmd/julia_1.6.1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>You an also build singularity images from dockerhub&lt;/p>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker pull vnmd/julia_1.6.1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You an also build singularity images from dockerhub&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>Replace &lt;code>julia_1.6.1&lt;/code> with your selected application. You can find the available containers here: &lt;a href="https://neurodesk.org/applications/" target="_blank" rel="noopener">https://neurodesk.org/applications/&lt;/a>&lt;/p></description></item><item><title>OpenRecon</title><link>https://neurodesk.org/getting-started/neurocontainers/openrecon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/openrecon/</guid><description>&lt;div>
- &lt;nav id="TableOfContents">
- &lt;ul>
- &lt;li>&lt;a href="#building-an-openrecon-container">Building an OpenRecon Container&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#1-add-the-python-mrd-server-to-a-neurocontainers-recipe">1. Add the Python MRD server to a Neurocontainers recipe&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#2-test-the-tool-inside-the-container-and-then-through-the-mrd-server">2. Test the tool inside the container and then through the MRD server&lt;/a>
- &lt;ul>
- &lt;li>&lt;a href="#convert-data-to-mrd-test-data">Convert data to MRD test data&lt;/a>&lt;/li>
- &lt;/ul>
- &lt;/li>
- &lt;li>&lt;a href="#3-submit-the-container-recipe-to-neurocontainers">3. Submit the container recipe to Neurocontainers&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#4-submit-the-container-to-openrecon">4. Submit the container to OpenRecon&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#detailed-instructions-for-building-on-github-directly">Detailed instructions for building on GitHub directly&lt;/a>
- &lt;ul>
- &lt;li>&lt;a href="#prerequisites">Prerequisites&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#process">Process&lt;/a>&lt;/li>
- &lt;/ul>
- &lt;/li>
- &lt;li>&lt;a href="#tips-tricks-and-troubleshooting-for-openrecon">Tips, tricks, and troubleshooting for OpenRecon&lt;/a>
- &lt;ul>
- &lt;li>&lt;a href="#installing-and-testing-a-new-openrecon-package">Installing and testing a new OpenRecon package&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#sent-image-values-must-fit-within-a-4096-value-range">Sent image values must fit within a 4096-value range&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#choice-parameters-need-a-non-empty-default">Choice parameters need a non-empty default&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#do-not-use-prio-recon-with-openrecon">Do not use Prio Recon with OpenRecon&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#cuda-version">CUDA version&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#versioning-of-containers">Versioning of containers&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#high-performance-computing-license-side-effects">High-performance computing license side effects&lt;/a>&lt;/li>
- &lt;li>&lt;a href="#cleaning-up-package-on-the-scanner">Cleaning up package on the scanner&lt;/a>&lt;/li>
- &lt;/ul>
- &lt;/li>
- &lt;/ul>
-&lt;/nav>
-&lt;/div>
-&lt;h2 id="building-an-openrecon-container">Building an OpenRecon Container&lt;/h2>
-&lt;p>These instructions were tested on GitHub Codespaces, and we recommend Codespaces as a starting point.&lt;/p></description></item><item><title>Singularity/Apptainer</title><link>https://neurodesk.org/getting-started/neurocontainers/singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/singularity/</guid><description>&lt;p>Our docker containers are converted to singularity/apptainer containers and stored on Object storage.&lt;/p>
-&lt;h2 id="download-singularity-containers">Download Singularity Containers&lt;/h2>
-&lt;p>First get an overview of which containers are available as Singularity containers:
-&lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener">https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a>&lt;/p>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;singularity build julia_1.6.1.simg docker://vnmd/julia_1.6.1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;julia_1.6.1&lt;/code&gt; with your selected application. You can find the available containers here: &lt;a href="https://neurodesk.org/applications/" target="_blank" rel="noopener"&gt;https://neurodesk.org/applications/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>OpenRecon</title><link>https://neurodesk.org/getting-started/neurocontainers/openrecon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/openrecon/</guid><description>&lt;div&gt;
+ &lt;nav id="TableOfContents"&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#building-an-openrecon-container"&gt;Building an OpenRecon Container&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#1-add-the-python-mrd-server-to-a-neurocontainers-recipe"&gt;1. Add the Python MRD server to a Neurocontainers recipe&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#2-test-the-tool-inside-the-container-and-then-through-the-mrd-server"&gt;2. Test the tool inside the container and then through the MRD server&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#convert-data-to-mrd-test-data"&gt;Convert data to MRD test data&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#3-submit-the-container-recipe-to-neurocontainers"&gt;3. Submit the container recipe to Neurocontainers&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#4-submit-the-container-to-openrecon"&gt;4. Submit the container to OpenRecon&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#detailed-instructions-for-building-on-github-directly"&gt;Detailed instructions for building on GitHub directly&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#prerequisites"&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#process"&gt;Process&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#tips-tricks-and-troubleshooting-for-openrecon"&gt;Tips, tricks, and troubleshooting for OpenRecon&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#installing-and-testing-a-new-openrecon-package"&gt;Installing and testing a new OpenRecon package&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#sent-image-values-must-fit-within-a-4096-value-range"&gt;Sent image values must fit within a 4096-value range&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#choice-parameters-need-a-non-empty-default"&gt;Choice parameters need a non-empty default&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#do-not-use-prio-recon-with-openrecon"&gt;Do not use Prio Recon with OpenRecon&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#cuda-version"&gt;CUDA version&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#versioning-of-containers"&gt;Versioning of containers&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#high-performance-computing-license-side-effects"&gt;High-performance computing license side effects&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#cleaning-up-package-on-the-scanner"&gt;Cleaning up package on the scanner&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;h2 id="building-an-openrecon-container"&gt;Building an OpenRecon Container&lt;/h2&gt;
+&lt;p&gt;These instructions were tested on GitHub Codespaces, and we recommend Codespaces as a starting point.&lt;/p&gt;</description></item><item><title>Singularity/Apptainer</title><link>https://neurodesk.org/getting-started/neurocontainers/singularity/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/singularity/</guid><description>&lt;p&gt;Our docker containers are converted to singularity/apptainer containers and stored on Object storage.&lt;/p&gt;
+&lt;h2 id="download-singularity-containers"&gt;Download Singularity Containers&lt;/h2&gt;
+&lt;p&gt;First get an overview of which containers are available as Singularity containers:
+&lt;a href="https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt" target="_blank" rel="noopener"&gt;https://github.com/neurodesk/neurocommand/blob/main/cvmfs/log.txt&lt;/a&gt;&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -s https://raw.githubusercontent.com/neurodesk/neurocommand/main/cvmfs/log.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>assign the container name to a variable:&lt;/p>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -s https://raw.githubusercontent.com/neurodesk/neurocommand/main/cvmfs/log.txt&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;assign the container name to a variable:&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">container&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>itksnap_3.8.0_20201208&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>Then download the containers. One way is to use CURL:&lt;/p>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;export&lt;/span&gt; &lt;span style="color:#953800"&gt;container&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;itksnap_3.8.0_20201208&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then download the containers. One way is to use CURL:&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -X GET https://neurocontainers.neurodesk.workers.dev/&lt;span style="color:#953800">$container&lt;/span>.simg -O&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h2 id="singularity-containers-and-gpus">Singularity Containers and GPUs&lt;/h2>
-&lt;p>Some of our containers contain GPU-accelerated applications. Here is an example that tests the GPU accelerated program eddy in FSL:&lt;/p></description></item><item><title>Windows 11 and Windows Subsystem for Linux</title><link>https://neurodesk.org/getting-started/neurocontainers/windows11-wsl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/windows11-wsl/</guid><description>&lt;h2 id="1-install-wsl">1. Install WSL&lt;/h2>
-&lt;p>Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/windows/wsl/install&lt;/a>&lt;/p>
-&lt;h2 id="2-configure-cvmfs-singularity-and-lmod-only-needs-to-be-done-once">2. Configure CVMFS, Singularity and LMOD (only needs to be done once)&lt;/h2>
-&lt;h3 id="install-build-tools">Install build tools&lt;/h3>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -X GET https://neurocontainers.neurodesk.workers.dev/&lt;span style="color:#953800"&gt;$container&lt;/span&gt;.simg -O&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="singularity-containers-and-gpus"&gt;Singularity Containers and GPUs&lt;/h2&gt;
+&lt;p&gt;Some of our containers contain GPU-accelerated applications. Here is an example that tests the GPU accelerated program eddy in FSL:&lt;/p&gt;</description></item><item><title>Windows 11 and Windows Subsystem for Linux</title><link>https://neurodesk.org/getting-started/neurocontainers/windows11-wsl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/windows11-wsl/</guid><description>&lt;h2 id="1-install-wsl"&gt;1. Install WSL&lt;/h2&gt;
+&lt;p&gt;Follow the instructions to enable Windows Subsystem for Linux 2 in Windows 11: &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener"&gt;https://docs.microsoft.com/en-us/windows/wsl/install&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="2-configure-cvmfs-singularity-and-lmod-only-needs-to-be-done-once"&gt;2. Configure CVMFS, Singularity and LMOD (only needs to be done once)&lt;/h2&gt;
+&lt;h3 id="install-build-tools"&gt;Install build tools&lt;/h3&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt update
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install make gcc&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h3 id="install-singularity">Install singularity&lt;/h3>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install make gcc&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="install-singularity"&gt;Install singularity&lt;/h3&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">SINGULARITY_VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>3.9.3 &lt;span style="color:#953800">VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>1.17.2 &lt;span style="color:#953800">OS&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>linux &lt;span style="color:#953800">ARCH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>amd64
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -q https://dl.google.com/go/go&lt;span style="color:#953800">$VERSION&lt;/span>.&lt;span style="color:#953800">$OS&lt;/span>-&lt;span style="color:#953800">$ARCH&lt;/span>.tar.gz 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo tar -C /usr/local -xzvf go&lt;span style="color:#953800">$VERSION&lt;/span>.&lt;span style="color:#953800">$OS&lt;/span>-&lt;span style="color:#953800">$ARCH&lt;/span>.tar.gz 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm go&lt;span style="color:#953800">$VERSION&lt;/span>.&lt;span style="color:#953800">$OS&lt;/span>-&lt;span style="color:#953800">$ARCH&lt;/span>.tar.gz 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">GOPATH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">HOME&lt;/span>&lt;span style="color:#0a3069">}&lt;/span>/go 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">PATH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>/usr/local/go/bin:&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">PATH&lt;/span>&lt;span style="color:#0a3069">}&lt;/span>:&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">GOPATH&lt;/span>&lt;span style="color:#0a3069">}&lt;/span>/bin 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkdir -p &lt;span style="color:#953800">$GOPATH&lt;/span>/src/github.com/sylabs 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> &lt;span style="color:#953800">$GOPATH&lt;/span>/src/github.com/sylabs 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -q https://github.com/sylabs/singularity/releases/download/v&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">SINGULARITY_VERSION&lt;/span>&lt;span style="color:#0a3069">}&lt;/span>/singularity-ce-&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">SINGULARITY_VERSION&lt;/span>&lt;span style="color:#0a3069">}&lt;/span>.tar.gz 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xzvf singularity-ce-&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">SINGULARITY_VERSION&lt;/span>&lt;span style="color:#0a3069">}&lt;/span>.tar.gz 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> singularity-ce-&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">SINGULARITY_VERSION&lt;/span>&lt;span style="color:#0a3069">}&lt;/span> 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./mconfig --prefix&lt;span style="color:#0550ae">=&lt;/span>/usr/local/singularity 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make -C builddir 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo make -C builddir install 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">cd&lt;/span> .. 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo rm -rf singularity-ce-&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">SINGULARITY_VERSION&lt;/span>&lt;span style="color:#0a3069">}&lt;/span> 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo rm -rf /usr/local/go &lt;span style="color:#953800">$GOPATH&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h3 id="setup-bindpaths-for-singularity-eg-in-bashrc">Setup Bindpaths for Singularity (e.g. in .bashrc)&lt;/h3>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;export&lt;/span&gt; &lt;span style="color:#953800"&gt;SINGULARITY_VERSION&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;3.9.3 &lt;span style="color:#953800"&gt;VERSION&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;1.17.2 &lt;span style="color:#953800"&gt;OS&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;linux &lt;span style="color:#953800"&gt;ARCH&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wget -q https://dl.google.com/go/go&lt;span style="color:#953800"&gt;$VERSION&lt;/span&gt;.&lt;span style="color:#953800"&gt;$OS&lt;/span&gt;-&lt;span style="color:#953800"&gt;$ARCH&lt;/span&gt;.tar.gz 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo tar -C /usr/local -xzvf go&lt;span style="color:#953800"&gt;$VERSION&lt;/span&gt;.&lt;span style="color:#953800"&gt;$OS&lt;/span&gt;-&lt;span style="color:#953800"&gt;$ARCH&lt;/span&gt;.tar.gz 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm go&lt;span style="color:#953800"&gt;$VERSION&lt;/span&gt;.&lt;span style="color:#953800"&gt;$OS&lt;/span&gt;-&lt;span style="color:#953800"&gt;$ARCH&lt;/span&gt;.tar.gz 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;export&lt;/span&gt; &lt;span style="color:#953800"&gt;GOPATH&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;HOME&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt;/go 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;export&lt;/span&gt; &lt;span style="color:#953800"&gt;PATH&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;/usr/local/go/bin:&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;PATH&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt;:&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;GOPATH&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt;/bin 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;mkdir -p &lt;span style="color:#953800"&gt;$GOPATH&lt;/span&gt;/src/github.com/sylabs 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;cd&lt;/span&gt; &lt;span style="color:#953800"&gt;$GOPATH&lt;/span&gt;/src/github.com/sylabs 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wget -q https://github.com/sylabs/singularity/releases/download/v&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;SINGULARITY_VERSION&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt;/singularity-ce-&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;SINGULARITY_VERSION&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt;.tar.gz 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;tar -xzvf singularity-ce-&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;SINGULARITY_VERSION&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt;.tar.gz 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;cd&lt;/span&gt; singularity-ce-&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;SINGULARITY_VERSION&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./mconfig --prefix&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;/usr/local/singularity 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make -C builddir 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo make -C builddir install 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;cd&lt;/span&gt; .. 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo rm -rf singularity-ce-&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;SINGULARITY_VERSION&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo rm -rf /usr/local/go &lt;span style="color:#953800"&gt;$GOPATH&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="setup-bindpaths-for-singularity-eg-in-bashrc"&gt;Setup Bindpaths for Singularity (e.g. in .bashrc)&lt;/h3&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">PATH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#34;/usr/local/singularity/bin:&lt;/span>&lt;span style="color:#0a3069">${&lt;/span>&lt;span style="color:#953800">PATH&lt;/span>&lt;span style="color:#0a3069">}&lt;/span>&lt;span style="color:#0a3069">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6639ba">export&lt;/span> &lt;span style="color:#953800">SINGULARITY_BINDPATH&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>&lt;span style="color:#0a3069">&amp;#39;/cvmfs,/mnt,/home&amp;#39;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h3 id="cvmfs">CVMFS&lt;/h3>
-&lt;p>Follow the instructions here: &lt;a href="https://neurodesk.org/docs/getting-started/neurocontainers/cvmfs/" target="_blank" rel="noopener">https://neurodesk.org/docs/getting-started/neurocontainers/cvmfs/&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;export&lt;/span&gt; &lt;span style="color:#953800"&gt;PATH&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;/usr/local/singularity/bin:&lt;/span&gt;&lt;span style="color:#0a3069"&gt;${&lt;/span&gt;&lt;span style="color:#953800"&gt;PATH&lt;/span&gt;&lt;span style="color:#0a3069"&gt;}&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6639ba"&gt;export&lt;/span&gt; &lt;span style="color:#953800"&gt;SINGULARITY_BINDPATH&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#39;/cvmfs,/mnt,/home&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="cvmfs"&gt;CVMFS&lt;/h3&gt;
+&lt;p&gt;Follow the instructions here: &lt;a href="https://neurodesk.org/docs/getting-started/neurocontainers/cvmfs/" target="_blank" rel="noopener"&gt;https://neurodesk.org/docs/getting-started/neurocontainers/cvmfs/&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

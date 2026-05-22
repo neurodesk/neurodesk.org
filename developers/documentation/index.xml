@@ -1,99 +1,94 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on Neurodesk</title><link>https://neurodesk.org/developers/documentation/</link><description>Recent content in Documentation on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/developers/documentation/index.xml" rel="self" type="application/rss+xml"/><item><title>Indexing with Algolia</title><link>https://neurodesk.org/developers/documentation/algolia-indexing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/algolia-indexing/</guid><description>&lt;h2 id="1-prerequisites">1. Prerequisites&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia account&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="2-create-a-crawler-to-index-the-documentation">2. Create a crawler to index the documentation&lt;/h2>
-&lt;ol>
-&lt;li>In the Algolia Overview page, click on &amp;ldquo;Go To Crawlers&amp;rdquo;.&lt;/li>
-&lt;li>Click on &amp;ldquo;Add new crawler&amp;rdquo;.&lt;/li>
-&lt;li>Name your crawler (e.g., &lt;code>neurodesk-docs&lt;/code>).&lt;/li>
-&lt;li>Set the &amp;ldquo;Start URL&amp;rdquo; to your documentation URL (e.g., &lt;code>https://neurodesk.org/&lt;/code>).&lt;/li>
-&lt;li>Click &amp;ldquo;Create&amp;rdquo;.&lt;/li>
-&lt;/ol>
-&lt;h2 id="3-configure-the-crawler">3. Configure the crawler&lt;/h2>
-&lt;ol>
-&lt;li>In the crawler settings, go to the &amp;ldquo;Editor&amp;rdquo; section under &amp;ldquo;SETUP&amp;rdquo;.&lt;/li>
-&lt;li>You can specify how the content should be indexed. It can override the default settings.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Documentation on Neurodesk</title><link>https://neurodesk.org/developers/documentation/</link><description>Recent content in Documentation on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/developers/documentation/index.xml" rel="self" type="application/rss+xml"/><item><title>Indexing with Algolia</title><link>https://neurodesk.org/developers/documentation/algolia-indexing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/algolia-indexing/</guid><description>&lt;h2 id="1-prerequisites"&gt;1. Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.algolia.com/" target="_blank" rel="noopener"&gt;Algolia account&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-create-a-crawler-to-index-the-documentation"&gt;2. Create a crawler to index the documentation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;In the Algolia Overview page, click on &amp;ldquo;Go To Crawlers&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Add new crawler&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Name your crawler (e.g., &lt;code&gt;neurodesk-docs&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Set the &amp;ldquo;Start URL&amp;rdquo; to your documentation URL (e.g., &lt;code&gt;https://neurodesk.org/&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Create&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="3-configure-the-crawler"&gt;3. Configure the crawler&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;In the crawler settings, go to the &amp;ldquo;Editor&amp;rdquo; section under &amp;ldquo;SETUP&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;You can specify how the content should be indexed. It can override the default settings.
+&lt;div class="alert alert-warning" role="alert"&gt;
 
-
-&lt;div class="alert alert-warning" role="alert">
-
-
- Make sure to configure &lt;code>startUrls&lt;/code>, &lt;code>discoveryPatterns&lt;/code>, &lt;code>pathsToMatch&lt;/code> and other relevant settings to match the base URL for indexing. Redirect URLs would fail the crawler.
-
-&lt;/div>
-&lt;/li>
-&lt;li>Run the crawler by clicking on &amp;ldquo;Run Test&amp;rdquo; in the top right corner.&lt;/li>
-&lt;li>Once the test is successful, click on &amp;ldquo;Review and Publish&amp;rdquo; to start indexing the documentation.&lt;/li>
-&lt;/ol>
-&lt;h2 id="4-create-a-new-algolia-index">4. Create a new Algolia index&lt;/h2>
-&lt;ol>
-&lt;li>Log in to your Algolia account.&lt;/li>
-&lt;li>Click on &amp;ldquo;Indices&amp;rdquo; in the left sidebar.&lt;/li>
-&lt;li>Click on &amp;ldquo;Create index&amp;rdquo;.&lt;/li>
-&lt;li>Name your index (e.g., &lt;code>neurodesk-docs&lt;/code>).&lt;/li>
-&lt;li>Click &amp;ldquo;Create&amp;rdquo;.&lt;/li>
-&lt;/ol>
-&lt;h2 id="5-configure-the-algolia-index">5. Configure the Algolia index&lt;/h2>
-&lt;ol>
-&lt;li>In the index settings, go to the &amp;ldquo;Searchable attributes&amp;rdquo; section.&lt;/li>
-&lt;li>Add attributes you want to be searchable, eg. &lt;code>title&lt;/code>, &lt;code>content&lt;/code>.&lt;/li>
-&lt;li>In the &amp;ldquo;Ranking&amp;rdquo; section, set the ranking criteria according to your needs.&lt;/li>
-&lt;li>Save the settings.&lt;/li>
-&lt;/ol></description></item><item><title>Running the Neurodesk Site Locally (Hugo + Docsy)</title><link>https://neurodesk.org/developers/documentation/local-hugo-docsy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/local-hugo-docsy/</guid><description>&lt;h2 id="1-prerequisites">1. Prerequisites&lt;/h2>
-&lt;ul>
-&lt;li>Git&lt;/li>
-&lt;li>&lt;a href="https://go.dev/dl/" target="_blank" rel="noopener">Go&lt;/a> (required for Hugo modules)&lt;/li>
-&lt;li>Hugo &lt;strong>extended&lt;/strong> version (0.146.0 recommended). See &lt;a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener">https://github.com/gohugoio/hugo/releases&lt;/a> for Hugo releases.&lt;/li>
-&lt;/ul>
-&lt;h2 id="2-cloning-the-repository">2. Cloning the repository&lt;/h2>
-&lt;p>This step is the same for macOS, Windows, and Linux.&lt;/p>
-&lt;h3 id="using-ssh">Using SSH&lt;/h3>
+Make sure to configure `startUrls`, `discoveryPatterns`, `pathsToMatch` and other relevant settings to match the base URL for indexing. Redirect URLs would fail the crawler.&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Run the crawler by clicking on &amp;ldquo;Run Test&amp;rdquo; in the top right corner.&lt;/li&gt;
+&lt;li&gt;Once the test is successful, click on &amp;ldquo;Review and Publish&amp;rdquo; to start indexing the documentation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="4-create-a-new-algolia-index"&gt;4. Create a new Algolia index&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Log in to your Algolia account.&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Indices&amp;rdquo; in the left sidebar.&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Create index&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Name your index (e.g., &lt;code&gt;neurodesk-docs&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Create&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="5-configure-the-algolia-index"&gt;5. Configure the Algolia index&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;In the index settings, go to the &amp;ldquo;Searchable attributes&amp;rdquo; section.&lt;/li&gt;
+&lt;li&gt;Add attributes you want to be searchable, eg. &lt;code&gt;title&lt;/code&gt;, &lt;code&gt;content&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;In the &amp;ldquo;Ranking&amp;rdquo; section, set the ranking criteria according to your needs.&lt;/li&gt;
+&lt;li&gt;Save the settings.&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>Running the Neurodesk Site Locally (Hugo + Docsy)</title><link>https://neurodesk.org/developers/documentation/local-hugo-docsy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/local-hugo-docsy/</guid><description>&lt;h2 id="1-prerequisites"&gt;1. Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://go.dev/dl/" target="_blank" rel="noopener"&gt;Go&lt;/a&gt; (required for Hugo modules)&lt;/li&gt;
+&lt;li&gt;Hugo &lt;strong&gt;extended&lt;/strong&gt; version (0.146.0 recommended). See &lt;a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener"&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt; for Hugo releases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="2-cloning-the-repository"&gt;2. Cloning the repository&lt;/h2&gt;
+&lt;p&gt;This step is the same for macOS, Windows, and Linux.&lt;/p&gt;
+&lt;h3 id="using-ssh"&gt;Using SSH&lt;/h3&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone --recurse-submodules git@github.com:neurodesk/neurodesk.github.io.git&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;p>or&lt;/p>
-&lt;h3 id="using-https">Using HTTPS&lt;/h3>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git clone --recurse-submodules git@github.com:neurodesk/neurodesk.github.io.git&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;h3 id="using-https"&gt;Using HTTPS&lt;/h3&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git clone --recurse-submodules https://github.com/neurodesk/neurodesk.github.io.git&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h3 id="if-you-cloned-without-recurse-submodules">If you cloned without &amp;ndash;recurse-submodules&lt;/h3>
-&lt;p>Run the following command to pull submodules&lt;/p>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git clone --recurse-submodules https://github.com/neurodesk/neurodesk.github.io.git&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="if-you-cloned-without-recurse-submodules"&gt;If you cloned without &amp;ndash;recurse-submodules&lt;/h3&gt;
+&lt;p&gt;Run the following command to pull submodules&lt;/p&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git submodule update --init --recursive --remote&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;h2 id="3-start-local-hugo-server">3. Start local hugo server&lt;/h2>
-&lt;p>&lt;strong>On Windows:&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>Extract the hugo.exe binary from the ZIP file into the root of your neurodesk.github.io directory.&lt;/li>
-&lt;li>Open PowerShell or Git Bash, then run:&lt;/li>
-&lt;/ol>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git submodule update --init --recursive --remote&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="3-start-local-hugo-server"&gt;3. Start local hugo server&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;On Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Extract the hugo.exe binary from the ZIP file into the root of your neurodesk.github.io directory.&lt;/li&gt;
+&lt;li&gt;Open PowerShell or Git Bash, then run:&lt;/li&gt;
+&lt;/ol&gt;
 
 
 
-&lt;div class="highlight">
- &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>.&lt;span style="color:#0a3069">\h&lt;/span>ugo.exe server --disableFastRender&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;/div>&lt;ol start="3">
-&lt;li>Once started, your dev website will be accessible via http://localhost:1313&lt;/li>
-&lt;/ol>
-&lt;p>&lt;strong>On Mac:&lt;/strong>&lt;/p></description></item><item><title>Contribute to Neurodesk.org</title><link>https://neurodesk.org/developers/documentation/creating-website-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/creating-website-content/</guid><description>&lt;p>This applies if you with to submit a new tutorial or amend content on a page. Our website is mostly written in Markdown (.md files). We include the basics of writing in Markdown on this page.&lt;/p>
-&lt;h2 id="table-of-contents">Table of contents&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="#create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications">Create your own copy of &lt;em>neurodesk/neurodesk.github.io&lt;/em> repository&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#create-your-content-or-make-your-modifications">Create your content or make your modifications&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#contribute-your-new-content-to-the-official-documentation">Contribute your new content to the official documentation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#formatting-guidelines">Formatting guidelines&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#code-blocks">Code blocks&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#images">Images&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#alerts-and-warnings">Alerts and warnings&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#tables">Tables&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#lists">Lists&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications">Create your own copy of &lt;em>neurodesk/neurodesk.github.io&lt;/em> repository where you will be able to make modifications&lt;/h3>
-&lt;p>Begin by creating a copy of our documentation that you can edit:&lt;/p></description></item></channel></rss>
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;.&lt;span style="color:#0a3069"&gt;\h&lt;/span&gt;ugo.exe server --disableFastRender&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;ol start="3"&gt;
+&lt;li&gt;Once started, your dev website will be accessible via http://localhost:1313&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;On Mac:&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Contribute to Neurodesk.org</title><link>https://neurodesk.org/developers/documentation/creating-website-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/documentation/creating-website-content/</guid><description>&lt;p&gt;This applies if you with to submit a new tutorial or amend content on a page. Our website is mostly written in Markdown (.md files). We include the basics of writing in Markdown on this page.&lt;/p&gt;
+&lt;h2 id="table-of-contents"&gt;Table of contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications"&gt;Create your own copy of &lt;em&gt;neurodesk/neurodesk.github.io&lt;/em&gt; repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#create-your-content-or-make-your-modifications"&gt;Create your content or make your modifications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#contribute-your-new-content-to-the-official-documentation"&gt;Contribute your new content to the official documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#formatting-guidelines"&gt;Formatting guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#code-blocks"&gt;Code blocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#images"&gt;Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#alerts-and-warnings"&gt;Alerts and warnings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#tables"&gt;Tables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lists"&gt;Lists&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="create-your-own-copy-of-neurodeskneurodeskgithubio-repository-where-you-will-be-able-to-make-modifications"&gt;Create your own copy of &lt;em&gt;neurodesk/neurodesk.github.io&lt;/em&gt; repository where you will be able to make modifications&lt;/h3&gt;
+&lt;p&gt;Begin by creating a copy of our documentation that you can edit:&lt;/p&gt;</description></item></channel></rss>
