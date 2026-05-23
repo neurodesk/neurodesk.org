@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T07:02:19Z",
+  "generatedAt": "2026-05-23T06:23:30Z",
   "periodDays": 30,
   "apps": [
     {
@@ -151,9 +151,9 @@
       "id": "sct",
       "name": "Spinal Cord Toolbox",
       "host": "sct.neurodesk.org",
-      "users": 30,
+      "users": 40,
       "visits": 30,
-      "pageViews": 30,
+      "pageViews": 40,
       "daily": [
         {
           "date": "2026-05-21",
@@ -163,9 +163,9 @@
         },
         {
           "date": "2026-05-22",
-          "users": 10,
+          "users": 20,
           "visits": 10,
-          "pageViews": 10
+          "pageViews": 20
         }
       ],
       "countries": [
@@ -174,6 +174,12 @@
           "users": 30,
           "visits": 30,
           "pageViews": 30
+        },
+        {
+          "countryName": "AU",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "deviceTypes": [
@@ -182,6 +188,12 @@
           "users": 30,
           "visits": 30,
           "pageViews": 30
+        },
+        {
+          "deviceType": "desktop",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "browsers": [
@@ -190,6 +202,12 @@
           "users": 30,
           "visits": 30,
           "pageViews": 30
+        },
+        {
+          "userAgentBrowser": "ChromeHeadless",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "groupLimitReached": false
@@ -198,9 +216,9 @@
       "id": "vesselboost",
       "name": "VesselBoost",
       "host": "vesselboost.neurodesk.org",
-      "users": 30,
-      "visits": 20,
-      "pageViews": 30,
+      "users": 40,
+      "visits": 30,
+      "pageViews": 40,
       "daily": [
         {
           "date": "2026-05-19",
@@ -219,9 +237,21 @@
           "users": 10,
           "visits": 10,
           "pageViews": 10
+        },
+        {
+          "date": "2026-05-22",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         }
       ],
       "countries": [
+        {
+          "countryName": "BE",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        },
         {
           "countryName": "CN",
           "users": 10,
@@ -244,9 +274,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 20,
-          "visits": 10,
-          "pageViews": 20
+          "users": 30,
+          "visits": 20,
+          "pageViews": 30
         },
         {
           "deviceType": "mobile",
@@ -261,6 +291,12 @@
           "users": 20,
           "visits": 20,
           "pageViews": 20
+        },
+        {
+          "userAgentBrowser": "Chrome",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         },
         {
           "userAgentBrowser": "Edge",
