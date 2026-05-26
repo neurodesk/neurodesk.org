@@ -1,23 +1,35 @@
 {
-  "generatedAt": "2026-05-25T08:06:09Z",
+  "generatedAt": "2026-05-26T07:01:19Z",
   "periodDays": 30,
   "apps": [
     {
       "id": "calmar",
       "name": "CALMaR",
       "host": "calmar.neurodesk.org",
-      "users": 10,
-      "visits": 0,
-      "pageViews": 10,
+      "users": 20,
+      "visits": 10,
+      "pageViews": 20,
       "daily": [
         {
           "date": "2026-05-21",
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "date": "2026-05-25",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         }
       ],
       "countries": [
+        {
+          "countryName": "CN",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        },
         {
           "countryName": "US",
           "users": 10,
@@ -31,6 +43,12 @@
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "deviceType": "mobile",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         }
       ],
       "browsers": [
@@ -38,6 +56,12 @@
           "userAgentBrowser": "ChromeHeadless",
           "users": 10,
           "visits": 0,
+          "pageViews": 10
+        },
+        {
+          "userAgentBrowser": "Unknown",
+          "users": 10,
+          "visits": 10,
           "pageViews": 10
         }
       ],
@@ -60,9 +84,9 @@
       "id": "musclemap",
       "name": "MuscleMap",
       "host": "musclemap.neurodesk.org",
-      "users": 30,
+      "users": 40,
       "visits": 10,
-      "pageViews": 30,
+      "pageViews": 40,
       "daily": [
         {
           "date": "2026-05-21",
@@ -81,11 +105,23 @@
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "date": "2026-05-25",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "countries": [
         {
           "countryName": "AU",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
+        },
+        {
+          "countryName": "CA",
           "users": 10,
           "visits": 0,
           "pageViews": 10
@@ -106,9 +142,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 20,
+          "users": 30,
           "visits": 0,
-          "pageViews": 20
+          "pageViews": 30
         },
         {
           "deviceType": "mobile",
@@ -123,6 +159,12 @@
           "users": 20,
           "visits": 0,
           "pageViews": 20
+        },
+        {
+          "userAgentBrowser": "Chrome",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         },
         {
           "userAgentBrowser": "Unknown",
