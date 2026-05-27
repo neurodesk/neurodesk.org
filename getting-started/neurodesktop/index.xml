@@ -1,17 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurodesktop on Neurodesk</title><link>https://neurodesk.org/getting-started/neurodesktop/</link><description>Recent content in Neurodesktop on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/neurodesktop/index.xml" rel="self" type="application/rss+xml"/><item><title>Portable Unprivileged neurodesktop</title><link>https://neurodesk.org/getting-started/neurodesktop/portable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/portable/</guid><description>&lt;div class="alert alert-info" role="alert"&gt;
-
-
-Installing TinyRange manually is for advanced users only. These instructions should be used as a supplement to running NeurodeskApp.
-&lt;/div&gt;
-
-&lt;h3 id="minimum-system-requirements"&gt;Minimum System Requirements&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;At least 5GB free space for neurodesktop base image&lt;/li&gt;
-&lt;li&gt;At least 8GB of RAM&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="downloading-tinyrange"&gt;Downloading TinyRange&lt;/h2&gt;
-&lt;p&gt;TinyRange (&lt;a href="https://github.com/tinyrange/tinyrange" target="_blank" rel="noopener"&gt;https://github.com/tinyrange/tinyrange&lt;/a&gt;) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privileges and doesn&amp;rsquo;t need Docker or Podman installed to work.&lt;/p&gt;
-&lt;p&gt;Downlaod the latest version of TinyRange from: &lt;a href="https://github.com/tinyrange/tinyrange/releases/latest" target="_blank" rel="noopener"&gt;https://github.com/tinyrange/tinyrange/releases/latest&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Linux</title><link>https://neurodesk.org/getting-started/neurodesktop/linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/linux/</guid><description>&lt;h2 id="minimum-system-requirements"&gt;Minimum System Requirements&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neurodesktop on Neurodesk</title><link>https://neurodesk.org/getting-started/neurodesktop/</link><description>Recent content in Neurodesktop on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.org/getting-started/neurodesktop/index.xml" rel="self" type="application/rss+xml"/><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</guid><description/></item><item><title>Linux</title><link>https://neurodesk.org/getting-started/neurodesktop/linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/linux/</guid><description>&lt;h2 id="minimum-system-requirements"&gt;Minimum System Requirements&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;At least 3GB free space for neurodesktop base image&lt;/li&gt;
 &lt;li&gt;Docker requirements. Details found under &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener"&gt;https://docs.docker.com/get-docker/&lt;/a&gt;&lt;/li&gt;

@@ -79,7 +79,7 @@ Make sure to configure `startUrls`, `discoveryPatterns`, `pathsToMatch` and othe
 &lt;/div&gt;&lt;ol start="3"&gt;
 &lt;li&gt;Once started, your dev website will be accessible via http://localhost:1313&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;On Mac:&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/local/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/local/neurodeskapp/</guid><description>&lt;img style="float: right;" src="https://neurodesk.org/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="750"&gt;
+&lt;p&gt;&lt;strong&gt;On Mac:&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/app/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/app/neurodeskapp/</guid><description>&lt;img style="float: right;" src="https://neurodesk.org/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="750"&gt;
 &lt;!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') --&gt;
 &lt;h3 id="determine-system-privileges"&gt;Determine System Privileges&lt;/h3&gt;
 &lt;p&gt;Before running the app, check whether your system has privileged access (root/admin permissions). This determines which engine you need to use to run the app:&lt;/p&gt;
@@ -93,7 +93,7 @@ Make sure to configure `startUrls`, `discoveryPatterns`, `pathsToMatch` and othe
 &lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;With privileged access: Docker or Podman to run respective engines&lt;/p&gt;</description></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-components/</guid><description>&lt;p&gt;&lt;img src="https://neurodesk.org/static/developers/architecture/neurodesk-components/NeurodeskPaperFigureWithOpenRecon.png" alt="architecture" title="architecture"/&gt;
+&lt;p&gt;With privileged access: Docker or Podman to run respective engines&lt;/p&gt;</description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</guid><description/></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-components/</guid><description>&lt;p&gt;&lt;img src="https://neurodesk.org/static/developers/architecture/neurodesk-components/NeurodeskPaperFigureWithOpenRecon.png" alt="architecture" title="architecture"/&gt;
 &lt;/p&gt;
 &lt;h2 id="neurodesktop-recommended-for-beginners"&gt;Neurodesktop: Recommended for Beginners&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Neurodesktop&lt;/em&gt; is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
@@ -121,20 +121,7 @@ To get started, see: &lt;a href="https://neurodesk.org/docs/getting-started/neur
 &lt;li&gt;Collaborate with colleagues using a consistent environment.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Neurodesk Play is free but comes with resource limits. For more intensive workloads, consider &lt;a href="https://neurodesk.org/docs/getting-started/local/"&gt;installing Neurodesk locally&lt;/a&gt; or using one of our &lt;a href="https://neurodesk.org/docs/getting-started/hosted/"&gt;other hosting options&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Portable Unprivileged neurodesktop</title><link>https://neurodesk.org/getting-started/neurodesktop/portable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/portable/</guid><description>&lt;div class="alert alert-info" role="alert"&gt;
-
-
-Installing TinyRange manually is for advanced users only. These instructions should be used as a supplement to running NeurodeskApp.
-&lt;/div&gt;
-
-&lt;h3 id="minimum-system-requirements"&gt;Minimum System Requirements&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;At least 5GB free space for neurodesktop base image&lt;/li&gt;
-&lt;li&gt;At least 8GB of RAM&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="downloading-tinyrange"&gt;Downloading TinyRange&lt;/h2&gt;
-&lt;p&gt;TinyRange (&lt;a href="https://github.com/tinyrange/tinyrange" target="_blank" rel="noopener"&gt;https://github.com/tinyrange/tinyrange&lt;/a&gt;) is a lightweight runtime for running Virtual Machines and Containers. It runs without admin privileges and doesn&amp;rsquo;t need Docker or Podman installed to work.&lt;/p&gt;
-&lt;p&gt;Downlaod the latest version of TinyRange from: &lt;a href="https://github.com/tinyrange/tinyrange/releases/latest" target="_blank" rel="noopener"&gt;https://github.com/tinyrange/tinyrange/releases/latest&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Setup CVMFS Proxy</title><link>https://neurodesk.org/developers/architecture/cvmfs/proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/proxy/</guid><description>&lt;p&gt;If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don&amp;rsquo;t run any proxy servers but it would be important for using it on a cluster.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Neurodesk Play is free but comes with resource limits. For more intensive workloads, consider &lt;a href="https://neurodesk.org/getting-started/app/"&gt;installing Neurodesk App&lt;/a&gt; or using one of our &lt;a href="https://neurodesk.org/docs/getting-started/hosted/"&gt;other hosting options&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Setup CVMFS Proxy</title><link>https://neurodesk.org/developers/architecture/cvmfs/proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/cvmfs/proxy/</guid><description>&lt;p&gt;If you want more speed in a region one way could be to setup another Stratum 1 server or a proxy. We currently don&amp;rsquo;t run any proxy servers but it would be important for using it on a cluster.&lt;/p&gt;
 &lt;h1 id="setup-a-cvmfs-proxy-server"&gt;Setup a CVMFS proxy server&lt;/h1&gt;
 
 
@@ -1597,7 +1584,7 @@ For guides and tutorials, refer to the respective [tutorial and examples](https:
 &lt;div class="highlight"&gt;
  &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;datalad containers-run -n neurodesk-romeo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;h2 id="change-version-of-container"&gt;Change version of container&lt;/h2&gt;
-&lt;p&gt;You can change which version of a container is used in two ways:&lt;/p&gt;</description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p&gt;Our containers are automatically built in &lt;a href="https://github.com/neurodesk/neurocontainers/" target="_blank" rel="noopener"&gt;https://github.com/neurodesk/neurocontainers/&lt;/a&gt; and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener"&gt;dockerhub&lt;/a&gt; and on &lt;a href="https://github.com/neurodesk/neurocontainers/packages" target="_blank" rel="noopener"&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can change which version of a container is used in two ways:&lt;/p&gt;</description></item><item><title>Docker</title><link>https://neurodesk.org/getting-started/neurocontainers/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocontainers/docker/</guid><description>&lt;p&gt;Our containers are automatically built in &lt;a href="https://github.com/neurodesk/neurocontainers/" target="_blank" rel="noopener"&gt;https://github.com/neurodesk/neurocontainers/&lt;/a&gt; and hosted on &lt;a href="https://hub.docker.com/u/vnmd" target="_blank" rel="noopener"&gt;dockerhub&lt;/a&gt; and on &lt;a href="https://github.com/orgs/neurodesk/packages?repo_name=neurocontainers" target="_blank" rel="noopener"&gt;github&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="pull-docker-containers"&gt;Pull Docker containers&lt;/h2&gt;
 &lt;p&gt;e.g. for a julia container
 docker&lt;/p&gt;
