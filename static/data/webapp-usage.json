@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T07:08:28Z",
+  "generatedAt": "2026-05-29T07:09:11Z",
   "periodDays": 30,
   "apps": [
     {
@@ -96,9 +96,9 @@
       "id": "musclemap",
       "name": "MuscleMap",
       "host": "musclemap.neurodesk.org",
-      "users": 70,
-      "visits": 20,
-      "pageViews": 70,
+      "users": 100,
+      "visits": 30,
+      "pageViews": 100,
       "daily": [
         {
           "date": "2026-05-21",
@@ -129,9 +129,21 @@
           "users": 30,
           "visits": 10,
           "pageViews": 30
+        },
+        {
+          "date": "2026-05-28",
+          "users": 30,
+          "visits": 10,
+          "pageViews": 30
         }
       ],
       "countries": [
+        {
+          "countryName": "AU",
+          "users": 30,
+          "visits": 10,
+          "pageViews": 30
+        },
         {
           "countryName": "CN",
           "users": 20,
@@ -139,13 +151,13 @@
           "pageViews": 20
         },
         {
-          "countryName": "AU",
+          "countryName": "CA",
           "users": 10,
           "visits": 0,
           "pageViews": 10
         },
         {
-          "countryName": "CA",
+          "countryName": "ES",
           "users": 10,
           "visits": 0,
           "pageViews": 10
@@ -172,9 +184,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 60,
-          "visits": 10,
-          "pageViews": 60
+          "users": 90,
+          "visits": 20,
+          "pageViews": 90
         },
         {
           "deviceType": "mobile",
@@ -186,15 +198,15 @@
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
-          "users": 30,
+          "users": 50,
           "visits": 10,
-          "pageViews": 30
+          "pageViews": 50
         },
         {
           "userAgentBrowser": "ChromeHeadless",
-          "users": 20,
-          "visits": 0,
-          "pageViews": 20
+          "users": 30,
+          "visits": 10,
+          "pageViews": 30
         },
         {
           "userAgentBrowser": "Edge",
@@ -312,9 +324,9 @@
       "id": "vesselboost",
       "name": "VesselBoost",
       "host": "vesselboost.neurodesk.org",
-      "users": 90,
+      "users": 100,
       "visits": 50,
-      "pageViews": 90,
+      "pageViews": 100,
       "daily": [
         {
           "date": "2026-05-19",
@@ -357,6 +369,12 @@
           "users": 30,
           "visits": 0,
           "pageViews": 30
+        },
+        {
+          "date": "2026-05-28",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "countries": [
@@ -391,6 +409,12 @@
           "pageViews": 10
         },
         {
+          "countryName": "NO",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
+        },
+        {
           "countryName": "SG",
           "users": 10,
           "visits": 0,
@@ -400,9 +424,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 70,
+          "users": 80,
           "visits": 30,
-          "pageViews": 70
+          "pageViews": 80
         },
         {
           "deviceType": "mobile",
@@ -419,6 +443,12 @@
           "pageViews": 30
         },
         {
+          "userAgentBrowser": "Chrome",
+          "users": 20,
+          "visits": 10,
+          "pageViews": 20
+        },
+        {
           "userAgentBrowser": "ChromeHeadless",
           "users": 20,
           "visits": 0,
@@ -429,12 +459,6 @@
           "users": 20,
           "visits": 20,
           "pageViews": 20
-        },
-        {
-          "userAgentBrowser": "Chrome",
-          "users": 10,
-          "visits": 10,
-          "pageViews": 10
         },
         {
           "userAgentBrowser": "ChromeMobile",
