@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-31T21:48:42Z",
+  "generatedAt": "2026-06-01T09:02:09Z",
   "periodDays": 30,
   "apps": [
     {
@@ -360,9 +360,9 @@
       "id": "vesselboost",
       "name": "VesselBoost",
       "host": "vesselboost.neurodesk.org",
-      "users": 130,
-      "visits": 60,
-      "pageViews": 130,
+      "users": 150,
+      "visits": 70,
+      "pageViews": 150,
       "daily": [
         {
           "date": "2026-05-19",
@@ -423,6 +423,12 @@
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "date": "2026-06-01",
+          "users": 20,
+          "visits": 10,
+          "pageViews": 20
         }
       ],
       "countries": [
@@ -436,6 +442,12 @@
           "countryName": "AU",
           "users": 20,
           "visits": 0,
+          "pageViews": 20
+        },
+        {
+          "countryName": "IN",
+          "users": 20,
+          "visits": 10,
           "pageViews": 20
         },
         {
@@ -478,23 +490,23 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 110,
-          "visits": 40,
-          "pageViews": 110
+          "users": 120,
+          "visits": 50,
+          "pageViews": 120
         },
         {
           "deviceType": "mobile",
-          "users": 20,
+          "users": 30,
           "visits": 20,
-          "pageViews": 20
+          "pageViews": 30
         }
       ],
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
-          "users": 40,
-          "visits": 20,
-          "pageViews": 40
+          "users": 50,
+          "visits": 30,
+          "pageViews": 50
         },
         {
           "userAgentBrowser": "ChromeHeadless",
@@ -509,16 +521,16 @@
           "pageViews": 30
         },
         {
+          "userAgentBrowser": "ChromeMobile",
+          "users": 20,
+          "visits": 10,
+          "pageViews": 20
+        },
+        {
           "userAgentBrowser": "Unknown",
           "users": 20,
           "visits": 20,
           "pageViews": 20
-        },
-        {
-          "userAgentBrowser": "ChromeMobile",
-          "users": 10,
-          "visits": 10,
-          "pageViews": 10
         }
       ],
       "groupLimitReached": false
