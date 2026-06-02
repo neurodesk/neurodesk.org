@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T09:02:09Z",
+  "generatedAt": "2026-06-02T08:14:03Z",
   "periodDays": 30,
   "apps": [
     {
@@ -258,13 +258,41 @@
       "id": "seedseg",
       "name": "SeedSeg",
       "host": "seedseg.neurodesk.org",
-      "users": 0,
-      "visits": 0,
-      "pageViews": 0,
-      "daily": [],
-      "countries": [],
-      "deviceTypes": [],
-      "browsers": [],
+      "users": 10,
+      "visits": 10,
+      "pageViews": 10,
+      "daily": [
+        {
+          "date": "2026-06-02",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        }
+      ],
+      "countries": [
+        {
+          "countryName": "CN",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        }
+      ],
+      "deviceTypes": [
+        {
+          "deviceType": "mobile",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        }
+      ],
+      "browsers": [
+        {
+          "userAgentBrowser": "Unknown",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        }
+      ],
       "groupLimitReached": false
     },
     {
