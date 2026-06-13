@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T08:09:38Z",
+  "generatedAt": "2026-06-13T07:10:37Z",
   "periodDays": 30,
   "apps": [
     {
@@ -750,9 +750,9 @@
       "id": "vesselboost",
       "name": "VesselBoost",
       "host": "vesselboost.neurodesk.org",
-      "users": 190,
-      "visits": 100,
-      "pageViews": 190,
+      "users": 220,
+      "visits": 120,
+      "pageViews": 220,
       "daily": [
         {
           "date": "2026-05-19",
@@ -843,6 +843,12 @@
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "date": "2026-06-12",
+          "users": 30,
+          "visits": 20,
+          "pageViews": 30
         }
       ],
       "countries": [
@@ -856,6 +862,12 @@
           "countryName": "AU",
           "users": 30,
           "visits": 0,
+          "pageViews": 30
+        },
+        {
+          "countryName": "FR",
+          "users": 30,
+          "visits": 20,
           "pageViews": 30
         },
         {
@@ -910,9 +922,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 140,
-          "visits": 60,
-          "pageViews": 140
+          "users": 170,
+          "visits": 80,
+          "pageViews": 170
         },
         {
           "deviceType": "mobile",
@@ -924,8 +936,14 @@
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
+          "users": 70,
+          "visits": 40,
+          "pageViews": 70
+        },
+        {
+          "userAgentBrowser": "Unknown",
           "users": 50,
-          "visits": 30,
+          "visits": 50,
           "pageViews": 50
         },
         {
@@ -938,12 +956,6 @@
           "userAgentBrowser": "Edge",
           "users": 40,
           "visits": 20,
-          "pageViews": 40
-        },
-        {
-          "userAgentBrowser": "Unknown",
-          "users": 40,
-          "visits": 40,
           "pageViews": 40
         },
         {
