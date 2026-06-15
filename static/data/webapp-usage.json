@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T08:03:29Z",
+  "generatedAt": "2026-06-15T09:45:20Z",
   "periodDays": 30,
   "apps": [
     {
@@ -518,9 +518,9 @@
       "id": "seedseg",
       "name": "SeedSeg",
       "host": "seedseg.neurodesk.org",
-      "users": 50,
-      "visits": 40,
-      "pageViews": 50,
+      "users": 60,
+      "visits": 50,
+      "pageViews": 60,
       "daily": [
         {
           "date": "2026-06-02",
@@ -539,14 +539,20 @@
           "users": 20,
           "visits": 20,
           "pageViews": 20
+        },
+        {
+          "date": "2026-06-15",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         }
       ],
       "countries": [
         {
           "countryName": "CN",
-          "users": 40,
-          "visits": 40,
-          "pageViews": 40
+          "users": 50,
+          "visits": 50,
+          "pageViews": 50
         },
         {
           "countryName": "AU",
@@ -558,9 +564,9 @@
       "deviceTypes": [
         {
           "deviceType": "mobile",
-          "users": 40,
-          "visits": 40,
-          "pageViews": 40
+          "users": 50,
+          "visits": 50,
+          "pageViews": 50
         },
         {
           "deviceType": "desktop",
@@ -572,9 +578,9 @@
       "browsers": [
         {
           "userAgentBrowser": "Unknown",
-          "users": 30,
-          "visits": 30,
-          "pageViews": 30
+          "users": 40,
+          "visits": 40,
+          "pageViews": 40
         },
         {
           "userAgentBrowser": "ChromeHeadless",
@@ -750,9 +756,9 @@
       "id": "vesselboost",
       "name": "VesselBoost",
       "host": "vesselboost.neurodesk.org",
-      "users": 220,
+      "users": 230,
       "visits": 120,
-      "pageViews": 220,
+      "pageViews": 230,
       "daily": [
         {
           "date": "2026-05-19",
@@ -849,6 +855,12 @@
           "users": 30,
           "visits": 20,
           "pageViews": 30
+        },
+        {
+          "date": "2026-06-15",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "countries": [
@@ -869,6 +881,12 @@
           "users": 30,
           "visits": 20,
           "pageViews": 30
+        },
+        {
+          "countryName": "HK",
+          "users": 20,
+          "visits": 10,
+          "pageViews": 20
         },
         {
           "countryName": "IN",
@@ -901,12 +919,6 @@
           "pageViews": 10
         },
         {
-          "countryName": "HK",
-          "users": 10,
-          "visits": 10,
-          "pageViews": 10
-        },
-        {
           "countryName": "NO",
           "users": 10,
           "visits": 0,
@@ -922,9 +934,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 170,
+          "users": 180,
           "visits": 80,
-          "pageViews": 170
+          "pageViews": 180
         },
         {
           "deviceType": "mobile",
@@ -936,9 +948,9 @@
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
-          "users": 70,
+          "users": 80,
           "visits": 40,
-          "pageViews": 70
+          "pageViews": 80
         },
         {
           "userAgentBrowser": "Unknown",
