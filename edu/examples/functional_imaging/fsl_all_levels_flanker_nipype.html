@@ -710,9 +710,100 @@
 <p>Import all the relevant libraries needed for the preprocessing stage.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="c1"># numpy is pinned to 1.26.4 due to compatibility issues observed with newer versions</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">1.26.4</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">2.3.3</span> <span class="n">nibabel</span><span class="o">==</span><span class="mf">5.3.3</span> <span class="n">nilearn</span><span class="o">==</span><span class="mf">0.13.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># nipype 1.11.0's MultipleRegressDesign formats (N,1) numpy arrays with %e/%d,</span>
+<span class="c1"># which numpy&gt;=2 rejects ("only 0-dimensional arrays can be converted to Python</span>
+<span class="c1"># scalars"). There is no numpy&lt;2 wheel for Python 3.13, so rather than downgrade</span>
+<span class="c1"># numpy (a slow source build), keep numpy 2.x and fix the two affected lines.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">subprocess</span><span class="o">,</span><span class="w"> </span><span class="nn">glob</span><span class="o">,</span><span class="w"> </span><span class="nn">pathlib</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"pip"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span>
+                <span class="s2">"pandas==2.3.3"</span><span class="p">,</span> <span class="s2">"nibabel==5.3.3"</span><span class="p">,</span> <span class="s2">"nilearn==0.13.1"</span><span class="p">,</span> <span class="s2">"nipype==1.11.0"</span><span class="p">],</span>
+               <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_m</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">,</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="si">}</span><span class="s2">/lib/python*/site-packages/nipype/interfaces/fsl/model.py"</span><span class="p">)):</span>
+    <span class="n">_m</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">_m</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"val for val in convals"</span><span class="p">,</span> <span class="s2">"val for val in convals.ravel()"</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Patched nipype MultipleRegressDesign for numpy&gt;=2:"</span><span class="p">,</span> <span class="n">_m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pandas==2.3.3
+  Downloading pandas-2.3.3-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+Collecting nibabel==5.3.3
+  Downloading nibabel-5.3.3-py3-none-any.whl.metadata (9.1 kB)
+Requirement already satisfied: nilearn==0.13.1 in /opt/conda/lib/python3.13/site-packages (0.13.1)
+Requirement already satisfied: nipype==1.11.0 in /opt/conda/lib/python3.13/site-packages (1.11.0)
+Requirement already satisfied: numpy&gt;=1.26.0 in /opt/conda/lib/python3.13/site-packages (from pandas==2.3.3) (2.4.6)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/conda/lib/python3.13/site-packages (from pandas==2.3.3) (2.9.0.post0)
+Collecting pytz&gt;=2020.1 (from pandas==2.3.3)
+  Downloading pytz-2026.2-py2.py3-none-any.whl.metadata (22 kB)
+Requirement already satisfied: tzdata&gt;=2022.7 in /opt/conda/lib/python3.13/site-packages (from pandas==2.3.3) (2026.2)
+Requirement already satisfied: packaging&gt;=20 in /opt/conda/lib/python3.13/site-packages (from nibabel==5.3.3) (26.2)
+Requirement already satisfied: jinja2&gt;=3.1.2 in /opt/conda/lib/python3.13/site-packages (from nilearn==0.13.1) (3.1.6)
+Requirement already satisfied: joblib&gt;=1.2.0 in /opt/conda/lib/python3.13/site-packages (from nilearn==0.13.1) (1.5.3)
+Requirement already satisfied: requests&gt;=2.30.0 in /opt/conda/lib/python3.13/site-packages (from nilearn==0.13.1) (2.33.1)
+Requirement already satisfied: scikit-learn&gt;=1.4.0 in /opt/conda/lib/python3.13/site-packages (from nilearn==0.13.1) (1.9.0)
+Requirement already satisfied: scipy&gt;=1.9.0 in /opt/conda/lib/python3.13/site-packages (from nilearn==0.13.1) (1.17.1)
+Requirement already satisfied: acres&gt;=0.3.0 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (0.5.0)
+Requirement already satisfied: click&gt;=6.6.0 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (8.4.1)
+Requirement already satisfied: etelemetry&gt;=0.3.1 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (0.3.1)
+Requirement already satisfied: filelock&gt;=3.0.0 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (3.29.1)
+Requirement already satisfied: looseversion!=1.2,&gt;=1.0.1 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (1.3.0)
+Requirement already satisfied: lxml&gt;=4.9.1 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (6.1.1)
+Requirement already satisfied: networkx&gt;=2.5 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (3.6.1)
+Requirement already satisfied: prov&gt;=1.5.2 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (2.1.1)
+Requirement already satisfied: puremagic&gt;=1.15 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (2.2.0)
+Requirement already satisfied: pydot&gt;=1.2.3 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (4.0.1)
+Requirement already satisfied: rdflib&gt;=5.0.0 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (7.6.0)
+Requirement already satisfied: simplejson&gt;=3.8.0 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (4.1.1)
+Requirement already satisfied: traits&gt;=6.2 in /opt/conda/lib/python3.13/site-packages (from nipype==1.11.0) (7.1.0)
+Requirement already satisfied: ci-info&gt;=0.2 in /opt/conda/lib/python3.13/site-packages (from etelemetry&gt;=0.3.1-&gt;nipype==1.11.0) (0.4.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/conda/lib/python3.13/site-packages (from jinja2&gt;=3.1.2-&gt;nilearn==0.13.1) (3.0.3)
+Requirement already satisfied: pyparsing&gt;=3.1.0 in /opt/conda/lib/python3.13/site-packages (from pydot&gt;=1.2.3-&gt;nipype==1.11.0) (3.3.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.13/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas==2.3.3) (1.17.0)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /opt/conda/lib/python3.13/site-packages (from requests&gt;=2.30.0-&gt;nilearn==0.13.1) (3.4.7)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/conda/lib/python3.13/site-packages (from requests&gt;=2.30.0-&gt;nilearn==0.13.1) (3.13)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.26 in /opt/conda/lib/python3.13/site-packages (from requests&gt;=2.30.0-&gt;nilearn==0.13.1) (2.6.3)
+Requirement already satisfied: certifi&gt;=2023.5.7 in /opt/conda/lib/python3.13/site-packages (from requests&gt;=2.30.0-&gt;nilearn==0.13.1) (2026.4.22)
+Requirement already satisfied: narwhals&gt;=2.0.1 in /opt/conda/lib/python3.13/site-packages (from scikit-learn&gt;=1.4.0-&gt;nilearn==0.13.1) (2.22.0)
+Requirement already satisfied: threadpoolctl&gt;=3.5.0 in /opt/conda/lib/python3.13/site-packages (from scikit-learn&gt;=1.4.0-&gt;nilearn==0.13.1) (3.6.0)
+Downloading pandas-2.3.3-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.3 MB)
+?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/12.3 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+   ━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.2/12.3 MB</span> <span class=" -Color -Color-Red">71.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.3/12.3 MB</span> <span class=" -Color -Color-Red">26.8 MB/s</span>  <span class=" -Color -Color-Yellow">0:00:00</span>
+?25hDownloading nibabel-5.3.3-py3-none-any.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.3/3.3 MB</span> <span class=" -Color -Color-Red">53.9 MB/s</span>  <span class=" -Color -Color-Yellow">0:00:00</span>
+?25hDownloading pytz-2026.2-py2.py3-none-any.whl (510 kB)
+Installing collected packages: pytz, nibabel, pandas
+  Attempting uninstall: nibabel
+    Found existing installation: nibabel 5.4.2
+    Uninstalling nibabel-5.4.2:
+   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1/3</span> [nibabel]
+      Successfully uninstalled nibabel-5.4.2
+   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1/3</span> [nibabel]
+   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1/3</span> [nibabel]
+  Attempting uninstall: pandas
+    Found existing installation: pandas 3.0.3
+    Uninstalling pandas-3.0.3:
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+      Successfully uninstalled pandas-3.0.3
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/3</span> [pandas]
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3/3</span> [pandas]
+Successfully installed nibabel-5.3.3 pandas-2.3.3 pytz-2026.2
+Patched nipype MultipleRegressDesign for numpy&gt;=2: /opt/conda/lib/python3.13/site-packages/nipype/interfaces/fsl/model.py
 </pre></div>
 </div>
 </div>
@@ -806,10 +897,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays._slicers.OrthoSlicer at 0x7f15f950d400&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays._slicers.OrthoSlicer at 0x7a7688cd78c0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/f77ae20518ac0914d60116cde8ee69db48326831d9dfc43a85209638e2f549bc.png" src="../../_images/f77ae20518ac0914d60116cde8ee69db48326831d9dfc43a85209638e2f549bc.png">
+<img alt="../../_images/e410f4e350dddabaf002aa1bb819f4feed2e45f0f224a9af26d847e2aef6c30e.png" src="../../_images/e410f4e350dddabaf002aa1bb819f4feed2e45f0f224a9af26d847e2aef6c30e.png">
 </div>
 </div>
 <div class="cell tag_scroll-output docutils container">
@@ -829,506 +920,248 @@ Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects
 Compressing:   0%|                            | 0.00/23.0 [00:00&lt;?, ? Objects/s]
                                                                                 
 Receiving:   0%|                             | 0.00/2.15k [00:00&lt;?, ? Objects/s]
-
                                                                                 
-
 Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas/s]
                                                                                 
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
 [INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
 | 		datalad siblings -d "/home/jovyan/workspace/books/examples/functional_imaging/ds000102" enable -s s3-PRIVATE 
 <span class=" -Color -Color-Bold">install</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): /home/jovyan/workspace/books/examples/functional_imaging/ds000102 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">dataset</span>)
-
 Total:   0%|                                    | 0.00/618M [00:00&lt;?, ? Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:   0%|    | 50.8k/10.7M [00:00&lt;00:42, 251k Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:   0%|    | 33.3k/10.7M [00:00&lt;01:02, 170k Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:   1%|    | 85.6k/10.7M [00:00&lt;00:53, 199k Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:   1%|    | 68.2k/10.7M [00:00&lt;01:01, 173k Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:   2%|     | 173k/10.7M [00:00&lt;00:35, 298k Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:   2%|     | 173k/10.7M [00:00&lt;00:31, 336k Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:   3%|▏    | 347k/10.7M [00:00&lt;00:20, 508k Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:   3%|▏    | 347k/10.7M [00:00&lt;00:18, 551k Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:   6%|▎    | 695k/10.7M [00:01&lt;00:10, 920k Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:   7%|▎   | 730k/10.7M [00:00&lt;00:09, 1.05M Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:  13%|▍  | 1.36M/10.7M [00:01&lt;00:05, 1.68M Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:  14%|▍  | 1.46M/10.7M [00:01&lt;00:04, 1.95M Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:  24%|▋  | 2.57M/10.7M [00:01&lt;00:02, 3.02M Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:  27%|▊  | 2.94M/10.7M [00:01&lt;00:02, 3.76M Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:  47%|█▍ | 5.06M/10.7M [00:01&lt;00:00, 5.80M Bytes/s]
+Get sub-07/a .. 7_T1w.nii.gz:  55%|█▋ | 5.89M/10.7M [00:01&lt;00:00, 7.77M Bytes/s]
 
-Get sub-03/a .. 3_T1w.nii.gz:  65%|█▉ | 6.91M/10.7M [00:01&lt;00:00, 6.74M Bytes/s]
-
-Get sub-03/a .. 3_T1w.nii.gz:  84%|██▌| 9.04M/10.7M [00:02&lt;00:00, 7.74M Bytes/s]
-
-                                                                                
-Get sub-03/a .. 3_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
-
-Total:   2%|▍                          | 10.7M/618M [00:03&lt;03:30, 2.89M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  11%|▎  | 3.14M/28.8M [00:00&lt;00:01, 14.8M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  21%|▋  | 6.02M/28.8M [00:00&lt;00:01, 14.1M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  29%|▊  | 8.35M/28.8M [00:00&lt;00:01, 12.7M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  37%|█  | 10.5M/28.8M [00:00&lt;00:01, 11.9M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  45%|█▎ | 13.1M/28.8M [00:01&lt;00:01, 11.8M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  50%|█▍ | 14.3M/28.8M [00:01&lt;00:01, 11.9M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  54%|█▋ | 15.6M/28.8M [00:01&lt;00:01, 12.0M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  63%|█▉ | 18.2M/28.8M [00:01&lt;00:00, 12.0M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  67%|██ | 19.4M/28.8M [00:01&lt;00:00, 11.7M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  76%|██▎| 21.8M/28.8M [00:01&lt;00:00, 11.7M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  80%|██▍| 23.1M/28.8M [00:01&lt;00:00, 11.9M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  85%|██▌| 24.4M/28.8M [00:02&lt;00:00, 11.8M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  93%|██▊| 26.9M/28.8M [00:02&lt;00:00, 11.9M Bytes/s]
-
-                                                                                
-Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
-
-Total:   6%|█▋                         | 39.5M/618M [00:06&lt;01:34, 6.14M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  11%|▎  | 3.15M/28.8M [00:00&lt;00:01, 14.8M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  16%|▍  | 4.73M/28.8M [00:00&lt;00:02, 10.6M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  25%|▋  | 7.15M/28.8M [00:00&lt;00:01, 11.0M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  32%|▉  | 9.10M/28.8M [00:00&lt;00:01, 10.4M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  40%|█▏ | 11.4M/28.8M [00:01&lt;00:01, 10.6M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  47%|█▍ | 13.5M/28.8M [00:01&lt;00:01, 11.7M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  55%|█▋ | 15.8M/28.8M [00:01&lt;00:01, 10.1M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  62%|█▊ | 17.9M/28.8M [00:01&lt;00:01, 10.2M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  69%|██ | 19.9M/28.8M [00:01&lt;00:00, 9.91M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  78%|██▎| 22.4M/28.8M [00:02&lt;00:00, 10.5M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  85%|██▌| 24.4M/28.8M [00:02&lt;00:00, 12.1M Bytes/s]
-
-Get sub-03/f .. _bold.nii.gz:  90%|██▋| 26.0M/28.8M [00:02&lt;00:00, 10.5M Bytes/s]
-
-                                                                                
-Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
-Total:  11%|██▉                        | 68.2M/618M [00:09&lt;01:15, 7.31M Bytes/s]
-
-Get sub-09/a .. 9_T1w.nii.gz:   0%|            | 0.00/10.8M [00:00&lt;?, ? Bytes/s]
-
-Get sub-09/a .. 9_T1w.nii.gz:  29%|▉  | 3.15M/10.8M [00:00&lt;00:00, 15.0M Bytes/s]
-
-Get sub-09/a .. 9_T1w.nii.gz:  54%|█▌ | 5.82M/10.8M [00:00&lt;00:00, 13.3M Bytes/s]
-
-Get sub-09/a .. 9_T1w.nii.gz:  76%|██▎| 8.20M/10.8M [00:00&lt;00:00, 12.4M Bytes/s]
-
-Get sub-09/a .. 9_T1w.nii.gz:  99%|██▉| 10.7M/10.8M [00:00&lt;00:00, 12.2M Bytes/s]
-                                                                                
-Get sub-09/a .. 9_T1w.nii.gz:   0%|            | 0.00/10.8M [00:00&lt;?, ? Bytes/s]
-                                                                                
-
-Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:   9%|▎  | 2.64M/29.2M [00:00&lt;00:01, 25.7M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  25%|▊  | 7.36M/29.2M [00:00&lt;00:02, 10.7M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  33%|▉  | 9.57M/29.2M [00:00&lt;00:01, 10.8M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  40%|█▏ | 11.8M/29.2M [00:01&lt;00:01, 10.6M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  48%|█▍ | 13.9M/29.2M [00:01&lt;00:01, 12.3M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  56%|█▋ | 16.2M/29.2M [00:01&lt;00:01, 10.2M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  62%|█▊ | 18.2M/29.2M [00:01&lt;00:00, 11.8M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  70%|██ | 20.3M/29.2M [00:01&lt;00:00, 11.2M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  79%|██▎| 23.1M/29.2M [00:02&lt;00:00, 10.1M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  87%|██▌| 25.4M/29.2M [00:02&lt;00:00, 10.4M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  92%|██▋| 26.7M/29.2M [00:02&lt;00:00, 10.7M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz: 100%|██▉| 29.2M/29.2M [00:02&lt;00:00, 11.1M Bytes/s]
-                                                                                
-Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-Total:  18%|████▉                       | 108M/618M [00:13&lt;01:04, 7.96M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:   5%|▏  | 1.33M/29.2M [00:00&lt;00:02, 13.1M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  10%|▎  | 2.89M/29.2M [00:00&lt;00:01, 14.6M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  15%|▍  | 4.53M/29.2M [00:00&lt;00:01, 15.4M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  24%|▋  | 7.05M/29.2M [00:00&lt;00:02, 10.2M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  29%|▉  | 8.61M/29.2M [00:00&lt;00:01, 11.4M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  35%|█  | 10.4M/29.2M [00:00&lt;00:01, 10.1M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  45%|█▎ | 13.3M/29.2M [00:01&lt;00:01, 9.65M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  52%|█▌ | 15.3M/29.2M [00:01&lt;00:01, 11.5M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  60%|█▊ | 17.6M/29.2M [00:01&lt;00:01, 10.4M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  68%|██ | 19.9M/29.2M [00:01&lt;00:00, 9.78M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  76%|██▎| 22.3M/29.2M [00:02&lt;00:00, 10.2M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  84%|██▌| 24.5M/29.2M [00:02&lt;00:00, 10.2M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  91%|██▋| 26.5M/29.2M [00:02&lt;00:00, 12.0M Bytes/s]
-
-Get sub-09/f .. _bold.nii.gz:  99%|██▉| 29.1M/29.2M [00:02&lt;00:00, 12.0M Bytes/s]
-
-                                                                                
-Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-
+Get sub-07/a .. 7_T1w.nii.gz:  89%|██▋| 9.57M/10.7M [00:01&lt;00:00, 10.4M Bytes/s]
                                                                                 
 
 Get sub-07/a .. 7_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
 
-Get sub-07/a .. 7_T1w.nii.gz:  19%|▌  | 2.07M/10.7M [00:00&lt;00:00, 20.4M Bytes/s]
-
-Get sub-07/a .. 7_T1w.nii.gz:  43%|█▎ | 4.60M/10.7M [00:00&lt;00:00, 12.7M Bytes/s]
-
-Get sub-07/a .. 7_T1w.nii.gz:  57%|█▋ | 6.09M/10.7M [00:00&lt;00:00, 13.3M Bytes/s]
-
-Get sub-07/a .. 7_T1w.nii.gz:  81%|██▍| 8.68M/10.7M [00:00&lt;00:00, 12.9M Bytes/s]
-
-                                                                                
-Get sub-07/a .. 7_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
-                                                                                
+Total:   2%|▍                          | 10.7M/618M [00:02&lt;02:44, 3.68M Bytes/s]
 
 Get sub-07/f .. _bold.nii.gz:   0%|            | 0.00/28.9M [00:00&lt;?, ? Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:   7%|▏  | 1.91M/28.9M [00:00&lt;00:01, 18.9M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  13%|▍  | 3.74M/28.9M [00:00&lt;00:00, 25.6M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  16%|▍  | 4.61M/28.9M [00:00&lt;00:02, 12.1M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  23%|▋  | 6.65M/28.9M [00:00&lt;00:00, 27.3M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  21%|▋  | 6.15M/28.9M [00:00&lt;00:01, 13.1M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  36%|█  | 10.4M/28.9M [00:00&lt;00:01, 15.4M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  29%|▊  | 8.37M/28.9M [00:00&lt;00:01, 11.9M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  49%|█▍ | 14.1M/28.9M [00:00&lt;00:00, 16.6M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  38%|█▏ | 10.9M/28.9M [00:00&lt;00:01, 12.0M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  61%|█▊ | 17.8M/28.9M [00:00&lt;00:00, 17.3M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  45%|█▎ | 13.1M/28.9M [00:01&lt;00:01, 11.5M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  74%|██▏| 21.5M/28.9M [00:01&lt;00:00, 19.2M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  54%|█▌ | 15.6M/28.9M [00:01&lt;00:01, 11.5M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  87%|██▌| 25.2M/28.9M [00:01&lt;00:00, 17.8M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  63%|█▉ | 18.2M/28.9M [00:01&lt;00:00, 11.8M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  72%|██▏| 20.7M/28.9M [00:01&lt;00:00, 11.9M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  80%|██▍| 23.2M/28.9M [00:01&lt;00:00, 11.8M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  89%|██▋| 25.8M/28.9M [00:02&lt;00:00, 12.0M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  96%|██▉| 27.9M/28.9M [00:02&lt;00:00, 11.4M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  94%|██▊| 27.3M/28.9M [00:01&lt;00:00, 18.2M Bytes/s]
 
                                                                                 
 Get sub-07/f .. _bold.nii.gz:   0%|            | 0.00/28.9M [00:00&lt;?, ? Bytes/s]
-Total:  29%|████████                    | 177M/618M [00:20&lt;00:51, 8.55M Bytes/s]
+Total:   6%|█▋                         | 39.7M/618M [00:04&lt;01:10, 8.16M Bytes/s]
 
 Get sub-07/f .. _bold.nii.gz:   0%|            | 0.00/29.0M [00:00&lt;?, ? Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:   5%|▏  | 1.53M/29.0M [00:00&lt;00:01, 15.1M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  13%|▍  | 3.74M/29.0M [00:00&lt;00:01, 23.0M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  11%|▎  | 3.12M/29.0M [00:00&lt;00:01, 15.5M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  21%|▋  | 6.13M/29.0M [00:00&lt;00:01, 12.7M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  22%|▋  | 6.25M/29.0M [00:00&lt;00:01, 12.9M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  33%|▉  | 9.53M/29.0M [00:00&lt;00:01, 16.1M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  31%|▉  | 8.94M/29.0M [00:00&lt;00:01, 12.8M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  40%|█▏ | 11.6M/29.0M [00:00&lt;00:01, 13.9M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  39%|█▏ | 11.2M/29.0M [00:00&lt;00:01, 12.1M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  53%|█▌ | 15.3M/29.0M [00:00&lt;00:00, 15.6M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  48%|█▍ | 13.9M/29.0M [00:01&lt;00:01, 12.2M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  66%|█▉ | 19.0M/29.0M [00:01&lt;00:00, 17.4M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  53%|█▌ | 15.5M/29.0M [00:01&lt;00:01, 10.7M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  74%|██▏| 21.3M/29.0M [00:01&lt;00:00, 18.2M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  58%|█▋ | 16.7M/29.0M [00:01&lt;00:01, 10.7M Bytes/s]
+Get sub-07/f .. _bold.nii.gz:  88%|██▋| 25.6M/29.0M [00:01&lt;00:00, 19.0M Bytes/s]
 
-Get sub-07/f .. _bold.nii.gz:  63%|█▉ | 18.2M/29.0M [00:01&lt;00:00, 11.4M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  70%|██ | 20.3M/29.0M [00:01&lt;00:00, 11.0M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  78%|██▎| 22.7M/29.0M [00:01&lt;00:00, 11.2M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  86%|██▌| 25.0M/29.0M [00:02&lt;00:00, 11.1M Bytes/s]
-
-Get sub-07/f .. _bold.nii.gz:  93%|██▊| 26.9M/29.0M [00:02&lt;00:00, 10.4M Bytes/s]
+Get sub-07/f .. _bold.nii.gz: 100%|██▉| 28.9M/29.0M [00:01&lt;00:00, 17.9M Bytes/s]
                                                                                 
 Get sub-07/f .. _bold.nii.gz:   0%|            | 0.00/29.0M [00:00&lt;?, ? Bytes/s]
+Total:  11%|██▉                        | 68.6M/618M [00:06&lt;00:55, 9.94M Bytes/s]
+
+Get sub-03/a .. 3_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
+
+Get sub-03/a .. 3_T1w.nii.gz:  35%|█  | 3.74M/10.7M [00:00&lt;00:00, 29.8M Bytes/s]
+
+Get sub-03/a .. 3_T1w.nii.gz:  69%|██ | 7.41M/10.7M [00:00&lt;00:00, 17.5M Bytes/s]
+
+                                                                                
+Get sub-03/a .. 3_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
+                                                                                
+
+Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  13%|▍  | 3.74M/28.8M [00:00&lt;00:00, 26.0M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  22%|▋  | 6.40M/28.8M [00:00&lt;00:00, 26.3M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  38%|█▏ | 10.9M/28.8M [00:00&lt;00:00, 20.9M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  51%|█▌ | 14.7M/28.8M [00:00&lt;00:00, 16.6M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  65%|█▉ | 18.6M/28.8M [00:00&lt;00:00, 17.5M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  78%|██▎| 22.4M/28.8M [00:01&lt;00:00, 18.0M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  91%|██▋| 26.1M/28.8M [00:01&lt;00:00, 15.6M Bytes/s]
+                                                                                
+Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
+Total:  17%|████▉                       | 108M/618M [00:09&lt;00:45, 11.2M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  13%|▍  | 3.75M/28.8M [00:00&lt;00:00, 26.1M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  26%|▊  | 7.45M/28.8M [00:00&lt;00:01, 17.9M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  38%|█▏ | 11.1M/28.8M [00:00&lt;00:00, 18.0M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  51%|█▌ | 14.6M/28.8M [00:00&lt;00:00, 18.0M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  63%|█▉ | 18.1M/28.8M [00:00&lt;00:00, 21.7M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  72%|██▏| 20.7M/28.8M [00:01&lt;00:00, 18.3M Bytes/s]
+
+Get sub-03/f .. _bold.nii.gz:  84%|██▌| 24.2M/28.8M [00:01&lt;00:00, 17.8M Bytes/s]
+
+                                                                                
+Get sub-03/f .. _bold.nii.gz:   0%|            | 0.00/28.8M [00:00&lt;?, ? Bytes/s]
                                                                                 
 
 Get sub-05/a .. 5_T1w.nii.gz:   0%|            | 0.00/10.8M [00:00&lt;?, ? Bytes/s]
 
-Get sub-05/a .. 5_T1w.nii.gz:  15%|▍  | 1.60M/10.8M [00:00&lt;00:00, 15.6M Bytes/s]
+Get sub-05/a .. 5_T1w.nii.gz:  35%|█  | 3.76M/10.8M [00:00&lt;00:00, 19.0M Bytes/s]
 
-Get sub-05/a .. 5_T1w.nii.gz:  43%|█▎ | 4.58M/10.8M [00:00&lt;00:00, 12.5M Bytes/s]
+Get sub-05/a .. 5_T1w.nii.gz:  69%|██ | 7.38M/10.8M [00:00&lt;00:00, 18.6M Bytes/s]
 
-Get sub-05/a .. 5_T1w.nii.gz:  66%|█▉ | 7.09M/10.8M [00:00&lt;00:00, 12.2M Bytes/s]
-
-Get sub-05/a .. 5_T1w.nii.gz:  80%|██▍| 8.64M/10.8M [00:00&lt;00:00, 12.6M Bytes/s]
+Get sub-05/a .. 5_T1w.nii.gz:  99%|██▉| 10.6M/10.8M [00:00&lt;00:00, 20.1M Bytes/s]
 
                                                                                 
 Get sub-05/a .. 5_T1w.nii.gz:   0%|            | 0.00/10.8M [00:00&lt;?, ? Bytes/s]
+Total:  24%|██████▋                     | 148M/618M [00:12&lt;00:40, 11.7M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:   0%|            | 0.00/29.7M [00:00&lt;?, ? Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  13%|▍  | 3.73M/29.7M [00:00&lt;00:00, 31.0M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  25%|▊  | 7.46M/29.7M [00:00&lt;00:01, 17.4M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  37%|█  | 11.1M/29.7M [00:00&lt;00:01, 17.6M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  49%|█▍ | 14.7M/29.7M [00:00&lt;00:00, 17.8M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  61%|█▊ | 18.1M/29.7M [00:01&lt;00:00, 17.6M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  73%|██▏| 21.8M/29.7M [00:01&lt;00:00, 20.5M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  86%|██▌| 25.5M/29.7M [00:01&lt;00:00, 17.5M Bytes/s]
+
+Get sub-05/f .. _bold.nii.gz:  97%|██▉| 28.7M/29.7M [00:01&lt;00:00, 20.0M Bytes/s]
+
+                                                                                
+Get sub-05/f .. _bold.nii.gz:   0%|            | 0.00/29.7M [00:00&lt;?, ? Bytes/s]
                                                                                 
 
 Get sub-05/f .. _bold.nii.gz:   0%|            | 0.00/29.7M [00:00&lt;?, ? Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  11%|▎  | 3.14M/29.7M [00:00&lt;00:01, 15.7M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  13%|▍  | 3.76M/29.7M [00:00&lt;00:01, 19.0M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  22%|▋  | 6.60M/29.7M [00:00&lt;00:01, 14.5M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  25%|▊  | 7.47M/29.7M [00:00&lt;00:01, 18.9M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  28%|▊  | 8.32M/29.7M [00:00&lt;00:01, 11.6M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  38%|█▏ | 11.2M/29.7M [00:00&lt;00:00, 18.8M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  38%|█▏ | 11.3M/29.7M [00:00&lt;00:01, 12.8M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  50%|█▍ | 14.8M/29.7M [00:00&lt;00:00, 22.3M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  44%|█▎ | 13.2M/29.7M [00:01&lt;00:01, 11.4M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  63%|█▉ | 18.6M/29.7M [00:00&lt;00:00, 17.9M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  53%|█▌ | 15.8M/29.7M [00:01&lt;00:01, 11.3M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  72%|██▏| 21.3M/29.7M [00:01&lt;00:00, 19.7M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  59%|█▊ | 17.4M/29.7M [00:01&lt;00:01, 10.3M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  85%|██▌| 25.2M/29.7M [00:01&lt;00:00, 16.5M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  69%|██ | 20.5M/29.7M [00:01&lt;00:00, 11.6M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  77%|██▎| 22.7M/29.7M [00:01&lt;00:00, 11.4M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  86%|██▌| 25.5M/29.7M [00:02&lt;00:00, 12.1M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  92%|██▊| 27.2M/29.7M [00:02&lt;00:00, 10.9M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  97%|██▉| 28.6M/29.7M [00:02&lt;00:00, 11.4M Bytes/s]
+Get sub-05/f .. _bold.nii.gz:  94%|██▊| 27.9M/29.7M [00:01&lt;00:00, 18.5M Bytes/s]
 
                                                                                 
 Get sub-05/f .. _bold.nii.gz:   0%|            | 0.00/29.7M [00:00&lt;?, ? Bytes/s]
-Total:  40%|███████████▏                | 246M/618M [00:27&lt;00:41, 8.90M Bytes/s]
+Total:  33%|█████████▎                  | 207M/618M [00:16&lt;00:33, 12.4M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:   0%|            | 0.00/29.7M [00:00&lt;?, ? Bytes/s]
+Get sub-09/a .. 9_T1w.nii.gz:   0%|            | 0.00/10.8M [00:00&lt;?, ? Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  11%|▎  | 3.14M/29.7M [00:00&lt;00:01, 15.0M Bytes/s]
+Get sub-09/a .. 9_T1w.nii.gz:  35%|█  | 3.74M/10.8M [00:00&lt;00:00, 21.1M Bytes/s]
 
-Get sub-05/f .. _bold.nii.gz:  19%|▌  | 5.74M/29.7M [00:00&lt;00:01, 13.3M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  27%|▊  | 8.15M/29.7M [00:00&lt;00:01, 12.6M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  32%|▉  | 9.53M/29.7M [00:00&lt;00:01, 12.6M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  40%|█▏ | 11.7M/29.7M [00:00&lt;00:01, 11.8M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  44%|█▎ | 13.2M/29.7M [00:01&lt;00:01, 12.4M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  53%|█▌ | 15.6M/29.7M [00:01&lt;00:01, 11.8M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  57%|█▋ | 17.0M/29.7M [00:01&lt;00:01, 12.2M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  62%|█▊ | 18.3M/29.7M [00:01&lt;00:00, 12.3M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  71%|██▏| 21.1M/29.7M [00:01&lt;00:00, 12.6M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  80%|██▍| 23.7M/29.7M [00:01&lt;00:00, 12.5M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  89%|██▋| 26.3M/29.7M [00:02&lt;00:00, 12.4M Bytes/s]
-
-Get sub-05/f .. _bold.nii.gz:  97%|██▉| 28.8M/29.7M [00:02&lt;00:00, 12.3M Bytes/s]
+Get sub-09/a .. 9_T1w.nii.gz:  68%|██ | 7.36M/10.8M [00:00&lt;00:00, 18.0M Bytes/s]
 
                                                                                 
-Get sub-05/f .. _bold.nii.gz:   0%|            | 0.00/29.7M [00:00&lt;?, ? Bytes/s]
+Get sub-09/a .. 9_T1w.nii.gz:   0%|            | 0.00/10.8M [00:00&lt;?, ? Bytes/s]
 
                                                                                 
 
-Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  14%|▍  | 1.51M/10.6M [00:00&lt;00:00, 15.1M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  13%|▍  | 3.76M/29.2M [00:00&lt;00:01, 19.0M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  29%|▊  | 3.07M/10.6M [00:00&lt;00:00, 15.3M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  26%|▊  | 7.45M/29.2M [00:00&lt;00:01, 18.8M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  44%|█▎ | 4.66M/10.6M [00:00&lt;00:00, 10.6M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  38%|█▏ | 11.1M/29.2M [00:00&lt;00:00, 24.1M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  59%|█▊ | 6.25M/10.6M [00:00&lt;00:00, 12.2M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  51%|█▌ | 14.9M/29.2M [00:00&lt;00:00, 17.8M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  85%|██▌| 8.95M/10.6M [00:00&lt;00:00, 12.5M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  64%|█▉ | 18.7M/29.2M [00:00&lt;00:00, 18.0M Bytes/s]
 
-                                                                                
-Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-                                                                                
+Get sub-09/f .. _bold.nii.gz:  74%|██▏| 21.7M/29.2M [00:01&lt;00:00, 20.5M Bytes/s]
 
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.81M/28.1M [00:00&lt;00:01, 14.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  16%|▍  | 4.48M/28.1M [00:00&lt;00:02, 11.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  23%|▋  | 6.50M/28.1M [00:00&lt;00:01, 13.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  31%|▉  | 8.76M/28.1M [00:00&lt;00:01, 12.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  40%|█▏ | 11.1M/28.1M [00:01&lt;00:01, 9.76M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  45%|█▎ | 12.6M/28.1M [00:01&lt;00:01, 10.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  53%|█▌ | 14.8M/28.1M [00:01&lt;00:01, 10.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  60%|█▊ | 16.8M/28.1M [00:01&lt;00:01, 10.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  68%|██ | 19.1M/28.1M [00:01&lt;00:00, 10.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  76%|██▎| 21.3M/28.1M [00:01&lt;00:00, 10.4M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  83%|██▍| 23.3M/28.1M [00:02&lt;00:00, 10.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  92%|██▋| 25.7M/28.1M [00:02&lt;00:00, 10.6M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  99%|██▉| 27.8M/28.1M [00:02&lt;00:00, 10.4M Bytes/s]
-                                                                                
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-                                                                                
-
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   5%|▏  | 1.31M/28.1M [00:00&lt;00:02, 13.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  10%|▎  | 2.93M/28.1M [00:00&lt;00:01, 14.9M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  16%|▍  | 4.46M/28.1M [00:00&lt;00:01, 15.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  24%|▋  | 6.82M/28.1M [00:00&lt;00:02, 10.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  29%|▊  | 8.15M/28.1M [00:00&lt;00:01, 10.9M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  39%|█▏ | 11.1M/28.1M [00:01&lt;00:01, 10.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  46%|█▍ | 13.0M/28.1M [00:01&lt;00:01, 11.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  55%|█▋ | 15.6M/28.1M [00:01&lt;00:01, 10.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  64%|█▉ | 18.0M/28.1M [00:01&lt;00:00, 10.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  72%|██▏| 20.3M/28.1M [00:01&lt;00:00, 12.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  81%|██▍| 22.7M/28.1M [00:02&lt;00:00, 10.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  89%|██▋| 25.0M/28.1M [00:02&lt;00:00, 10.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  98%|██▉| 27.5M/28.1M [00:02&lt;00:00, 10.8M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  86%|██▌| 25.0M/29.2M [00:01&lt;00:00, 18.8M Bytes/s]
 
                                                                                 
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Total:  55%|███████████████▌            | 343M/618M [00:37&lt;00:30, 9.13M Bytes/s]
-
-Get sub-08/a .. 8_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-
-Get sub-08/a .. 8_T1w.nii.gz:  24%|▋  | 2.54M/10.6M [00:00&lt;00:00, 25.3M Bytes/s]
-
-Get sub-08/a .. 8_T1w.nii.gz:  57%|█▋ | 6.07M/10.6M [00:00&lt;00:00, 13.5M Bytes/s]
-
-Get sub-08/a .. 8_T1w.nii.gz:  79%|██▍| 8.38M/10.6M [00:00&lt;00:00, 12.5M Bytes/s]
-
-                                                                                
-Get sub-08/a .. 8_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
                                                                                 
 
-Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
+Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
 
-Get sub-08/f .. _bold.nii.gz:  11%|▎  | 3.14M/28.6M [00:00&lt;00:01, 14.8M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  13%|▍  | 3.76M/29.2M [00:00&lt;00:01, 18.8M Bytes/s]
 
-Get sub-08/f .. _bold.nii.gz:  21%|▋  | 6.00M/28.6M [00:00&lt;00:01, 14.2M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  25%|▊  | 7.44M/29.2M [00:00&lt;00:01, 18.6M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  38%|█▏ | 11.2M/29.2M [00:00&lt;00:00, 18.8M Bytes/s]
 
-Get sub-08/f .. _bold.nii.gz:  30%|▉  | 8.48M/28.6M [00:00&lt;00:01, 13.0M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  51%|█▌ | 14.9M/29.2M [00:00&lt;00:00, 18.7M Bytes/s]
 
-Get sub-08/f .. _bold.nii.gz:  34%|█  | 9.87M/28.6M [00:00&lt;00:01, 12.9M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  63%|█▉ | 18.5M/29.2M [00:00&lt;00:00, 18.5M Bytes/s]
 
-Get sub-08/f .. _bold.nii.gz:  43%|█▎ | 12.3M/28.6M [00:00&lt;00:01, 12.4M Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  74%|██▏| 21.7M/29.2M [00:01&lt;00:00, 21.3M Bytes/s]
 
-Get sub-08/f .. _bold.nii.gz:  51%|█▌ | 14.7M/28.6M [00:01&lt;00:01, 12.0M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  56%|█▋ | 16.0M/28.6M [00:01&lt;00:01, 12.2M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  61%|█▊ | 17.4M/28.6M [00:01&lt;00:00, 12.3M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  69%|██ | 19.8M/28.6M [00:01&lt;00:00, 11.9M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  74%|██▏| 21.2M/28.6M [00:01&lt;00:00, 12.3M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  78%|██▎| 22.4M/28.6M [00:01&lt;00:00, 12.0M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  83%|██▍| 23.7M/28.6M [00:01&lt;00:00, 12.1M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  87%|██▌| 25.0M/28.6M [00:02&lt;00:00, 12.2M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  92%|██▊| 26.3M/28.6M [00:02&lt;00:00, 12.3M Bytes/s]
-Get sub-08/f .. _bold.nii.gz:  96%|██▉| 27.6M/28.6M [00:02&lt;00:00, 12.2M Bytes/s]
-                                                                                
-Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
+Get sub-09/f .. _bold.nii.gz:  89%|██▋| 26.1M/29.2M [00:01&lt;00:00, 18.0M Bytes/s]
 
                                                                                 
-
-Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  11%|▎  | 3.15M/28.6M [00:00&lt;00:01, 14.7M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  17%|▍  | 4.73M/28.6M [00:00&lt;00:02, 10.5M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  25%|▋  | 7.12M/28.6M [00:00&lt;00:01, 14.3M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  32%|▉  | 9.12M/28.6M [00:00&lt;00:01, 9.77M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  39%|█▏ | 11.1M/28.6M [00:00&lt;00:01, 11.8M Bytes/s]
-
-
-Get sub-08/f .. _bold.nii.gz:  46%|█▍ | 13.3M/28.6M [00:01&lt;00:01, 11.3M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  55%|█▋ | 15.9M/28.6M [00:01&lt;00:01, 9.81M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  63%|█▉ | 18.0M/28.6M [00:01&lt;00:00, 11.8M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  70%|██ | 20.1M/28.6M [00:01&lt;00:00, 11.3M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  79%|██▎| 22.6M/28.6M [00:01&lt;00:00, 11.3M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  84%|██▌| 24.0M/28.6M [00:02&lt;00:00, 9.90M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  92%|██▋| 26.2M/28.6M [00:02&lt;00:00, 10.0M Bytes/s]
-
-Get sub-08/f .. _bold.nii.gz:  99%|██▉| 28.5M/28.6M [00:02&lt;00:00, 10.2M Bytes/s]
-                                                                                
-Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
-                                                                                
+Get sub-09/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
+Total:  45%|████████████▌               | 276M/618M [00:21&lt;00:26, 13.0M Bytes/s]
 
 Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  20%|▌  | 2.19M/10.7M [00:00&lt;00:00, 21.8M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  35%|█  | 3.76M/10.7M [00:00&lt;00:00, 18.9M Bytes/s]
 
-Get sub-02/a .. 2_T1w.nii.gz:  42%|█▎ | 4.53M/10.7M [00:00&lt;00:00, 13.0M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  57%|█▋ | 6.07M/10.7M [00:00&lt;00:00, 13.0M Bytes/s]
-
-Get sub-02/a .. 2_T1w.nii.gz:  81%|██▍| 8.68M/10.7M [00:00&lt;00:00, 12.7M Bytes/s]
+Get sub-02/a .. 2_T1w.nii.gz:  69%|██ | 7.36M/10.7M [00:00&lt;00:00, 18.4M Bytes/s]
 
                                                                                 
 Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
@@ -1336,235 +1169,282 @@ Get sub-02/a .. 2_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes
 
 Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  10%|▎  | 2.78M/29.2M [00:00&lt;00:00, 27.7M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  13%|▍  | 3.74M/29.2M [00:00&lt;00:01, 20.0M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  21%|▌  | 6.03M/29.2M [00:00&lt;00:01, 13.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  25%|▊  | 7.41M/29.2M [00:00&lt;00:01, 18.5M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  29%|▊  | 8.37M/29.2M [00:00&lt;00:01, 12.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  38%|█▏ | 11.1M/29.2M [00:00&lt;00:00, 18.5M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  37%|█  | 10.8M/29.2M [00:00&lt;00:01, 12.0M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  49%|█▍ | 14.4M/29.2M [00:00&lt;00:00, 22.2M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  42%|█▏ | 12.1M/29.2M [00:00&lt;00:01, 12.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  58%|█▋ | 17.0M/29.2M [00:00&lt;00:00, 18.3M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  50%|█▌ | 14.6M/29.2M [00:01&lt;00:01, 12.0M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  74%|██▏| 21.6M/29.2M [00:01&lt;00:00, 19.4M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  59%|█▊ | 17.2M/29.2M [00:01&lt;00:00, 12.1M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  68%|██ | 19.7M/29.2M [00:01&lt;00:00, 12.0M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  75%|██▎| 22.0M/29.2M [00:01&lt;00:00, 11.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  79%|██▍| 23.2M/29.2M [00:01&lt;00:00, 11.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  87%|██▌| 25.5M/29.2M [00:02&lt;00:00, 11.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  92%|██▊| 26.9M/29.2M [00:02&lt;00:00, 11.8M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  89%|██▋| 26.0M/29.2M [00:01&lt;00:00, 15.5M Bytes/s]
 
                                                                                 
 Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-Total:  73%|████████████████████▍       | 451M/618M [00:48&lt;00:17, 9.33M Bytes/s]
+                                                                                
 
 Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:   6%|▏  | 1.62M/29.2M [00:00&lt;00:01, 16.1M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  13%|▍  | 3.76M/29.2M [00:00&lt;00:01, 18.7M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  16%|▍  | 4.66M/29.2M [00:00&lt;00:02, 10.7M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  24%|▋  | 6.87M/29.2M [00:00&lt;00:01, 17.0M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  24%|▋  | 7.01M/29.2M [00:00&lt;00:02, 10.9M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  36%|█  | 10.5M/29.2M [00:00&lt;00:01, 17.5M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  31%|▉  | 9.02M/29.2M [00:00&lt;00:01, 10.3M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  48%|█▍ | 14.1M/29.2M [00:00&lt;00:00, 21.7M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  35%|█  | 10.1M/29.2M [00:00&lt;00:01, 10.5M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  60%|█▊ | 17.5M/29.2M [00:00&lt;00:00, 16.8M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  39%|█▏ | 11.3M/29.2M [00:01&lt;00:01, 10.4M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  73%|██▏| 21.2M/29.2M [00:01&lt;00:00, 17.2M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  45%|█▎ | 13.1M/29.2M [00:01&lt;00:01, 9.80M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  84%|██▌| 24.6M/29.2M [00:01&lt;00:00, 20.4M Bytes/s]
 
-Get sub-02/f .. _bold.nii.gz:  52%|█▌ | 15.1M/29.2M [00:01&lt;00:01, 11.8M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  60%|█▊ | 17.5M/29.2M [00:01&lt;00:01, 10.3M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  66%|█▉ | 19.3M/29.2M [00:01&lt;00:00, 11.6M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  75%|██▎| 22.0M/29.2M [00:02&lt;00:00, 9.72M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  83%|██▍| 24.2M/29.2M [00:02&lt;00:00, 9.96M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  87%|██▌| 25.5M/29.2M [00:02&lt;00:00, 10.5M Bytes/s]
-
-Get sub-02/f .. _bold.nii.gz:  95%|██▊| 27.8M/29.2M [00:02&lt;00:00, 10.5M Bytes/s]
+Get sub-02/f .. _bold.nii.gz:  95%|██▊| 27.7M/29.2M [00:01&lt;00:00, 17.8M Bytes/s]
 
                                                                                 
 Get sub-02/f .. _bold.nii.gz:   0%|            | 0.00/29.2M [00:00&lt;?, ? Bytes/s]
-Total:  78%|█████████████████████▋      | 480M/618M [00:51&lt;00:14, 9.32M Bytes/s]
+                                                                                
 
 Get sub-04/a .. 4_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
 
-Get sub-04/a .. 4_T1w.nii.gz:  14%|▍  | 1.55M/10.7M [00:00&lt;00:00, 15.3M Bytes/s]
+Get sub-04/a .. 4_T1w.nii.gz:  35%|█  | 3.74M/10.7M [00:00&lt;00:00, 18.8M Bytes/s]
 
-Get sub-04/a .. 4_T1w.nii.gz:  29%|▉  | 3.15M/10.7M [00:00&lt;00:00, 14.9M Bytes/s]
-
-Get sub-04/a .. 4_T1w.nii.gz:  59%|█▊ | 6.30M/10.7M [00:00&lt;00:00, 12.7M Bytes/s]
-
-Get sub-04/a .. 4_T1w.nii.gz:  83%|██▍| 8.92M/10.7M [00:00&lt;00:00, 12.6M Bytes/s]
+Get sub-04/a .. 4_T1w.nii.gz:  69%|██ | 7.46M/10.7M [00:00&lt;00:00, 18.7M Bytes/s]
 
                                                                                 
-
 Get sub-04/a .. 4_T1w.nii.gz:   0%|            | 0.00/10.7M [00:00&lt;?, ? Bytes/s]
-                                                                                
+Total:  58%|████████████████▏           | 356M/618M [00:26&lt;00:19, 13.4M Bytes/s]
+
 Get sub-04/f .. _bold.nii.gz:   0%|            | 0.00/29.1M [00:00&lt;?, ? Bytes/s]
 
-Get sub-04/f .. _bold.nii.gz:   8%|▏  | 2.39M/29.1M [00:00&lt;00:01, 23.9M Bytes/s]
+Get sub-04/f .. _bold.nii.gz:  13%|▍  | 3.74M/29.1M [00:00&lt;00:00, 35.8M Bytes/s]
 
-Get sub-04/f .. _bold.nii.gz:  20%|▌  | 5.72M/29.1M [00:00&lt;00:01, 12.8M Bytes/s]
+Get sub-04/f .. _bold.nii.gz:  26%|▊  | 7.42M/29.1M [00:00&lt;00:01, 16.9M Bytes/s]
 
-Get sub-04/f .. _bold.nii.gz:  28%|▊  | 8.15M/29.1M [00:00&lt;00:01, 12.2M Bytes/s]
+Get sub-04/f .. _bold.nii.gz:  38%|█▏ | 11.1M/29.1M [00:00&lt;00:01, 17.7M Bytes/s]
 
-Get sub-04/f .. _bold.nii.gz:  33%|▉  | 9.59M/29.1M [00:00&lt;00:01, 12.7M Bytes/s]
+Get sub-04/f .. _bold.nii.gz:  51%|█▌ | 14.8M/29.1M [00:00&lt;00:00, 18.0M Bytes/s]
 
-Get sub-04/f .. _bold.nii.gz:  41%|█▏ | 12.0M/29.1M [00:00&lt;00:01, 12.1M Bytes/s]
+Get sub-04/f .. _bold.nii.gz:  63%|█▉ | 18.3M/29.1M [00:00&lt;00:00, 18.0M Bytes/s]
 
-Get sub-04/f .. _bold.nii.gz:  50%|█▍ | 14.4M/29.1M [00:01&lt;00:01, 11.9M Bytes/s]
+Get sub-04/f .. _bold.nii.gz:  76%|██▎| 22.0M/29.1M [00:01&lt;00:00, 21.3M Bytes/s]
 
-Get sub-04/f .. _bold.nii.gz:  58%|█▋ | 16.9M/29.1M [00:01&lt;00:01, 11.9M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  67%|██ | 19.5M/29.1M [00:01&lt;00:00, 12.0M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  75%|██▎| 21.9M/29.1M [00:01&lt;00:00, 11.8M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  84%|██▌| 24.4M/29.1M [00:02&lt;00:00, 11.8M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  92%|██▊| 26.8M/29.1M [00:02&lt;00:00, 11.8M Bytes/s]
+Get sub-04/f .. _bold.nii.gz:  88%|██▋| 25.7M/29.1M [00:01&lt;00:00, 17.6M Bytes/s]
 
                                                                                 
 Get sub-04/f .. _bold.nii.gz:   0%|            | 0.00/29.1M [00:00&lt;?, ? Bytes/s]
-Total:  84%|███████████████████████▌    | 520M/618M [00:55&lt;00:10, 9.38M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:   0%|            | 0.00/29.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:   6%|▏  | 1.75M/29.1M [00:00&lt;00:01, 17.3M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  16%|▍  | 4.62M/29.1M [00:00&lt;00:02, 12.1M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  24%|▋  | 6.94M/29.1M [00:00&lt;00:01, 11.6M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  33%|▉  | 9.52M/29.1M [00:00&lt;00:01, 14.2M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  42%|█▏ | 12.1M/29.1M [00:01&lt;00:01, 11.5M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  50%|█▍ | 14.5M/29.1M [00:01&lt;00:01, 11.6M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  54%|█▋ | 15.8M/29.1M [00:01&lt;00:01, 11.8M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  59%|█▊ | 17.1M/29.1M [00:01&lt;00:01, 11.6M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  64%|█▉ | 18.6M/29.1M [00:01&lt;00:00, 12.3M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  71%|██▏| 20.8M/29.1M [00:01&lt;00:00, 11.5M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  82%|██▍| 23.9M/29.1M [00:02&lt;00:00, 10.6M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  90%|██▋| 26.3M/29.1M [00:02&lt;00:00, 13.0M Bytes/s]
-
-Get sub-04/f .. _bold.nii.gz:  99%|██▉| 28.8M/29.1M [00:02&lt;00:00, 12.6M Bytes/s]
-
                                                                                 
 
 Get sub-04/f .. _bold.nii.gz:   0%|            | 0.00/29.1M [00:00&lt;?, ? Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  13%|▍  | 3.74M/29.1M [00:00&lt;00:01, 19.9M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  24%|▋  | 6.93M/29.1M [00:00&lt;00:01, 17.4M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  36%|█  | 10.6M/29.1M [00:00&lt;00:01, 17.6M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  47%|█▍ | 13.7M/29.1M [00:00&lt;00:00, 16.8M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  60%|█▊ | 17.4M/29.1M [00:00&lt;00:00, 17.6M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  71%|██ | 20.6M/29.1M [00:01&lt;00:00, 20.4M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  80%|██▍| 23.4M/29.1M [00:01&lt;00:00, 17.9M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  91%|██▋| 26.4M/29.1M [00:01&lt;00:00, 16.9M Bytes/s]
+
+Get sub-04/f .. _bold.nii.gz:  99%|██▉| 28.7M/29.1M [00:01&lt;00:00, 15.3M Bytes/s]
+                                                                                
+Get sub-04/f .. _bold.nii.gz:   0%|            | 0.00/29.1M [00:00&lt;?, ? Bytes/s]
+                                                                                
+
+Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  35%|█  | 3.75M/10.6M [00:00&lt;00:00, 19.0M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  71%|██ | 7.47M/10.6M [00:00&lt;00:00, 18.9M Bytes/s]
+
+Get sub-01/a .. 1_T1w.nii.gz:  97%|██▉| 10.2M/10.6M [00:00&lt;00:00, 16.4M Bytes/s]
+                                                                                
+Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+                                                                                
+
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  13%|▍  | 3.74M/28.1M [00:00&lt;00:00, 36.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  27%|▊  | 7.47M/28.1M [00:00&lt;00:01, 17.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  39%|█▏ | 10.9M/28.1M [00:00&lt;00:00, 17.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  51%|█▌ | 14.4M/28.1M [00:00&lt;00:00, 17.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  64%|█▉ | 18.0M/28.1M [00:00&lt;00:00, 17.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  75%|██▎| 21.2M/28.1M [00:01&lt;00:00, 20.0M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  88%|██▋| 24.8M/28.1M [00:01&lt;00:00, 16.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  96%|██▊| 26.8M/28.1M [00:01&lt;00:00, 17.5M Bytes/s]
+
+                                                                                
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+Total:  73%|████████████████████▌       | 453M/618M [00:33&lt;00:12, 13.6M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  13%|▍  | 3.74M/28.1M [00:00&lt;00:00, 34.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  26%|▊  | 7.43M/28.1M [00:00&lt;00:01, 17.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  39%|█▏ | 11.0M/28.1M [00:00&lt;00:00, 17.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  48%|█▍ | 13.5M/28.1M [00:00&lt;00:00, 19.4M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  62%|█▊ | 17.6M/28.1M [00:00&lt;00:00, 19.5M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  75%|██▏| 21.1M/28.1M [00:01&lt;00:00, 18.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  89%|██▋| 25.1M/28.1M [00:01&lt;00:00, 16.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  95%|██▊| 26.9M/28.1M [00:01&lt;00:00, 16.7M Bytes/s]
+                                                                                
+Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
                                                                                 
 
 Get sub-06/a .. 6_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
 
-Get sub-06/a .. 6_T1w.nii.gz:  30%|▉  | 3.14M/10.6M [00:00&lt;00:00, 15.1M Bytes/s]
+Get sub-06/a .. 6_T1w.nii.gz:  35%|█  | 3.76M/10.6M [00:00&lt;00:00, 19.0M Bytes/s]
 
-Get sub-06/a .. 6_T1w.nii.gz:  44%|█▎ | 4.66M/10.6M [00:00&lt;00:00, 13.8M Bytes/s]
+Get sub-06/a .. 6_T1w.nii.gz:  63%|█▉ | 6.67M/10.6M [00:00&lt;00:00, 16.5M Bytes/s]
 
-Get sub-06/a .. 6_T1w.nii.gz:  59%|█▊ | 6.22M/10.6M [00:00&lt;00:00, 14.3M Bytes/s]
-
-Get sub-06/a .. 6_T1w.nii.gz:  84%|██▌| 8.90M/10.6M [00:00&lt;00:00, 13.3M Bytes/s]
-
+Get sub-06/a .. 6_T1w.nii.gz:  97%|██▉| 10.3M/10.6M [00:00&lt;00:00, 17.4M Bytes/s]
                                                                                 
 Get sub-06/a .. 6_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
                                                                                 
 
 Get sub-06/f .. _bold.nii.gz:   0%|            | 0.00/29.4M [00:00&lt;?, ? Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  13%|▍  | 3.76M/29.4M [00:00&lt;00:01, 19.0M Bytes/s]
 
-Get sub-06/f .. _bold.nii.gz:   8%|▏  | 2.33M/29.4M [00:00&lt;00:01, 23.2M Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  25%|▊  | 7.41M/29.4M [00:00&lt;00:01, 18.6M Bytes/s]
 
-Get sub-06/f .. _bold.nii.gz:  22%|▋  | 6.41M/29.4M [00:00&lt;00:01, 14.1M Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  38%|█▏ | 11.0M/29.4M [00:00&lt;00:00, 18.6M Bytes/s]
 
-Get sub-06/f .. _bold.nii.gz:  30%|▉  | 8.92M/29.4M [00:00&lt;00:01, 13.0M Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  50%|█▍ | 14.7M/29.4M [00:00&lt;00:00, 18.5M Bytes/s]
 
-Get sub-06/f .. _bold.nii.gz:  39%|█▏ | 11.3M/29.4M [00:00&lt;00:01, 12.4M Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  62%|█▊ | 18.3M/29.4M [00:00&lt;00:00, 18.2M Bytes/s]
 
-Get sub-06/f .. _bold.nii.gz:  47%|█▍ | 13.9M/29.4M [00:01&lt;00:01, 12.3M Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  75%|██▏| 22.0M/29.4M [00:01&lt;00:00, 22.0M Bytes/s]
 
-Get sub-06/f .. _bold.nii.gz:  56%|█▋ | 16.5M/29.4M [00:01&lt;00:01, 12.3M Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  85%|██▌| 25.0M/29.4M [00:01&lt;00:00, 16.3M Bytes/s]
 
-Get sub-06/f .. _bold.nii.gz:  64%|█▉ | 18.9M/29.4M [00:01&lt;00:00, 12.1M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  73%|██▏| 21.5M/29.4M [00:01&lt;00:00, 12.1M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  82%|██▍| 24.0M/29.4M [00:01&lt;00:00, 11.9M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  90%|██▋| 26.4M/29.4M [00:02&lt;00:00, 11.9M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  99%|██▉| 29.1M/29.4M [00:02&lt;00:00, 12.0M Bytes/s]
-                                                                                
-Get sub-06/f .. _bold.nii.gz:   0%|            | 0.00/29.4M [00:00&lt;?, ? Bytes/s]
-
-Total:  95%|██████████████████████████▋ | 589M/618M [01:02&lt;00:03, 9.48M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:   0%|            | 0.00/29.4M [00:00&lt;?, ? Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:   7%|▏  | 2.04M/29.4M [00:00&lt;00:01, 20.3M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  16%|▍  | 4.63M/29.4M [00:00&lt;00:01, 12.4M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  24%|▋  | 6.99M/29.4M [00:00&lt;00:01, 15.8M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  31%|▉  | 9.23M/29.4M [00:00&lt;00:01, 13.4M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  40%|█▏ | 11.8M/29.4M [00:00&lt;00:01, 12.8M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  49%|█▍ | 14.5M/29.4M [00:01&lt;00:01, 12.8M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  58%|█▋ | 17.1M/29.4M [00:01&lt;00:00, 12.6M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  66%|█▉ | 19.5M/29.4M [00:01&lt;00:00, 12.2M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  76%|██▎| 22.2M/29.4M [00:01&lt;00:00, 12.5M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  84%|██▌| 24.6M/29.4M [00:01&lt;00:00, 12.0M Bytes/s]
-
-Get sub-06/f .. _bold.nii.gz:  92%|██▊| 27.2M/29.4M [00:02&lt;00:00, 12.1M Bytes/s]
+Get sub-06/f .. _bold.nii.gz:  94%|██▊| 27.7M/29.4M [00:01&lt;00:00, 18.2M Bytes/s]
 
                                                                                 
 Get sub-06/f .. _bold.nii.gz:   0%|            | 0.00/29.4M [00:00&lt;?, ? Bytes/s]
+
                                                                                 
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03/anat/sub-03_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03/func/sub-03_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03/func/sub-03_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-09/anat/sub-09_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-09/func/sub-09_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-09/func/sub-09_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+
+Get sub-06/f .. _bold.nii.gz:   0%|            | 0.00/29.4M [00:00&lt;?, ? Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz:  13%|▍  | 3.76M/29.4M [00:00&lt;00:01, 19.1M Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz:  25%|▊  | 7.47M/29.4M [00:00&lt;00:01, 18.5M Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz:  38%|█▏ | 11.1M/29.4M [00:00&lt;00:00, 18.3M Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz:  50%|█▍ | 14.6M/29.4M [00:00&lt;00:00, 17.8M Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz:  62%|█▊ | 18.2M/29.4M [00:01&lt;00:00, 18.0M Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz:  72%|██▏| 21.1M/29.4M [00:01&lt;00:00, 20.2M Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz:  84%|██▌| 24.5M/29.4M [00:01&lt;00:00, 18.9M Bytes/s]
+
+Get sub-06/f .. _bold.nii.gz: 100%|██▉| 29.3M/29.4M [00:01&lt;00:00, 17.8M Bytes/s]
+                                                                                
+Get sub-06/f .. _bold.nii.gz:   0%|            | 0.00/29.4M [00:00&lt;?, ? Bytes/s]
+Total:  89%|████████████████████████▉   | 550M/618M [00:40&lt;00:04, 13.7M Bytes/s]
+
+Get sub-08/a .. 8_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+
+Get sub-08/a .. 8_T1w.nii.gz:  35%|█  | 3.74M/10.6M [00:00&lt;00:00, 29.6M Bytes/s]
+
+Get sub-08/a .. 8_T1w.nii.gz:  70%|██ | 7.34M/10.6M [00:00&lt;00:00, 17.2M Bytes/s]
+
+Get sub-08/a .. 8_T1w.nii.gz:  98%|██▉| 10.3M/10.6M [00:00&lt;00:00, 15.4M Bytes/s]
+                                                                                
+Get sub-08/a .. 8_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+                                                                                
+
+Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  13%|▍  | 3.74M/28.6M [00:00&lt;00:01, 21.8M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  26%|▊  | 7.39M/28.6M [00:00&lt;00:01, 18.1M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  39%|█▏ | 11.1M/28.6M [00:00&lt;00:00, 18.3M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  51%|█▌ | 14.7M/28.6M [00:00&lt;00:00, 18.3M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  64%|█▉ | 18.4M/28.6M [00:00&lt;00:00, 18.4M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  77%|██▎| 22.0M/28.6M [00:01&lt;00:00, 19.0M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  91%|██▋| 26.1M/28.6M [00:01&lt;00:00, 13.3M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  98%|██▉| 28.2M/28.6M [00:01&lt;00:00, 12.7M Bytes/s]
+                                                                                
+Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
+                                                                                
+
+Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  13%|▍  | 3.74M/28.6M [00:00&lt;00:00, 28.3M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  26%|▊  | 7.40M/28.6M [00:00&lt;00:01, 17.6M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  38%|█▏ | 10.9M/28.6M [00:00&lt;00:01, 17.6M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  51%|█▌ | 14.5M/28.6M [00:00&lt;00:00, 17.9M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  60%|█▊ | 17.1M/28.6M [00:00&lt;00:00, 19.0M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  74%|██▏| 21.1M/28.6M [00:01&lt;00:00, 16.6M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  85%|██▌| 24.4M/28.6M [00:01&lt;00:00, 18.7M Bytes/s]
+
+Get sub-08/f .. _bold.nii.gz:  99%|██▉| 28.3M/28.6M [00:01&lt;00:00, 16.0M Bytes/s]
+
+                                                                                
+Get sub-08/f .. _bold.nii.gz:   0%|            | 0.00/28.6M [00:00&lt;?, ? Bytes/s]
+                                                                                
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-07/anat/sub-07_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-07/func/sub-07_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-07/func/sub-07_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03/anat/sub-03_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03/func/sub-03_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03/func/sub-03_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-05/anat/sub-05_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-05/func/sub-05_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-05/func/sub-05_task-flanker_run-2_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-09/anat/sub-09_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
   [17 similar messages have been suppressed; disable with datalad.ui.suppress-similar-results=off]
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-09 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-07 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-03 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-05 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
-<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-08 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-09 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-02 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-04 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-06 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
+<span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-08 (<span class=" -Color -Color-Bold -Color-Bold-Magenta">directory</span>)
 action summary:
   get (ok: 36)
-
 </pre></div>
 </div>
 </div>
@@ -2334,11 +2214,11 @@ Interpolation (‘spline’ or ‘nn’ or ‘sinc’) – Interpolation method 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260409-06:49:34,618 nipype.workflow INFO:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>260617-05:27:40,227 nipype.workflow INFO:
 	 Generated workflow graph: /home/jovyan/workspace/books/examples/functional_imaging/output_level1/level1/graph.png (graph2use=colored, simple_form=True).
 </pre></div>
 </div>
-<img alt="../../_images/88f81edcab336635e16c6c048f42fddb6c2eaa3e5b2dc5d79cf7e5a90dc70360.png" src="../../_images/88f81edcab336635e16c6c048f42fddb6c2eaa3e5b2dc5d79cf7e5a90dc70360.png">
+<img alt="../../_images/aa46f7d4a9a21fb20ef286b347b17abaade169d74d6bb9bade4877bc5f25d97f.png" src="../../_images/aa46f7d4a9a21fb20ef286b347b17abaade169d74d6bb9bade4877bc5f25d97f.png">
 </div>
 </div>
 <div class="cell tag_scroll-output docutils container">
@@ -2351,7 +2231,7 @@ Interpolation (‘spline’ or ‘nn’ or ‘sinc’) – Interpolation method 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f15fbb87750&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7a76bba18cd0&gt;
 </pre></div>
 </div>
 </div>
@@ -2393,10 +2273,10 @@ Interpolation (‘spline’ or ‘nn’ or ‘sinc’) – Interpolation method 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a7f7f387884673a96e62aa7d2d938a6b6487846759bc4500b6d0cff677c7358d.png" src="../../_images/a7f7f387884673a96e62aa7d2d938a6b6487846759bc4500b6d0cff677c7358d.png">
-<img alt="../../_images/bc743ce13891ebab23c9f6c7d4d668db8d11c9409d4f6e4580f7d63b35ecdb77.png" src="../../_images/bc743ce13891ebab23c9f6c7d4d668db8d11c9409d4f6e4580f7d63b35ecdb77.png">
-<img alt="../../_images/228b3b22c00177a8ad5dc1793cbbc90dbfb495735196a4af47e73b899de0ca82.png" src="../../_images/228b3b22c00177a8ad5dc1793cbbc90dbfb495735196a4af47e73b899de0ca82.png">
-<img alt="../../_images/babe8f68f0856f0f1608dfe550483d8ca862aae33a659d1f970a9fbe726f3bb1.png" src="../../_images/babe8f68f0856f0f1608dfe550483d8ca862aae33a659d1f970a9fbe726f3bb1.png">
+<img alt="../../_images/9e952098e1b904cce2ef87145cec2829a6eba374a15265389946d14cd5085e01.png" src="../../_images/9e952098e1b904cce2ef87145cec2829a6eba374a15265389946d14cd5085e01.png">
+<img alt="../../_images/a55f8cdb071368ebaec0b1c42cdf27ceba285dee9ce9ee734fb8ea61566ce49e.png" src="../../_images/a55f8cdb071368ebaec0b1c42cdf27ceba285dee9ce9ee734fb8ea61566ce49e.png">
+<img alt="../../_images/6b2a467b83f5ff146dd064c46dea4ca2f3662dd776e7577eb90d93cee01bc36e.png" src="../../_images/6b2a467b83f5ff146dd064c46dea4ca2f3662dd776e7577eb90d93cee01bc36e.png">
+<img alt="../../_images/16bbb1416588a60d138ac6f757976d477859cc070b24ed9c7dbce1a661d879cf.png" src="../../_images/16bbb1416588a60d138ac6f757976d477859cc070b24ed9c7dbce1a661d879cf.png">
 </div>
 </div>
 </section>
@@ -2628,7 +2508,7 @@ Instead, we use <a class="reference external" href="https://nipype.readthedocs.i
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/35aeffe5bf5666a188f887456a2faae759589cb5e4f6e57ce88256534e298c16.png" src="../../_images/35aeffe5bf5666a188f887456a2faae759589cb5e4f6e57ce88256534e298c16.png">
+<img alt="../../_images/a4e1362ff7fe81f2950f2b874fc5be907ccb6a0ad64aff72131e01d232fd382b.png" src="../../_images/a4e1362ff7fe81f2950f2b874fc5be907ccb6a0ad64aff72131e01d232fd382b.png">
 </div>
 </div>
 <div class="cell tag_scroll-output docutils container">
@@ -2649,7 +2529,7 @@ Instead, we use <a class="reference external" href="https://nipype.readthedocs.i
 18
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f15fb955ba0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7a76bb979ba0&gt;
 </pre></div>
 </div>
 </div>
@@ -2683,10 +2563,10 @@ Instead, we use <a class="reference external" href="https://nipype.readthedocs.i
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ce144c5fcb348fbd4a14fb4ef2133bb927406dae30af95bfde44d9170d6f73eb.png" src="../../_images/ce144c5fcb348fbd4a14fb4ef2133bb927406dae30af95bfde44d9170d6f73eb.png">
-<img alt="../../_images/d2d2ad4f05b5a054021b22f04d843a48ebd8f8faefe07ad236dc7c635c3e8e59.png" src="../../_images/d2d2ad4f05b5a054021b22f04d843a48ebd8f8faefe07ad236dc7c635c3e8e59.png">
-<img alt="../../_images/aa337aec316736deb36bfb2e618a2cfbeb80c5941149172870492fcc21c1e734.png" src="../../_images/aa337aec316736deb36bfb2e618a2cfbeb80c5941149172870492fcc21c1e734.png">
-<img alt="../../_images/34d7698bcff05c8627bc5195c028a432924dc69f7718f88ff7a34556cf57e852.png" src="../../_images/34d7698bcff05c8627bc5195c028a432924dc69f7718f88ff7a34556cf57e852.png">
+<img alt="../../_images/88d2bd5dc295de8268d5436c16eed1d211345f90a5994e922764e5ac66eb7180.png" src="../../_images/88d2bd5dc295de8268d5436c16eed1d211345f90a5994e922764e5ac66eb7180.png">
+<img alt="../../_images/b75a3b1ccbeb4744d909f4e9225dae28fdb6dbeaa1b194a10b8d7a9b89525a90.png" src="../../_images/b75a3b1ccbeb4744d909f4e9225dae28fdb6dbeaa1b194a10b8d7a9b89525a90.png">
+<img alt="../../_images/856c453baf6d5d96aef39a6fea31f2508b4f6867c52fea283321f7b416cd574c.png" src="../../_images/856c453baf6d5d96aef39a6fea31f2508b4f6867c52fea283321f7b416cd574c.png">
+<img alt="../../_images/a596f9f17d96b8ae3814e49b51ebdd00c5c1fac3da168a1003449f5ffa78410c.png" src="../../_images/a596f9f17d96b8ae3814e49b51ebdd00c5c1fac3da168a1003449f5ffa78410c.png">
 </div>
 </div>
 </section>
@@ -2714,10 +2594,10 @@ Instead, we use <a class="reference external" href="https://nipype.readthedocs.i
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/30c124df52aec686a3b2728a38af51c7436383d886ac72ecf9ecc3ea95e86cca.png" src="../../_images/30c124df52aec686a3b2728a38af51c7436383d886ac72ecf9ecc3ea95e86cca.png">
-<img alt="../../_images/7a037b25c281f52006137766684cf83c0b6a00c7e169265093feaef7c3ba7a2d.png" src="../../_images/7a037b25c281f52006137766684cf83c0b6a00c7e169265093feaef7c3ba7a2d.png">
-<img alt="../../_images/d5c5bbafc5c85c875303c21af7ac4c0c85a992ce45bd5863886cca26ccc2e25e.png" src="../../_images/d5c5bbafc5c85c875303c21af7ac4c0c85a992ce45bd5863886cca26ccc2e25e.png">
-<img alt="../../_images/88314657d624305f50e7ebae58ac425511c5f0d0ac5c172338d7a097447a7d7b.png" src="../../_images/88314657d624305f50e7ebae58ac425511c5f0d0ac5c172338d7a097447a7d7b.png">
+<img alt="../../_images/b2b8d7bc3745ce2b06a621a0f23ad528da61565193dd8f18faef2ecb1a03a632.png" src="../../_images/b2b8d7bc3745ce2b06a621a0f23ad528da61565193dd8f18faef2ecb1a03a632.png">
+<img alt="../../_images/6c303c1d318d611d11f90225ee7e43bf1eef8382fa0d7ea9586547483fb7f8ca.png" src="../../_images/6c303c1d318d611d11f90225ee7e43bf1eef8382fa0d7ea9586547483fb7f8ca.png">
+<img alt="../../_images/41d8bcda810fc0eda968ea5ea731feec8d092cc41cf3f00c21a04236b951ea2e.png" src="../../_images/41d8bcda810fc0eda968ea5ea731feec8d092cc41cf3f00c21a04236b951ea2e.png">
+<img alt="../../_images/a413f81710b8839f7a4e1ef0e4c2a862d72aae842aa106cd7ceadd3020a0da47.png" src="../../_images/a413f81710b8839f7a4e1ef0e4c2a862d72aae842aa106cd7ceadd3020a0da47.png">
 </div>
 </div>
 </section>
@@ -3015,7 +2895,7 @@ If we have an ANOVA-like design, using <a class="reference external" href="https
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/900ed3894f792094862e2579aff0c4e44295244f9833a831bac17cbec8a043d3.png" src="../../_images/900ed3894f792094862e2579aff0c4e44295244f9833a831bac17cbec8a043d3.png">
+<img alt="../../_images/20d7d5e7dd29e912e0b7957d16e34ce16865cec61fc903d2e719252a83d7a7c9.png" src="../../_images/20d7d5e7dd29e912e0b7957d16e34ce16865cec61fc903d2e719252a83d7a7c9.png">
 </div>
 </div>
 <div class="cell docutils container">
@@ -3027,7 +2907,7 @@ If we have an ANOVA-like design, using <a class="reference external" href="https
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7f15fb98aea0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;networkx.classes.digraph.DiGraph at 0x7a76bbafc640&gt;
 </pre></div>
 </div>
 </div>
@@ -3081,10 +2961,10 @@ If we have an ANOVA-like design, using <a class="reference external" href="https
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/416e0a0c484516adb74990799bac152ccb1992744ba0ad5d9bf5b3518a51133e.png" src="../../_images/416e0a0c484516adb74990799bac152ccb1992744ba0ad5d9bf5b3518a51133e.png">
-<img alt="../../_images/d2d0a802fd67ddce5355b788c111a853f1c07aaaf2c1a2bb42e392b90980597e.png" src="../../_images/d2d0a802fd67ddce5355b788c111a853f1c07aaaf2c1a2bb42e392b90980597e.png">
-<img alt="../../_images/14094b31448d2d8a17b7ec625b937c6fcae128830ece9b34314ad6757977bb67.png" src="../../_images/14094b31448d2d8a17b7ec625b937c6fcae128830ece9b34314ad6757977bb67.png">
-<img alt="../../_images/9fdf832b1c2bbc6c2019999a03d1fcb782d1e3135ff8e4d6929b5f54ae41c565.png" src="../../_images/9fdf832b1c2bbc6c2019999a03d1fcb782d1e3135ff8e4d6929b5f54ae41c565.png">
+<img alt="../../_images/5e7149ad4913cff30b337316a4a43eed46a7a558d8792c506bdad4e12858e9c0.png" src="../../_images/5e7149ad4913cff30b337316a4a43eed46a7a558d8792c506bdad4e12858e9c0.png">
+<img alt="../../_images/276ba4292891d57a53f05ba09ca6c9625e01ddc2148acc360d033c30e4e66a23.png" src="../../_images/276ba4292891d57a53f05ba09ca6c9625e01ddc2148acc360d033c30e4e66a23.png">
+<img alt="../../_images/683119b495076dcd7a859f9b927c7b7abd39a0c96a51ab0c21ca0c086d3b1857.png" src="../../_images/683119b495076dcd7a859f9b927c7b7abd39a0c96a51ab0c21ca0c086d3b1857.png">
+<img alt="../../_images/4c09aafcf8ed53f369257b9e0db3d2fd2a493a276fe7ca303c00b3abe24f2602.png" src="../../_images/4c09aafcf8ed53f369257b9e0db3d2fd2a493a276fe7ca303c00b3abe24f2602.png">
 </div>
 </div>
 <section id="thresholded-p-0-05-zstats">
@@ -3132,10 +3012,10 @@ If we have an ANOVA-like design, using <a class="reference external" href="https
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/af608171fb612f5ad70cff62a99cb9a8f67d67a8c631815153a06807951adadf.png" src="../../_images/af608171fb612f5ad70cff62a99cb9a8f67d67a8c631815153a06807951adadf.png">
-<img alt="../../_images/6feed81d56171628133deabbe23f355a0d2426555e8291377c05e3e41556a741.png" src="../../_images/6feed81d56171628133deabbe23f355a0d2426555e8291377c05e3e41556a741.png">
-<img alt="../../_images/da2e3baa17753d39628df251743afefbf2a260ddb8a77c5bee5764200786db1d.png" src="../../_images/da2e3baa17753d39628df251743afefbf2a260ddb8a77c5bee5764200786db1d.png">
-<img alt="../../_images/7860ede1b3e5466251f2793f66cd7da32dffacd1b9624009cb76b6ca0cbf968b.png" src="../../_images/7860ede1b3e5466251f2793f66cd7da32dffacd1b9624009cb76b6ca0cbf968b.png">
+<img alt="../../_images/2c974ec507ad6a67b8a3a82eec27ea9779e7ed7448e007134a8d03ecb24ac441.png" src="../../_images/2c974ec507ad6a67b8a3a82eec27ea9779e7ed7448e007134a8d03ecb24ac441.png">
+<img alt="../../_images/851f2b62f65dc7dcb61a4812a43a57b6ab74b7ef18a65ae1f31692f1328a7fac.png" src="../../_images/851f2b62f65dc7dcb61a4812a43a57b6ab74b7ef18a65ae1f31692f1328a7fac.png">
+<img alt="../../_images/4e67821bbda9e45f23ec2ee0646a3bfe87e65e072c2ed7f7b1765cdd85efcdc8.png" src="../../_images/4e67821bbda9e45f23ec2ee0646a3bfe87e65e072c2ed7f7b1765cdd85efcdc8.png">
+<img alt="../../_images/4e9defc9254c7ee8920304168a276f4e7b3c06023c8167106ad9e1c34e8acfe2.png" src="../../_images/4e9defc9254c7ee8920304168a276f4e7b3c06023c8167106ad9e1c34e8acfe2.png">
 </div>
 </div>
 <section id="dependencies-in-jupyter-python">
@@ -3162,29 +3042,29 @@ If we have an ANOVA-like design, using <a class="reference external" href="https
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T07:04:03.653561+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-06-17T05:36:27.914125+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.13
+IPython version      : 9.14.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-171-generic
+Release     : 6.8.0-111-generic
 Machine     : x86_64
 Processor   : x86_64
-CPU cores   : 32
+CPU cores   : 16
 Architecture: 64bit
 
-IPython   : 9.7.0
+IPython   : 9.14.0
 logging   : 0.5.1.2
-matplotlib: 3.10.8
+matplotlib: 3.10.9
 nibabel   : 5.3.3
 nilearn   : 0.13.1
-nipype    : 1.10.0
-numpy     : 1.26.4
+nipype    : 1.11.0
+numpy     : 2.4.6
 
-Neurodesktop version: 2025-12-20
+Neurodesktop version: py-stack
 </pre></div>
 </div>
 </div>
