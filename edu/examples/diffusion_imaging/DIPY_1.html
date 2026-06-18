@@ -680,6 +680,18 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">nibabel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="c1"># DIPY uses np.divide(..., where=...) without out= in geometry.py; the unwritten</span>
+<span class="c1"># positions are masked downstream, so the warning is harmless. We're silencing this one.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span>
+    <span class="s2">"ignore"</span><span class="p">,</span>
+    <span class="n">message</span><span class="o">=</span><span class="s2">"'where' used without 'out'"</span><span class="p">,</span>
+    <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">,</span>
+    <span class="n">module</span><span class="o">=</span><span class="s2">"dipy"</span><span class="p">,</span>
+<span class="p">)</span>
+
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.segment.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">median_otsu</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.core.gradients</span><span class="w"> </span><span class="kn">import</span> <span class="n">gradient_table</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.reconst.dti</span><span class="w"> </span><span class="kn">import</span> <span class="n">TensorModel</span><span class="p">,</span> <span class="n">fractional_anisotropy</span><span class="p">,</span> <span class="n">color_fa</span>
@@ -700,18 +712,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  cos = np.divide(z, r, where=r &gt; 0)
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:150: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  cos = np.divide(z, r, where=r &gt; 0)
-/opt/conda/lib/python3.13/site-packages/dipy/core/geometry.py:151: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
-  theta = np.arccos(cos, where=(cos &gt;= -1) &amp; (cos &lt;= 1))
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="data-preparation">
@@ -724,9 +724,46 @@
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">gtab</span></code></strong> (gradient table): encodes the acquisition scheme — specifically the <strong>b-values</strong> and <strong>gradient directions</strong> for each volume. <strong>B-values</strong> control the strength of diffusion weighting: b=0 means no diffusion weighting (a baseline image), while higher values (e.g., 2000 s/mm²) make the signal sensitive to water diffusion along the corresponding gradient direction.</p></li>
 </ul>
 <p>We also define an <strong>affine</strong> matrix — a 4×4 transformation that maps between voxel indices and world (scanner) coordinates. Here we use an identity matrix so that tractography operates directly in voxel space.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fetch_with_retry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">tries</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Fetch a DIPY dataset, tolerant of the Stanford host's transient failures.</span>
+
+<span class="sd">    The host occasionally refuses connections or returns a truncated/garbage</span>
+<span class="sd">    file (caught by DIPY's md5 check). A wrong-md5 file is left on disk, so we</span>
+<span class="sd">    delete it before retrying — otherwise every retry re-checks the same corrupt</span>
+<span class="sd">    cache entry and fails again.</span>
+<span class="sd">    """</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># If the error names a bad cached file, remove it so the next</span>
+            <span class="c1"># attempt re-downloads cleanly.</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(/\S+?\.(?:nii\.gz|bval|bvec|txt))"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">m</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">tries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"fetch </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> failed (</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">); retry </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">tries</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Fetch (with retry)</span>
+<span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_hardi"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>('/home/jovyan/.dipy/stanford_hardi/HARDI150.nii.gz',
+ '/home/jovyan/.dipy/stanford_hardi/HARDI150.bval',
+ '/home/jovyan/.dipy/stanford_hardi/HARDI150.bvec')
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load example diffusion data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load example diffusion data (cached by the fetch-with-retry cell above)</span>
 <span class="n">img</span><span class="p">,</span> <span class="n">gtab</span> <span class="o">=</span> <span class="n">read_stanford_hardi</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
 
@@ -748,7 +785,11 @@ b-values (unique): [   0. 2000.] …
 <p>This dataset provides a label map in which white matter tissues are labeled as either 1 (corpus callosum) or 2 (other white matter regions). Let’s create a white matter mask to restrict tracking to the white matter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"stanford_labels"</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch (with retry)</span>
+<span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_labels"</span><span class="p">)</span>
+<span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_t1"</span><span class="p">)</span>
+
+<span class="n">label_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"stanford_labels"</span><span class="p">)</span>
 <span class="n">t1_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"stanford_t1"</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">load_nifti_data</span><span class="p">(</span><span class="n">label_fname</span><span class="p">)</span>
 <span class="n">t1_data</span> <span class="o">=</span> <span class="n">load_nifti_data</span><span class="p">(</span><span class="n">t1_fname</span><span class="p">)</span>
@@ -795,7 +836,7 @@ b-values (unique): [   0. 2000.] …
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ba52f317890&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x792d16737b10&gt;
 </pre></div>
 </div>
 <img alt="../../_images/228d42f2e2e24e18ea20c8f97e822ffeade7f8675d8deddcb32395d0c6f3077d.png" src="../../_images/228d42f2e2e24e18ea20c8f97e822ffeade7f8675d8deddcb32395d0c6f3077d.png">
@@ -1265,7 +1306,7 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ba52f0ebc50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x792ccd028690&gt;
 </pre></div>
 </div>
 <img alt="../../_images/90115f8598dae739d5a297d8b73ef38820b2d6cd60a56ac0b1169e98782f1f70.png" src="../../_images/90115f8598dae739d5a297d8b73ef38820b2d6cd60a56ac0b1169e98782f1f70.png">
@@ -1302,7 +1343,7 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7ba529c7fc50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x792ccd02bb10&gt;
 </pre></div>
 </div>
 <img alt="../../_images/6fceda49827e5aeacfe6e5f3cc0035e179a4e10125c55908d02ec75de0cb0552.png" src="../../_images/6fceda49827e5aeacfe6e5f3cc0035e179a4e10125c55908d02ec75de0cb0552.png">
@@ -1411,7 +1452,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5df5b140345c8c758aaed42817e2bee49887a0ae3fd64b00c43f97a520543116.png" src="../../_images/5df5b140345c8c758aaed42817e2bee49887a0ae3fd64b00c43f97a520543116.png">
+<img alt="../../_images/d774cf259280a78a77847e027fd291d9a831dfdc23767dc7183f14d64d6ce601.png" src="../../_images/d774cf259280a78a77847e027fd291d9a831dfdc23767dc7183f14d64d6ce601.png">
 </div>
 </div>
 </section>
@@ -1540,10 +1581,10 @@ Streamline length is a basic metric that provides insight into the spatial exten
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Streamline Statistics:
 Deterministic  — n=  587, mean= 50.3 mm, median= 50.5 mm, std= 23.1 mm
-Probabilistic  — n=  587, mean= 51.1 mm, median= 53.0 mm, std= 23.9 mm
+Probabilistic  — n=  587, mean= 49.7 mm, median= 51.5 mm, std= 23.2 mm
 </pre></div>
 </div>
-<img alt="../../_images/95da72abdb925cc8f756cdaf4d5c3533f6304e618ed12969543003f70af19094.png" src="../../_images/95da72abdb925cc8f756cdaf4d5c3533f6304e618ed12969543003f70af19094.png">
+<img alt="../../_images/c3632091bee062a7cde6fc4979e873b96e4adb1ae937a970a4587fcce72b5da7.png" src="../../_images/c3632091bee062a7cde6fc4979e873b96e4adb1ae937a970a4587fcce72b5da7.png">
 </div>
 </div>
 </section>
@@ -1572,29 +1613,30 @@ Probabilistic  — n=  587, mean= 51.1 mm, median= 53.0 mm, std= 23.9 mm
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-05-14T06:49:46.356912+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-06-18T04:45:43.596602+00:00
 
 Python implementation: CPython
 Python version       : 3.13.13
-IPython version      : 9.12.0
+IPython version      : 9.14.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 6.8.0-106-generic
+Release     : 6.8.0-111-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 16
 Architecture: 64bit
 
-IPython   : 9.12.0
+IPython   : 9.14.0
 dipy      : 1.11.0
 fury      : 0.11.0
 matplotlib: 3.10.9
 nibabel   : 5.4.2
-numpy     : 2.4.4
+numpy     : 2.4.6
+re        : 2.2.1
 scipy     : 1.17.1
 
-Neurodesktop version: 2026-04-28
+Neurodesktop version: py-stack
 </pre></div>
 </div>
 </div>

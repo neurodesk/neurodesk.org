@@ -657,6 +657,17 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">nibabel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nib</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span>  <span class="n">Image</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="c1"># DIPY uses np.divide(..., where=...) without out= in geometry.py; the unwritten</span>
+<span class="c1"># positions are masked downstream, so the warning is harmless. We're silencing this one.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span>
+    <span class="s2">"ignore"</span><span class="p">,</span>
+    <span class="n">message</span><span class="o">=</span><span class="s2">"'where' used without 'out'"</span><span class="p">,</span>
+    <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">,</span>
+    <span class="n">module</span><span class="o">=</span><span class="s2">"dipy"</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.tracking.stopping_criterion</span><span class="w"> </span><span class="kn">import</span> <span class="n">CmcStoppingCriterion</span><span class="p">,</span> <span class="n">ActStoppingCriterion</span><span class="p">,</span> <span class="n">ThresholdStoppingCriterion</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dipy.core.gradients</span><span class="w"> </span><span class="kn">import</span> <span class="n">gradient_table</span>
@@ -681,11 +692,39 @@
 </section>
 <section id="load-stanford-hardi-dataset-from-stanford-provided-by-dipy">
 <h2>Load Stanford HARDI dataset from Stanford provided by DIPY<a class="headerlink" href="#load-stanford-hardi-dataset-from-stanford-provided-by-dipy" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fetch_with_retry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">tries</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Fetch a DIPY dataset, tolerant of the Stanford host's transient failures.</span>
+
+<span class="sd">    The host occasionally refuses connections or returns a truncated/garbage</span>
+<span class="sd">    file (caught by DIPY's md5 check). A wrong-md5 file is left on disk, so we</span>
+<span class="sd">    delete it before retrying — otherwise every retry re-checks the same corrupt</span>
+<span class="sd">    cache entry and fails again.</span>
+<span class="sd">    """</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># If the error names a bad cached file, remove it so the next</span>
+            <span class="c1"># attempt re-downloads cleanly.</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(/\S+?\.(?:nii\.gz|bval|bvec|txt))"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">m</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">tries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"fetch </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> failed (</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">); retry </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">tries</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hardi_fname</span><span class="p">,</span> <span class="n">hardi_bval_fname</span><span class="p">,</span> <span class="n">hardi_bvec_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'stanford_hardi'</span><span class="p">)</span>
-<span class="n">label_fname</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'stanford_labels'</span><span class="p">)</span>
-<span class="n">f_pve_csf</span><span class="p">,</span> <span class="n">f_pve_gm</span><span class="p">,</span> <span class="n">f_pve_wm</span> <span class="o">=</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'stanford_pve_maps'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch (with retry)</span>
+<span class="n">hardi_fname</span><span class="p">,</span> <span class="n">hardi_bval_fname</span><span class="p">,</span> <span class="n">hardi_bvec_fname</span> <span class="o">=</span> <span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_hardi"</span><span class="p">)</span>
+<span class="n">label_fname</span> <span class="o">=</span> <span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_labels"</span><span class="p">)</span>
+<span class="n">f_pve_csf</span><span class="p">,</span> <span class="n">f_pve_gm</span><span class="p">,</span> <span class="n">f_pve_wm</span> <span class="o">=</span> <span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_pve_maps"</span><span class="p">)</span>
 
 <span class="n">data</span><span class="p">,</span> <span class="n">affine</span><span class="p">,</span> <span class="n">hardi_img</span> <span class="o">=</span> <span class="n">load_nifti</span><span class="p">(</span><span class="n">hardi_fname</span><span class="p">,</span> <span class="n">return_img</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">load_nifti_data</span><span class="p">(</span><span class="n">label_fname</span><span class="p">)</span>
@@ -805,7 +844,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ffbe981143bbf28ac8aac12176f479342acc62333dcf87d77e1837ad67dfbad7.png" src="../../_images/ffbe981143bbf28ac8aac12176f479342acc62333dcf87d77e1837ad67dfbad7.png">
+<img alt="../../_images/89a69c0a945bb2fed6cfd18f24012e86eaa9c91b8094baa8df1bce076ea41efb.png" src="../../_images/89a69c0a945bb2fed6cfd18f24012e86eaa9c91b8094baa8df1bce076ea41efb.png">
 </div>
 </div>
 <p>Both methods can be combined with Particle Filtering Tractography.</p>
@@ -855,7 +894,11 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d0479a8a45f4847553de04965dd21d22d31e11e6ceef84df8f757823ce4cafea.png" src="../../_images/d0479a8a45f4847553de04965dd21d22d31e11e6ceef84df8f757823ce4cafea.png">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/fury/colormap.py:234: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
+  orient = np.abs(np.divide(v, r, where=r != 0))
+</pre></div>
+</div>
+<img alt="../../_images/73140f4eba81908a1a69213581831a22d13ad2e9ff23e0deb196faec14f8268f.png" src="../../_images/73140f4eba81908a1a69213581831a22d13ad2e9ff23e0deb196faec14f8268f.png">
 </div>
 </div>
 </section>
@@ -885,7 +928,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b6d829497ccc6a9dddee433f0bb4c7945c17d1af8bcb5ae4a8091b85d8fb432f.png" src="../../_images/b6d829497ccc6a9dddee433f0bb4c7945c17d1af8bcb5ae4a8091b85d8fb432f.png">
+<img alt="../../_images/c0e6828283be3b364a72d3c24a46dd3e169373f17db820200edbfb1e75af5c1b.png" src="../../_images/c0e6828283be3b364a72d3c24a46dd3e169373f17db820200edbfb1e75af5c1b.png">
 </div>
 </div>
 <blockquote>
@@ -939,7 +982,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/574135be0431145bbc7d65a830f3845dc2aa76437207ad70d783aeb670eb2658.png" src="../../_images/574135be0431145bbc7d65a830f3845dc2aa76437207ad70d783aeb670eb2658.png">
+<img alt="../../_images/683d86a63be530bcf31f2c110ea42b69f4a68ee9c0f5996ba90534e3d42058c6.png" src="../../_images/683d86a63be530bcf31f2c110ea42b69f4a68ee9c0f5996ba90534e3d42058c6.png">
 </div>
 </div>
 <div class="cell docutils container">
@@ -951,8 +994,8 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2840
-Deterministic ACT streamlines: 1172
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2826
+Deterministic ACT streamlines: 1181
 PTT streamlines: 3155
 </pre></div>
 </div>
@@ -982,28 +1025,29 @@ PTT streamlines: 3155
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-13T00:18:25.743554+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-06-18T04:45:34.536920+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.13
+IPython version      : 9.14.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-171-generic
+Release     : 6.8.0-111-generic
 Machine     : x86_64
 Processor   : x86_64
-CPU cores   : 32
+CPU cores   : 16
 Architecture: 64bit
 
-IPython   : 9.7.0
+IPython   : 9.14.0
 dipy      : 1.11.0
 fury      : 0.11.0
-matplotlib: 3.10.8
-nibabel   : 5.3.3
-numpy     : 2.3.5
+matplotlib: 3.10.9
+nibabel   : 5.4.2
+numpy     : 2.4.6
+re        : 2.2.1
 
-Neurodesktop version: 2025-12-20
+Neurodesktop version: py-stack
 </pre></div>
 </div>
 </div>
