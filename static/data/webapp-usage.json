@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-21T08:15:32Z",
+  "generatedAt": "2026-06-22T09:28:36Z",
   "periodDays": 30,
   "apps": [
     {
       "id": "calmar",
       "name": "CALMaR",
       "host": "calmar.neurodesk.org",
-      "users": 140,
-      "visits": 40,
-      "pageViews": 140,
+      "users": 150,
+      "visits": 50,
+      "pageViews": 150,
       "daily": [
         {
           "date": "2026-05-25",
@@ -69,6 +69,12 @@
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "date": "2026-06-21",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         }
       ],
       "countries": [
@@ -80,9 +86,9 @@
         },
         {
           "countryName": "CN",
-          "users": 30,
-          "visits": 30,
-          "pageViews": 30
+          "users": 40,
+          "visits": 40,
+          "pageViews": 40
         },
         {
           "countryName": "US",
@@ -112,9 +118,9 @@
         },
         {
           "deviceType": "mobile",
-          "users": 30,
-          "visits": 30,
-          "pageViews": 30
+          "users": 40,
+          "visits": 40,
+          "pageViews": 40
         }
       ],
       "browsers": [
@@ -126,9 +132,9 @@
         },
         {
           "userAgentBrowser": "Unknown",
-          "users": 40,
-          "visits": 30,
-          "pageViews": 40
+          "users": 50,
+          "visits": 40,
+          "pageViews": 50
         },
         {
           "userAgentBrowser": "ChromeHeadless",
@@ -727,16 +733,10 @@
       "id": "sct",
       "name": "Spinal Cord Toolbox",
       "host": "sct.neurodesk.org",
-      "users": 160,
+      "users": 150,
       "visits": 60,
-      "pageViews": 160,
+      "pageViews": 150,
       "daily": [
-        {
-          "date": "2026-05-22",
-          "users": 10,
-          "visits": 0,
-          "pageViews": 10
-        },
         {
           "date": "2026-05-27",
           "users": 10,
@@ -807,9 +807,9 @@
       "countries": [
         {
           "countryName": "AU",
-          "users": 60,
+          "users": 50,
           "visits": 20,
-          "pageViews": 60
+          "pageViews": 50
         },
         {
           "countryName": "US",
@@ -857,9 +857,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 150,
+          "users": 140,
           "visits": 50,
-          "pageViews": 150
+          "pageViews": 140
         },
         {
           "deviceType": "mobile",
@@ -877,9 +877,9 @@
         },
         {
           "userAgentBrowser": "ChromeHeadless",
-          "users": 70,
+          "users": 60,
           "visits": 20,
-          "pageViews": 70
+          "pageViews": 60
         },
         {
           "userAgentBrowser": "Unknown",
@@ -894,16 +894,10 @@
       "id": "vesselboost",
       "name": "VesselBoost",
       "host": "vesselboost.neurodesk.org",
-      "users": 270,
-      "visits": 140,
-      "pageViews": 270,
+      "users": 260,
+      "visits": 130,
+      "pageViews": 260,
       "daily": [
-        {
-          "date": "2026-05-22",
-          "users": 10,
-          "visits": 10,
-          "pageViews": 10
-        },
         {
           "date": "2026-05-24",
           "users": 10,
@@ -1039,12 +1033,6 @@
           "pageViews": 10
         },
         {
-          "countryName": "BE",
-          "users": 10,
-          "visits": 10,
-          "pageViews": 10
-        },
-        {
           "countryName": "DE",
           "users": 10,
           "visits": 10,
@@ -1066,9 +1054,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 190,
-          "visits": 70,
-          "pageViews": 190
+          "users": 180,
+          "visits": 60,
+          "pageViews": 180
         },
         {
           "deviceType": "mobile",
@@ -1080,9 +1068,9 @@
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
-          "users": 90,
-          "visits": 40,
-          "pageViews": 90
+          "users": 80,
+          "visits": 30,
+          "pageViews": 80
         },
         {
           "userAgentBrowser": "ChromeHeadless",
