@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-22T09:28:36Z",
+  "generatedAt": "2026-06-23T07:04:52Z",
   "periodDays": 30,
   "apps": [
     {
       "id": "calmar",
       "name": "CALMaR",
       "host": "calmar.neurodesk.org",
-      "users": 150,
+      "users": 160,
       "visits": 50,
-      "pageViews": 150,
+      "pageViews": 160,
       "daily": [
         {
           "date": "2026-05-25",
@@ -75,6 +75,12 @@
           "users": 10,
           "visits": 10,
           "pageViews": 10
+        },
+        {
+          "date": "2026-06-22",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "countries": [
@@ -103,6 +109,12 @@
           "pageViews": 20
         },
         {
+          "countryName": "CH",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
+        },
+        {
           "countryName": "TW",
           "users": 10,
           "visits": 0,
@@ -112,9 +124,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 110,
+          "users": 120,
           "visits": 10,
-          "pageViews": 110
+          "pageViews": 120
         },
         {
           "deviceType": "mobile",
@@ -132,9 +144,9 @@
         },
         {
           "userAgentBrowser": "Unknown",
-          "users": 50,
+          "users": 60,
           "visits": 40,
-          "pageViews": 50
+          "pageViews": 60
         },
         {
           "userAgentBrowser": "ChromeHeadless",
@@ -262,9 +274,9 @@
       "id": "musclemap",
       "name": "MuscleMap",
       "host": "musclemap.neurodesk.org",
-      "users": 350,
-      "visits": 170,
-      "pageViews": 350,
+      "users": 360,
+      "visits": 180,
+      "pageViews": 360,
       "daily": [
         {
           "date": "2026-05-24",
@@ -379,6 +391,12 @@
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "date": "2026-06-23",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         }
       ],
       "countries": [
@@ -408,9 +426,9 @@
         },
         {
           "countryName": "CA",
-          "users": 30,
-          "visits": 10,
-          "pageViews": 30
+          "users": 40,
+          "visits": 20,
+          "pageViews": 40
         },
         {
           "countryName": "ES",
@@ -446,9 +464,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 290,
-          "visits": 120,
-          "pageViews": 290
+          "users": 300,
+          "visits": 130,
+          "pageViews": 300
         },
         {
           "deviceType": "mobile",
@@ -483,6 +501,12 @@
           "pageViews": 30
         },
         {
+          "userAgentBrowser": "Firefox",
+          "users": 20,
+          "visits": 20,
+          "pageViews": 20
+        },
+        {
           "userAgentBrowser": "Safari",
           "users": 20,
           "visits": 0,
@@ -490,12 +514,6 @@
         },
         {
           "userAgentBrowser": "BingBot",
-          "users": 10,
-          "visits": 10,
-          "pageViews": 10
-        },
-        {
-          "userAgentBrowser": "Firefox",
           "users": 10,
           "visits": 10,
           "pageViews": 10
@@ -733,9 +751,9 @@
       "id": "sct",
       "name": "Spinal Cord Toolbox",
       "host": "sct.neurodesk.org",
-      "users": 150,
+      "users": 160,
       "visits": 60,
-      "pageViews": 150,
+      "pageViews": 160,
       "daily": [
         {
           "date": "2026-05-27",
@@ -802,14 +820,20 @@
           "users": 10,
           "visits": 0,
           "pageViews": 10
+        },
+        {
+          "date": "2026-06-22",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "countries": [
         {
           "countryName": "AU",
-          "users": 50,
+          "users": 60,
           "visits": 20,
-          "pageViews": 50
+          "pageViews": 60
         },
         {
           "countryName": "US",
@@ -857,9 +881,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 140,
+          "users": 150,
           "visits": 50,
-          "pageViews": 140
+          "pageViews": 150
         },
         {
           "deviceType": "mobile",
@@ -877,9 +901,9 @@
         },
         {
           "userAgentBrowser": "ChromeHeadless",
-          "users": 60,
+          "users": 70,
           "visits": 20,
-          "pageViews": 60
+          "pageViews": 70
         },
         {
           "userAgentBrowser": "Unknown",
