@@ -10,6 +10,28 @@ random_tunnel_port() {
     echo $((10000 + RANDOM % 55001))
 }
 
+random_notebook_token() {
+    # A URL-safe token the user authenticates with. Prefer a cryptographically
+    # strong source; fall back to combining RANDOM if openssl is unavailable.
+    if command -v openssl >/dev/null 2>&1; then
+        openssl rand -hex 24 2>/dev/null && return
+    fi
+    if [ -r /dev/urandom ] && command -v hexdump >/dev/null 2>&1; then
+        hexdump -n 24 -e '24/1 "%02x"' /dev/urandom 2>/dev/null && return
+    fi
+    printf '%s%s%s%s' "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM"
+}
+
+normalize_memory_request() {
+    local MEM="$1"
+
+    MEM=${MEM//[[:space:]]/}
+    if [[ "$MEM" =~ ^[0-9]+$ ]]; then
+        MEM="${MEM}G"
+    fi
+    printf '%s\n' "$MEM"
+}
+
 port_is_free_local() {
     local PORT="$1"
 
@@ -107,6 +129,21 @@ choose_shared_tunnel_port() {
     done
 
     return 1
+}
+
+choose_attach_tunnel_port() {
+    local SSH_SOCKET="$1"
+    local LOGIN_NODE="$2"
+    local PREFERRED_PORT="$3"
+
+    if [[ "$PREFERRED_PORT" =~ ^[0-9]+$ ]] &&
+       port_is_free_local "$PREFERRED_PORT" &&
+       port_is_free_remote "$SSH_SOCKET" "$LOGIN_NODE" "$PREFERRED_PORT"; then
+        echo "$PREFERRED_PORT"
+        return 0
+    fi
+
+    choose_shared_tunnel_port "$SSH_SOCKET" "$LOGIN_NODE"
 }
 
 ssh_config_has_host_alias() {
@@ -297,10 +334,281 @@ EOF
     return "$AUTH_STATUS"
 }
 
+hold_neurodesk_tunnel() {
+    # Hold a double-hop tunnel: local -> login -> compute node, landing on the
+    # notebook's localhost port on the node. Runs in the foreground; Ctrl-C or a
+    # dropped network only tears down the tunnel, not the (batch) job.
+    local SSH_SOCKET="$1"
+    local LOGIN_NODE="$2"
+    local NODE_NAME="$3"
+    local TUNNEL_PORT="$4"
+    local NOTEBOOK_PORT="$5"
+
+    # Pre-check the local end so a busy port gives a clear message instead of a
+    # raw SSH "bind: Address already in use" error from the -L forward.
+    if ! port_is_free_local "$TUNNEL_PORT"; then
+        echo "Local port ${TUNNEL_PORT} is already in use on this machine, so the tunnel cannot be opened."
+        echo "Free whatever is listening on ${TUNNEL_PORT} (e.g. an old tunnel), then re-run connectSherlock to reattach."
+        echo "The Slurm job is unaffected and keeps running on ${NODE_NAME}."
+        return 1
+    fi
+
+    if ! port_is_free_remote "$SSH_SOCKET" "$LOGIN_NODE" "$TUNNEL_PORT"; then
+        echo "Login-node port ${TUNNEL_PORT} is already in use, so the tunnel cannot be opened."
+        echo "Re-run connectSherlock to pick a fresh attach port."
+        echo "The Slurm job is unaffected and keeps running on ${NODE_NAME}."
+        return 1
+    fi
+
+    ssh -S "$SSH_SOCKET" -o ExitOnForwardFailure=yes -t \
+        -L "${TUNNEL_PORT}:localhost:${TUNNEL_PORT}" "$LOGIN_NODE" \
+        "ssh -o ExitOnForwardFailure=yes -N -L ${TUNNEL_PORT}:localhost:${NOTEBOOK_PORT} ${NODE_NAME}"
+}
+
+report_neurodesk_job_diagnostics() {
+    local SSH_SOCKET="$1"
+    local LOGIN_NODE="$2"
+    local JOB_ID="$3"
+    local TUNNEL_STATUS="$4"
+
+    echo
+    echo "Tunnel exited with status ${TUNNEL_STATUS}; checking Slurm job state before cleanup prompt..."
+    if ! ssh -S "$SSH_SOCKET" -q "$LOGIN_NODE" "bash -s -- \"$JOB_ID\"" <<'EOF'
+job_id="$1"
+log_file="${HOME}/.neurodesk_job_${job_id}.log"
+failure_pattern='OUT_OF_MEMORY|FAILED|CANCELLED|TIMEOUT|NODE_FAIL|PREEMPTED|oom|oom_kill|out.of.memory|Killed|error:'
+
+echo "Slurm queue state:"
+queue_state=$(squeue -j "$job_id" -h -o '  job=%i state=%T reason=%r node=%N time-left=%L' 2>/dev/null || true)
+if [ -n "$queue_state" ]; then
+    printf '%s\n' "$queue_state"
+else
+    echo "  not in squeue (it may have completed, failed, or been cancelled)"
+fi
+
+if command -v sacct >/dev/null 2>&1; then
+    echo "Slurm accounting state:"
+    accounting_state=$(sacct -j "$job_id" --format=JobID,State,ExitCode,Elapsed,MaxRSS -P -n 2>/dev/null || true)
+    if [ -n "$accounting_state" ]; then
+        printf '%s\n' "$accounting_state" |
+            awk -F'|' '{printf "  job=%s state=%s exit=%s elapsed=%s maxrss=%s\n", $1, $2, $3, $4, $5}'
+        if printf '%s\n' "$accounting_state" | grep -Eiq "$failure_pattern"; then
+            echo "  Detected failure state in Slurm accounting."
+        fi
+    else
+        echo "  sacct has no record yet (accounting can lag briefly)"
+    fi
+else
+    echo "Slurm accounting state: sacct is not available"
+fi
+
+if [ -r "$log_file" ]; then
+    if grep -Eiq "$failure_pattern" "$log_file"; then
+        echo "Recent warning/error lines from ${log_file}:"
+        grep -Ein "$failure_pattern" "$log_file" | tail -20 | sed 's/^/  /'
+    fi
+    echo "Last 60 lines from ${log_file}:"
+    tail -60 "$log_file" | sed 's/^/  /'
+else
+    echo "Job log is not readable yet: ${log_file}"
+fi
+EOF
+    then
+        echo "Could not query Slurm diagnostics through $LOGIN_NODE."
+        echo "Try manually: ssh $LOGIN_NODE 'sacct -j $JOB_ID; tail -60 ~/.neurodesk_job_${JOB_ID}.log'"
+    fi
+}
+
+attach_neurodesk_job() {
+    # Wait for a (possibly queued) job to start, recover the node + notebook
+    # port it recorded in its per-job state file, then hold the tunnel. Used for
+    # fresh launches and for reconnecting/attaching to existing jobs alike.
+    local SSH_SOCKET="$1"
+    local LOGIN_NODE="$2"
+    local JOB_ID="$3"
+    local NODE_NAME="" WAITED=0
+    local MAX_WAIT="${NEURODESKTOP_START_TIMEOUT:-600}"
+    local INFO STATE REASON STARTTIME LAST_REASON=""
+    local TUNNEL_PORT
+    local TUNNEL_STATUS
+
+    while [ "$WAITED" -lt "$MAX_WAIT" ]; do
+        # One query for everything: state | node | pending-reason | est-start.
+        INFO=$(ssh -S "$SSH_SOCKET" -q "$LOGIN_NODE" "squeue -j $JOB_ID -h -o '%t|%N|%r|%S' 2>/dev/null")
+        if [ -z "$INFO" ]; then
+            # Job has left the queue entirely (started+finished, failed, cancelled).
+            echo "Job $JOB_ID is no longer in the queue (it may have failed or been cancelled)."
+            echo "Check its log: ssh $LOGIN_NODE cat ~/.neurodesk_job_${JOB_ID}.log"
+            return 1
+        fi
+        IFS='|' read -r STATE NODE_NAME REASON STARTTIME <<< "$INFO"
+        if [ "$STATE" = "R" ] && [ -n "$NODE_NAME" ]; then
+            break
+        fi
+
+        # Surface why it is still waiting. Print whenever the reason changes, and
+        # otherwise a heartbeat every ~60s, so the user is never left guessing.
+        REASON=${REASON:-unknown}
+        if [ "$REASON" != "$LAST_REASON" ]; then
+            echo "  [${WAITED}s] state=${STATE} reason=${REASON}${STARTTIME:+ est-start=${STARTTIME}}"
+            case "$REASON" in
+                Resources|Priority|None|null)
+                    echo "        (normal queue wait -- the partition is busy; waiting for a slot)" ;;
+                ReqNodeNotAvail*|*Reservation*)
+                    echo "        ('$PARTITION' nodes are unavailable right now -- often an upcoming maintenance"
+                    echo "         reservation your walltime overlaps, or the owner nodes are reserved/busy/down."
+                    echo "         Try a shorter --time, check 'ssh $LOGIN_NODE scontrol show reservation', or use 'normal'.)" ;;
+                *PartitionTimeLimit*|*PartitionNodeLimit*|*PartitionConfig*)
+                    echo "        (the request may exceed what '$PARTITION' allows -- e.g. walltime, mem, or GPUs; this can wait indefinitely)" ;;
+                *QOS*|*Assoc*|*Grp*)
+                    echo "        (a usage/QOS limit is holding it -- you may already have another job running)" ;;
+            esac
+            LAST_REASON="$REASON"
+        elif [ "$WAITED" -gt 0 ] && [ $((WAITED % 60)) -eq 0 ]; then
+            echo "  [${WAITED}s] still waiting: ${REASON}${STARTTIME:+ (est-start ${STARTTIME})}"
+        fi
+
+        sleep 5
+        WAITED=$((WAITED + 5))
+    done
+
+    if [ "$STATE" != "R" ] || [ -z "$NODE_NAME" ]; then
+        echo "Job $JOB_ID has not started within ${MAX_WAIT}s; it is still queued (reason: ${LAST_REASON:-unknown})."
+        echo "Re-run connectSherlock later to attach once it is running,"
+        echo "or cancel it with: ssh $LOGIN_NODE scancel $JOB_ID"
+        return 0
+    fi
+
+    # The job writes its per-job state file at startup; poll briefly to avoid a
+    # race where it is "R" but hasn't recorded its port yet. The path is resolved
+    # on the remote (escaped $HOME) rather than relying on tilde expansion.
+    local STATE_REL=".neurodesk_session_${JOB_ID}.env"
+    local STATE_CONTENT SAVED_PORT SAVED_NODE SAVED_TOKEN PORT_TRIES=0
+    while [ "$PORT_TRIES" -lt 8 ]; do
+        STATE_CONTENT=$(ssh -S "$SSH_SOCKET" -q "$LOGIN_NODE" "cat \"\$HOME/${STATE_REL}\" 2>/dev/null")
+        SAVED_PORT=$(printf '%s\n' "$STATE_CONTENT" | awk -F= '$1=="NEURODESK_PORT"{print $2}')
+        SAVED_NODE=$(printf '%s\n' "$STATE_CONTENT" | awk -F= '$1=="NEURODESK_NODE"{print $2}')
+        SAVED_TOKEN=$(printf '%s\n' "$STATE_CONTENT" | awk -F= '$1=="NEURODESK_TOKEN"{print $2}')
+        if [[ "$SAVED_PORT" =~ ^[0-9]+$ ]]; then
+            break
+        fi
+        sleep 2
+        PORT_TRIES=$((PORT_TRIES + 1))
+    done
+    [ -n "$SAVED_NODE" ] && NODE_NAME="$SAVED_NODE"
+
+    if [[ ! "$SAVED_PORT" =~ ^[0-9]+$ ]]; then
+        echo "Job $JOB_ID is running on $NODE_NAME but its saved notebook port could not be read."
+        echo "Wait a few seconds and re-run connectSherlock to attach,"
+        echo "or inspect: ssh $LOGIN_NODE cat ~/${STATE_REL}"
+        return 1
+    fi
+
+    TUNNEL_PORT=$(choose_attach_tunnel_port "$SSH_SOCKET" "$LOGIN_NODE" "$SAVED_PORT")
+    if [[ ! "$TUNNEL_PORT" =~ ^[0-9]+$ ]]; then
+        echo "Failed to find a free local/login tunnel port for job $JOB_ID."
+        echo "The notebook is still listening on ${NODE_NAME}:${SAVED_PORT} inside the Slurm allocation."
+        prompt_keep_or_cancel_on_exit "$SSH_SOCKET" "$LOGIN_NODE" "$JOB_ID"
+        return
+    fi
+
+    local NOTEBOOK_URL="http://127.0.0.1:${TUNNEL_PORT}"
+    if [ -n "$SAVED_TOKEN" ]; then
+        NOTEBOOK_URL="${NOTEBOOK_URL}/lab?token=${SAVED_TOKEN}"
+    fi
+
+    # Report remaining walltime so a reconnecting user knows how long the session
+    # has left before Slurm reclaims it. %L is TimeLeft, %l is the TimeLimit.
+    local TIME_INFO TIME_LEFT TIME_LIMIT
+    TIME_INFO=$(ssh -S "$SSH_SOCKET" -q "$LOGIN_NODE" "squeue -j $JOB_ID -h -o '%L|%l' 2>/dev/null")
+    IFS='|' read -r TIME_LEFT TIME_LIMIT <<< "$TIME_INFO"
+
+    echo "Job $JOB_ID is running on $NODE_NAME."
+    if [ -n "$TIME_LEFT" ] && [ "$TIME_LEFT" != "INVALID" ]; then
+        echo "Walltime remaining: ${TIME_LEFT}${TIME_LIMIT:+ of ${TIME_LIMIT}} (D-HH:MM:SS)."
+    fi
+    echo "Container log: ssh $LOGIN_NODE tail -f ~/.neurodesk_job_${JOB_ID}.log"
+    echo "Tunnel mapping: local ${TUNNEL_PORT} -> ${LOGIN_NODE} ${TUNNEL_PORT} -> ${NODE_NAME} ${SAVED_PORT}"
+    echo "Notebook will be available at ${NOTEBOOK_URL} (allow ~30s for startup)."
+    if [ -z "$SAVED_TOKEN" ]; then
+        echo "  (No token recorded for this job; if Jupyter asks for one, find it with:"
+        echo "   ssh $LOGIN_NODE grep -m1 token= ~/.neurodesk_job_${JOB_ID}.log )"
+    fi
+    echo "Press Ctrl-C to disconnect; you'll then be asked whether to cancel or keep the job."
+    # Hold the tunnel in the foreground. A bare 'trap : INT' keeps this script
+    # alive when Ctrl-C tears down the tunnel (the child ssh still gets the default
+    # SIGINT and exits), so control returns here and we can prompt about the job.
+    trap ':' INT
+    hold_neurodesk_tunnel "$SSH_SOCKET" "$LOGIN_NODE" "$NODE_NAME" "$TUNNEL_PORT" "$SAVED_PORT"
+    TUNNEL_STATUS=$?
+    trap - INT
+    if [ "$TUNNEL_STATUS" -ne 0 ]; then
+        report_neurodesk_job_diagnostics "$SSH_SOCKET" "$LOGIN_NODE" "$JOB_ID" "$TUNNEL_STATUS"
+    fi
+    prompt_keep_or_cancel_on_exit "$SSH_SOCKET" "$LOGIN_NODE" "$JOB_ID"
+}
+
+cancel_neurodesk_job() {
+    # Ask whether to cancel an existing job. Returns 0 if it was cancelled (the
+    # caller may then launch a fresh session), 1 if the user declined or the
+    # cancel failed (the caller should abort).
+    local SSH_SOCKET="$1"
+    local LOGIN_NODE="$2"
+    local JOB_ID="$3"
+    local confirm
+
+    echo -n "Cancel job $JOB_ID now so you can start a fresh session? [y/N] "
+    read -r confirm
+    if [[ ! "$confirm" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+        echo "Leaving job $JOB_ID in place. Re-run connectSherlock to attach to it."
+        return 1
+    fi
+
+    if ssh -S "$SSH_SOCKET" -q "$LOGIN_NODE" "scancel $JOB_ID"; then
+        echo "Cancelled job $JOB_ID."
+        return 0
+    fi
+    echo "Failed to cancel job $JOB_ID. Cancel it manually: ssh $LOGIN_NODE scancel $JOB_ID"
+    return 1
+}
+
+prompt_keep_or_cancel_on_exit() {
+    # Called once the foreground tunnel has dropped (Ctrl-C or lost link). For a
+    # batch job the Slurm allocation is still running, so ask whether to cancel it
+    # now or leave it for a later reconnect. Defaults to keeping it (safer).
+    local SSH_SOCKET="$1"
+    local LOGIN_NODE="$2"
+    local JOB_ID="$3"
+    local choice
+
+    # If the job already left the queue (walltime hit, cancelled elsewhere), there
+    # is nothing to ask about.
+    if ! ssh -S "$SSH_SOCKET" -q "$LOGIN_NODE" "squeue -j $JOB_ID -h -o '%t' 2>/dev/null" | grep -q .; then
+        echo "Job $JOB_ID is no longer running; nothing to clean up."
+        return 0
+    fi
+
+    echo
+    echo "Tunnel closed. Job $JOB_ID is still running on Sherlock."
+    echo -n "Cancel the session now? (No keeps it running to reconnect later) [y/N] "
+    read -r choice
+    if [[ ! "$choice" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+        echo "Leaving job $JOB_ID running. Re-run connectSherlock to reattach."
+        return 0
+    fi
+
+    if ssh -S "$SSH_SOCKET" -q "$LOGIN_NODE" "scancel $JOB_ID"; then
+        echo "Cancelled job $JOB_ID."
+    else
+        echo "Failed to cancel job $JOB_ID. Cancel it manually: ssh $LOGIN_NODE scancel $JOB_ID"
+    fi
+}
+
 function connectSherlock() {
     local LOGIN_NODE="sherlock"
     local JOB_NAME="neurodesktop"
     local CTRL_SOCKET="${HOME}/.ssh/sherlock_ctrl_$(date +%s)_${RANDOM}"
+    local NOTEBOOK_PORT
     local TUNNEL_PORT
 
     if ! ensure_sherlock_ssh_config "$LOGIN_NODE"; then
@@ -320,23 +628,46 @@ function connectSherlock() {
     # Close master connection on return.
     trap 'ssh -S "'"$CTRL_SOCKET"'" -O exit "'"$LOGIN_NODE"'" 2>/dev/null' RETURN
     
-    # --- 1. CHECK FOR EXISTING "NEURODESKTOP" JOBS ---
-    # We add --name="neurodesktop" to squeue so we don't accidentally 
-    # grab background compute jobs.
-    local EXISTING_JOB=$(ssh -S "$CTRL_SOCKET" -q "$LOGIN_NODE" "squeue -u \$USER --name=$JOB_NAME -h -t R -o '%i %N' | head -n 1")
-    
-    if [ ! -z "$EXISTING_JOB" ]; then
-        read -r JOB_ID NODE_NAME <<< "$EXISTING_JOB"
-        echo "Found active $JOB_NAME session (Job $JOB_ID) on Node: $NODE_NAME"
-        echo -n "Reuse this connection? [Y/n] "
+    # --- 1. ENFORCE A SINGLE NEURODESKTOP SESSION ---
+    # Only one neurodesktop session is supported at a time: concurrent sessions
+    # would share the same container home and Slurm staging dirs and clash. If a
+    # running (R) or pending (PD) job already exists, we reconnect/attach to it
+    # and never submit a second one. Match on --name so we don't touch unrelated
+    # compute jobs.
+    local EXISTING_JOBS RUNNING_JOB PENDING_JOB reuse waitq
+    EXISTING_JOBS=$(ssh -S "$CTRL_SOCKET" -q "$LOGIN_NODE" "squeue -u \$USER --name=$JOB_NAME -h -t R,PD -o '%i %t'")
+    RUNNING_JOB=$(printf '%s\n' "$EXISTING_JOBS" | awk '$2=="R"{print $1; exit}')
+    PENDING_JOB=$(printf '%s\n' "$EXISTING_JOBS" | awk '$2=="PD"{print $1; exit}')
+
+    if [ -n "$RUNNING_JOB" ]; then
+        echo "A $JOB_NAME session is already running (Job $RUNNING_JOB)."
+        echo "Only one session is supported at a time."
+        echo -n "Reconnect to it? [Y/n] "
         read -r reuse
-        
-        # Default to Yes
+        # Default to Yes: rebuild the tunnel from scratch (works even after the
+        # original terminal is gone) by reading the job's per-job state file.
         if [[ ! "$reuse" =~ ^([nN][oO]|[nN])$ ]]; then
-            echo "Reconnecting to $NODE_NAME..."
-            echo "ℹ️  Using existing tunnel from your original terminal."
-            ssh -S "$CTRL_SOCKET" -t "$LOGIN_NODE" "ssh $NODE_NAME"
+            attach_neurodesk_job "$CTRL_SOCKET" "$LOGIN_NODE" "$RUNNING_JOB"
             return
+        fi
+        # Declined to reconnect: offer to cancel it, then fall through to launch
+        # a new session. Abort if the user keeps the existing job.
+        if ! cancel_neurodesk_job "$CTRL_SOCKET" "$LOGIN_NODE" "$RUNNING_JOB"; then
+            return 0
+        fi
+    elif [ -n "$PENDING_JOB" ]; then
+        echo "A $JOB_NAME session is already queued and waiting to start (Job $PENDING_JOB)."
+        echo "Only one session is supported at a time."
+        echo -n "Wait for it to start and attach? [Y/n] "
+        read -r waitq
+        if [[ ! "$waitq" =~ ^([nN][oO]|[nN])$ ]]; then
+            attach_neurodesk_job "$CTRL_SOCKET" "$LOGIN_NODE" "$PENDING_JOB"
+            return
+        fi
+        # Declined to wait: offer to cancel the queued job, then fall through to
+        # launch a new session. Abort if the user keeps the existing job.
+        if ! cancel_neurodesk_job "$CTRL_SOCKET" "$LOGIN_NODE" "$PENDING_JOB"; then
+            return 0
         fi
     fi
 
@@ -359,6 +690,11 @@ function connectSherlock() {
     echo -n "How much Memory needed? [8G] "
     read -r MEM
     MEM=${MEM:-8G}
+    local RAW_MEM="$MEM"
+    MEM=$(normalize_memory_request "$MEM")
+    if [ "$MEM" != "$RAW_MEM" ]; then
+        echo "Interpreting bare memory value '${RAW_MEM}' as '${MEM}'."
+    fi
 
     echo -n "How many CPUs needed? [1] "
     read -r CPUS
@@ -372,14 +708,20 @@ function connectSherlock() {
     read -r GPU
     GPU=${GPU:-none}
 
-    TUNNEL_PORT=$(choose_shared_tunnel_port "$CTRL_SOCKET" "$LOGIN_NODE")
-    if [[ ! "$TUNNEL_PORT" =~ ^[0-9]+$ ]]; then
-        echo "Failed to find a shared free tunnel port after multiple attempts."
-        echo "Please close old SSH tunnels/services and run the script again."
+    NOTEBOOK_PORT=$(random_tunnel_port)
+    if [[ ! "$NOTEBOOK_PORT" =~ ^[0-9]+$ ]]; then
+        echo "Failed to choose a notebook port."
         return 1
     fi
 
-    echo "Using shared random tunnel/notebook port: ${TUNNEL_PORT}"
+    echo "Using random compute-node notebook port: ${NOTEBOOK_PORT}"
+
+    # Authentication token for Jupyter. The compute-node notebook port lives on a
+    # shared node's localhost, so we keep token auth on (rather than disabling it)
+    # and thread a known token through to the container, the per-job state file,
+    # and the URL we print -- so the user can open the notebook in one click.
+    local TUNNEL_TOKEN
+    TUNNEL_TOKEN=$(random_notebook_token)
 
     echo "Preparing setup script..."
     ssh -S "$CTRL_SOCKET" "$LOGIN_NODE" "cat > ~/.neurodesk_setup.sh && chmod +x ~/.neurodesk_setup.sh" <<'EOF'
@@ -1015,6 +1357,11 @@ fi
 echo "Starting Neurodesktop container..."
 NEURODESKTOP_NOTEBOOK_PORT="${NEURODESKTOP_NOTEBOOK_PORT:-8888}"
 NEURODESKTOP_DISPLAY_URL="${NEURODESKTOP_DISPLAY_URL:-http://127.0.0.1:8888}"
+NEURODESKTOP_TOKEN="${NEURODESKTOP_TOKEN:-}"
+# Show a clickable, token-bearing URL in the container/Jupyter log.
+if [ -n "${NEURODESKTOP_TOKEN}" ]; then
+    NEURODESKTOP_DISPLAY_URL="${NEURODESKTOP_DISPLAY_URL%/}/lab?token=${NEURODESKTOP_TOKEN}"
+fi
 NEURODESKTOP_DISABLE_JPSERVER_EXTENSIONS="${NEURODESKTOP_DISABLE_JPSERVER_EXTENSIONS:-{'jupyter_server_fileid': False, 'jupyter_server_ydoc': False}}"
 NEURODESKTOP_SHELL_PROMPT="${NEURODESKTOP_SHELL_PROMPT:-neurodesk@sherlock:\\w\\$ }"
 
@@ -1045,7 +1392,7 @@ port_in_use_on_host() {
 
 if port_in_use_on_host "${NEURODESKTOP_NOTEBOOK_PORT}"; then
     echo "ERROR: notebook port ${NEURODESKTOP_NOTEBOOK_PORT} is already in use on $(hostname)."
-    echo "Please rerun connectSherlock.sh to pick a different tunnel port."
+    echo "Please rerun connectSherlock.sh to pick a different notebook port."
     exit 1
 fi
 
@@ -1124,6 +1471,7 @@ apptainer run \
    start-notebook.py \
       --ServerApp.port="${NEURODESKTOP_NOTEBOOK_PORT}" \
       --ServerApp.port_retries=0 \
+      --IdentityProvider.token="${NEURODESKTOP_TOKEN}" \
       --ServerApp.custom_display_url="${NEURODESKTOP_DISPLAY_URL}" \
       --FileContentsManager.delete_to_trash=False \
       --ServerApp.jpserver_extensions="${NEURODESKTOP_DISABLE_JPSERVER_EXTENSIONS}"
@@ -1137,10 +1485,84 @@ EOF
         ENABLE_GPU_CONTAINER=1
     fi
     
-    ssh -S "$CTRL_SOCKET" -o ExitOnForwardFailure=yes -t -L ${TUNNEL_PORT}:localhost:${TUNNEL_PORT} "$LOGIN_NODE" \
+    # Wrapper runs ON the allocated compute node: it records the node + notebook
+    # port (so a later terminal can rebuild the tunnel), then execs the container
+    # setup. Used by both launch modes below.
+    #   - sbatch (default): job is owned by Slurm and survives SSH disconnects,
+    #     so it can be detached and reattached.
+    #   - salloc (interactive-only partitions such as 'dev', which reject batch
+    #     jobs): foreground session tied to this terminal; it cannot be
+    #     reattached once the connection closes.
+    if ! ssh -S "$CTRL_SOCKET" "$LOGIN_NODE" "cat > ~/.neurodesk_job.sh && chmod +x ~/.neurodesk_job.sh" <<'EOF'
+#!/bin/bash
+# Per-job state file keyed by SLURM_JOB_ID so concurrent neurodesktop jobs do
+# not clobber each other's recorded node/port.
+STATE_FILE="${HOME}/.neurodesk_session_${SLURM_JOB_ID}.env"
+umask 077
+cat > "${STATE_FILE}" <<STATE
+NEURODESK_JOB_ID=${SLURM_JOB_ID}
+NEURODESK_NODE=$(hostname -s)
+NEURODESK_PORT=${NEURODESKTOP_NOTEBOOK_PORT}
+NEURODESK_TOKEN=${NEURODESKTOP_TOKEN:-}
+STATE
+exec "${HOME}/.neurodesk_setup.sh"
+EOF
+    then
+        echo "Failed to upload session wrapper (~/.neurodesk_job.sh) to $LOGIN_NODE."
+        return 1
+    fi
+
+    # Interactive-only partitions reject sbatch; route them straight to salloc.
+    local USE_SALLOC=0
+    case "$PARTITION" in
+        dev|interactive) USE_SALLOC=1 ;;
+    esac
+
+    if [ "$USE_SALLOC" -eq 0 ]; then
+        local SUBMIT_OUTPUT SUBMIT_STATUS JOB_ID
+        SUBMIT_OUTPUT=$(ssh -S "$CTRL_SOCKET" -q "$LOGIN_NODE" \
+            "sbatch --parsable --job-name=$JOB_NAME -p $PARTITION --nodes=1 --time=$WALLTIME \
+             --ntasks=1 --cpus-per-task=$CPUS --mem=$MEM $GPU_FLAG \
+             --output=\$HOME/.neurodesk_job_%j.log \
+             --export=ALL,NEURODESKTOP_ENABLE_GPU=${ENABLE_GPU_CONTAINER},NEURODESKTOP_NOTEBOOK_PORT=${NOTEBOOK_PORT},NEURODESKTOP_TOKEN=${TUNNEL_TOKEN},NEURODESKTOP_DISPLAY_URL=http://127.0.0.1:${NOTEBOOK_PORT} \
+             ~/.neurodesk_job.sh")
+        SUBMIT_STATUS=$?
+        # --parsable prints "<jobid>" or "<jobid>;<cluster>"; take the field before ';'.
+        JOB_ID=${SUBMIT_OUTPUT%%;*}
+        JOB_ID=${JOB_ID//[[:space:]]/}
+        if [ "$SUBMIT_STATUS" -eq 0 ] && [[ "$JOB_ID" =~ ^[0-9]+$ ]]; then
+            echo "Submitted batch job $JOB_ID. Waiting for it to start (Ctrl-C is safe; the job keeps running)..."
+            attach_neurodesk_job "$CTRL_SOCKET" "$LOGIN_NODE" "$JOB_ID"
+            return
+        fi
+        # Some partitions forbid batch jobs entirely; fall back to salloc rather
+        # than failing outright.
+        if printf '%s' "$SUBMIT_OUTPUT" | grep -qiE 'not allowed|reserved for interactive|Invalid partition'; then
+            echo "Partition '$PARTITION' does not accept batch jobs; falling back to an interactive salloc session."
+            USE_SALLOC=1
+        else
+            echo "Failed to submit batch job (exit $SUBMIT_STATUS). sbatch said: $SUBMIT_OUTPUT"
+            return 1
+        fi
+    fi
+
+    # Interactive foreground session (salloc). The notebook output streams to
+    # this terminal; closing it ends the allocation. While it is alive a second
+    # terminal can still attach (the wrapper records node/port), but a dropped
+    # connection releases the job.
+    echo "Starting an interactive session on '$PARTITION' (foreground)."
+    echo "Closing this terminal or losing the connection ends the session -- unlike"
+    echo "batch partitions (e.g. 'normal'), interactive sessions cannot be reattached after a disconnect."
+    TUNNEL_PORT=$(choose_attach_tunnel_port "$CTRL_SOCKET" "$LOGIN_NODE" "$NOTEBOOK_PORT")
+    if [[ ! "$TUNNEL_PORT" =~ ^[0-9]+$ ]]; then
+        echo "Failed to find a free local/login tunnel port after multiple attempts."
+        return 1
+    fi
+    echo "Tunnel mapping: local ${TUNNEL_PORT} -> ${LOGIN_NODE} ${TUNNEL_PORT} -> compute ${NOTEBOOK_PORT}"
+    ssh -S "$CTRL_SOCKET" -o ExitOnForwardFailure=yes -t -L "${TUNNEL_PORT}:localhost:${TUNNEL_PORT}" "$LOGIN_NODE" \
         "salloc --job-name=$JOB_NAME -p $PARTITION --nodes=1 --time=$WALLTIME --ntasks=1 --cpus-per-task=$CPUS --mem=$MEM $GPU_FLAG \
         bash -c 'echo \"Allocated: \${SLURM_NODELIST}\"; \
-                 ssh -o ExitOnForwardFailure=yes -t -L ${TUNNEL_PORT}:localhost:${TUNNEL_PORT} \${SLURM_NODELIST} \"SLURM_CONF=\${SLURM_CONF:-} SLURM_SACK_SOCKET=\${SLURM_SACK_SOCKET:-} MUNGE_SOCKET=\${MUNGE_SOCKET:-} NEURODESKTOP_ENABLE_GPU=${ENABLE_GPU_CONTAINER} NEURODESKTOP_NOTEBOOK_PORT=${TUNNEL_PORT} NEURODESKTOP_DISPLAY_URL=http://127.0.0.1:${TUNNEL_PORT} ~/.neurodesk_setup.sh\"'"
+                 ssh -o ExitOnForwardFailure=yes -t -L ${TUNNEL_PORT}:localhost:${NOTEBOOK_PORT} \${SLURM_NODELIST} \"SLURM_JOB_ID=\${SLURM_JOB_ID} SLURM_CONF=\${SLURM_CONF:-} SLURM_SACK_SOCKET=\${SLURM_SACK_SOCKET:-} MUNGE_SOCKET=\${MUNGE_SOCKET:-} NEURODESKTOP_ENABLE_GPU=${ENABLE_GPU_CONTAINER} NEURODESKTOP_NOTEBOOK_PORT=${NOTEBOOK_PORT} NEURODESKTOP_TOKEN=${TUNNEL_TOKEN} NEURODESKTOP_DISPLAY_URL=http://127.0.0.1:${TUNNEL_PORT} ~/.neurodesk_job.sh\"'"
 }
 
 # Check if the script is being executed directly
