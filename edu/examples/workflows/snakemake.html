@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="en" data-content_root="../../"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="nd-review-id" content="e2377815-3e92-4201-9ab2-f989efaabf60">
 
     <title>Snakemake — Neurodesk</title>
   
@@ -627,7 +628,8 @@
 </section>
 <section id="what-is-snakemake-and-why-use-it-on-neurodesk">
 <h2>1. What is Snakemake, and why use it on Neurodesk?<a class="headerlink" href="#what-is-snakemake-and-why-use-it-on-neurodesk" title="Link to this heading">#</a></h2>
-<p><strong>Snakemake</strong> is a <em>file-based</em> workflow management system: you declare rules of the form <em>“to produce output X, run command C on input Y,”</em> and Snakemake works out the dependency graph and the run order. It’s heavily inspired by GNU Make but uses a Python-based markup language and adds:</p>
+<p><strong>Snakemake</strong> is a <em>file-based</em> workflow management system: you declare rules of the form <em>“to produce output X, run command C on input Y,”</em> and Snakemake works out the dependency graph and the run order.
+It’s heavily inspired by GNU Make — wildcards, resumability via file timestamps, and parallel execution are core Make features too. Snakemake’s value-add is bringing that model to a Python-based syntax with tooling built for scientific pipelines:</p>
 <ul class="simple">
 <li><p><strong>Wildcards</strong> — write a rule once, run it across many subjects (<code class="docutils literal notranslate"><span class="pre">sub-{subject}_T1w.nii.gz</span></code>).</p></li>
 <li><p><strong>DAG resolution + visualisation</strong> — Snakemake plans the whole workflow and can draw it for you.</p></li>
@@ -664,7 +666,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nilearn</span> <span class="n">nibabel</span> <span class="n">pandas</span> <span class="n">pybids</span> <span class="n">snakemake</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nilearn</span> <span class="n">nibabel</span> <span class="n">pandas</span> <span class="n">pybids</span> 
 </pre></div>
 </div>
 </div>
@@ -742,14 +744,14 @@ ls -lh ds000114/sub-0{1,2,3}/ses-test/anat/*_T1w.nii.gz
 get(ok): sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz (file) [from s3-PUBLIC...]
 get(ok): sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz (file) [from s3-PUBLIC...]
 get(ok): sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz (file) [from s3-PUBLIC...]
-lrwxrwxrwx 1 jovyan jovyan 143 Jun 12 02:46 ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz
+lrwxrwxrwx 1 jovyan jovyan 143 Jul  2 01:18 ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz
  -&gt; ../../../.git/annex/objects/QP/jm/MD5E-s8677710--d6820f6cb8fb965e864419c14f6a22d5.nii.gz/MD5E-s8
 677710--d6820f6cb8fb965e864419c14f6a22d5.nii.gz
-lrwxrwxrwx 1 jovyan jovyan 145 Jun 12 02:46 ds000114
+lrwxrwxrwx 1 jovyan jovyan 145 Jul  2 01:18 ds000114
 /sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz -&gt; ../../../.git/annex/objects/qq/gm/MD5E-s10025785
 --0e790e210a275d76e3f2f4d895df6358.nii.gz/MD5E-s10025785--0e790e210a275d76e3f2f4d895df6358.nii.gz
 lr
-wxrwxrwx 1 jovyan jovyan 143 Jun 12 02:46 ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz -
+wxrwxrwx 1 jovyan jovyan 143 Jul  2 01:18 ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz -
 &gt; ../../../.git/annex/objects/P9/kj/MD5E-s7970968--75bb38265ea96864bfa0b012ba21b0b0.nii.gz/MD5E-s797
 0968--75bb38265ea96864bfa0b012ba21b0b0.nii.gz
 </pre></div>
@@ -850,7 +852,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
 </section>
 <section id="rules-bet-smk-brain-extraction">
 <h3>4.2. <code class="docutils literal notranslate"><span class="pre">rules/bet.smk</span></code> — brain extraction<a class="headerlink" href="#rules-bet-smk-brain-extraction" title="Link to this heading">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">input:</span></code> references <code class="docutils literal notranslate"><span class="pre">T1_PATH</span></code> from <code class="docutils literal notranslate"><span class="pre">common.smk</span></code> — Snakemake substitutes the <code class="docutils literal notranslate"><span class="pre">{subject}</span></code> wildcard at job-resolution time, so the path is written exactly once in the workflow. The output uses BIDS-derivative naming (<code class="docutils literal notranslate"><span class="pre">_desc-brain_T1w.nii.gz</span></code>). The shell line runs <code class="docutils literal notranslate"><span class="pre">bet</span></code> with <code class="docutils literal notranslate"><span class="pre">-f</span> <span class="pre">0.5</span></code> (the fractional intensity threshold, BET’s main tuning knob — lower values strip less aggressively) and redirects both stdout and stderr into the per-rule log via <code class="docutils literal notranslate"><span class="pre">&amp;&gt;</span> <span class="pre">{log}</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">input:</span></code> references <code class="docutils literal notranslate"><span class="pre">T1_PATH</span></code> from <code class="docutils literal notranslate"><span class="pre">common.smk</span></code> — Snakemake substitutes the <code class="docutils literal notranslate"><span class="pre">{subject}</span></code> wildcard at job-resolution time, so the path is written exactly once in the workflow. The output uses BIDS-derivative naming (<code class="docutils literal notranslate"><span class="pre">_desc-brain_T1w.nii.gz</span></code>). The shell line runs <code class="docutils literal notranslate"><span class="pre">bet</span></code> with <code class="docutils literal notranslate"><span class="pre">-f</span> <span class="pre">0.5</span></code> (the fractional intensity threshold, BET’s main tuning knob — lower values strip less aggressively) and redirects both stdout and stderr into the per-rule log via <code class="docutils literal notranslate"><span class="pre">&amp;&gt;</span> <span class="pre">{log}</span></code>. The verbose flag <code class="docutils literal notranslate"><span class="pre">-v</span></code> is added specifically so the log files aren’t empty.</p>
 <p>A docstring, a <code class="docutils literal notranslate"><span class="pre">log:</span></code>, <code class="docutils literal notranslate"><span class="pre">envmodules:</span></code>, <code class="docutils literal notranslate"><span class="pre">threads:</span></code> and a <code class="docutils literal notranslate"><span class="pre">resources:</span></code> hint together make this rule self-describing for cluster execution: switching to the SLURM executor later needs no extra configuration — each job already knows which Lmod module to load and how much memory to request.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -869,7 +871,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
 <span class="s1">        mem_mb=2000,</span>
 <span class="s1">    shell:</span>
 <span class="s1">        """</span>
-<span class="s1">        bet </span><span class="si">{input.img}</span><span class="s1"> </span><span class="si">{output.img}</span><span class="s1"> -f 0.5 &amp;&gt; </span><span class="si">{log}</span>
+<span class="s1">        bet </span><span class="si">{input.img}</span><span class="s1"> </span><span class="si">{output.img}</span><span class="s1"> -f 0.5 -v &amp;&gt; </span><span class="si">{log}</span>
 <span class="s1">        """</span>
 <span class="s1">'''</span>
 <span class="p">(</span><span class="n">workdir</span> <span class="o">/</span> <span class="s1">'workflow'</span> <span class="o">/</span> <span class="s1">'rules'</span> <span class="o">/</span> <span class="s1">'bet.smk'</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">bet_smk</span><span class="p">)</span>
@@ -893,7 +895,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
         mem_mb=2000,
     shell:
         """
-        bet {input.img} {output.img} -f 0.5 &amp;&gt; {log}
+        bet {input.img} {output.img} -f 0.5 -v &amp;&gt; {log}
         """
 </pre></div>
 </div>
@@ -904,6 +906,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
 <h3>4.3. <code class="docutils literal notranslate"><span class="pre">rules/fast.smk</span></code> — tissue segmentation<a class="headerlink" href="#rules-fast-smk-tissue-segmentation" title="Link to this heading">#</a></h3>
 <p>FSL <code class="docutils literal notranslate"><span class="pre">fast</span></code> is a tissue-segmentation tool. Given a brain-extracted T1w, it writes several files based on a user-supplied prefix (-o <prefix>): partial-volume probability maps for CSF/GM/WM (<code class="docutils literal notranslate"><span class="pre">_pve_0/1/2</span></code>), the discrete hard-classified map (<code class="docutils literal notranslate"><span class="pre">_seg</span></code>), and a couple of intermediate views (<code class="docutils literal notranslate"><span class="pre">_mixeltype</span></code>, <code class="docutils literal notranslate"><span class="pre">_pveseg</span></code>). We only consume <code class="docutils literal notranslate"><span class="pre">_seg</span></code>.</prefix></p>
 <p>Rather than declare every byproduct as an output, the rule uses <code class="docutils literal notranslate"><span class="pre">shadow:</span> <span class="pre">"shallow"</span></code>. Snakemake runs the job in a temporary directory and, when it finishes, copies only files listed in <code class="docutils literal notranslate"><span class="pre">output:</span></code> back into <code class="docutils literal notranslate"><span class="pre">results/</span></code>; everything else is discarded with the shadow dir. That keeps the derivatives tree clean without us having to know FAST’s full output surface.</p>
+<p>The rule also sets <code class="docutils literal notranslate"><span class="pre">threads:</span> <span class="pre">2</span></code>. Snakemake automatically sets <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> (and related thread-count environment variables) to match this value, so <code class="docutils literal notranslate"><span class="pre">fast</span></code> - which respects OpenMP threading —  picks up the thread count without needing a manual export in the <code class="docutils literal notranslate"><span class="pre">shell:</span></code> block.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">params:</span> <span class="pre">prefix</span></code> entry is a small lambda that computes the prefix from <code class="docutils literal notranslate"><span class="pre">output.img</span></code> by stripping the BIDS suffix, so the prefix is the path FAST should write its byproducts under. The rule’s <code class="docutils literal notranslate"><span class="pre">shell:</span></code> block then passes it through as <code class="docutils literal notranslate"><span class="pre">fast</span> <span class="pre">-o</span> <span class="pre">{params.prefix}</span> <span class="pre">...</span></code>, so the prefix FAST sees is always derived from the same path Snakemake tracks. If we later renamed or relocated the output, the prefix would follow automatically. Writing the prefix as a hardcoded string would split that single source of truth into two places, and Snakemake’s linter also flags hardcoded <code class="docutils literal notranslate"><span class="pre">params:</span></code> values for exactly this portability reason.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -925,8 +928,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
 <span class="s1">    shadow: "shallow"</span>
 <span class="s1">    shell:</span>
 <span class="s1">        """</span>
-<span class="s1">        export OMP_NUM_THREADS=</span><span class="si">{threads}</span>
-<span class="s1">        fast -t 1 -n 3 -o </span><span class="si">{params.prefix}</span><span class="s1"> </span><span class="si">{input.img}</span><span class="s1"> &amp;&gt; </span><span class="si">{log}</span>
+<span class="s1">        fast -t 1 -n 3 -v -o </span><span class="si">{params.prefix}</span><span class="s1"> </span><span class="si">{input.img}</span><span class="s1"> &amp;&gt; </span><span class="si">{log}</span>
 <span class="s1">        mv </span><span class="si">{params.prefix}</span><span class="s1">_seg.nii.gz </span><span class="si">{output.img}</span>
 <span class="s1">        """</span>
 <span class="s1">'''</span>
@@ -954,8 +956,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
     shadow: "shallow"
     shell:
         """
-        export OMP_NUM_THREADS={threads}
-        fast -t 1 -n 3 -o {params.prefix} {input.img} &amp;&gt; {log}
+        fast -t 1 -n 3 -v -o {params.prefix} {input.img} &amp;&gt; {log}
         mv {params.prefix}_seg.nii.gz {output.img}
         """
 </pre></div>
@@ -966,7 +967,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
 <section id="rules-qc-smk-qc-figure-via-the-script-directive">
 <h3>4.4. <code class="docutils literal notranslate"><span class="pre">rules/qc.smk</span></code> — QC figure via the <code class="docutils literal notranslate"><span class="pre">script:</span></code> directive<a class="headerlink" href="#rules-qc-smk-qc-figure-via-the-script-directive" title="Link to this heading">#</a></h3>
 <p>The QC rule generates a three-panel sanity-check figure for each subject: the raw T1w, the brain-extracted volume from BET, and the FAST segmentation overlaid on the brain. The point is to let a reader scroll through subjects and spot misregistrations or failed brain extractions at a glance, without opening any viewer.</p>
-<p>Snakemake’s <code class="docutils literal notranslate"><span class="pre">script:</span></code> directive is a better fit here than <code class="docutils literal notranslate"><span class="pre">shell:</span></code> because the QC step is logic-heavy (load NIfTI, slice volume, draw overlay, write PNG) and would be awkward to wedge into a one-line shell command. <code class="docutils literal notranslate"><span class="pre">script:</span></code> launches a Python interpreter that already has access to a global <code class="docutils literal notranslate"><span class="pre">snakemake</span></code> object, so <code class="docutils literal notranslate"><span class="pre">../scripts/qc.py</span></code> reads <code class="docutils literal notranslate"><span class="pre">snakemake.input.original</span></code>, <code class="docutils literal notranslate"><span class="pre">snakemake.input.brain</span></code>, <code class="docutils literal notranslate"><span class="pre">snakemake.input.seg</span></code>, <code class="docutils literal notranslate"><span class="pre">snakemake.output.png</span></code>, and <code class="docutils literal notranslate"><span class="pre">snakemake.log[0]</span></code> directly — no argparse, no path strings passed on the command line, no risk of the wrapper and the script disagreeing about field order.</p>
+<p>Snakemake’s <code class="docutils literal notranslate"><span class="pre">script:</span></code> directive is a better fit here than <code class="docutils literal notranslate"><span class="pre">shell:</span></code> because the QC step is logic-heavy (load NIfTI, slice volume, draw overlay, write PNG) and would be awkward to wedge into a one-line shell command. <code class="docutils literal notranslate"><span class="pre">script:</span></code> launches a Python interpreter that already has access to a global <code class="docutils literal notranslate"><span class="pre">snakemake</span></code> object, so <code class="docutils literal notranslate"><span class="pre">../scripts/qc.py</span></code> reads <code class="docutils literal notranslate"><span class="pre">snakemake.input.original</span></code>, <code class="docutils literal notranslate"><span class="pre">snakemake.input.brain</span></code>, <code class="docutils literal notranslate"><span class="pre">snakemake.input.seg</span></code>,<code class="docutils literal notranslate"><span class="pre">snakemake.output.png</span></code> and <code class="docutils literal notranslate"><span class="pre">snakemake.log[0]</span></code> directly — no argparse, no path strings passed on the command line, no risk of the wrapper and the script disagreeing about field order.</p>
 <p>The two derivative inputs are referenced via <code class="docutils literal notranslate"><span class="pre">rules.bet.output.img</span></code> and <code class="docutils literal notranslate"><span class="pre">rules.fast.output.img</span></code> — the same single-source-of-truth pattern used elsewhere in the pipeline. The QC rule never re-types a file path; it borrows the one already declared upstream, so renaming any output ripples through automatically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1015,7 +1016,7 @@ T1_PATH = f"{BIDS_ROOT}/sub-{{subject}}/{SESSION}/anat/sub-{{subject}}_{SESSION}
 <section id="workflow-scripts-qc-py">
 <h3>4.5. <code class="docutils literal notranslate"><span class="pre">workflow/scripts/qc.py</span></code><a class="headerlink" href="#workflow-scripts-qc-py" title="Link to this heading">#</a></h3>
 <p>When Snakemake invokes a Python script via the <code class="docutils literal notranslate"><span class="pre">script:</span></code> directive, it prepends a preamble that defines a module-level <code class="docutils literal notranslate"><span class="pre">snakemake</span></code> object — no import is needed. (Linters and IDE type-checkers don’t know about this injection and will flag the bare snakemake reference; the <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">noqa:</span> <span class="pre">F821</span></code> comments in the script silence that noise.)</p>
-<p>The script reads <code class="docutils literal notranslate"><span class="pre">snakemake.input.&lt;name&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">snakemake.output.&lt;name&gt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">snakemake.log[0]</span></code> directly, then renders a three-panel figure with <code class="docutils literal notranslate"><span class="pre">nilearn</span></code>: the original T1w, the BET-extracted brain, and the FAST tissue segmentation. For each subject the axial cut is placed at the z-coordinate of the brain’s centre of mass (computed in millimetres via the BET affine), so the slice always lands inside the brain even though subjects sit at different positions in native space. The two anatomical panels (<code class="docutils literal notranslate"><span class="pre">plot_anat</span></code>) clamp <em>vmax</em> to the 99th percentile of non-zero voxels — that keeps bright outliers and large empty backgrounds from washing out contrast. The third panel (<code class="docutils literal notranslate"><span class="pre">plot_roi</span></code>) overlays the discrete FAST labels (1 = CSF, 2 = GM, 3 = WM) on the BET brain.</p>
+<p>The script reads <code class="docutils literal notranslate"><span class="pre">snakemake.input.&lt;name&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">snakemake.output.&lt;name&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">snakemake.log[0]</span></code> directly, then renders a three-panel figure with <code class="docutils literal notranslate"><span class="pre">nilearn</span></code>: the original T1w, the BET-extracted brain, and the FAST tissue segmentation. For each subject the axial cut is placed at the z-coordinate of the brain’s centre of mass (computed in millimetres via the BET affine), so the slice always lands inside the brain even though subjects sit at different positions in native space. The two anatomical panels (<code class="docutils literal notranslate"><span class="pre">plot_anat</span></code>) clamp <em>vmax</em> to the 99th percentile of non-zero voxels — that keeps bright outliers and large empty backgrounds from washing out contrast. The third panel (<code class="docutils literal notranslate"><span class="pre">plot_roi</span></code>) overlays the discrete FAST labels (1 = CSF, 2 = GM, 3 = WM) on the BET brain.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qc_script</span> <span class="o">=</span> <span class="s1">'''# Snakemake's `script:` directive prepends a preamble that defines a</span>
@@ -1210,7 +1211,7 @@ Lints for rule qc (line 1, /home/jovyan/workspace/books/examples/workflows/snake
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5875b6651d1cab164fcb08e2513d06331e83b0c0e3a4f3297f7c37b36c941084.svg" src="../../_images/5875b6651d1cab164fcb08e2513d06331e83b0c0e3a4f3297f7c37b36c941084.svg">
+<img alt="../../_images/443f34047f3e9a13b40c148df7c9ec4a5a41ad05517412c73430c1082a404f6f.svg" src="../../_images/443f34047f3e9a13b40c148df7c9ec4a5a41ad05517412c73430c1082a404f6f.svg">
 </div>
 </div>
 <p><strong>DAG</strong> (one node per rule × subject job — Snakemake will execute 9 jobs total: 3 subjects × 3 rules):</p>
@@ -1241,7 +1242,7 @@ Lints for rule qc (line 1, /home/jovyan/workspace/books/examples/workflows/snake
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/10d2baf0f8658cb10867aa1f1c130ef8962da46b0c6e7f4e45c3654cabe385ae.svg" src="../../_images/10d2baf0f8658cb10867aa1f1c130ef8962da46b0c6e7f4e45c3654cabe385ae.svg">
+<img alt="../../_images/53125f24e7646490e335c745a0ed9e97d4d2a3a47e68f98299679101e84c60b4.svg" src="../../_images/53125f24e7646490e335c745a0ed9e97d4d2a3a47e68f98299679101e84c60b4.svg">
 </div>
 </div>
 </section>
@@ -1264,12 +1265,12 @@ Lints for rule qc (line 1, /home/jovyan/workspace/books/examples/workflows/snake
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SNAKEMAKE
 =========
-  Date: 2026-06-12 02:46:58
-  Workflow ID: bf61ff2e-afde-4a59-a6fb-2d4e1e6d0fe7
+  Date: 2026-07-02 01:18:40
+  Workflow ID: 90501090-8179-4622-bae9-d1508879b9ad
   Platform: Linux-6.8.0-111-generic-x86_64-with-glibc2.39
-  Host: 3269c0427c30
+  Host: 60a752cf7e9e
   User: jovyan
-  Snakemake version: 9.23.0
+  Snakemake version: 9.22.0
   Python version: 3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:00:33) [GCC 14.3.0]
   Command: /opt/conda/bin/snakemake -s workflow/Snakefile -n --cores 4
   Snakefile: /home/jovyan/workspace/books/examples/workflows/snakemake_demo/workflow/Snakefile
@@ -1290,7 +1291,7 @@ all          1
 total       10
 
 
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule bet:
     input: ds000114/sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz
     output: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz
@@ -1299,7 +1300,7 @@ rule bet:
     reason: Missing output files: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz
     wildcards: subject=02
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule bet:
     input: ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz
     output: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz
@@ -1308,7 +1309,7 @@ rule bet:
     reason: Missing output files: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz
     wildcards: subject=01
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule bet:
     input: ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz
     output: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
@@ -1317,7 +1318,7 @@ rule bet:
     reason: Missing output files: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
     wildcards: subject=03
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule fast:
     input: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz
     output: results/sub-01/anat/sub-01_dseg.nii.gz
@@ -1327,7 +1328,7 @@ rule fast:
     wildcards: subject=01
     threads: 2
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule fast:
     input: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz
     output: results/sub-02/anat/sub-02_dseg.nii.gz
@@ -1337,7 +1338,7 @@ rule fast:
     wildcards: subject=02
     threads: 2
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule fast:
     input: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
     output: results/sub-03/anat/sub-03_dseg.nii.gz
@@ -1347,16 +1348,7 @@ rule fast:
     wildcards: subject=03
     threads: 2
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
-rule qc:
-    input: ds000114/sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz, results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz, results/sub-02/anat/sub-02_dseg.nii.gz
-    output: results/sub-02/figures/sub-02_desc-qc.png
-    log: logs/qc/sub-02.log
-    jobid: 4
-    reason: Missing output files: results/sub-02/figures/sub-02_desc-qc.png; Input files updated by another job: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz, results/sub-02/anat/sub-02_dseg.nii.gz
-    wildcards: subject=02
-    resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule qc:
     input: ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz, results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz, results/sub-01/anat/sub-01_dseg.nii.gz
     output: results/sub-01/figures/sub-01_desc-qc.png
@@ -1365,7 +1357,16 @@ rule qc:
     reason: Missing output files: results/sub-01/figures/sub-01_desc-qc.png; Input files updated by another job: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz, results/sub-01/anat/sub-01_dseg.nii.gz
     wildcards: subject=01
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
+rule qc:
+    input: ds000114/sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz, results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz, results/sub-02/anat/sub-02_dseg.nii.gz
+    output: results/sub-02/figures/sub-02_desc-qc.png
+    log: logs/qc/sub-02.log
+    jobid: 4
+    reason: Missing output files: results/sub-02/figures/sub-02_desc-qc.png; Input files updated by another job: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz, results/sub-02/anat/sub-02_dseg.nii.gz
+    wildcards: subject=02
+    resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
+[Thu Jul  2 01:18:41 2026]
 rule qc:
     input: ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz, results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz, results/sub-03/anat/sub-03_dseg.nii.gz
     output: results/sub-03/figures/sub-03_desc-qc.png
@@ -1374,11 +1375,11 @@ rule qc:
     reason: Missing output files: results/sub-03/figures/sub-03_desc-qc.png; Input files updated by another job: results/sub-03/anat/sub-03_dseg.nii.gz, results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
     wildcards: subject=03
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:46:59 2026]
+[Thu Jul  2 01:18:41 2026]
 rule all:
     input: results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-03/figures/sub-03_desc-qc.png
     jobid: 0
-    reason: Input files updated by another job: results/sub-03/figures/sub-03_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-01/figures/sub-01_desc-qc.png
+    reason: Input files updated by another job: results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-03/figures/sub-03_desc-qc.png
     resources: tmpdir=/tmp
 Job stats:
 job      count
@@ -1431,7 +1432,7 @@ This was a dry-run (flag -n). The order of jobs does not reflect the order of ex
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>return code: 0
 --- stderr (tail) ---
-[Fri Jun 12 02:51:58 2026]
+[Thu Jul  2 01:24:38 2026]
 localrule qc:
     input: ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz, results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz, results/sub-03/anat/sub-03_dseg.nii.gz
     output: results/sub-03/figures/sub-03_desc-qc.png
@@ -1440,22 +1441,22 @@ localrule qc:
     reason: Missing output files: results/sub-03/figures/sub-03_desc-qc.png; Input files updated by another job: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz, results/sub-03/anat/sub-03_dseg.nii.gz
     wildcards: subject=03
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Fri Jun 12 02:52:12 2026]
+[Thu Jul  2 01:24:53 2026]
 Finished jobid: 7 (Rule: qc)
 9 of 10 steps (90%) done
 Select jobs to execute...
 Execute 1 jobs...
 
-[Fri Jun 12 02:52:12 2026]
+[Thu Jul  2 01:24:53 2026]
 localrule all:
     input: results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-03/figures/sub-03_desc-qc.png
     jobid: 0
-    reason: Input files updated by another job: results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-03/figures/sub-03_desc-qc.png
+    reason: Input files updated by another job: results/sub-03/figures/sub-03_desc-qc.png, results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png
     resources: tmpdir=/tmp
-[Fri Jun 12 02:52:12 2026]
+[Thu Jul  2 01:24:53 2026]
 Finished jobid: 0 (Rule: all)
 10 of 10 steps (100%) done
-Complete log(s): /home/jovyan/workspace/books/examples/workflows/snakemake_demo/.snakemake/log/2026-06-12T024700.970950.snakemake.log
+Complete log(s): /home/jovyan/workspace/books/examples/workflows/snakemake_demo/.snakemake/log/2026-07-02T011843.129236.snakemake.log
 </pre></div>
 </div>
 </div>
@@ -1524,11 +1525,11 @@ results/sub-03/figures/sub-03_desc-qc.png
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-06-12T02:52:14.138082+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-07-02T01:24:55.154480+00:00
 
 Python implementation: CPython
 Python version       : 3.13.13
-IPython version      : 9.14.0
+IPython version      : 9.12.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
@@ -1538,14 +1539,14 @@ Processor   : x86_64
 CPU cores   : 16
 Architecture: 64bit
 
-IPython   : 9.14.0
+IPython   : 9.12.0
 bids      : 0.22.0
 matplotlib: 3.10.9
 nibabel   : 5.4.2
 nilearn   : 0.13.1
 numpy     : 2.4.6
 
-Neurodesktop version: py-stack
+Neurodesktop version: 2026-06-04
 </pre></div>
 </div>
 </div>
