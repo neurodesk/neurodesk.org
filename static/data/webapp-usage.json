@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T06:55:24Z",
+  "generatedAt": "2026-07-03T06:48:38Z",
   "periodDays": 30,
   "apps": [
     {
@@ -185,9 +185,9 @@
       "id": "dicompare",
       "name": "dicompare",
       "host": "dicompare.neurodesk.org",
-      "users": 270,
-      "visits": 90,
-      "pageViews": 270,
+      "users": 330,
+      "visits": 100,
+      "pageViews": 330,
       "daily": [
         {
           "date": "2026-06-08",
@@ -236,14 +236,20 @@
           "users": 30,
           "visits": 0,
           "pageViews": 30
+        },
+        {
+          "date": "2026-07-02",
+          "users": 60,
+          "visits": 10,
+          "pageViews": 60
         }
       ],
       "countries": [
         {
           "countryName": "US",
-          "users": 200,
-          "visits": 20,
-          "pageViews": 200
+          "users": 260,
+          "visits": 30,
+          "pageViews": 260
         },
         {
           "countryName": "AU",
@@ -273,17 +279,17 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 270,
-          "visits": 90,
-          "pageViews": 270
+          "users": 330,
+          "visits": 100,
+          "pageViews": 330
         }
       ],
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
-          "users": 220,
-          "visits": 40,
-          "pageViews": 220
+          "users": 270,
+          "visits": 50,
+          "pageViews": 270
         },
         {
           "userAgentBrowser": "ChromeHeadless",
@@ -293,9 +299,9 @@
         },
         {
           "userAgentBrowser": "Firefox",
-          "users": 10,
+          "users": 20,
           "visits": 10,
-          "pageViews": 10
+          "pageViews": 20
         },
         {
           "userAgentBrowser": "Unknown",
@@ -310,16 +316,10 @@
       "id": "musclemap",
       "name": "MuscleMap",
       "host": "musclemap.neurodesk.org",
-      "users": 340,
+      "users": 330,
       "visits": 190,
-      "pageViews": 340,
+      "pageViews": 330,
       "daily": [
-        {
-          "date": "2026-06-02",
-          "users": 20,
-          "visits": 10,
-          "pageViews": 20
-        },
         {
           "date": "2026-06-03",
           "users": 10,
@@ -415,14 +415,20 @@
           "users": 10,
           "visits": 10,
           "pageViews": 10
+        },
+        {
+          "date": "2026-07-02",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
         }
       ],
       "countries": [
         {
           "countryName": "AU",
-          "users": 70,
-          "visits": 40,
-          "pageViews": 70
+          "users": 60,
+          "visits": 30,
+          "pageViews": 60
         },
         {
           "countryName": "CN",
@@ -444,9 +450,9 @@
         },
         {
           "countryName": "CA",
-          "users": 30,
+          "users": 20,
           "visits": 20,
-          "pageViews": 30
+          "pageViews": 20
         },
         {
           "countryName": "DE",
@@ -479,6 +485,12 @@
           "pageViews": 10
         },
         {
+          "countryName": "IN",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        },
+        {
           "countryName": "NL",
           "users": 10,
           "visits": 10,
@@ -494,35 +506,35 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 270,
-          "visits": 140,
-          "pageViews": 270
+          "users": 250,
+          "visits": 130,
+          "pageViews": 250
         },
         {
           "deviceType": "mobile",
-          "users": 70,
-          "visits": 50,
-          "pageViews": 70
+          "users": 80,
+          "visits": 60,
+          "pageViews": 80
         }
       ],
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
-          "users": 110,
+          "users": 100,
           "visits": 50,
-          "pageViews": 110
-        },
-        {
-          "userAgentBrowser": "ChromeHeadless",
-          "users": 60,
-          "visits": 30,
-          "pageViews": 60
+          "pageViews": 100
         },
         {
           "userAgentBrowser": "Unknown",
           "users": 60,
           "visits": 50,
           "pageViews": 60
+        },
+        {
+          "userAgentBrowser": "ChromeHeadless",
+          "users": 50,
+          "visits": 20,
+          "pageViews": 50
         },
         {
           "userAgentBrowser": "Edge",
@@ -550,6 +562,12 @@
         },
         {
           "userAgentBrowser": "BingBot",
+          "users": 10,
+          "visits": 10,
+          "pageViews": 10
+        },
+        {
+          "userAgentBrowser": "ChromeMobile",
           "users": 10,
           "visits": 10,
           "pageViews": 10
@@ -770,16 +788,10 @@
       "id": "seedseg",
       "name": "SeedSeg",
       "host": "seedseg.neurodesk.org",
-      "users": 130,
+      "users": 120,
       "visits": 60,
-      "pageViews": 130,
+      "pageViews": 120,
       "daily": [
-        {
-          "date": "2026-06-02",
-          "users": 10,
-          "visits": 0,
-          "pageViews": 10
-        },
         {
           "date": "2026-06-04",
           "users": 10,
@@ -850,9 +862,9 @@
         },
         {
           "countryName": "AU",
-          "users": 30,
+          "users": 20,
           "visits": 0,
-          "pageViews": 30
+          "pageViews": 20
         },
         {
           "countryName": "CA",
@@ -888,9 +900,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 70,
+          "users": 60,
           "visits": 0,
-          "pageViews": 70
+          "pageViews": 60
         },
         {
           "deviceType": "mobile",
@@ -914,9 +926,9 @@
         },
         {
           "userAgentBrowser": "ChromeHeadless",
-          "users": 30,
+          "users": 20,
           "visits": 0,
-          "pageViews": 30
+          "pageViews": 20
         },
         {
           "userAgentBrowser": "ChromeMobile",
@@ -931,16 +943,10 @@
       "id": "sct",
       "name": "Spinal Cord Toolbox",
       "host": "sct.neurodesk.org",
-      "users": 150,
+      "users": 130,
       "visits": 60,
-      "pageViews": 150,
+      "pageViews": 130,
       "daily": [
-        {
-          "date": "2026-06-02",
-          "users": 20,
-          "visits": 0,
-          "pageViews": 20
-        },
         {
           "date": "2026-06-04",
           "users": 10,
@@ -1016,18 +1022,6 @@
           "pageViews": 40
         },
         {
-          "countryName": "CA",
-          "users": 10,
-          "visits": 0,
-          "pageViews": 10
-        },
-        {
-          "countryName": "CH",
-          "users": 10,
-          "visits": 0,
-          "pageViews": 10
-        },
-        {
           "countryName": "CZ",
           "users": 10,
           "visits": 0,
@@ -1049,9 +1043,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 140,
+          "users": 120,
           "visits": 50,
-          "pageViews": 140
+          "pageViews": 120
         },
         {
           "deviceType": "mobile",
@@ -1062,16 +1056,16 @@
       ],
       "browsers": [
         {
-          "userAgentBrowser": "Chrome",
-          "users": 70,
-          "visits": 30,
-          "pageViews": 70
-        },
-        {
           "userAgentBrowser": "ChromeHeadless",
           "users": 70,
           "visits": 20,
           "pageViews": 70
+        },
+        {
+          "userAgentBrowser": "Chrome",
+          "users": 50,
+          "visits": 30,
+          "pageViews": 50
         },
         {
           "userAgentBrowser": "Unknown",
@@ -1086,9 +1080,9 @@
       "id": "vesselboost",
       "name": "VesselBoost",
       "host": "vesselboost.neurodesk.org",
-      "users": 200,
-      "visits": 120,
-      "pageViews": 200,
+      "users": 220,
+      "visits": 130,
+      "pageViews": 220,
       "daily": [
         {
           "date": "2026-06-03",
@@ -1164,6 +1158,12 @@
         },
         {
           "date": "2026-07-02",
+          "users": 20,
+          "visits": 10,
+          "pageViews": 20
+        },
+        {
+          "date": "2026-07-03",
           "users": 10,
           "visits": 10,
           "pageViews": 10
@@ -1172,9 +1172,9 @@
       "countries": [
         {
           "countryName": "CN",
-          "users": 90,
-          "visits": 70,
-          "pageViews": 90
+          "users": 100,
+          "visits": 80,
+          "pageViews": 100
         },
         {
           "countryName": "AU",
@@ -1199,34 +1199,40 @@
           "users": 10,
           "visits": 10,
           "pageViews": 10
+        },
+        {
+          "countryName": "US",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 130,
+          "users": 140,
           "visits": 50,
-          "pageViews": 130
+          "pageViews": 140
         },
         {
           "deviceType": "mobile",
-          "users": 70,
-          "visits": 70,
-          "pageViews": 70
+          "users": 80,
+          "visits": 80,
+          "pageViews": 80
         }
       ],
       "browsers": [
         {
           "userAgentBrowser": "Unknown",
-          "users": 70,
-          "visits": 70,
-          "pageViews": 70
+          "users": 80,
+          "visits": 80,
+          "pageViews": 80
         },
         {
           "userAgentBrowser": "Chrome",
-          "users": 50,
+          "users": 60,
           "visits": 10,
-          "pageViews": 50
+          "pageViews": 60
         },
         {
           "userAgentBrowser": "ChromeHeadless",
