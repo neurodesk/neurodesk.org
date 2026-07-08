@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-07T23:00:15Z",
+  "generatedAt": "2026-07-08T06:14:01Z",
   "periodDays": 30,
   "apps": [
     {
       "id": "calmar",
       "name": "CALMaR",
       "host": "calmar.neurodesk.org",
-      "users": 170,
+      "users": 160,
       "visits": 40,
-      "pageViews": 170,
+      "pageViews": 160,
       "daily": [
         {
           "date": "2026-06-08",
-          "users": 20,
+          "users": 10,
           "visits": 0,
-          "pageViews": 20
+          "pageViews": 10
         },
         {
           "date": "2026-06-11",
@@ -91,15 +91,15 @@
           "pageViews": 50
         },
         {
-          "countryName": "US",
-          "users": 40,
-          "visits": 0,
-          "pageViews": 40
-        },
-        {
           "countryName": "CN",
           "users": 30,
           "visits": 30,
+          "pageViews": 30
+        },
+        {
+          "countryName": "US",
+          "users": 30,
+          "visits": 0,
           "pageViews": 30
         },
         {
@@ -130,9 +130,9 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 140,
+          "users": 130,
           "visits": 10,
-          "pageViews": 140
+          "pageViews": 130
         },
         {
           "deviceType": "mobile",
@@ -149,15 +149,15 @@
           "pageViews": 60
         },
         {
-          "userAgentBrowser": "Unknown",
-          "users": 50,
-          "visits": 30,
-          "pageViews": 50
-        },
-        {
           "userAgentBrowser": "ChromeHeadless",
           "users": 40,
           "visits": 10,
+          "pageViews": 40
+        },
+        {
+          "userAgentBrowser": "Unknown",
+          "users": 40,
+          "visits": 30,
           "pageViews": 40
         },
         {
@@ -371,15 +371,9 @@
       "name": "MuscleMap",
       "host": "musclemap.neurodesk.org",
       "users": 270,
-      "visits": 160,
+      "visits": 150,
       "pageViews": 270,
       "daily": [
-        {
-          "date": "2026-06-08",
-          "users": 10,
-          "visits": 10,
-          "pageViews": 10
-        },
         {
           "date": "2026-06-10",
           "users": 20,
@@ -463,13 +457,19 @@
           "users": 10,
           "visits": 10,
           "pageViews": 10
+        },
+        {
+          "date": "2026-07-08",
+          "users": 10,
+          "visits": 0,
+          "pageViews": 10
         }
       ],
       "countries": [
         {
           "countryName": "CN",
           "users": 60,
-          "visits": 50,
+          "visits": 40,
           "pageViews": 60
         },
         {
@@ -542,23 +542,23 @@
       "deviceTypes": [
         {
           "deviceType": "desktop",
-          "users": 200,
+          "users": 210,
           "visits": 110,
-          "pageViews": 200
+          "pageViews": 210
         },
         {
           "deviceType": "mobile",
-          "users": 70,
-          "visits": 50,
-          "pageViews": 70
+          "users": 60,
+          "visits": 40,
+          "pageViews": 60
         }
       ],
       "browsers": [
         {
           "userAgentBrowser": "Chrome",
-          "users": 70,
+          "users": 80,
           "visits": 40,
-          "pageViews": 70
+          "pageViews": 80
         },
         {
           "userAgentBrowser": "ChromeHeadless",
@@ -568,9 +568,9 @@
         },
         {
           "userAgentBrowser": "Unknown",
-          "users": 40,
-          "visits": 30,
-          "pageViews": 40
+          "users": 30,
+          "visits": 20,
+          "pageViews": 30
         },
         {
           "userAgentBrowser": "ChromeMobile",
