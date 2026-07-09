@@ -666,7 +666,7 @@ It’s heavily inspired by GNU Make — wildcards, resumability via file timesta
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nilearn</span> <span class="n">nibabel</span> <span class="n">pandas</span> <span class="n">pybids</span> 
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nilearn</span><span class="o">==</span><span class="mf">0.13.1</span> <span class="n">nibabel</span><span class="o">==</span><span class="mf">5.4.2</span> <span class="n">pybids</span><span class="o">==</span><span class="mf">0.22.0</span>
 </pre></div>
 </div>
 </div>
@@ -744,14 +744,14 @@ ls -lh ds000114/sub-0{1,2,3}/ses-test/anat/*_T1w.nii.gz
 get(ok): sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz (file) [from s3-PUBLIC...]
 get(ok): sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz (file) [from s3-PUBLIC...]
 get(ok): sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz (file) [from s3-PUBLIC...]
-lrwxrwxrwx 1 jovyan jovyan 143 Jul  2 01:18 ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz
+lrwxrwxrwx 1 jovyan jovyan 143 Jul  8 10:02 ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz
  -&gt; ../../../.git/annex/objects/QP/jm/MD5E-s8677710--d6820f6cb8fb965e864419c14f6a22d5.nii.gz/MD5E-s8
 677710--d6820f6cb8fb965e864419c14f6a22d5.nii.gz
-lrwxrwxrwx 1 jovyan jovyan 145 Jul  2 01:18 ds000114
+lrwxrwxrwx 1 jovyan jovyan 145 Jul  8 10:02 ds000114
 /sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz -&gt; ../../../.git/annex/objects/qq/gm/MD5E-s10025785
 --0e790e210a275d76e3f2f4d895df6358.nii.gz/MD5E-s10025785--0e790e210a275d76e3f2f4d895df6358.nii.gz
 lr
-wxrwxrwx 1 jovyan jovyan 143 Jul  2 01:18 ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz -
+wxrwxrwx 1 jovyan jovyan 143 Jul  8 10:02 ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz -
 &gt; ../../../.git/annex/objects/P9/kj/MD5E-s7970968--75bb38265ea96864bfa0b012ba21b0b0.nii.gz/MD5E-s797
 0968--75bb38265ea96864bfa0b012ba21b0b0.nii.gz
 </pre></div>
@@ -760,7 +760,7 @@ wxrwxrwx 1 jovyan jovyan 143 Jul  2 01:18 ds000114/sub-03/ses-test/anat/sub-03_s
 14 
 [INFO] Attempting to clone from https://github.com/OpenNeuroDatasets/ds000114.git to /home/jovya
 n/workspace/books/examples/workflows/snakemake_demo/ds000114
-[INFO] Start enumerating objects 
+[INFO] Start enumerating objects
 [INFO] Start counting objects
 [INFO] Start compressing objects
 [INFO] Start receiving objects
@@ -1211,7 +1211,7 @@ Lints for rule qc (line 1, /home/jovyan/workspace/books/examples/workflows/snake
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/443f34047f3e9a13b40c148df7c9ec4a5a41ad05517412c73430c1082a404f6f.svg" src="../../_images/443f34047f3e9a13b40c148df7c9ec4a5a41ad05517412c73430c1082a404f6f.svg">
+<img alt="../../_images/5875b6651d1cab164fcb08e2513d06331e83b0c0e3a4f3297f7c37b36c941084.svg" src="../../_images/5875b6651d1cab164fcb08e2513d06331e83b0c0e3a4f3297f7c37b36c941084.svg">
 </div>
 </div>
 <p><strong>DAG</strong> (one node per rule × subject job — Snakemake will execute 9 jobs total: 3 subjects × 3 rules):</p>
@@ -1265,10 +1265,10 @@ Lints for rule qc (line 1, /home/jovyan/workspace/books/examples/workflows/snake
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SNAKEMAKE
 =========
-  Date: 2026-07-02 01:18:40
-  Workflow ID: 90501090-8179-4622-bae9-d1508879b9ad
+  Date: 2026-07-08 10:03:07
+  Workflow ID: 06afbfa2-d74f-4329-aaa8-491a221d1565
   Platform: Linux-6.8.0-111-generic-x86_64-with-glibc2.39
-  Host: 60a752cf7e9e
+  Host: ece8513257cb
   User: jovyan
   Snakemake version: 9.22.0
   Python version: 3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:00:33) [GCC 14.3.0]
@@ -1291,7 +1291,7 @@ all          1
 total       10
 
 
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule bet:
     input: ds000114/sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz
     output: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz
@@ -1300,7 +1300,7 @@ rule bet:
     reason: Missing output files: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz
     wildcards: subject=02
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule bet:
     input: ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz
     output: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz
@@ -1309,7 +1309,7 @@ rule bet:
     reason: Missing output files: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz
     wildcards: subject=01
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule bet:
     input: ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz
     output: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
@@ -1318,7 +1318,7 @@ rule bet:
     reason: Missing output files: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
     wildcards: subject=03
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule fast:
     input: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz
     output: results/sub-01/anat/sub-01_dseg.nii.gz
@@ -1328,7 +1328,7 @@ rule fast:
     wildcards: subject=01
     threads: 2
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule fast:
     input: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz
     output: results/sub-02/anat/sub-02_dseg.nii.gz
@@ -1338,7 +1338,7 @@ rule fast:
     wildcards: subject=02
     threads: 2
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule fast:
     input: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
     output: results/sub-03/anat/sub-03_dseg.nii.gz
@@ -1348,7 +1348,7 @@ rule fast:
     wildcards: subject=03
     threads: 2
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule qc:
     input: ds000114/sub-01/ses-test/anat/sub-01_ses-test_T1w.nii.gz, results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz, results/sub-01/anat/sub-01_dseg.nii.gz
     output: results/sub-01/figures/sub-01_desc-qc.png
@@ -1357,16 +1357,16 @@ rule qc:
     reason: Missing output files: results/sub-01/figures/sub-01_desc-qc.png; Input files updated by another job: results/sub-01/anat/sub-01_desc-brain_T1w.nii.gz, results/sub-01/anat/sub-01_dseg.nii.gz
     wildcards: subject=01
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule qc:
     input: ds000114/sub-02/ses-test/anat/sub-02_ses-test_T1w.nii.gz, results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz, results/sub-02/anat/sub-02_dseg.nii.gz
     output: results/sub-02/figures/sub-02_desc-qc.png
     log: logs/qc/sub-02.log
     jobid: 4
-    reason: Missing output files: results/sub-02/figures/sub-02_desc-qc.png; Input files updated by another job: results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz, results/sub-02/anat/sub-02_dseg.nii.gz
+    reason: Missing output files: results/sub-02/figures/sub-02_desc-qc.png; Input files updated by another job: results/sub-02/anat/sub-02_dseg.nii.gz, results/sub-02/anat/sub-02_desc-brain_T1w.nii.gz
     wildcards: subject=02
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule qc:
     input: ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz, results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz, results/sub-03/anat/sub-03_dseg.nii.gz
     output: results/sub-03/figures/sub-03_desc-qc.png
@@ -1375,11 +1375,11 @@ rule qc:
     reason: Missing output files: results/sub-03/figures/sub-03_desc-qc.png; Input files updated by another job: results/sub-03/anat/sub-03_dseg.nii.gz, results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz
     wildcards: subject=03
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:18:41 2026]
+[Wed Jul  8 10:03:08 2026]
 rule all:
     input: results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-03/figures/sub-03_desc-qc.png
     jobid: 0
-    reason: Input files updated by another job: results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-03/figures/sub-03_desc-qc.png
+    reason: Input files updated by another job: results/sub-03/figures/sub-03_desc-qc.png, results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png
     resources: tmpdir=/tmp
 Job stats:
 job      count
@@ -1432,7 +1432,7 @@ This was a dry-run (flag -n). The order of jobs does not reflect the order of ex
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>return code: 0
 --- stderr (tail) ---
-[Thu Jul  2 01:24:38 2026]
+[Wed Jul  8 10:09:01 2026]
 localrule qc:
     input: ds000114/sub-03/ses-test/anat/sub-03_ses-test_T1w.nii.gz, results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz, results/sub-03/anat/sub-03_dseg.nii.gz
     output: results/sub-03/figures/sub-03_desc-qc.png
@@ -1441,22 +1441,22 @@ localrule qc:
     reason: Missing output files: results/sub-03/figures/sub-03_desc-qc.png; Input files updated by another job: results/sub-03/anat/sub-03_desc-brain_T1w.nii.gz, results/sub-03/anat/sub-03_dseg.nii.gz
     wildcards: subject=03
     resources: tmpdir=/tmp, mem_mb=2000, mem=2 GB, mem_mib=1908
-[Thu Jul  2 01:24:53 2026]
+[Wed Jul  8 10:09:15 2026]
 Finished jobid: 7 (Rule: qc)
 9 of 10 steps (90%) done
 Select jobs to execute...
 Execute 1 jobs...
 
-[Thu Jul  2 01:24:53 2026]
+[Wed Jul  8 10:09:15 2026]
 localrule all:
     input: results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-03/figures/sub-03_desc-qc.png
     jobid: 0
-    reason: Input files updated by another job: results/sub-03/figures/sub-03_desc-qc.png, results/sub-01/figures/sub-01_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png
+    reason: Input files updated by another job: results/sub-03/figures/sub-03_desc-qc.png, results/sub-02/figures/sub-02_desc-qc.png, results/sub-01/figures/sub-01_desc-qc.png
     resources: tmpdir=/tmp
-[Thu Jul  2 01:24:53 2026]
+[Wed Jul  8 10:09:15 2026]
 Finished jobid: 0 (Rule: all)
 10 of 10 steps (100%) done
-Complete log(s): /home/jovyan/workspace/books/examples/workflows/snakemake_demo/.snakemake/log/2026-07-02T011843.129236.snakemake.log
+Complete log(s): /home/jovyan/workspace/books/examples/workflows/snakemake_demo/.snakemake/log/2026-07-08T100309.493475.snakemake.log
 </pre></div>
 </div>
 </div>
@@ -1525,7 +1525,7 @@ results/sub-03/figures/sub-03_desc-qc.png
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-07-02T01:24:55.154480+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-07-08T10:09:17.408475+00:00
 
 Python implementation: CPython
 Python version       : 3.13.13

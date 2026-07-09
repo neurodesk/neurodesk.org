@@ -639,7 +639,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pydra</span><span class="o">==</span><span class="mf">1.0</span><span class="n">a7</span> <span class="n">antspyx</span><span class="o">==</span><span class="mf">0.6.1</span> <span class="n">nilearn</span> <span class="n">nibabel</span>
+<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pydra</span><span class="o">==</span><span class="mf">1.0</span><span class="n">a7</span> <span class="n">antspyx</span><span class="o">==</span><span class="mf">0.6.1</span> <span class="n">nilearn</span><span class="o">==</span><span class="mf">0.13.1</span> <span class="n">nibabel</span><span class="o">==</span><span class="mf">5.3.3</span>
 </pre></div>
 </div>
 </div>
@@ -737,14 +737,11 @@ Counting:   0%|                               | 0.00/27.0 [00:00&lt;?, ? Objects
 Compressing:   0%|                            | 0.00/23.0 [00:00&lt;?, ? Objects/s]
                                                                                 
 Receiving:   0%|                             | 0.00/2.15k [00:00&lt;?, ? Objects/s]
-
-Receiving:  14%|███                   | 301/2.15k [00:00&lt;00:01, 1.54k Objects/s]
-
-Receiving:  48%|█████████▌          | 1.03k/2.15k [00:00&lt;00:00, 2.73k Objects/s]
                                                                                 
-
 Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas/s]
                                                                                 
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
 [INFO   ] https://github.com/OpenNeuroDatasets/ds000102.git/config download failed: Not Found
 [INFO   ] access to 1 dataset sibling s3-PRIVATE not auto-enabled, enable with:
@@ -753,91 +750,69 @@ Resolving:   0%|                                | 0.00/537 [00:00&lt;?, ? Deltas
 
 Total:   0%|                                   | 0.00/66.8M [00:00&lt;?, ? Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
+Total:   0%|                                  | 16.4k/66.8M [00:01&lt;?, ? Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   0%|    | 33.4k/10.6M [00:00&lt;01:06, 159k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   0%|   | 33.3k/10.6M [00:00&lt;02:06, 83.6k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 85.6k/10.6M [00:00&lt;00:49, 210k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   1%|    | 68.2k/10.6M [00:00&lt;01:17, 135k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   1%|     | 155k/10.6M [00:00&lt;00:39, 265k Bytes/s]
+Total:   0%|                           | 173k/66.8M [00:01&lt;12:09, 91.4k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 329k/10.6M [00:00&lt;00:21, 487k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   3%|▏    | 347k/10.6M [00:00&lt;00:19, 524k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:   6%|▎    | 677k/10.6M [00:01&lt;00:10, 908k Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:   7%|▎   | 695k/10.6M [00:00&lt;00:09, 1.05M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  13%|▍  | 1.37M/10.6M [00:01&lt;00:05, 1.73M Bytes/s]
+Total:   2%|▌                          | 1.43M/66.8M [00:02&lt;01:47, 608k Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  26%|▊  | 2.77M/10.6M [00:01&lt;00:02, 3.88M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  27%|▊  | 2.87M/10.6M [00:01&lt;00:02, 3.50M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  51%|█▌ | 5.35M/10.6M [00:01&lt;00:00, 6.90M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz:  54%|█▋ | 5.74M/10.6M [00:01&lt;00:00, 6.84M Bytes/s]
 
-Get sub-01/a .. 1_T1w.nii.gz:  71%|██▏| 7.52M/10.6M [00:01&lt;00:00, 7.08M Bytes/s]
-
-Get sub-01/a .. 1_T1w.nii.gz:  94%|██▊| 9.94M/10.6M [00:02&lt;00:00, 8.25M Bytes/s]
-                                                                                
-Get sub-01/a .. 1_T1w.nii.gz:   0%|            | 0.00/10.6M [00:00&lt;?, ? Bytes/s]
-
-Total:  16%|████                      | 10.6M/66.8M [00:03&lt;00:18, 3.00M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.14M/28.1M [00:00&lt;00:01, 14.9M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.23M/28.1M [00:00&lt;00:01, 14.7M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  31%|▉  | 8.56M/28.1M [00:00&lt;00:01, 13.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  39%|█▏ | 10.9M/28.1M [00:00&lt;00:01, 12.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  44%|█▎ | 12.3M/28.1M [00:00&lt;00:01, 12.4M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  52%|█▌ | 14.7M/28.1M [00:01&lt;00:01, 11.9M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  57%|█▋ | 16.0M/28.1M [00:01&lt;00:00, 12.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  66%|█▉ | 18.4M/28.1M [00:01&lt;00:00, 11.9M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  74%|██▏| 20.9M/28.1M [00:01&lt;00:00, 11.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  83%|██▍| 23.4M/28.1M [00:01&lt;00:00, 11.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  88%|██▋| 24.7M/28.1M [00:02&lt;00:00, 11.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  96%|██▉| 27.1M/28.1M [00:02&lt;00:00, 11.6M Bytes/s]
+Total:  14%|███▋                      | 9.50M/66.8M [00:02&lt;00:17, 3.23M Bytes/s]
 
                                                                                 
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Total:  58%|███████████████           | 38.6M/66.8M [00:06&lt;00:04, 6.24M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  11%|▎  | 3.14M/28.1M [00:00&lt;00:01, 15.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  22%|▋  | 6.08M/28.1M [00:00&lt;00:01, 14.4M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  30%|▉  | 8.39M/28.1M [00:00&lt;00:01, 12.8M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  35%|█  | 9.76M/28.1M [00:00&lt;00:01, 13.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  44%|█▎ | 12.3M/28.1M [00:00&lt;00:01, 12.5M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  52%|█▌ | 14.6M/28.1M [00:01&lt;00:01, 12.0M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  57%|█▋ | 16.0M/28.1M [00:01&lt;00:01, 12.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  61%|█▊ | 17.3M/28.1M [00:01&lt;00:00, 12.2M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  71%|██ | 19.9M/28.1M [00:01&lt;00:00, 12.4M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  80%|██▍| 22.5M/28.1M [00:01&lt;00:00, 12.3M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  89%|██▋| 25.0M/28.1M [00:01&lt;00:00, 12.1M Bytes/s]
-
-Get sub-01/f .. _bold.nii.gz:  98%|██▉| 27.6M/28.1M [00:02&lt;00:00, 12.2M Bytes/s]
+Get sub-01/a .. 1_T1w.nii.gz: 100%|███████████| 10.6M/10.6M [00:00&lt;?, ? Bytes/s]
                                                                                 
-Get sub-01/f .. _bold.nii.gz:   0%|            | 0.00/28.1M [00:00&lt;?, ? Bytes/s]
 
+Get sub-01/f .. _bold.nii.gz:   0%|           | 16.4k/28.1M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  13%|▍  | 3.75M/28.1M [00:00&lt;00:00, 25.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  24%|▋  | 6.83M/28.1M [00:00&lt;00:00, 27.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  39%|█▏ | 11.1M/28.1M [00:00&lt;00:01, 16.3M Bytes/s]
+
+Total:  38%|█████████▊                | 25.3M/66.8M [00:04&lt;00:06, 6.05M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  66%|█▉ | 18.4M/28.1M [00:01&lt;00:00, 17.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  79%|██▎| 22.1M/28.1M [00:01&lt;00:00, 19.9M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  92%|██▊| 25.7M/28.1M [00:01&lt;00:00, 17.1M Bytes/s]
+
+                                                                                
+Get sub-01/f .. _bold.nii.gz: 100%|███████████| 28.1M/28.1M [00:00&lt;?, ? Bytes/s]
+                                                                                
+
+Get sub-01/f .. _bold.nii.gz:   0%|           | 16.4k/28.1M [00:00&lt;?, ? Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  13%|▍  | 3.76M/28.1M [00:00&lt;00:01, 18.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  25%|▊  | 7.06M/28.1M [00:00&lt;00:00, 24.3M Bytes/s]
+Total:  72%|██████████████████▊       | 48.2M/66.8M [00:05&lt;00:02, 8.24M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  40%|█▏ | 11.2M/28.1M [00:00&lt;00:00, 17.3M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  53%|█▌ | 14.9M/28.1M [00:00&lt;00:00, 17.7M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  66%|█▉ | 18.6M/28.1M [00:01&lt;00:00, 17.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  79%|██▎| 22.2M/28.1M [00:01&lt;00:00, 17.8M Bytes/s]
+
+Get sub-01/f .. _bold.nii.gz:  93%|██▊| 26.3M/28.1M [00:01&lt;00:00, 17.6M Bytes/s]
+
+                                                                                
+Get sub-01/f .. _bold.nii.gz: 100%|███████████| 28.1M/28.1M [00:00&lt;?, ? Bytes/s]
                                                                                 
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/anat/sub-01_T1w.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
 <span class=" -Color -Color-Bold">get</span>(<span class=" -Color -Color-Bold -Color-Bold-Green">ok</span>): sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz (<span class=" -Color -Color-Bold -Color-Bold-Magenta">file</span>) [from s3-PUBLIC...]
@@ -1289,7 +1264,7 @@ Outputs:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Split(defn=PreprocWorkflow(anat='/home/jovyan/workspace/books/examples/workflows/ds000102/.git/annex/objects/Pf/6k/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz', func=StateArray('/home/jovyan/workspace/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz', '/home/jovyan/workspace/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz'), template='/home/jovyan/workspace/books/examples/workflows/mni_template.nii.gz', constructor=&lt;function PreprocWorkflow at 0x7f3034425ee0&gt;), output_types={'anat_brain': out(name='anat_brain', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False), 'bold_preproc': out(name='bold_preproc', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False)}, environment=Native())
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Split(defn=PreprocWorkflow(anat='/home/jovyan/workspace/books/examples/workflows/ds000102/.git/annex/objects/Pf/6k/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz/MD5E-s10581116--757e697a01eeea5c97a7d6fbc7153373.nii.gz', func=StateArray('/home/jovyan/workspace/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-1_bold.nii.gz', '/home/jovyan/workspace/books/examples/workflows/ds000102/sub-01/func/sub-01_task-flanker_run-2_bold.nii.gz'), template='/home/jovyan/workspace/books/examples/workflows/mni_template.nii.gz', constructor=&lt;function PreprocWorkflow at 0x73fe6e53df80&gt;), output_types={'anat_brain': out(name='anat_brain', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False), 'bold_preproc': out(name='bold_preproc', type=list[fileformats.generic.file.File], default=NO_DEFAULT, help='', requires=[], converter=None, validator=None, hash_eq=False)}, environment=Native())
 </pre></div>
 </div>
 </div>
@@ -1371,7 +1346,7 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d40b3a93597be70334b58646147712ad07bc292124d5d871d60925cc2c5d6d87.png" src="../../_images/d40b3a93597be70334b58646147712ad07bc292124d5d871d60925cc2c5d6d87.png">
+<img alt="../../_images/795c04dbc0c58509be94c7a58cedaa15ac7d8de38bb2e1b6cc2b63b7292ce306.png" src="../../_images/795c04dbc0c58509be94c7a58cedaa15ac7d8de38bb2e1b6cc2b63b7292ce306.png">
 </div>
 </div>
 </section>
@@ -1397,10 +1372,10 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays._slicers.OrthoSlicer at 0x7f2fe916e510&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;nilearn.plotting.displays._slicers.OrthoSlicer at 0x73fe6e196900&gt;
 </pre></div>
 </div>
-<img alt="../../_images/4a3112adbb4aa186467e3d19c447c66591688ca69f10da7e9aae8dc808496286.png" src="../../_images/4a3112adbb4aa186467e3d19c447c66591688ca69f10da7e9aae8dc808496286.png">
+<img alt="../../_images/e621d3bb93f4d390cb2d1b30d22c02dad97f6ffa0ce35cc8598637dacd64db2b.png" src="../../_images/e621d3bb93f4d390cb2d1b30d22c02dad97f6ffa0ce35cc8598637dacd64db2b.png">
 </div>
 </div>
 <p>Let’s use <code class="docutils literal notranslate"><span class="pre">add_contours</span></code> as another visualization option for checking coregistration by overlaying the MNI template as contour (red) on top of mean functional image (background):</p>
@@ -1415,7 +1390,7 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f00a2c5b560e5f1e4d7f31e987b5e39ff5a604f945441caae971725e86fd579c.png" src="../../_images/f00a2c5b560e5f1e4d7f31e987b5e39ff5a604f945441caae971725e86fd579c.png">
+<img alt="../../_images/17ee59e6545f306bba5229322edea0a9db1dfce84c6a67f0a01d37744ba3fc5b.png" src="../../_images/17ee59e6545f306bba5229322edea0a9db1dfce84c6a67f0a01d37744ba3fc5b.png">
 </div>
 </div>
 <section id="dependencies-in-jupyter-python">
@@ -1442,29 +1417,29 @@ This guard is not required when running inside a Jupyter Notebook.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-04-09T08:07:54.486602+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-07-08T10:02:03.452628+00:00
 
 Python implementation: CPython
-Python version       : 3.13.9
-IPython version      : 9.7.0
+Python version       : 3.13.13
+IPython version      : 9.12.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 5.15.0-171-generic
+Release     : 6.8.0-111-generic
 Machine     : x86_64
 Processor   : x86_64
-CPU cores   : 32
+CPU cores   : 16
 Architecture: 64bit
 
 ants        : 0.6.1
-fileformats : 0.17.0
+fileformats : 0.17.6
 nest_asyncio: 1.6.0
 nibabel     : 5.3.3
 nilearn     : 0.13.1
-numpy       : 2.3.5
+numpy       : 2.4.6
 pydra       : 1.0a7
 
-Neurodesktop version: 2025-12-20
+Neurodesktop version: 2026-06-04
 </pre></div>
 </div>
 </div>

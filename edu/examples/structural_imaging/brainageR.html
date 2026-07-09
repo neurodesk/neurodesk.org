@@ -668,7 +668,7 @@ the model is applied to other cohorts — for example, <a class="reference exter
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
-<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nilearn</span> <span class="n">nibabel</span> <span class="n">pandas</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nilearn</span><span class="o">==</span><span class="mf">0.13.1</span> <span class="n">nibabel</span><span class="o">==</span><span class="mf">5.4.2</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">2.3.3</span>
 </pre></div>
 </div>
 </div>
@@ -773,10 +773,11 @@ ls -lh sub-0001/anat/*_T1w.nii.gz participants.tsv
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>install(ok): /home/jovyan/workspace/books/examples/structural_imaging/brainageR/ds002790 (dataset)
 get(ok): sub-0001/anat/sub-0001_T1w.nii.gz (file) [from s3-PUBLIC...]
 action summary:
-  get (notneeded: 1, ok: 1)
--rw-rw-r-- 1 jovyan jovyan 13K May 19 06:10 participants.tsv
-lrwxrwxrwx 1 jovyan jovyan 140 May 19 0
-6:10 sub-0001/anat/sub-0001_T1w.nii.gz -&gt; ../../.git/annex/objects/kz/2q/MD5E-s6700721--4a2967b6a93e
+  get (notneed
+ed: 1, ok: 1)
+-rw-rw-r-- 1 jovyan jovyan 13K Jul  8 09:19 participants.tsv
+lrwxrwxrwx 1 jovyan jovyan 140 Jul  8 0
+9:19 sub-0001/anat/sub-0001_T1w.nii.gz -&gt; ../../.git/annex/objects/kz/2q/MD5E-s6700721--4a2967b6a93e
 b821a564662577d8811d.nii.gz/MD5E-s6700721--4a2967b6a93eb821a564662577d8811d.nii.gz
 </pre></div>
 </div>
@@ -784,12 +785,14 @@ b821a564662577d8811d.nii.gz/MD5E-s6700721--4a2967b6a93eb821a564662577d8811d.nii.
 002790 
 [INFO] Attempting to clone from https://github.com/OpenNeuroDatasets/ds002790.git to /home/j
 ovyan/workspace/books/examples/structural_imaging/brainageR/ds002790
-[INFO] Start enumerating objects 
+[INFO] Start enumerating objects
 [INFO] Start counting objects
 [INFO] Start receiving objects
 [INFO] Start resolving deltas
 [INFO] Completed clone attempts for Dataset(/home/jovyan/workspace/books/examples/structural_imaging
 /brainageR/ds002790)
+[INFO] Remote origin not usable by git-annex; setting annex-ignore
+[INFO] https://github.com/OpenNeuroDatasets/ds002790.git/config download failed: Not Found
 [INFO] Remote origin not usable by git-annex; setting annex-ignore
 [INFO] https://github.com/OpenNeuroDatasets/ds002790.git/config download failed: Not Found
 </pre></div>
@@ -879,10 +882,10 @@ Chronological age (from participants.tsv): 25.5 years
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>return code: 0
 --- stdout (tail) ---
-[1] "loading nifti data Tue May 19 06:29:04 2026"
+[1] "loading nifti data Wed Jul  8 09:25:21 2026"
 [1]      1 615541
-[1] "loading regression model Tue May 19 06:30:16 2026"
-[1] "saving new results Tue May 19 06:30:19 2026"
+[1] "loading regression model Wed Jul  8 09:26:57 2026"
+[1] "saving new results Wed Jul  8 09:27:02 2026"
 [DEBUG] PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/spm12:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/brainageR
 [DEBUG] which Rscript=/usr/bin/Rscript
 [DEBUG] which rscript=None
@@ -1061,7 +1064,7 @@ For reference, the model reports MAE ≈ 3.9 years on healthy held-out data. See
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-05-19T06:30:31.071867+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-07-08T09:27:08.326714+00:00
 
 Python implementation: CPython
 Python version       : 3.13.13
@@ -1069,7 +1072,7 @@ IPython version      : 9.12.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
-Release     : 6.8.0-106-generic
+Release     : 6.8.0-111-generic
 Machine     : x86_64
 Processor   : x86_64
 CPU cores   : 16
@@ -1078,10 +1081,10 @@ Architecture: 64bit
 matplotlib: 3.10.9
 nibabel   : 5.4.2
 nilearn   : 0.13.1
-numpy     : 2.4.4
+numpy     : 2.4.6
 pandas    : 2.3.3
 
-Neurodesktop version: 2026-04-28
+Neurodesktop version: 2026-06-04
 </pre></div>
 </div>
 </div>
