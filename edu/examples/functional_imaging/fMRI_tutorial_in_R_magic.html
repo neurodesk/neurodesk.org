@@ -704,9 +704,19 @@ Giulia Baracchini &amp; Monika Doerig</p>
 #  Setup a User-Specific R Library and Install Packages
 # ==============================================================================
 
-# 1. Define and create a personal library path
-user_lib &lt;- "~/R/library"
+# 1. Personal library path. Install into the workspace bind-mount when present
+#    (roomy runner storage in CI); otherwise fall back to ~/R/library. The
+#    home library sits on the container overlay layer, which runs out of
+#    space while ggsegSchaefer serializes its atlas data (the install then
+#    fails with "error writing to connection"); the workspace mount has room.
+ws &lt;- "/home/jovyan/workspace"
+user_lib &lt;- if (dir.exists(ws)) file.path(ws, ".r-library") else path.expand("~/R/library")
 dir.create(user_lib, recursive = TRUE, showWarnings = FALSE)
+
+# 1b. Point R's temp dir at the same roomy location, for the same reason.
+r_tmp &lt;- if (dir.exists(ws)) file.path(ws, ".rtmp") else path.expand("~/R/tmp")
+dir.create(r_tmp, recursive = TRUE, showWarnings = FALSE)
+Sys.setenv(TMPDIR = r_tmp, TMP = r_tmp, TEMP = r_tmp)
 
 # 2. Add the personal library to R's library search path
 .libPaths(c(user_lib, .libPaths()))
@@ -718,11 +728,17 @@ options(repos = c(
 ))
 
 # 4. Install required packages from CRAN
-install.packages(c("remotes", "ggplot2", "dplyr", "tidyr", "knitr"))
+install.packages(c("remotes", "magrittr", "ggplot2", "dplyr", "tidyr", "knitr"))
 
 # 4b. Install superheat from the CRAN archive (last version before archiving)
 if (!requireNamespace("superheat", quietly = TRUE)) {
     remotes::install_version("superheat", repos = "https://cloud.r-project.org")
+}
+
+# 4c. Ensure callr (and its dependency ps) is available — remotes::install_github
+#     needs callr to build packages from source in an isolated subprocess.
+if (!requireNamespace("callr", quietly = TRUE)) {
+    install.packages(c("ps", "callr"))
 }
 
 # 5. Install ggsegSchaefer first (latest), so its dependencies cannot later
@@ -787,8 +803,7 @@ no
 checking for suffix of object files... o
 checking whether the compiler supports GNU C++... yes
 checking whether x86_64-conda-linux-gnu-c++ -std=gnu++17 accepts -g... yes
-checking for x86_64-conda-linux-gnu-c++ -std=gnu++17 option to enable C++11 features...
-none needed
+checking for x86_64-conda-linux-gnu-c++ -std=gnu++17 option to enable C++11 features... none needed
 checking whether the C++ compiler supports the 'long long' type...
 yes
 checking whether the compiler implements namespaces... yes
@@ -838,7 +853,6 @@ config.status: creating src/install.libs.R
     CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib
     LDFLAGS=
     LIBS=
-
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -I.   -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fpic -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c stri_brkiter.cpp -o stri_brkiter.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -I.   -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fpic -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c stri_callables.cpp -o stri_callables.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -I.   -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fpic -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c stri_collator.cpp -o stri_collator.o
@@ -926,18 +940,6 @@ x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -I
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -I.   -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fpic -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c stri_utils.cpp -o stri_utils.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -I.   -UDEBUG -DNDEBUG -DU_HAVE_ELF_H   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fpic -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c stri_wrap.cpp -o stri_wrap.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o stringi.so stri_brkiter.o stri_callables.o stri_collator.o stri_common.o stri_compare.o stri_container_base.o stri_container_bytesearch.o stri_container_listint.o stri_container_listraw.o stri_container_listutf8.o stri_container_regex.o stri_container_usearch.o stri_container_utf16.o stri_container_utf8.o stri_container_utf8_indexable.o stri_encoding_conversion.o stri_encoding_detection.o stri_encoding_management.o stri_escape.o stri_exception.o stri_ICU_settings.o stri_join.o stri_length.o stri_pad.o stri_prepare_arg.o stri_random.o stri_reverse.o stri_search_class_count.o stri_search_class_detect.o stri_search_class_extract.o stri_search_class_locate.o stri_search_class_replace.o stri_search_class_split.o stri_search_class_startsendswith.o stri_search_class_subset.o stri_search_class_trim.o stri_search_common.o stri_search_coll_count.o stri_search_coll_detect.o stri_search_coll_extract.o stri_search_coll_locate.o stri_search_coll_replace.o stri_search_coll_split.o stri_search_coll_startsendswith.o stri_search_coll_subset.o stri_search_boundaries_count.o stri_search_boundaries_extract.o stri_search_boundaries_locate.o stri_search_boundaries_split.o stri_search_fixed_count.o stri_search_fixed_detect.o stri_search_fixed_extract.o stri_search_fixed_locate.o stri_search_fixed_replace.o stri_search_fixed_split.o stri_search_fixed_subset.o stri_search_fixed_startsendswith.o stri_search_in.o stri_search_other_split.o stri_search_regex_count.o stri_search_regex_detect.o stri_search_regex_extract.o stri_search_regex_locate.o stri_search_regex_match.o stri_search_regex_replace.o stri_search_regex_split.o stri_search_regex_subset.o stri_sort.o stri_sprintf.o stri_stats.o stri_string8.o stri_stringi.o stri_sub.o stri_test.o stri_time_zone.o stri_time_calendar.o stri_time_symbols.o stri_time_format.o stri_trans_casemap.o stri_trans_other.o stri_trans_normalization.o stri_trans_transliterate.o stri_ucnv.o stri_uloc.o stri_utils.o stri_wrap.o -licui18n -licuuc -licudata -L/opt/conda/lib/R/lib -lR
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c backports.c -o backports.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c cleancall.c -o cleancall.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c coerce.c -o coerce.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c conditions.c -o conditions.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c every-some-none.c -o every-some-none.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c flatten.c -o flatten.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c init.c -o init.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c map.c -o map.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c pluck.c -o pluck.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c transpose.c -o transpose.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c utils.c -o utils.o
-x86_64-conda-linux-gnu-cc -std=gnu23 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o purrr.so backports.o cleancall.o coerce.o conditions.o every-some-none.o flatten.o init.o map.o pluck.o transpose.o utils.o -L/opt/conda/lib/R/lib -lR
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c base64.c -o base64.o
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c init.c -o init.o
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c rand_lcg.c -o rand_lcg.o
@@ -955,6 +957,21 @@ x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG -I. -
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG -I. -DNDEBUG  -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c scanner.c -o scanner.o
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG -I. -DNDEBUG  -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c writer.c -o writer.o
 x86_64-conda-linux-gnu-cc -std=gnu23 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o -L/opt/conda/lib/R/lib -lR
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c pipe.c -o pipe.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c utils.c -o utils.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o magrittr.so pipe.o utils.o -L/opt/conda/lib/R/lib -lR
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c backports.c -o backports.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c cleancall.c -o cleancall.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c coerce.c -o coerce.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c conditions.c -o conditions.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c every-some-none.c -o every-some-none.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c flatten.c -o flatten.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c init.c -o init.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c map.c -o map.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c pluck.c -o pluck.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c transpose.c -o transpose.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/cli/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -fvisibility=hidden -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c utils.c -o utils.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o purrr.so backports.o cleancall.o coerce.o conditions.o every-some-none.o flatten.o init.o map.o pluck.o transpose.o utils.o -L/opt/conda/lib/R/lib -lR
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c attributes.c -o attributes.o
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c coerce.c -o coerce.o
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c init.c -o init.o
@@ -981,6 +998,41 @@ x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG  -
 x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c loop_apply.c -o loop_apply.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG  -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c split-numeric.cpp -o split-numeric.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o plyr.so RcppExports.o loop_apply.o split-numeric.o -L/opt/conda/lib/R/lib -lR
+x86_64-conda-linux-gnu-cc -std=gnu23 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -Wall px.c -o px
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c init.c -o init.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c api-common.c -o api-common.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c common.c -o common.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c extra.c -o extra.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c dummy.c -o dummy.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c error-codes.c -o error-codes.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c cleancall.c -o cleancall.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c posix.c -o posix.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c api-posix.c -o api-posix.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c linux.c -o linux.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c api-linux.c -o api-linux.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o ps.so init.o api-common.o common.o extra.o dummy.o error-codes.o cleancall.o posix.o api-posix.o linux.o api-linux.o -L/opt/conda/lib/R/lib -lR
+x86_64-conda-linux-gnu-cc -std=gnu23 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -Wall tools/px.c -o tools/px
+x86_64-conda-linux-gnu-cc -std=gnu23 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -I../inst/include -Wall tools/sock.c -o tools/sock
+x86_64-conda-linux-gnu-cc -std=gnu23 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib supervisor/supervisor.c \
+      supervisor/utils.c -o supervisor/supervisor
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c base64.c -o base64.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c client.c -o client.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c errors.c -o errors.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -shared -L"/opt/conda/lib/R/lib" -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o client.so base64.o client.o errors.o  \
+	 -L"/opt/conda/lib/R/lib" -lR
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c init.c -o init.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c poll.c -o poll.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c processx-connection.c -o processx-connection.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c processx-vector.c -o processx-vector.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c create-time.c -o create-time.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c unix/childlist.c -o unix/childlist.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c unix/connection.c -o unix/connection.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c unix/processx.c -o unix/processx.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c unix/sigchld.c -o unix/sigchld.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c unix/utils.c -o unix/utils.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c unix/named_pipe.c -o unix/named_pipe.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -I"/opt/conda/lib/R/include" -DNDEBUG   -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib    -fpic  -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix  -c cleancall.c -o cleancall.o
+x86_64-conda-linux-gnu-cc -std=gnu23 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o processx.so init.o poll.o errors.o processx-connection.o processx-vector.o create-time.o base64.o unix/childlist.o unix/connection.o unix/processx.o unix/sigchld.o unix/utils.o unix/named_pipe.o cleancall.o -L/opt/conda/lib/R/lib -lR
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c RcppExports.cpp -o RcppExports.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c bbox.cpp -o bbox.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c close.cpp -o close.o
@@ -994,26 +1046,26 @@ x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -D
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c tests.cpp -o tests.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c utils.cpp -o utils.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o geometries.so RcppExports.o bbox.o close.o columns.o coordinates.o geometries.o lines.o lists.o nest.o shapes.o tests.o utils.o -L/opt/conda/lib/R/lib -lR
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c RcppExports.cpp -o RcppExports.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c bbox.cpp -o bbox.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c cast.cpp -o cast.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c lists.cpp -o lists.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c sfg_dimension.cpp -o sfg_dimension.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c shapes.cpp -o shapes.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_df.cpp -o to_df.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_sf.cpp -o to_sf.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_sfc.cpp -o to_sfc.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_sfg.cpp -o to_sfg.o
-x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/R/library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c utils.cpp -o utils.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c RcppExports.cpp -o RcppExports.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c bbox.cpp -o bbox.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c cast.cpp -o cast.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c lists.cpp -o lists.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c sfg_dimension.cpp -o sfg_dimension.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c shapes.cpp -o shapes.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_df.cpp -o to_df.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_sf.cpp -o to_sf.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_sfc.cpp -o to_sfc.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c to_sfg.cpp -o to_sfg.o
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/opt/conda/lib/R/include" -DNDEBUG -DSTRICT_R_HEADERS -I'/home/jovyan/workspace/.r-library/geometries/include' -I'/opt/conda/lib/R/library/Rcpp/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /opt/conda/include -I/opt/conda/include -Wl,-rpath-link,/opt/conda/lib   -I../inst/include/ -fpic  -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -fno-merge-constants -isystem /opt/conda/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1781522246325/work=/usr/local/src/conda/r-base-4.5.3 -fdebug-prefix-map=/opt/conda=/usr/local/src/conda-prefix   -c utils.cpp -o utils.o
 x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/opt/conda/lib -Wl,-rpath-link,/opt/conda/lib -L/opt/conda/lib -o sfheaders.so RcppExports.o bbox.o cast.o lists.o sfg_dimension.o shapes.o to_df.o to_sf.o to_sfc.o to_sfg.o utils.o -L/opt/conda/lib/R/lib -lR
-* checking for file ‘/tmp/RtmpMgbqDw/remotes7b514f38b80/ggsegverse-ggsegSchaefer-f217f88/DESCRIPTION’ ... OK
+* checking for file ‘/tmp/RtmpffYIdp/remotes6ba92bca74/ggsegverse-ggsegSchaefer-f217f88/DESCRIPTION’ ... OK
 * preparing ‘ggsegSchaefer’:
 * checking DESCRIPTION meta-information ... OK
 * checking for LF line-endings in source and make files and shell scripts
 * checking for empty or unneeded directories
 * looking to see if a ‘data/datalist’ file should be added
 * building ‘ggsegSchaefer_2.0.3.tar.gz’
-* checking for file ‘/tmp/RtmpMgbqDw/remotes7b5710e8870/ggsegverse-ggseg-8e9c706/DESCRIPTION’ ... OK
+* checking for file ‘/tmp/RtmpffYIdp/remotes6ba4c5b8518/ggsegverse-ggseg-8e9c706/DESCRIPTION’ ... OK
 * preparing ‘ggseg’:
 * checking DESCRIPTION meta-information ... OK
 * checking for LF line-endings in source and make files and shell scripts
@@ -1027,7 +1079,7 @@ x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -
 [1]
  "R packages will be installed in and loaded from:"
 [1]
- "/home/jovyan/R/library"
+ "/home/jovyan/workspace/.r-library"
  "/opt/conda/lib/R/library"
 </pre></div>
 </div>
@@ -1037,7 +1089,7 @@ x86_64-conda-linux-gnu-c++ -std=gnu++17 -shared -L/opt/conda/lib/R/lib -Wl,-O2 -
 ** using staged installation
 ** libs
 using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-utf8/00new/utf8/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-utf8/00new/utf8/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -1094,7 +1146,7 @@ In file included from /opt/conda/include/unicode/platform.h:24,
 /opt/conda/include/unicode/uconfig.h:391:12: note: this is the location of the previous definition
   391 | #   define UCONFIG_USE_WINDOWS_LCID_MAPPING_API 1
       |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-installing via 'install.libs.R' to /home/jovyan/R/library/00LOCK-stringi/00new/stringi
+installing via 'install.libs.R' to /home/jovyan/workspace/.r-library/00LOCK-stringi/00new/stringi
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -1134,26 +1186,6 @@ installing via 'install.libs.R' to /home/jovyan/R/library/00LOCK-stringi/00new/s
 ** testing if installed package can be loaded from final location
 ** testing if installed package keeps a record of temporary installation path
 * DONE (tidyselect)
-* installing *source* package ‘purrr’ ...
-** this is package ‘purrr’ version ‘1.2.2’
-** package ‘purrr’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-purrr/00new/purrr/libs
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-** help
-*** installing help indices
-*** copying figures
-** building package indices
-** installing vignettes
-** testing if installed package can be loaded from temporary location
-** checking absolute paths in shared objects and dynamic libraries
-** testing if installed package can be loaded from final location
-** testing if installed package keeps a record of temporary installation path
-* DONE (purrr)
 * installing *source* package ‘evaluate’ ...
 ** this is package ‘evaluate’ version ‘1.0.5’
 ** package ‘evaluate’ successfully unpacked and MD5 sums checked
@@ -1173,7 +1205,7 @@ installing to /home/jovyan/R/library/00LOCK-purrr/00new/purrr/libs
 ** using staged installation
 ** libs
 using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-xfun/00new/xfun/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-xfun/00new/xfun/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -1192,7 +1224,7 @@ installing to /home/jovyan/R/library/00LOCK-xfun/00new/xfun/libs
 ** using staged installation
 ** libs
 using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-yaml/00new/yaml/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-yaml/00new/yaml/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -1220,6 +1252,26 @@ installing to /home/jovyan/R/library/00LOCK-yaml/00new/yaml/libs
 ** testing if installed package can be loaded from final location
 ** testing if installed package keeps a record of temporary installation path
 * DONE (remotes)
+* installing *source* package ‘magrittr’ ...
+** this is package ‘magrittr’ version ‘2.0.5’
+** package ‘magrittr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
+installing to /home/jovyan/workspace/.r-library/00LOCK-magrittr/00new/magrittr/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (magrittr)
 * installing *source* package ‘ggplot2’ ...
 ** this is package ‘ggplot2’ version ‘4.0.3’
 ** package ‘ggplot2’ successfully unpacked and MD5 sums checked
@@ -1254,6 +1306,26 @@ installing to /home/jovyan/R/library/00LOCK-yaml/00new/yaml/libs
 ** testing if installed package can be loaded from final location
 ** testing if installed package keeps a record of temporary installation path
 * DONE (pillar)
+* installing *source* package ‘purrr’ ...
+** this is package ‘purrr’ version ‘1.2.2’
+** package ‘purrr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
+installing to /home/jovyan/workspace/.r-library/00LOCK-purrr/00new/purrr/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (purrr)
 * installing *source* package ‘stringr’ ...
 ** this is package ‘stringr’ version ‘1.6.0’
 ** package ‘stringr’ successfully unpacked and MD5 sums checked
@@ -1293,7 +1365,7 @@ installing to /home/jovyan/R/library/00LOCK-yaml/00new/yaml/libs
 ** using staged installation
 ** libs
 using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-tibble/00new/tibble/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-tibble/00new/tibble/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -1328,7 +1400,7 @@ installing to /home/jovyan/R/library/00LOCK-tibble/00new/tibble/libs
 ** using staged installation
 ** libs
 using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-dplyr/00new/dplyr/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-dplyr/00new/dplyr/libs
 ** R
 ** data
 *** moving datasets to lazyload DB
@@ -1350,7 +1422,7 @@ installing to /home/jovyan/R/library/00LOCK-dplyr/00new/dplyr/libs
 ** using staged installation
 ** libs
 using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-tidyr/00new/tidyr/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-tidyr/00new/tidyr/libs
 ** R
 ** data
 *** moving datasets to lazyload DB
@@ -1389,7 +1461,7 @@ installing to /home/jovyan/R/library/00LOCK-tidyr/00new/tidyr/libs
 ** libs
 using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
 using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-plyr/00new/plyr/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-plyr/00new/plyr/libs
 ** R
 ** data
 *** moving datasets to lazyload DB
@@ -1416,13 +1488,79 @@ installing to /home/jovyan/R/library/00LOCK-plyr/00new/plyr/libs
 ** testing if installed package can be loaded from final location
 ** testing if installed package keeps a record of temporary installation path
 * DONE (superheat)
+* installing *source* package ‘otel’ ...
+** this is package ‘otel’ version ‘0.2.0’
+** package ‘otel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (otel)
+* installing *source* package ‘ps’ ...
+** this is package ‘ps’ version ‘1.9.3’
+** package ‘ps’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
+installing via 'install.libs.R' to /home/jovyan/workspace/.r-library/00LOCK-ps/00new/ps
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ps)
+* installing *source* package ‘processx’ ...
+** this is package ‘processx’ version ‘3.9.0’
+** package ‘processx’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘x86_64-conda-linux-gnu-cc (conda-forge gcc 15.2.0-19) 15.2.0’
+installing via 'install.libs.R' to /home/jovyan/workspace/.r-library/00LOCK-processx/00new/processx
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (processx)
+* installing *source* package ‘callr’ ...
+** this is package ‘callr’ version ‘3.8.0’
+** package ‘callr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (callr)
 * installing *source* package ‘geometries’ ...
 ** this is package ‘geometries’ version ‘0.2.5’
 ** package ‘geometries’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** libs
 using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-geometries/00new/geometries/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-geometries/00new/geometries/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -1441,7 +1579,7 @@ installing to /home/jovyan/R/library/00LOCK-geometries/00new/geometries/libs
 ** using staged installation
 ** libs
 using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
-installing to /home/jovyan/R/library/00LOCK-sfheaders/00new/sfheaders/libs
+installing to /home/jovyan/workspace/.r-library/00LOCK-sfheaders/00new/sfheaders/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -1454,7 +1592,7 @@ installing to /home/jovyan/R/library/00LOCK-sfheaders/00new/sfheaders/libs
 ** testing if installed package keeps a record of temporary installation path
 * DONE (sfheaders)
 * installing *source* package ‘ggseg.formats’ ...
-** this is package ‘ggseg.formats’ version ‘0.0.3’
+** this is package ‘ggseg.formats’ version ‘0.0.4’
 ** package ‘ggseg.formats’ successfully unpacked and MD5 sums checked
 ** using staged installation
 ** R
@@ -1499,7 +1637,7 @@ installing to /home/jovyan/R/library/00LOCK-sfheaders/00new/sfheaders/libs
 * DONE (ggseg)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing packages into ‘/home/jovyan/R/library’
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing packages into ‘/home/jovyan/workspace/.r-library’
 (as ‘lib’ is unspecified)
 Warning: unable to access index for repository https://ggseg.r-universe.dev/src/contrib:
   cannot open URL 'https://ggseg.r-universe.dev/src/contrib/PACKAGES'
@@ -1519,25 +1657,39 @@ trying URL 'https://cloud.r-project.org/src/contrib/highr_0.12.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/xfun_0.59.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/yaml_2.3.12.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/remotes_2.5.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/magrittr_2.0.5.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/ggplot2_4.0.3.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/dplyr_1.2.1.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/tidyr_1.3.2.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/knitr_1.51.tar.gz'
 
 The downloaded source packages are in
-	‘/tmp/RtmpMgbqDw/downloaded_packages’
+	‘/tmp/RtmpffYIdp/downloaded_packages’
 Downloading package from url: https://cloud.r-project.org/src/contrib/Archive/superheat/superheat_0.1.0.tar.gz
 Installing 2 packages: ggdendro, plyr
-Installing packages into ‘/home/jovyan/R/library’
+Installing packages into ‘/home/jovyan/workspace/.r-library’
 (as ‘lib’ is unspecified)
 trying URL 'https://cloud.r-project.org/src/contrib/ggdendro_0.2.0.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/plyr_1.8.9.tar.gz'
 
 The downloaded source packages are in
-	‘/tmp/RtmpMgbqDw/downloaded_packages’
-Installing package into ‘/home/jovyan/R/library’
+	‘/tmp/RtmpffYIdp/downloaded_packages’
+Installing package into ‘/home/jovyan/workspace/.r-library’
 (as ‘lib’ is unspecified)
-Installing package into ‘/home/jovyan/R/library’
+Installing packages into ‘/home/jovyan/workspace/.r-library’
+(as ‘lib’ is unspecified)
+Warning: unable to access index for repository https://ggseg.r-universe.dev/src/contrib:
+  cannot open URL 'https://ggseg.r-universe.dev/src/contrib/PACKAGES'
+also installing the dependencies ‘otel’, ‘processx’
+
+trying URL 'https://cloud.r-project.org/src/contrib/otel_0.2.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/processx_3.9.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ps_1.9.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/callr_3.8.0.tar.gz'
+
+The downloaded source packages are in
+	‘/tmp/RtmpffYIdp/downloaded_packages’
+Installing package into ‘/home/jovyan/workspace/.r-library’
 (as ‘lib’ is unspecified)
 Warning: unable to access index for repository https://ggseg.r-universe.dev/src/contrib:
   cannot open URL 'https://ggseg.r-universe.dev/src/contrib/PACKAGES'
@@ -1545,23 +1697,23 @@ ggsegSchaefer not found via r-universe, installing from GitHub...
 Using github PAT from envvar GITHUB_PAT. Use `gitcreds::gitcreds_set()` and unset GITHUB_PAT in .Renviron (or elsewhere) if you want to use the more secure git credential store instead.
 Downloading GitHub repo ggseg/ggsegSchaefer@HEAD
 Installing 3 packages: geometries, sfheaders, ggseg.formats
-Installing packages into ‘/home/jovyan/R/library’
+Installing packages into ‘/home/jovyan/workspace/.r-library’
 (as ‘lib’ is unspecified)
 Warning: unable to access index for repository https://ggseg.r-universe.dev/src/contrib:
   cannot open URL 'https://ggseg.r-universe.dev/src/contrib/PACKAGES'
 trying URL 'https://cloud.r-project.org/src/contrib/geometries_0.2.5.tar.gz'
 trying URL 'https://cloud.r-project.org/src/contrib/sfheaders_0.4.5.tar.gz'
-trying URL 'https://cloud.r-project.org/src/contrib/ggseg.formats_0.0.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggseg.formats_0.0.4.tar.gz'
 
 The downloaded source packages are in
-	‘/tmp/RtmpMgbqDw/downloaded_packages’
+	‘/tmp/RtmpffYIdp/downloaded_packages’
 Running `R CMD build`...
-Installing package into ‘/home/jovyan/R/library’
+Installing package into ‘/home/jovyan/workspace/.r-library’
 (as ‘lib’ is unspecified)
 Using github PAT from envvar GITHUB_PAT. Use `gitcreds::gitcreds_set()` and unset GITHUB_PAT in .Renviron (or elsewhere) if you want to use the more secure git credential store instead.
 Downloading GitHub repo ggseg/ggseg@v2.1.1
 Running `R CMD build`...
-Installing package into ‘/home/jovyan/R/library’
+Installing package into ‘/home/jovyan/workspace/.r-library’
 (as ‘lib’ is unspecified)
 In addition: Warning message:
 package ‘ggsegSchaefer’ is not available for this version of R
@@ -2075,7 +2227,7 @@ loaded via a namespace (and not attached):
  compiler_4.5.3
  tidyselect_1.2.1
  [4]
- Rcpp_1.1.1-1.1
+ Rcpp_1.1.2
  scales_1.4.0
  R6_2.6.1
  [7]
@@ -2084,39 +2236,41 @@ loaded via a namespace (and not attached):
  generics_0.1.4
 [10]
  classInt_0.4-11
- ggseg.formats_0.0.3
+ ggseg.formats_0.0.4
  tibble_3.3.1
 [13]
  DBI_1.3.0
  pillar_1.11.1
  RColorBrewer_1.1-3
 [16]
- rlang_1.2.0
+ rlang_1.3.0
  xfun_0.59
  S7_0.2.2
 [19]
+ otel_0.2.0
  viridisLite_0.4.3
  cli_3.6.6
- withr_3.0.3
 [22]
+ withr_3.0.3
  magrittr_2.0.5
  class_7.3-23
- wk_0.9.5
 [25]
+ wk_0.9.5
  grid_4.5.3
  remotes_2.5.0
- lifecycle_1.0.5
 [28]
+ lifecycle_1.0.5
  vctrs_0.7.3
  KernSmooth_2.23-26
- evaluate_1.0.5
 [31]
+ evaluate_1.0.5
  proxy_0.4-29
  glue_1.8.1
- farver_2.1.2
 [34]
+ farver_2.1.2
  e1071_1.7-17
  purrr_1.2.2
+[37]
  pkgconfig_2.0.3
 </pre></div>
 </div>

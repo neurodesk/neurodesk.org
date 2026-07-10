@@ -1,7 +1,11 @@
 {
-  "generatedAt": "2026-07-09T18:11:52Z",
+  "generatedAt": "2026-07-10T07:02:00Z",
   "source": "Google Analytics 4",
-  "totalUsers": 60516,
+  "periodDays": 30,
+  "totalUsers": 60598,
+  "periodUsers": 3415,
+  "periodSessions": 4859,
+  "periodPageViews": 7536,
   "months": [
     {
       "month": "2023-05",
@@ -195,25 +199,25 @@
     },
     {
       "month": "2026-07",
-      "newUsers": 917,
-      "cumulativeUsers": 60516
+      "newUsers": 999,
+      "cumulativeUsers": 60598
     }
   ],
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "users": 13843
+      "users": 13852
     },
     {
       "code": "CN",
       "name": "China",
-      "users": 9629
+      "users": 9638
     },
     {
       "code": "SG",
       "name": "Singapore",
-      "users": 5926
+      "users": 5955
     },
     {
       "code": "AU",
@@ -223,52 +227,52 @@
     {
       "code": "DE",
       "name": "Germany",
-      "users": 3409
+      "users": 3414
     },
     {
       "code": "GB",
       "name": "United Kingdom",
-      "users": 1858
+      "users": 1860
     },
     {
       "code": "CA",
       "name": "Canada",
-      "users": 1656
+      "users": 1658
     },
     {
       "code": "FR",
       "name": "France",
-      "users": 1332
+      "users": 1333
     },
     {
       "code": "IN",
       "name": "India",
-      "users": 1263
+      "users": 1266
     },
     {
       "code": "IT",
       "name": "Italy",
-      "users": 1116
-    },
-    {
-      "code": "AT",
-      "name": "Austria",
-      "users": 1020
+      "users": 1118
     },
     {
       "code": "JP",
       "name": "Japan",
-      "users": 1020
+      "users": 1022
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "users": 1021
     },
     {
       "code": "NL",
       "name": "Netherlands",
-      "users": 945
+      "users": 946
     },
     {
       "code": "CH",
       "name": "Switzerland",
-      "users": 912
+      "users": 913
     },
     {
       "code": "ES",
@@ -278,7 +282,7 @@
     {
       "code": "BE",
       "name": "Belgium",
-      "users": 764
+      "users": 765
     },
     {
       "code": "KR",
@@ -293,7 +297,7 @@
     {
       "code": "TR",
       "name": "T\u00fcrkiye",
-      "users": 579
+      "users": 590
     },
     {
       "code": "HK",
@@ -353,7 +357,7 @@
     {
       "code": "NZ",
       "name": "New Zealand",
-      "users": 234
+      "users": 235
     },
     {
       "code": "ID",
@@ -373,7 +377,7 @@
     {
       "code": "CO",
       "name": "Colombia",
-      "users": 206
+      "users": 207
     },
     {
       "code": "AE",
@@ -413,12 +417,12 @@
     {
       "code": "IE",
       "name": "Ireland",
-      "users": 127
+      "users": 128
     },
     {
       "code": "EG",
       "name": "Egypt",
-      "users": 126
+      "users": 127
     },
     {
       "code": "AR",
@@ -428,7 +432,7 @@
     {
       "code": "GR",
       "name": "Greece",
-      "users": 117
+      "users": 118
     },
     {
       "code": "NG",
@@ -483,7 +487,7 @@
     {
       "code": "DZ",
       "name": "Algeria",
-      "users": 44
+      "users": 45
     },
     {
       "code": "HR",
@@ -491,14 +495,14 @@
       "users": 43
     },
     {
-      "code": "VE",
-      "name": "Venezuela",
+      "code": "KE",
+      "name": "Kenya",
       "users": 40
     },
     {
-      "code": "KE",
-      "name": "Kenya",
-      "users": 39
+      "code": "VE",
+      "name": "Venezuela",
+      "users": 40
     },
     {
       "code": "PE",
@@ -546,6 +550,11 @@
       "users": 23
     },
     {
+      "code": "JO",
+      "name": "Jordan",
+      "users": 22
+    },
+    {
       "code": "LB",
       "name": "Lebanon",
       "users": 22
@@ -553,11 +562,6 @@
     {
       "code": "AL",
       "name": "Albania",
-      "users": 21
-    },
-    {
-      "code": "JO",
-      "name": "Jordan",
       "users": 21
     },
     {
@@ -851,6 +855,11 @@
       "users": 3
     },
     {
+      "code": "CG",
+      "name": "Congo - Brazzaville",
+      "users": 3
+    },
+    {
       "code": "IS",
       "name": "Iceland",
       "users": 3
@@ -898,11 +907,6 @@
     {
       "code": "BS",
       "name": "Bahamas",
-      "users": 2
-    },
-    {
-      "code": "CG",
-      "name": "Congo - Brazzaville",
       "users": 2
     },
     {
@@ -1049,6 +1053,710 @@
       "code": "ZW",
       "name": "Zimbabwe",
       "users": 1
+    }
+  ],
+  "segments": [
+    {
+      "id": "neurodeskedu",
+      "name": "NeurodeskEDU",
+      "url": "https://neurodesk.org/edu/",
+      "description": "Learning resources hosted under neurodesk.org/edu.",
+      "filters": {
+        "hostNames": [
+          "neurodesk.org"
+        ],
+        "pagePathPrefix": "/edu"
+      },
+      "totalUsers": 2159,
+      "periodUsers": 589,
+      "periodSessions": 1030,
+      "periodPageViews": 1800,
+      "months": [
+        {
+          "month": "2025-12",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        },
+        {
+          "month": "2026-01",
+          "newUsers": 4,
+          "cumulativeUsers": 5
+        },
+        {
+          "month": "2026-02",
+          "newUsers": 93,
+          "cumulativeUsers": 98
+        },
+        {
+          "month": "2026-03",
+          "newUsers": 581,
+          "cumulativeUsers": 679
+        },
+        {
+          "month": "2026-04",
+          "newUsers": 469,
+          "cumulativeUsers": 1148
+        },
+        {
+          "month": "2026-05",
+          "newUsers": 441,
+          "cumulativeUsers": 1589
+        },
+        {
+          "month": "2026-06",
+          "newUsers": 397,
+          "cumulativeUsers": 1986
+        },
+        {
+          "month": "2026-07",
+          "newUsers": 173,
+          "cumulativeUsers": 2159
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 574
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 297
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "users": 236
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 212
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 141
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 106
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "users": 95
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 84
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "users": 76
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "users": 66
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "users": 65
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "users": 53
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "users": 52
+        },
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "users": 51
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 45
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "users": 37
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "users": 34
+        },
+        {
+          "code": "TR",
+          "name": "T\u00fcrkiye",
+          "users": 34
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
+          "users": 30
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "users": 28
+        },
+        {
+          "code": "BE",
+          "name": "Belgium",
+          "users": 24
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "users": 24
+        },
+        {
+          "code": "VN",
+          "name": "Vietnam",
+          "users": 24
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "users": 22
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
+          "users": 21
+        },
+        {
+          "code": "SE",
+          "name": "Sweden",
+          "users": 20
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "users": 14
+        },
+        {
+          "code": "FI",
+          "name": "Finland",
+          "users": 13
+        },
+        {
+          "code": "NZ",
+          "name": "New Zealand",
+          "users": 13
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "users": 13
+        },
+        {
+          "code": "IR",
+          "name": "Iran",
+          "users": 12
+        },
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "users": 12
+        },
+        {
+          "code": "CO",
+          "name": "Colombia",
+          "users": 10
+        },
+        {
+          "code": "AR",
+          "name": "Argentina",
+          "users": 9
+        },
+        {
+          "code": "PT",
+          "name": "Portugal",
+          "users": 9
+        },
+        {
+          "code": "IE",
+          "name": "Ireland",
+          "users": 7
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "users": 7
+        },
+        {
+          "code": "BD",
+          "name": "Bangladesh",
+          "users": 6
+        },
+        {
+          "code": "NO",
+          "name": "Norway",
+          "users": 6
+        },
+        {
+          "code": "EG",
+          "name": "Egypt",
+          "users": 5
+        },
+        {
+          "code": "GR",
+          "name": "Greece",
+          "users": 5
+        },
+        {
+          "code": "IQ",
+          "name": "Iraq",
+          "users": 5
+        },
+        {
+          "code": "JM",
+          "name": "Jamaica",
+          "users": 5
+        },
+        {
+          "code": "MA",
+          "name": "Morocco",
+          "users": 5
+        },
+        {
+          "code": "SK",
+          "name": "Slovakia",
+          "users": 5
+        },
+        {
+          "code": "HU",
+          "name": "Hungary",
+          "users": 4
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
+          "users": 4
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "users": 4
+        },
+        {
+          "code": "DZ",
+          "name": "Algeria",
+          "users": 3
+        },
+        {
+          "code": "JO",
+          "name": "Jordan",
+          "users": 3
+        },
+        {
+          "code": "PK",
+          "name": "Pakistan",
+          "users": 3
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "users": 3
+        },
+        {
+          "code": "UA",
+          "name": "Ukraine",
+          "users": 3
+        },
+        {
+          "code": "VE",
+          "name": "Venezuela",
+          "users": 3
+        },
+        {
+          "code": "ZA",
+          "name": "South Africa",
+          "users": 3
+        },
+        {
+          "code": "AE",
+          "name": "United Arab Emirates",
+          "users": 2
+        },
+        {
+          "code": "CL",
+          "name": "Chile",
+          "users": 2
+        },
+        {
+          "code": "CZ",
+          "name": "Czechia",
+          "users": 2
+        },
+        {
+          "code": "ET",
+          "name": "Ethiopia",
+          "users": 2
+        },
+        {
+          "code": "KE",
+          "name": "Kenya",
+          "users": 2
+        },
+        {
+          "code": "LT",
+          "name": "Lithuania",
+          "users": 2
+        },
+        {
+          "code": "LU",
+          "name": "Luxembourg",
+          "users": 2
+        },
+        {
+          "code": "LV",
+          "name": "Latvia",
+          "users": 2
+        },
+        {
+          "code": "PH",
+          "name": "Philippines",
+          "users": 2
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "users": 2
+        },
+        {
+          "code": "TN",
+          "name": "Tunisia",
+          "users": 2
+        },
+        {
+          "code": "UZ",
+          "name": "Uzbekistan",
+          "users": 2
+        },
+        {
+          "code": "AZ",
+          "name": "Azerbaijan",
+          "users": 1
+        },
+        {
+          "code": "BY",
+          "name": "Belarus",
+          "users": 1
+        },
+        {
+          "code": "CM",
+          "name": "Cameroon",
+          "users": 1
+        },
+        {
+          "code": "HR",
+          "name": "Croatia",
+          "users": 1
+        },
+        {
+          "code": "KH",
+          "name": "Cambodia",
+          "users": 1
+        },
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "users": 1
+        },
+        {
+          "code": "MD",
+          "name": "Moldova",
+          "users": 1
+        },
+        {
+          "code": "MG",
+          "name": "Madagascar",
+          "users": 1
+        },
+        {
+          "code": "MK",
+          "name": "North Macedonia",
+          "users": 1
+        },
+        {
+          "code": "MN",
+          "name": "Mongolia",
+          "users": 1
+        },
+        {
+          "code": "MO",
+          "name": "Macao",
+          "users": 1
+        },
+        {
+          "code": "MT",
+          "name": "Malta",
+          "users": 1
+        },
+        {
+          "code": "MU",
+          "name": "Mauritius",
+          "users": 1
+        },
+        {
+          "code": "NG",
+          "name": "Nigeria",
+          "users": 1
+        },
+        {
+          "code": "PR",
+          "name": "Puerto Rico",
+          "users": 1
+        },
+        {
+          "code": "PS",
+          "name": "Palestine",
+          "users": 1
+        },
+        {
+          "code": "PY",
+          "name": "Paraguay",
+          "users": 1
+        },
+        {
+          "code": "RW",
+          "name": "Rwanda",
+          "users": 1
+        },
+        {
+          "code": "SL",
+          "name": "Sierra Leone",
+          "users": 1
+        },
+        {
+          "code": "SN",
+          "name": "Senegal",
+          "users": 1
+        },
+        {
+          "code": "SV",
+          "name": "El Salvador",
+          "users": 1
+        },
+        {
+          "code": "SY",
+          "name": "Syria",
+          "users": 1
+        },
+        {
+          "code": "TD",
+          "name": "Chad",
+          "users": 1
+        },
+        {
+          "code": "TZ",
+          "name": "Tanzania",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "play-america",
+      "name": "Play US",
+      "url": "https://play-america.neurodesk.org",
+      "description": "Neurodesk Play server in the US.",
+      "filters": {
+        "hostNames": [
+          "play-america.neurodesk.org"
+        ]
+      },
+      "totalUsers": 14,
+      "periodUsers": 24,
+      "periodSessions": 30,
+      "periodPageViews": 68,
+      "months": [
+        {
+          "month": "2026-07",
+          "newUsers": 14,
+          "cumulativeUsers": 14
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 8
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 3
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "users": 2
+        },
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "users": 1
+        },
+        {
+          "code": "EG",
+          "name": "Egypt",
+          "users": 1
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 1
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "users": 1
+        },
+        {
+          "code": "GR",
+          "name": "Greece",
+          "users": 1
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "users": 1
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "users": 1
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "users": 1
+        },
+        {
+          "code": "NP",
+          "name": "Nepal",
+          "users": 1
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
+          "users": 1
+        },
+        {
+          "code": "TR",
+          "name": "T\u00fcrkiye",
+          "users": 1
+        },
+        {
+          "code": "VN",
+          "name": "Vietnam",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "play-europe",
+      "name": "Play Europe",
+      "url": "https://play-europe.neurodesk.org",
+      "description": "Neurodesk Play server in Europe.",
+      "filters": {
+        "hostNames": [
+          "play-europe.neurodesk.org"
+        ]
+      },
+      "totalUsers": 1,
+      "periodUsers": 6,
+      "periodSessions": 6,
+      "periodPageViews": 15,
+      "months": [
+        {
+          "month": "2026-07",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "IT",
+          "name": "Italy",
+          "users": 2
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "users": 1
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 1
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "users": 1
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "play-australia",
+      "name": "Play Australia",
+      "url": "https://play.neurodesk.cloud.edu.au",
+      "description": "Neurodesk Play server in Australia.",
+      "filters": {
+        "hostNames": [
+          "play.neurodesk.cloud.edu.au"
+        ]
+      },
+      "totalUsers": 4,
+      "periodUsers": 4,
+      "periodSessions": 6,
+      "periodPageViews": 12,
+      "months": [
+        {
+          "month": "2026-07",
+          "newUsers": 4,
+          "cumulativeUsers": 4
+        }
+      ],
+      "countries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 2
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "users": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
     }
   ]
 }
