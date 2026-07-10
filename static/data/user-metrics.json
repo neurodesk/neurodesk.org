@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-10T07:02:00Z",
+  "generatedAt": "2026-07-10T22:07:52Z",
   "source": "Google Analytics 4",
   "periodDays": 30,
-  "totalUsers": 60598,
-  "periodUsers": 3415,
-  "periodSessions": 4859,
-  "periodPageViews": 7536,
+  "totalUsers": 60666,
+  "periodUsers": 3297,
+  "periodSessions": 4700,
+  "periodPageViews": 7260,
   "months": [
     {
       "month": "2023-05",
@@ -199,45 +199,45 @@
     },
     {
       "month": "2026-07",
-      "newUsers": 999,
-      "cumulativeUsers": 60598
+      "newUsers": 1067,
+      "cumulativeUsers": 60666
     }
   ],
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "users": 13852
+      "users": 13861
     },
     {
       "code": "CN",
       "name": "China",
-      "users": 9638
+      "users": 9645
     },
     {
       "code": "SG",
       "name": "Singapore",
-      "users": 5955
+      "users": 5990
     },
     {
       "code": "AU",
       "name": "Australia",
-      "users": 5681
+      "users": 5684
     },
     {
       "code": "DE",
       "name": "Germany",
-      "users": 3414
+      "users": 3415
     },
     {
       "code": "GB",
       "name": "United Kingdom",
-      "users": 1860
+      "users": 1861
     },
     {
       "code": "CA",
       "name": "Canada",
-      "users": 1658
+      "users": 1659
     },
     {
       "code": "FR",
@@ -247,17 +247,17 @@
     {
       "code": "IN",
       "name": "India",
-      "users": 1266
+      "users": 1267
     },
     {
       "code": "IT",
       "name": "Italy",
-      "users": 1118
+      "users": 1120
     },
     {
       "code": "JP",
       "name": "Japan",
-      "users": 1022
+      "users": 1023
     },
     {
       "code": "AT",
@@ -287,17 +287,17 @@
     {
       "code": "KR",
       "name": "South Korea",
-      "users": 629
+      "users": 630
     },
     {
       "code": "BR",
       "name": "Brazil",
-      "users": 594
+      "users": 595
     },
     {
       "code": "TR",
       "name": "T\u00fcrkiye",
-      "users": 590
+      "users": 591
     },
     {
       "code": "HK",
@@ -342,12 +342,12 @@
     {
       "code": "PH",
       "name": "Philippines",
-      "users": 329
+      "users": 330
     },
     {
       "code": "MX",
       "name": "Mexico",
-      "users": 309
+      "users": 310
     },
     {
       "code": "CZ",
@@ -402,7 +402,7 @@
     {
       "code": "ZA",
       "name": "South Africa",
-      "users": 144
+      "users": 145
     },
     {
       "code": "CL",
@@ -437,7 +437,7 @@
     {
       "code": "NG",
       "name": "Nigeria",
-      "users": 116
+      "users": 117
     },
     {
       "code": "BD",
@@ -482,7 +482,7 @@
     {
       "code": "UA",
       "name": "Ukraine",
-      "users": 68
+      "users": 69
     },
     {
       "code": "DZ",
@@ -1067,10 +1067,10 @@
         ],
         "pagePathPrefix": "/edu"
       },
-      "totalUsers": 2159,
-      "periodUsers": 589,
-      "periodSessions": 1030,
-      "periodPageViews": 1800,
+      "totalUsers": 2168,
+      "periodUsers": 579,
+      "periodSessions": 987,
+      "periodPageViews": 1716,
       "months": [
         {
           "month": "2025-12",
@@ -1109,20 +1109,20 @@
         },
         {
           "month": "2026-07",
-          "newUsers": 173,
-          "cumulativeUsers": 2159
+          "newUsers": 182,
+          "cumulativeUsers": 2168
         }
       ],
       "countries": [
         {
           "code": "US",
           "name": "United States",
-          "users": 574
+          "users": 575
         },
         {
           "code": "SG",
           "name": "Singapore",
-          "users": 297
+          "users": 304
         },
         {
           "code": "CN",
@@ -1132,12 +1132,12 @@
         {
           "code": "DE",
           "name": "Germany",
-          "users": 212
+          "users": 213
         },
         {
           "code": "AU",
           "name": "Australia",
-          "users": 141
+          "users": 142
         },
         {
           "code": "FR",
@@ -1157,7 +1157,7 @@
         {
           "code": "IN",
           "name": "India",
-          "users": 76
+          "users": 77
         },
         {
           "code": "NL",
@@ -1583,8 +1583,8 @@
       },
       "totalUsers": 14,
       "periodUsers": 24,
-      "periodSessions": 30,
-      "periodPageViews": 68,
+      "periodSessions": 35,
+      "periodPageViews": 88,
       "months": [
         {
           "month": "2026-07",
@@ -1757,6 +1757,125 @@
           "users": 1
         }
       ]
+    },
+    {
+      "id": "webapp-calmar",
+      "name": "CALMaR",
+      "url": "https://calmar.neurodesk.org/",
+      "description": "CALMaR lesion mapping and reporting webapp.",
+      "filters": {
+        "hostNames": [
+          "calmar.neurodesk.org"
+        ]
+      },
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
+    },
+    {
+      "id": "webapp-dicompare",
+      "name": "dicompare",
+      "url": "https://dicompare.neurodesk.org",
+      "description": "dicompare DICOM protocol comparison webapp.",
+      "filters": {
+        "hostNames": [
+          "dicompare.neurodesk.org"
+        ]
+      },
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
+    },
+    {
+      "id": "webapp-musclemap",
+      "name": "MuscleMap",
+      "url": "https://musclemap.neurodesk.org",
+      "description": "MuscleMap muscle segmentation webapp.",
+      "filters": {
+        "hostNames": [
+          "musclemap.neurodesk.org"
+        ]
+      },
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
+    },
+    {
+      "id": "webapp-qsmbly",
+      "name": "QSMbly",
+      "url": "https://qsmbly.neurodesk.org",
+      "description": "QSMbly quantitative susceptibility mapping webapp.",
+      "filters": {
+        "hostNames": [
+          "qsmbly.neurodesk.org"
+        ]
+      },
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
+    },
+    {
+      "id": "webapp-seedseg",
+      "name": "SeedSeg",
+      "url": "https://seedseg.neurodesk.org/",
+      "description": "SeedSeg fiducial marker segmentation webapp.",
+      "filters": {
+        "hostNames": [
+          "seedseg.neurodesk.org"
+        ]
+      },
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
+    },
+    {
+      "id": "webapp-sct",
+      "name": "Spinal Cord Toolbox",
+      "url": "https://sct.neurodesk.org",
+      "description": "Spinal Cord Toolbox segmentation webapp.",
+      "filters": {
+        "hostNames": [
+          "sct.neurodesk.org"
+        ]
+      },
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
+    },
+    {
+      "id": "webapp-vesselboost",
+      "name": "VesselBoost",
+      "url": "https://vesselboost.neurodesk.org",
+      "description": "VesselBoost blood vessel segmentation webapp.",
+      "filters": {
+        "hostNames": [
+          "vesselboost.neurodesk.org"
+        ]
+      },
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
     }
   ]
 }
