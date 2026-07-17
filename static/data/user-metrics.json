@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-16T05:59:55Z",
+  "generatedAt": "2026-07-17T06:00:44Z",
   "source": "Google Analytics 4",
   "periodDays": 30,
-  "totalUsers": 61414,
-  "periodUsers": 3552,
-  "periodSessions": 4898,
-  "periodPageViews": 8712,
+  "totalUsers": 60742,
+  "periodUsers": 3536,
+  "periodSessions": 4881,
+  "periodPageViews": 8639,
   "months": [
     {
       "month": "2023-05",
@@ -199,55 +199,55 @@
     },
     {
       "month": "2026-07",
-      "newUsers": 1815,
-      "cumulativeUsers": 61414
+      "newUsers": 1928,
+      "cumulativeUsers": 61527
     }
   ],
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "users": 14026
+      "users": 14058
     },
     {
       "code": "CN",
       "name": "China",
-      "users": 9697
+      "users": 9703
     },
     {
       "code": "SG",
       "name": "Singapore",
-      "users": 6259
+      "users": 6287
     },
     {
       "code": "AU",
       "name": "Australia",
-      "users": 5717
+      "users": 5725
     },
     {
       "code": "DE",
       "name": "Germany",
-      "users": 3433
+      "users": 3435
     },
     {
       "code": "GB",
       "name": "United Kingdom",
-      "users": 1877
+      "users": 1879
     },
     {
       "code": "CA",
       "name": "Canada",
-      "users": 1678
+      "users": 1681
     },
     {
       "code": "FR",
       "name": "France",
-      "users": 1337
+      "users": 1342
     },
     {
       "code": "IN",
       "name": "India",
-      "users": 1280
+      "users": 1282
     },
     {
       "code": "IT",
@@ -257,12 +257,12 @@
     {
       "code": "JP",
       "name": "Japan",
-      "users": 1033
+      "users": 1035
     },
     {
       "code": "AT",
       "name": "Austria",
-      "users": 1023
+      "users": 1024
     },
     {
       "code": "NL",
@@ -272,22 +272,22 @@
     {
       "code": "CH",
       "name": "Switzerland",
-      "users": 920
+      "users": 922
     },
     {
       "code": "ES",
       "name": "Spain",
-      "users": 829
+      "users": 831
     },
     {
       "code": "BE",
       "name": "Belgium",
-      "users": 770
+      "users": 772
     },
     {
       "code": "KR",
       "name": "South Korea",
-      "users": 633
+      "users": 635
     },
     {
       "code": "BR",
@@ -302,7 +302,7 @@
     {
       "code": "HK",
       "name": "Hong Kong",
-      "users": 581
+      "users": 582
     },
     {
       "code": "TW",
@@ -317,7 +317,7 @@
     {
       "code": "VN",
       "name": "Vietnam",
-      "users": 445
+      "users": 449
     },
     {
       "code": "RU",
@@ -327,7 +327,7 @@
     {
       "code": "SE",
       "name": "Sweden",
-      "users": 376
+      "users": 377
     },
     {
       "code": "IR",
@@ -357,7 +357,7 @@
     {
       "code": "NZ",
       "name": "New Zealand",
-      "users": 236
+      "users": 237
     },
     {
       "code": "ID",
@@ -412,7 +412,7 @@
     {
       "code": "IE",
       "name": "Ireland",
-      "users": 132
+      "users": 133
     },
     {
       "code": "SA",
@@ -427,7 +427,7 @@
     {
       "code": "AR",
       "name": "Argentina",
-      "users": 125
+      "users": 126
     },
     {
       "code": "GR",
@@ -447,7 +447,7 @@
     {
       "code": "HU",
       "name": "Hungary",
-      "users": 100
+      "users": 101
     },
     {
       "code": "MY",
@@ -482,7 +482,7 @@
     {
       "code": "UA",
       "name": "Ukraine",
-      "users": 70
+      "users": 71
     },
     {
       "code": "DZ",
@@ -492,7 +492,7 @@
     {
       "code": "HR",
       "name": "Croatia",
-      "users": 43
+      "users": 44
     },
     {
       "code": "VE",
@@ -640,6 +640,11 @@
       "users": 15
     },
     {
+      "code": "CR",
+      "name": "Costa Rica",
+      "users": 14
+    },
+    {
       "code": "GE",
       "name": "Georgia",
       "users": 14
@@ -653,11 +658,6 @@
       "code": "OM",
       "name": "Oman",
       "users": 14
-    },
-    {
-      "code": "CR",
-      "name": "Costa Rica",
-      "users": 13
     },
     {
       "code": "KW",
@@ -1067,10 +1067,11 @@
         ],
         "pagePathPrefix": "/edu"
       },
-      "totalUsers": 2286,
-      "periodUsers": 634,
-      "periodSessions": 1029,
-      "periodPageViews": 1768,
+      "trackingStartDate": "2025-12-18",
+      "totalUsers": 2815,
+      "periodUsers": 617,
+      "periodSessions": 1011,
+      "periodPageViews": 1710,
       "months": [
         {
           "month": "2025-12",
@@ -1109,20 +1110,20 @@
         },
         {
           "month": "2026-07",
-          "newUsers": 300,
-          "cumulativeUsers": 2286
+          "newUsers": 308,
+          "cumulativeUsers": 2294
         }
       ],
       "countries": [
         {
           "code": "US",
           "name": "United States",
-          "users": 608
+          "users": 609
         },
         {
           "code": "SG",
           "name": "Singapore",
-          "users": 336
+          "users": 338
         },
         {
           "code": "CN",
@@ -1132,7 +1133,7 @@
         {
           "code": "DE",
           "name": "Germany",
-          "users": 215
+          "users": 216
         },
         {
           "code": "AU",
@@ -1172,12 +1173,12 @@
         {
           "code": "JP",
           "name": "Japan",
-          "users": 55
+          "users": 56
         },
         {
           "code": "AT",
           "name": "Austria",
-          "users": 52
+          "users": 53
         },
         {
           "code": "BR",
@@ -1187,7 +1188,7 @@
         {
           "code": "CH",
           "name": "Switzerland",
-          "users": 49
+          "users": 51
         },
         {
           "code": "KR",
@@ -1217,7 +1218,7 @@
         {
           "code": "BE",
           "name": "Belgium",
-          "users": 24
+          "users": 26
         },
         {
           "code": "IL",
@@ -1581,15 +1582,16 @@
           "play-america.neurodesk.org"
         ]
       },
-      "totalUsers": 34,
-      "periodUsers": 58,
-      "periodSessions": 99,
-      "periodPageViews": 242,
+      "trackingStartDate": "2026-07-08",
+      "totalUsers": 61,
+      "periodUsers": 61,
+      "periodSessions": 109,
+      "periodPageViews": 268,
       "months": [
         {
           "month": "2026-07",
-          "newUsers": 34,
-          "cumulativeUsers": 34
+          "newUsers": 36,
+          "cumulativeUsers": 36
         }
       ],
       "countries": [
@@ -1606,7 +1608,7 @@
         {
           "code": "IN",
           "name": "India",
-          "users": 4
+          "users": 5
         },
         {
           "code": "TR",
@@ -1634,6 +1636,11 @@
           "users": 2
         },
         {
+          "code": "PT",
+          "name": "Portugal",
+          "users": 2
+        },
+        {
           "code": "VN",
           "name": "Vietnam",
           "users": 2
@@ -1656,6 +1663,11 @@
         {
           "code": "CH",
           "name": "Switzerland",
+          "users": 1
+        },
+        {
+          "code": "CR",
+          "name": "Costa Rica",
           "users": 1
         },
         {
@@ -1699,11 +1711,6 @@
           "users": 1
         },
         {
-          "code": "PT",
-          "name": "Portugal",
-          "users": 1
-        },
-        {
           "code": "SG",
           "name": "Singapore",
           "users": 1
@@ -1720,10 +1727,11 @@
           "play-europe.neurodesk.org"
         ]
       },
-      "totalUsers": 2,
-      "periodUsers": 18,
-      "periodSessions": 24,
-      "periodPageViews": 54,
+      "trackingStartDate": "2026-07-08",
+      "totalUsers": 20,
+      "periodUsers": 20,
+      "periodSessions": 29,
+      "periodPageViews": 63,
       "months": [
         {
           "month": "2026-07",
@@ -1750,6 +1758,16 @@
         {
           "code": "AU",
           "name": "Australia",
+          "users": 1
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
           "users": 1
         },
         {
@@ -1809,22 +1827,23 @@
           "play.neurodesk.cloud.edu.au"
         ]
       },
-      "totalUsers": 11,
-      "periodUsers": 11,
-      "periodSessions": 16,
-      "periodPageViews": 29,
+      "trackingStartDate": "2026-07-08",
+      "totalUsers": 13,
+      "periodUsers": 13,
+      "periodSessions": 17,
+      "periodPageViews": 36,
       "months": [
         {
           "month": "2026-07",
-          "newUsers": 11,
-          "cumulativeUsers": 11
+          "newUsers": 13,
+          "cumulativeUsers": 13
         }
       ],
       "countries": [
         {
           "code": "AU",
           "name": "Australia",
-          "users": 6
+          "users": 8
         },
         {
           "code": "IN",
@@ -1853,7 +1872,8 @@
           "calmar.neurodesk.org"
         ]
       },
-      "totalUsers": 2,
+      "trackingStartDate": "2026-07-11",
+      "totalUsers": 6,
       "periodUsers": 6,
       "periodSessions": 9,
       "periodPageViews": 14,
@@ -1887,6 +1907,7 @@
           "dicompare.neurodesk.org"
         ]
       },
+      "trackingStartDate": null,
       "totalUsers": 0,
       "periodUsers": 0,
       "periodSessions": 0,
@@ -1904,10 +1925,11 @@
           "musclemap.neurodesk.org"
         ]
       },
-      "totalUsers": 8,
+      "trackingStartDate": "2026-07-12",
+      "totalUsers": 14,
       "periodUsers": 14,
-      "periodSessions": 16,
-      "periodPageViews": 19,
+      "periodSessions": 18,
+      "periodPageViews": 21,
       "months": [
         {
           "month": "2026-07",
@@ -1953,6 +1975,7 @@
           "qsmbly.neurodesk.org"
         ]
       },
+      "trackingStartDate": null,
       "totalUsers": 0,
       "periodUsers": 0,
       "periodSessions": 0,
@@ -1970,6 +1993,7 @@
           "seedseg.neurodesk.org"
         ]
       },
+      "trackingStartDate": null,
       "totalUsers": 0,
       "periodUsers": 0,
       "periodSessions": 0,
@@ -1987,7 +2011,8 @@
           "sct.neurodesk.org"
         ]
       },
-      "totalUsers": 0,
+      "trackingStartDate": "2026-07-13",
+      "totalUsers": 3,
       "periodUsers": 3,
       "periodSessions": 6,
       "periodPageViews": 8,
@@ -2015,10 +2040,11 @@
           "vesselboost.neurodesk.org"
         ]
       },
-      "totalUsers": 2,
-      "periodUsers": 4,
-      "periodSessions": 8,
-      "periodPageViews": 11,
+      "trackingStartDate": "2026-07-12",
+      "totalUsers": 5,
+      "periodUsers": 5,
+      "periodSessions": 9,
+      "periodPageViews": 13,
       "months": [
         {
           "month": "2026-07",
@@ -2027,6 +2053,11 @@
         }
       ],
       "countries": [
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
+        },
         {
           "code": "CN",
           "name": "China",
