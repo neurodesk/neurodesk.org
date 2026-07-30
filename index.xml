@@ -79,21 +79,44 @@ Make sure to configure `startUrls`, `discoveryPatterns`, `pathsToMatch` and othe
 &lt;/div&gt;&lt;ol start="3"&gt;
 &lt;li&gt;Once started, your dev website will be accessible via http://localhost:1313&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;On Mac:&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/app/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/app/neurodeskapp/</guid><description>&lt;img style="float: right;" src="https://neurodesk.org/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="750"&gt;
-&lt;!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') --&gt;
-&lt;h3 id="determine-system-privileges"&gt;Determine System Privileges&lt;/h3&gt;
-&lt;p&gt;Before running the app, check whether your system has privileged access (root/admin permissions). This determines which engine you need to use to run the app:&lt;/p&gt;
-&lt;p&gt;If you have privileged access → Use Docker or Podman Engine&lt;/p&gt;
-&lt;p&gt;If you do NOT have privileged access → Use TinyRange Engine, or run remote instance&lt;/p&gt;
-&lt;img src="https://neurodesk.org/static/docs/getting-started/neurodeskapp/engine-options.png" width="400"&gt;
-&lt;h3 id="minimum-system-requirements"&gt;Minimum System Requirements&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;At least 5GB free space for neurodesktop base image.&lt;/li&gt;
-&lt;li&gt;One of the following options, depending on system privileges:&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;On Mac:&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/app/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/app/neurodeskapp/</guid><description>&lt;h2 id="step-1-download-and-install"&gt;Step 1: Download and install&lt;/h2&gt;
+&lt;p&gt;Download the Neurodesk App for your operating system, then follow the install instructions below.&lt;/p&gt;
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="macos" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ macOS
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="windows" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ Windows
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="linux" aria-controls="tabs-00-02" aria-selected="false"&gt;
+ Linux
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;p&gt;&lt;strong&gt;Download:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;With privileged access: Docker or Podman to run respective engines&lt;/p&gt;</description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</guid><description/></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-components/</guid><description>&lt;p&gt;&lt;img src="https://neurodesk.org/static/developers/architecture/neurodesk-components/NeurodeskPaperFigureWithOpenRecon.png" alt="architecture" title="architecture"/&gt;
+&lt;li&gt;&lt;a href="https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-arm64.dmg" target="_blank" rel="noopener"&gt;macOS Apple Silicon (M1/M2/M3/M4)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/neurodesk/neurodesk-app/releases/latest/download/NeurodeskApp-Setup-macOS-x64.dmg" target="_blank" rel="noopener"&gt;macOS Intel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Install:&lt;/strong&gt;
+Double-click the downloaded &lt;code&gt;.dmg&lt;/code&gt; file and drag NeurodeskApp into your Applications folder. To open: right-click &lt;code&gt;NeurodeskApp.app&lt;/code&gt; and select &amp;ldquo;Open&amp;rdquo;.&lt;/p&gt;</description></item><item><title>Neurodesk App</title><link>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurodesktop/neurodeskapp/</guid><description/></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.org/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/architecture/neurodesk-components/</guid><description>&lt;p&gt;&lt;img src="https://neurodesk.org/static/developers/architecture/neurodesk-components/NeurodeskPaperFigureWithOpenRecon.png" alt="architecture" title="architecture"/&gt;
 &lt;/p&gt;
 &lt;h2 id="neurodesktop-recommended-for-beginners"&gt;Neurodesktop: Recommended for Beginners&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Neurodesktop&lt;/em&gt; is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
@@ -558,7 +581,28 @@ Docker for MacOS by default runs with 2GB Memory. For actual workloads, 4GB Memo
 &lt;/div&gt;
 
 &lt;h3 id="2-run-neurodesktop"&gt;2. Run Neurodesktop&lt;/h3&gt;
-&lt;p&gt;Use one of the following options to run Neurodesktop:&lt;/p&gt;</description></item><item><title>Neurocontainer Copilot using OpenAI Codex agent</title><link>https://neurodesk.org/developers/neurocontainer-copilot/openai-codex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/neurocontainer-copilot/openai-codex/</guid><description>&lt;p&gt;While Neurodesk significantly reduces the friction associated with portability and reproducibility, incorporating new neuroimaging tools remains challenging. Incorporating new neuroimaging tools into Neurodesk is challenging due setting the correct environment variables, finding specific versions of the software dependencies, version requirements or specific build steps. However, writing accurate and efficient container recipes requires expertise in containerization technologies and knowledge of software dependencies. Neurocontainer Copilot can help identify these details from provided documentation (README or installation documentation) and code samples. The development involves the following steps: 1) We use existing Neurocontainer recipes to generate the recipes for new tools using LLM agents. 2) We use OpenAI Codex agent to automate the process of generating Neurocontainer recipes. 3) We use the generated recipes to create pull requests in the Neurocontainers repository, which can be reviewed and merged by the Neurocontainers team or user can use it to test the recipe locally.&lt;/p&gt;</description></item><item><title>Windows</title><link>https://neurodesk.org/getting-started/neurocommand/windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/windows/</guid><description>&lt;h2 id="wsl-w-ubuntu--lxde"&gt;WSL (w/ Ubuntu + LXDE)&lt;/h2&gt;
+&lt;p&gt;Use one of the following options to run Neurodesktop:&lt;/p&gt;</description></item><item><title>Neurocontainer Copilot using OpenAI Codex agent</title><link>https://neurodesk.org/developers/neurocontainer-copilot/openai-codex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/neurocontainer-copilot/openai-codex/</guid><description>&lt;p&gt;While Neurodesk significantly reduces the friction associated with portability and reproducibility, incorporating new neuroimaging tools remains challenging. Incorporating new neuroimaging tools into Neurodesk is challenging due setting the correct environment variables, finding specific versions of the software dependencies, version requirements or specific build steps. However, writing accurate and efficient container recipes requires expertise in containerization technologies and knowledge of software dependencies. Neurocontainer Copilot can help identify these details from provided documentation (README or installation documentation) and code samples. The development involves the following steps: 1) We use existing Neurocontainer recipes to generate the recipes for new tools using LLM agents. 2) We use OpenAI Codex agent to automate the process of generating Neurocontainer recipes. 3) We use the generated recipes to create pull requests in the Neurocontainers repository, which can be reviewed and merged by the Neurocontainers team or user can use it to test the recipe locally.&lt;/p&gt;</description></item><item><title>Troubleshooting</title><link>https://neurodesk.org/getting-started/app/troubleshooting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/app/troubleshooting/</guid><description>&lt;h2 id="docker-permission-denied"&gt;Docker permission denied&lt;/h2&gt;
+&lt;p&gt;If you see &lt;code&gt;/var/run/docker.sock: connect: permission denied&lt;/code&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Add your user to the &lt;code&gt;docker&lt;/code&gt; group&lt;/strong&gt; (creates the group first if it doesn&amp;rsquo;t exist):&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;getent group docker &amp;gt;/dev/null &lt;span style="color:#0550ae"&gt;||&lt;/span&gt; sudo groupadd docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo usermod -aG docker &lt;span style="color:#953800"&gt;$USER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;newgrp docker&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Set the socket permissions&lt;/strong&gt; so only &lt;code&gt;root&lt;/code&gt; and members of the &lt;code&gt;docker&lt;/code&gt; group can access it:&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo chown root:docker /var/run/docker.sock
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo chmod &lt;span style="color:#0550ae"&gt;660&lt;/span&gt; /var/run/docker.sock&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This sets the socket to &lt;code&gt;rw-rw----&lt;/code&gt;, removing access for all other users. You must be in the &lt;code&gt;docker&lt;/code&gt; group (step 1) for this to work.&lt;/p&gt;</description></item><item><title>Windows</title><link>https://neurodesk.org/getting-started/neurocommand/windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/neurocommand/windows/</guid><description>&lt;h2 id="wsl-w-ubuntu--lxde"&gt;WSL (w/ Ubuntu + LXDE)&lt;/h2&gt;
 &lt;p&gt;For more information on WSL: &lt;a href="https://docs.microsoft.com/en-us/windows/wsl" target="_blank" rel="noopener"&gt;https://docs.microsoft.com/en-us/windows/wsl&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="setting-up"&gt;Setting up&lt;/h3&gt;
 &lt;ol&gt;
@@ -754,7 +798,44 @@ The docker installation will reboot your computer a few times. There might be wa
 &lt;/div&gt;
 &lt;h2 id="using-neurodesk-on-sherlock-via-ssh"&gt;Using Neurodesk on Sherlock via ssh&lt;/h2&gt;
 &lt;h3 id="using-neurodesk-containers"&gt;Using Neurodesk containers&lt;/h3&gt;
-&lt;p&gt;Setup your ~/.ssh/config&lt;/p&gt;</description></item><item><title>Update tool in Neurodesk</title><link>https://neurodesk.org/developers/new_tools/update_tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/new_tools/update_tool/</guid><description>&lt;p&gt;Updating an existing container is quite easy with this new build system.&lt;/p&gt;
+&lt;p&gt;Setup your ~/.ssh/config&lt;/p&gt;</description></item><item><title>Uninstalling</title><link>https://neurodesk.org/getting-started/app/uninstall/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/app/uninstall/</guid><description>&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="macos" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ macOS
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="windows" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ Windows
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="linux" aria-controls="tabs-00-02" aria-selected="false"&gt;
+ Linux
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;p&gt;Find &lt;code&gt;NeurodeskApp.app&lt;/code&gt; in Finder (in &lt;code&gt;/Applications&lt;/code&gt; or &lt;code&gt;~/Applications&lt;/code&gt;) and move it to Trash (&lt;code&gt;CMD + Delete&lt;/code&gt;). Then remove application data:&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -rf ~/Library/neurodeskapp
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;rm -rf ~/Library/Application&lt;span style="color:#0a3069"&gt;\ &lt;/span&gt;Support/neurodeskapp&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;p&gt;Go to &lt;strong&gt;Start Menu &amp;gt; Settings &amp;gt; Apps&lt;/strong&gt; and uninstall Neurodesk App.&lt;/p&gt;
+&lt;p&gt;To remove application cache, delete &lt;code&gt;C:\Users\&amp;lt;username&amp;gt;\AppData\Roaming\neurodeskapp&lt;/code&gt;. The AppData directory is hidden &amp;ndash; enable hidden items in Windows Explorer under &lt;strong&gt;View &amp;gt; Show &amp;gt; Hidden Items&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Update tool in Neurodesk</title><link>https://neurodesk.org/developers/new_tools/update_tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/new_tools/update_tool/</guid><description>&lt;p&gt;Updating an existing container is quite easy with this new build system.&lt;/p&gt;
 &lt;p&gt;Here is a step-by-step on how to procede by modifying the .yaml file. It is also possible to edit the containers by using our newly released web browser UI : &lt;a href="https://neurodesk.org/neurocontainers-ui/" target="_blank" rel="noopener"&gt;https://neurodesk.org/neurocontainers-ui/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;There&amp;rsquo;s a &lt;a href="#detailled-version"&gt;detailled version&lt;/a&gt; below including screenshots and an example.&lt;/em&gt;
 &lt;br&gt;&lt;/br&gt;&lt;/p&gt;
