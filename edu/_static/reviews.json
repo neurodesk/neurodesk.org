@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-07-28T23:38:39+00:00",
+  "generated_at": "2026-08-01T04:27:32+00:00",
   "source": {
     "type": "github-issues",
     "repo": "neurodesk/neurodeskedu-reviews"
@@ -230,7 +230,7 @@
       "reviewed_at": "2026-04-09",
       "review_commit_sha": "676d67d70265dd6282205339ed349d550b53e548",
       "source_path": "examples/diffusion_imaging/MRtrix_1.ipynb",
-      "review_content_hash": "0592d56bbd441e8f1e61f43d6507d0a1641ecbdcb79f3c09239e8c31247e5f8c"
+      "review_content_hash": "29366b16995a616f04a2789c85869ce800d07640f27764504f0df83ca606db37"
     },
     "440f8450-0094-4e60-b3c9-23c197e8a85f": {
       "state": "reviewed",
@@ -241,7 +241,7 @@
       "reviewed_at": "2026-04-09",
       "review_commit_sha": "132aa2eacb02eff2078791e8e3dbd43a40d1d2b0",
       "source_path": "examples/functional_imaging/AFNI_preprocessing_only.ipynb",
-      "review_content_hash": "543300080dd5facb8dc42a5c66bac1e449bda2ac9819451e410c0a81baeaaee6"
+      "review_content_hash": "658e5d34a40187eeedf1d3d183faa1406ab65f61d11b82037c54ac1dfb27b36b"
     },
     "7b7d5b21-df7c-45ab-9b57-6692beb2190c": {
       "state": "reviewed",
@@ -318,7 +318,7 @@
       "reviewed_at": "2026-03-08",
       "review_commit_sha": "29a43836273f3e069fe9bdac2f1192f4818910fc",
       "source_path": "examples/workflows/ipyniivue_ipywidgets.ipynb",
-      "review_content_hash": "ba6e94651bd643210fa7b7c8757e4ea7cc8e38d19ba0ae2bae96491816821b3b"
+      "review_content_hash": "59dd7a31b883542ca35d449f39515c03a0beeeb97a4e5208239167ba76b774e9"
     },
     "521aa89c-987d-4a47-8e75-575e76ea4460": {
       "state": "reviewed",
@@ -373,7 +373,7 @@
       "reviewed_at": "2026-03-06",
       "review_commit_sha": "92d6523696db8b5b344e711fe6e199f5ec8c8cb4",
       "source_path": "examples/workflows/nipype_short.ipynb",
-      "review_content_hash": "9dbc9717dc3382d8ad7b9f1f0858441a71aa7747e1dd2878970d29e2ebc1be75"
+      "review_content_hash": "267911698280d37b9b2c80edc20716f83a6b361286d79b8d75b122a3f5f9e83e"
     },
     "3ae3595e-e83b-496c-a70d-a91c32f8a6d0": {
       "state": "reviewed",
@@ -406,7 +406,7 @@
       "reviewed_at": "2026-03-07",
       "review_commit_sha": "43ebdf3fdbd0045d2994e70605d2b04864c20c8d",
       "source_path": "examples/workflows/AA_Neurodesk_demo_tour.ipynb",
-      "review_content_hash": "0323514cb212eaed09b8f577c8343521bf2a2af41488677167aa46500399a8f1"
+      "review_content_hash": "e2affe6f0315a2f119b48255e3081cfe1a6496eefe04d4105b87a08e71d2cad1"
     },
     "61b2682e-754e-42f0-86f7-f84192adef0b": {
       "state": "reviewed",
@@ -428,7 +428,7 @@
       "reviewed_at": "2026-03-06",
       "review_commit_sha": "fd7705e44f378a44314212fa73c7956504978793",
       "source_path": "examples/diffusion_imaging/MRtrix_3.ipynb",
-      "review_content_hash": "5e8dbe489f31ee873893275c6014a0b3bed8b068d224b0d1c9e7d6adc531ab4a"
+      "review_content_hash": "aaf225739d1143589d2baec2847ae30de7ecfb904de1e215dcf8787d82e41342"
     },
     "0597490a-84c9-45e4-a3c8-fb49ec988172": {
       "state": "reviewed",
@@ -450,7 +450,7 @@
       "reviewed_at": "2026-03-06",
       "review_commit_sha": "62a503b00a5ee77872135733d944ec0b31991d46",
       "source_path": "examples/functional_imaging/FSL_preproc_glm.ipynb",
-      "review_content_hash": "fb5c51864d0252bee79e4c1a3687d6b0acc64b8281c51a9afc44925c8aa35ac9"
+      "review_content_hash": "b3a908f56daa45401b083d4454b7838e26ef511c1e25181c3a27ae93839b88a4"
     },
     "487f836b-a505-4f76-8ee3-84988c1d8965": {
       "state": "reviewed",
@@ -461,7 +461,7 @@
       "reviewed_at": "2026-03-05",
       "review_commit_sha": "c50b3f9b8078eda2654b986050d9fadfc20165ee",
       "source_path": "examples/structural_imaging/FSL_course_bet.ipynb",
-      "review_content_hash": "289a467d26f65a5e0f99e0e300ca79708a0863f10b2715c4ef639d0b36d64a4c"
+      "review_content_hash": "bb66b5972af1befc884e87f37e9869256071e76645981ab67fb60862d10149de"
     },
     "309d5842-9df4-47d5-a962-60fc90699c48": {
       "state": "reviewed",
@@ -494,7 +494,7 @@
       "reviewed_at": "2026-03-06",
       "review_commit_sha": "9063ec7f355f21069f10cfa498c87b7a28feee09",
       "source_path": "examples/structural_imaging/brain_extraction_different_tools.ipynb",
-      "review_content_hash": "9051bf11ff532e915dcb88f74a4a37eb61aad04bbd34126a9dfe084a1f7c2468"
+      "review_content_hash": "d3f9ca71f0657f58ecdc7b878489c2236317cc66ea30b7922d9f138aba95ea94"
     },
     "71fd5ecb-23f1-424c-9701-3beb2027db7d": {
       "state": "reviewed",
@@ -507,17 +507,6 @@
       "source_path": "examples/functional_imaging/AFNI_processing_task_based.ipynb",
       "review_content_hash": "034139e10a39570575f1d8f8f5792fd950500e156d6f59cc80700de5a2c4872f"
     },
-    "9dab0bae-455d-46a8-a15f-f3d449581ce9": {
-      "state": "reviewed",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/27",
-      "reviewers": [
-        "MoniDoerig"
-      ],
-      "reviewed_at": "2026-03-04",
-      "review_commit_sha": "00e7e122b7fe24109427a11e634ce4edb0146b93",
-      "source_path": "examples/structural_imaging/sct_toolbox.ipynb",
-      "review_content_hash": "7349120eb516b257e2f38503d56c7da48d73ecc5e665004e360e061201d348fa"
-    },
     "01b9bb47-e439-4b5e-8af8-73058cd6df87": {
       "state": "reviewed",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/44",
@@ -528,6 +517,17 @@
       "review_commit_sha": "62a503b00a5ee77872135733d944ec0b31991d46",
       "source_path": "examples/functional_imaging/fMRI_tutorial_in_R_magic.ipynb",
       "review_content_hash": "b7406a4f1d000a1fdd6a6048cf21827b9bb6c883c4731be1fdcc4941432e4f48"
+    },
+    "9dab0bae-455d-46a8-a15f-f3d449581ce9": {
+      "state": "reviewed",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/27",
+      "reviewers": [
+        "MoniDoerig"
+      ],
+      "reviewed_at": "2026-03-04",
+      "review_commit_sha": "00e7e122b7fe24109427a11e634ce4edb0146b93",
+      "source_path": "examples/structural_imaging/sct_toolbox.ipynb",
+      "review_content_hash": "7349120eb516b257e2f38503d56c7da48d73ecc5e665004e360e061201d348fa"
     },
     "85e6e128-5ac1-4a9e-9aef-de9b537e8b16": {
       "state": "reviewed",
@@ -571,7 +571,7 @@
       "reviewed_at": "2026-03-02",
       "review_commit_sha": "62a503b00a5ee77872135733d944ec0b31991d46",
       "source_path": "examples/diffusion_imaging/Diffusion_TBSS_Demo.ipynb",
-      "review_content_hash": "a21eecc9cbfa7cc554d41b542d5969a71588e6bbae87910cc857d04fbb3cf428"
+      "review_content_hash": "9343565dbec578f6f2aba704608ab2745e98eea1a56b183a8a9c20fa623a4f47"
     },
     "800d8b06-269e-4d0f-84a0-8c4b078db09c": {
       "state": "reviewed",
