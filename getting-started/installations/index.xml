@@ -106,7 +106,31 @@
 &lt;/div&gt;
 &lt;h2 id="using-neurodesk-on-sherlock-via-ssh"&gt;Using Neurodesk on Sherlock via ssh&lt;/h2&gt;
 &lt;h3 id="using-neurodesk-containers"&gt;Using Neurodesk containers&lt;/h3&gt;
-&lt;p&gt;Setup your ~/.ssh/config&lt;/p&gt;</description></item><item><title>Nectar Virtual Desktop Service</title><link>https://neurodesk.org/getting-started/installations/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/nectar/</guid><description>&lt;p&gt;&lt;div class="alert alert-info" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;Note&lt;/div&gt;
+&lt;p&gt;Setup your ~/.ssh/config&lt;/p&gt;</description></item><item><title>XNAT at the Lucas Centre Stanford</title><link>https://neurodesk.org/getting-started/installations/xnat-lucas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/xnat-lucas/</guid><description>&lt;p&gt;The Stanford Lucas Centre XNAT is available at &lt;a href="https://xnat-lucas.neurodesk.org/" target="_blank" rel="noopener"&gt;xnat-lucas.neurodesk.org&lt;/a&gt;. This guide explains how to transfer scanner data and additional files to XNAT, then start Neurodesk for interactive processing.&lt;/p&gt;
+&lt;div&gt;
+ &lt;nav id="TableOfContents"&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#before-you-transfer-data"&gt;Before you transfer data&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#transfer-dicom-images-from-a-scanner"&gt;Transfer DICOM images from a scanner&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#transfer-additional-files"&gt;Transfer additional files&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#download-data-from-xnat-or-transfer-it-to-oak"&gt;Download data from XNAT or transfer it to Oak&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#run-processing-with-xnat-container-service"&gt;Run processing with XNAT Container Service&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#run-a-container-on-a-session"&gt;Run a container on a session&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#run-a-container-on-a-series"&gt;Run a container on a series&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#start-neurodesk-for-interactive-processing"&gt;Start Neurodesk for interactive processing&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#upload-processed-data-back-to-xnat"&gt;Upload processed data back to XNAT&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#related-information"&gt;Related information&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;h2 id="before-you-transfer-data"&gt;Before you transfer data&lt;/h2&gt;
+&lt;p&gt;You will need:&lt;/p&gt;</description></item><item><title>Nectar Virtual Desktop Service</title><link>https://neurodesk.org/getting-started/installations/nectar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/getting-started/installations/nectar/</guid><description>&lt;p&gt;&lt;div class="alert alert-info" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;Note&lt;/div&gt;
 
 
 Link to Nectar Virtual Desktop Service: **https://desktop.rc.nectar.org.au**
