@@ -7,7 +7,7 @@
 &lt;li&gt;Open a &lt;a href="https://github.com/neurodesk/neurodesk.github.io/discussions" target="_blank" rel="noopener"&gt;discussion&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We appreciate your contribution to the Neurodesk community and reproducible science.&lt;/p&gt;</description></item><item><title>Update tool in Neurodesk</title><link>https://neurodesk.org/developers/new_tools/update_tool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.org/developers/new_tools/update_tool/</guid><description>&lt;p&gt;Updating an existing container is quite easy with this new build system.&lt;/p&gt;
-&lt;p&gt;Here is a step-by-step on how to procede by modifying the .yaml file. It is also possible to edit the containers by using our newly released web browser UI : &lt;a href="https://neurodesk.org/neurocontainers-ui/" target="_blank" rel="noopener"&gt;https://neurodesk.org/neurocontainers-ui/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here is a step-by-step on how to procede by modifying the .yaml file. It is also possible to edit the containers by using our web browser UI: &lt;a href="https://neurodesk.org/neurocontainers-ui/" target="_blank" rel="noopener"&gt;https://neurodesk.org/neurocontainers-ui/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;There&amp;rsquo;s a &lt;a href="#detailled-version"&gt;detailled version&lt;/a&gt; below including screenshots and an example.&lt;/em&gt;
 &lt;br&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -15,7 +15,7 @@
 &lt;ol&gt;
 &lt;li&gt;Access the &lt;a href="https://github.com/neurodesk/neurocontainers" target="_blank" rel="noopener"&gt;Neurodesk Containers repository&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fork the repository&lt;/li&gt;
-&lt;li&gt;Using your preferred development environment (such as VS Code locally or GitHub Codespaces), make changes to the desired container.&lt;/li&gt;
+&lt;li&gt;Set up Neurocontainers in your preferred development environment, such as VS Code locally or GitHub Codespaces, then make changes to the desired container.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div style="margin-left: 2em;"&gt;
 &lt;p&gt;Each tool has its own folder inside the &lt;code&gt;recipes/&lt;/code&gt; directory, and inside that folder, you will find the corresponding &lt;code&gt;build.yaml&lt;/code&gt; file.&lt;/p&gt;</description></item></channel></rss>
