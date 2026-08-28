@@ -720,14 +720,15 @@
 </section>
 <section id="dipy-command-line-workflows-for-advanced-processing">
 <h2>DIPY command-line workflows for advanced processing<a class="headerlink" href="#dipy-command-line-workflows-for-advanced-processing" title="Link to this heading">#</a></h2>
-<p>DIPY 1.12.1 also provides command-line entry points for advanced reconstruction and tractogram processing. These commands complement the Python workflows in this notebook.</p>
+<p>This notebook installs DIPY 1.12.1. DIPY 1.12 introduced command-line entry points for advanced reconstruction and tractogram processing. See the <a class="reference external" href="https://docs.dipy.org/stable/interfaces/index.html">DIPY Workflows Interfaces</a> for the complete workflow catalog.</p>
+<p>Use these CLIs to run advanced reconstruction and tractogram processing from a shell or batch job.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_fit_msmtcsd.html"><code class="docutils literal notranslate"><span class="pre">dipy_fit_msmtcsd</span></code></a> fits multi-shell multi-tissue constrained spherical deconvolution by default.</p></li>
+<li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_fit_msmtcsd.html"><code class="docutils literal notranslate"><span class="pre">dipy_fit_msmtcsd</span></code></a> fits standard single-shell single-tissue CSD by default. Pass <code class="docutils literal notranslate"><span class="pre">--use_msmt</span></code> to fit multi-shell multi-tissue CSD.</p></li>
 <li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_fit_force.html"><code class="docutils literal notranslate"><span class="pre">dipy_fit_force</span></code></a> runs FORCE (FORward modeling for Complex microstructure Estimation) reconstruction and writes the requested tissue and microstructure metrics.</p></li>
 <li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_cluster_streamlines.html"><code class="docutils literal notranslate"><span class="pre">dipy_cluster_streamlines</span></code></a> clusters one or more tractograms with QuickBundles, QuickBundlesX plus merging, or FastStreamlineSearch.</p></li>
 </ul>
 <p>Replace the placeholder paths in these command templates with files from your dataset:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dipy_fit_msmtcsd<span class="w"> </span>dwi.nii.gz<span class="w"> </span>dwi.bval<span class="w"> </span>dwi.bvec<span class="w"> </span>mask.nii.gz<span class="w"> </span>--out_dir<span class="w"> </span>outputs/msmtcsd
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dipy_fit_msmtcsd<span class="w"> </span>dwi.nii.gz<span class="w"> </span>dwi.bval<span class="w"> </span>dwi.bvec<span class="w"> </span>mask.nii.gz<span class="w"> </span>--use_msmt<span class="w"> </span>--out_dir<span class="w"> </span>outputs/msmtcsd
 dipy_fit_force<span class="w"> </span>dwi.nii.gz<span class="w"> </span>dwi.bval<span class="w"> </span>dwi.bvec<span class="w"> </span>mask.nii.gz<span class="w"> </span>--out_dir<span class="w"> </span>outputs/force
 dipy_cluster_streamlines<span class="w"> </span>tractogram.trk<span class="w"> </span>--method<span class="w"> </span>qbx_and_merge<span class="w"> </span>--out_dir<span class="w"> </span>outputs/clusters
 </pre></div>
@@ -930,23 +931,23 @@ dipy_cluster_streamlines --help: available
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-28 01:13:01][dipy] INFO: Downloading "HARDI150.bval" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:01][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvals
-[2026-08-28 01:13:02][dipy] INFO: Downloading "HARDI150.bvec" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:02][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvecs
-[2026-08-28 01:13:02][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:02][dipy] INFO: Downloading "aparc-reduced.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:02][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/aparc-reduced.nii.gz
-[2026-08-28 01:13:03][dipy] INFO: Downloading "label_info.txt" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:03][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/label_info.txt
-[2026-08-28 01:13:04][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:04][dipy] INFO: Downloading "pve_csf.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:04][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_csf.nii.gz
-[2026-08-28 01:13:04][dipy] INFO: Downloading "pve_gm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:04][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_gm.nii.gz
-[2026-08-28 01:13:05][dipy] INFO: Downloading "pve_wm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:13:05][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_wm.nii.gz
-[2026-08-28 01:13:06][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-28 18:16:21][dipy] INFO: Downloading "HARDI150.bval" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:21][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvals
+[2026-08-28 18:16:21][dipy] INFO: Downloading "HARDI150.bvec" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:21][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvecs
+[2026-08-28 18:16:22][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:22][dipy] INFO: Downloading "aparc-reduced.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:22][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/aparc-reduced.nii.gz
+[2026-08-28 18:16:23][dipy] INFO: Downloading "label_info.txt" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:23][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/label_info.txt
+[2026-08-28 18:16:23][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:23][dipy] INFO: Downloading "pve_csf.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:23][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_csf.nii.gz
+[2026-08-28 18:16:24][dipy] INFO: Downloading "pve_gm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:24][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_gm.nii.gz
+[2026-08-28 18:16:25][dipy] INFO: Downloading "pve_wm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:16:25][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_wm.nii.gz
+[2026-08-28 18:16:25][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
 </pre></div>
 </div>
 </div>
@@ -1109,7 +1110,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
   orient = np.abs(np.divide(v, r, where=r != 0))
 </pre></div>
 </div>
-<img alt="../../_images/6b4036db58a0c21f416fb25bb49b91f6543548b10de10f57922c0413619599f3.png" src="../../_images/6b4036db58a0c21f416fb25bb49b91f6543548b10de10f57922c0413619599f3.png">
+<img alt="../../_images/773fbbee059098140693a35bfd1c109d9e6c315d888048b3fcbabc067368a0ee.png" src="../../_images/773fbbee059098140693a35bfd1c109d9e6c315d888048b3fcbabc067368a0ee.png">
 </div>
 </div>
 </section>
@@ -1139,7 +1140,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2619767f6472c8ae430694604bcbf4075fe87a6ddc402f001081a8263dbd5f51.png" src="../../_images/2619767f6472c8ae430694604bcbf4075fe87a6ddc402f001081a8263dbd5f51.png">
+<img alt="../../_images/8578c2f8b2d1cd06321f32b6d1f2e20239fd4b0630e289c7d8d7be247c8e5528.png" src="../../_images/8578c2f8b2d1cd06321f32b6d1f2e20239fd4b0630e289c7d8d7be247c8e5528.png">
 </div>
 </div>
 <blockquote>
@@ -1193,7 +1194,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d41aca215f595417013cd1c8f470c7635ef5094c645eea1e3092c7f25bd26880.png" src="../../_images/d41aca215f595417013cd1c8f470c7635ef5094c645eea1e3092c7f25bd26880.png">
+<img alt="../../_images/12b29b71ce3bc55275f35a1f54ed59714504cfc7750991581042f09efc8152e3.png" src="../../_images/12b29b71ce3bc55275f35a1f54ed59714504cfc7750991581042f09efc8152e3.png">
 </div>
 </div>
 <div class="cell docutils container">
@@ -1205,8 +1206,8 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2806
-Deterministic ACT streamlines: 1150
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2825
+Deterministic ACT streamlines: 1200
 PTT streamlines: 3155
 </pre></div>
 </div>
@@ -1236,7 +1237,7 @@ PTT streamlines: 3155
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-08-28T01:14:17.887631+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-08-28T18:17:38.817796+00:00
 
 Python implementation: CPython
 Python version       : 3.13.14

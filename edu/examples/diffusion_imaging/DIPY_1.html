@@ -700,12 +700,13 @@
 <section id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
 <p><a class="reference internal" href="#Introduction"><span class="xref myst">Introduction</span></a><br>
+<a class="reference internal" href="#Install-and-import-Python-libraries"><span class="xref myst">Install and import Python libraries</span></a><br>
+<a class="reference internal" href="#DIPY-command-line-workflows"><span class="xref myst">DIPY command-line workflows</span></a><br>
 <a class="reference internal" href="#Data-Preparation"><span class="xref myst">Data Preparation</span></a><br>
 <a class="reference internal" href="#Step-1:-Diffusion-model"><span class="xref myst">Step 1: Diffusion model</span></a><br>
 <a class="reference internal" href="#Step-2:-Stopping-criterion"><span class="xref myst">Step 2: Stopping criterion</span></a><br>
 <a class="reference internal" href="#Step-3:-Seeding"><span class="xref myst">Step 3: Seeding</span></a><br>
-<a class="reference internal" href="#Step-4:-Local-Tracking:-Probabilistic-and-Deterministic-Approaches"><span class="xref myst">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</span></a><br>
-<a class="reference internal" href="#DIPY-command-line-workflows"><span class="xref myst">DIPY command-line workflows</span></a></p>
+<a class="reference internal" href="#Step-4:-Local-Tracking:-Probabilistic-and-Deterministic-Approaches"><span class="xref myst">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</span></a></p>
 </section>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
@@ -745,7 +746,8 @@
 </section>
 <section id="dipy-command-line-workflows">
 <h2>DIPY command-line workflows<a class="headerlink" href="#dipy-command-line-workflows" title="Link to this heading">#</a></h2>
-<p>DIPY 1.12.1 provides command-line entry points for several preprocessing and reconstruction tasks. The Python examples in this notebook show how the individual steps work; the CLIs are useful when the same workflows need to run in shell scripts or batch jobs.</p>
+<p>This notebook installs DIPY 1.12.1. DIPY 1.12 introduced command-line entry points for several preprocessing and reconstruction tasks. See the <a class="reference external" href="https://docs.dipy.org/stable/interfaces/index.html">DIPY Workflows Interfaces</a> for the complete workflow catalog.</p>
+<p>The Python examples in this notebook show how the individual steps work. The CLIs run the same workflows from shell scripts or batch jobs.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_brain_mask.html"><code class="docutils literal notranslate"><span class="pre">dipy_brain_mask</span></code></a> creates a brain mask with median Otsu, EVAC+, or SynthSeg. Median Otsu is the method that most closely matches this notebook’s DWI preprocessing.</p></li>
 <li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_fit_fwdti.html"><code class="docutils literal notranslate"><span class="pre">dipy_fit_fwdti</span></code></a> fits the free-water elimination DTI model and writes its scalar maps. Use suitable multi-shell diffusion data for this model.</p></li>
@@ -958,12 +960,12 @@ dipy_fit_powermap --help: available
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-28 01:20:47][dipy] INFO: Downloading "HARDI150.bval" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:47][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvals
-[2026-08-28 01:20:47][dipy] INFO: Downloading "HARDI150.bvec" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:47][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvecs
-[2026-08-28 01:20:48][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:48][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-28 18:08:50][dipy] INFO: Downloading "HARDI150.bval" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:50][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvals
+[2026-08-28 18:08:50][dipy] INFO: Downloading "HARDI150.bvec" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:50][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvecs
+[2026-08-28 18:08:51][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:51][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
 Data shape: (81, 106, 76, 160)
 b-values (unique): [   0. 2000.] …
 </pre></div>
@@ -988,16 +990,16 @@ b-values (unique): [   0. 2000.] …
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-28 01:20:49][dipy] INFO: Downloading "aparc-reduced.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:49][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/aparc-reduced.nii.gz
-[2026-08-28 01:20:50][dipy] INFO: Downloading "label_info.txt" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:50][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/label_info.txt
-[2026-08-28 01:20:50][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:50][dipy] INFO: Downloading "t1.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:50][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/t1.nii.gz
-[2026-08-28 01:20:52][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:52][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
-[2026-08-28 01:20:52][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-28 18:08:52][dipy] INFO: Downloading "aparc-reduced.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:52][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/aparc-reduced.nii.gz
+[2026-08-28 18:08:53][dipy] INFO: Downloading "label_info.txt" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:53][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/label_info.txt
+[2026-08-28 18:08:53][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:53][dipy] INFO: Downloading "t1.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:53][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/t1.nii.gz
+[2026-08-28 18:08:55][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:55][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 18:08:55][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
 </pre></div>
 </div>
 </div>
@@ -1038,7 +1040,7 @@ b-values (unique): [   0. 2000.] …
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x79dd9ade16d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7d3b05565810&gt;
 </pre></div>
 </div>
 <img alt="../../_images/f21a778aa44d5726b8e5eecf76a907139f945becd264526ee51a5b1c775f445b.png" src="../../_images/f21a778aa44d5726b8e5eecf76a907139f945becd264526ee51a5b1c775f445b.png">
@@ -1508,7 +1510,7 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x79dcb2d5ed50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7d3a48066e90&gt;
 </pre></div>
 </div>
 <img alt="../../_images/d5069f4c1d8cedbb9a68cfb8bc3f0194bed6bd26fcd04b8bdd7ebc6a78723369.png" src="../../_images/d5069f4c1d8cedbb9a68cfb8bc3f0194bed6bd26fcd04b8bdd7ebc6a78723369.png">
@@ -1545,7 +1547,7 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x79dcb2d8e490&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7d3a480925d0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/f51940a155f362d0b03296490e1eb38197c100ac26c1d003440492aa6316c834.png" src="../../_images/f51940a155f362d0b03296490e1eb38197c100ac26c1d003440492aa6316c834.png">
@@ -1654,7 +1656,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ce568d0790e4064bde74c9a375597bcddae551091c2920d63c6d4391cda961e4.png" src="../../_images/ce568d0790e4064bde74c9a375597bcddae551091c2920d63c6d4391cda961e4.png">
+<img alt="../../_images/b113da24117af4800685358fb63b90af37b5ffdf828dc788e43674f43396d974.png" src="../../_images/b113da24117af4800685358fb63b90af37b5ffdf828dc788e43674f43396d974.png">
 </div>
 </div>
 </section>
@@ -1783,10 +1785,10 @@ Streamline length is a basic metric that provides insight into the spatial exten
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Streamline Statistics:
 Deterministic  — n=  587, mean= 50.3 mm, median= 50.5 mm, std= 23.1 mm
-Probabilistic  — n=  587, mean= 50.4 mm, median= 52.0 mm, std= 23.2 mm
+Probabilistic  — n=  587, mean= 50.9 mm, median= 52.0 mm, std= 24.3 mm
 </pre></div>
 </div>
-<img alt="../../_images/ff6de8f13015ff690928469bf451d74d5cb41b147d62ec40ea114e4ce73140f3.png" src="../../_images/ff6de8f13015ff690928469bf451d74d5cb41b147d62ec40ea114e4ce73140f3.png">
+<img alt="../../_images/edee74fc07fb8a3b735493b58d0285e5bbbe9abdc6d333ccb1d104e2e7dc0fce.png" src="../../_images/edee74fc07fb8a3b735493b58d0285e5bbbe9abdc6d333ccb1d104e2e7dc0fce.png">
 </div>
 </div>
 </section>
@@ -1815,7 +1817,7 @@ Probabilistic  — n=  587, mean= 50.4 mm, median= 52.0 mm, std= 23.2 mm
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-08-28T01:22:55.293388+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-08-28T18:10:54.453740+00:00
 
 Python implementation: CPython
 Python version       : 3.13.14
