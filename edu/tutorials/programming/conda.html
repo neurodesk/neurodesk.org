@@ -551,9 +551,9 @@
 </ol>
 <p><img alt="1_terminal" src="../../_images/1_terminal.png"></p>
 <p>For <em>Python</em>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span>ipykernel
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span><span class="nb">test</span><span class="w"> </span>ipykernel<span class="w"> </span>pip
 <span class="c1">#OR</span>
-conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span>ipykernel
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span><span class="nb">test</span><span class="w"> </span>ipykernel<span class="w"> </span>pip
 </pre></div>
 </div>
 <p>or for <em>R</em>:</p>
@@ -562,8 +562,9 @@ conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </
 conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>r_env<span class="w"> </span>r-irkernel
 </pre></div>
 </div>
-<p><strong>Important:</strong> For Python environments, you have to set the ipykernel explicitly or a Python version (like “conda create -n myenv python=3.8”), since a kernel is required. Alternatively, in case it was forgotten, you can add a kernel with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>ipykernel
+<p><strong>Important:</strong> Include both <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code> and <code class="docutils literal notranslate"><span class="pre">pip</span></code> when you create a Python environment. JupyterLab uses <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code> to run notebooks, and <code class="docutils literal notranslate"><span class="pre">pip</span></code> installs Python modules in the environment. If you omitted either package, activate the environment and install both packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span><span class="nb">test</span>
+conda<span class="w"> </span>install<span class="w"> </span>ipykernel<span class="w"> </span>pip
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
@@ -575,20 +576,31 @@ conda<span class="w"> </span>env<span class="w"> </span>list
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>To activate your conda environment and install the required packages from a provided txt file, run:
-For <em>Python</em>:</p></li>
+<li><p>Activate the environment:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<p>For <em>Python</em>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span><span class="nb">test</span>
 </pre></div>
 </div>
-<p>or for <em>R</em>:</p>
+<p>To load Neurodesk software modules from a notebook, install <code class="docutils literal notranslate"><span class="pre">jupyterlmod</span></code> in the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlmod
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">jupyterlmod</span></code> provides the Python package used by <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">module</span></code>. A user-created conda environment does not inherit this package from the base environment. You do not need to install <code class="docutils literal notranslate"><span class="pre">jupyterlmod</span></code> to use <code class="docutils literal notranslate"><span class="pre">module</span></code> or <code class="docutils literal notranslate"><span class="pre">ml</span></code> in a terminal.</p>
+<p>Install a Python module with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span></code>. For example, install NumPy:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>numpy
+</pre></div>
+</div>
+<p>To install the modules listed in a requirements file, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<p>For <em>R</em>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>r_env
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>Given the available environment, when you open a new Launcher tab, there will be a new Notebook option for launching a Jupyter Notebook with that environment active.</p></li>
+<li><p>Open a new Launcher tab. The new environment can take a short time to appear on the JupyterLab start page after the installation finishes. When it appears, select the new Notebook option to start a Jupyter Notebook in that environment.</p></li>
 </ol>
 <p><img alt="2_env" src="../../_images/2_env.png"></p>
 <p>Switching the environment on a Jupyter Notebook is also possible on the top right corner dropdown menu.</p>

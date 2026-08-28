@@ -40,9 +40,9 @@ The default conda environment is not persistent across sessions, so this means a
 
 For *Python*:
 ```bash
-mamba create -n myenv ipykernel
+mamba create -n test ipykernel pip
 #OR
-conda create -n myenv ipykernel
+conda create -n test ipykernel pip
 ```
 or for *R*:
 ```bash
@@ -51,10 +51,11 @@ mamba create -n r_env r-irkernel
 conda create -n r_env r-irkernel
 ```
 
-**Important:** For Python environments, you have to set the ipykernel explicitly or a Python version (like "conda create -n myenv python=3.8"), since a kernel is required. Alternatively, in case it was forgotten, you can add a kernel with:
+**Important:** Include both `ipykernel` and `pip` when you create a Python environment. JupyterLab uses `ipykernel` to run notebooks, and `pip` installs Python modules in the environment. If you omitted either package, activate the environment and install both packages:
 
 ```bash
-conda install ipykernel
+conda activate test
+conda install ipykernel pip
 ```
 
 2. To check the list of environments you have created, run the following:
@@ -65,20 +66,40 @@ mamba env list
 conda env list
 ```
 
-3. To activate your conda environment and install the required packages from a provided txt file, run:
+3. Activate the environment:
+
 For *Python*:
 ```bash
-conda activate myenv
-pip install -r requirements.txt
+conda activate test
 ```
-or for *R*:
+
+To load Neurodesk software modules from a notebook, install `jupyterlmod` in the environment:
+
+```bash
+python -m pip install jupyterlmod
+```
+
+`jupyterlmod` provides the Python package used by `import module`. A user-created conda environment does not inherit this package from the base environment. You do not need to install `jupyterlmod` to use `module` or `ml` in a terminal.
+
+Install a Python module with `python -m pip`. For example, install NumPy:
+
+```bash
+python -m pip install numpy
+```
+
+To install the modules listed in a requirements file, run:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+For *R*:
+
 ```bash
 conda activate r_env
-pip install -r requirements.txt
 ```
 
-
-4. Given the available environment, when you open a new Launcher tab, there will be a new Notebook option for launching a Jupyter Notebook with that environment active. 
+4. Open a new Launcher tab. The new environment can take a short time to appear on the JupyterLab start page after the installation finishes. When it appears, select the new Notebook option to start a Jupyter Notebook in that environment.
 
 ![2_env](/static/tutorials/programming/conda/2_env.png '2_env')
 

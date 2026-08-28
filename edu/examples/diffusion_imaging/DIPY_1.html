@@ -619,6 +619,7 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-python-libraries">Install and import Python libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dipy-command-line-workflows">DIPY command-line workflows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data Preparation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-stanford-hardi-dataset-provided-by-dipy">Load Stanford HARDI dataset provided by DIPY</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-preprocessing">Minimal preprocessing</a></li>
@@ -702,7 +703,8 @@
 <a class="reference internal" href="#Step-1:-Diffusion-model"><span class="xref myst">Step 1: Diffusion model</span></a><br>
 <a class="reference internal" href="#Step-2:-Stopping-criterion"><span class="xref myst">Step 2: Stopping criterion</span></a><br>
 <a class="reference internal" href="#Step-3:-Seeding"><span class="xref myst">Step 3: Seeding</span></a><br>
-<a class="reference internal" href="#Step-4:-Local-Tracking:-Probabilistic-and-Deterministic-Approaches"><span class="xref myst">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</span></a></p>
+<a class="reference internal" href="#Step-4:-Local-Tracking:-Probabilistic-and-Deterministic-Approaches"><span class="xref myst">Step 4: Local Tracking: Probabilistic and Deterministic Approaches</span></a><br>
+<a class="reference internal" href="#DIPY-command-line-workflows"><span class="xref myst">DIPY command-line workflows</span></a></p>
 </section>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
@@ -734,7 +736,66 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span> 
-<span class="err">!</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">fury</span><span class="o">==</span><span class="mf">0.11.0</span> <span class="n">dipy</span><span class="o">==</span><span class="mf">1.11.0</span> <span class="n">vtk</span><span class="o">==</span><span class="mf">9.5.2</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="n">fury</span><span class="o">==</span><span class="mf">0.11.0</span> <span class="n">dipy</span><span class="o">==</span><span class="mf">1.12.1</span> <span class="n">vtk</span><span class="o">==</span><span class="mf">9.5.2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dipy-command-line-workflows">
+<h2>DIPY command-line workflows<a class="headerlink" href="#dipy-command-line-workflows" title="Link to this heading">#</a></h2>
+<p>DIPY 1.12.1 provides command-line entry points for several preprocessing and reconstruction tasks. The Python examples in this notebook show how the individual steps work; the CLIs are useful when the same workflows need to run in shell scripts or batch jobs.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_brain_mask.html"><code class="docutils literal notranslate"><span class="pre">dipy_brain_mask</span></code></a> creates a brain mask with median Otsu, EVAC+, or SynthSeg. Median Otsu is the method that most closely matches this notebook’s DWI preprocessing.</p></li>
+<li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_fit_fwdti.html"><code class="docutils literal notranslate"><span class="pre">dipy_fit_fwdti</span></code></a> fits the free-water elimination DTI model and writes its scalar maps. Use suitable multi-shell diffusion data for this model.</p></li>
+<li><p><a class="reference external" href="https://docs.dipy.org/stable/reference_cmd/dipy_fit_powermap.html"><code class="docutils literal notranslate"><span class="pre">dipy_fit_powermap</span></code></a> creates an anisotropic powermap, which can serve as a pseudo-T1 image when an anatomical scan is unavailable.</p></li>
+</ul>
+<p>Replace the placeholder paths in these command templates with files from your dataset:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dipy_brain_mask<span class="w"> </span>dwi.nii.gz<span class="w"> </span>--method<span class="w"> </span>median_otsu<span class="w"> </span>--bvalues_files<span class="w"> </span>dwi.bval<span class="w"> </span>--out_dir<span class="w"> </span>outputs/mask
+dipy_fit_fwdti<span class="w"> </span>dwi.nii.gz<span class="w"> </span>dwi.bval<span class="w"> </span>dwi.bvec<span class="w"> </span>mask.nii.gz<span class="w"> </span>--out_dir<span class="w"> </span>outputs/fwdti
+dipy_fit_powermap<span class="w"> </span>dwi.nii.gz<span class="w"> </span>dwi.bval<span class="w"> </span>dwi.bvec<span class="w"> </span>mask.nii.gz<span class="w"> </span>--out_dir<span class="w"> </span>outputs/powermap
+</pre></div>
+</div>
+<p>The next cell runs <code class="docutils literal notranslate"><span class="pre">--help</span></code> for each command. This checks the installed entry points without starting a full reconstruction.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">importlib.metadata</span><span class="w"> </span><span class="kn">import</span> <span class="n">version</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sysconfig</span>
+
+<span class="n">expected_dipy_version</span> <span class="o">=</span> <span class="s2">"1.12.1"</span>
+<span class="n">installed_dipy_version</span> <span class="o">=</span> <span class="n">version</span><span class="p">(</span><span class="s2">"dipy"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">installed_dipy_version</span> <span class="o">!=</span> <span class="n">expected_dipy_version</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"Expected DIPY </span><span class="si">{</span><span class="n">expected_dipy_version</span><span class="si">}</span><span class="s2">, found </span><span class="si">{</span><span class="n">installed_dipy_version</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">)</span>
+
+<span class="n">scripts_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">sysconfig</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s2">"scripts"</span><span class="p">))</span>
+<span class="n">dipy_cli_commands</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"dipy_brain_mask"</span><span class="p">,</span>
+    <span class="s2">"dipy_fit_fwdti"</span><span class="p">,</span>
+    <span class="s2">"dipy_fit_powermap"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">command</span> <span class="ow">in</span> <span class="n">dipy_cli_commands</span><span class="p">:</span>
+    <span class="n">executable</span> <span class="o">=</span> <span class="n">scripts_dir</span> <span class="o">/</span> <span class="n">command</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">executable</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> is not installed in </span><span class="si">{</span><span class="n">scripts_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">executable</span><span class="p">,</span> <span class="s2">"--help"</span><span class="p">],</span>
+        <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">DEVNULL</span><span class="p">,</span>
+        <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">DEVNULL</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">command</span><span class="si">}</span><span class="s2"> --help: available"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dipy_brain_mask --help: available
+dipy_fit_fwdti --help: available
+dipy_fit_powermap --help: available
 </pre></div>
 </div>
 </div>
@@ -745,7 +806,6 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">nibabel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nib</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="c1"># DIPY uses np.divide(..., where=...) without out= in geometry.py; the unwritten</span>
 <span class="c1"># positions are masked downstream, so the warning is harmless. We're silencing this one.</span>
@@ -789,46 +849,102 @@
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">gtab</span></code></strong> (gradient table): encodes the acquisition scheme — specifically the <strong>b-values</strong> and <strong>gradient directions</strong> for each volume. <strong>B-values</strong> control the strength of diffusion weighting: b=0 means no diffusion weighting (a baseline image), while higher values (e.g., 2000 s/mm²) make the signal sensitive to water diffusion along the corresponding gradient direction.</p></li>
 </ul>
 <p>We also define an <strong>affine</strong> matrix — a 4×4 transformation that maps between voxel indices and world (scanner) coordinates. Here we use an identity matrix so that tractography operates directly in voxel space.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">outputs</p>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fetch_with_retry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">tries</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Fetch a DIPY dataset, tolerant of the Stanford host's transient failures.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
 
-<span class="sd">    The host occasionally refuses connections or returns a truncated/garbage</span>
-<span class="sd">    file (caught by DIPY's md5 check). A wrong-md5 file is left on disk, so we</span>
-<span class="sd">    delete it before retrying — otherwise every retry re-checks the same corrupt</span>
-<span class="sd">    cache entry and fails again.</span>
-<span class="sd">    """</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tries</span><span class="p">):</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_file_md5</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"rb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">downloaded_file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">downloaded_file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">),</span> <span class="sa">b</span><span class="s2">""</span><span class="p">):</span>
+            <span class="n">digest</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">digest</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">download_with_resume</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">expected_md5</span><span class="p">,</span> <span class="n">expected_size</span><span class="p">,</span> <span class="n">tries</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Download a checksum-pinned file and retain partial data between attempts."""</span>
+    <span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
+    <span class="n">destination</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">destination</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">destination</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="o">==</span> <span class="n">expected_size</span> <span class="ow">and</span> <span class="n">_file_md5</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_md5</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">destination</span>
+        <span class="k">if</span> <span class="n">destination</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="o">&gt;=</span> <span class="n">expected_size</span><span class="p">:</span>
+            <span class="n">destination</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+
+    <span class="n">last_error</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">tries</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="n">destination</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="k">if</span> <span class="n">destination</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Range"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"bytes=</span><span class="si">{</span><span class="n">offset</span><span class="si">}</span><span class="s2">-"</span><span class="p">}</span> <span class="k">if</span> <span class="n">offset</span> <span class="k">else</span> <span class="p">{}</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+                <span class="n">mode</span> <span class="o">=</span> <span class="s2">"wb"</span>
+                <span class="k">if</span> <span class="n">offset</span> <span class="ow">and</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">206</span><span class="p">:</span>
+                    <span class="n">content_range</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"Content-Range"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">content_range</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">f</span><span class="s2">"bytes </span><span class="si">{</span><span class="n">offset</span><span class="si">}</span><span class="s2">-"</span><span class="p">):</span>
+                        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Unexpected range response: </span><span class="si">{</span><span class="n">content_range</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+                    <span class="n">mode</span> <span class="o">=</span> <span class="s2">"ab"</span>
+                <span class="k">with</span> <span class="n">destination</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span> <span class="k">as</span> <span class="n">output_file</span><span class="p">:</span>
+                    <span class="n">shutil</span><span class="o">.</span><span class="n">copyfileobj</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">output_file</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="n">last_error</span> <span class="o">=</span> <span class="n">error</span>
+
+        <span class="n">downloaded_size</span> <span class="o">=</span> <span class="n">destination</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_size</span> <span class="k">if</span> <span class="n">destination</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">downloaded_size</span> <span class="o">==</span> <span class="n">expected_size</span> <span class="ow">and</span> <span class="n">_file_md5</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected_md5</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">destination</span>
+        <span class="k">if</span> <span class="n">downloaded_size</span> <span class="o">&gt;=</span> <span class="n">expected_size</span><span class="p">:</span>
+            <span class="n">destination</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+            <span class="n">downloaded_size</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">attempt</span> <span class="o">&lt;</span> <span class="n">tries</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Download incomplete (</span><span class="si">{</span><span class="n">downloaded_size</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">expected_size</span><span class="si">}</span><span class="s2"> bytes); resuming"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span> <span class="o">*</span> <span class="n">attempt</span><span class="p">)</span>
+
+    <span class="n">actual_md5</span> <span class="o">=</span> <span class="n">_file_md5</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span> <span class="k">if</span> <span class="n">destination</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="s2">"missing"</span>
+    <span class="n">detail</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">" Last error: </span><span class="si">{</span><span class="n">last_error</span><span class="si">}</span><span class="s2">"</span> <span class="k">if</span> <span class="n">last_error</span> <span class="k">else</span> <span class="s2">""</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Expected MD5 </span><span class="si">{</span><span class="n">expected_md5</span><span class="si">}</span><span class="s2">, got </span><span class="si">{</span><span class="n">actual_md5</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">detail</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch_with_retry</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">tries</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">"stanford_hardi"</span><span class="p">:</span>
+        <span class="n">dipy_home</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"DIPY_HOME"</span><span class="p">,</span> <span class="s2">"~/.dipy"</span><span class="p">))</span><span class="o">.</span><span class="n">expanduser</span><span class="p">()</span>
+        <span class="n">download_with_resume</span><span class="p">(</span>
+            <span class="s2">"https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.nii.gz"</span><span class="p">,</span>
+            <span class="n">dipy_home</span> <span class="o">/</span> <span class="s2">"stanford_hardi/HARDI150.nii.gz"</span><span class="p">,</span>
+            <span class="s2">"0b18513b46132b4d1051ed3364f2acbc"</span><span class="p">,</span>
+            <span class="mi">91_378_947</span><span class="p">,</span>
+            <span class="n">tries</span><span class="o">=</span><span class="n">tries</span><span class="p">,</span>
+            <span class="n">delay</span><span class="o">=</span><span class="n">delay</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">tries</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">get_fnames</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="c1"># If the error names a bad cached file, remove it so the next</span>
-            <span class="c1"># attempt re-downloads cleanly.</span>
-            <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"(/\S+?\.(?:nii\.gz|bval|bvec|txt))"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
-            <span class="k">if</span> <span class="n">m</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)):</span>
-                <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">tries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">attempt</span> <span class="o">==</span> <span class="n">tries</span><span class="p">:</span>
                 <span class="k">raise</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"fetch </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> failed (</span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">); retry </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">tries</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-
-<span class="c1"># Fetch (with retry)</span>
-<span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_hardi"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"fetch </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> failed (</span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">); retry </span><span class="si">{</span><span class="n">attempt</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">tries</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span> <span class="o">*</span> <span class="n">attempt</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>('/home/jovyan/.dipy/stanford_hardi/HARDI150.nii.gz',
- '/home/jovyan/.dipy/stanford_hardi/HARDI150.bval',
- '/home/jovyan/.dipy/stanford_hardi/HARDI150.bvec')
-</pre></div>
-</div>
-</div>
+</details>
 </div>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load example diffusion data (cached by the fetch-with-retry cell above)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch and load the example diffusion data</span>
+<span class="n">fetch_with_retry</span><span class="p">(</span><span class="s2">"stanford_hardi"</span><span class="p">)</span>
 <span class="n">img</span><span class="p">,</span> <span class="n">gtab</span> <span class="o">=</span> <span class="n">read_stanford_hardi</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
 
@@ -841,7 +957,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data shape: (81, 106, 76, 160)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-27 23:39:49][dipy] INFO: Downloading "HARDI150.bval" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:49][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvals
+[2026-08-27 23:39:50][dipy] INFO: Downloading "HARDI150.bvec" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:50][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvecs
+[2026-08-27 23:39:50][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:50][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
+Data shape: (81, 106, 76, 160)
 b-values (unique): [   0. 2000.] …
 </pre></div>
 </div>
@@ -861,6 +983,20 @@ b-values (unique): [   0. 2000.] …
 
 <span class="c1"># Create white matter mask - also dilate this mask by 1 voxel to ensure streamlines reach the grey matter</span>
 <span class="n">white_matter</span> <span class="o">=</span> <span class="n">binary_dilation</span><span class="p">((</span><span class="n">labels</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">labels</span> <span class="o">==</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-27 23:39:51][dipy] INFO: Downloading "aparc-reduced.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:51][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/aparc-reduced.nii.gz
+[2026-08-27 23:39:52][dipy] INFO: Downloading "label_info.txt" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:52][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/label_info.txt
+[2026-08-27 23:39:53][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:53][dipy] INFO: Downloading "t1.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:53][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/t1.nii.gz
+[2026-08-27 23:39:55][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:55][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
+[2026-08-27 23:39:55][dipy] INFO: Dataset is already in place. If you want to fetch it again please first remove the folder /home/jovyan/.dipy/stanford_hardi
 </pre></div>
 </div>
 </div>
@@ -901,10 +1037,10 @@ b-values (unique): [   0. 2000.] …
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x792d16737b10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7439007c9a90&gt;
 </pre></div>
 </div>
-<img alt="../../_images/228d42f2e2e24e18ea20c8f97e822ffeade7f8675d8deddcb32395d0c6f3077d.png" src="../../_images/228d42f2e2e24e18ea20c8f97e822ffeade7f8675d8deddcb32395d0c6f3077d.png">
+<img alt="../../_images/f21a778aa44d5726b8e5eecf76a907139f945becd264526ee51a5b1c775f445b.png" src="../../_images/f21a778aa44d5726b8e5eecf76a907139f945becd264526ee51a5b1c775f445b.png">
 </div>
 </div>
 </section>
@@ -989,7 +1125,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1b92dca385a02e0e9029ed410ba042dac4fa6231dd74a4f3f8533de6b1678bc6.png" src="../../_images/1b92dca385a02e0e9029ed410ba042dac4fa6231dd74a4f3f8533de6b1678bc6.png">
+<img alt="../../_images/4a03d831eea9890a8a7a1130d5e60d8094b1632c8c6910b95352808c39c88491.png" src="../../_images/4a03d831eea9890a8a7a1130d5e60d8094b1632c8c6910b95352808c39c88491.png">
 </div>
 </div>
 <p>We can also compute the colored FA or RGB-map. First, FA needs to be scaled between 0 and 1, then the RGB map can be computed and visualized.</p>
@@ -1005,7 +1141,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e6033832ae31c93581aa0c20edee0be466ddd0c5c56ceebdc40bfeee4d83ba2d.png" src="../../_images/e6033832ae31c93581aa0c20edee0be466ddd0c5c56ceebdc40bfeee4d83ba2d.png">
+<img alt="../../_images/771b266c4bc5856feaa0927f4a9f8ca62df41612595b949c8c681b80b8e6a349.png" src="../../_images/771b266c4bc5856feaa0927f4a9f8ca62df41612595b949c8c681b80b8e6a349.png">
 </div>
 </div>
 <p>Let’s also visualize the tensor ellipsoids of a small rectangular area in an axial slice of the corpus callosum (CC):</p>
@@ -1102,7 +1238,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/fury/colormap.py:234: UserWarning: 'where' used without 'out', expect unitialized memory in output. If this is intentional, use out=None.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/conda/lib/python3.13/site-packages/fury/colormap.py:234: UserWarning: 'where' used without 'out', expect uninitialized memory in output. If this is intentional, use out=None.
   orient = np.abs(np.divide(v, r, where=r != 0))
 </pre></div>
 </div>
@@ -1183,7 +1319,7 @@ The <code class="docutils literal notranslate"><span class="pre">csa_peaks</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.21491283972218642
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.214912839722163
 </pre></div>
 </div>
 </div>
@@ -1371,10 +1507,10 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x792ccd028690&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x743900543110&gt;
 </pre></div>
 </div>
-<img alt="../../_images/90115f8598dae739d5a297d8b73ef38820b2d6cd60a56ac0b1169e98782f1f70.png" src="../../_images/90115f8598dae739d5a297d8b73ef38820b2d6cd60a56ac0b1169e98782f1f70.png">
+<img alt="../../_images/d5069f4c1d8cedbb9a68cfb8bc3f0194bed6bd26fcd04b8bdd7ebc6a78723369.png" src="../../_images/d5069f4c1d8cedbb9a68cfb8bc3f0194bed6bd26fcd04b8bdd7ebc6a78723369.png">
 </div>
 </div>
 <blockquote>
@@ -1408,10 +1544,10 @@ At each tracking step, the FA value is estimated using trilinear interpolation a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x792ccd02bb10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7438886c6850&gt;
 </pre></div>
 </div>
-<img alt="../../_images/6fceda49827e5aeacfe6e5f3cc0035e179a4e10125c55908d02ec75de0cb0552.png" src="../../_images/6fceda49827e5aeacfe6e5f3cc0035e179a4e10125c55908d02ec75de0cb0552.png">
+<img alt="../../_images/f51940a155f362d0b03296490e1eb38197c100ac26c1d003440492aa6316c834.png" src="../../_images/f51940a155f362d0b03296490e1eb38197c100ac26c1d003440492aa6316c834.png">
 </div>
 </div>
 <blockquote>
@@ -1517,7 +1653,7 @@ Let’s visualize them using probabilistic direction getter from SH (peaks_from_
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d774cf259280a78a77847e027fd291d9a831dfdc23767dc7183f14d64d6ce601.png" src="../../_images/d774cf259280a78a77847e027fd291d9a831dfdc23767dc7183f14d64d6ce601.png">
+<img alt="../../_images/814fa0a5d32dff0d9d9940354b3c4e6ef06a566b85f4c53974980304eb1efe39.png" src="../../_images/814fa0a5d32dff0d9d9940354b3c4e6ef06a566b85f4c53974980304eb1efe39.png">
 </div>
 </div>
 </section>
@@ -1646,10 +1782,10 @@ Streamline length is a basic metric that provides insight into the spatial exten
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Streamline Statistics:
 Deterministic  — n=  587, mean= 50.3 mm, median= 50.5 mm, std= 23.1 mm
-Probabilistic  — n=  587, mean= 49.7 mm, median= 51.5 mm, std= 23.2 mm
+Probabilistic  — n=  587, mean= 50.1 mm, median= 51.5 mm, std= 22.8 mm
 </pre></div>
 </div>
-<img alt="../../_images/c3632091bee062a7cde6fc4979e873b96e4adb1ae937a970a4587fcce72b5da7.png" src="../../_images/c3632091bee062a7cde6fc4979e873b96e4adb1ae937a970a4587fcce72b5da7.png">
+<img alt="../../_images/5d53bb691804bcaad2226c9d9e3ab1db29f17bd6f718ae1c4f7c14c08c9e9ff6.png" src="../../_images/5d53bb691804bcaad2226c9d9e3ab1db29f17bd6f718ae1c4f7c14c08c9e9ff6.png">
 </div>
 </div>
 </section>
@@ -1678,11 +1814,11 @@ Probabilistic  — n=  587, mean= 49.7 mm, median= 51.5 mm, std= 23.2 mm
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-06-18T04:45:43.596602+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-08-27T23:41:54.551682+00:00
 
 Python implementation: CPython
-Python version       : 3.13.13
-IPython version      : 9.14.0
+Python version       : 3.13.14
+IPython version      : 9.12.0
 
 Compiler    : GCC 14.3.0
 OS          : Linux
@@ -1692,16 +1828,15 @@ Processor   : x86_64
 CPU cores   : 16
 Architecture: 64bit
 
-IPython   : 9.14.0
-dipy      : 1.11.0
+IPython   : 9.12.0
+dipy      : 1.12.1
 fury      : 0.11.0
-matplotlib: 3.10.9
+matplotlib: 3.11.0
 nibabel   : 5.4.2
-numpy     : 2.4.6
-re        : 2.2.1
-scipy     : 1.17.1
+numpy     : 2.5.1
+scipy     : 1.18.0
 
-Neurodesktop version: py-stack
+Neurodesktop version: 2026-07-11
 </pre></div>
 </div>
 </div>
@@ -1787,6 +1922,7 @@ Neurodesktop version: py-stack
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-and-import-python-libraries">Install and import Python libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dipy-command-line-workflows">DIPY command-line workflows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">Data Preparation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-stanford-hardi-dataset-provided-by-dipy">Load Stanford HARDI dataset provided by DIPY</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-preprocessing">Minimal preprocessing</a></li>
