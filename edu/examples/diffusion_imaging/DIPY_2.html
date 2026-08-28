@@ -654,7 +654,8 @@
 <h1>Advanced Tracking with DIPY<a class="headerlink" href="#advanced-tracking-with-dipy" title="Link to this heading">#</a></h1>
 <p>In this notebook, we explore advanced tractography methods, including <strong>anatomically-constrained tracking (ACT, CMC)</strong>, <strong>Particle Filtering Tractography (PFT)</strong>, <strong>deterministic LocalTracking with ACT</strong>, and <strong>Parallel Transport Tractography (PTT).</strong></p>
 <p><strong>Author</strong>: Monika Doerig</p>
-<p><strong>Date</strong>: 5 Dec 2025</p>
+<p><strong>Original date</strong>: 5 Dec 2025</p>
+<p><strong>Last updated</strong>: 28 Aug 2026</p>
 <p><strong>License:</strong></p>
 <div style="margin-top: 10px;">
     <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #0066cc;">
@@ -929,23 +930,23 @@ dipy_cluster_streamlines --help: available
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-27 23:39:24][dipy] INFO: Downloading "HARDI150.bval" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:24][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvals
-[2026-08-27 23:39:24][dipy] INFO: Downloading "HARDI150.bvec" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:24][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvecs
-[2026-08-27 23:39:25][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:25][dipy] INFO: Downloading "aparc-reduced.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:25][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/aparc-reduced.nii.gz
-[2026-08-27 23:39:26][dipy] INFO: Downloading "label_info.txt" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:26][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/label_info.txt
-[2026-08-27 23:39:26][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:26][dipy] INFO: Downloading "pve_csf.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:26][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_csf.nii.gz
-[2026-08-27 23:39:27][dipy] INFO: Downloading "pve_gm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:27][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_gm.nii.gz
-[2026-08-27 23:39:28][dipy] INFO: Downloading "pve_wm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
-[2026-08-27 23:39:28][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_wm.nii.gz
-[2026-08-27 23:39:29][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2026-08-28 01:13:01][dipy] INFO: Downloading "HARDI150.bval" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:01][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvals
+[2026-08-28 01:13:02][dipy] INFO: Downloading "HARDI150.bvec" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:02][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/dwi.bvecs
+[2026-08-28 01:13:02][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:02][dipy] INFO: Downloading "aparc-reduced.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:02][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/aparc-reduced.nii.gz
+[2026-08-28 01:13:03][dipy] INFO: Downloading "label_info.txt" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:03][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/label_info.txt
+[2026-08-28 01:13:04][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:04][dipy] INFO: Downloading "pve_csf.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:04][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_csf.nii.gz
+[2026-08-28 01:13:04][dipy] INFO: Downloading "pve_gm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:04][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_gm.nii.gz
+[2026-08-28 01:13:05][dipy] INFO: Downloading "pve_wm.nii.gz" to /home/jovyan/.dipy/stanford_hardi
+[2026-08-28 01:13:05][dipy] INFO: From: https://stacks.stanford.edu/file/druid:yx282xq2090/pve_wm.nii.gz
+[2026-08-28 01:13:06][dipy] INFO: Files successfully downloaded to /home/jovyan/.dipy/stanford_hardi
 </pre></div>
 </div>
 </div>
@@ -1108,7 +1109,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
   orient = np.abs(np.divide(v, r, where=r != 0))
 </pre></div>
 </div>
-<img alt="../../_images/a0cb08a7d428fc6f7d422095b8d42b973d0c70d880f215952859a657434891b7.png" src="../../_images/a0cb08a7d428fc6f7d422095b8d42b973d0c70d880f215952859a657434891b7.png">
+<img alt="../../_images/6b4036db58a0c21f416fb25bb49b91f6543548b10de10f57922c0413619599f3.png" src="../../_images/6b4036db58a0c21f416fb25bb49b91f6543548b10de10f57922c0413619599f3.png">
 </div>
 </div>
 </section>
@@ -1138,7 +1139,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/178fa5d5e3d630377cde56297f818421f3982b1c4a00b38c9e8a0c04f2c34fbb.png" src="../../_images/178fa5d5e3d630377cde56297f818421f3982b1c4a00b38c9e8a0c04f2c34fbb.png">
+<img alt="../../_images/2619767f6472c8ae430694604bcbf4075fe87a6ddc402f001081a8263dbd5f51.png" src="../../_images/2619767f6472c8ae430694604bcbf4075fe87a6ddc402f001081a8263dbd5f51.png">
 </div>
 </div>
 <blockquote>
@@ -1192,7 +1193,7 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/bf630ec1f651ca87a44356f897db0b63a7d7837e92763867b73e3cb09e5aadfb.png" src="../../_images/bf630ec1f651ca87a44356f897db0b63a7d7837e92763867b73e3cb09e5aadfb.png">
+<img alt="../../_images/d41aca215f595417013cd1c8f470c7635ef5094c645eea1e3092c7f25bd26880.png" src="../../_images/d41aca215f595417013cd1c8f470c7635ef5094c645eea1e3092c7f25bd26880.png">
 </div>
 </div>
 <div class="cell docutils container">
@@ -1204,8 +1205,8 @@ In diffusion MRI, water molecules diffuse more easily along axons than across th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2795
-Deterministic ACT streamlines: 1187
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PFT streamlines: 2806
+Deterministic ACT streamlines: 1150
 PTT streamlines: 3155
 </pre></div>
 </div>
@@ -1235,7 +1236,7 @@ PTT streamlines: 3155
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-08-27T23:40:39.655423+00:00
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last updated: 2026-08-28T01:14:17.887631+00:00
 
 Python implementation: CPython
 Python version       : 3.13.14
