@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-vcefdvzi">
+	<head>
+		<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Running the Neurodesk Site Locally (Astro + Starlight) | Neurodesk</title><link rel="canonical" href="https://neurodesk.org/developers/documentation/local-development/"/><link rel="sitemap" href="/sitemap-index.xml"/><script>
+						if (['neurodesk.org', 'www.neurodesk.org'].includes(window.location.hostname)) {
+							window.dataLayer = window.dataLayer || [];
+							window.gtag = function(){window.dataLayer.push(arguments);};
+
+							const googleTag = document.createElement('script');
+							googleTag.async = true;
+							googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y';
+							document.head.appendChild(googleTag);
+
+							window.gtag('js', new Date());
+							window.gtag('config', 'G-4Z9774J59Y');
+						}
+					</script><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/><link rel="manifest" href="/favicons/site.webmanifest"/><link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon"/><meta name="generator" content="Astro v7.2.10"/><meta name="generator" content="Starlight v0.41.11"/><meta property="og:title" content="Running the Neurodesk Site Locally (Astro + Starlight)"/><meta property="og:type" content="article"/><meta property="og:url" content="https://neurodesk.org/developers/documentation/local-development/"/><meta property="og:locale" content="en"/><meta property="og:description" content="How to preview and edit the Neurodesk website on your own machine."/><meta property="og:site_name" content="Neurodesk"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="How to preview and edit the Neurodesk website on your own machine."/>
+		
+		
+<script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script>
+
+<template id="theme-icons">
+	<svg aria-hidden="true" class="light astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg>
+	<svg aria-hidden="true" class="dark astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg>
+	<svg aria-hidden="true" class="auto astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>
+</template>
+		<link rel="stylesheet" href="/_astro/print.ehPL0gv-.css" media="print">
+	<link rel="stylesheet" href="/_astro/common.DhPMvfrN.css">
+<style>@layer starlight.components{:root{--sl-badge-default-border:var(--sl-color-accent);--sl-badge-default-bg:var(--sl-color-accent-low);--sl-badge-default-text:#fff;--sl-badge-note-border:var(--sl-color-blue);--sl-badge-note-bg:var(--sl-color-blue-low);--sl-badge-note-text:#fff;--sl-badge-danger-border:var(--sl-color-red);--sl-badge-danger-bg:var(--sl-color-red-low);--sl-badge-danger-text:#fff;--sl-badge-success-border:var(--sl-color-green);--sl-badge-success-bg:var(--sl-color-green-low);--sl-badge-success-text:#fff;--sl-badge-caution-border:var(--sl-color-orange);--sl-badge-caution-bg:var(--sl-color-orange-low);--sl-badge-caution-text:#fff;--sl-badge-tip-border:var(--sl-color-purple);--sl-badge-tip-bg:var(--sl-color-purple-low);--sl-badge-tip-text:#fff}[data-theme=light]:root{--sl-badge-default-bg:var(--sl-color-accent-high);--sl-badge-note-bg:var(--sl-color-blue-high);--sl-badge-danger-bg:var(--sl-color-red-high);--sl-badge-success-bg:var(--sl-color-green-high);--sl-badge-caution-bg:var(--sl-color-orange-high);--sl-badge-tip-bg:var(--sl-color-purple-high)}.sl-badge:where(.astro-6jz2g3ze){border:1px solid var(--sl-color-border-badge);font-family:var(--sl-font-system-mono);color:var(--sl-color-text-badge);background-color:var(--sl-color-bg-badge);overflow-wrap:anywhere;border-radius:.25rem;line-height:normal;display:inline-block}.sidebar-content .sl-badge:where(.astro-6jz2g3ze){line-height:1;font-size:var(--sl-text-xs);padding:.125rem .375rem}.sidebar-content a[aria-current=page]>.sl-badge:where(.astro-6jz2g3ze){--sl-color-bg-badge:transparent;--sl-color-border-badge:currentColor;color:inherit}.default:where(.astro-6jz2g3ze){--sl-color-bg-badge:var(--sl-badge-default-bg);--sl-color-border-badge:var(--sl-badge-default-border);--sl-color-text-badge:var(--sl-badge-default-text)}.note:where(.astro-6jz2g3ze){--sl-color-bg-badge:var(--sl-badge-note-bg);--sl-color-border-badge:var(--sl-badge-note-border);--sl-color-text-badge:var(--sl-badge-note-text)}.danger:where(.astro-6jz2g3ze){--sl-color-bg-badge:var(--sl-badge-danger-bg);--sl-color-border-badge:var(--sl-badge-danger-border);--sl-color-text-badge:var(--sl-badge-danger-text)}.success:where(.astro-6jz2g3ze){--sl-color-bg-badge:var(--sl-badge-success-bg);--sl-color-border-badge:var(--sl-badge-success-border);--sl-color-text-badge:var(--sl-badge-success-text)}.tip:where(.astro-6jz2g3ze){--sl-color-bg-badge:var(--sl-badge-tip-bg);--sl-color-border-badge:var(--sl-badge-tip-border);--sl-color-text-badge:var(--sl-badge-tip-text)}.caution:where(.astro-6jz2g3ze){--sl-color-bg-badge:var(--sl-badge-caution-bg);--sl-color-border-badge:var(--sl-badge-caution-border);--sl-color-text-badge:var(--sl-badge-caution-text)}.small:where(.astro-6jz2g3ze){font-size:var(--sl-text-xs);padding:.125rem .25rem}.medium:where(.astro-6jz2g3ze){font-size:var(--sl-text-sm);padding:.175rem .35rem}.large:where(.astro-6jz2g3ze){font-size:var(--sl-text-base);padding:.225rem .45rem}.sl-markdown-content :is(h1,h2,h3,h4,h5,h6) .sl-badge:where(.astro-6jz2g3ze){vertical-align:middle}}
+@layer starlight.components{.card-grid:where(.astro-7pt7lds4){grid-template-columns:100%;gap:1rem;display:grid}.card-grid:where(.astro-7pt7lds4)>*{margin-top:0!important}@media (width>=50rem){.card-grid:where(.astro-7pt7lds4){grid-template-columns:1fr 1fr;gap:1.5rem}.stagger:where(.astro-7pt7lds4){--stagger-height:5rem;padding-bottom:var(--stagger-height)}.stagger:where(.astro-7pt7lds4)>:nth-child(2n){transform:translateY(var(--stagger-height))}}}
+@layer starlight.components{svg:where(.astro-thhzzpoq){color:var(--sl-icon-color);font-size:var(--sl-icon-size,1em);width:1em;height:1em}}
+@layer starlight.components{starlight-tabs:where(.astro-amjxdz5d){display:block}.tablist-wrapper:where(.astro-amjxdz5d){overflow-x:auto}:where(.astro-amjxdz5d)[role=tablist]{border-bottom:2px solid var(--sl-color-gray-5);padding:0;list-style:none;display:flex}.tab:where(.astro-amjxdz5d){display:flex}.tab:where(.astro-amjxdz5d)>:where(.astro-amjxdz5d)[role=tab]{--sl-tab-color-border:var(--sl-color-gray-5);line-height:var(--sl-line-height-headings);box-shadow:0 2px 0 var(--sl-tab-color-border);color:var(--sl-color-gray-3);outline-offset:var(--sl-outline-offset-inside);overflow-wrap:initial;align-items:center;gap:.5rem;padding:.275rem 1.25rem;text-decoration:none;display:flex}.tab:where(.astro-amjxdz5d) :where(.astro-amjxdz5d)[role=tab][aria-selected=true]{--sl-tab-color-border:var(--sl-color-text-accent);color:var(--sl-color-white);font-weight:600}.tablist-wrapper:where(.astro-amjxdz5d)~[role=tabpanel]{margin-top:1rem}}
+@layer starlight.components{.sl-link-card:where(.astro-o5fuzk5d){border:1px solid var(--sl-color-gray-5);box-shadow:var(--sl-shadow-sm);border-radius:.5rem;grid-template-columns:1fr auto;gap:.5rem;padding:1rem;display:grid;position:relative}a:where(.astro-o5fuzk5d){line-height:var(--sl-line-height-headings);text-decoration:none}a:where(.astro-o5fuzk5d):before{content:"";position:absolute;inset:0}.stack:where(.astro-o5fuzk5d){flex-direction:column;gap:.5rem}.title:where(.astro-o5fuzk5d){color:var(--sl-color-white);font-weight:600;font-size:var(--sl-text-lg)}.description:where(.astro-o5fuzk5d){color:var(--sl-color-gray-3);line-height:1.5}.icon:where(.astro-o5fuzk5d){color:var(--sl-color-gray-3)}.sl-link-card:where(.astro-o5fuzk5d):hover{background:var(--sl-color-gray-7,var(--sl-color-gray-6));border-color:var(--sl-color-gray-2)}.sl-link-card:where(.astro-o5fuzk5d):hover .icon:where(.astro-o5fuzk5d){color:var(--sl-color-white)}}
+@layer starlight.components{.sl-steps{--bullet-size:calc(var(--sl-line-height) * 1rem);--bullet-margin:.375rem;counter-reset:steps-counter var(--sl-steps-start,0);padding-inline-start:0;list-style:none}.sl-steps>li{counter-increment:steps-counter;padding-inline-start:calc(var(--bullet-size) + 1rem);min-height:calc(var(--bullet-size) + var(--bullet-margin));padding-bottom:1px;position:relative}.sl-steps>li+li{margin-top:0}.sl-steps>li:before{content:counter(steps-counter);top:0;width:var(--bullet-size);height:var(--bullet-size);line-height:var(--bullet-size);font-size:var(--sl-text-xs);text-align:center;color:var(--sl-color-white);background-color:var(--sl-color-gray-6);box-shadow:inset 0 0 0 1px var(--sl-color-gray-5);border-radius:99rem;font-weight:600;position:absolute;inset-inline-start:0}.sl-steps>li:after{--guide-width:1px;content:"";top:calc(var(--bullet-size) + var(--bullet-margin));bottom:var(--bullet-margin);width:var(--guide-width);background-color:var(--sl-color-hairline-light);position:absolute;inset-inline-start:calc((var(--bullet-size) - var(--guide-width)) / 2)}}@layer starlight.content{.sl-steps>li>:first-child{--lh:calc(1em * var(--sl-line-height));--shift-y:calc(.5 * (var(--bullet-size) - var(--lh)));transform:translateY(var(--shift-y));margin-bottom:var(--shift-y)}.sl-steps>li>:first-child:where(h1,h2,h3,h4,h5,h6){--lh:calc(1em * var(--sl-line-height-headings))}@supports (--prop:1lh){.sl-steps>li>:first-child{--lh:1lh}}}
+@layer starlight.components{starlight-file-tree:where(.astro-z2yfpfbf){--x-space:1.5rem;--y-space:.125rem;--y-pad:0;border:1px solid var(--sl-color-gray-5);background-color:var(--sl-color-gray-6);font-size:var(--sl-text-xs);font-family:var(--__sl-font-mono);padding:1rem;display:block;overflow-x:auto}starlight-file-tree:where(.astro-z2yfpfbf) .directory>details{padding:0;background:0 0;border:0;padding-inline-start:var(--x-space)}starlight-file-tree:where(.astro-z2yfpfbf) .directory>details>summary{padding:var(--y-pad) .625rem;color:var(--sl-color-white);border:0;max-width:100%;margin-inline-start:calc(-1 * var(--x-space));font-weight:400}starlight-file-tree:where(.astro-z2yfpfbf) .directory>details>summary::marker,starlight-file-tree:where(.astro-z2yfpfbf) .directory>details>summary::-webkit-details-marker{color:var(--sl-color-gray-3)}starlight-file-tree:where(.astro-z2yfpfbf) .directory>details>summary:hover,starlight-file-tree:where(.astro-z2yfpfbf) .directory>details>summary:hover .tree-icon{cursor:pointer;color:var(--sl-color-text-accent);fill:currentColor}starlight-file-tree:where(.astro-z2yfpfbf) .directory>details>summary:hover~ul{border-color:var(--sl-color-gray-4)}starlight-file-tree:where(.astro-z2yfpfbf) .directory>details>summary:hover .highlight .tree-icon{color:var(--sl-color-text-invert);fill:currentColor}starlight-file-tree:where(.astro-z2yfpfbf) ul{border-inline-start:1px solid var(--sl-color-gray-5);margin-inline-start:.5rem;padding:0;padding-inline-start:.125rem;list-style:none}starlight-file-tree:where(.astro-z2yfpfbf)>ul{border:0;margin:0;padding:0}starlight-file-tree:where(.astro-z2yfpfbf) li{margin:var(--y-space) 0;padding:var(--y-pad) 0}starlight-file-tree:where(.astro-z2yfpfbf) .file{color:var(--sl-color-white);margin-inline-start:calc(var(--x-space) - .125rem)}starlight-file-tree:where(.astro-z2yfpfbf) .tree-entry{flex-wrap:wrap;align-items:flex-start;max-width:calc(100% - 1rem);display:inline-flex}@media (width>=30em){starlight-file-tree:where(.astro-z2yfpfbf) .tree-entry{flex-wrap:nowrap}}starlight-file-tree:where(.astro-z2yfpfbf) .tree-entry>:first-child{flex-shrink:0}starlight-file-tree:where(.astro-z2yfpfbf) .empty{color:var(--sl-color-gray-3);padding-inline-start:.375rem}starlight-file-tree:where(.astro-z2yfpfbf) .comment{color:var(--sl-color-gray-3);min-width:12rem;max-width:24rem;padding-inline-start:1.625rem}starlight-file-tree:where(.astro-z2yfpfbf) .highlight{color:var(--sl-color-text-invert);background-color:var(--sl-color-text-accent);border-radius:.25rem;padding-inline-end:.5rem;display:inline-block}starlight-file-tree:where(.astro-z2yfpfbf) svg{fill:var(--sl-color-gray-3);vertical-align:middle;width:.875rem;height:.875rem;margin-inline:.25rem .375rem;display:inline}starlight-file-tree:where(.astro-z2yfpfbf) .highlight svg.tree-icon{fill:currentColor}}
+@layer starlight.components{.sl-link-button:where(.astro-5c5txwkz){font-size:var(--sl-text-sm);outline-offset:.25rem;border:1px solid #0000;border-radius:999rem;align-items:center;gap:.5em;padding:.4375rem 1.125rem;line-height:1.1875;text-decoration:none;display:inline-flex}.sl-link-button:where(.astro-5c5txwkz).primary{background:var(--sl-color-text-accent);border-color:var(--sl-color-text-accent);color:var(--sl-color-black)}.sl-link-button:where(.astro-5c5txwkz).primary:hover{color:var(--sl-color-black)}.sl-link-button:where(.astro-5c5txwkz).secondary{border-color:inherit;color:var(--sl-color-white)}.sl-link-button:where(.astro-5c5txwkz).minimal{color:var(--sl-color-white);padding-inline:0}.sl-link-button:where(.astro-5c5txwkz) svg{flex-shrink:0}@media (width>=50rem){.sl-link-button:where(.astro-5c5txwkz){font-size:var(--sl-text-base);padding:.9375rem 1.25rem}}.sl-markdown-content .sl-link-button:where(.astro-5c5txwkz){margin-inline-end:1rem}.sl-markdown-content .sl-link-button:where(.astro-5c5txwkz):not(:where(p *)){margin-block:1rem}}
+</style><script type="module" src="/_astro/page.Dwipeu-R.js"></script></head>
+	<body class="astro-vcefdvzi">
+		<a class="sl-skip-link astro-taphmak2" href="#_top">Skip to content</a>
+		<div class="page sl-flex astro-wos6fwnk">
+	<header class="header astro-wos6fwnk"><div class="header astro-d4ya364r">
+	<div class="title-wrapper sl-flex astro-d4ya364r">
+		<a href="/" class="site-title sl-flex astro-uwkwgey6">
+	
+				<img class="light:sl-hidden print:hidden astro-uwkwgey6" alt src="/_astro/neurodesk-wordmark-dark.Dgzlscn2.svg" width="560" height="83">
+				
+				<img class="dark:sl-hidden print:block astro-uwkwgey6" alt src="/_astro/neurodesk-wordmark-light.Cr4uUYIW.svg" width="560" height="83">
+			
+	<span class="sr-only astro-uwkwgey6" translate="no">
+		Neurodesk
+	</span>
+</a>
+	</div>
+	<div class="sl-flex print:hidden astro-d4ya364r">
+		<site-search class="astro-d4ya364r astro-ue54gkwz" data-translations="{&quot;placeholder&quot;:&quot;Search&quot;}">
+	<button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-ue54gkwz">
+		<svg aria-hidden="true" class="astro-ue54gkwz astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>
+		<span class="sl-hidden md:sl-block astro-ue54gkwz" aria-hidden="true">Search</span>
+		<kbd class="sl-hidden md:sl-flex astro-ue54gkwz" style="display: none;">
+			<kbd class="astro-ue54gkwz">Ctrl</kbd><kbd class="astro-ue54gkwz">K</kbd>
+		</kbd>
+	</button>
+
+	<dialog style="padding:0" aria-label="Search" class="astro-ue54gkwz">
+		<div class="dialog-frame sl-flex astro-ue54gkwz">
+			
+			<button data-close-modal class="sl-flex md:sl-hidden astro-ue54gkwz">
+				Cancel
+			</button>
+			<div class="search-container astro-ue54gkwz">
+						<div id="starlight__search" class="astro-ue54gkwz"></div>
+					</div>
+		</div>
+	</dialog>
+</site-search>
+
+
+<script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script>
+
+<script type="module" src="/_astro/Search.astro_astro_type_script_index_0_lang.B-Vh4ymV.js"></script>
+	</div>
+	<div class="sl-hidden md:sl-flex print:hidden right-group astro-d4ya364r">
+		<div class="sl-flex social-icons astro-d4ya364r">
+			<nav class="nav-links astro-o2gh7vpa" aria-label="Sections">
+	<a href="/getting-started/" class="astro-o2gh7vpa">
+				For users
+			</a><a href="https://neurodesk.org/edu/" target="_blank" rel="noopener noreferrer" class="astro-o2gh7vpa">
+				Learning resources
+			</a><a href="/developers/" aria-current="page" class="astro-o2gh7vpa">
+				For developers
+			</a><a href="/support/contact/" class="astro-o2gh7vpa">
+				Get in touch
+			</a>
+</nav>
+
+
+			<a href="https://github.com/neurodesk" rel="me" class="sl-flex astro-lbbme2uq">
+					<span class="sr-only astro-lbbme2uq">GitHub</span>
+					<svg aria-hidden="true" class="astro-lbbme2uq astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg>
+				</a><a href="https://www.linkedin.com/company/neurodesk-org/" rel="me" class="sl-flex astro-lbbme2uq">
+					<span class="sr-only astro-lbbme2uq">LinkedIn</span>
+					<svg aria-hidden="true" class="astro-lbbme2uq astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3v9ZM6.59 8.48a1.56 1.56 0 0 1 0-3.12 1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06v5.18Z"/></svg>
+				</a>
+		
+		</div>
+		<theme-toggle class="astro-phv4pw7f">
+  <button type="button" aria-label="Toggle colour theme" class="astro-phv4pw7f">
+    <svg aria-hidden="true" class="auto astro-phv4pw7f astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>
+    <svg aria-hidden="true" class="light astro-phv4pw7f astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg>
+    <svg aria-hidden="true" class="dark astro-phv4pw7f astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg>
+  </button>
+</theme-toggle>
+
+<script type="module">var e=`starlight-theme`,t=[`auto`,`light`,`dark`],n={auto:`Auto`,light:`Light`,dark:`Dark`},r=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,i=()=>r(typeof localStorage<`u`&&localStorage.getItem(e));function a(t){typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)}var o=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`;function s(e){document.documentElement.dataset.theme=e===`auto`?o():e,a(e),document.querySelectorAll(`theme-toggle`).forEach(t=>{t.dataset.themePref=e;let r=t.querySelector(`button`);r&&(r.title=`Theme: ${n[e]}`,r.setAttribute(`aria-label`,`Theme: ${n[e]}. Click to change.`))}),window.StarlightThemeProvider&&window.StarlightThemeProvider.updatePickers(e)}matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{i()===`auto`&&s(`auto`)});var c=class extends HTMLElement{constructor(){super(),s(i()),this.querySelector(`button`)?.addEventListener(`click`,()=>{let e=t[(t.indexOf(i())+1)%t.length];s(e)})}};customElements.define(`theme-toggle`,c);</script>
+		
+
+<script type="module">var e=class extends HTMLElement{constructor(){super();let e=this.querySelector(`select`);e&&(e.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&(window.location.pathname=e.currentTarget.value)}),window.addEventListener(`pageshow`,t=>{if(!t.persisted)return;let n=e.querySelector(`option[selected]`)?.index;n!==e.selectedIndex&&(e.selectedIndex=n??0)}))}};customElements.define(`starlight-lang-select`,e);</script>
+	</div>
+</div></header>
+	<nav class="sidebar print:hidden astro-wos6fwnk" aria-label="Main">
+				<starlight-menu-button class="print:hidden astro-k4y5bcsr">
+	<button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-k4y5bcsr">
+		<svg aria-hidden="true" class="open-menu astro-k4y5bcsr astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg>
+		<svg aria-hidden="true" class="close-menu astro-k4y5bcsr astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="m13.41 12 6.3-6.29a1.004 1.004 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1.004 1.004 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 0 1.42.998.998 0 0 0 1.42 0l6.29-6.3 6.29 6.3a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.42L13.41 12Z"/></svg>
+	</button>
+</starlight-menu-button>
+
+<script type="module">var e=class extends HTMLElement{btn=this.querySelector(`button`);constructor(){super(),this.btn.addEventListener(`click`,()=>this.toggleExpanded());let e=this.closest(`nav`);e&&e.addEventListener(`keyup`,e=>this.closeOnEscape(e)),matchMedia(`(min-width: 50em)`).addEventListener(`change`,()=>this.setExpanded(!1))}setExpanded(e){this.setAttribute(`aria-expanded`,String(e)),document.body.toggleAttribute(`data-mobile-menu-expanded`,e),document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}toggleExpanded(){this.setExpanded(this.getAttribute(`aria-expanded`)!==`true`)}closeOnEscape(e){e.code===`Escape`&&(this.setExpanded(!1),this.btn.focus())}};customElements.define(`starlight-menu-button`,e);</script>
+				<div id="starlight__sidebar" class="sidebar-pane astro-wos6fwnk">
+					<div class="sidebar-content sl-flex astro-wos6fwnk">
+						<sl-sidebar-state-persist data-hash="18239ag" class="astro-wfefn5nu">
+	<script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script>
+	<ul class="top-level astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<details open class="astro-xxo5foax">
+						<summary class="astro-xxo5foax">
+							<span class="group-label astro-xxo5foax">
+								<span class="large astro-xxo5foax">For developers</span>
+								
+							</span>
+							<svg aria-hidden="true" class="caret astro-xxo5foax astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</summary>
+						<sl-sidebar-restore data-index="0"></sl-sidebar-restore>
+						<ul class="astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<a href="/developers/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Start here</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<details class="astro-xxo5foax">
+						<summary class="astro-xxo5foax">
+							<span class="group-label astro-xxo5foax">
+								<span class="large astro-xxo5foax">Architecture</span>
+								
+							</span>
+							<svg aria-hidden="true" class="caret astro-xxo5foax astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</summary>
+						<sl-sidebar-restore data-index="1"></sl-sidebar-restore>
+						<ul class="astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<a href="/developers/architecture/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Architecture at a glance</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/neurodesk-components/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Neurodesk components</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/neurodesk-dev/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Neurodesk dev</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/release-process/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Release process</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/roadmap/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Roadmap</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/transparent-singularity/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Transparent Singularity</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<details class="astro-xxo5foax">
+						<summary class="astro-xxo5foax">
+							<span class="group-label astro-xxo5foax">
+								<span class="large astro-xxo5foax">CVMFS</span>
+								
+							</span>
+							<svg aria-hidden="true" class="caret astro-xxo5foax astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</summary>
+						<sl-sidebar-restore data-index="2"></sl-sidebar-restore>
+						<ul class="astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<a href="/developers/architecture/cvmfs/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">About CVMFS</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/cvmfs/cvmfs-architecture/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">CVMFS architecture</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/cvmfs/proxy/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Set up CVMFS proxy</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/cvmfs/stratum0/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Set up Stratum 0 server</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/architecture/cvmfs/stratum1/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Set up Stratum 1 server</span>
+						
+					</a>
+			</li>
+</ul>
+					</details>
+			</li>
+</ul>
+					</details>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/contributors/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Contributors</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/designer/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Designer guide</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<details open class="astro-xxo5foax">
+						<summary class="astro-xxo5foax">
+							<span class="group-label astro-xxo5foax">
+								<span class="large astro-xxo5foax">Documentation</span>
+								
+							</span>
+							<svg aria-hidden="true" class="caret astro-xxo5foax astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</summary>
+						<sl-sidebar-restore data-index="3"></sl-sidebar-restore>
+						<ul class="astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<a href="/developers/documentation/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Where to start</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/documentation/creating-website-content/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Contribute Content</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/documentation/local-development/" aria-current="page" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Local Development</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/documentation/markdown-formatting/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Markdown Reference</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/documentation/algolia-indexing/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Algolia Indexing</span>
+						
+					</a>
+			</li>
+</ul>
+					</details>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/interfacing/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Interfacing</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<details class="astro-xxo5foax">
+						<summary class="astro-xxo5foax">
+							<span class="group-label astro-xxo5foax">
+								<span class="large astro-xxo5foax">Managing tools</span>
+								
+							</span>
+							<svg aria-hidden="true" class="caret astro-xxo5foax astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</summary>
+						<sl-sidebar-restore data-index="4"></sl-sidebar-restore>
+						<ul class="astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<a href="/developers/new-tools/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Add a new tool</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/new-tools/update-tool/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Update a tool</span>
+						
+					</a>
+			</li>
+</ul>
+					</details>
+			</li><li class="astro-xxo5foax">
+				<details class="astro-xxo5foax">
+						<summary class="astro-xxo5foax">
+							<span class="group-label astro-xxo5foax">
+								<span class="large astro-xxo5foax">Neurocontainer copilot</span>
+								
+							</span>
+							<svg aria-hidden="true" class="caret astro-xxo5foax astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</summary>
+						<sl-sidebar-restore data-index="5"></sl-sidebar-restore>
+						<ul class="astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<a href="/developers/neurocontainer-copilot/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Recipe generation with LLMs</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/neurocontainer-copilot/google-jules/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Google Jules agent</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/neurocontainer-copilot/openai-codex/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">OpenAI Codex agent</span>
+						
+					</a>
+			</li>
+</ul>
+					</details>
+			</li><li class="astro-xxo5foax">
+				<details class="astro-xxo5foax">
+						<summary class="astro-xxo5foax">
+							<span class="group-label astro-xxo5foax">
+								<span class="large astro-xxo5foax">Neurodesk copilot</span>
+								
+							</span>
+							<svg aria-hidden="true" class="caret astro-xxo5foax astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</summary>
+						<sl-sidebar-restore data-index="6"></sl-sidebar-restore>
+						<ul class="astro-xxo5foax">
+	<li class="astro-xxo5foax">
+				<a href="/developers/neurodesk-copilot/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">LLM code assistance</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/neurodesk-copilot/github-copilot/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">GitHub Copilot</span>
+						
+					</a>
+			</li><li class="astro-xxo5foax">
+				<a href="/developers/neurodesk-copilot/local-language-models/" class="astro-xxo5foax">
+						<span class="astro-xxo5foax">Local LLMs</span>
+						
+					</a>
+			</li>
+</ul>
+					</details>
+			</li>
+</ul>
+					</details>
+			</li>
+</ul>
+
+
+	<script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist>
+
+<div class="md:sl-hidden">
+	<div class="mobile-preferences sl-flex astro-cmwhvo5i">
+	<div class="social-icons astro-cmwhvo5i">
+		<nav class="nav-links astro-o2gh7vpa" aria-label="Sections">
+	<a href="/getting-started/" class="astro-o2gh7vpa">
+				For users
+			</a><a href="https://neurodesk.org/edu/" target="_blank" rel="noopener noreferrer" class="astro-o2gh7vpa">
+				Learning resources
+			</a><a href="/developers/" aria-current="page" class="astro-o2gh7vpa">
+				For developers
+			</a><a href="/support/contact/" class="astro-o2gh7vpa">
+				Get in touch
+			</a>
+</nav>
+
+
+			<a href="https://github.com/neurodesk" rel="me" class="sl-flex astro-lbbme2uq">
+					<span class="sr-only astro-lbbme2uq">GitHub</span>
+					<svg aria-hidden="true" class="astro-lbbme2uq astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg>
+				</a><a href="https://www.linkedin.com/company/neurodesk-org/" rel="me" class="sl-flex astro-lbbme2uq">
+					<span class="sr-only astro-lbbme2uq">LinkedIn</span>
+					<svg aria-hidden="true" class="astro-lbbme2uq astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3v9ZM6.59 8.48a1.56 1.56 0 0 1 0-3.12 1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06v5.18Z"/></svg>
+				</a>
+		
+	</div>
+	<theme-toggle class="astro-phv4pw7f">
+  <button type="button" aria-label="Toggle colour theme" class="astro-phv4pw7f">
+    <svg aria-hidden="true" class="auto astro-phv4pw7f astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>
+    <svg aria-hidden="true" class="light astro-phv4pw7f astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg>
+    <svg aria-hidden="true" class="dark astro-phv4pw7f astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg>
+  </button>
+</theme-toggle>
+
+
+	
+
+
+</div>
+</div>
+					</div>
+				</div>
+			</nav>
+	<div class="main-frame astro-wos6fwnk">
+			
+			<script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><div class="lg:sl-flex astro-gdk3w4lz">
+	<aside class="right-sidebar-container print:hidden astro-gdk3w4lz">
+				<div class="right-sidebar astro-gdk3w4lz">
+					
+			<div class="lg:sl-hidden astro-qdjd6es7">
+				<mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-wv6566gz">
+			<nav aria-labelledby="starlight__on-this-page--mobile" class="astro-wv6566gz">
+				<details id="starlight__mobile-toc" class="astro-wv6566gz">
+					<summary id="starlight__on-this-page--mobile" class="sl-flex astro-wv6566gz">
+						<span class="toggle sl-flex astro-wv6566gz">
+							On this page
+							<svg aria-hidden="true" class="caret astro-wv6566gz astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>
+						</span>
+						<span class="display-current astro-wv6566gz"></span>
+					</summary>
+					<div class="dropdown astro-wv6566gz">
+						<ul class="isMobile astro-ublckylj" style="--depth: 0;">
+	<li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#_top" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">Overview</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#1-prerequisites" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">1. Prerequisites</span>
+				</a>
+				<ul class="isMobile astro-ublckylj" style="--depth: 1;">
+	<li style="--depth: 1;" class="astro-ublckylj">
+				<a href="#installing-nodejs" style="--depth: 1;" class="astro-ublckylj">
+					<span style="--depth: 1;" class="astro-ublckylj">Installing Node.js</span>
+				</a>
+				
+			</li><li style="--depth: 1;" class="astro-ublckylj">
+				<a href="#installing-pnpm" style="--depth: 1;" class="astro-ublckylj">
+					<span style="--depth: 1;" class="astro-ublckylj">Installing pnpm</span>
+				</a>
+				
+			</li>
+</ul>
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#2-install-dependencies" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">2. Install dependencies</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#3-start-the-dev-server" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">3. Start the dev server</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#4-build-and-preview-the-production-site" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">4. Build and preview the production site</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#5-where-things-live" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">5. Where things live</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#6-adding-a-page-to-the-sidebar" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">6. Adding a page to the sidebar</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#7-changing-a-pages-url" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">7. Changing a page’s URL</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#troubleshooting" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">Troubleshooting</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#need-help" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">Need help?</span>
+				</a>
+				
+			</li>
+</ul>
+					</div>
+				</details>
+			</nav>
+		</mobile-starlight-toc>
+
+<script type="module" src="/_astro/MobileTableOfContents.astro_astro_type_script_index_0_lang.BcSo_yiZ.js"></script>
+			</div>
+			<div class="right-sidebar-panel sl-hidden lg:sl-block astro-qdjd6es7">
+				<div class="sl-container astro-qdjd6es7">
+					<starlight-toc data-min-h="2" data-max-h="3">
+			<nav aria-labelledby="starlight__on-this-page">
+				<h2 id="starlight__on-this-page">On this page</h2>
+				<ul class="astro-ublckylj" style="--depth: 0;">
+	<li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#_top" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">Overview</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#1-prerequisites" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">1. Prerequisites</span>
+				</a>
+				<ul class="astro-ublckylj" style="--depth: 1;">
+	<li style="--depth: 1;" class="astro-ublckylj">
+				<a href="#installing-nodejs" style="--depth: 1;" class="astro-ublckylj">
+					<span style="--depth: 1;" class="astro-ublckylj">Installing Node.js</span>
+				</a>
+				
+			</li><li style="--depth: 1;" class="astro-ublckylj">
+				<a href="#installing-pnpm" style="--depth: 1;" class="astro-ublckylj">
+					<span style="--depth: 1;" class="astro-ublckylj">Installing pnpm</span>
+				</a>
+				
+			</li>
+</ul>
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#2-install-dependencies" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">2. Install dependencies</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#3-start-the-dev-server" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">3. Start the dev server</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#4-build-and-preview-the-production-site" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">4. Build and preview the production site</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#5-where-things-live" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">5. Where things live</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#6-adding-a-page-to-the-sidebar" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">6. Adding a page to the sidebar</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#7-changing-a-pages-url" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">7. Changing a page’s URL</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#troubleshooting" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">Troubleshooting</span>
+				</a>
+				
+			</li><li style="--depth: 0;" class="astro-ublckylj">
+				<a href="#need-help" style="--depth: 0;" class="astro-ublckylj">
+					<span style="--depth: 0;" class="astro-ublckylj">Need help?</span>
+				</a>
+				
+			</li>
+</ul>
+			</nav>
+		</starlight-toc>
+
+<script type="module" src="/_astro/TableOfContents.astro_astro_type_script_index_0_lang.Csloo1VZ.js"></script>
+				</div>
+			</div>
+		
+				</div>
+			</aside>
+	<div class="main-pane astro-gdk3w4lz">
+				
+				<main data-pagefind-body class="astro-vcefdvzi" lang="en" dir="ltr">
+					
+					
+					
+								<div class="content-panel astro-ujpviysc">
+	<div class="sl-container astro-ujpviysc">
+									<h1 id="_top" class="astro-xxeh7q2n">Running the Neurodesk Site Locally (Astro + Starlight)</h1>
+									</div>
+</div>
+								<div class="content-panel astro-ujpviysc">
+	<div class="sl-container astro-ujpviysc">
+									<div class="sl-markdown-content">
+										<p>The Neurodesk website is built with <a href="https://docs.astro.build/">Astro</a> using the
+<a href="https://starlight.astro.build/">Starlight</a> documentation theme. This page covers how to run it
+locally so you can preview your changes before opening a pull request.</p>
+<aside aria-label="Clone the repository first" class="starlight-aside starlight-aside--note"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg>Clone the repository first</p><div class="starlight-aside__content"><p>This page assumes you already have a local copy of the repository. If you do not,
+<a href="/developers/documentation/creating-website-content/">Contribute Content</a> covers forking, cloning,
+and branching — do that first, then come back here.</p></div></aside>
+<div class="sl-heading-wrapper level-h2"><h2 id="1-prerequisites">1. Prerequisites</h2><a class="sl-anchor-link" href="#1-prerequisites"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “1. Prerequisites”</span></a></div>
+<ul>
+<li><a href="https://nodejs.org/">Node.js</a> 20 or newer</li>
+<li><a href="https://pnpm.io/installation">pnpm</a> — the package manager this project uses</li>
+</ul>
+<p>Install Node.js <strong>first</strong>: pnpm is a Node program and will fail with <code dir="auto">env: node: No such file or directory</code> if no runtime is present.</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="installing-nodejs">Installing Node.js</h3><a class="sl-anchor-link" href="#installing-nodejs"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Installing Node.js”</span></a></div>
+<p>Check what you already have:</p>
+<div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.w36nc.css"/><script type="module" src="/_astro/ec.0vx5m.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">node</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--version</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="node --version"><div></div></button></div></figure></div>
+<p>If that prints <code dir="auto">v20</code> or higher, skip to <a href="#installing-pnpm">Installing pnpm</a>. If it prints
+<code dir="auto">command not found</code>, install Node using whichever option suits your system:</p>
+
+<script>
+(() => {
+	class StarlightTabsRestore extends HTMLElement {
+		connectedCallback() {
+			const starlightTabs = this.closest('starlight-tabs');
+			if (!(starlightTabs instanceof HTMLElement) || typeof localStorage === 'undefined') return;
+			const syncKey = starlightTabs.dataset.syncKey;
+			if (!syncKey) return;
+			const label = localStorage.getItem(`starlight-synced-tabs__${syncKey}`);
+			if (!label) return;
+			const tabs = [...starlightTabs?.querySelectorAll('[role="tab"]')];
+			const tabIndexToRestore = tabs.findIndex(
+				(tab) => tab instanceof HTMLAnchorElement && tab.textContent?.trim() === label
+			);
+			const panels = starlightTabs?.querySelectorAll(':scope > [role="tabpanel"]');
+			const newTab = tabs[tabIndexToRestore];
+			const newPanel = panels[tabIndexToRestore];
+			if (tabIndexToRestore < 1 || !newTab || !newPanel) return;
+			tabs[0]?.setAttribute('aria-selected', 'false');
+			tabs[0]?.setAttribute('tabindex', '-1');
+			panels?.[0]?.setAttribute('hidden', 'true');
+			newTab.removeAttribute('tabindex');
+			newTab.setAttribute('aria-selected', 'true');
+			newPanel.removeAttribute('hidden');
+		}
+	}
+	customElements.define('starlight-tabs-restore', StarlightTabsRestore);
+})()
+</script>
+
+<starlight-tabs data-sync-key="os" class="astro-amjxdz5d">
+	<div class="tablist-wrapper not-content astro-amjxdz5d">
+				<ul role="tablist" class="astro-amjxdz5d">
+					<li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-0-0" id="tab-0-0" aria-selected="true" tabindex="0" class="astro-amjxdz5d">
+								
+								macOS
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-0-1" id="tab-0-1" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Linux
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-0-2" id="tab-0-2" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Windows
+							</a>
+						</li>
+				</ul>
+			</div>
+	<div id="tab-panel-0-0" aria-labelledby="tab-0-0" role="tabpanel">
+	<p>With <a href="https://brew.sh/">Homebrew</a>:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">brew</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">node</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="brew install node"><div></div></button></div></figure></div><p>Without Homebrew, download the macOS LTS installer from
+<a href="https://nodejs.org/">nodejs.org</a> and run it.</p>
+</div><div id="tab-panel-0-1" aria-labelledby="tab-0-1" role="tabpanel" hidden>
+	<p>Your distribution’s package may be older than Node 20. Check first:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># Debian / Ubuntu</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">sudo</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">apt</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">nodejs</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">npm</span></div></div><div class="ec-line"><div class="code">
+</div></div><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># Fedora</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">sudo</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dnf</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">nodejs</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="sudo apt install nodejs npmsudo dnf install nodejs"><div></div></button></div></figure></div><p>If the packaged version is too old, use <a href="https://github.com/nvm-sh/nvm">nvm</a>, which installs
+Node into your home directory and lets you switch versions per project:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-o-</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">bash</span></div></div><div class="ec-line"><div class="code"><span style="--0:#919F9F;--1:#5F636F"># then open a new terminal</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">nvm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#F78C6C;--1:#AA0982">20</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">nvm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">use</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#F78C6C;--1:#AA0982">20</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bashnvm install 20nvm use 20"><div></div></button></div></figure></div>
+</div><div id="tab-panel-0-2" aria-labelledby="tab-0-2" role="tabpanel" hidden>
+	<p>With <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="powershell"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">winget install OpenJS.NodeJS.LTS</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="winget install OpenJS.NodeJS.LTS"><div></div></button></div></figure></div><p>Otherwise download the Windows LTS installer from <a href="https://nodejs.org/">nodejs.org</a>.</p>
+</div>
+	<starlight-tabs-restore class="astro-amjxdz5d"></starlight-tabs-restore>
+</starlight-tabs>
+
+
+<div class="sl-heading-wrapper level-h3"><h3 id="installing-pnpm">Installing pnpm</h3><a class="sl-anchor-link" href="#installing-pnpm"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Installing pnpm”</span></a></div>
+<p>Try Corepack first — it ships with some Node builds and pins pnpm per project:</p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">corepack</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">enable</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">corepack</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">prepare</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">pnpm@latest</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--activate</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="corepack enablecorepack prepare pnpm@latest --activate"><div></div></button></div></figure></div>
+<p>If that reports <code dir="auto">command not found</code>, Corepack is not bundled with your Node build. Use one of these
+instead — <strong>pick a single method</strong>, not several:</p>
+
+
+
+<starlight-tabs data-sync-key="os" class="astro-amjxdz5d">
+	<div class="tablist-wrapper not-content astro-amjxdz5d">
+				<ul role="tablist" class="astro-amjxdz5d">
+					<li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-1-0" id="tab-1-0" aria-selected="true" tabindex="0" class="astro-amjxdz5d">
+								
+								macOS
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-1-1" id="tab-1-1" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Linux
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-1-2" id="tab-1-2" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Windows
+							</a>
+						</li>
+				</ul>
+			</div>
+	<div id="tab-panel-1-0" aria-labelledby="tab-1-0" role="tabpanel">
+	<p>With Homebrew:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">brew</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">pnpm</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="brew install pnpm"><div></div></button></div></figure></div><p>Or the standalone installer:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-fsSL</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://get.pnpm.io/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">-</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="curl -fsSL https://get.pnpm.io/install.sh | sh -"><div></div></button></div></figure></div>
+</div><div id="tab-panel-1-1" aria-labelledby="tab-1-1" role="tabpanel" hidden>
+	<p>The standalone installer:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">curl</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-fsSL</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">https://get.pnpm.io/install.sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">sh</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">-</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="curl -fsSL https://get.pnpm.io/install.sh | sh -"><div></div></button></div></figure></div><p>Or, if you already have npm:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">npm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-g</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">pnpm</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="npm install -g pnpm"><div></div></button></div></figure></div>
+</div><div id="tab-panel-1-2" aria-labelledby="tab-1-2" role="tabpanel" hidden>
+	<p>In PowerShell:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="powershell"><code><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#096E72">Invoke-WebRequest</span><span style="--0:#D6DEEB;--1:#403F53"> https:</span><span style="--0:#C792EA;--1:#8844AE">//</span><span style="--0:#D6DEEB;--1:#403F53">get.pnpm.io</span><span style="--0:#C792EA;--1:#8844AE">/</span><span style="--0:#D6DEEB;--1:#403F53">install.ps1 </span><span style="--0:#C792EA;--1:#8844AE">-</span><span style="--0:#D6DEEB;--1:#403F53">UseBasicParsing </span><span style="--0:#7FDBCA;--1:#096E72">|</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#7FDBCA;--1:#096E72">Invoke-Expression</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="Invoke-WebRequest https://get.pnpm.io/install.ps1 -UseBasicParsing | Invoke-Expression"><div></div></button></div></figure></div><p>Or with winget:</p><div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="powershell"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">winget install pnpm.pnpm</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="winget install pnpm.pnpm"><div></div></button></div></figure></div>
+</div>
+	<starlight-tabs-restore class="astro-amjxdz5d"></starlight-tabs-restore>
+</starlight-tabs>
+
+
+<aside aria-label="Reload your shell afterwards" class="starlight-aside starlight-aside--caution"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path d="M12 16a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm10.67 1.47-8.05-14a3 3 0 0 0-5.24 0l-8 14A3 3 0 0 0 3.94 22h16.12a3 3 0 0 0 2.61-4.53Zm-1.73 2a1 1 0 0 1-.88.51H3.94a1 1 0 0 1-.88-.51 1 1 0 0 1 0-1l8-14a1 1 0 0 1 1.78 0l8.05 14a1 1 0 0 1 .05 1.02v-.02ZM12 8a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0V9a1 1 0 0 0-1-1Z"></path></svg>Reload your shell afterwards</p><div class="starlight-aside__content"><p>Every one of these methods changes your <code dir="auto">PATH</code>, and the change only applies to <strong>new</strong> terminal
+sessions. Either open a new terminal, or reload your current one:</p>
+
+
+<starlight-tabs data-sync-key="os" class="astro-amjxdz5d">
+	<div class="tablist-wrapper not-content astro-amjxdz5d">
+				<ul role="tablist" class="astro-amjxdz5d">
+					<li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-2-0" id="tab-2-0" aria-selected="true" tabindex="0" class="astro-amjxdz5d">
+								
+								macOS
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-2-1" id="tab-2-1" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Linux
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-2-2" id="tab-2-2" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Windows
+							</a>
+						</li>
+				</ul>
+			</div>
+	<div id="tab-panel-2-0" aria-labelledby="tab-2-0" role="tabpanel">
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">source</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">~/.zshrc</span><span style="--0:#D6DEEB;--1:#403F53">   </span><span style="--0:#919F9F;--1:#5F636F"># or ~/.bashrc if you use bash</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="source ~/.zshrc   # or ~/.bashrc if you use bash"><div></div></button></div></figure></div>
+</div><div id="tab-panel-2-1" aria-labelledby="tab-2-1" role="tabpanel" hidden>
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#C5E478;--1:#3B61B0">source</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">~/.bashrc</span><span style="--0:#D6DEEB;--1:#403F53">  </span><span style="--0:#919F9F;--1:#5F636F"># or ~/.zshrc if you use zsh</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="source ~/.bashrc  # or ~/.zshrc if you use zsh"><div></div></button></div></figure></div>
+</div><div id="tab-panel-2-2" aria-labelledby="tab-2-2" role="tabpanel" tabindex="0" hidden>
+	<p>Close and reopen PowerShell.</p>
+</div>
+	<starlight-tabs-restore class="astro-amjxdz5d"></starlight-tabs-restore>
+</starlight-tabs>
+
+<script type="module">var e=class e extends HTMLElement{static#e=new Map;tabs;panels;#t;#n=`starlight-synced-tabs__`;constructor(){super();let t=this.querySelector(`[role="tablist"]`);if(this.tabs=[...t.querySelectorAll(`[role="tab"]`)],this.panels=[...this.querySelectorAll(`:scope > [role="tabpanel"]`)],this.#t=this.dataset.syncKey,this.#t){let t=e.#e.get(this.#t)??[];t.push(this),e.#e.set(this.#t,t)}this.tabs.forEach((e,n)=>{e.addEventListener(`click`,e=>{e.preventDefault();let r=t.querySelector(`[aria-selected="true"]`);e.currentTarget!==r&&this.switchTab(e.currentTarget,n)}),e.addEventListener(`keydown`,e=>{let t=this.tabs.indexOf(e.currentTarget),n=e.key===`ArrowLeft`?t-1:e.key===`ArrowRight`?t+1:e.key===`Home`?0:e.key===`End`?this.tabs.length-1:null;n!==null&&this.tabs[n]&&(e.preventDefault(),this.switchTab(this.tabs[n],n))})})}switchTab(t,n,r=!0){if(!t)return;let i=r?this.getBoundingClientRect().top:0;this.tabs.forEach(e=>{e.setAttribute(`aria-selected`,`false`),e.setAttribute(`tabindex`,`-1`)}),this.panels.forEach(e=>{e.hidden=!0});let a=this.panels[n];a&&(a.hidden=!1),t.removeAttribute(`tabindex`),t.setAttribute(`aria-selected`,`true`),r&&(t.focus(),e.#i(this,t),window.scrollTo({top:window.scrollY+(this.getBoundingClientRect().top-i),behavior:`instant`}))}#r(e){!this.#t||typeof localStorage>`u`||localStorage.setItem(this.#n+this.#t,e)}static#i(t,n){let r=t.#t,i=e.#a(n);if(!r||!i)return;let a=e.#e.get(r);if(a){for(let n of a){if(n===t)continue;let r=n.tabs.findIndex(t=>e.#a(t)===i);r!==-1&&n.switchTab(n.tabs[r],r,!1)}t.#r(i)}}static#a(e){return e.textContent?.trim()}};customElements.define(`starlight-tabs`,e);</script></div></aside>
+<aside aria-label="Note" class="starlight-aside starlight-aside--note"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg>Note</p><div class="starlight-aside__content"><p>The standalone installer bundles its own Node runtime; Homebrew, winget, and npm do not. Installing
+pnpm through more than one method leaves duplicate copies on your <code dir="auto">PATH</code> — harmless, but pick one if
+you want to keep things tidy.</p></div></aside>
+<p>Verify both before continuing:</p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">node</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--version</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--version</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="node --versionpnpm --version"><div></div></button></div></figure></div>
+<p>Only move on once both print a version number. Run the remaining commands one at a time — if you
+paste them as a block, later commands run before the earlier ones have finished.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="2-install-dependencies">2. Install dependencies</h2><a class="sl-anchor-link" href="#2-install-dependencies"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “2. Install dependencies”</span></a></div>
+<p>From the root of your cloned repository:</p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="pnpm install"><div></div></button></div></figure></div>
+<p>This reads <code dir="auto">pnpm-lock.yaml</code> and installs the exact dependency versions the site is built with. You
+only need to repeat this when dependencies change (for example after pulling in a branch that
+updates <code dir="auto">package.json</code>).</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="3-start-the-dev-server">3. Start the dev server</h2><a class="sl-anchor-link" href="#3-start-the-dev-server"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “3. Start the dev server”</span></a></div>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dev</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="pnpm dev"><div></div></button></div></figure></div>
+<p>Your local site will be available at <a href="http://localhost:4321">http://localhost:4321</a>.</p>
+<p>The dev server watches your files and hot-reloads the browser as you save, so you can keep it
+running while you edit. Press <code dir="auto">Ctrl+C</code> in the terminal to stop it (this is <code dir="auto">Ctrl+C</code> on macOS too,
+not <code dir="auto">Cmd+C</code>).</p>
+<aside aria-label="Tip" class="starlight-aside starlight-aside--tip"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path fill-rule="evenodd" d="M1.44 8.855v-.001l3.527-3.516c.34-.344.802-.541 1.285-.548h6.649l.947-.947c3.07-3.07 6.207-3.072 7.62-2.868a1.821 1.821 0 0 1 1.557 1.557c.204 1.413.203 4.55-2.868 7.62l-.946.946v6.649a1.845 1.845 0 0 1-.549 1.286l-3.516 3.528a1.844 1.844 0 0 1-3.11-.944l-.858-4.275-4.52-4.52-2.31-.463-1.964-.394A1.847 1.847 0 0 1 .98 10.693a1.843 1.843 0 0 1 .46-1.838Zm5.379 2.017-3.873-.776L6.32 6.733h4.638l-4.14 4.14Zm8.403-5.655c2.459-2.46 4.856-2.463 5.89-2.33.134 1.035.13 3.432-2.329 5.891l-6.71 6.71-3.561-3.56 6.71-6.711Zm-1.318 15.837-.776-3.873 4.14-4.14v4.639l-3.364 3.374Z" clip-rule="evenodd"></path><path d="M9.318 18.345a.972.972 0 0 0-1.86-.561c-.482 1.435-1.687 2.204-2.934 2.619a8.22 8.22 0 0 1-1.23.302c.062-.365.157-.79.303-1.229.415-1.247 1.184-2.452 2.62-2.935a.971.971 0 1 0-.62-1.842c-.12.04-.236.084-.35.13-2.02.828-3.012 2.588-3.493 4.033a10.383 10.383 0 0 0-.51 2.845l-.001.016v.063c0 .536.434.972.97.972H2.24a7.21 7.21 0 0 0 .878-.065c.527-.063 1.248-.19 2.02-.447 1.445-.48 3.205-1.472 4.033-3.494a5.828 5.828 0 0 0 .147-.407Z"></path></svg>Tip</p><div class="starlight-aside__content"><p>If port 4321 is already in use, start the server on a different port with
+<code dir="auto">pnpm dev --port 4322</code>.</p></div></aside>
+<div class="sl-heading-wrapper level-h2"><h2 id="4-build-and-preview-the-production-site">4. Build and preview the production site</h2><a class="sl-anchor-link" href="#4-build-and-preview-the-production-site"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “4. Build and preview the production site”</span></a></div>
+<p>Before opening a pull request, it is worth confirming that the site builds cleanly. The dev server
+is more forgiving than the production build, so this step catches broken links and invalid
+frontmatter that you would otherwise only see in CI.</p>
+<ol role="list" class="sl-steps">
+<li>
+<p>Build the static site into <code dir="auto">dist/</code>:</p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">build</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="pnpm build"><div></div></button></div></figure></div>
+</li>
+<li>
+<p>Serve that build locally:</p>
+<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">preview</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="pnpm preview"><div></div></button></div></figure></div>
+</li>
+<li>
+<p>Open the URL printed in your terminal and check your pages.</p>
+</li>
+</ol>
+<p>If the build fails, the error message names the file and line to fix. Common causes are a broken
+internal link, a missing image in <code dir="auto">public/</code>, or an MDX component that was used without being
+imported. See the <a href="/developers/documentation/markdown-formatting/">Markdown Reference</a> for correct
+syntax.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="5-where-things-live">5. Where things live</h2><a class="sl-anchor-link" href="#5-where-things-live"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “5. Where things live”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Path</th><th>Contents</th></tr></thead><tbody><tr><td><code dir="auto">src/content/docs/</code></td><td>All documentation pages (<code dir="auto">.md</code> and <code dir="auto">.mdx</code>). The file path becomes the URL.</td></tr><tr><td><code dir="auto">src/components/</code></td><td>Reusable Astro and React components used inside pages.</td></tr><tr><td><code dir="auto">src/styles/</code></td><td>Custom CSS layered on top of the Starlight theme.</td></tr><tr><td><code dir="auto">public/</code></td><td>Static assets served as-is: images, icons, downloads.</td></tr><tr><td><code dir="auto">astro.config.mjs</code></td><td>Site config, sidebar structure, and redirects.</td></tr></tbody></table>
+<div class="sl-heading-wrapper level-h2"><h2 id="6-adding-a-page-to-the-sidebar">6. Adding a page to the sidebar</h2><a class="sl-anchor-link" href="#6-adding-a-page-to-the-sidebar"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “6. Adding a page to the sidebar”</span></a></div>
+<p>Most sections of the sidebar are generated automatically from the directory structure in
+<code dir="auto">astro.config.mjs</code>, so a new file in an existing folder appears without any extra configuration.
+Control its position and label from the page’s own frontmatter:</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="yaml"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">---</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#111111">title</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#ECC48D;--1:#3B61B0">My New Page</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#111111">description</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#ECC48D;--1:#3B61B0">A short summary used for search results and social previews.</span></div></div><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#111111">sidebar</span><span style="--0:#D6DEEB;--1:#403F53">:</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#7FDBCA;--1:#111111">label</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#ECC48D;--1:#3B61B0">Short Label</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#7FDBCA;--1:#111111">order</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#F78C6C;--1:#AA0982">2</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">---</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="---title: My New Pagedescription: A short summary used for search results and social previews.sidebar:  label: Short Label  order: 2---"><div></div></button></div></figure></div>
+<p>If you add a whole new top-level section, add it to the <code dir="auto">sidebar</code> array in <code dir="auto">astro.config.mjs</code>.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="7-changing-a-pages-url">7. Changing a page’s URL</h2><a class="sl-anchor-link" href="#7-changing-a-pages-url"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “7. Changing a page’s URL”</span></a></div>
+<p>The URL of a page follows its path under <code dir="auto">src/content/docs/</code>. If you rename or move a file, add an
+entry to the <code dir="auto">redirects</code> map in <code dir="auto">astro.config.mjs</code> so existing links keep working:</p>
+<div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="js"><code><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">redirects: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#D9F5DD;--1:#111111">&#39;</span><span style="--0:#ECC48D;--1:#984E4D">/old/path</span><span style="--0:#D9F5DD;--1:#111111">&#39;</span><span style="--0:#D6DEEB;--1:#403F53">: </span><span style="--0:#D9F5DD;--1:#111111">&#39;</span><span style="--0:#ECC48D;--1:#984E4D">/new/path/</span><span style="--0:#D9F5DD;--1:#111111">&#39;</span><span style="--0:#D6DEEB;--1:#403F53">,</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">}</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="redirects: {  '/old/path': '/new/path/',}"><div></div></button></div></figure></div>
+<div class="sl-heading-wrapper level-h2"><h2 id="troubleshooting">Troubleshooting</h2><a class="sl-anchor-link" href="#troubleshooting"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Troubleshooting”</span></a></div>
+<p><strong><code dir="auto">env: node: No such file or directory</code></strong> (or <code dir="auto">&#39;node&#39; is not recognized</code> on Windows) — pnpm is
+installed but Node.js is not. pnpm cannot run without a Node runtime; see
+<a href="#installing-nodejs">Installing Node.js</a> above.</p>
+<p><strong><code dir="auto">pnpm: command not found</code></strong> — pnpm is not installed, or it is installed but not yet on your
+<code dir="auto">PATH</code>. Work through <a href="#installing-pnpm">Installing pnpm</a>, then open a new terminal so the updated
+<code dir="auto">PATH</code> takes effect.</p>
+<p><strong><code dir="auto">corepack: command not found</code></strong> — Corepack is not bundled with your Node build. This is expected
+on Homebrew and some distro builds; use one of the other pnpm install methods instead.</p>
+<p><strong>Install fails with an engine or version error</strong> — check <code dir="auto">node --version</code>. Node 20 or newer is
+required; older releases will fail on some dependencies.</p>
+<p><strong>Changes do not appear in the browser</strong> — stop the dev server, delete the Astro cache, and start
+again:</p>
+
+
+
+<starlight-tabs data-sync-key="os" class="astro-amjxdz5d">
+	<div class="tablist-wrapper not-content astro-amjxdz5d">
+				<ul role="tablist" class="astro-amjxdz5d">
+					<li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-3-0" id="tab-3-0" aria-selected="true" tabindex="0" class="astro-amjxdz5d">
+								
+								macOS
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-3-1" id="tab-3-1" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Linux
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-3-2" id="tab-3-2" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Windows
+							</a>
+						</li>
+				</ul>
+			</div>
+	<div id="tab-panel-3-0" aria-labelledby="tab-3-0" role="tabpanel">
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">rm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-rf</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">node_modules/.astro</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dev</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="rm -rf node_modules/.astropnpm dev"><div></div></button></div></figure></div>
+</div><div id="tab-panel-3-1" aria-labelledby="tab-3-1" role="tabpanel" hidden>
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">rm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-rf</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">node_modules/.astro</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">dev</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="rm -rf node_modules/.astropnpm dev"><div></div></button></div></figure></div>
+</div><div id="tab-panel-3-2" aria-labelledby="tab-3-2" role="tabpanel" hidden>
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="powershell"><code><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#096E72">Remove-Item</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C792EA;--1:#8844AE">-</span><span style="--0:#D6DEEB;--1:#403F53">Recurse </span><span style="--0:#C792EA;--1:#8844AE">-</span><span style="--0:#D6DEEB;--1:#403F53">Force node_modules\.astro</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">pnpm dev</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="Remove-Item -Recurse -Force node_modules\.astropnpm dev"><div></div></button></div></figure></div>
+</div>
+	<starlight-tabs-restore class="astro-amjxdz5d"></starlight-tabs-restore>
+</starlight-tabs>
+
+
+<p><strong>A stale or corrupted install</strong> — remove and reinstall dependencies:</p>
+
+
+
+<starlight-tabs data-sync-key="os" class="astro-amjxdz5d">
+	<div class="tablist-wrapper not-content astro-amjxdz5d">
+				<ul role="tablist" class="astro-amjxdz5d">
+					<li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-4-0" id="tab-4-0" aria-selected="true" tabindex="0" class="astro-amjxdz5d">
+								
+								macOS
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-4-1" id="tab-4-1" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Linux
+							</a>
+						</li><li role="presentation" class="tab astro-amjxdz5d">
+							<a role="tab" href="#tab-panel-4-2" id="tab-4-2" aria-selected="false" tabindex="-1" class="astro-amjxdz5d">
+								
+								Windows
+							</a>
+						</li>
+				</ul>
+			</div>
+	<div id="tab-panel-4-0" aria-labelledby="tab-4-0" role="tabpanel">
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">rm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-rf</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">node_modules</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="rm -rf node_modulespnpm install"><div></div></button></div></figure></div>
+</div><div id="tab-panel-4-1" aria-labelledby="tab-4-1" role="tabpanel" hidden>
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">rm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-rf</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">node_modules</span></div></div><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">pnpm</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">install</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="rm -rf node_modulespnpm install"><div></div></button></div></figure></div>
+</div><div id="tab-panel-4-2" aria-labelledby="tab-4-2" role="tabpanel" hidden>
+	<div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="powershell"><code><div class="ec-line"><div class="code"><span style="--0:#7FDBCA;--1:#096E72">Remove-Item</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C792EA;--1:#8844AE">-</span><span style="--0:#D6DEEB;--1:#403F53">Recurse </span><span style="--0:#C792EA;--1:#8844AE">-</span><span style="--0:#D6DEEB;--1:#403F53">Force node_modules</span></div></div><div class="ec-line"><div class="code"><span style="--0:#D6DEEB;--1:#403F53">pnpm install</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="Remove-Item -Recurse -Force node_modulespnpm install"><div></div></button></div></figure></div>
+</div>
+	<starlight-tabs-restore class="astro-amjxdz5d"></starlight-tabs-restore>
+</starlight-tabs>
+
+
+<p><strong><code dir="auto">pnpm install</code> fails with a permissions error</strong> — you may be running it outside the repository, or
+in a directory you do not own. Confirm you are in the repository root (the folder containing
+<code dir="auto">package.json</code>) and that you own it. Do not run <code dir="auto">pnpm install</code> with <code dir="auto">sudo</code>.</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="need-help">Need help?</h2><a class="sl-anchor-link" href="#need-help"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Need help?”</span></a></div>
+<p>If you get stuck, open a
+<a href="https://github.com/orgs/neurodesk/discussions">discussion</a> or an
+<a href="https://github.com/neurodesk/neurodesk.github.io-astro/issues">issue</a> and we will help you out.</p>
+									</div>
+									<footer class="sl-flex astro-twn67k4s">
+	<div class="meta sl-flex astro-twn67k4s">
+		<a href="https://github.com/neurodesk/neurodesk.github.io/edit/main/src/content/docs/developers/documentation/local-development.mdx" class="sl-flex print:hidden astro-rdztq3e4">
+			<svg aria-hidden="true" class="astro-rdztq3e4 astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.2em;"><path d="M22 7.24a1 1 0 0 0-.29-.71l-4.24-4.24a1 1 0 0 0-1.1-.22 1 1 0 0 0-.32.22l-2.83 2.83L2.29 16.05a1 1 0 0 0-.29.71V21a1 1 0 0 0 1 1h4.24a1 1 0 0 0 .76-.29l10.87-10.93L21.71 8c.1-.1.17-.2.22-.33a1 1 0 0 0 0-.24v-.14l.07-.05ZM6.83 20H4v-2.83l9.93-9.93 2.83 2.83L6.83 20ZM18.17 8.66l-2.83-2.83 1.42-1.41 2.82 2.82-1.41 1.42Z"/></svg>
+			Edit page
+		</a>
+		
+	</div>
+	<div class="pagination-links print:hidden astro-iloj3wob" dir="ltr">
+	<a href="/developers/documentation/creating-website-content/" rel="prev" class="astro-iloj3wob">
+				<svg aria-hidden="true" class="astro-iloj3wob astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg>
+				<span class="astro-iloj3wob">
+					Previous
+					<br class="astro-iloj3wob">
+					<span class="link-title astro-iloj3wob">Contribute Content</span>
+				</span>
+			</a>
+	<a href="/developers/documentation/markdown-formatting/" rel="next" class="astro-iloj3wob">
+				<svg aria-hidden="true" class="astro-iloj3wob astro-thhzzpoq" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg>
+				<span class="astro-iloj3wob">
+					Next
+					<br class="astro-iloj3wob">
+					<span class="link-title astro-iloj3wob">Markdown Reference</span>
+				</span>
+			</a>
+</div>
+
+	
+</footer>
+								</div>
+</div>
+							
+				</main>
+			</div>
+</div>
+		</div>
+</div>
+	</body>
+</html>

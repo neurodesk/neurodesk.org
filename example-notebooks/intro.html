@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Neurodesk environment &#8212; Neurodesk</title>
+    <title>NeurodeskEDU - Neurodesk’s education and learning resources &#8212; Neurodesk</title>
   
   
   
@@ -16,47 +16,57 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/review-badge.css?v=66080ea3" />
   
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4Z9774J59Y"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
                 gtag('js', new Date());
                 gtag('config', 'G-4Z9774J59Y');
             </script>
@@ -66,6 +76,12 @@
     <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
                 gtag('js', new Date());
                 gtag('config', 'G-4Z9774J59Y');
             </script>
@@ -73,41 +89,39 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
-    <link rel="canonical" href="https://neurodesk.github.io/example-notebooks/intro.html" />
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/review-badge.js?v=e2204dae"></script>
+    <link rel="canonical" href="https://neurodesk.org/edu/intro.html" />
     <link rel="icon" href="_static/neurodesk_logo.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Neurodesk Tools Demo" href="workflows/AA_Neurodesk_demo_tour.html" />
+    <link rel="next" title="Examples" href="examples/intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -115,23 +129,66 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
+         placeholder="Search..."
+         aria-label="Search..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -142,7 +199,8 @@
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -172,106 +230,184 @@
     
     
     <img src="_static/neurodesk_logo.svg" class="logo__image only-light" alt="Neurodesk - Home"/>
-    <script>document.write(`<img src="_static/neurodesk_logo.svg" class="logo__image only-dark" alt="Neurodesk - Home"/>`);</script>
+    <img src="_static/neurodesk_logo.svg" class="logo__image only-dark pst-js-only" alt="Neurodesk - Home"/>
   
   
 </a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neurodesk.org" title="Return to neurodesk.org" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-house fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Return to neurodesk.org</span></a>
+        </li>
+</ul></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
-                    Neurodesk environment
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflows</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="workflows/AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows/MRIQC.html">MRIQC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows/PyBIDS.html">PyBIDS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows/RISE_slideshow.html">RISE Slideshow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows/bids_conversion.html">BIDS conversion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows/nipype_full.html">Nipype on Neurodesk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows/nipype_short.html">Basic Nipype</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
-<li class="toctree-l1"><a class="reference internal" href="workflows/pydra_preproc_ants.html">Pydra</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="examples/intro.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/template.html">Example Notebook Template</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples/diffusion_imaging/intro.html">Diffusion Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/DIPY_1.html">Basic Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/DIPY_2.html">Advanced Tracking with DIPY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/MRtrix_1.html">MRtrix: Part 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/MRtrix_2.html">MRtrix: Part 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/MRtrix_3.html">MRtrix: Part 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/mrtrix3tissue.html">MRtrix3Tissue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/qsiprep.html">QSIPrep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/diffusion_imaging/qsirecon.html">QSIRecon</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Structural Imaging</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="structural_imaging/freesurfer.html">FreeSurfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="structural_imaging/qsmxt.html">QSMxT</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
-
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Spectroscopy</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/Demo_FEAT_HigherLevelStats.html">Scripted Higher-Level Analyses in FSL using FEAT derivatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/Demo_fmriprep_FEAT.html">Scripted First-Level Analyses in FSL using fMRIPrep data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/deepretinotopy.html">DeepRetinotopy Toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/fMRI_tutorial_in_R_magic.html">Resting-State fMRI Analysis in R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/fmriprep.html">fMRIprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/intro_to_preprocessing.html">Introduction to Preprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/mri_vol2surf.html">FreeSurfer: mri_vol2surf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/functional_imaging/process_five_echo_dataset.html">tedana: TE Dependent ANAlysis</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Diffusion Imaging</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="diffusion_imaging/DIPY_1.html">Basic Tracking with DIPY</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diffusion_imaging/DIPY_2.html">Advanced Tracking with DIPY</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diffusion_imaging/Diffusion_TBSS_Demo.html">TBSS Tutorial</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="diffusion_imaging/MRtrix_1.html">MRtrix: Part 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diffusion_imaging/MRtrix_2.html">MRtrix: Part 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diffusion_imaging/MRtrix_3.html">MRtrix: Part 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diffusion_imaging/mrtrix3tissue.html">MRtrix3Tissue</a></li>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples/quantitative_imaging/intro.html">Quantitative Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/quantitative_imaging/aslprep.html">ASLprep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/quantitative_imaging/qsmxt.html">QSMxT</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Functional Imaging</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/AFNI_preprocessing_only.html">AFNI Preprocessing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/AFNI_preprocessing_plus_glm.html">AFNI Preprocessing and GLM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/AFNI_preprocessing_plus_glm_group.html">AFNI Preprocessing &amp; Group Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/AFNI_processing_task_based.html">Processing task-based FMRI with AFNI and afni_proc.py</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/FSL_preproc_glm.html">FSL Preprocessing and GLM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/FSLnets_course_practical.html">Resting state with FSLnets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/NiWrap.html">NiWrap and Connectome Workbench</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/aslprep.html">ASLprep</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/deepretinotopy.html">DeepRetinotopy Toolbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/first_and_second_level_spm.html">Nipype-SPM fMRI Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/fmriprep.html">fMRIprep</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/fsl_all_levels_flanker_nipype.html">Nipype-FSL fMRI Analysis</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/intro_to_preprocessing.html">Introduction to Preprocessing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/mri_vol2surf.html">FreeSurfer: mri_vol2surf</a></li>
-<li class="toctree-l1"><a class="reference internal" href="functional_imaging/process_five_echo_dataset.html">tedana: TE Dependent ANAlysis</a></li>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples/spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/spectroscopy/lcmodel.html">MR Spectroscopy with LCModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/spectroscopy/osprey.html">MR Spectroscopy with Osprey</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electrophysiology</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="electrophysiology/eeg_with_mne.html">EEG Analysis with MNE</a></li>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples/structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/structural_imaging/FSL_course_bet.html">FSL course - BET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/structural_imaging/SYNcro.html">SYNcro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/structural_imaging/brain_extraction_different_tools.html">Brain Extraction Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/structural_imaging/brainageR.html">Brain Age Prediction with brainageR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/structural_imaging/freesurfer-recon-all-clinical.html">FreeSurfer: recon-all-clinical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/structural_imaging/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/structural_imaging/sct_toolbox.html">SCT Toolbox</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="examples/workflows/intro.html">Workflows</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/AA_Neurodesk_demo_tour.html">Neurodesk Tools Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/MRIQC.html">MRIQC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/Magic_commands.html">Magic Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/PyBIDS.html">PyBIDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/RISE_slideshow.html">RISE Slideshow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/bids_conversion.html">BIDS conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/container_paths_neurodesk.html">Container Resource Paths on Neurodesk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/ipyniivue_ipywidgets.html">Ipyniivue and Ipywidgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/nextflow_neurodesk.html">Nextflow in Neurodesk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/nipype_full.html">Nipype on Neurodesk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/nipype_short.html">Basic Nipype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/papermill-slurm-submission-example.html">Papermill Slurm Job Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/pydra_preproc_ants.html">Pydra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/workflows/snakemake.html">Snakemake</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorials/intro.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/about_neurodesk/intro.html">About Neurodesk</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/about_neurodesk/MySt_neurodesk.html">Citation and Resources</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l3"><a class="reference internal" href="tutorials/about_neurodesk/accessing_neurodesk_tools.html">Accessing Tools in Neurodesk</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/electrophysiology/intro.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/electrophysiology/EEG_mne-python.html">Analysing EEG Data with MNE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/electrophysiology/fieldtrip.html">Analysing M/EEG Data with FieldTrip</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/functional_imaging/intro.html">Functional Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/functional_imaging/connectomeWorkbench.html">Connectome Workbench</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/functional_imaging/fmriprep.html">Using fmriprep with neurodesk on an HPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/functional_imaging/mriqc.html">Using mriqc with neurodesk on HPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/functional_imaging/physio.html">PhysIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/functional_imaging/physio_batch_workflow.html">A batch scripting example for PhysIO toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/functional_imaging/spm.html">Statistical Parametric Mapping (SPM)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/multimodal_imaging/intro.html">Multimodal Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/multimodal_imaging/MFCSC.html">Using MFCSC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/open_data/intro.html">Open Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/open_data/datalad.html">datalad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/open_data/osfclient.html">osfclient</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/phase_processing/intro.html">Phase Processing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/phase_processing/swi.html">Susceptibility-Weighted Imaging (SWI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/phase_processing/unwrapping.html">MRI Phase Unwrapping with ROMEO</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/programming/intro.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/programming/conda.html">Conda environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/programming/matlab.html">Matlab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/reproducibility/intro.html">Reproducibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/reproducibility/datalad-run.html">Reproducible script execution with DataLad</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/spectroscopy/intro.html">Spectroscopy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/spectroscopy/lcmodel.html">Spectroscopy with lcmodel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/spectroscopy/mrsiproc.html">Spectroscopy pipeline</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials/structural_imaging/intro.html">Structural Imaging</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/structural_imaging/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials/structural_imaging/structuralconnectivity.html">Structural connectivity dMRI</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="contribute/intro.html">Contribute</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute/examples.html">Creating Example Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/tutorials.html">Creating Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/review.html">Reviewing for NeurodeskEDU</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -280,9 +416,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -313,70 +454,6 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/NeuroDesk/example-notebooks" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/NeuroDesk/example-notebooks/edit/main/books/intro.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/NeuroDesk/example-notebooks/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
 
 
 
@@ -429,7 +506,7 @@
 
 
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
   title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
@@ -443,25 +520,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
 </div></div>
@@ -474,7 +543,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Neurodesk environment</h1>
+    <h1>NeurodeskEDU - Neurodesk’s education and learning resources</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -483,14 +552,13 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Neurodesk environment</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#neurodesk">Neurodesk</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a><ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-neurodesk">1. Understand Neurodesk:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-your-setup">2. Choose Your Setup:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-the-instructions">3. Follow the Instructions:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video-tutorial">4. Video tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -501,38 +569,62 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="neurodesk-environment">
-<h1>Neurodesk environment<a class="headerlink" href="#neurodesk-environment" title="Link to this heading">#</a></h1>
-<p>Each Jupyter notebook in the repository is equipped with a Jupyter Hub button (the little rocket) at the top. This button will allow you to interact with the notebooks in a cloud-based environment. The environment is pre-configured to support Neurodesk, so you can start experimenting with the notebooks right away without having to install any additional software or packages.</p>
-<p>If you want to run these notebooks in another neurodesk environment, make sure to clone this repository first:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neurodesk</span><span class="o">/</span><span class="n">example</span><span class="o">-</span><span class="n">notebooks</span><span class="o">.</span><span class="n">git</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="neurodeskedu-neurodesk-s-education-and-learning-resources">
+<h1>NeurodeskEDU - Neurodesk’s education and learning resources<a class="headerlink" href="#neurodeskedu-neurodesk-s-education-and-learning-resources" title="Link to this heading">#</a></h1>
+<img alt="Neurodesk tutorials vs examples" src="_images/neurodesk_tutorials_vs_examples.png" />
+<p>Neurodesk offers two types of learning resources to help you get started with neuroimaging analysis:</p>
+<p><strong>Tutorials</strong> are static, step-by-step guides that walk you through analyses using graphical user interfaces (GUIs). They include screenshots, detailed instructions, and visual documentation—perfect for beginners or those who prefer point-and-click workflows.</p>
+<p><strong>Examples</strong> are interactive computational notebooks that you can run, modify, and experiment with. These Jupyter notebooks contain executable code and are ideal for users who want to automate analyses, build reproducible workflows, or dive deeper into scripting-based neuroimaging.</p>
+<p>Each Jupyter notebook in the repository is equipped with a Jupyter Hub button (<i class="fas fa-rocket" aria-hidden="true"></i>) at the top. This button will allow you to interact with the notebooks in a cloud-based environment. The environment is pre-configured to support Neurodesk, so you can start experimenting with the notebooks right away without having to install any additional software or packages.</p>
+<p>If you want to run these notebooks in another Neurodesk environment, make sure to clone the example notebooks in this repository first:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--filter<span class="o">=</span>blob:none<span class="w"> </span>https://github.com/neurodesk/neurodeskedu.git
+<span class="nb">cd</span><span class="w"> </span>neurodeskedu
+git<span class="w"> </span>sparse-checkout<span class="w"> </span>init<span class="w"> </span>--cone
+git<span class="w"> </span>sparse-checkout<span class="w"> </span><span class="nb">set</span><span class="w"> </span>books/examples
 </pre></div>
 </div>
+<p>Choose the format that best matches your learning style and experience level. Both resources use the same containerised neuroimaging tools available in Neurodesk. You can also contribute both tutorials and examples.</p>
 <p><strong>💡 Note:</strong> If you aren’t finding what you’re looking for, please <a href="https://neurodesk.org/contact/">contact us</a>.</p>
+<section id="understand-neurodesk">
+<h2>1. Understand Neurodesk:<a class="headerlink" href="#understand-neurodesk" title="Link to this heading">#</a></h2>
+<p>Neurodesk is a flexible and scalable data analysis environment for reproducible neuroimaging. The NeurodeskApp combines both computational notebooks and a graphical user interface. In this section, you will find learning resources for both of these tools. <a class="reference external" href="https://neurodesk.org/docs/overview">More info</a></p>
 </section>
-<section id="neurodesk">
-<h1>Neurodesk<a class="headerlink" href="#neurodesk" title="Link to this heading">#</a></h1>
-<p>For more information about how to develop these notebooks or explore the tools in Neurodesk, please visit <a class="reference external" href="https://neurodesk.org/">our website neurodesk.org</a>.</p>
+<section id="choose-your-setup">
+<h2>2. Choose Your Setup:<a class="headerlink" href="#choose-your-setup" title="Link to this heading">#</a></h2>
+<p>Neurodesk can be used on various platforms, including a local PC, High-Performance Computing (HPC), Cloud, and Google Colab. It supports Linux, Mac, and Windows operating systems. You can interact with it through a desktop interface, command line, container, or VSCode. Choose the setup that best suits your needs based on <a class="reference external" href="https://neurodesk.org/docs/getting-started/">this table</a>.</p>
+</section>
+<section id="follow-the-instructions">
+<h2>3. Follow the Instructions:<a class="headerlink" href="#follow-the-instructions" title="Link to this heading">#</a></h2>
+<p>Once you’ve chosen your setup, follow the instructions provided in the link.</p>
+<p><strong>For example</strong>, if you’re using Linux on a local PC with a desktop interface, you would follow the instructions at https://neurodesk.org/docs/getting-started/neurodesktop/linux/.</p>
+<img alt="Neurodesk setup table" src="_images/startup_table.png" />
+</section>
+<section id="video-tutorial">
+<h2>4. Video tutorial<a class="headerlink" href="#video-tutorial" title="Link to this heading">#</a></h2>
+<p>See below for a 4-minute tutorial on Installation, Usage and Data Access with Neurodesktop</p>
+<div style="max-width: 900px; margin-left: 0;">
+  <iframe
+    width="900"
+    height="506"
+    src="https://www.youtube.com/embed/BffOZcV2oaY"
+    title="YouTube video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
 </section>
 <section id="acknowledgements">
-<h1>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h1>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
 <p>This example repository is funded by the Wellcome Trust with a Wellcome Discretionary Award as part of the Chan Zuckerberg Initiative (CZI), The Kavli Foundation and Wellcome’s Essential Open Source Software for Science (Cycle 6) Program [313306/Z/24/Z]</p>
 <p>The interactive version of these notebooks is run in the US by Jetstream2 (NSF award #2005506), which is supported by the National Science Foundation. Jetstream2 is a cloud computing resource managed by the Indiana University Pervasive Technology Institute and part of the ACCESS project.</p>
 <p>The interactive version of these notebooks is run in Europe by the EGI Federation with the dedicated support of CESNET-MCC. Computational resources were provided by the e-INFRA CZ project (ID:90254), supported by the Ministry of Education, Youth and Sports of the Czech Republic.</p>
-<a class="reference internal image-reference" href="_images/Wellcome_Trust_logo.png"><img alt="_images/Wellcome_Trust_logo.png" src="_images/Wellcome_Trust_logo.png" style="width: 150px;" />
+<a class="reference internal image-reference" href="_images/Wellcome_Trust_logo.png"><img alt="Wellcome Trust logo" src="_images/Wellcome_Trust_logo.png" style="width: 150px;" />
 </a>
-<a class="reference internal image-reference" href="_images/czi_logo.png"><img alt="_images/czi_logo.png" src="_images/czi_logo.png" style="width: 250px;" />
+<a class="reference internal image-reference" href="_images/czi_logo.png"><img alt="Chan Zuckerberg Initiative logo" src="_images/czi_logo.png" style="width: 250px;" />
 </a>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
+<!-- Trigger: update navigation_depth -> 3 (2025-12-17 06:30Z) - harmless comment -->
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -568,11 +660,11 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="workflows/AA_Neurodesk_demo_tour.html"
+       href="examples/intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Neurodesk Tools Demo</p>
+        <p class="prev-next-title">Examples</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -583,22 +675,23 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Neurodesk environment</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#neurodesk">Neurodesk</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a><ul class="visible nav section-nav flex-column">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understand-neurodesk">1. Understand Neurodesk:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choose-your-setup">2. Choose Your Setup:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-the-instructions">3. Follow the Instructions:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video-tutorial">4. Video tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
@@ -646,8 +739,8 @@ By Neurodesk Team
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
 
   <footer class="bd-footer">
   </footer>
