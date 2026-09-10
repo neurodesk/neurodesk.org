@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-08-28T18:21:57+00:00",
+  "generated_at": "2026-09-10T05:57:27+00:00",
   "source": {
     "type": "github-issues",
     "repo": "neurodesk/neurodeskedu-reviews"
@@ -13,6 +13,14 @@
         "lowripowell"
       ],
       "source_path": "examples/diffusion_imaging/qsirecon.ipynb"
+    },
+    "378baf4c-c107-47b9-a8bf-cc286d89d91e": {
+      "state": "in-progress",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/33",
+      "reviewers": [
+        "astewartau"
+      ],
+      "source_path": "examples/workflows/nextflow_neurodesk.ipynb"
     },
     "5bf2221b-7324-4a1d-be9c-df07b9bb4d2a": {
       "state": "unreviewed",
@@ -54,11 +62,6 @@
         "micmas"
       ],
       "source_path": "examples/workflows/RISE_slideshow.ipynb"
-    },
-    "378baf4c-c107-47b9-a8bf-cc286d89d91e": {
-      "state": "queued",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/33",
-      "source_path": "examples/workflows/nextflow_neurodesk.ipynb"
     },
     "776677f3-4ea4-4810-a314-4212d09cb31a": {
       "state": "in-progress",
@@ -307,7 +310,7 @@
       "reviewed_at": "2026-03-06",
       "review_commit_sha": "c20323f110aacb06dc1f5cd41000a743ae798de1",
       "source_path": "examples/workflows/nipype_full.ipynb",
-      "review_content_hash": "348666d2d85b4767de0c8dede1df626daac245092ac35025a6ff927068042dd0"
+      "review_content_hash": "df3d0dfa35078d8ac6e7b95eff8542ce16a0cffe6a36926c817b44dfc367e6ea"
     },
     "1ba869e1-d94c-44b6-b958-f49cd5cb4e5e": {
       "state": "reviewed",
