@@ -59,13 +59,13 @@ chapters:
           - file: examples/workflows/papermill-slurm-submission-example
           - file: examples/workflows/PyBIDS
           - file: examples/workflows/pydra_preproc_ants
-          - file: examples/workflows/RISE_slideshow
 
   - file: tutorials/intro
     sections:
       - file: tutorials/about_neurodesk/intro
         sections:
           - file: tutorials/about_neurodesk/accessing_neurodesk_tools
+          - file: tutorials/about_neurodesk/RISE_slideshow
 
       - file: tutorials/electrophysiology/intro
         sections:

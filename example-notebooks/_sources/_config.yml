@@ -38,6 +38,10 @@ html:
 sphinx:
   config:
     nb_code_prompt_hide: "outputs"
+    # Keep old URLs alive after a page moves: "old docname: new docname".
+    # Handled by the nd_redirects local extension below.
+    nd_redirects:
+      examples/workflows/RISE_slideshow: tutorials/about_neurodesk/RISE_slideshow
     nb_merge_streams: true
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     html_static_path: ["_static"]
@@ -73,6 +77,7 @@ sphinx:
   local_extensions:
     multiple_jupyterhub: _ext
     nd_review_meta: _ext
+    nd_redirects: _ext
 
 parse:
   myst_enable_extensions:
