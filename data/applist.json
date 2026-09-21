@@ -108,6 +108,13 @@
             "license": "gpl-3.0"
         },
         {
+            "application": "afni_26.2.0_20260921",
+            "categories": [
+                "functional imaging"
+            ],
+            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)"
+        },
+        {
             "application": "aidamri_1.1_20210708",
             "categories": [
                 "diffusion imaging",
@@ -660,6 +667,14 @@
             "license": "mit-license"
         },
         {
+            "application": "bidsmanager_1.4.0_20260921",
+            "categories": [
+                "bids apps",
+                "data organisation"
+            ],
+            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:"
+        },
+        {
             "application": "bidsmanager_arm64_1.2.6.1_20260912",
             "categories": [
                 "bids apps",
@@ -678,6 +693,13 @@
             "doi": "10.5281/zenodo.22851290",
             "doi_url": "https://doi.org/10.5281/zenodo.22851290",
             "license": "mit-license"
+        },
+        {
+            "application": "bidsmanager_arm64_1.4.0_20260921",
+            "categories": [
+                "bids apps",
+                "data organisation"
+            ]
         },
         {
             "application": "bidsme_1.11.0_20260915",
@@ -1518,6 +1540,13 @@
             "license": "other-open"
         },
         {
+            "application": "deepdisco_20251008.1.0_20260921",
+            "categories": [
+                "diffusion imaging",
+                "machine learning"
+            ]
+        },
+        {
             "application": "deepisles_1.1_20260715",
             "categories": [
                 "image segmentation",
@@ -1625,6 +1654,13 @@
             "license": "mit-license"
         },
         {
+            "application": "dicompare_0.15.2_20260921",
+            "categories": [
+                "data organisation",
+                "quality control"
+            ]
+        },
+        {
             "application": "dicompare_0.5.4_20260506",
             "categories": [
                 "data organisation",
@@ -1633,6 +1669,13 @@
             "doi": "10.5281/zenodo.20102862",
             "doi_url": "https://doi.org/10.5281/zenodo.20102862",
             "license": "mit-license"
+        },
+        {
+            "application": "dicompare_arm64_0.15.2_20260921",
+            "categories": [
+                "data organisation",
+                "quality control"
+            ]
         },
         {
             "application": "dicomtools_1.0.0_20250204",
