@@ -5,6 +5,9 @@
             "categories": [
                 "image reconstruction"
             ],
+            "doi": "10.5281/zenodo.22984819",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984819",
+            "license": "cc-by-4.0",
             "openrecon": true
         },
         {
@@ -112,7 +115,10 @@
             "categories": [
                 "functional imaging"
             ],
-            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)"
+            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)",
+            "doi": "10.5281/zenodo.22984821",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984821",
+            "license": "gpl-3.0"
         },
         {
             "application": "aidamri_1.1_20210708",
@@ -177,7 +183,10 @@
             "application": "amico_arm64_2.1.1_20260910",
             "categories": [
                 "diffusion imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984864",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984864",
+            "license": "other-open"
         },
         {
             "application": "ants_2.3.1_20211204",
@@ -672,6 +681,17 @@
                 "bids apps",
                 "data organisation"
             ],
+            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:",
+            "doi": "10.5281/zenodo.22984911",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984911",
+            "license": "mit-license"
+        },
+        {
+            "application": "bidsmanager_1.4.1_20260927",
+            "categories": [
+                "bids apps",
+                "data organisation"
+            ],
             "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:"
         },
         {
@@ -699,6 +719,16 @@
             "categories": [
                 "bids apps",
                 "data organisation"
+            ],
+            "doi": "10.5281/zenodo.22984809",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984809",
+            "license": "mit-license"
+        },
+        {
+            "application": "bidsmanager_arm64_1.4.1_20260927",
+            "categories": [
+                "bids apps",
+                "data organisation"
             ]
         },
         {
@@ -706,7 +736,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "BIDSme is a an open-source python tool that converts source-level (raw) neuroimaging datasets to BIDS-conformed, and was developed by Nikita BELIY at the CRC."
+            "description": "BIDSme is a an open-source python tool that converts source-level (raw) neuroimaging datasets to BIDS-conformed, and was developed by Nikita BELIY at the CRC.",
+            "doi": "10.5281/zenodo.22984823",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984823",
+            "license": "gpl-2.0"
         },
         {
             "application": "bidsme_1.9.3_20250812",
@@ -782,7 +815,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:"
+            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:",
+            "doi": "10.5281/zenodo.22984845",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984845",
+            "license": "cc-by-4.0"
         },
         {
             "application": "bidstools_arm64_1.2.0_20260915",
@@ -797,7 +833,10 @@
             "application": "bidstools_arm64_1.3.0_20260919",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984813",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984813",
+            "license": "cc-by-4.0"
         },
         {
             "application": "bidsvue_0.1.20260704_20260707",
@@ -969,7 +1008,10 @@
             "categories": [
                 "workflows"
             ],
-            "description": "With brainlife CLI, you can .. Upload/download data from your computer. Upload data stored in BIDS format. Submit Apps, and monitor (you can fully script data processing through brainlife) Query projects, data, datatypes, etc."
+            "description": "With brainlife CLI, you can .. Upload/download data from your computer. Upload data stored in BIDS format. Submit Apps, and monitor (you can fully script data processing through brainlife) Query projects, data, datatypes, etc.",
+            "doi": "10.5281/zenodo.22984857",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984857",
+            "license": "mit-license"
         },
         {
             "application": "brainnetviewer_1.7.20191031_20240904",
@@ -1061,6 +1103,15 @@
             "license": "apache2.0"
         },
         {
+            "application": "brats_0.1.12_20260928",
+            "categories": [
+                "image segmentation",
+                "structural imaging",
+                "workflows"
+            ],
+            "description": "BraTS gives a single interface over the winning algorithms from the BraTS challenges: adult and paediatric glioma, meningioma, brain metastasis and sub-Saharan Africa segmentation, plus inpainting and missing-MRI synthesis. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Read this first: no algorithms are bundled This container is an orchestrator. It contains no model and no weights. Each of the 66 algorithms is a separate container published by its authors, between roughly 4 GB and over 30 GB compressed -- and the cached sandbox is larger still: a 4 GB pull unpacks to about 8 GB on disk, a 9 GB pull to about 14 GB. You pull the ones you want, once. ### GPU or CPU? Most algorithms need a GPU: only 16 of the 66 are CPU-compatible, and 7 of the 8 task defaults are GPU-only, so on a CPU node `brats -t <task>` without `-a` fails for every task except `africa`. The `adult-glioma-pre`, `pediatric` and `goat` tasks have no CPU-compatible algorithm at all. `brats-algorithms` lists the keys; pick a CPU-capable one with `-a`. Incompatibility is now detected before anything is downloaded. Expect roughly 20 minutes per subject for CPU inference on 8 cores; size Slurm walltimes accordingly. **Step 1 -- point the cache at persistent storage.** The cache lives under `$TMPDIR` inside the container; anything in `/tmp` is lost with the session. The module wrapper runs this container with `--cleanenv`, which strips a plain `TMPDIR` export, so use the prefixed form, which survives it:"
+        },
+        {
             "application": "brats_0.1.8_20260822",
             "categories": [
                 "image segmentation",
@@ -1109,7 +1160,10 @@
                 "electrophysiology",
                 "visualization"
             ],
-            "description": "The Cartool EEG Analysis software"
+            "description": "The Cartool EEG Analysis software",
+            "doi": "10.5281/zenodo.22984839",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984839",
+            "license": "cc-by-4.0"
         },
         {
             "application": "cat12_12.9_20250307",
@@ -1250,7 +1304,10 @@
             "categories": [
                 "workflows"
             ],
-            "description": "Framework for the reproducible processing of neuroimaging data with deep learning methods ClinicaDL is the deep learning extension of Clinica, a Python library to process neuroimaging data in BIDS format."
+            "description": "Framework for the reproducible processing of neuroimaging data with deep learning methods ClinicaDL is the deep learning extension of Clinica, a Python library to process neuroimaging data in BIDS format.",
+            "doi": "10.5281/zenodo.22984861",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984861",
+            "license": "mit-license"
         },
         {
             "application": "code_230315_20230315",
@@ -1263,14 +1320,11 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_240320_20260629",
+            "application": "code_240320_20260928",
             "categories": [
                 "programming"
             ],
-            "description": "Python and Julia environment with VScode and singularity",
-            "doi": "10.5281/zenodo.21200642",
-            "doi_url": "https://doi.org/10.5281/zenodo.21200642",
-            "license": "cc-by-4.0"
+            "description": "Python and Julia environment with VScode and singularity"
         },
         {
             "application": "condaenvs_1.0.1_20260513",
@@ -1394,7 +1448,10 @@
             "categories": [
                 "image segmentation"
             ],
-            "description": "Dafne is a program for the segmentation of medical images, specifically MR images, that includes advanced deep learning models for an automatic segmentation. The user has the option of refining the automated results, and the software will learn from the improvements and modify its internal models accordingly. In order to continuously improve the performance, the deep learning modules are stored in a central server location. Dafne uses incremental learning and federated learning to continuously adapt the models to the need of our users. This means that when you perform a segmentation, initially it will not be perfect. You will then have the chance to refine it. When you are satisfied with your dataset, you will export your ROI masks (see below). During this export procedure, the software automatically learns from your refined segmentation and sends the updated model back to our servers. This is why the export procedure takes some time. We will automatically integrate your updated model with the models of our other users, so you will always receive the most accurate predictor. You can also manually perform the incremental learning from the Tools menu (see below)"
+            "description": "Dafne is a program for the segmentation of medical images, specifically MR images, that includes advanced deep learning models for an automatic segmentation. The user has the option of refining the automated results, and the software will learn from the improvements and modify its internal models accordingly. In order to continuously improve the performance, the deep learning modules are stored in a central server location. Dafne uses incremental learning and federated learning to continuously adapt the models to the need of our users. This means that when you perform a segmentation, initially it will not be perfect. You will then have the chance to refine it. When you are satisfied with your dataset, you will export your ROI masks (see below). During this export procedure, the software automatically learns from your refined segmentation and sends the updated model back to our servers. This is why the export procedure takes some time. We will automatically integrate your updated model with the models of our other users, so you will always receive the most accurate predictor. You can also manually perform the incremental learning from the Tools menu (see below)",
+            "doi": "10.5281/zenodo.22984843",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984843",
+            "license": "gpl-3.0"
         },
         {
             "application": "dafne_1.8a4_20260619",
@@ -1407,7 +1464,23 @@
             "license": "gpl-3.0"
         },
         {
+            "application": "dafne_2.1.1a0_20260928",
+            "categories": [
+                "image segmentation"
+            ],
+            "description": "Dafne is a program for the segmentation of medical images, specifically MR images, that includes advanced deep learning models for an automatic segmentation. The user has the option of refining the automated results, and the software will learn from the improvements and modify its internal models accordingly. In order to continuously improve the performance, the deep learning modules are stored in a central server location. Dafne uses incremental learning and federated learning to continuously adapt the models to the need of our users. This means that when you perform a segmentation, initially it will not be perfect. You will then have the chance to refine it. When you are satisfied with your dataset, you will export your ROI masks (see below). During this export procedure, the software automatically learns from your refined segmentation and sends the updated model back to our servers. This is why the export procedure takes some time. We will automatically integrate your updated model with the models of our other users, so you will always receive the most accurate predictor. You can also manually perform the incremental learning from the Tools menu (see below)"
+        },
+        {
             "application": "dafne_arm64_1.10.0_20260920",
+            "categories": [
+                "image segmentation"
+            ],
+            "doi": "10.5281/zenodo.22984974",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984974",
+            "license": "gpl-3.0"
+        },
+        {
+            "application": "dafne_arm64_2.1.1a0_20260928",
             "categories": [
                 "image segmentation"
             ]
@@ -1447,6 +1520,16 @@
             "categories": [
                 "data organisation"
             ],
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend.",
+            "doi": "10.5281/zenodo.22984898",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984898",
+            "license": "mit-license"
+        },
+        {
+            "application": "datalad_1.6.4_20260924",
+            "categories": [
+                "data organisation"
+            ],
             "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
         },
         {
@@ -1471,7 +1554,19 @@
             "application": "datalad_arm64_1.6.3_20260920",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984900",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984900",
+            "license": "mit-license"
+        },
+        {
+            "application": "datalad_arm64_1.6.4_20260924",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.22984825",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984825",
+            "license": "mit-license"
         },
         {
             "application": "dcm2bids_3.2.0_20260527",
@@ -1486,13 +1581,19 @@
             "application": "dcm2bids_3.3.1_20260920",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984855",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984855",
+            "license": "gpl-3.0"
         },
         {
             "application": "dcm2bids_arm64_3.3.1_20260920",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984815",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984815",
+            "license": "gpl-3.0"
         },
         {
             "application": "dcm2niix_v1.0.20240202_20260512",
@@ -1515,7 +1616,10 @@
             "application": "dcm2niix_arm64_v1.0.20260724_20260920",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984811",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984811",
+            "license": "other-open"
         },
         {
             "application": "deep-quality-estimation_0.0.3_20260822",
@@ -1544,7 +1648,10 @@
             "categories": [
                 "diffusion imaging",
                 "machine learning"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984817",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984817",
+            "license": "other-open"
         },
         {
             "application": "deepisles_1.1_20260715",
@@ -1565,6 +1672,16 @@
             "description": "DeepLabCut is a toolbox for state-of-the-art markerless pose estimation of animals performing various behaviors. As long as you can see (label) what you want to track, you can use this toolbox, as it is animal and object agnostic.",
             "doi": "10.5281/zenodo.21856230",
             "doi_url": "https://doi.org/10.5281/zenodo.21856230",
+            "license": "lgpl-3.0"
+        },
+        {
+            "application": "deeplabcut_3.0.2_20260924",
+            "categories": [
+                "machine learning"
+            ],
+            "description": "DeepLabCut is a toolbox for state-of-the-art markerless pose estimation of animals performing various behaviors. As long as you can see (label) what you want to track, you can use this toolbox, as it is animal and object agnostic.",
+            "doi": "10.5281/zenodo.22985123",
+            "doi_url": "https://doi.org/10.5281/zenodo.22985123",
             "license": "lgpl-3.0"
         },
         {
@@ -1658,7 +1775,10 @@
             "categories": [
                 "data organisation",
                 "quality control"
-            ]
+            ],
+            "doi": "10.5281/zenodo.22984878",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984878",
+            "license": "mit-license"
         },
         {
             "application": "dicompare_0.5.4_20260506",
@@ -1716,6 +1836,13 @@
             "doi": "10.5281/zenodo.18931583",
             "doi_url": "https://doi.org/10.5281/zenodo.18931583",
             "license": "cc-by-nc-sa-4.0"
+        },
+        {
+            "application": "dsistudio_2026.7.25_20260928",
+            "categories": [
+                "diffusion imaging"
+            ],
+            "description": "DSI Studio is a tractography software tool that maps brain connections and correlates findings with neuropsychological disorders. It is a collective implementation of several diffusion MRI methods, including diffusion tensor imaging (DTI), generalized q-sampling imaging (GQI), q-space diffeomorphic reconstruction (QSDR), diffusion MRI connectometry, and generalized deterministic fiber tracking. This container uses the CPU build, so registration and tractography run without a CUDA driver."
         },
         {
             "application": "dsistudio_chen.2024.04.19_20240426",
@@ -1776,6 +1903,13 @@
             "doi": "10.5281/zenodo.18931950",
             "doi_url": "https://doi.org/10.5281/zenodo.18931950",
             "license": "cc-by-4.0"
+        },
+        {
+            "application": "elastix_5.3.1_20260925",
+            "categories": [
+                "image registration"
+            ],
+            "description": "a toolbox for rigid and nonrigid registration of images. elastix is open source software, based on the well-known Insight Segmentation and Registration Toolkit (ITK). The software consists of a collection of algorithms that are commonly used to perform (medical) image registration: the task of finding a spatial transformation, mapping one image (the fixed image) to another (the moving image), by optimizing relevant image similarity metrics. The modular design of elastix allows the user to quickly configure, test, and compare different registration methods for a specific application. A command-line interface enables automated processing of large numbers of data sets, by means of scripting. Nowadays elastix is accompanied by ITKElastix making it available in Python (on Pypi) and by SimpleElastix, making it available in languages like C++, Python, Java, R, Ruby, C# and Lua."
         },
         {
             "application": "emuses_1.3.0_20260526",
@@ -2286,6 +2420,17 @@
             "license": "other-open"
         },
         {
+            "application": "fsl_6.0.7.23_20260925",
+            "categories": [
+                "diffusion imaging",
+                "functional imaging",
+                "image registration",
+                "image segmentation",
+                "structural imaging"
+            ],
+            "description": "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. Most of the tools can be run both from the command line and as GUIs (\"point-and-click\" graphical user interfaces). To quote the relevant references for FSL tools you should look in the individual tools' manual pages, and also please reference one or more of the FSL overview papers: 1. M.W. Woolrich, S. Jbabdi, B. Patenaude, M. Chappell, S. Makni, T. Behrens, C. Beckmann, M. Jenkinson, S.M. Smith. Bayesian analysis of neuroimaging data in FSL. NeuroImage, 45:S173-86, 2009 2. S.M. Smith, M. Jenkinson, M.W. Woolrich, C.F. Beckmann, T.E.J. Behrens, H. Johansen-Berg, P.R. Bannister, M. De Luca, I. Drobnjak, D.E. Flitney, R. Niazy, J. Saunders, J. Vickers, Y. Zhang, N. De Stefano, J.M. Brady, and P.M. Matthews. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 23(S1):208-19, 2004 3. M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. NeuroImage, 62:782-90, 2012"
+        },
+        {
             "application": "fsl_6.0.7.4_20231005",
             "categories": [
                 "diffusion imaging",
@@ -2322,6 +2467,13 @@
             "doi": "10.5281/zenodo.18932001",
             "doi_url": "https://doi.org/10.5281/zenodo.18932001",
             "license": "mit-license"
+        },
+        {
+            "application": "fsqc_2.1.7_20260925",
+            "categories": [
+                "quality control"
+            ],
+            "description": "This package provides quality assurance / quality control scripts for FastSurfer- or FreeSurfer-processed structural MRI data. It will check outputs of these two software packages by means of quantitative and visual summaries. Prior processing of data using either FastSurfer or FreeSurfer is required, i.e. the software cannot be used on raw images. It is a revision, extension, and translation to the Python language of the Freesurfer QA Tools. It has been augmented by additional functions from the MRIQC toolbox, and with code derived from the LaPy and BrainPrint toolboxes."
         },
         {
             "application": "functionnectome_2.5.0_20260604",
@@ -2384,6 +2536,12 @@
             "license": "other-open"
         },
         {
+            "application": "gingerale_4.0.0_20260928",
+            "categories": [
+                "statistics"
+            ]
+        },
+        {
             "application": "gliomoda_0.0.4_20260824",
             "categories": [
                 "image segmentation",
@@ -2426,6 +2584,19 @@
             "license": "other-open"
         },
         {
+            "application": "globus_3.3.1_20260927",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "Globus client"
+        },
+        {
+            "application": "globus_arm64_3.3.1_20260927",
+            "categories": [
+                "data organisation"
+            ]
+        },
+        {
             "application": "gouhfi_0.0.1_20260527",
             "categories": [
                 "image segmentation"
@@ -2445,6 +2616,14 @@
             "doi": "10.5281/zenodo.18931458",
             "doi_url": "https://doi.org/10.5281/zenodo.18931458",
             "license": "gpl-3.0-or-later"
+        },
+        {
+            "application": "halfpipe_1.3.2_20260928",
+            "categories": [
+                "functional imaging",
+                "workflows"
+            ],
+            "description": "ENIGMA HALFpipe is a user-friendly software that facilitates reproducible analysis of fMRI data"
         },
         {
             "application": "hcpasl_0.2.0_20260519",
@@ -2486,6 +2665,19 @@
             "doi": "10.5281/zenodo.18932172",
             "doi_url": "https://doi.org/10.5281/zenodo.18932172",
             "license": "apache2.0"
+        },
+        {
+            "application": "heudiconv_1.5.1_20260927",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "heudiconv is a flexible DICOM converter for organizing brain imaging data into structured directory layouts."
+        },
+        {
+            "application": "heudiconv_arm64_1.5.1_20260927",
+            "categories": [
+                "data organisation"
+            ]
         },
         {
             "application": "hmri_0.6.0_20230901",
@@ -2550,6 +2742,13 @@
             "doi": "10.5281/zenodo.18931501",
             "doi_url": "https://doi.org/10.5281/zenodo.18931501",
             "license": "cc-by-4.0"
+        },
+        {
+            "application": "ilastik_1.4.2_20260928",
+            "categories": [
+                "image segmentation"
+            ],
+            "description": "ilastik is a simple, user-friendly tool for interactive image classification, segmentation and analysis. It is built as a modular software framework, which currently has workflows for automated (supervised) pixel- and object-level classification, automated and semi-automated object tracking, semi-automated segmentation and object counting without detection."
         },
         {
             "application": "itksnap_3.8.0_20201208",
@@ -2623,6 +2822,14 @@
             "license": "cc-by-4.0"
         },
         {
+            "application": "jidt_1.6.1_20260928",
+            "categories": [
+                "programming",
+                "statistics"
+            ],
+            "description": "JIDT: Java Information Dynamics Toolkit for studying information-theoretic measures of computation in complex systems. JIDT provides a stand-alone, open-source code Java implementation (also usable in Matlab, Octave, Python, R, Julia and Clojure) of information-theoretic measures of distributed computation in complex systems: i.e. information storage, transfer and modification."
+        },
+        {
             "application": "julia_1.10.1_20240321",
             "categories": [
                 "programming"
@@ -2631,6 +2838,13 @@
             "doi": "10.5281/zenodo.18931755",
             "doi_url": "https://doi.org/10.5281/zenodo.18931755",
             "license": "mit-license"
+        },
+        {
+            "application": "julia_1.13.1_20260928",
+            "categories": [
+                "programming"
+            ],
+            "description": "Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM."
         },
         {
             "application": "julia_1.4.1_20210105",
@@ -2651,6 +2865,12 @@
             "doi": "10.5281/zenodo.18931902",
             "doi_url": "https://doi.org/10.5281/zenodo.18931902",
             "license": "mit-license"
+        },
+        {
+            "application": "julia_arm64_1.13.1_20260928",
+            "categories": [
+                "programming"
+            ]
         },
         {
             "application": "lashis_1.0_20210105",
@@ -2792,6 +3012,14 @@
             "license": "mit-license"
         },
         {
+            "application": "maestro_20260803_20260928",
+            "categories": [
+                "image segmentation",
+                "machine learning",
+                "structural imaging"
+            ]
+        },
+        {
             "application": "matlab_2022a_20231207",
             "categories": [
                 "machine learning",
@@ -2906,7 +3134,7 @@
             "license": "mit-license"
         },
         {
-            "application": "meica_4.0.1_20260722",
+            "application": "meica_4.0.1_20260926",
             "categories": [
                 "functional imaging",
                 "image reconstruction",
@@ -2914,9 +3142,6 @@
                 "workflows"
             ],
             "description": "ME-ICA v4 is a comprehensive multi-echo fMRI processing pipeline. It uses echo-time dependence to separate BOLD-like signals from non-BOLD artifacts. This recipe includes the matched upstream AFNI runtime and an OpenRecon adapter for reconstructed multi-echo magnitude image streams. Command-line example:",
-            "doi": "10.5281/zenodo.21583216",
-            "doi_url": "https://doi.org/10.5281/zenodo.21583216",
-            "license": "cc-by-nc-sa-4.0",
             "openrecon": true
         },
         {
@@ -4161,6 +4386,24 @@
                 "workflows"
             ],
             "description": "QSMxT is an end-to-end software toolbox for Quantitative Susceptibility Mapping (QSM). This container packages upstream QSMxT {{ context.upstream_version }}. Version 9 is a ground-up reimplementation in Rust: a single self-contained binary that reconstructs QSM from BIDS datasets, converts DICOMs to BIDS, and includes an interactive TUI. A pinned dcm2niix is bundled.",
+            "doi": "10.5281/zenodo.22984850",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984850",
+            "license": "gpl-3.0",
+            "openrecon": true
+        },
+        {
+            "application": "qsmxt_9.22.0_20260923",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging",
+                "structural imaging",
+                "workflows"
+            ],
+            "description": "QSMxT is an end-to-end software toolbox for Quantitative Susceptibility Mapping (QSM). This container packages upstream QSMxT {{ context.upstream_version }}. Version 9 is a ground-up reimplementation in Rust: a single self-contained binary that reconstructs QSM from BIDS datasets, converts DICOMs to BIDS, and includes an interactive TUI. A pinned dcm2niix is bundled.",
+            "doi": "10.5281/zenodo.22984805",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984805",
+            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -4411,6 +4654,9 @@
             "categories": [
                 "image reconstruction"
             ],
+            "doi": "10.5281/zenodo.22984887",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984887",
+            "license": "cc-by-4.0",
             "openrecon": true
         },
         {
@@ -4614,6 +4860,9 @@
                 "spine"
             ],
             "description": "This packages upstream SCT {{ context.upstream_version }}. {% if context.options.lite %} This CPU-only lite variant includes spinalcord, graymatter, and all three lesion tasks. It retains the standard SCT assets for vertebral labelling. {% elif context.options.gpu %} This variant installs SCT's CUDA-enabled PyTorch environment. {% else %} This is the CPU-only variant. Use spinalcordtoolbox_gpu for CUDA support. {% endif %} SCT tools process MRI data (NIfTI files) and can do fully automatic tasks such as: - Segmentation of the spinal cord and gray matter - Segmentation of pathologies (eg. multiple sclerosis lesions) - Detection of anatomical highlights (eg. ponto-medullary junction, spinal cord centerline, vertebral levels) - Registration to template, and deformation (eg. straightening) - Motion correction for diffusion and functional MRI time series Computation of quantitative MRI metrics (eg. diffusion tensor imaging, magnetization transfer) - Texture analysis (eg. grey level co-occurrence matrix) - Extraction of metrics within anatomical regions (eg. white matter tracts) SCT also has low-level tools: - Help out with manual labeling and segmentation with a Graphical User Interface (GUI) - GUI plugin for FSLeyes - Warping field creation and application - NIFTI volume manipulation tools for common operations",
+            "doi": "10.5281/zenodo.22984870",
+            "doi_url": "https://doi.org/10.5281/zenodo.22984870",
+            "license": "lgpl-3.0",
             "openrecon": true
         },
         {

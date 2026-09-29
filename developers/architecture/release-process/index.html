@@ -608,8 +608,9 @@
 <li>Check if the last automated build ran OK: <a href="https://github.com/neurodesk/neurodesktop/actions">https://github.com/neurodesk/neurodesktop/actions</a></li>
 <li>Run this build date and test if everything is OK and no regression happened.</li>
 <li>Check what changes were made since the last release: <a href="https://github.com/neurodesk/neurodesktop/commits/main">https://github.com/neurodesk/neurodesktop/commits/main</a></li>
-<li>Summarise the main changes and copy this to the Release History: <a href="/overview/release-history/">/overview/release-history/</a></li>
-<li>Change the version of the latest desktop in <a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/data/neurodesktop.toml">https://github.com/neurodesk/neurodesk.github.io/blob/main/data/neurodesktop.toml</a>.</li>
+<li>Create the GitHub release on <a href="https://github.com/neurodesk/neurodesktop/releases">neurodesk/neurodesktop</a>, tagged with the build date (for example <code dir="auto">2026-09-23</code>).</li>
+<li>Summarise the main changes and add them to the <a href="/overview/release-history/">Release History</a> using the <a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/release-history-template.md">release history template</a>. Move the <strong>Latest</strong> badge to the new release.</li>
+<li>Change <code dir="auto">jupyterNeurodeskVersion</code> in <a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/src/config/neurodesktop.ts"><code dir="auto">src/config/neurodesktop.ts</code></a> to the new release. Every docker command, the Getting Started page, the release history and the citation examples read the version from this constant. Renovate also opens a PR for this bump once the GitHub release is published; close it if you have already made the change together with the release notes.</li>
 <li>Commit all changes.</li>
 <li>Tweet a quick summary of the changes and announce the new version: <a href="https://masto.ai/@Neurodesk">https://masto.ai/@Neurodesk</a></li>
 </ol>
