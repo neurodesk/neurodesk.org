@@ -10,7 +10,7 @@ Neurodesk offers two types of learning resources to help you get started with ne
 
 **Examples** are interactive computational notebooks that you can run, modify, and experiment with. These Jupyter notebooks contain executable code and are ideal for users who want to automate analyses, build reproducible workflows, or dive deeper into scripting-based neuroimaging. 
 
-Each Jupyter notebook in the repository is equipped with a Jupyter Hub button (<i class="fas fa-rocket" aria-hidden="true"></i>) at the top. This button will allow you to interact with the notebooks in a cloud-based environment. The environment is pre-configured to support Neurodesk, so you can start experimenting with the notebooks right away without having to install any additional software or packages.
+Each Jupyter notebook has a **Run this notebook** menu near the top. Choose a regional server to open the notebook in a cloud environment with Neurodesk already installed.
 
 If you want to run these notebooks in another Neurodesk environment, make sure to clone the example notebooks in this repository first:
 ```bash

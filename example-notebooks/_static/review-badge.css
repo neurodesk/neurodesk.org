@@ -11,23 +11,15 @@
 }
 
 .nd-review-badge {
-  display: inline-flex;
+  display: block;
   align-items: center;
   gap: 0.5rem;
   padding: 0.35rem 0.6rem;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.5;
   border: 1px solid var(--nd-review-border);
-}
-
-.nd-review-badge__dot {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: currentColor;
-  opacity: 0.9;
 }
 
 .nd-review-badge--reviewed {
@@ -35,9 +27,7 @@
   color: var(--nd-review-reviewed-fg);
 }
 
-.nd-review-badge--in-progress,
-.nd-review-badge--under-review,
-.nd-review-badge--under_review {
+.nd-review-badge--in-progress {
   background: var(--nd-review-inprogress-bg);
   color: var(--nd-review-inprogress-fg);
 }
@@ -57,4 +47,13 @@
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 700;
+}
+
+.nd-review-badge .myst-admonition-header {
+  background: transparent;
+  color: inherit;
+}
+
+.nd-review-badge p {
+  margin: 0.25rem 0;
 }

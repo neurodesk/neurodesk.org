@@ -160,6 +160,15 @@
             "license": "gpl-3.0"
         },
         {
+            "application": "alpaca_1.1.4_20260929",
+            "categories": [
+                "image segmentation",
+                "machine learning",
+                "structural imaging"
+            ],
+            "description": "ALPaCA (Automated Lesion, PRL, and CVS Analysis) segments multiple sclerosis lesions and classifies each lesion candidate for a paramagnetic rim (PRL) and a central vein sign (CVS). It uses a multi-contrast 3D convolutional neural network on T1-weighted, FLAIR, T2*-weighted EPI magnitude and phase images. Lesion candidates come from MIMoSA. The container runs on CPU. Run the full pipeline:"
+        },
+        {
             "application": "amico_2.1.0_20250628",
             "categories": [
                 "diffusion imaging"
@@ -285,6 +294,7 @@
         {
             "application": "aslprep_0.2.7_20210323",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -296,6 +306,7 @@
         {
             "application": "aslprep_0.4.0_20230728",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -307,6 +318,7 @@
         {
             "application": "aslprep_0.5.0_20231116",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -318,6 +330,7 @@
         {
             "application": "aslprep_0.6.0_20240318",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -329,6 +342,7 @@
         {
             "application": "aslprep_0.7.0_20240530",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -340,6 +354,7 @@
         {
             "application": "aslprep_0.7.2_20240917",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -351,6 +366,7 @@
         {
             "application": "aslprep_0.7.5_20260413",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -362,6 +378,7 @@
         {
             "application": "aslprep_26.0.2_20260414",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -373,6 +390,7 @@
         {
             "application": "aslprep_26.0.3_20260911",
             "categories": [
+                "arterial spin labelling",
                 "quantitative imaging",
                 "workflows"
             ],
@@ -380,6 +398,18 @@
             "doi": "10.5281/zenodo.22730995",
             "doi_url": "https://doi.org/10.5281/zenodo.22730995",
             "license": "bsd-3-clause"
+        },
+        {
+            "application": "b0mapromeo_1.0.0_20261002",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "doi": "10.5281/zenodo.23129724",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129724",
+            "license": "mit-license",
+            "openrecon": true
         },
         {
             "application": "bart_0.7.00_20210302",
@@ -427,9 +457,17 @@
             "categories": [
                 "structural imaging"
             ],
-            "description": "Tools to indirectly assess brain disconnections from lesion masks in MNI space. Provides disconnectome maps (run_disco.sh), Tractotron probability of disconnection (tractotron_cli.sh), and a Java GUI launcher (BCBToolKit.sh). Bundles a stripped FSL plus a Java runtime \u2014 there is no Python package to import. Includes the HCP-1065 probabilistic tract atlas (64 tracts, 2mm MNI152) at /opt/BCBToolKit/Tools/HCP1065/prob.",
             "doi": "10.5281/zenodo.21753902",
             "doi_url": "https://doi.org/10.5281/zenodo.21753902",
+            "license": "bsd-3-clause"
+        },
+        {
+            "application": "bcbtoolkit_5.3.0_20261002",
+            "categories": [
+                "structural imaging"
+            ],
+            "doi": "10.5281/zenodo.23129723",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129723",
             "license": "bsd-3-clause"
         },
         {
@@ -692,7 +730,10 @@
                 "bids apps",
                 "data organisation"
             ],
-            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:"
+            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:",
+            "doi": "10.5281/zenodo.23129770",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129770",
+            "license": "mit-license"
         },
         {
             "application": "bidsmanager_arm64_1.2.6.1_20260912",
@@ -1109,7 +1150,10 @@
                 "structural imaging",
                 "workflows"
             ],
-            "description": "BraTS gives a single interface over the winning algorithms from the BraTS challenges: adult and paediatric glioma, meningioma, brain metastasis and sub-Saharan Africa segmentation, plus inpainting and missing-MRI synthesis. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Read this first: no algorithms are bundled This container is an orchestrator. It contains no model and no weights. Each of the 66 algorithms is a separate container published by its authors, between roughly 4 GB and over 30 GB compressed -- and the cached sandbox is larger still: a 4 GB pull unpacks to about 8 GB on disk, a 9 GB pull to about 14 GB. You pull the ones you want, once. ### GPU or CPU? Most algorithms need a GPU: only 16 of the 66 are CPU-compatible, and 7 of the 8 task defaults are GPU-only, so on a CPU node `brats -t <task>` without `-a` fails for every task except `africa`. The `adult-glioma-pre`, `pediatric` and `goat` tasks have no CPU-compatible algorithm at all. `brats-algorithms` lists the keys; pick a CPU-capable one with `-a`. Incompatibility is now detected before anything is downloaded. Expect roughly 20 minutes per subject for CPU inference on 8 cores; size Slurm walltimes accordingly. **Step 1 -- point the cache at persistent storage.** The cache lives under `$TMPDIR` inside the container; anything in `/tmp` is lost with the session. The module wrapper runs this container with `--cleanenv`, which strips a plain `TMPDIR` export, so use the prefixed form, which survives it:"
+            "description": "BraTS gives a single interface over the winning algorithms from the BraTS challenges: adult and paediatric glioma, meningioma, brain metastasis and sub-Saharan Africa segmentation, plus inpainting and missing-MRI synthesis. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Read this first: no algorithms are bundled This container is an orchestrator. It contains no model and no weights. Each of the 66 algorithms is a separate container published by its authors, between roughly 4 GB and over 30 GB compressed -- and the cached sandbox is larger still: a 4 GB pull unpacks to about 8 GB on disk, a 9 GB pull to about 14 GB. You pull the ones you want, once. ### GPU or CPU? Most algorithms need a GPU: only 16 of the 66 are CPU-compatible, and 7 of the 8 task defaults are GPU-only, so on a CPU node `brats -t <task>` without `-a` fails for every task except `africa`. The `adult-glioma-pre`, `pediatric` and `goat` tasks have no CPU-compatible algorithm at all. `brats-algorithms` lists the keys; pick a CPU-capable one with `-a`. Incompatibility is now detected before anything is downloaded. Expect roughly 20 minutes per subject for CPU inference on 8 cores; size Slurm walltimes accordingly. **Step 1 -- point the cache at persistent storage.** The cache lives under `$TMPDIR` inside the container; anything in `/tmp` is lost with the session. The module wrapper runs this container with `--cleanenv`, which strips a plain `TMPDIR` export, so use the prefixed form, which survives it:",
+            "doi": "10.5281/zenodo.23129992",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129992",
+            "license": "apache2.0"
         },
         {
             "application": "brats_0.1.8_20260822",
@@ -1283,6 +1327,16 @@
             "license": "cc-by-4.0"
         },
         {
+            "application": "clinica_0.12.0_20261003",
+            "categories": [
+                "workflows"
+            ],
+            "description": "Software platform for clinical neuroimaging studies Clinica is a software platform for clinical research studies involving patients with neurological and psychiatric diseases and the acquisition of multimodal data (neuroimaging, clinical and cognitive evaluations, genetics...), most often with longitudinal follow-up.",
+            "doi": "10.5281/zenodo.23129754",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129754",
+            "license": "cc-by-4.0"
+        },
+        {
             "application": "clinicadl_1.6.1_20260722",
             "categories": [
                 "workflows"
@@ -1310,6 +1364,13 @@
             "license": "mit-license"
         },
         {
+            "application": "cmtk_3.4.0_20261003",
+            "categories": [
+                "image registration",
+                "structural imaging"
+            ]
+        },
+        {
             "application": "code_230315_20230315",
             "categories": [
                 "programming"
@@ -1320,11 +1381,14 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_240320_20260928",
+            "application": "code_240320_20261001",
             "categories": [
                 "programming"
             ],
-            "description": "Python and Julia environment with VScode and singularity"
+            "description": "Python and Julia environment with VScode and singularity",
+            "doi": "10.5281/zenodo.23129780",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129780",
+            "license": "cc-by-4.0"
         },
         {
             "application": "condaenvs_1.0.1_20260513",
@@ -1468,7 +1532,20 @@
             "categories": [
                 "image segmentation"
             ],
-            "description": "Dafne is a program for the segmentation of medical images, specifically MR images, that includes advanced deep learning models for an automatic segmentation. The user has the option of refining the automated results, and the software will learn from the improvements and modify its internal models accordingly. In order to continuously improve the performance, the deep learning modules are stored in a central server location. Dafne uses incremental learning and federated learning to continuously adapt the models to the need of our users. This means that when you perform a segmentation, initially it will not be perfect. You will then have the chance to refine it. When you are satisfied with your dataset, you will export your ROI masks (see below). During this export procedure, the software automatically learns from your refined segmentation and sends the updated model back to our servers. This is why the export procedure takes some time. We will automatically integrate your updated model with the models of our other users, so you will always receive the most accurate predictor. You can also manually perform the incremental learning from the Tools menu (see below)"
+            "description": "Dafne is a program for the segmentation of medical images, specifically MR images, that includes advanced deep learning models for an automatic segmentation. The user has the option of refining the automated results, and the software will learn from the improvements and modify its internal models accordingly. In order to continuously improve the performance, the deep learning modules are stored in a central server location. Dafne uses incremental learning and federated learning to continuously adapt the models to the need of our users. This means that when you perform a segmentation, initially it will not be perfect. You will then have the chance to refine it. When you are satisfied with your dataset, you will export your ROI masks (see below). During this export procedure, the software automatically learns from your refined segmentation and sends the updated model back to our servers. This is why the export procedure takes some time. We will automatically integrate your updated model with the models of our other users, so you will always receive the most accurate predictor. You can also manually perform the incremental learning from the Tools menu (see below)",
+            "doi": "10.5281/zenodo.23129859",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129859",
+            "license": "gpl-3.0"
+        },
+        {
+            "application": "dafne_2.1.1a2_20260929",
+            "categories": [
+                "image segmentation"
+            ],
+            "description": "Dafne is a program for the segmentation of medical images, specifically MR images, that includes advanced deep learning models for an automatic segmentation. The user has the option of refining the automated results, and the software will learn from the improvements and modify its internal models accordingly. In order to continuously improve the performance, the deep learning modules are stored in a central server location. Dafne uses incremental learning and federated learning to continuously adapt the models to the need of our users. This means that when you perform a segmentation, initially it will not be perfect. You will then have the chance to refine it. When you are satisfied with your dataset, you will export your ROI masks (see below). During this export procedure, the software automatically learns from your refined segmentation and sends the updated model back to our servers. This is why the export procedure takes some time. We will automatically integrate your updated model with the models of our other users, so you will always receive the most accurate predictor. You can also manually perform the incremental learning from the Tools menu (see below)",
+            "doi": "10.5281/zenodo.23129712",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129712",
+            "license": "gpl-3.0"
         },
         {
             "application": "dafne_arm64_1.10.0_20260920",
@@ -1483,7 +1560,19 @@
             "application": "dafne_arm64_2.1.1a0_20260928",
             "categories": [
                 "image segmentation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23129766",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129766",
+            "license": "gpl-3.0"
+        },
+        {
+            "application": "dafne_arm64_2.1.1a2_20260929",
+            "categories": [
+                "image segmentation"
+            ],
+            "doi": "10.5281/zenodo.23129764",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129764",
+            "license": "gpl-3.0"
         },
         {
             "application": "datalad_1.1.5_20260911",
@@ -1533,6 +1622,16 @@
             "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
         },
         {
+            "application": "datalad_1.6.5_20261001",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend.",
+            "doi": "10.5281/zenodo.23129772",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129772",
+            "license": "mit-license"
+        },
+        {
             "application": "datalad_arm64_1.1.5_20260911",
             "categories": [
                 "data organisation"
@@ -1566,6 +1665,15 @@
             ],
             "doi": "10.5281/zenodo.22984825",
             "doi_url": "https://doi.org/10.5281/zenodo.22984825",
+            "license": "mit-license"
+        },
+        {
+            "application": "datalad_arm64_1.6.5_20261001",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23130005",
+            "doi_url": "https://doi.org/10.5281/zenodo.23130005",
             "license": "mit-license"
         },
         {
@@ -1610,7 +1718,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "dcm2niix is designed to convert neuroimaging data from the DICOM format to the NIfTI format. This web page hosts the developmental source code - a compiled version for Linux, MacOS, and Windows of the most recent stable release is included with MRIcroGL. A full manual for this software is available in the form of a NITRC wiki."
+            "description": "dcm2niix is designed to convert neuroimaging data from the DICOM format to the NIfTI format. This web page hosts the developmental source code - a compiled version for Linux, MacOS, and Windows of the most recent stable release is included with MRIcroGL. A full manual for this software is available in the form of a NITRC wiki.",
+            "doi": "10.5281/zenodo.23129768",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129768",
+            "license": "other-open"
         },
         {
             "application": "dcm2niix_arm64_v1.0.20260724_20260920",
@@ -1632,6 +1743,17 @@
             "doi": "10.5281/zenodo.22168688",
             "doi_url": "https://doi.org/10.5281/zenodo.22168688",
             "license": "apache2.0"
+        },
+        {
+            "application": "deepcombat_0.0.0.9000_20260929",
+            "categories": [
+                "machine learning",
+                "statistics"
+            ],
+            "description": "DeepComBat harmonizes multi-batch neuroimaging features. It trains a conditional variational autoencoder (CVAE) and applies ComBat in its latent space and to its residuals, removing multivariate scanner and site effects while preserving the effects of biological covariates. Apply it to extracted features (for example regional volumes or cortical thickness) after image preprocessing and before statistical analysis. The container provides R with the DeepComBat package, R torch with a CPU libtorch, and neuroCombat.",
+            "doi": "10.5281/zenodo.23129728",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129728",
+            "license": "mit-license"
         },
         {
             "application": "deepdisco_20251008_20260611",
@@ -1842,7 +1964,10 @@
             "categories": [
                 "diffusion imaging"
             ],
-            "description": "DSI Studio is a tractography software tool that maps brain connections and correlates findings with neuropsychological disorders. It is a collective implementation of several diffusion MRI methods, including diffusion tensor imaging (DTI), generalized q-sampling imaging (GQI), q-space diffeomorphic reconstruction (QSDR), diffusion MRI connectometry, and generalized deterministic fiber tracking. This container uses the CPU build, so registration and tractography run without a CUDA driver."
+            "description": "DSI Studio is a tractography software tool that maps brain connections and correlates findings with neuropsychological disorders. It is a collective implementation of several diffusion MRI methods, including diffusion tensor imaging (DTI), generalized q-sampling imaging (GQI), q-space diffeomorphic reconstruction (QSDR), diffusion MRI connectometry, and generalized deterministic fiber tracking. This container uses the CPU build, so registration and tractography run without a CUDA driver.",
+            "doi": "10.5281/zenodo.23129714",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129714",
+            "license": "cc-by-nc-sa-4.0"
         },
         {
             "application": "dsistudio_chen.2024.04.19_20240426",
@@ -1909,7 +2034,10 @@
             "categories": [
                 "image registration"
             ],
-            "description": "a toolbox for rigid and nonrigid registration of images. elastix is open source software, based on the well-known Insight Segmentation and Registration Toolkit (ITK). The software consists of a collection of algorithms that are commonly used to perform (medical) image registration: the task of finding a spatial transformation, mapping one image (the fixed image) to another (the moving image), by optimizing relevant image similarity metrics. The modular design of elastix allows the user to quickly configure, test, and compare different registration methods for a specific application. A command-line interface enables automated processing of large numbers of data sets, by means of scripting. Nowadays elastix is accompanied by ITKElastix making it available in Python (on Pypi) and by SimpleElastix, making it available in languages like C++, Python, Java, R, Ruby, C# and Lua."
+            "description": "a toolbox for rigid and nonrigid registration of images. elastix is open source software, based on the well-known Insight Segmentation and Registration Toolkit (ITK). The software consists of a collection of algorithms that are commonly used to perform (medical) image registration: the task of finding a spatial transformation, mapping one image (the fixed image) to another (the moving image), by optimizing relevant image similarity metrics. The modular design of elastix allows the user to quickly configure, test, and compare different registration methods for a specific application. A command-line interface enables automated processing of large numbers of data sets, by means of scripting. Nowadays elastix is accompanied by ITKElastix making it available in Python (on Pypi) and by SimpleElastix, making it available in languages like C++, Python, Java, R, Ruby, C# and Lua.",
+            "doi": "10.5281/zenodo.23129776",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129776",
+            "license": "cc-by-4.0"
         },
         {
             "application": "emuses_1.3.0_20260526",
@@ -1945,6 +2073,12 @@
             "openrecon": true
         },
         {
+            "application": "epu-group-afis_0.3.0_20261003",
+            "categories": [
+                "cryo EM"
+            ]
+        },
+        {
             "application": "esilpd_0.0.1_20260629",
             "categories": [
                 "electrophysiology"
@@ -1957,6 +2091,7 @@
         {
             "application": "exploreasl_1.11.0_20260514",
             "categories": [
+                "arterial spin labelling",
                 "workflows"
             ],
             "description": "ExploreASL is a pipeline and toolbox for image processing and statistics of arterial spin labeling perfusion MR images. It is designed as a multi-OS, open-source, collaborative framework that facilitates cross-pollination between image processing method developers and clinical investigators. This container contains Matlab MCR.",
@@ -2192,6 +2327,17 @@
             "license": "apache2.0"
         },
         {
+            "application": "fmriprep_25.2.6_20260930",
+            "categories": [
+                "functional imaging",
+                "workflows"
+            ],
+            "description": "fMRIPrep is a functional magnetic resonance imaging (fMRI) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) providing outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.",
+            "doi": "10.5281/zenodo.23129738",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129738",
+            "license": "apache2.0"
+        },
+        {
             "application": "freesurfer_5.3.0_20260818",
             "categories": [
                 "image segmentation",
@@ -2280,8 +2426,21 @@
             "license": "other-open"
         },
         {
+            "application": "frisgo_2.10.0_20261002",
+            "categories": [
+                "functional imaging",
+                "image reconstruction"
+            ],
+            "description": "OpenRecon image-to-image Fuzzy Ripple correction for dual-polarity (3D-)EPI BOLD time series, using `LN2_FRISGO -tshift` from LayNii {{ context.laynii_version }}. The OpenRecon module collects every reconstructed image of the run, arranges them by slice position and repetition into a 4D NIfTI, runs `LN2_FRISGO -input timeseries.nii -tshift` and returns: - the original time series on `image_series_index = 100` (`sendoriginal`) - the FRISGO-corrected time series `<source>-frisgo` on `image_series_index = 101` (`sendfrisgo`) Both outputs keep the source 2D geometry, slice and repetition counters with `Keep_image_geometry = 1`. Corrected values are rounded to the source pixel type, so negative values clip to 0 for unsigned scanner images. Run the module with fewer than 4 repetitions and only the originals are returned. Simulate the OpenRecon round trip with a 4D NIfTI:",
+            "doi": "10.5281/zenodo.23129716",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129716",
+            "license": "bsd-3-clause",
+            "openrecon": true
+        },
+        {
             "application": "fsl_6.0.3_20200905",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2296,6 +2455,7 @@
         {
             "application": "fsl_6.0.4_20210105",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2310,6 +2470,7 @@
         {
             "application": "fsl_6.0.5.1_20221016",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2324,6 +2485,7 @@
         {
             "application": "fsl_6.0.6.4_20230618",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2338,6 +2500,7 @@
         {
             "application": "fsl_6.0.7.1_20230809",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2352,6 +2515,7 @@
         {
             "application": "fsl_6.0.7.14_20241018",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2366,6 +2530,7 @@
         {
             "application": "fsl_6.0.7.16_20250131",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2380,6 +2545,7 @@
         {
             "application": "fsl_6.0.7.18_20250928",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2394,6 +2560,7 @@
         {
             "application": "fsl_6.0.7.19_20260217",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2408,6 +2575,7 @@
         {
             "application": "fsl_6.0.7.22_20260416",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2422,17 +2590,22 @@
         {
             "application": "fsl_6.0.7.23_20260925",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. Most of the tools can be run both from the command line and as GUIs (\"point-and-click\" graphical user interfaces). To quote the relevant references for FSL tools you should look in the individual tools' manual pages, and also please reference one or more of the FSL overview papers: 1. M.W. Woolrich, S. Jbabdi, B. Patenaude, M. Chappell, S. Makni, T. Behrens, C. Beckmann, M. Jenkinson, S.M. Smith. Bayesian analysis of neuroimaging data in FSL. NeuroImage, 45:S173-86, 2009 2. S.M. Smith, M. Jenkinson, M.W. Woolrich, C.F. Beckmann, T.E.J. Behrens, H. Johansen-Berg, P.R. Bannister, M. De Luca, I. Drobnjak, D.E. Flitney, R. Niazy, J. Saunders, J. Vickers, Y. Zhang, N. De Stefano, J.M. Brady, and P.M. Matthews. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 23(S1):208-19, 2004 3. M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. NeuroImage, 62:782-90, 2012"
+            "description": "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. Most of the tools can be run both from the command line and as GUIs (\"point-and-click\" graphical user interfaces). To quote the relevant references for FSL tools you should look in the individual tools' manual pages, and also please reference one or more of the FSL overview papers: 1. M.W. Woolrich, S. Jbabdi, B. Patenaude, M. Chappell, S. Makni, T. Behrens, C. Beckmann, M. Jenkinson, S.M. Smith. Bayesian analysis of neuroimaging data in FSL. NeuroImage, 45:S173-86, 2009 2. S.M. Smith, M. Jenkinson, M.W. Woolrich, C.F. Beckmann, T.E.J. Behrens, H. Johansen-Berg, P.R. Bannister, M. De Luca, I. Drobnjak, D.E. Flitney, R. Niazy, J. Saunders, J. Vickers, Y. Zhang, N. De Stefano, J.M. Brady, and P.M. Matthews. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 23(S1):208-19, 2004 3. M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. NeuroImage, 62:782-90, 2012",
+            "doi": "10.5281/zenodo.23130039",
+            "doi_url": "https://doi.org/10.5281/zenodo.23130039",
+            "license": "other-open"
         },
         {
             "application": "fsl_6.0.7.4_20231005",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2447,6 +2620,7 @@
         {
             "application": "fsl_6.0.7.8_20240913",
             "categories": [
+                "arterial spin labelling",
                 "diffusion imaging",
                 "functional imaging",
                 "image registration",
@@ -2459,21 +2633,14 @@
             "license": "other-open"
         },
         {
-            "application": "fsqc_2.1.4_20251126",
+            "application": "fsqc_2.1.7_20261002",
             "categories": [
                 "quality control"
             ],
             "description": "This package provides quality assurance / quality control scripts for FastSurfer- or FreeSurfer-processed structural MRI data. It will check outputs of these two software packages by means of quantitative and visual summaries. Prior processing of data using either FastSurfer or FreeSurfer is required, i.e. the software cannot be used on raw images. It is a revision, extension, and translation to the Python language of the Freesurfer QA Tools. It has been augmented by additional functions from the MRIQC toolbox, and with code derived from the LaPy and BrainPrint toolboxes.",
-            "doi": "10.5281/zenodo.18932001",
-            "doi_url": "https://doi.org/10.5281/zenodo.18932001",
+            "doi": "10.5281/zenodo.23129744",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129744",
             "license": "mit-license"
-        },
-        {
-            "application": "fsqc_2.1.7_20260925",
-            "categories": [
-                "quality control"
-            ],
-            "description": "This package provides quality assurance / quality control scripts for FastSurfer- or FreeSurfer-processed structural MRI data. It will check outputs of these two software packages by means of quantitative and visual summaries. Prior processing of data using either FastSurfer or FreeSurfer is required, i.e. the software cannot be used on raw images. It is a revision, extension, and translation to the Python language of the Freesurfer QA Tools. It has been augmented by additional functions from the MRIQC toolbox, and with code derived from the LaPy and BrainPrint toolboxes."
         },
         {
             "application": "functionnectome_2.5.0_20260604",
@@ -2539,7 +2706,10 @@
             "application": "gingerale_4.0.0_20260928",
             "categories": [
                 "statistics"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23129857",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129857",
+            "license": "other-open"
         },
         {
             "application": "gliomoda_0.0.4_20260824",
@@ -2588,7 +2758,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "Globus client"
+            "description": "Globus client",
+            "doi": "10.5281/zenodo.23129760",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129760",
+            "license": "other-open"
         },
         {
             "application": "globus_arm64_3.3.1_20260927",
@@ -2628,6 +2801,7 @@
         {
             "application": "hcpasl_0.2.0_20260519",
             "categories": [
+                "arterial spin labelling",
                 "functional imaging",
                 "workflows"
             ],
@@ -2671,13 +2845,19 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "heudiconv is a flexible DICOM converter for organizing brain imaging data into structured directory layouts."
+            "description": "heudiconv is a flexible DICOM converter for organizing brain imaging data into structured directory layouts.",
+            "doi": "10.5281/zenodo.23129937",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129937",
+            "license": "apache2.0"
         },
         {
             "application": "heudiconv_arm64_1.5.1_20260927",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23129756",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129756",
+            "license": "apache2.0"
         },
         {
             "application": "hmri_0.6.0_20230901",
@@ -2748,7 +2928,10 @@
             "categories": [
                 "image segmentation"
             ],
-            "description": "ilastik is a simple, user-friendly tool for interactive image classification, segmentation and analysis. It is built as a modular software framework, which currently has workflows for automated (supervised) pixel- and object-level classification, automated and semi-automated object tracking, semi-automated segmentation and object counting without detection."
+            "description": "ilastik is a simple, user-friendly tool for interactive image classification, segmentation and analysis. It is built as a modular software framework, which currently has workflows for automated (supervised) pixel- and object-level classification, automated and semi-automated object tracking, semi-automated segmentation and object counting without detection.",
+            "doi": "10.5281/zenodo.23129999",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129999",
+            "license": "cc-by-4.0"
         },
         {
             "application": "itksnap_3.8.0_20201208",
@@ -2827,7 +3010,10 @@
                 "programming",
                 "statistics"
             ],
-            "description": "JIDT: Java Information Dynamics Toolkit for studying information-theoretic measures of computation in complex systems. JIDT provides a stand-alone, open-source code Java implementation (also usable in Matlab, Octave, Python, R, Julia and Clojure) of information-theoretic measures of distributed computation in complex systems: i.e. information storage, transfer and modification."
+            "description": "JIDT: Java Information Dynamics Toolkit for studying information-theoretic measures of computation in complex systems. JIDT provides a stand-alone, open-source code Java implementation (also usable in Matlab, Octave, Python, R, Julia and Clojure) of information-theoretic measures of distributed computation in complex systems: i.e. information storage, transfer and modification.",
+            "doi": "10.5281/zenodo.23129885",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129885",
+            "license": "cc-by-4.0"
         },
         {
             "application": "julia_1.10.1_20240321",
@@ -2844,7 +3030,10 @@
             "categories": [
                 "programming"
             ],
-            "description": "Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM."
+            "description": "Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM.",
+            "doi": "10.5281/zenodo.23129778",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129778",
+            "license": "mit-license"
         },
         {
             "application": "julia_1.4.1_20210105",
@@ -2870,6 +3059,16 @@
             "application": "julia_arm64_1.13.1_20260928",
             "categories": [
                 "programming"
+            ],
+            "doi": "10.5281/zenodo.23129748",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129748",
+            "license": "mit-license"
+        },
+        {
+            "application": "kul-vbg_0.61.0_23112021_beta_20261004",
+            "categories": [
+                "image segmentation",
+                "structural imaging"
             ]
         },
         {
@@ -2907,6 +3106,16 @@
             "doi": "10.5281/zenodo.20102814",
             "doi_url": "https://doi.org/10.5281/zenodo.20102814",
             "license": "gpl-3.0-or-later"
+        },
+        {
+            "application": "laynii_2.10.0_20260929",
+            "categories": [
+                "functional imaging"
+            ],
+            "description": "LayNii is a standalone software suite for mesoscopic (functional) magnetic resonance imaging (e.g. layer-fMRI). It is a collection of C++ programs that depend only on a C++ compiler. The purpose of this package is to provide layer-analysis software that are not (yet) included in the other major MRI analysis software.",
+            "doi": "10.5281/zenodo.23129742",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129742",
+            "license": "bsd-3-clause"
         },
         {
             "application": "laynii_2.2.1_20220701",
@@ -2978,6 +3187,24 @@
             "doi": "10.5281/zenodo.21583377",
             "doi_url": "https://doi.org/10.5281/zenodo.21583377",
             "license": "bsd-3-clause"
+        },
+        {
+            "application": "lipsia_4.1.1_20260929",
+            "categories": [
+                "functional imaging",
+                "machine learning"
+            ],
+            "doi": "10.5281/zenodo.23129774",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129774",
+            "license": "bsd-3-clause"
+        },
+        {
+            "application": "loftcbf_3.0.0_20261004",
+            "categories": [
+                "arterial spin labelling",
+                "quality control",
+                "quantitative imaging"
+            ]
         },
         {
             "application": "lqt_0.1.0_20260603",
@@ -3075,6 +3302,14 @@
             "license": "other-closed"
         },
         {
+            "application": "matlab_2026b_20260929",
+            "categories": [
+                "machine learning",
+                "programming"
+            ],
+            "description": "MATLAB with the Deep Learning Toolbox Converter for ONNX Model Format preinstalled."
+        },
+        {
             "application": "matlabruntime_2024b_20260521",
             "categories": [
                 "programming"
@@ -3124,6 +3359,18 @@
             "license": "gpl-3.0"
         },
         {
+            "application": "meganorm_0.2.1_20261001",
+            "categories": [
+                "electrophysiology",
+                "machine learning",
+                "statistics"
+            ],
+            "description": "MEGaNorm derives functional imaging-derived phenotypes from large-scale EEG and MEG datasets and fits normative models over them, so an individual recording can be placed against a population reference range. It wraps MNE-Python for preprocessing and feature extraction, and PCNToolkit for the normative modelling. ### Example",
+            "doi": "10.5281/zenodo.23129734",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129734",
+            "license": "gpl-3.0"
+        },
+        {
             "application": "megnet_1.0.1_20260608",
             "categories": [
                 "electrophysiology"
@@ -3142,6 +3389,9 @@
                 "workflows"
             ],
             "description": "ME-ICA v4 is a comprehensive multi-echo fMRI processing pipeline. It uses echo-time dependence to separate BOLD-like signals from non-BOLD artifacts. This recipe includes the matched upstream AFNI runtime and an OpenRecon adapter for reconstructed multi-echo magnitude image streams. Command-line example:",
+            "doi": "10.5281/zenodo.23129740",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129740",
+            "license": "cc-by-nc-sa-4.0",
             "openrecon": true
         },
         {
@@ -3285,6 +3535,16 @@
             "license": "mit-license"
         },
         {
+            "application": "mipview_0.6.2_20261001",
+            "categories": [
+                "visualization"
+            ],
+            "description": "This container provides MipView {{ context.mipview_version }} in container version {{ context.version }}.",
+            "doi": "10.5281/zenodo.23129718",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129718",
+            "license": "apache2.0"
+        },
+        {
             "application": "mitkdiffusion_1.2.0_20230720",
             "categories": [
                 "diffusion imaging"
@@ -3356,6 +3616,14 @@
             "license": "cc-by-4.0"
         },
         {
+            "application": "mneextended_1.2.0_20261004",
+            "categories": [
+                "electrophysiology",
+                "programming"
+            ],
+            "description": "Python MNE environment with VScode This environment contains MNE Python and some additional tools with dependencies (MNE BIDS Pipeline, MNE-connectivity, MNE-icalabel, Neurokit2)"
+        },
+        {
             "application": "modsort_0.0.2_20260822",
             "categories": [
                 "data organisation"
@@ -3373,6 +3641,16 @@
             "description": "MRIcroGL is a cross-platform tool for viewing DICOM and NIfTI format images. It provides a drag-and-drop user interface as well as a scripting language. Please see the wiki page from more details. Note that the wiki page describes version 1.0 of the software, while this Github page is for the upcoming version 1.2. The changes are in general subtle, but the scripting has changed quite a bit.",
             "doi": "10.5281/zenodo.18931479",
             "doi_url": "https://doi.org/10.5281/zenodo.18931479",
+            "license": "other-open"
+        },
+        {
+            "application": "mricrogl_1.2.20220720_20261003",
+            "categories": [
+                "visualization"
+            ],
+            "description": "MRIcroGL is a cross-platform tool for viewing DICOM and NIfTI format images. It provides a drag-and-drop user interface as well as a scripting language. Please see the wiki page from more details. Note that the wiki page describes version 1.0 of the software, while this Github page is for the upcoming version 1.2. The changes are in general subtle, but the scripting has changed quite a bit.",
+            "doi": "10.5281/zenodo.23129720",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129720",
             "license": "other-open"
         },
         {
@@ -3435,6 +3713,13 @@
             "doi": "10.5281/zenodo.18931733",
             "doi_url": "https://doi.org/10.5281/zenodo.18931733",
             "license": "mit-license"
+        },
+        {
+            "application": "mritools_4.9.0_20261003",
+            "categories": [
+                "phase processing"
+            ],
+            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets. And Susceptibility weighted imaging mritools contains ROMEO, CLEARSWI and MCPC3DS"
         },
         {
             "application": "mrsimetabolicconnectome_1.0.0_20260629",
@@ -3605,6 +3890,18 @@
             "license": "bsd-3-clause"
         },
         {
+            "application": "napari_0.9.2_20261002",
+            "categories": [
+                "image segmentation",
+                "machine learning",
+                "visualization"
+            ],
+            "description": "napari is an interactive multi-dimensional image viewer. This container includes: - napari-VoxTell {{ context.napari_voxtell_version }} for free-text-prompted 3D medical image segmentation - napari-nnInteractive {{ context.napari_nninteractive_version }} for point, scribble, box, and lasso-prompted 3D segmentation - CUDA {{ context.pytorch_wheel_channel }} PyTorch {{ context.torch_version }} and the nnInteractive {{ context.nninteractive_version }} local backend - napari-nifti for NIfTI image loading Launch napari or open either plugin directly:",
+            "doi": "10.5281/zenodo.23129762",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129762",
+            "license": "bsd-3-clause"
+        },
+        {
             "application": "nesvor_0.5.0_20260722",
             "categories": [
                 "fetal imaging",
@@ -3675,6 +3972,24 @@
             ],
             "doi": "10.5281/zenodo.18932008",
             "doi_url": "https://doi.org/10.5281/zenodo.18932008",
+            "license": "bsd-3-clause"
+        },
+        {
+            "application": "niftyreg_2.1.2_20261003",
+            "categories": [
+                "image registration"
+            ],
+            "doi": "10.5281/zenodo.23129990",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129990",
+            "license": "bsd-3-clause"
+        },
+        {
+            "application": "niftyreg_arm64_2.1.2_20261003",
+            "categories": [
+                "image registration"
+            ],
+            "doi": "10.5281/zenodo.23129758",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129758",
             "license": "bsd-3-clause"
         },
         {
@@ -3763,6 +4078,13 @@
             "license": "apache2.0"
         },
         {
+            "application": "nobrainer_1.2.1_20261003",
+            "categories": [
+                "image segmentation",
+                "machine learning"
+            ]
+        },
+        {
             "application": "noddi_1.0_20260520",
             "categories": [
                 "diffusion imaging"
@@ -3820,6 +4142,17 @@
             "doi": "10.5281/zenodo.22851460",
             "doi_url": "https://doi.org/10.5281/zenodo.22851460",
             "license": "other-at"
+        },
+        {
+            "application": "openreconi2iexample_1.0.89_20261002",
+            "categories": [
+                "image reconstruction"
+            ],
+            "description": "Minimal OpenRecon image-to-image reference. Receives reconstructed MRD image messages and sends outputs according to the enabled output options. The scanner label defaults enable original pass-through, inversion, and segmentation. Inversion is also the runtime default when no parameter payload is provided. Enable `sendoriginal` to pass the original 2D image stream through on `image_series_index = 100`. Inverted magnitude images are returned as `<source>-inverted` on `image_series_index = 99`; disable `invert` to omit them. Enable `segment` to extract the brightest foreground object and send `<source>-segment` outputs starting on `image_series_index = 101`. Segment output handling is controlled by `segmentheadergeometry`: `explicit_volume_derived_header` sends segmentation as an explicit derived volume, `3d_series_segment_header` sends 3D source-geometry masks with segmentation header identity, `2d_segment_header` sends 2D source-geometry masks with segmentation header identity, `2d_segment_header_originals` sends the same masks without scanner postprocessing child-role metadata, `2d_derived_image_header` sends 2D source-geometry masks with derived image header identity, and `2d_source_image_header` sends 2D source-geometry masks with source image header identity. When originals and segments are both enabled, originals are sent first and segment outputs are sent after them. Multi-contrast inputs with repeated slice positions are split into one segmentation output per source volume group. Enable `segmentationcolormap` with `segment` to add `MicroDeltaHotMetal.pal` LUT metadata to segmentation outputs. Enable `upsampled` to send one double-slice-count `<source>-upsampled` volume on `image_series_index = 102`. Enable `sendreformatsagittal` or `sendreformatcoronal` to send explicit sagittal/coronal 3D reformat volumes of the segment data starting on `image_series_index = 121`. Enable `sendcomputedmip` to send one `<source>-mip` maximum intensity projection image on `image_series_index = 103`. Enable `sendmetrics` to send segmented-region volume in image comments and a `<source>-metrics` DICOM image table on `image_series_index = 120`. The metrics table is sent as a standalone explicit derived output so scanner inline postprocessing does not attach to it. The rendered pixels are pre-oriented for scanner display and use standalone identity geometry instead of inheriting scan orientation. Original copies are normally sent first as source-native 2D images with `Keep_image_geometry = 1`. The pass-through keeps the source protocol, sequence, image-type, MiniHead, and slice metadata as intact as possible while assigning new returned-series UIDs. Returned originals use a one-based per-series `image_index`. Meta and MiniHead storage counters are restamped from the returned stream so `NumberInSeries`, `ChronSliceNo`, and `SliceNo` remain consistent with the MRD header; valid source partition counters are preserved for multi-partition inputs such as wholebody Dixon. If a source group cannot be sent safely as a 2D stream, the job fails before send rather than packing the originals, because scanner MIP/MPR postprocessing depends on the original stream. When `sendoriginal` is paired with `segmentheadergeometry = explicit_volume_derived_header`, the returned originals are sorted by projected physical slice position so their frame order matches the returned explicit segment volume. With `segmentheadergeometry = explicit_volume_derived_header`, segmentation outputs are sent as one explicit derived volume per source group with `Keep_image_geometry = 0`, `DataRole = Image`, and `SegmentExplicitVolume = 1`. These outputs are batched separately from originals. With `segmentheadergeometry = 3d_series_segment_header`, segmentation outputs are sent as one returned 3D-derived series per source group with one MRD image per source slice. The slices use `Keep_image_geometry = 1`, `DataRole = Segmentation`, `SegmentSourceGeometry = 1`, `SegmentOutputGeometry = 3d`, unique returned `slice` / `image_index` counters, source physical positions, and restamped Meta and MiniHead storage fields. With `segmentheadergeometry = 2d_segment_header`, masks keep source physical geometry, use `Keep_image_geometry = 1`, `DataRole = Segmentation`, `SegmentSourceGeometry = 1`, and the explicit segmentation `ImageType`. With `segmentheadergeometry = 2d_segment_header_originals`, masks use the same source-geometry segmentation header identity, but do not set `SegmentPostProcessingChildRole` or restamp `ExamDataRole` on the segment stream so scanner postprocessing can remain on the original stream. With `segmentheadergeometry = 2d_derived_image_header`, masks use the same source-geometry 2D header path but keep `DataRole = Image` and use a derived segment `ImageType`. With `segmentheadergeometry = 2d_source_image_header`, masks use the same source-geometry 2D header path but keep `DataRole = Image` and source `ImageType`, `DicomImageType`, and `ImageTypeValue4` identity. Segment reformats are packed explicit 3D volumes with centered slab geometry, `Keep_image_geometry = 0`, no `IceMiniHead`, `image_index = 1`, `slice = 0`, and matching `slice_count`, `NumberOfSlices`, and `ImagesInAcquisition`. When originals and segments are both enabled, segment outputs are sent after original outputs in a separate MRD image message. Returned outputs strip scanner `ImageTypeValue3` metadata and `IceMiniHead` `ImageTypeValue3` entries because some sequences reject that protocol field during OpenRecon conversion. Original pass-through preserves Dixon subtype identity. 2D source-image-header mask outputs preserve source identity, including Dixon subtype tokens. OpenRecon runtime notes and scanner option-combination tables: `recipes/openreconi2iexample/OpenReconREADME.md`. Scanner logs include an `openreconi2iexample runtime version=...` marker, `OPENRECONI2I_POSTPROCESSING target=...`, the independent segment controls in the configured-output line, and one `OPENRECONI2I_BATCH ...` marker before every MRD image send. Build and validate:",
+            "doi": "10.5281/zenodo.23129736",
+            "doi_url": "https://doi.org/10.5281/zenodo.23129736",
+            "license": "mit-license",
+            "openrecon": true
         },
         {
             "application": "openreconslicegrappa_0.1.0_20260916",
@@ -3930,7 +4263,7 @@
             "categories": [
                 "statistics"
             ],
-            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data.",
+            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands.",
             "doi": "10.5281/zenodo.18931272",
             "doi_url": "https://doi.org/10.5281/zenodo.18931272",
             "license": "gpl-3.0"
@@ -3940,7 +4273,7 @@
             "categories": [
                 "statistics"
             ],
-            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data.",
+            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands.",
             "doi": "10.5281/zenodo.21753706",
             "doi_url": "https://doi.org/10.5281/zenodo.21753706",
             "license": "gpl-3.0"
@@ -3998,6 +4331,12 @@
             "doi": "10.5281/zenodo.19647286",
             "doi_url": "https://doi.org/10.5281/zenodo.19647286",
             "license": "mit-license"
+        },
+        {
+            "application": "pyem_0.69.0_20261004",
+            "categories": [
+                "cryo EM"
+            ]
         },
         {
             "application": "qmrlab_2.4.2_20240828",
@@ -4422,6 +4761,15 @@
             "openrecon": true
         },
         {
+            "application": "quantiphyse_0.9.10_20261004",
+            "categories": [
+                "arterial spin labelling",
+                "quantitative imaging",
+                "visualization",
+                "workflows"
+            ]
+        },
+        {
             "application": "quickshear_1.1.0_20240606",
             "categories": [
                 "data organisation"
@@ -4648,6 +4996,19 @@
             "doi": "10.5281/zenodo.18931715",
             "doi_url": "https://doi.org/10.5281/zenodo.18931715",
             "license": "gpl-3.0"
+        },
+        {
+            "application": "skan_0.13.1_20261004",
+            "categories": [
+                "shape analysis"
+            ],
+            "description": "Skeleton analysis in Python. skan measures the branches and junctions of skeletonised 2D and 3D images, such as vessel, neurite or fibre networks: branch lengths, branch types, tortuosity and the underlying pixel graph. https://skeleton-analysis.org/stable/ This container provides the skan Python library together with scikit-image, NumPy, SciPy, pandas and Numba. The napari plugin is not included."
+        },
+        {
+            "application": "skan_arm64_0.13.1_20261004",
+            "categories": [
+                "shape analysis"
+            ]
         },
         {
             "application": "slicegrappa_0.1.1_20260916",
@@ -4932,6 +5293,12 @@
                 "diffusion imaging"
             ],
             "description": "StarTrack is a diffusion MRI analysis and tractography application for DTI, spherical deconvolution, fibre orientation distribution visualization, and whole-brain tractography."
+        },
+        {
+            "application": "stir_6.4.0_20261003",
+            "categories": [
+                "image reconstruction"
+            ]
         },
         {
             "application": "surfice_1.0.20210730_20211218",
