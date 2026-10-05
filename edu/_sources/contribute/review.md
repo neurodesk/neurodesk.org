@@ -57,7 +57,7 @@ When reviewing a tutorial or example notebook submission, please check [the foll
 
 ## What Happens After Review?
 
-Once all reviewers are satisfied that the submission meets the criteria above, the maintainers will change the status of the revision badge on the [NeurodeskEDU site](https://neurodesk.org/edu) and reviewers' Github handle will appear in the revision badge. Contributors are acknowledged on the <a href="https://neurodesk.org/developers/contributors/" target="_blank" rel="noopener"> Contributors page </a>. To be listed, include your name and a short description in your pull request using <a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/contributor-format.md" target="_blank" rel="noopener"> this format</a>.
+Once all reviewers are satisfied that the submission meets the criteria above, the maintainers will change the status of the revision badge on the [NeurodeskEDU site](https://neurodesk.org/edu) and reviewers' Github handle will appear in the revision badge. Contributors are acknowledged on the <a href="https://neurodesk.org/developers/contributors/" target="_blank" rel="noopener"> Contributors page </a>. To be listed, include your name and a short description in your pull request using <a href="https://github.com/neurodesk/neurodesk.github.io-hugo/blob/main/.github/content-templates/contributor-format.md" target="_blank" rel="noopener"> this format</a>.
 
 ---
 

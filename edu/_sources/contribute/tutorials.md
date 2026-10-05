@@ -45,7 +45,7 @@ The template includes:
 - Store images in the appropriate `/static/` folder and link them with full paths
 - Write in plain Markdown, using Hugo formatting where needed
 
-See existing [tutorials](/neurodeskedu/tutorials/) for reference. 
+See existing [tutorials](../tutorials/intro.md) for reference. 
 
 ---
 ## Saving and Submitting
@@ -62,7 +62,7 @@ Follow the steps for <a href="https://neurodesk.org/developers/documentation/cre
 
 2. Store any images in a matching subfolder in `/static/tutorials/`
 
-3. Open a pull request in the <a href="https://github.com/neurodesk/neurodesk.edu" target="_blank" rel="noopener">
+3. Open a pull request in the <a href="https://github.com/neurodesk/neurodeskedu" target="_blank" rel="noopener">
   `neurodeskedu repository`
 </a>
 
@@ -77,7 +77,7 @@ Follow the steps for <a href="https://neurodesk.org/developers/documentation/cre
 All tutorial contributors are acknowledged on the <a href="https://neurodesk.org/developers/contributors/" target="_blank" rel="noopener">
   Contributors page
 </a>.  
-To be listed, include your name and a short description in your pull request using <a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/contributor-format.md" target="_blank" rel="noopener">
+To be listed, include your name and a short description in your pull request using <a href="https://github.com/neurodesk/neurodesk.github.io-hugo/blob/main/.github/content-templates/contributor-format.md" target="_blank" rel="noopener">
   this format
 </a>.
 

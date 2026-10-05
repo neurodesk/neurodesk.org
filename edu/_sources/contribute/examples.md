@@ -121,7 +121,7 @@ The full checklist is available in the <a href="https://github.com/neurodesk/neu
 All notebooks contributors are acknowledged on the <a href="https://neurodesk.org/developers/contributors/" target="_blank" rel="noopener">
   Contributors page
 </a>.  
-To be listed, include your name and a short description in your pull request using <a href="https://github.com/neurodesk/neurodesk.github.io/blob/main/.github/content-templates/contributor-format.md" target="_blank" rel="noopener">
+To be listed, include your name and a short description in your pull request using <a href="https://github.com/neurodesk/neurodesk.github.io-hugo/blob/main/.github/content-templates/contributor-format.md" target="_blank" rel="noopener">
   this format
 </a>.
 

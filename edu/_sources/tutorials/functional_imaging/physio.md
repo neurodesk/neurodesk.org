@@ -70,7 +70,7 @@ The example data should already be present in neurodesk in the following folder 
 
 If you cannot find the example data there:
 1. Download the latest version from the [location mentioned in the TAPAS distribution](https://github.com/translationalneuromodeling/tapas/blob/master/misc/log_tapas.txt)
-    - e.g., https://www.tapas.tnu-zurich.com/examples_v5.0.0.zip
+    - e.g., `https://www.tapas.tnu-zurich.com/examples_v5.0.0.zip`
 2. Follow the instructions for copying your own data in the next section
 
 ## Copy your own data
