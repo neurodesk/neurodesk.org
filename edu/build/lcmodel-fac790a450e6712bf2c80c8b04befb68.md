@@ -23,11 +23,7 @@ downloads:
 
 # Spectroscopy with lcmodel
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718416](<https://zenodo.org/doi/10.5281/zenodo.18718416>)
-:::
 
 
 Using lcmodel, you can analyze MR spectroscopy data.

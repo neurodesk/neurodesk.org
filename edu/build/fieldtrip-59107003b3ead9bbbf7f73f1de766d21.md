@@ -24,11 +24,7 @@ downloads:
 ---
 # Analysing M/EEG Data with FieldTrip
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718424](<https://zenodo.org/doi/10.5281/zenodo.18718424>)
-:::
 
 
 A brief guide to using FieldTrip to analyse electrophysiological data within neurodesk.

@@ -23,11 +23,7 @@ downloads:
 
 # Spectroscopy pipeline
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718418](<https://zenodo.org/doi/10.5281/zenodo.18718418>)
-:::
 
 
 Using mrsiproc, you can reconstruct and analyze MR spectroscopy data.

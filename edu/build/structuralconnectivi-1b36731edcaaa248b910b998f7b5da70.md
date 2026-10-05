@@ -22,11 +22,7 @@ downloads:
 
 # Structural connectivity dMRI
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718466](<https://zenodo.org/doi/10.5281/zenodo.18718466>)
-:::
 
 
 Example workflow for constructing strutural connectivity (Human connectome project: Single subject)

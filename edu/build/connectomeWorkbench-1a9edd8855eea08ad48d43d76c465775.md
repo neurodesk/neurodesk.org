@@ -24,11 +24,7 @@ downloads:
 ---
 # Connectome Workbench
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718440](<https://zenodo.org/doi/10.5281/zenodo.18718440>)
-:::
 
 
 A tutorial for accessing and visualizing the 7T HCP Retinotopy Dataset on Connectome Workbench.

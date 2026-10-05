@@ -26,11 +26,7 @@ downloads:
 
 # Using mriqc with neurodesk on HPC
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718436](<https://zenodo.org/doi/10.5281/zenodo.18718436>)
-:::
 
 
 A brief guide to using mriqc with neurodesk.

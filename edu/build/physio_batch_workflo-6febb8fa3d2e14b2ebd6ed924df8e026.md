@@ -24,11 +24,7 @@ downloads:
 ---
 # A batch scripting example for PhysIO toolbox
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718446](<https://zenodo.org/doi/10.5281/zenodo.18718446>)
-:::
 
 
 Follow this tutorial as an example of how to batch script for the PhysIO toolbox using Neurodesk.

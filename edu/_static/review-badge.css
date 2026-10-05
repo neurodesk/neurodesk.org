@@ -65,7 +65,8 @@
   overflow-wrap: anywhere;
 }
 
-.nd-doi {
+/* Make the theme's frontmatter DOI (under the authors) stand out as a labelled badge. */
+.myst-fm-doi-badge {
   display: inline-block;
   margin: 0.5rem 0;
   padding: 0.25rem 0.6rem;
@@ -76,18 +77,15 @@
   color: #ffffff;
 }
 
-.nd-doi strong {
-  color: inherit;
+.myst-fm-doi-badge::before {
+  content: "DOI: ";
+  font-weight: 700;
 }
 
-.nd-doi a {
-  color: inherit;
+.myst-fm-doi-badge .myst-fm-doi-link {
+  font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 2px;
-}
-
-.nd-doi p {
-  margin: 0;
 }
 
 /* Launch menu added to the page header by launch-menu.js. */

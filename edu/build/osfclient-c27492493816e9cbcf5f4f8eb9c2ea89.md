@@ -22,11 +22,7 @@ downloads:
 ---
 # osfclient
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718450](<https://zenodo.org/doi/10.5281/zenodo.18718450>)
-:::
 
 
 Using osfclient to publish and access open data on OSF.

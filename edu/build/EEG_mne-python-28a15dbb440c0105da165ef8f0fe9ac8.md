@@ -21,11 +21,7 @@ downloads:
 ---
 # Analysing EEG Data with MNE
 
-:::{div}
-:class: nd-doi
 
-**DOI:** [https://doi.org/10.5281/zenodo.18718426](<https://zenodo.org/doi/10.5281/zenodo.18718426>)
-:::
 
 
 Use mne-python to load, pre-process, and plot example EEG data in a jupyter notebook through vscode. 
