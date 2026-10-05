@@ -1,0 +1,1344 @@
+[INFO]: QSMxT v8.1.1
+[INFO]: Python interpreter: /opt/miniconda-4.12.0/bin/python3.8
+[INFO]: Command: qsmxt /home/jovyan/workspace/books/examples/quantitative_imaging/bids --premade 'fast' --do_qsm --do_segmentation --do_analysis --auto_yes
+[WARNING]: Pipeline is NOT guidelines compliant (see https://doi.org/10.1002/mrm.30006):; Phase-quality-based masking recommended
+[INFO]: Available memory: 54.251 GB
+[INFO]: Creating QSMxT workflow for sub-1.ses-20170705.acq-acqmp2ragehighres0p5isoslab.T1w...
+[INFO]: Creating QSMxT workflow for sub-1.ses-20170705.acq-acqqsmp21mmisote20.T2starw...
+[INFO]: Creating QSMxT workflow for sub-2.ses-20170705.acq-acqmp2ragehighres0p5isoslab.T1w...
+[INFO]: Creating QSMxT workflow for sub-2.ses-20170705.acq-acqqsmp21mmisote20.T2starw...
+[INFO]: Running using MultiProc plugin with n_procs=16
+261004-22:15:41,490 nipype.workflow INFO:
+	 Workflow qsmxt-workflow settings: ['check', 'execution', 'logging', 'monitoring']
+261004-22:15:41,520 nipype.workflow INFO:
+	 Running in parallel.
+261004-22:15:41,522 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 24 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:15:41,560 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me".
+261004-22:15:41,629 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se".
+261004-22:15:41,630 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/func_read-json-me".
+261004-22:15:41,631 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me".
+261004-22:15:41,631 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii".
+261004-22:15:41,632 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical".
+261004-22:15:41,632 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/func_read-json-se".
+261004-22:15:41,633 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/nibabel_read-nii".
+261004-22:15:41,633 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se".
+261004-22:15:41,634 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii".
+261004-22:15:41,635 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/nibabel_as-canonical".
+261004-22:15:41,636 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical".
+261004-22:15:41,636 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-se" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,636 nipype.workflow INFO:
+	 [Node] Executing "nibabel_read-nii" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,638 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-se", elapsed time 0.000814s.
+261004-22:15:41,639 nipype.workflow INFO:
+	 [Node] Executing "nibabel_as-canonical" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,640 nipype.workflow INFO:
+	 [Node] Finished "nibabel_read-nii", elapsed time 0.002596s.
+261004-22:15:41,645 nipype.workflow INFO:
+	 [Node] Finished "nibabel_as-canonical", elapsed time 0.004436s.
+261004-22:15:41,633 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-me" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,633 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1".
+261004-22:15:41,685 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me".
+261004-22:15:41,686 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-me", elapsed time 0.000968s.
+261004-22:15:41,686 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se".
+261004-22:15:41,687 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii".
+261004-22:15:41,687 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/fastsurfer_segment-t1".
+261004-22:15:41,688 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical".
+261004-22:15:41,689 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_read-nii".
+261004-22:15:41,691 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii".
+261004-22:15:41,691 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_as-canonical".
+261004-22:15:41,692 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical".
+261004-22:15:41,694 nipype.workflow INFO:
+	 [Node] Executing "nibabel_read-nii" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,696 nipype.workflow INFO:
+	 [Node] Executing "nibabel_as-canonical" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,698 nipype.workflow INFO:
+	 [Node] Finished "nibabel_read-nii", elapsed time 0.003106s.
+261004-22:15:41,704 nipype.workflow INFO:
+	 [Node] Finished "nibabel_as-canonical", elapsed time 0.006429s.
+261004-22:15:41,687 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/func_read-json-me".
+261004-22:15:41,688 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1".
+261004-22:15:41,739 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me".
+261004-22:15:41,742 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-me" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,744 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-me", elapsed time 0.000895s.
+261004-22:15:41,750 nipype.workflow INFO:
+	 [Node] Executing "fastsurfer_segment-t1" <qsmxt.interfaces.nipype_interface_fastsurfer.FastSurferInterface>
+261004-22:15:41,688 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/func_read-json-se".
+261004-22:15:41,790 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se".
+261004-22:15:41,793 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-se" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:41,795 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-se", elapsed time 0.00097s.
+261004-22:15:43,525 nipype.workflow INFO:
+	 [Job 0] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me).
+261004-22:15:43,526 nipype.workflow INFO:
+	 [Job 1] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se).
+261004-22:15:43,527 nipype.workflow INFO:
+	 [Job 2] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii).
+261004-22:15:43,527 nipype.workflow INFO:
+	 [Job 3] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical).
+261004-22:15:43,528 nipype.workflow INFO:
+	 [Job 6] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me).
+261004-22:15:43,529 nipype.workflow INFO:
+	 [Job 7] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se).
+261004-22:15:43,530 nipype.workflow INFO:
+	 [Job 8] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii).
+261004-22:15:43,531 nipype.workflow INFO:
+	 [Job 9] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical).
+261004-22:15:43,533 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 18 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:43,598 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm".
+261004-22:15:43,599 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me".
+261004-22:15:43,600 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se".
+261004-22:15:43,601 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/ants_register-t1-to-qsm".
+261004-22:15:43,602 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm".
+261004-22:15:43,606 nipype.workflow INFO:
+	 [Node] Executing "ants_register-t1-to-qsm" <nipype.interfaces.ants.registration.RegistrationSynQuick>
+261004-22:15:43,601 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/func_read-json-me".
+261004-22:15:43,602 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/func_read-json-se".
+261004-22:15:43,653 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se".
+261004-22:15:43,657 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-se" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:43,659 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-se", elapsed time 0.000884s.
+261004-22:15:43,652 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me".
+261004-22:15:43,706 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-me" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:43,708 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-me", elapsed time 0.000838s.
+261004-22:15:45,526 nipype.workflow INFO:
+	 [Job 12] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-me).
+261004-22:15:45,527 nipype.workflow INFO:
+	 [Job 13] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_read-json-se).
+261004-22:15:45,529 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 15 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:45,572 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii".
+261004-22:15:45,574 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical".
+261004-22:15:45,575 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/nibabel_read-nii".
+261004-22:15:45,575 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/nibabel_as-canonical".
+261004-22:15:45,576 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical".
+261004-22:15:45,580 nipype.workflow INFO:
+	 [Node] Executing "nibabel_as-canonical" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:45,585 nipype.workflow INFO:
+	 [Node] Finished "nibabel_as-canonical", elapsed time 0.004365s.
+261004-22:15:45,576 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii".
+261004-22:15:45,629 nipype.workflow INFO:
+	 [Node] Executing "nibabel_read-nii" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:45,634 nipype.workflow INFO:
+	 [Node] Finished "nibabel_read-nii", elapsed time 0.003132s.
+261004-22:15:47,528 nipype.workflow INFO:
+	 [Job 14] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_read-nii).
+261004-22:15:47,529 nipype.workflow INFO:
+	 [Job 15] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_as-canonical).
+261004-22:15:47,531 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 14 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:47,576 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me".
+261004-22:15:47,577 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se".
+261004-22:15:47,578 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/func_read-json-me".
+261004-22:15:47,579 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/func_read-json-se".
+261004-22:15:47,579 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me".
+261004-22:15:47,580 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se".
+261004-22:15:47,582 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-me" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:47,583 nipype.workflow INFO:
+	 [Node] Executing "func_read-json-se" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:47,585 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-me", elapsed time 0.000826s.
+261004-22:15:47,585 nipype.workflow INFO:
+	 [Node] Finished "func_read-json-se", elapsed time 0.000824s.
+261004-22:15:49,532 nipype.workflow INFO:
+	 [Job 18] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-me).
+261004-22:15:49,534 nipype.workflow INFO:
+	 [Job 19] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_read-json-se).
+261004-22:15:49,535 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 12 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:49,595 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii".
+261004-22:15:49,596 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical".
+261004-22:15:49,598 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_read-nii".
+261004-22:15:49,602 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii".
+261004-22:15:49,598 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_as-canonical".
+261004-22:15:49,602 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical".
+261004-22:15:49,604 nipype.workflow INFO:
+	 [Node] Executing "nibabel_read-nii" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:49,606 nipype.workflow INFO:
+	 [Node] Executing "nibabel_as-canonical" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:49,607 nipype.workflow INFO:
+	 [Node] Finished "nibabel_read-nii", elapsed time 0.002495s.
+261004-22:15:49,611 nipype.workflow INFO:
+	 [Node] Finished "nibabel_as-canonical", elapsed time 0.004118s.
+261004-22:15:51,534 nipype.workflow INFO:
+	 [Job 20] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_read-nii).
+261004-22:15:51,539 nipype.workflow INFO:
+	 [Job 21] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_as-canonical).
+261004-22:15:51,540 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 12 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:51,609 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude".
+261004-22:15:51,611 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase".
+261004-22:15:51,612 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/func_getfirst-canonical-magnitude".
+261004-22:15:51,613 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude".
+261004-22:15:51,614 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_scale-phase".
+261004-22:15:51,614 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase".
+261004-22:15:51,615 nipype.workflow INFO:
+	 [Node] Executing "func_getfirst-canonical-magnitude" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:51,617 nipype.workflow INFO:
+	 [Node] Finished "func_getfirst-canonical-magnitude", elapsed time 0.000313s.
+261004-22:15:51,624 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_scale-phase" <qsmxt.interfaces.nipype_interface_processphase.ScalePhaseInterface>
+261004-22:15:51,943 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_scale-phase", elapsed time 0.31865s.
+261004-22:15:53,540 nipype.workflow INFO:
+	 [Job 24] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude).
+261004-22:15:53,541 nipype.workflow INFO:
+	 [Job 26] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase).
+261004-22:15:53,543 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 11 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:53,608 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude".
+261004-22:15:53,609 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude".
+261004-22:15:53,611 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/func_getfirst-canonical-magnitude".
+261004-22:15:53,613 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/func_getfirst-canonical-magnitude".
+261004-22:15:53,615 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude".
+261004-22:15:53,615 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude".
+261004-22:15:53,616 nipype.workflow INFO:
+	 [Node] Executing "func_getfirst-canonical-magnitude" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:53,617 nipype.workflow INFO:
+	 [Node] Executing "func_getfirst-canonical-magnitude" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:53,617 nipype.workflow INFO:
+	 [Node] Finished "func_getfirst-canonical-magnitude", elapsed time 0.000274s.
+261004-22:15:53,618 nipype.workflow INFO:
+	 [Node] Finished "func_getfirst-canonical-magnitude", elapsed time 0.000308s.
+261004-22:15:55,542 nipype.workflow INFO:
+	 [Job 27] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude).
+261004-22:15:55,545 nipype.workflow INFO:
+	 [Job 29] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.func_getfirst-canonical-magnitude).
+261004-22:15:55,546 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 9 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:55,618 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase".
+261004-22:15:55,619 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude".
+261004-22:15:55,621 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_scale-phase".
+261004-22:15:55,621 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase".
+261004-22:15:55,624 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/func_getfirst-canonical-magnitude".
+261004-22:15:55,629 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude".
+261004-22:15:55,630 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_scale-phase" <qsmxt.interfaces.nipype_interface_processphase.ScalePhaseInterface>
+261004-22:15:55,631 nipype.workflow INFO:
+	 [Node] Executing "func_getfirst-canonical-magnitude" <nipype.interfaces.utility.wrappers.Function>
+261004-22:15:55,632 nipype.workflow INFO:
+	 [Node] Finished "func_getfirst-canonical-magnitude", elapsed time 0.000275s.
+261004-22:15:55,935 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_scale-phase", elapsed time 0.304001s.
+261004-22:15:57,544 nipype.workflow INFO:
+	 [Job 31] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_scale-phase).
+261004-22:15:57,545 nipype.workflow INFO:
+	 [Job 32] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.func_getfirst-canonical-magnitude).
+261004-22:15:57,546 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 8 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:57,625 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling".
+261004-22:15:57,629 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling".
+261004-22:15:57,631 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_nilearn_axial-resampling".
+261004-22:15:57,631 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling".
+261004-22:15:57,633 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_nilearn_axial-resampling".
+261004-22:15:57,634 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling".
+261004-22:15:57,634 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_axial-resampling" <qsmxt.interfaces.nipype_interface_axialsampling.AxialSamplingInterface>
+261004-22:15:57,636 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_axial-resampling" <qsmxt.interfaces.nipype_interface_axialsampling.AxialSamplingInterface>
+261004-22:15:57,643 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_axial-resampling", elapsed time 0.004998s.
+261004-22:15:57,644 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_axial-resampling", elapsed time 0.007068s.
+261004-22:15:59,547 nipype.workflow INFO:
+	 [Job 36] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling).
+261004-22:15:59,548 nipype.workflow INFO:
+	 [Job 41] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_axial-resampling).
+261004-22:15:59,554 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 10 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:15:59,597 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo".
+261004-22:15:59,600 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo".
+261004-22:15:59,602 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/mrt_romeo".
+261004-22:15:59,602 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo".
+261004-22:15:59,613 nipype.workflow INFO:
+	 [Node] Executing "mrt_romeo" <qsmxt.interfaces.nipype_interface_romeo.RomeoB0Interface>
+261004-22:15:59,600 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/mrt_romeo".
+261004-22:15:59,651 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo".
+261004-22:15:59,663 nipype.workflow INFO:
+	 [Node] Executing "mrt_romeo" <qsmxt.interfaces.nipype_interface_romeo.RomeoB0Interface>
+261004-22:16:01,550 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 8 jobs ready. Free memory (GB): 31.84/56.51, Free processors: 0/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:16:28,744 nipype.workflow INFO:
+	 [Node] Finished "mrt_romeo", elapsed time 29.080677s.
+261004-22:16:29,167 nipype.workflow INFO:
+	 [Node] Finished "mrt_romeo", elapsed time 29.553149s.
+261004-22:16:29,587 nipype.workflow INFO:
+	 [Job 46] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo).
+261004-22:16:29,592 nipype.workflow INFO:
+	 [Job 50] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.mrt_romeo).
+261004-22:16:29,593 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 10 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:16:29,674 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase".
+261004-22:16:29,675 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/nibabel-numpy_normalize-phase".
+261004-22:16:29,676 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase".
+261004-22:16:29,685 nipype.workflow INFO:
+	 [Node] Executing "nibabel-numpy_normalize-phase" <qsmxt.interfaces.nipype_interface_processphase.PhaseToNormalizedInterface>
+261004-22:16:29,771 nipype.workflow INFO:
+	 [Node] Finished "nibabel-numpy_normalize-phase", elapsed time 0.085178s.
+261004-22:16:31,591 nipype.workflow INFO:
+	 [Job 53] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase).
+261004-22:16:31,595 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 9 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:16:31,647 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase".
+261004-22:16:31,650 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/nibabel-numpy_normalize-phase".
+261004-22:16:31,650 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase".
+261004-22:16:31,659 nipype.workflow INFO:
+	 [Node] Executing "nibabel-numpy_normalize-phase" <qsmxt.interfaces.nipype_interface_processphase.PhaseToNormalizedInterface>
+261004-22:16:31,744 nipype.workflow INFO:
+	 [Node] Finished "nibabel-numpy_normalize-phase", elapsed time 0.083406s.
+261004-22:16:33,593 nipype.workflow INFO:
+	 [Job 55] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.nibabel-numpy_normalize-phase).
+261004-22:16:33,594 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 8 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:18:53,492 nipype.workflow INFO:
+	 [Node] Finished "ants_register-t1-to-qsm", elapsed time 189.885046s.
+261004-22:18:55,750 nipype.workflow INFO:
+	 [Job 5] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm).
+261004-22:18:55,752 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 8 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:18:55,798 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1".
+261004-22:18:55,800 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/fastsurfer_segment-t1".
+261004-22:18:55,801 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1".
+261004-22:18:55,811 nipype.workflow INFO:
+	 [Node] Executing "fastsurfer_segment-t1" <qsmxt.interfaces.nipype_interface_fastsurfer.FastSurferInterface>
+261004-22:18:57,752 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 7 jobs ready. Free memory (GB): 32.51/56.51, Free processors: 0/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:20:42,51 nipype.workflow INFO:
+	 [Node] Finished "fastsurfer_segment-t1", elapsed time 300.29927s.
+261004-22:20:43,896 nipype.workflow INFO:
+	 [Job 4] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1).
+261004-22:20:43,898 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 8 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:20:43,945 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm".
+261004-22:20:43,947 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii".
+261004-22:20:43,947 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/ants_register-t1-to-qsm".
+261004-22:20:43,948 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm".
+261004-22:20:43,948 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/numpy_numpy_nibabel_mgz2nii".
+261004-22:20:43,949 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii".
+261004-22:20:43,950 nipype.workflow INFO:
+	 [Node] Executing "ants_register-t1-to-qsm" <nipype.interfaces.ants.registration.RegistrationSynQuick>
+261004-22:20:43,950 nipype.workflow INFO:
+	 [Node] Executing "numpy_numpy_nibabel_mgz2nii" <qsmxt.interfaces.nipype_interface_mgz2nii.Mgz2NiiInterface>
+261004-22:20:44,148 nipype.workflow INFO:
+	 [Node] Finished "numpy_numpy_nibabel_mgz2nii", elapsed time 0.196807s.
+261004-22:20:45,898 nipype.workflow INFO:
+	 [Job 25] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii).
+261004-22:20:45,900 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 8 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:20:45,942 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:20:45,945 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:20:45,945 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:20:45,946 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm".
+261004-22:20:45,949 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/ants_transform-segmentation-to-qsm".
+261004-22:20:45,949 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm".
+261004-22:20:45,971 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_t1w-seg-resampled" <qsmxt.interfaces.nipype_interface_resample_like.ResampleLikeInterface>
+261004-22:20:46,52 nipype.workflow INFO:
+	 [Node] Executing "ants_transform-segmentation-to-qsm" <nipype.interfaces.ants.resampling.ApplyTransforms>
+261004-22:20:47,901 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 6 jobs ready. Free memory (GB): 32.51/56.51, Free processors: 0/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:20:48,17 nipype.workflow INFO:
+	 [Node] Finished "ants_transform-segmentation-to-qsm", elapsed time 1.964145s.
+261004-22:20:48,959 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_t1w-seg-resampled", elapsed time 2.987435s.
+261004-22:20:49,903 nipype.workflow INFO:
+	 [Job 34] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled).
+261004-22:20:49,906 nipype.workflow INFO:
+	 [Job 35] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm).
+261004-22:20:49,907 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 7 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:20:49,957 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile".
+261004-22:20:49,959 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/copyfile".
+261004-22:20:49,959 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile".
+261004-22:20:49,962 nipype.workflow INFO:
+	 [Node] Executing "copyfile" <qsmxt.interfaces.nipype_interface_copyfile.DynamicCopyFiles>
+261004-22:20:50,410 nipype.workflow INFO:
+	 [Node] Finished "copyfile", elapsed time 0.447307s.
+261004-22:20:51,903 nipype.workflow INFO:
+	 [Job 44] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile).
+261004-22:20:51,905 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 6 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:22:02,930 nipype.workflow INFO:
+	 [Node] Finished "ants_register-t1-to-qsm", elapsed time 78.978973s.
+261004-22:22:03,975 nipype.workflow INFO:
+	 [Job 11] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm).
+261004-22:22:03,976 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 6 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:22:04,22 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1".
+261004-22:22:04,24 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/fastsurfer_segment-t1".
+261004-22:22:04,25 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1".
+261004-22:22:04,36 nipype.workflow INFO:
+	 [Node] Executing "fastsurfer_segment-t1" <qsmxt.interfaces.nipype_interface_fastsurfer.FastSurferInterface>
+261004-22:22:05,977 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 5 jobs ready. Free memory (GB): 32.51/56.51, Free processors: 0/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:23:57,960 nipype.workflow INFO:
+	 [Node] Finished "fastsurfer_segment-t1", elapsed time 302.148241s.
+261004-22:23:58,122 nipype.workflow INFO:
+	 [Job 10] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1).
+261004-22:23:58,123 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 6 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:23:58,174 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm".
+261004-22:23:58,175 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii".
+261004-22:23:58,177 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/numpy_numpy_nibabel_mgz2nii".
+261004-22:23:58,179 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii".
+261004-22:23:58,178 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/ants_register-t1-to-qsm".
+261004-22:23:58,179 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm".
+261004-22:23:58,181 nipype.workflow INFO:
+	 [Node] Executing "numpy_numpy_nibabel_mgz2nii" <qsmxt.interfaces.nipype_interface_mgz2nii.Mgz2NiiInterface>
+261004-22:23:58,186 nipype.workflow INFO:
+	 [Node] Executing "ants_register-t1-to-qsm" <nipype.interfaces.ants.registration.RegistrationSynQuick>
+261004-22:23:58,386 nipype.workflow INFO:
+	 [Node] Finished "numpy_numpy_nibabel_mgz2nii", elapsed time 0.202887s.
+261004-22:24:00,123 nipype.workflow INFO:
+	 [Job 28] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii).
+261004-22:24:00,125 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 6 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:24:00,172 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:24:00,175 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm".
+261004-22:24:00,175 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:24:00,177 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/ants_transform-segmentation-to-qsm".
+261004-22:24:00,178 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm".
+261004-22:24:00,178 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:24:00,202 nipype.workflow INFO:
+	 [Node] Executing "ants_transform-segmentation-to-qsm" <nipype.interfaces.ants.resampling.ApplyTransforms>
+261004-22:24:00,203 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_t1w-seg-resampled" <qsmxt.interfaces.nipype_interface_resample_like.ResampleLikeInterface>
+261004-22:24:00,921 nipype.workflow INFO:
+	 [Node] Finished "ants_transform-segmentation-to-qsm", elapsed time 0.717783s.
+261004-22:24:02,125 nipype.workflow INFO:
+	 [Job 38] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm).
+261004-22:24:02,127 nipype.workflow INFO:
+	 [MultiProc] Running 3 tasks, and 5 jobs ready. Free memory (GB): 34.51/56.51, Free processors: 1/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:24:02,187 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2".
+261004-22:24:02,189 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/combine_lists2".
+261004-22:24:02,189 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2".
+261004-22:24:02,192 nipype.workflow INFO:
+	 [Node] Executing "combine_lists2" <nipype.interfaces.utility.wrappers.Function>
+261004-22:24:02,193 nipype.workflow INFO:
+	 [Node] Finished "combine_lists2", elapsed time 0.000453s.
+261004-22:24:03,143 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_t1w-seg-resampled", elapsed time 2.938122s.
+261004-22:24:04,128 nipype.workflow INFO:
+	 [Job 37] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled).
+261004-22:24:04,131 nipype.workflow INFO:
+	 [Job 47] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2).
+261004-22:24:04,134 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 4 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1
+261004-22:26:53,381 nipype.workflow INFO:
+	 [Node] Finished "fastsurfer_segment-t1", elapsed time 289.344109s.
+261004-22:26:54,305 nipype.workflow INFO:
+	 [Job 16] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.fastsurfer_segment-t1).
+261004-22:26:54,306 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 5 jobs ready. Free memory (GB): 48.51/56.51, Free processors: 10/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+261004-22:26:54,346 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1".
+261004-22:26:54,348 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii".
+261004-22:26:54,348 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/fastsurfer_segment-t1".
+261004-22:26:54,348 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1".
+261004-22:26:54,350 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/numpy_numpy_nibabel_mgz2nii".
+261004-22:26:54,350 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii".
+261004-22:26:54,352 nipype.workflow INFO:
+	 [Node] Executing "numpy_numpy_nibabel_mgz2nii" <qsmxt.interfaces.nipype_interface_mgz2nii.Mgz2NiiInterface>
+261004-22:26:54,359 nipype.workflow INFO:
+	 [Node] Executing "fastsurfer_segment-t1" <qsmxt.interfaces.nipype_interface_fastsurfer.FastSurferInterface>
+261004-22:26:54,534 nipype.workflow INFO:
+	 [Node] Finished "numpy_numpy_nibabel_mgz2nii", elapsed time 0.181218s.
+261004-22:26:56,307 nipype.workflow INFO:
+	 [Job 30] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.numpy_numpy_nibabel_mgz2nii).
+261004-22:26:56,308 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 4 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+261004-22:26:56,351 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:26:56,354 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:26:56,354 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:26:56,376 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_t1w-seg-resampled" <qsmxt.interfaces.nipype_interface_resample_like.ResampleLikeInterface>
+261004-22:26:58,309 nipype.workflow INFO:
+	 [MultiProc] Running 3 tasks, and 3 jobs ready. Free memory (GB): 34.51/56.51, Free processors: 1/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+261004-22:26:59,304 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_t1w-seg-resampled", elapsed time 2.92739s.
+261004-22:27:00,311 nipype.workflow INFO:
+	 [Job 39] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.nibabel_numpy_nilearn_t1w-seg-resampled).
+261004-22:27:00,312 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 3 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm
+261004-22:27:08,591 nipype.workflow INFO:
+	 [Node] Finished "ants_register-t1-to-qsm", elapsed time 190.40389s.
+261004-22:27:10,322 nipype.workflow INFO:
+	 [Job 17] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_register-t1-to-qsm).
+261004-22:27:10,323 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 4 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:27:10,370 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm".
+261004-22:27:10,372 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/ants_register-t1-to-qsm".
+261004-22:27:10,373 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm".
+261004-22:27:10,374 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm".
+261004-22:27:10,376 nipype.workflow INFO:
+	 [Node] Executing "ants_register-t1-to-qsm" <nipype.interfaces.ants.registration.RegistrationSynQuick>
+261004-22:27:10,376 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/ants_transform-segmentation-to-qsm".
+261004-22:27:10,377 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm".
+261004-22:27:10,468 nipype.workflow INFO:
+	 [Node] Executing "ants_transform-segmentation-to-qsm" <nipype.interfaces.ants.resampling.ApplyTransforms>
+261004-22:27:12,325 nipype.workflow INFO:
+	 [MultiProc] Running 3 tasks, and 2 jobs ready. Free memory (GB): 34.51/56.51, Free processors: 1/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:27:12,494 nipype.workflow INFO:
+	 [Node] Finished "ants_transform-segmentation-to-qsm", elapsed time 2.025027s.
+261004-22:27:14,327 nipype.workflow INFO:
+	 [Job 40] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.ants_transform-segmentation-to-qsm).
+261004-22:27:14,329 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 3 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:27:14,381 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile".
+261004-22:27:14,386 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqmp2ragehighres0p5isoslab_T1w/copyfile".
+261004-22:27:14,387 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile".
+261004-22:27:14,390 nipype.workflow INFO:
+	 [Node] Executing "copyfile" <qsmxt.interfaces.nipype_interface_copyfile.DynamicCopyFiles>
+261004-22:27:14,807 nipype.workflow INFO:
+	 [Node] Finished "copyfile", elapsed time 0.417014s.
+261004-22:27:16,329 nipype.workflow INFO:
+	 [Job 48] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqmp2ragehighres0p5isoslab_T1w.copyfile).
+261004-22:27:16,330 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 2 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 2/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:31,453 nipype.workflow INFO:
+	 [Node] Finished "ants_register-t1-to-qsm", elapsed time 81.076096s.
+261004-22:28:32,412 nipype.workflow INFO:
+	 [Job 23] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_register-t1-to-qsm).
+261004-22:28:32,414 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 2 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:32,457 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet".
+261004-22:28:32,459 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/mask_workflow/fsl-bet".
+261004-22:28:32,459 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet".
+261004-22:28:32,461 nipype.workflow INFO:
+	 [Node] Executing "fsl-bet" <qsmxt.interfaces.nipype_interface_bet2.Bet2Interface>
+261004-22:28:34,414 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 1 jobs ready. Free memory (GB): 42.51/56.51, Free processors: 0/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:35,174 nipype.workflow INFO:
+	 [Node] Finished "fsl-bet", elapsed time 2.711819s.
+261004-22:28:36,416 nipype.workflow INFO:
+	 [Job 45] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet).
+261004-22:28:36,418 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 2 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:36,477 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet".
+261004-22:28:36,479 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/mask_workflow/fsl-bet".
+261004-22:28:36,480 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet".
+261004-22:28:36,481 nipype.workflow INFO:
+	 [Node] Executing "fsl-bet" <qsmxt.interfaces.nipype_interface_bet2.Bet2Interface>
+261004-22:28:38,419 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 1 jobs ready. Free memory (GB): 42.51/56.51, Free processors: 0/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:39,212 nipype.workflow INFO:
+	 [Node] Finished "fsl-bet", elapsed time 2.729857s.
+261004-22:28:40,420 nipype.workflow INFO:
+	 [Job 49] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.fsl-bet).
+261004-22:28:40,423 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 2 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:40,468 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode".
+261004-22:28:40,470 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/mask_workflow/scipy_numpy_nibabel_bet_erode".
+261004-22:28:40,471 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode".
+261004-22:28:40,473 nipype.workflow INFO:
+	 [Node] Executing "scipy_numpy_nibabel_bet_erode" <qsmxt.interfaces.nipype_interface_erode.ErosionInterface>
+261004-22:28:40,470 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode".
+261004-22:28:40,523 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/mask_workflow/scipy_numpy_nibabel_bet_erode".
+261004-22:28:40,524 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode".
+261004-22:28:40,526 nipype.workflow INFO:
+	 [Node] Executing "scipy_numpy_nibabel_bet_erode" <qsmxt.interfaces.nipype_interface_erode.ErosionInterface>
+261004-22:28:40,932 nipype.workflow INFO:
+	 [Node] Finished "scipy_numpy_nibabel_bet_erode", elapsed time 0.405304s.
+261004-22:28:40,973 nipype.workflow INFO:
+	 [Node] Finished "scipy_numpy_nibabel_bet_erode", elapsed time 0.498505s.
+261004-22:28:42,422 nipype.workflow INFO:
+	 [Job 52] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode).
+261004-22:28:42,424 nipype.workflow INFO:
+	 [Job 54] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.mask_workflow.scipy_numpy_nibabel_bet_erode).
+261004-22:28:42,425 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 2 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:42,467 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp".
+261004-22:28:42,469 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/qsmjl_vsharp".
+261004-22:28:42,470 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp".
+261004-22:28:42,489 nipype.workflow INFO:
+	 [Node] Executing "qsmjl_vsharp" <qsmxt.interfaces.nipype_interface_qsmjl.VsharpInterface>
+261004-22:28:42,469 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp".
+261004-22:28:42,521 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/qsmjl_vsharp".
+261004-22:28:42,522 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp".
+261004-22:28:42,542 nipype.workflow INFO:
+	 [Node] Executing "qsmjl_vsharp" <qsmxt.interfaces.nipype_interface_qsmjl.VsharpInterface>
+261004-22:28:44,425 nipype.workflow INFO:
+	 [MultiProc] Running 3 tasks, and 0 jobs ready. Free memory (GB): 40.51/56.51, Free processors: 4/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:28:59,507 nipype.workflow INFO:
+	 [Node] Finished "qsmjl_vsharp", elapsed time 16.963266s.
+261004-22:28:59,795 nipype.workflow INFO:
+	 [Node] Finished "qsmjl_vsharp", elapsed time 17.305377s.
+261004-22:29:00,441 nipype.workflow INFO:
+	 [Job 56] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp).
+261004-22:29:00,442 nipype.workflow INFO:
+	 [Job 57] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_vsharp).
+261004-22:29:00,444 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 2 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:00,502 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts".
+261004-22:29:00,505 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/qsmjl_rts".
+261004-22:29:00,506 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts".
+261004-22:29:00,517 nipype.workflow INFO:
+	 [Node] Executing "qsmjl_rts" <qsmxt.interfaces.nipype_interface_qsmjl.RtsQsmInterface>
+261004-22:29:00,505 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts".
+261004-22:29:00,557 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/qsm_workflow/qsmjl_rts".
+261004-22:29:00,558 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts".
+261004-22:29:00,568 nipype.workflow INFO:
+	 [Node] Executing "qsmjl_rts" <qsmxt.interfaces.nipype_interface_qsmjl.RtsQsmInterface>
+261004-22:29:02,443 nipype.workflow INFO:
+	 [MultiProc] Running 3 tasks, and 0 jobs ready. Free memory (GB): 39.70/56.51, Free processors: 4/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts
+                       * qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:22,204 nipype.workflow INFO:
+	 [Node] Finished "qsmjl_rts", elapsed time 21.635089s.
+261004-22:29:22,239 nipype.workflow INFO:
+	 [Node] Finished "qsmjl_rts", elapsed time 21.721292s.
+261004-22:29:22,461 nipype.workflow INFO:
+	 [Job 58] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts).
+261004-22:29:22,462 nipype.workflow INFO:
+	 [Job 59] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.qsm_workflow.qsmjl_rts).
+261004-22:29:22,464 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 2 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:22,508 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average".
+261004-22:29:22,511 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average".
+261004-22:29:22,513 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_qsm-average".
+261004-22:29:22,513 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_qsm-average".
+261004-22:29:22,514 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average".
+261004-22:29:22,514 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average".
+261004-22:29:22,516 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_qsm-average" <qsmxt.interfaces.nipype_interface_nonzeroaverage.NonzeroAverageInterface>
+261004-22:29:22,517 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_qsm-average", elapsed time 0.000184s.
+261004-22:29:22,515 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_qsm-average" <qsmxt.interfaces.nipype_interface_nonzeroaverage.NonzeroAverageInterface>
+261004-22:29:22,520 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_qsm-average", elapsed time 0.000204s.
+261004-22:29:24,463 nipype.workflow INFO:
+	 [Job 60] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average).
+261004-22:29:24,464 nipype.workflow INFO:
+	 [Job 61] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-average).
+261004-22:29:24,465 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 2 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:24,516 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled".
+261004-22:29:24,518 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_nilearn_qsm-resampled".
+261004-22:29:24,518 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled".
+261004-22:29:24,518 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled".
+261004-22:29:24,521 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_qsm-resampled" <qsmxt.interfaces.nipype_interface_resample_like.ResampleLikeInterface>
+261004-22:29:24,521 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_nilearn_qsm-resampled".
+261004-22:29:24,522 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled".
+261004-22:29:24,524 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_qsm-resampled" <qsmxt.interfaces.nipype_interface_resample_like.ResampleLikeInterface>
+261004-22:29:24,527 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_qsm-resampled", elapsed time 0.001838s.
+261004-22:29:24,524 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_qsm-resampled", elapsed time 0.002091s.
+261004-22:29:26,465 nipype.workflow INFO:
+	 [Job 62] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled).
+261004-22:29:26,466 nipype.workflow INFO:
+	 [Job 63] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_qsm-resampled).
+261004-22:29:26,467 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 4 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:26,521 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced".
+261004-22:29:26,522 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1".
+261004-22:29:26,523 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced".
+261004-22:29:26,524 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1".
+261004-22:29:26,526 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_qsm-referenced".
+261004-22:29:26,526 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced".
+261004-22:29:26,529 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/combine_lists1".
+261004-22:29:26,529 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_qsm-referenced".
+261004-22:29:26,530 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced".
+261004-22:29:26,533 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/combine_lists1".
+261004-22:29:26,533 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1".
+261004-22:29:26,535 nipype.workflow INFO:
+	 [Node] Executing "combine_lists1" <nipype.interfaces.utility.wrappers.Function>
+261004-22:29:26,538 nipype.workflow INFO:
+	 [Node] Finished "combine_lists1", elapsed time 0.000571s.
+261004-22:29:26,542 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_qsm-referenced" <qsmxt.interfaces.nipype_interface_qsm_referencing.ReferenceQSMInterface>
+261004-22:29:26,544 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_qsm-referenced" <qsmxt.interfaces.nipype_interface_qsm_referencing.ReferenceQSMInterface>
+261004-22:29:26,529 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1".
+261004-22:29:26,582 nipype.workflow INFO:
+	 [Node] Executing "combine_lists1" <nipype.interfaces.utility.wrappers.Function>
+261004-22:29:26,585 nipype.workflow INFO:
+	 [Node] Finished "combine_lists1", elapsed time 0.000422s.
+261004-22:29:26,884 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_qsm-referenced", elapsed time 0.339832s.
+261004-22:29:26,900 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_qsm-referenced", elapsed time 0.358016s.
+261004-22:29:28,465 nipype.workflow INFO:
+	 [Job 64] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced).
+261004-22:29:28,466 nipype.workflow INFO:
+	 [Job 65] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1).
+261004-22:29:28,467 nipype.workflow INFO:
+	 [Job 66] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_qsm-referenced).
+261004-22:29:28,468 nipype.workflow INFO:
+	 [Job 67] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists1).
+261004-22:29:28,469 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 3 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:28,513 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar".
+261004-22:29:28,515 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations".
+261004-22:29:28,516 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/create_permutations".
+261004-22:29:28,517 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar".
+261004-22:29:28,517 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations".
+261004-22:29:28,519 nipype.workflow INFO:
+	 [Node] Executing "create_permutations" <nipype.interfaces.utility.wrappers.Function>
+261004-22:29:28,520 nipype.workflow INFO:
+	 [Node] Finished "create_permutations", elapsed time 0.0007s.
+261004-22:29:28,520 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/copy_qsm_json_sidecar".
+261004-22:29:28,521 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar".
+261004-22:29:28,523 nipype.workflow INFO:
+	 [Node] Executing "copy_qsm_json_sidecar" <qsmxt.interfaces.nipype_interface_copy_json_sidecar.CopyJsonSidecarInterface>
+261004-22:29:28,524 nipype.workflow INFO:
+	 [Node] Finished "copy_qsm_json_sidecar", elapsed time 0.000538s.
+261004-22:29:28,515 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/copy_qsm_json_sidecar".
+261004-22:29:28,566 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar".
+261004-22:29:28,568 nipype.workflow INFO:
+	 [Node] Executing "copy_qsm_json_sidecar" <qsmxt.interfaces.nipype_interface_copy_json_sidecar.CopyJsonSidecarInterface>
+261004-22:29:28,570 nipype.workflow INFO:
+	 [Node] Finished "copy_qsm_json_sidecar", elapsed time 0.00154s.
+261004-22:29:30,467 nipype.workflow INFO:
+	 [Job 68] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar).
+261004-22:29:30,468 nipype.workflow INFO:
+	 [Job 69] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations).
+261004-22:29:30,469 nipype.workflow INFO:
+	 [Job 70] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copy_qsm_json_sidecar).
+261004-22:29:30,470 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 1 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:32,470 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 4 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:29:32,519 nipype.workflow INFO:
+	 [Node] Outdated cache found for "_nibabel_numpy_analyse-qsm0".
+261004-22:29:32,521 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm0" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm0".
+261004-22:29:32,522 nipype.workflow INFO:
+	 [Node] Outdated cache found for "_nibabel_numpy_analyse-qsm0".
+261004-22:29:32,522 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm1".
+261004-22:29:32,524 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm3" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm3".
+261004-22:29:32,524 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm0" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:29:32,523 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm2" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm2".
+261004-22:29:32,525 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm1" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:29:32,526 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm3" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:29:32,526 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm2" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:29:34,472 nipype.workflow INFO:
+	 [MultiProc] Running 5 tasks, and 0 jobs ready. Free memory (GB): 36.51/56.51, Free processors: 4/16.
+                     Currently running:
+                       * _nibabel_numpy_analyse-qsm3
+                       * _nibabel_numpy_analyse-qsm2
+                       * _nibabel_numpy_analyse-qsm1
+                       * _nibabel_numpy_analyse-qsm0
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:30:11,358 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm2", elapsed time 38.830347s.
+261004-22:30:12,504 nipype.workflow INFO:
+	 [Job 78] Completed (_nibabel_numpy_analyse-qsm2).
+261004-22:30:12,505 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 0 jobs ready. Free memory (GB): 38.51/56.51, Free processors: 5/16.
+                     Currently running:
+                       * _nibabel_numpy_analyse-qsm3
+                       * _nibabel_numpy_analyse-qsm1
+                       * _nibabel_numpy_analyse-qsm0
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:30:17,504 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm0", elapsed time 44.979265s.
+261004-22:30:18,264 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm3", elapsed time 45.737556s.
+261004-22:30:18,510 nipype.workflow INFO:
+	 [Job 76] Completed (_nibabel_numpy_analyse-qsm0).
+261004-22:30:18,510 nipype.workflow INFO:
+	 [Job 79] Completed (_nibabel_numpy_analyse-qsm3).
+261004-22:30:18,511 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 0 jobs ready. Free memory (GB): 42.51/56.51, Free processors: 7/16.
+                     Currently running:
+                       * _nibabel_numpy_analyse-qsm1
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:30:20,45 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm1", elapsed time 47.5194s.
+261004-22:30:20,512 nipype.workflow INFO:
+	 [Job 77] Completed (_nibabel_numpy_analyse-qsm1).
+261004-22:30:20,514 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 1 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:30:20,571 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_analyse-qsm".
+261004-22:30:20,575 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_analyse-qsm".
+261004-22:30:20,580 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm0" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm0".
+261004-22:30:20,585 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm0" - collecting precomputed outputs
+261004-22:30:20,585 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm0" found cached.
+261004-22:30:20,586 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm1".
+261004-22:30:20,587 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm1" - collecting precomputed outputs
+261004-22:30:20,587 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm1" found cached.
+261004-22:30:20,588 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm2" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm2".
+261004-22:30:20,589 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm2" - collecting precomputed outputs
+261004-22:30:20,589 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm2" found cached.
+261004-22:30:20,590 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm3" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm3".
+261004-22:30:20,591 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm3" - collecting precomputed outputs
+261004-22:30:20,591 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm3" found cached.
+261004-22:30:22,513 nipype.workflow INFO:
+	 [Job 72] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_analyse-qsm).
+261004-22:30:22,516 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 1 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:30:22,574 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile".
+261004-22:30:22,576 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-1/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/copyfile".
+261004-22:30:22,576 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile".
+261004-22:30:22,582 nipype.workflow INFO:
+	 [Node] Executing "copyfile" <qsmxt.interfaces.nipype_interface_copyfile.DynamicCopyFiles>
+261004-22:30:22,780 nipype.workflow INFO:
+	 [Node] Finished "copyfile", elapsed time 0.197103s.
+261004-22:30:24,515 nipype.workflow INFO:
+	 [Job 74] Completed (qsmxt-workflow.sub-1.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile).
+261004-22:30:24,516 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 0 jobs ready. Free memory (GB): 44.51/56.51, Free processors: 8/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1
+261004-22:31:42,491 nipype.workflow INFO:
+	 [Node] Finished "fastsurfer_segment-t1", elapsed time 288.131022s.
+261004-22:31:42,584 nipype.workflow INFO:
+	 [Job 22] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.fastsurfer_segment-t1).
+261004-22:31:42,585 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:31:42,627 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii".
+261004-22:31:42,629 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/numpy_numpy_nibabel_mgz2nii".
+261004-22:31:42,630 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii".
+261004-22:31:42,632 nipype.workflow INFO:
+	 [Node] Executing "numpy_numpy_nibabel_mgz2nii" <qsmxt.interfaces.nipype_interface_mgz2nii.Mgz2NiiInterface>
+261004-22:31:42,805 nipype.workflow INFO:
+	 [Node] Finished "numpy_numpy_nibabel_mgz2nii", elapsed time 0.172838s.
+261004-22:31:44,586 nipype.workflow INFO:
+	 [Job 33] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.numpy_numpy_nibabel_mgz2nii).
+261004-22:31:44,588 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 2 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:31:44,626 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:31:44,628 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:31:44,629 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled".
+261004-22:31:44,629 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm".
+261004-22:31:44,632 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/ants_transform-segmentation-to-qsm".
+261004-22:31:44,632 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm".
+261004-22:31:44,649 nipype.workflow INFO:
+	 [Node] Executing "ants_transform-segmentation-to-qsm" <nipype.interfaces.ants.resampling.ApplyTransforms>
+261004-22:31:44,652 nipype.workflow INFO:
+	 [Node] Executing "nibabel_numpy_nilearn_t1w-seg-resampled" <qsmxt.interfaces.nipype_interface_resample_like.ResampleLikeInterface>
+261004-22:31:45,266 nipype.workflow INFO:
+	 [Node] Finished "ants_transform-segmentation-to-qsm", elapsed time 0.615864s.
+261004-22:31:46,588 nipype.workflow INFO:
+	 [Job 43] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.ants_transform-segmentation-to-qsm).
+261004-22:31:46,589 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 1 jobs ready. Free memory (GB): 54.51/56.51, Free processors: 15/16.
+                     Currently running:
+                       * qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled
+261004-22:31:46,629 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2".
+261004-22:31:46,631 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/combine_lists2".
+261004-22:31:46,632 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2".
+261004-22:31:46,633 nipype.workflow INFO:
+	 [Node] Executing "combine_lists2" <nipype.interfaces.utility.wrappers.Function>
+261004-22:31:46,635 nipype.workflow INFO:
+	 [Node] Finished "combine_lists2", elapsed time 0.000329s.
+261004-22:31:47,563 nipype.workflow INFO:
+	 [Node] Finished "nibabel_numpy_nilearn_t1w-seg-resampled", elapsed time 2.910117s.
+261004-22:31:48,590 nipype.workflow INFO:
+	 [Job 42] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_nilearn_t1w-seg-resampled).
+261004-22:31:48,591 nipype.workflow INFO:
+	 [Job 51] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.combine_lists2).
+261004-22:31:48,592 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:31:48,637 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations".
+261004-22:31:48,639 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/create_permutations".
+261004-22:31:48,639 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations".
+261004-22:31:48,641 nipype.workflow INFO:
+	 [Node] Executing "create_permutations" <nipype.interfaces.utility.wrappers.Function>
+261004-22:31:48,642 nipype.workflow INFO:
+	 [Node] Finished "create_permutations", elapsed time 0.000434s.
+261004-22:31:50,591 nipype.workflow INFO:
+	 [Job 71] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.create_permutations).
+261004-22:31:50,593 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:31:52,593 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:31:52,636 nipype.workflow INFO:
+	 [Node] Outdated cache found for "_nibabel_numpy_analyse-qsm0".
+261004-22:31:52,638 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm0" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm0".
+261004-22:31:52,638 nipype.workflow INFO:
+	 [Node] Outdated cache found for "_nibabel_numpy_analyse-qsm0".
+261004-22:31:52,639 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm1".
+261004-22:31:52,640 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm2" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm2".
+261004-22:31:52,640 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm3" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm3".
+261004-22:31:52,641 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm1" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:31:52,641 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm0" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:31:52,643 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm2" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:31:52,643 nipype.workflow INFO:
+	 [Node] Executing "_nibabel_numpy_analyse-qsm3" <qsmxt.interfaces.nipype_interface_analyse.AnalyseInterface>
+261004-22:31:54,597 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 0 jobs ready. Free memory (GB): 48.51/56.51, Free processors: 12/16.
+                     Currently running:
+                       * _nibabel_numpy_analyse-qsm3
+                       * _nibabel_numpy_analyse-qsm2
+                       * _nibabel_numpy_analyse-qsm1
+                       * _nibabel_numpy_analyse-qsm0
+261004-22:32:27,947 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm1", elapsed time 35.304864s.
+261004-22:32:28,631 nipype.workflow INFO:
+	 [Job 81] Completed (_nibabel_numpy_analyse-qsm1).
+261004-22:32:28,632 nipype.workflow INFO:
+	 [MultiProc] Running 3 tasks, and 0 jobs ready. Free memory (GB): 50.51/56.51, Free processors: 13/16.
+                     Currently running:
+                       * _nibabel_numpy_analyse-qsm3
+                       * _nibabel_numpy_analyse-qsm2
+                       * _nibabel_numpy_analyse-qsm0
+261004-22:32:28,665 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm2", elapsed time 36.021942s.
+261004-22:32:30,633 nipype.workflow INFO:
+	 [Job 82] Completed (_nibabel_numpy_analyse-qsm2).
+261004-22:32:30,634 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 0 jobs ready. Free memory (GB): 52.51/56.51, Free processors: 14/16.
+                     Currently running:
+                       * _nibabel_numpy_analyse-qsm3
+                       * _nibabel_numpy_analyse-qsm0
+261004-22:32:33,894 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm0", elapsed time 41.252171s.
+261004-22:32:34,426 nipype.workflow INFO:
+	 [Node] Finished "_nibabel_numpy_analyse-qsm3", elapsed time 41.782013s.
+261004-22:32:34,637 nipype.workflow INFO:
+	 [Job 80] Completed (_nibabel_numpy_analyse-qsm0).
+261004-22:32:34,638 nipype.workflow INFO:
+	 [Job 83] Completed (_nibabel_numpy_analyse-qsm3).
+261004-22:32:34,639 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:32:34,684 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_analyse-qsm".
+261004-22:32:34,687 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_analyse-qsm".
+261004-22:32:34,689 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm0" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm0".
+261004-22:32:34,691 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm0" - collecting precomputed outputs
+261004-22:32:34,691 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm0" found cached.
+261004-22:32:34,692 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm1" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm1".
+261004-22:32:34,692 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm1" - collecting precomputed outputs
+261004-22:32:34,693 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm1" found cached.
+261004-22:32:34,693 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm2" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm2".
+261004-22:32:34,694 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm2" - collecting precomputed outputs
+261004-22:32:34,695 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm2" found cached.
+261004-22:32:34,695 nipype.workflow INFO:
+	 [Node] Setting-up "_nibabel_numpy_analyse-qsm3" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/nibabel_numpy_analyse-qsm/mapflow/_nibabel_numpy_analyse-qsm3".
+261004-22:32:34,696 nipype.workflow INFO:
+	 [Node] Cached "_nibabel_numpy_analyse-qsm3" - collecting precomputed outputs
+261004-22:32:34,696 nipype.workflow INFO:
+	 [Node] "_nibabel_numpy_analyse-qsm3" found cached.
+261004-22:32:36,639 nipype.workflow INFO:
+	 [Job 73] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.nibabel_numpy_analyse-qsm).
+261004-22:32:36,641 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+261004-22:32:36,682 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile".
+261004-22:32:36,685 nipype.workflow INFO:
+	 [Node] Setting-up "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile" in "/home/jovyan/workspace/books/examples/quantitative_imaging/bids/derivatives/workflow/qsmxt-workflow/sub-2/ses-20170705/qsm_acq-acqqsmp21mmisote20_T2starw/copyfile".
+261004-22:32:36,685 nipype.workflow INFO:
+	 [Node] Outdated cache found for "qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile".
+261004-22:32:36,688 nipype.workflow INFO:
+	 [Node] Executing "copyfile" <qsmxt.interfaces.nipype_interface_copyfile.DynamicCopyFiles>
+261004-22:32:36,857 nipype.workflow INFO:
+	 [Node] Finished "copyfile", elapsed time 0.168499s.
+261004-22:32:38,641 nipype.workflow INFO:
+	 [Job 75] Completed (qsmxt-workflow.sub-2.ses-20170705.qsm_acq-acqqsmp21mmisote20_T2starw.copyfile).
+261004-22:32:38,643 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16.
+[INFO]: Warnings occurred!
+[INFO]: Finished

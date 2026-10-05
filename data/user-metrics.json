@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-05T03:45:04Z",
+  "generatedAt": "2026-10-05T04:54:18Z",
   "source": "Google Analytics 4",
   "periodDays": 30,
-  "totalUsers": 76880,
-  "periodUsers": 12130,
-  "periodSessions": 14121,
-  "periodPageViews": 19927,
+  "totalUsers": 76926,
+  "periodUsers": 12141,
+  "periodSessions": 14123,
+  "periodPageViews": 19951,
   "months": [
     {
       "month": "2023-05",
@@ -214,8 +214,8 @@
     },
     {
       "month": "2026-10",
-      "newUsers": 7193,
-      "cumulativeUsers": 78874
+      "newUsers": 7200,
+      "cumulativeUsers": 78881
     }
   ],
   "countries": [
@@ -232,7 +232,7 @@
     {
       "code": "SG",
       "name": "Singapore",
-      "users": 9487
+      "users": 9491
     },
     {
       "code": "AU",
@@ -257,7 +257,7 @@
     {
       "code": "FR",
       "name": "France",
-      "users": 1436
+      "users": 1437
     },
     {
       "code": "IN",
@@ -302,7 +302,7 @@
     {
       "code": "BR",
       "name": "Brazil",
-      "users": 808
+      "users": 809
     },
     {
       "code": "KR",
@@ -442,7 +442,7 @@
     {
       "code": "EG",
       "name": "Egypt",
-      "users": 147
+      "users": 148
     },
     {
       "code": "GR",
@@ -1108,10 +1108,10 @@
         "pagePathPrefix": "/edu"
       },
       "trackingStartDate": "2025-12-18",
-      "totalUsers": 2935,
-      "periodUsers": 18,
-      "periodSessions": 28,
-      "periodPageViews": 36,
+      "totalUsers": 2937,
+      "periodUsers": 20,
+      "periodSessions": 30,
+      "periodPageViews": 52,
       "months": [
         {
           "month": "2025-12",
@@ -1165,15 +1165,15 @@
         },
         {
           "month": "2026-10",
-          "newUsers": 7,
-          "cumulativeUsers": 2397
+          "newUsers": 8,
+          "cumulativeUsers": 2398
         }
       ],
       "countries": [
         {
           "code": "US",
           "name": "United States",
-          "users": 631
+          "users": 632
         },
         {
           "code": "SG",
@@ -1183,7 +1183,7 @@
         {
           "code": "CN",
           "name": "China",
-          "users": 265
+          "users": 266
         },
         {
           "code": "DE",
@@ -2461,10 +2461,10 @@
         ]
       },
       "trackingStartDate": "2026-07-12",
-      "totalUsers": 277,
-      "periodUsers": 100,
-      "periodSessions": 185,
-      "periodPageViews": 227,
+      "totalUsers": 278,
+      "periodUsers": 101,
+      "periodSessions": 186,
+      "periodPageViews": 228,
       "months": [
         {
           "month": "2026-07",
@@ -2569,6 +2569,11 @@
           "users": 4
         },
         {
+          "code": "BR",
+          "name": "Brazil",
+          "users": 3
+        },
+        {
           "code": "CO",
           "name": "Colombia",
           "users": 3
@@ -2597,11 +2602,6 @@
           "code": "TR",
           "name": "T\u00fcrkiye",
           "users": 3
-        },
-        {
-          "code": "BR",
-          "name": "Brazil",
-          "users": 2
         },
         {
           "code": "RU",

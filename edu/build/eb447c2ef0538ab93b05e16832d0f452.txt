@@ -1,0 +1,395 @@
+260928-23:49:02,709 nipype.workflow IMPORTANT:
+	 Running QSIRecon version 1.1.1.dev0+gaf43da9.d20250414
+
+         License NOTICE ##################################################
+         QSIRecon 1.1.1.dev0+gaf43da9.d20250414
+         Copyright The PennLINC Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+260928-23:49:02,737 nipype.workflow IMPORTANT:
+	 Building QSIRecon's workflow:
+           * BIDS dataset path: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output.
+           * Participant list: ['CON01'].
+           * Run identifier: 20260928-234829_2c24db9d-7d53-4d7a-858b-b981c075ff32.
+260928-23:49:40,339 nipype.utils INFO:
+	 Collected anatomical data:
+acpc_aparc: null
+acpc_aseg: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-aseg_dseg.nii.gz
+acpc_brain_mask: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-brain_mask.nii.gz
+acpc_csf_probseg: null
+acpc_gm_probseg: null
+acpc_preproc: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-preproc_T1w.nii.gz
+acpc_seg: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_dseg.nii.gz
+acpc_to_template_xfm: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5
+acpc_wm_probseg: null
+orig_to_acpc_xfm: null
+template_to_acpc_xfm: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_from-MNI152NLin2009cAsym_to-ACPC_mode-image_xfm.h5
+
+260928-23:49:40,340 nipype.workflow INFO:
+	 Anatomical data available for /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-preproc_T1w.nii.gz:
+acpc_aparc: null
+acpc_aseg: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-aseg_dseg.nii.gz
+acpc_brain_mask: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-brain_mask.nii.gz
+acpc_csf_probseg: null
+acpc_gm_probseg: null
+acpc_preproc: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-preproc_T1w.nii.gz
+acpc_seg: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_dseg.nii.gz
+acpc_to_template_xfm: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5
+acpc_wm_probseg: null
+orig_to_acpc_xfm: null
+template_to_acpc_xfm: /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_from-MNI152NLin2009cAsym_to-ACPC_mode-image_xfm.h5
+
+260928-23:49:40,342 nipype.workflow INFO:
+	 Found high-res anatomical data in preprocessed inputs for CON01.
+260928-23:49:40,342 nipype.workflow INFO:
+	 acpc_aparc (<class 'str'>): None (<class 'NoneType'>)
+260928-23:49:40,342 nipype.workflow INFO:
+	 acpc_seg (<class 'str'>): /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_dseg.nii.gz (<class 'str'>)
+260928-23:49:40,342 nipype.workflow INFO:
+	 acpc_aseg (<class 'str'>): /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-aseg_dseg.nii.gz (<class 'str'>)
+260928-23:49:40,342 nipype.workflow INFO:
+	 acpc_brain_mask (<class 'str'>): /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-brain_mask.nii.gz (<class 'str'>)
+260928-23:49:40,342 nipype.workflow INFO:
+	 acpc_preproc (<class 'str'>): /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_space-ACPC_desc-preproc_T1w.nii.gz (<class 'str'>)
+260928-23:49:40,343 nipype.workflow INFO:
+	 acpc_csf_probseg (<class 'str'>): None (<class 'NoneType'>)
+260928-23:49:40,343 nipype.workflow INFO:
+	 acpc_gm_probseg (<class 'str'>): None (<class 'NoneType'>)
+260928-23:49:40,343 nipype.workflow INFO:
+	 acpc_wm_probseg (<class 'str'>): None (<class 'NoneType'>)
+260928-23:49:40,343 nipype.workflow INFO:
+	 orig_to_acpc_xfm (<class 'str'>): None (<class 'NoneType'>)
+260928-23:49:40,343 nipype.workflow INFO:
+	 template_to_acpc_xfm (<class 'str'>): /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_from-MNI152NLin2009cAsym_to-ACPC_mode-image_xfm.h5 (<class 'str'>)
+260928-23:49:40,343 nipype.workflow INFO:
+	 acpc_to_template_xfm (<class 'str'>): /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/anat/sub-CON01_from-ACPC_to-MNI152NLin2009cAsym_mode-image_xfm.h5 (<class 'str'>)
+260928-23:49:40,560 nipype.workflow INFO:
+	 Found 1 high-res anatomicals to process
+260928-23:49:40,582 nipype.workflow INFO:
+	 Found T1w-to-template transforms from QSIRecon
+260928-23:49:40,583 nipype.workflow INFO:
+	 Transforming ODF ROIs into DWI space for visual report.
+260928-23:49:40,598 nipype.interface INFO:
+	 Response configuration: {'algorithm': 'dhollander', 'nthreads': 4}
+260928-23:49:40,598 nipype.interface INFO:
+	 Using 4 threads in MRtrix3
+260928-23:49:44,13 nipype.workflow INFO:
+	 QSIRecon workflow graph with 65 nodes built successfully.
+260928-23:50:04,316 nipype.workflow IMPORTANT:
+	 QSIRecon started!
+260928-23:50:10,33 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.datasink_atlas_orig_AAL116_0" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/datasink_atlas_orig_AAL116_0".
+260928-23:50:10,34 nipype.workflow INFO:
+	 [Node] Executing "datasink_atlas_orig_AAL116_0" <qsirecon.interfaces.bids.CopyAtlas>
+260928-23:50:10,144 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.datasink_atlas_labels_orig_AAL116_0" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/datasink_atlas_labels_orig_AAL116_0".
+260928-23:50:10,146 nipype.workflow INFO:
+	 [Node] Finished "datasink_atlas_orig_AAL116_0", elapsed time 0.107733s.
+260928-23:50:10,146 nipype.workflow INFO:
+	 [Node] Executing "datasink_atlas_labels_orig_AAL116_0" <qsirecon.interfaces.bids.CopyAtlas>
+260928-23:50:10,149 nipype.workflow INFO:
+	 [Node] Finished "datasink_atlas_labels_orig_AAL116_0", elapsed time 0.000387s.
+260928-23:50:10,161 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_ingressed_dwi_data" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_ingressed_dwi_data".
+260928-23:50:10,163 nipype.workflow INFO:
+	 [Node] Executing "sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_ingressed_dwi_data" <qsirecon.interfaces.ingress.QSIPrepDWIIngress>
+260928-23:50:10,168 nipype.workflow INFO:
+	 [Node] Finished "sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_ingressed_dwi_data", elapsed time 0.002096s.
+260928-23:50:10,393 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.get_template" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/get_template".
+260928-23:50:10,395 nipype.workflow INFO:
+	 [Node] Executing "get_template" <qsirecon.interfaces.anatomical.GetTemplate>
+Downloading https://templateflow.s3.amazonaws.com/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz
+260928-23:50:11,87 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.resample_mask" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/resample_mask".
+260928-23:50:11,88 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.odf_rois" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/odf_rois".
+260928-23:50:11,90 nipype.workflow INFO:
+	 [Node] Executing "resample_mask" <nipype.interfaces.ants.resampling.ApplyTransforms>
+260928-23:50:11,92 nipype.workflow INFO:
+	 [Node] Executing "odf_rois" <nipype.interfaces.ants.resampling.ApplyTransforms>
+100%|██████████| 13.7M/13.7M [00:02<00:00, 6.24MB/s]
+Downloading https://templateflow.s3.amazonaws.com/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_desc-brain_mask.nii.gz
+100%|██████████| 160k/160k [00:00<00:00, 267kB/s]
+260928-23:50:14,637 nipype.workflow INFO:
+	 [Node] Finished "get_template", elapsed time 4.238925s.
+260928-23:50:15,264 nipype.workflow INFO:
+	 [Node] Finished "resample_mask", elapsed time 1.022048s.
+260928-23:50:21,135 nipype.workflow INFO:
+	 [Node] Finished "odf_rois", elapsed time 6.88113s.
+labelconvert: Image "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/prepare_atlases/atlas-AAL116_space-MNI152NLin2009cAsym_res-01_dseg_to_dwi.nii.gz" stored with floating-point type; need to check for non-integer or negative values
+labelconvert: [100%] uncompressing image "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/prepare_atlases/atlas-AAL116_space-MNI152NLin2009cAsym_res-01_dseg_to_dwi.nii.gz"[0K
+labelconvert: [100%] Verifying parcellation image[0K
+labelconvert: [100%] uncompressing image "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/prepare_atlases/atlas-AAL116_space-MNI152NLin2009cAsym_res-01_dseg_to_dwi.nii.gz"[0K
+260928-23:50:22,24 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.output_grid_wf.voxel_size_chooser" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/output_grid_wf/voxel_size_chooser".
+260928-23:50:22,27 nipype.workflow INFO:
+	 [Node] Executing "voxel_size_chooser" <qsirecon.interfaces.anatomical.VoxelSizeChooser>
+260928-23:50:22,62 nipype.workflow INFO:
+	 [Node] Finished "voxel_size_chooser", elapsed time 0.034977s.
+260928-23:50:22,66 nipype.interface WARNING:
+	 Changing /home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-output/sub-CON01/ses-preop/dwi/sub-CON01_ses-preop_acq-AP_space-ACPC_seg-AAL116_dseg.nii.gz dtype from float64 to int16
+260928-23:50:22,69 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.mask_template" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/mask_template".
+260928-23:50:22,71 nipype.workflow INFO:
+	 [Node] Executing "mask_template" <nipype.interfaces.afni.utils.Calc>
+260928-23:50:23,796 nipype.workflow INFO:
+	 [Node] Finished "mask_template", elapsed time 1.723956s.
+260928-23:50:24,69 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.reorient_to_lps" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/reorient_to_lps".
+260928-23:50:24,71 nipype.workflow INFO:
+	 [Node] Executing "reorient_to_lps" <nipype.interfaces.afni.utils.Resample>
+260928-23:50:24,612 nipype.workflow INFO:
+	 [Node] Finished "reorient_to_lps", elapsed time 0.539851s.
+260928-23:50:26,67 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.output_grid_wf.autobox_template" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/output_grid_wf/autobox_template".
+260928-23:50:26,71 nipype.workflow INFO:
+	 [Node] Executing "autobox_template" <nipype.interfaces.afni.utils.Autobox>
+260928-23:50:26,821 nipype.workflow INFO:
+	 [Node] Finished "autobox_template", elapsed time 0.749358s.
+260928-23:50:28,70 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.output_grid_wf.deoblique_autobox" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/output_grid_wf/deoblique_autobox".
+260928-23:50:28,73 nipype.workflow INFO:
+	 [Node] Executing "deoblique_autobox" <nipype.interfaces.afni.preprocess.Warp>
+260928-23:50:28,905 nipype.workflow INFO:
+	 [Node] Finished "deoblique_autobox", elapsed time 0.831316s.
+260928-23:50:30,33 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf.output_grid_wf.resample_to_voxel_size" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_dwi_specific_anat_wf/output_grid_wf/resample_to_voxel_size".
+260928-23:50:30,36 nipype.workflow INFO:
+	 [Node] Executing "resample_to_voxel_size" <nipype.interfaces.afni.utils.Resample>
+260928-23:50:30,176 nipype.workflow INFO:
+	 [Node] Finished "resample_to_voxel_size", elapsed time 0.139049s.
+260928-23:50:32,62 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_inputs" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_inputs".
+260928-23:50:32,892 nipype.workflow INFO:
+	 [Node] Executing "sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_inputs" <qsirecon.interfaces.interchange.ReconWorkflowInputs>
+260928-23:50:32,893 nipype.workflow INFO:
+	 [Node] Finished "sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_inputs", elapsed time 0.000356s.
+260928-23:50:34,38 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.msmt_csd.create_mif" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/msmt_csd/create_mif".
+260928-23:50:34,65 nipype.workflow INFO:
+	 [Node] Executing "create_mif" <qsirecon.interfaces.mrtrix.MRTrixIngress>
+260928-23:50:35,611 nipype.interface INFO:
+mrconvert: [100%] uncompressing image "/home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/sub-CON01/ses-preop/dwi/sub-CON01_ses-preop_acq-AP_space-ACPC_desc-preproc_dwi.nii.gz"[0K
+260928-23:50:36,801 nipype.interface INFO:
+mrconvert: [100%] copying from "/home/jovy...CPC_desc-preproc_dwi.nii.gz" to "/home/jovy...e-ACPC_desc-preproc_dwi.mif"[0K
+260928-23:50:36,903 nipype.workflow INFO:
+	 [Node] Finished "create_mif", elapsed time 2.837027s.
+260928-23:50:38,45 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.msmt_csd.estimate_response" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/msmt_csd/estimate_response".
+260928-23:50:38,72 nipype.workflow INFO:
+	 [Node] Executing "estimate_response" <qsirecon.interfaces.mrtrix.SS3TDwi2Response>
+260928-23:50:48,253 nipype.workflow INFO:
+	 [Node] Finished "estimate_response", elapsed time 10.108902s.
+260928-23:50:50,73 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.msmt_csd.estimate_fod" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/msmt_csd/estimate_fod".
+260928-23:50:50,104 nipype.workflow INFO:
+	 [Node] Executing "estimate_fod" <qsirecon.interfaces.mrtrix.EstimateFOD>
+260929-00:09:06,651 nipype.workflow INFO:
+	 [Node] Finished "estimate_fod", elapsed time 1096.197274s.
+260929-00:09:07,219 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.msmt_csd.intensity_norm" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/msmt_csd/intensity_norm".
+260929-00:09:07,224 nipype.workflow INFO:
+	 [Node] Executing "intensity_norm" <qsirecon.interfaces.mrtrix.MTNormalize>
+260929-00:09:10,512 nipype.workflow INFO:
+	 [Node] Finished "intensity_norm", elapsed time 3.160639s.
+260929-00:09:12,224 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.msmt_csd.plot_peaks" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/msmt_csd/plot_peaks".
+260929-00:09:12,227 nipype.workflow INFO:
+	 [Node] Executing "plot_peaks" <qsirecon.interfaces.reports.CLIReconPeaksReport>
+260929-00:09:16,746 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.track_ifod2.tractography" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/track_ifod2/tractography".
+260929-00:09:16,749 nipype.workflow INFO:
+	 [Node] Executing "tractography" <qsirecon.interfaces.mrtrix.TckGen>
+260929-00:09:56,39 nipype.workflow INFO:
+	 [Node] Finished "plot_peaks", elapsed time 43.810518s.
+260929-00:14:56,908 nipype.workflow INFO:
+	 [Node] Finished "tractography", elapsed time 340.157946s.
+260929-00:14:57,125 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.track_ifod2.tck_sift2" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/track_ifod2/tck_sift2".
+260929-00:14:57,128 nipype.workflow INFO:
+	 [Node] Executing "tck_sift2" <qsirecon.interfaces.mrtrix.SIFT2>
+260929-00:15:45,194 nipype.workflow INFO:
+	 [Node] Finished "tck_sift2", elapsed time 48.065032s.
+260929-00:15:46,289 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.mrtrix_conn.calc_connectivity" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity".
+260929-00:15:46,295 nipype.workflow INFO:
+	 [Node] Executing "calc_connectivity" <qsirecon.interfaces.mrtrix.MRTrixAtlasGraph>
+260929-00:15:46,305 nipype.workflow INFO:
+	 Workflow mrtrix_atlasgraph settings: ['check', 'execution', 'logging', 'monitoring']
+260929-00:15:46,313 nipype.workflow INFO:
+	 Running in parallel.
+260929-00:15:46,315 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:15:48,317 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 3 jobs ready. Free memory (GB): 56.31/56.51, Free processors: 0/4.
+                     Currently running:
+                       * mrtrix_atlasgraph.AAL116_sift_invnodevol_radius2_count
+260929-00:15:51,603 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_sift_invnodevol_radius2_count" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_sift_invnodevol_radius2_count".
+260929-00:15:51,606 nipype.workflow INFO:
+	 [Node] Executing "AAL116_sift_invnodevol_radius2_count" <qsirecon.interfaces.mrtrix.BuildConnectome>
+260929-00:15:52,428 nipype.workflow INFO:
+	 [Node] Finished "AAL116_sift_invnodevol_radius2_count", elapsed time 0.710723s.
+260929-00:15:54,323 nipype.workflow INFO:
+	 [Job 0] Completed (mrtrix_atlasgraph.AAL116_sift_invnodevol_radius2_count).
+260929-00:15:54,324 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:15:54,399 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_radius2_meanlength" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_radius2_meanlength".
+260929-00:15:54,401 nipype.workflow INFO:
+	 [Node] Executing "AAL116_radius2_meanlength" <qsirecon.interfaces.mrtrix.BuildConnectome>
+260929-00:15:54,883 nipype.workflow INFO:
+	 [Node] Finished "AAL116_radius2_meanlength", elapsed time 0.481324s.
+260929-00:15:56,325 nipype.workflow INFO:
+	 [Job 1] Completed (mrtrix_atlasgraph.AAL116_radius2_meanlength).
+260929-00:15:56,326 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:15:56,402 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_radius2_count" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_radius2_count".
+260929-00:15:56,404 nipype.workflow INFO:
+	 [Node] Executing "AAL116_radius2_count" <qsirecon.interfaces.mrtrix.BuildConnectome>
+260929-00:15:56,855 nipype.workflow INFO:
+	 [Node] Finished "AAL116_radius2_count", elapsed time 0.449793s.
+260929-00:15:58,327 nipype.workflow INFO:
+	 [Job 2] Completed (mrtrix_atlasgraph.AAL116_radius2_count).
+260929-00:15:58,328 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:15:58,404 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_sift_radius2_count" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_sift_radius2_count".
+260929-00:15:58,406 nipype.workflow INFO:
+	 [Node] Executing "AAL116_sift_radius2_count" <qsirecon.interfaces.mrtrix.BuildConnectome>
+260929-00:15:58,966 nipype.workflow INFO:
+	 [Node] Finished "AAL116_sift_radius2_count", elapsed time 0.558605s.
+260929-00:16:00,329 nipype.workflow INFO:
+	 [Job 3] Completed (mrtrix_atlasgraph.AAL116_sift_radius2_count).
+260929-00:16:00,330 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 6 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:00,405 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_sift_invnodevol_radius2_count_c2t" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_sift_invnodevol_radius2_count_c2t".
+260929-00:16:00,407 nipype.workflow INFO:
+	 [Node] Executing "AAL116_sift_invnodevol_radius2_count_c2t" <qsirecon.interfaces.mrtrix.Connectome2Tck>
+260929-00:16:02,220 nipype.workflow INFO:
+	 [Node] Finished "AAL116_sift_invnodevol_radius2_count_c2t", elapsed time 1.81233s.
+260929-00:16:02,331 nipype.workflow INFO:
+	 [Job 4] Completed (mrtrix_atlasgraph.AAL116_sift_invnodevol_radius2_count_c2t).
+260929-00:16:02,332 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 5 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:02,406 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_radius2_meanlength_c2t" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_radius2_meanlength_c2t".
+260929-00:16:02,408 nipype.workflow INFO:
+	 [Node] Executing "AAL116_radius2_meanlength_c2t" <qsirecon.interfaces.mrtrix.Connectome2Tck>
+260929-00:16:04,69 nipype.workflow INFO:
+	 [Node] Finished "AAL116_radius2_meanlength_c2t", elapsed time 1.659774s.
+260929-00:16:04,333 nipype.workflow INFO:
+	 [Job 5] Completed (mrtrix_atlasgraph.AAL116_radius2_meanlength_c2t).
+260929-00:16:04,334 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:04,408 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_radius2_count_c2t" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_radius2_count_c2t".
+260929-00:16:04,411 nipype.workflow INFO:
+	 [Node] Executing "AAL116_radius2_count_c2t" <qsirecon.interfaces.mrtrix.Connectome2Tck>
+260929-00:16:06,28 nipype.workflow INFO:
+	 [Node] Finished "AAL116_radius2_count_c2t", elapsed time 1.6168749999999998s.
+260929-00:16:06,335 nipype.workflow INFO:
+	 [Job 6] Completed (mrtrix_atlasgraph.AAL116_radius2_count_c2t).
+260929-00:16:06,336 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 3 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:06,413 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.AAL116_sift_radius2_count_c2t" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/AAL116_sift_radius2_count_c2t".
+260929-00:16:06,415 nipype.workflow INFO:
+	 [Node] Executing "AAL116_sift_radius2_count_c2t" <qsirecon.interfaces.mrtrix.Connectome2Tck>
+260929-00:16:08,65 nipype.workflow INFO:
+	 [Node] Finished "AAL116_sift_radius2_count_c2t", elapsed time 1.646302s.
+260929-00:16:08,337 nipype.workflow INFO:
+	 [Job 7] Completed (mrtrix_atlasgraph.AAL116_sift_radius2_count_c2t).
+260929-00:16:08,338 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 4 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:08,412 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.merge_mats" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/merge_mats".
+260929-00:16:08,416 nipype.workflow INFO:
+	 [Node] Executing "merge_mats" <nipype.interfaces.utility.base.Merge>
+260929-00:16:08,417 nipype.workflow INFO:
+	 [Node] Finished "merge_mats", elapsed time 0.000202s.
+260929-00:16:08,419 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.merge_csvs" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/merge_csvs".
+260929-00:16:08,423 nipype.workflow INFO:
+	 [Node] Executing "merge_csvs" <nipype.interfaces.utility.base.Merge>
+260929-00:16:08,423 nipype.workflow INFO:
+	 [Node] Finished "merge_csvs", elapsed time 0.000145s.
+260929-00:16:08,425 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.merge_tcks" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/merge_tcks".
+260929-00:16:08,429 nipype.workflow INFO:
+	 [Node] Executing "merge_tcks" <nipype.interfaces.utility.base.Merge>
+260929-00:16:08,430 nipype.workflow INFO:
+	 [Node] Finished "merge_tcks", elapsed time 0.00017s.
+260929-00:16:08,432 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.merge_weights" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/merge_weights".
+260929-00:16:08,435 nipype.workflow INFO:
+	 [Node] Executing "merge_weights" <nipype.interfaces.utility.base.Merge>
+260929-00:16:08,436 nipype.workflow INFO:
+	 [Node] Finished "merge_weights", elapsed time 0.000137s.
+260929-00:16:10,339 nipype.workflow INFO:
+	 [Job 8] Completed (mrtrix_atlasgraph.merge_mats).
+260929-00:16:10,340 nipype.workflow INFO:
+	 [Job 9] Completed (mrtrix_atlasgraph.merge_csvs).
+260929-00:16:10,341 nipype.workflow INFO:
+	 [Job 10] Completed (mrtrix_atlasgraph.merge_tcks).
+260929-00:16:10,342 nipype.workflow INFO:
+	 [Job 11] Completed (mrtrix_atlasgraph.merge_weights).
+260929-00:16:10,344 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:10,434 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.merge_exemplars" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/merge_exemplars".
+260929-00:16:10,438 nipype.workflow INFO:
+	 [Node] Executing "merge_exemplars" <nipype.interfaces.utility.base.Merge>
+260929-00:16:10,439 nipype.workflow INFO:
+	 [Node] Finished "merge_exemplars", elapsed time 0.000296s.
+260929-00:16:12,341 nipype.workflow INFO:
+	 [Job 12] Completed (mrtrix_atlasgraph.merge_exemplars).
+260929-00:16:12,342 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:12,416 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.compress_exemplars" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/compress_exemplars".
+260929-00:16:12,419 nipype.workflow INFO:
+	 [Node] Executing "compress_exemplars" <qsirecon.interfaces.mrtrix.CompressConnectome2Tck>
+260929-00:16:13,274 nipype.workflow INFO:
+	 [Node] Finished "compress_exemplars", elapsed time 0.854019s.
+260929-00:16:14,343 nipype.workflow INFO:
+	 [Job 13] Completed (mrtrix_atlasgraph.compress_exemplars).
+260929-00:16:14,344 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 4/4.
+260929-00:16:16,390 nipype.workflow INFO:
+	 [Node] Setting-up "mrtrix_atlasgraph.compress_exemplars" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/calc_connectivity/mrtrix_atlasgraph/compress_exemplars".
+260929-00:16:16,392 nipype.workflow INFO:
+	 [Node] Cached "mrtrix_atlasgraph.compress_exemplars" - collecting precomputed outputs
+260929-00:16:16,392 nipype.workflow INFO:
+	 [Node] "mrtrix_atlasgraph.compress_exemplars" found cached.
+260929-00:16:16,393 nipype.workflow INFO:
+	 [Node] Finished "calc_connectivity", elapsed time 30.097637s.
+260929-00:16:18,100 nipype.workflow INFO:
+	 [Node] Setting-up "qsirecon_1_1_wf.sub-CON01_mrtrix_multishell_msmt_noACT.sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf.mrtrix_conn.plot_connectivity" in "/home/jovyan/workspace/books/examples/diffusion_imaging/qsirecon-work/qsirecon_1_1_wf/sub-CON01_mrtrix_multishell_msmt_noACT/sub_CON01_ses_preop_acq_AP_space_ACPC_desc_preproc_recon_wf/mrtrix_conn/plot_connectivity".
+260929-00:16:18,104 nipype.workflow INFO:
+	 [Node] Executing "plot_connectivity" <qsirecon.interfaces.reports.ConnectivityReport>
+260929-00:16:18,272 nipype.workflow INFO:
+	 [Node] Finished "plot_connectivity", elapsed time 0.167246s.
+260929-00:16:22,23 nipype.workflow IMPORTANT:
+	 QSIRecon finished successfully!
+260929-00:16:22,28 nipype.workflow IMPORTANT:
+	 Works derived from this QSIRecon execution should include the boilerplate text found in <OUTPUT_PATH>/logs/CITATION.md.
+260929-00:16:22,63 nipype.utils WARNING:
+	 DatasetType key not in /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/dataset_description.json. Assuming 'derivative'.
+260929-00:16:23,126 nipype.utils WARNING:
+	 DatasetType key not in /home/jovyan/workspace/books/examples/diffusion_imaging/qsiprep-output/dataset_description.json. Assuming 'derivative'.

@@ -1,0 +1,2143 @@
+Cloning:   0%|                             | 0.00/2.00 [00:00<?, ? candidates/s]
+Enumerating: 0.00 Objects [00:00, ? Objects/s][A
+                                              [A
+Counting:   0%|                               | 0.00/103k [00:00<?, ? Objects/s][A
+                                                                                [A
+Compressing:   0%|                           | 0.00/85.9k [00:00<?, ? Objects/s][A
+                                                                                [A
+Receiving:   0%|                              | 0.00/103k [00:00<?, ? Objects/s][A
+Receiving:  23%|█████                 | 23.7k/103k [00:00<00:00, 231k Objects/s][A
+Receiving:  46%|██████████            | 47.3k/103k [00:00<00:00, 171k Objects/s][A
+Receiving:  67%|██████████████       | 68.9k/103k [00:00<00:00, 62.0k Objects/s][A
+Receiving:  88%|██████████████████▌  | 90.9k/103k [00:01<00:00, 85.8k Objects/s][A
+                                                                                [A
+Resolving:   0%|                              | 0.00/13.2k [00:00<?, ? Deltas/s][A
+Resolving:  73%|███████████████▎     | 9.64k/13.2k [00:00<00:00, 96.0k Deltas/s][A
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] https://github.com/OpenNeuroDerivatives/ds000117-fmriprep.git/config download failed: Not Found 
+[INFO   ] Remote origin not usable by git-annex; setting annex-ignore 
+[INFO   ] https://github.com/OpenNeuroDerivatives/ds000117-fmriprep.git/config download failed: Not Found 
+[1;1minstall[0m([1;32mok[0m): /home/jovyan/workspace/books/examples/functional_imaging/ds000117-fmriprep ([1;35mdataset[0m)
+Total:   0%|                                   | 0.00/4.99G [00:00<?, ? Bytes/s]
+Total:   0%|                                  | 16.4k/4.99G [00:00<?, ? Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   0%|   | 33.4k/473M [00:00<1:10:43, 112k Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   0%|     | 68.2k/473M [00:00<43:47, 180k Bytes/s][A
+Total:   0%|                        | 120k/4.99G [00:01<19:51:35, 69.8k Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   0%|      | 173k/473M [00:00<34:52, 226k Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   0%|      | 260k/473M [00:00<23:46, 332k Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   0%|      | 382k/473M [00:01<16:38, 474k Bytes/s][A
+Total:   0%|                          | 660k/4.99G [00:02<4:31:31, 306k Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   0%|    | 1.23M/473M [00:01<04:29, 1.75M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   1%|    | 2.40M/473M [00:01<02:13, 3.52M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   1%|    | 4.31M/473M [00:01<01:15, 6.23M Bytes/s][A
+Total:   0%|                          | 6.28M/4.99G [00:02<36:01, 2.31M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   2%|    | 8.31M/473M [00:01<00:47, 9.72M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   2%|    | 10.4M/473M [00:02<00:42, 10.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   3%|    | 12.4M/473M [00:02<00:39, 11.6M Bytes/s][A
+Total:   0%|                          | 14.5M/4.99G [00:03<19:03, 4.35M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   3%|▏   | 16.6M/473M [00:02<00:36, 12.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   4%|▏   | 18.6M/473M [00:02<00:35, 12.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   4%|▏   | 20.8M/473M [00:02<00:34, 13.2M Bytes/s][A
+Total:   0%|                          | 22.9M/4.99G [00:03<14:17, 5.80M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   5%|▏   | 24.9M/473M [00:03<00:32, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   6%|▏   | 27.0M/473M [00:03<00:33, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   6%|▏   | 29.1M/473M [00:03<00:32, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   7%|▎   | 31.2M/473M [00:03<00:32, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   7%|▎   | 33.2M/473M [00:03<00:32, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   7%|▎   | 35.2M/473M [00:03<00:32, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   8%|▎   | 37.3M/473M [00:04<00:32, 13.4M Bytes/s][A
+Total:   1%|▏                         | 39.4M/4.99G [00:05<10:48, 7.63M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   9%|▎   | 41.4M/473M [00:04<00:32, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   9%|▎   | 43.5M/473M [00:04<00:31, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  10%|▍   | 45.5M/473M [00:04<00:29, 14.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  10%|▍   | 48.1M/473M [00:04<00:30, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  10%|▍   | 49.6M/473M [00:05<00:32, 12.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  11%|▍   | 51.7M/473M [00:05<00:32, 13.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  11%|▍   | 53.8M/473M [00:05<00:31, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  12%|▍   | 55.8M/473M [00:05<00:31, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  12%|▍   | 57.8M/473M [00:05<00:31, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  13%|▌   | 59.9M/473M [00:05<00:31, 13.3M Bytes/s][A
+Total:   1%|▎                         | 61.9M/4.99G [00:06<09:05, 9.04M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  14%|▌   | 64.0M/473M [00:06<00:30, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  14%|▌   | 66.0M/473M [00:06<00:30, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  14%|▌   | 68.1M/473M [00:06<00:30, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  15%|▌   | 70.2M/473M [00:06<00:29, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  15%|▌   | 72.3M/473M [00:06<00:28, 14.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  16%|▋   | 74.3M/473M [00:06<00:25, 15.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  16%|▋   | 76.5M/473M [00:07<00:30, 13.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  17%|▋   | 78.6M/473M [00:07<00:29, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  17%|▋   | 80.7M/473M [00:07<00:29, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  17%|▋   | 82.8M/473M [00:07<00:28, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  18%|▋   | 84.9M/473M [00:07<00:28, 13.6M Bytes/s][A
+Total:   2%|▍                         | 87.0M/4.99G [00:08<08:09, 10.0M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  19%|▊   | 89.1M/473M [00:07<00:28, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  19%|▊   | 91.2M/473M [00:08<00:28, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  20%|▊   | 93.2M/473M [00:08<00:25, 15.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  20%|▊   | 95.3M/473M [00:08<00:28, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  21%|▊   | 97.4M/473M [00:08<00:28, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  21%|▊   | 99.5M/473M [00:08<00:27, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  21%|█    | 102M/473M [00:08<00:27, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  22%|█    | 104M/473M [00:09<00:27, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  22%|█    | 106M/473M [00:09<00:26, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  23%|█▏   | 108M/473M [00:09<00:26, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  23%|█▏   | 110M/473M [00:09<00:26, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  24%|█▏   | 112M/473M [00:09<00:26, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  24%|█▏   | 114M/473M [00:09<00:26, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  25%|█▏   | 116M/473M [00:09<00:26, 13.6M Bytes/s][A
+Total:   2%|▋                          | 118M/4.99G [00:10<07:32, 10.8M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  25%|█▎   | 120M/473M [00:10<00:24, 14.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  26%|█▎   | 123M/473M [00:10<00:25, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  26%|█▎   | 124M/473M [00:10<00:26, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  27%|█▎   | 127M/473M [00:10<00:26, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  27%|█▎   | 129M/473M [00:10<00:25, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  28%|█▍   | 131M/473M [00:11<00:25, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  28%|█▍   | 133M/473M [00:11<00:25, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  29%|█▍   | 135M/473M [00:11<00:24, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  29%|█▍   | 137M/473M [00:11<00:24, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  29%|█▍   | 139M/473M [00:11<00:24, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  30%|█▍   | 141M/473M [00:11<00:23, 14.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  30%|█▌   | 144M/473M [00:11<00:24, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  31%|█▌   | 145M/473M [00:12<00:23, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  31%|█▌   | 148M/473M [00:12<00:24, 13.3M Bytes/s][A
+Total:   3%|▊                          | 150M/4.99G [00:13<07:09, 11.3M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  32%|█▌   | 151M/473M [00:12<00:22, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  33%|█▋   | 154M/473M [00:12<00:23, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  33%|█▋   | 155M/473M [00:12<00:22, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  33%|█▋   | 158M/473M [00:12<00:22, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  34%|█▋   | 161M/473M [00:13<00:23, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  34%|█▋   | 162M/473M [00:13<00:22, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  35%|█▋   | 165M/473M [00:13<00:23, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  35%|█▊   | 167M/473M [00:13<00:22, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  36%|█▊   | 169M/473M [00:13<00:22, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  36%|█▊   | 171M/473M [00:13<00:21, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  37%|█▊   | 173M/473M [00:14<00:22, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  37%|█▊   | 175M/473M [00:14<00:21, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  38%|█▉   | 178M/473M [00:14<00:22, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  38%|█▉   | 179M/473M [00:14<00:21, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  38%|█▉   | 181M/473M [00:14<00:21, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  39%|█▉   | 183M/473M [00:14<00:21, 13.6M Bytes/s][A
+Total:   4%|▉                          | 185M/4.99G [00:15<06:52, 11.7M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  39%|█▉   | 186M/473M [00:15<00:21, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  40%|█▉   | 188M/473M [00:15<00:20, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  40%|██   | 190M/473M [00:15<00:20, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  41%|██   | 192M/473M [00:15<00:20, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  41%|██   | 194M/473M [00:15<00:20, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  41%|██   | 196M/473M [00:15<00:20, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  42%|██   | 197M/473M [00:15<00:20, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  42%|██   | 199M/473M [00:15<00:20, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  42%|██   | 200M/473M [00:16<00:19, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  43%|██▏  | 203M/473M [00:16<00:19, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  43%|██▏  | 205M/473M [00:16<00:19, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  44%|██▏  | 207M/473M [00:16<00:19, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  44%|██▏  | 208M/473M [00:16<00:19, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  45%|██▏  | 211M/473M [00:16<00:19, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  45%|██▏  | 213M/473M [00:16<00:19, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  46%|██▎  | 215M/473M [00:17<00:18, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  46%|██▎  | 217M/473M [00:17<00:18, 13.7M Bytes/s][A
+Total:   4%|█▏                         | 220M/4.99G [00:18<06:39, 12.0M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  47%|██▎  | 221M/473M [00:17<00:18, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  47%|██▎  | 224M/473M [00:17<00:18, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  48%|██▍  | 225M/473M [00:17<00:18, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  48%|██▍  | 228M/473M [00:18<00:17, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  49%|██▍  | 230M/473M [00:18<00:17, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  49%|██▍  | 232M/473M [00:18<00:17, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  49%|██▍  | 234M/473M [00:18<00:17, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  50%|██▌  | 237M/473M [00:18<00:17, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  50%|██▌  | 238M/473M [00:18<00:17, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  51%|██▌  | 241M/473M [00:19<00:16, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  51%|██▌  | 243M/473M [00:19<00:17, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  52%|██▌  | 245M/473M [00:19<00:16, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  52%|██▌  | 248M/473M [00:19<00:16, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  53%|██▋  | 249M/473M [00:19<00:16, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  53%|██▋  | 252M/473M [00:19<00:16, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  54%|██▋  | 253M/473M [00:19<00:15, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  54%|██▋  | 256M/473M [00:20<00:15, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  54%|██▋  | 258M/473M [00:20<00:15, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  55%|██▊  | 260M/473M [00:20<00:15, 13.5M Bytes/s][A
+Total:   5%|█▍                         | 262M/4.99G [00:21<06:27, 12.2M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  56%|██▊  | 265M/473M [00:20<00:15, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  56%|██▊  | 266M/473M [00:20<00:14, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  57%|██▊  | 269M/473M [00:21<00:14, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  57%|██▊  | 271M/473M [00:21<00:15, 13.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  58%|██▉  | 273M/473M [00:21<00:14, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  58%|██▉  | 276M/473M [00:21<00:14, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  59%|██▉  | 277M/473M [00:21<00:14, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  59%|██▉  | 280M/473M [00:21<00:14, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  59%|██▉  | 281M/473M [00:22<00:13, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  60%|██▉  | 284M/473M [00:22<00:14, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  60%|███  | 286M/473M [00:22<00:13, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  61%|███  | 288M/473M [00:22<00:13, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  61%|███  | 290M/473M [00:22<00:13, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  62%|███  | 292M/473M [00:22<00:13, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  62%|███  | 294M/473M [00:22<00:12, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  63%|███▏ | 297M/473M [00:23<00:13, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  63%|███▏ | 299M/473M [00:23<00:13, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  64%|███▏ | 301M/473M [00:23<00:12, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  64%|███▏ | 303M/473M [00:23<00:12, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  64%|███▏ | 305M/473M [00:23<00:12, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  65%|███▎ | 308M/473M [00:23<00:12, 13.5M Bytes/s][A
+Total:   6%|█▋                         | 310M/4.99G [00:25<06:17, 12.4M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  66%|███▎ | 312M/473M [00:24<00:11, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  66%|███▎ | 314M/473M [00:24<00:11, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  67%|███▎ | 316M/473M [00:24<00:11, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  67%|███▎ | 318M/473M [00:24<00:11, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  68%|███▍ | 320M/473M [00:24<00:11, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  68%|███▍ | 322M/473M [00:24<00:10, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  69%|███▍ | 325M/473M [00:25<00:10, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  69%|███▍ | 326M/473M [00:25<00:10, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  69%|███▍ | 329M/473M [00:25<00:10, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  70%|███▍ | 330M/473M [00:25<00:10, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  70%|███▌ | 333M/473M [00:25<00:10, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  71%|███▌ | 336M/473M [00:25<00:10, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  71%|███▌ | 337M/473M [00:26<00:09, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  72%|███▌ | 340M/473M [00:26<00:09, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  72%|███▌ | 341M/473M [00:26<00:09, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  73%|███▋ | 344M/473M [00:26<00:09, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  73%|███▋ | 346M/473M [00:26<00:09, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  74%|███▋ | 348M/473M [00:26<00:09, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  74%|███▋ | 350M/473M [00:27<00:08, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  74%|███▋ | 352M/473M [00:27<00:08, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  75%|███▋ | 354M/473M [00:27<00:08, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  75%|███▊ | 357M/473M [00:27<00:08, 13.7M Bytes/s][A
+Total:   7%|█▉                         | 359M/4.99G [00:28<06:08, 12.6M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  76%|███▊ | 361M/473M [00:27<00:08, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  77%|███▊ | 363M/473M [00:28<00:08, 13.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  77%|███▊ | 365M/473M [00:28<00:07, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  78%|███▉ | 368M/473M [00:28<00:07, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  78%|███▉ | 369M/473M [00:28<00:07, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  79%|███▉ | 372M/473M [00:28<00:07, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  79%|███▉ | 374M/473M [00:28<00:07, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  79%|███▉ | 376M/473M [00:28<00:07, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  80%|███▉ | 378M/473M [00:29<00:06, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  80%|████ | 380M/473M [00:29<00:06, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  81%|████ | 382M/473M [00:29<00:06, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  81%|████ | 384M/473M [00:29<00:06, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  82%|████ | 386M/473M [00:29<00:06, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  82%|████ | 389M/473M [00:29<00:06, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  82%|████ | 390M/473M [00:29<00:05, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  83%|████▏| 393M/473M [00:30<00:06, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  84%|████▏| 395M/473M [00:30<00:05, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  84%|████▏| 397M/473M [00:30<00:05, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  84%|████▏| 400M/473M [00:30<00:05, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  85%|████▏| 401M/473M [00:30<00:05, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  85%|████▎| 404M/473M [00:30<00:05, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  86%|████▎| 406M/473M [00:31<00:04, 13.8M Bytes/s][A
+Total:   8%|██▏                        | 408M/4.99G [00:32<06:01, 12.7M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  87%|████▎| 410M/473M [00:31<00:04, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  87%|████▎| 412M/473M [00:31<00:04, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  87%|████▎| 414M/473M [00:31<00:04, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  88%|████▍| 417M/473M [00:31<00:04, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  88%|████▍| 418M/473M [00:31<00:03, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  89%|████▍| 421M/473M [00:32<00:03, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  89%|████▍| 422M/473M [00:32<00:03, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  90%|████▍| 425M/473M [00:32<00:03, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  90%|████▌| 428M/473M [00:32<00:03, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  91%|████▌| 429M/473M [00:32<00:03, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  91%|████▌| 432M/473M [00:33<00:03, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  92%|████▌| 433M/473M [00:33<00:02, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  92%|████▌| 436M/473M [00:33<00:02, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  93%|████▋| 438M/473M [00:33<00:03, 10.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  93%|████▋| 440M/473M [00:33<00:02, 11.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  93%|████▋| 442M/473M [00:34<00:03, 8.59M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  94%|████▋| 443M/473M [00:34<00:03, 9.28M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  94%|████▋| 446M/473M [00:34<00:02, 9.24M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  95%|████▋| 448M/473M [00:34<00:02, 10.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  95%|████▊| 450M/473M [00:34<00:01, 12.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  95%|████▊| 452M/473M [00:34<00:01, 11.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  96%|████▊| 454M/473M [00:35<00:01, 12.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  96%|████▊| 456M/473M [00:35<00:01, 12.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  97%|████▊| 458M/473M [00:35<00:01, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  97%|████▊| 460M/473M [00:35<00:01, 12.8M Bytes/s][A
+Total:   9%|██▍                        | 462M/4.99G [00:36<05:58, 12.6M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  98%|████▉| 464M/473M [00:35<00:00, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  99%|████▉| 466M/473M [00:36<00:00, 13.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  99%|████▉| 468M/473M [00:36<00:00, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  99%|████▉| 470M/473M [00:36<00:00, 13.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz: 100%|████▉| 472M/473M [00:36<00:00, 14.1M Bytes/s][A
+                                                                                [A
+Get sub-02/s .. _bold.nii.gz: 100%|█████████████| 473M/473M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-05/s .. _bold.nii.gz:   0%|            | 16.4k/497M [00:00<?, ? Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   0%|    | 2.12M/497M [00:00<00:36, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   1%|    | 4.11M/497M [00:00<00:37, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   1%|    | 6.14M/497M [00:00<00:37, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   2%|    | 8.20M/497M [00:00<00:36, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   2%|    | 10.2M/497M [00:00<00:34, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   2%|    | 12.4M/497M [00:00<00:36, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   3%|    | 14.2M/497M [00:01<00:37, 12.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   3%|▏   | 16.1M/497M [00:01<00:37, 12.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   4%|▏   | 18.2M/497M [00:01<00:37, 12.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   4%|▏   | 20.3M/497M [00:01<00:36, 13.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   4%|▏   | 22.3M/497M [00:01<00:36, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   5%|▏   | 24.4M/497M [00:01<00:35, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   5%|▏   | 26.5M/497M [00:01<00:35, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   6%|▏   | 28.6M/497M [00:02<00:34, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   6%|▏   | 30.7M/497M [00:02<00:34, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   7%|▎   | 32.8M/497M [00:02<00:34, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   7%|▎   | 34.9M/497M [00:02<00:33, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   7%|▎   | 37.0M/497M [00:02<00:32, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   8%|▎   | 39.7M/497M [00:02<00:32, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   9%|▎   | 43.2M/497M [00:03<00:34, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   9%|▎   | 45.3M/497M [00:03<00:33, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  10%|▍   | 47.4M/497M [00:03<00:33, 13.4M Bytes/s][A
+Total:  10%|██▊                        | 523M/4.99G [00:41<05:58, 12.5M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  10%|▍   | 51.6M/497M [00:03<00:32, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  11%|▍   | 53.7M/497M [00:03<00:32, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  11%|▍   | 55.8M/497M [00:04<00:32, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  12%|▍   | 57.8M/497M [00:04<00:29, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  12%|▍   | 60.0M/497M [00:04<00:32, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  12%|▍   | 61.7M/497M [00:04<00:30, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  13%|▌   | 64.0M/497M [00:04<00:33, 12.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  13%|▌   | 65.9M/497M [00:04<00:30, 14.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  14%|▌   | 68.1M/497M [00:05<00:33, 12.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  14%|▌   | 70.1M/497M [00:05<00:29, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  15%|▌   | 72.3M/497M [00:05<00:33, 12.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  15%|▌   | 74.3M/497M [00:05<00:29, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  15%|▌   | 76.5M/497M [00:05<00:32, 12.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  16%|▋   | 78.5M/497M [00:05<00:29, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  16%|▋   | 80.7M/497M [00:06<00:31, 13.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  17%|▋   | 82.7M/497M [00:06<00:28, 14.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  17%|▋   | 84.9M/497M [00:06<00:31, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  17%|▋   | 86.9M/497M [00:06<00:28, 14.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  18%|▋   | 89.1M/497M [00:06<00:31, 13.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  18%|▋   | 91.0M/497M [00:06<00:28, 14.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  19%|▊   | 93.2M/497M [00:06<00:31, 12.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  19%|▊   | 95.3M/497M [00:07<00:30, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  20%|▊   | 97.4M/497M [00:07<00:27, 14.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  20%|▊   | 99.6M/497M [00:07<00:30, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  20%|█    | 102M/497M [00:07<00:27, 14.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  21%|█    | 104M/497M [00:07<00:30, 13.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  21%|█    | 106M/497M [00:07<00:27, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  22%|█    | 108M/497M [00:07<00:29, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  22%|█    | 110M/497M [00:08<00:27, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  23%|█▏   | 112M/497M [00:08<00:29, 13.2M Bytes/s][A
+Total:  12%|███▏                       | 587M/4.99G [00:46<05:50, 12.6M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  23%|█▏   | 116M/497M [00:08<00:28, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  24%|█▏   | 118M/497M [00:08<00:27, 14.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  24%|█▏   | 121M/497M [00:08<00:28, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  25%|█▏   | 122M/497M [00:09<00:26, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  25%|█▎   | 125M/497M [00:09<00:27, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  25%|█▎   | 127M/497M [00:09<00:26, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  26%|█▎   | 129M/497M [00:09<00:27, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  26%|█▎   | 131M/497M [00:09<00:25, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  27%|█▎   | 133M/497M [00:09<00:27, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  27%|█▎   | 135M/497M [00:09<00:25, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  28%|█▍   | 137M/497M [00:10<00:27, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  28%|█▍   | 139M/497M [00:10<00:26, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  29%|█▍   | 142M/497M [00:10<00:26, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  29%|█▍   | 144M/497M [00:10<00:26, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  29%|█▍   | 146M/497M [00:10<00:25, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  30%|█▍   | 148M/497M [00:10<00:26, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  30%|█▌   | 150M/497M [00:11<00:25, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  31%|█▌   | 153M/497M [00:11<00:25, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  31%|█▌   | 154M/497M [00:11<00:24, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  32%|█▌   | 157M/497M [00:11<00:25, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  32%|█▌   | 158M/497M [00:11<00:24, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  32%|█▌   | 161M/497M [00:11<00:25, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  33%|█▋   | 163M/497M [00:11<00:24, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  33%|█▋   | 165M/497M [00:12<00:24, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  34%|█▋   | 167M/497M [00:12<00:23, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  34%|█▋   | 169M/497M [00:12<00:24, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  34%|█▋   | 171M/497M [00:12<00:23, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  35%|█▋   | 173M/497M [00:12<00:23, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  35%|█▊   | 175M/497M [00:12<00:23, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  36%|█▊   | 178M/497M [00:13<00:23, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  36%|█▊   | 180M/497M [00:13<00:24, 13.0M Bytes/s][A
+Total:  13%|███▌                       | 656M/4.99G [00:51<05:41, 12.7M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  37%|█▊   | 184M/497M [00:13<00:23, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  37%|█▊   | 186M/497M [00:13<00:22, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  38%|█▉   | 187M/497M [00:13<00:22, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  38%|█▉   | 190M/497M [00:14<00:22, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  39%|█▉   | 192M/497M [00:14<00:22, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  39%|█▉   | 194M/497M [00:14<00:22, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  40%|█▉   | 197M/497M [00:14<00:22, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  40%|█▉   | 198M/497M [00:14<00:21, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  40%|██   | 201M/497M [00:14<00:22, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  41%|██   | 203M/497M [00:14<00:21, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  41%|██   | 205M/497M [00:15<00:22, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  42%|██   | 207M/497M [00:15<00:20, 14.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  42%|██   | 209M/497M [00:15<00:21, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  42%|██   | 211M/497M [00:15<00:20, 14.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  43%|██▏  | 213M/497M [00:15<00:21, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  43%|██▏  | 215M/497M [00:15<00:20, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  44%|██▏  | 218M/497M [00:16<00:20, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  44%|██▏  | 219M/497M [00:16<00:20, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  45%|██▏  | 222M/497M [00:16<00:20, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  45%|██▏  | 224M/497M [00:16<00:19, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  46%|██▎  | 226M/497M [00:16<00:20, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  46%|██▎  | 228M/497M [00:16<00:19, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  46%|██▎  | 230M/497M [00:16<00:19, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  47%|██▎  | 232M/497M [00:17<00:19, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  47%|██▎  | 234M/497M [00:17<00:19, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  48%|██▍  | 236M/497M [00:17<00:18, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  48%|██▍  | 239M/497M [00:17<00:19, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  48%|██▍  | 240M/497M [00:17<00:18, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  49%|██▍  | 243M/497M [00:17<00:18, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  49%|██▍  | 244M/497M [00:18<00:18, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  50%|██▍  | 247M/497M [00:18<00:18, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  50%|██▌  | 249M/497M [00:18<00:17, 14.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  51%|██▌  | 251M/497M [00:18<00:18, 13.4M Bytes/s][A
+Total:  15%|███▉                       | 726M/4.99G [00:56<05:34, 12.8M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  51%|██▌  | 255M/497M [00:18<00:18, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  52%|██▌  | 258M/497M [00:19<00:17, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  52%|██▌  | 260M/497M [00:19<00:17, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  53%|██▋  | 262M/497M [00:19<00:17, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  53%|██▋  | 264M/497M [00:19<00:17, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  54%|██▋  | 266M/497M [00:19<00:17, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  54%|██▋  | 268M/497M [00:19<00:16, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  54%|██▋  | 271M/497M [00:19<00:16, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  55%|██▋  | 272M/497M [00:20<00:16, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  55%|██▊  | 274M/497M [00:20<00:15, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  56%|██▊  | 276M/497M [00:20<00:16, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  56%|██▊  | 278M/497M [00:20<00:15, 14.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  56%|██▊  | 281M/497M [00:20<00:16, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  57%|██▊  | 282M/497M [00:20<00:15, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  57%|██▊  | 285M/497M [00:20<00:15, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  58%|██▉  | 286M/497M [00:21<00:14, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  58%|██▉  | 289M/497M [00:21<00:15, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  58%|██▉  | 291M/497M [00:21<00:14, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  59%|██▉  | 293M/497M [00:21<00:15, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  60%|██▉  | 296M/497M [00:21<00:14, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  60%|██▉  | 297M/497M [00:21<00:14, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  60%|███  | 300M/497M [00:22<00:14, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  61%|███  | 303M/497M [00:22<00:14, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  61%|███  | 304M/497M [00:22<00:14, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  62%|███  | 306M/497M [00:22<00:13, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  62%|███  | 308M/497M [00:22<00:13, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  62%|███  | 310M/497M [00:22<00:13, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  63%|███▏ | 313M/497M [00:23<00:13, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  63%|███▏ | 314M/497M [00:23<00:13, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  64%|███▏ | 317M/497M [00:23<00:13, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  64%|███▏ | 319M/497M [00:23<00:13, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  65%|███▏ | 321M/497M [00:23<00:12, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  65%|███▎ | 324M/497M [00:23<00:12, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  65%|███▎ | 325M/497M [00:23<00:12, 14.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  66%|███▎ | 328M/497M [00:24<00:12, 13.1M Bytes/s][A
+Total:  16%|████▎                      | 803M/4.99G [01:02<05:26, 12.8M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  67%|███▎ | 332M/497M [00:24<00:12, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  67%|███▎ | 334M/497M [00:24<00:11, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  68%|███▍ | 336M/497M [00:24<00:12, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  68%|███▍ | 338M/497M [00:24<00:11, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  68%|███▍ | 340M/497M [00:25<00:11, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  69%|███▍ | 342M/497M [00:25<00:10, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  69%|███▍ | 344M/497M [00:25<00:11, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  70%|███▍ | 346M/497M [00:25<00:10, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  70%|███▌ | 349M/497M [00:25<00:11, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  71%|███▌ | 351M/497M [00:25<00:10, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  71%|███▌ | 353M/497M [00:25<00:10, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  71%|███▌ | 355M/497M [00:26<00:09, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  72%|███▌ | 357M/497M [00:26<00:10, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  72%|███▌ | 359M/497M [00:26<00:09, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  73%|███▋ | 361M/497M [00:26<00:10, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  73%|███▋ | 363M/497M [00:26<00:09, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  74%|███▋ | 365M/497M [00:26<00:09, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  74%|███▋ | 367M/497M [00:27<00:09, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  74%|███▋ | 370M/497M [00:27<00:09, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  75%|███▋ | 372M/497M [00:27<00:08, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  75%|███▊ | 374M/497M [00:27<00:09, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  76%|███▊ | 377M/497M [00:27<00:09, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  76%|███▊ | 378M/497M [00:27<00:08, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  76%|███▊ | 380M/497M [00:27<00:08, 14.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  77%|███▊ | 382M/497M [00:28<00:08, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  77%|███▊ | 384M/497M [00:28<00:07, 14.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  78%|███▉ | 386M/497M [00:28<00:08, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  78%|███▉ | 388M/497M [00:28<00:07, 14.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  79%|███▉ | 391M/497M [00:28<00:08, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  79%|███▉ | 393M/497M [00:28<00:07, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  79%|███▉ | 395M/497M [00:29<00:07, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  80%|███▉ | 397M/497M [00:29<00:07, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  80%|████ | 399M/497M [00:29<00:07, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  81%|████ | 401M/497M [00:29<00:06, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  81%|████ | 403M/497M [00:29<00:07, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  82%|████ | 405M/497M [00:29<00:06, 14.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  82%|████ | 407M/497M [00:29<00:06, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  82%|████ | 409M/497M [00:30<00:06, 14.4M Bytes/s][A
+Total:  18%|████▊                      | 887M/4.99G [01:08<05:17, 12.9M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  83%|████▏| 414M/497M [00:30<00:05, 14.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  84%|████▏| 416M/497M [00:30<00:06, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  84%|████▏| 418M/497M [00:30<00:05, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  85%|████▏| 420M/497M [00:30<00:05, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  85%|████▏| 422M/497M [00:31<00:05, 14.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  85%|████▎| 424M/497M [00:31<00:05, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  86%|████▎| 426M/497M [00:31<00:05, 14.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  86%|████▎| 429M/497M [00:31<00:05, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  87%|████▎| 431M/497M [00:31<00:05, 13.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  87%|████▎| 433M/497M [00:31<00:04, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  88%|████▍| 435M/497M [00:32<00:04, 13.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  88%|████▍| 437M/497M [00:32<00:04, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  88%|████▍| 439M/497M [00:32<00:04, 13.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  89%|████▍| 441M/497M [00:32<00:04, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  89%|████▍| 444M/497M [00:32<00:04, 13.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  90%|████▍| 445M/497M [00:32<00:03, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  90%|████▌| 448M/497M [00:32<00:03, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  90%|████▌| 449M/497M [00:33<00:03, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  91%|████▌| 452M/497M [00:33<00:03, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  91%|████▌| 454M/497M [00:33<00:03, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  92%|████▌| 456M/497M [00:33<00:03, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  92%|████▌| 458M/497M [00:33<00:02, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  93%|████▋| 460M/497M [00:33<00:02, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  93%|████▋| 462M/497M [00:33<00:02, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  94%|████▋| 465M/497M [00:34<00:02, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  94%|████▋| 466M/497M [00:34<00:02, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  94%|████▋| 469M/497M [00:34<00:02, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  95%|████▋| 470M/497M [00:34<00:01, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  95%|████▊| 473M/497M [00:34<00:01, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  96%|████▊| 475M/497M [00:34<00:01, 13.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  96%|████▊| 477M/497M [00:35<00:01, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  96%|████▊| 479M/497M [00:35<00:01, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  97%|████▊| 481M/497M [00:35<00:01, 13.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  97%|████▊| 483M/497M [00:35<00:01, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  98%|████▉| 486M/497M [00:35<00:00, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  98%|████▉| 487M/497M [00:35<00:00, 13.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  99%|████▉| 490M/497M [00:36<00:00, 13.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  99%|████▉| 491M/497M [00:36<00:00, 13.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  99%|████▉| 494M/497M [00:36<00:00, 13.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz: 100%|████▉| 495M/497M [00:36<00:00, 13.7M Bytes/s][A
+                                                                                [A
+Get sub-05/s .. _bold.nii.gz: 100%|█████████████| 497M/497M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-02/s .. _bold.nii.gz:   0%|            | 16.4k/473M [00:00<?, ? Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   0%|    | 2.11M/473M [00:00<00:34, 13.6M Bytes/s][A
+Total:  20%|█████▎                     | 974M/4.99G [01:15<05:10, 12.9M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:   1%|    | 6.27M/473M [00:00<00:34, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   2%|    | 8.37M/473M [00:00<00:34, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   2%|    | 10.5M/473M [00:00<00:31, 14.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   3%|    | 12.6M/473M [00:00<00:34, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   3%|    | 14.7M/473M [00:01<00:33, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   4%|▏   | 16.8M/473M [00:01<00:33, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   4%|▏   | 18.9M/473M [00:01<00:33, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   4%|▏   | 21.0M/473M [00:01<00:33, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   5%|▏   | 23.0M/473M [00:01<00:33, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   5%|▏   | 25.1M/473M [00:01<00:32, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   6%|▏   | 27.2M/473M [00:01<00:32, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   6%|▏   | 29.3M/473M [00:02<00:32, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   7%|▎   | 31.4M/473M [00:02<00:32, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   7%|▎   | 33.5M/473M [00:02<00:32, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   8%|▎   | 35.6M/473M [00:02<00:31, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   8%|▎   | 37.7M/473M [00:02<00:30, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   8%|▎   | 39.8M/473M [00:02<00:31, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   9%|▎   | 41.8M/473M [00:03<00:31, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:   9%|▎   | 43.9M/473M [00:03<00:31, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  10%|▍   | 46.0M/473M [00:03<00:31, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  10%|▍   | 48.0M/473M [00:03<00:31, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  11%|▍   | 50.1M/473M [00:03<00:31, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  11%|▍   | 52.2M/473M [00:03<00:31, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  11%|▍   | 54.3M/473M [00:03<00:30, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  12%|▍   | 56.4M/473M [00:04<00:30, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  12%|▍   | 58.4M/473M [00:04<00:27, 14.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  13%|▌   | 60.6M/473M [00:04<00:31, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  13%|▌   | 62.6M/473M [00:04<00:30, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  14%|▌   | 64.7M/473M [00:04<00:30, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  14%|▌   | 66.8M/473M [00:04<00:30, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  15%|▌   | 68.9M/473M [00:05<00:30, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  15%|▌   | 71.0M/473M [00:05<00:29, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  15%|▌   | 73.1M/473M [00:05<00:29, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  16%|▋   | 75.2M/473M [00:05<00:29, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  16%|▋   | 77.3M/473M [00:05<00:29, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  17%|▋   | 79.3M/473M [00:05<00:28, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  17%|▋   | 81.4M/473M [00:05<00:28, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  18%|▋   | 83.5M/473M [00:06<00:28, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  18%|▋   | 85.6M/473M [00:06<00:26, 14.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  19%|▋   | 88.2M/473M [00:06<00:27, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  19%|▊   | 89.8M/473M [00:06<00:28, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  19%|▊   | 91.9M/473M [00:06<00:28, 13.4M Bytes/s][A
+Total:  21%|█████▌                    | 1.06G/4.99G [01:21<05:02, 13.0M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  20%|▊   | 96.1M/473M [00:07<00:27, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  21%|▊   | 98.2M/473M [00:07<00:27, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  21%|█    | 100M/473M [00:07<00:27, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  22%|█    | 102M/473M [00:07<00:27, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  22%|█    | 104M/473M [00:07<00:26, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  23%|█▏   | 107M/473M [00:07<00:26, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  23%|█▏   | 109M/473M [00:07<00:26, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  23%|█▏   | 111M/473M [00:08<00:26, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  24%|█▏   | 113M/473M [00:08<00:25, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  24%|█▏   | 116M/473M [00:08<00:25, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  25%|█▏   | 117M/473M [00:08<00:26, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  25%|█▎   | 119M/473M [00:08<00:26, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  26%|█▎   | 121M/473M [00:08<00:26, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  26%|█▎   | 123M/473M [00:09<00:25, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  27%|█▎   | 125M/473M [00:09<00:25, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  27%|█▎   | 127M/473M [00:09<00:25, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  27%|█▎   | 130M/473M [00:09<00:25, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  28%|█▍   | 132M/473M [00:09<00:24, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  28%|█▍   | 133M/473M [00:09<00:23, 14.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  29%|█▍   | 136M/473M [00:09<00:24, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  29%|█▍   | 137M/473M [00:10<00:23, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  30%|█▍   | 140M/473M [00:10<00:24, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  30%|█▍   | 142M/473M [00:10<00:23, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  31%|█▌   | 144M/473M [00:10<00:24, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  31%|█▌   | 146M/473M [00:10<00:23, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  31%|█▌   | 148M/473M [00:10<00:24, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  32%|█▌   | 150M/473M [00:10<00:23, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  32%|█▌   | 152M/473M [00:11<00:23, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  33%|█▋   | 154M/473M [00:11<00:23, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  33%|█▋   | 157M/473M [00:11<00:23, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  34%|█▋   | 159M/473M [00:11<00:23, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  34%|█▋   | 161M/473M [00:11<00:22, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  35%|█▋   | 163M/473M [00:11<00:23, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  35%|█▋   | 165M/473M [00:12<00:22, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  35%|█▊   | 166M/473M [00:12<00:22, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  36%|█▊   | 168M/473M [00:12<00:21, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  36%|█▊   | 171M/473M [00:12<00:22, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  37%|█▊   | 173M/473M [00:12<00:22, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  37%|█▊   | 174M/473M [00:12<00:21, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  37%|█▊   | 177M/473M [00:12<00:21, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  38%|█▉   | 179M/473M [00:13<00:20, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  38%|█▉   | 181M/473M [00:13<00:21, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  39%|█▉   | 183M/473M [00:13<00:20, 13.9M Bytes/s][A
+Total:  23%|██████                    | 1.16G/4.99G [01:28<04:54, 13.0M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  40%|█▉   | 188M/473M [00:13<00:21, 13.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  40%|██   | 190M/473M [00:13<00:20, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  41%|██   | 192M/473M [00:14<00:21, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  41%|██   | 194M/473M [00:14<00:19, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  42%|██   | 196M/473M [00:14<00:20, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  42%|██   | 199M/473M [00:14<00:20, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  43%|██▏  | 202M/473M [00:14<00:19, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  43%|██▏  | 205M/473M [00:15<00:19, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  44%|██▏  | 206M/473M [00:15<00:19, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  44%|██▏  | 209M/473M [00:15<00:19, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  45%|██▏  | 211M/473M [00:15<00:19, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  45%|██▏  | 212M/473M [00:15<00:18, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  45%|██▎  | 215M/473M [00:15<00:18, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  46%|██▎  | 216M/473M [00:15<00:18, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  46%|██▎  | 219M/473M [00:16<00:18, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  47%|██▎  | 220M/473M [00:16<00:18, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  47%|██▎  | 223M/473M [00:16<00:18, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  48%|██▍  | 225M/473M [00:16<00:17, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  48%|██▍  | 227M/473M [00:16<00:18, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  48%|██▍  | 229M/473M [00:16<00:17, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  49%|██▍  | 231M/473M [00:16<00:18, 13.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  49%|██▍  | 233M/473M [00:17<00:16, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  50%|██▍  | 235M/473M [00:17<00:17, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  50%|██▌  | 237M/473M [00:17<00:16, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  51%|██▌  | 240M/473M [00:17<00:17, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  51%|██▌  | 241M/473M [00:17<00:16, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  52%|██▌  | 244M/473M [00:17<00:17, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  52%|██▌  | 246M/473M [00:17<00:15, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  52%|██▌  | 248M/473M [00:18<00:16, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  53%|██▋  | 250M/473M [00:18<00:15, 14.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  53%|██▋  | 252M/473M [00:18<00:16, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  54%|██▋  | 254M/473M [00:18<00:15, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  54%|██▋  | 256M/473M [00:18<00:16, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  55%|██▋  | 258M/473M [00:18<00:15, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  55%|██▊  | 261M/473M [00:19<00:15, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  55%|██▊  | 262M/473M [00:19<00:14, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  56%|██▊  | 265M/473M [00:19<00:15, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  56%|██▊  | 266M/473M [00:19<00:14, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  57%|██▊  | 269M/473M [00:19<00:15, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  57%|██▊  | 271M/473M [00:19<00:14, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  58%|██▉  | 273M/473M [00:19<00:14, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  58%|██▉  | 275M/473M [00:20<00:13, 14.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  59%|██▉  | 277M/473M [00:20<00:14, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  59%|██▉  | 279M/473M [00:20<00:13, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  60%|██▉  | 282M/473M [00:20<00:14, 13.4M Bytes/s][A
+Total:  25%|██████▌                   | 1.25G/4.99G [01:35<04:45, 13.1M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  60%|███  | 286M/473M [00:20<00:13, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  61%|███  | 287M/473M [00:21<00:13, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  61%|███  | 290M/473M [00:21<00:13, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  62%|███  | 292M/473M [00:21<00:12, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  62%|███  | 294M/473M [00:21<00:13, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  63%|███▏ | 296M/473M [00:21<00:12, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  63%|███▏ | 298M/473M [00:21<00:12, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  63%|███▏ | 300M/473M [00:21<00:12, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  64%|███▏ | 303M/473M [00:22<00:12, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  64%|███▏ | 304M/473M [00:22<00:11, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  65%|███▏ | 307M/473M [00:22<00:12, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  65%|███▎ | 308M/473M [00:22<00:12, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  66%|███▎ | 311M/473M [00:22<00:11, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  66%|███▎ | 312M/473M [00:22<00:11, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  67%|███▎ | 315M/473M [00:23<00:11, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  67%|███▎ | 317M/473M [00:23<00:11, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  68%|███▍ | 319M/473M [00:23<00:11, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  68%|███▍ | 321M/473M [00:23<00:11, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  68%|███▍ | 324M/473M [00:23<00:10, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  69%|███▍ | 326M/473M [00:23<00:10, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  69%|███▍ | 328M/473M [00:23<00:10, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  70%|███▍ | 329M/473M [00:24<00:10, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  70%|███▌ | 332M/473M [00:24<00:10, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  71%|███▌ | 333M/473M [00:24<00:10, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  71%|███▌ | 336M/473M [00:24<00:09, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  72%|███▌ | 339M/473M [00:24<00:09, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  72%|███▌ | 340M/473M [00:24<00:09, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  73%|███▋ | 343M/473M [00:25<00:09, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  73%|███▋ | 345M/473M [00:25<00:09, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  73%|███▋ | 347M/473M [00:25<00:09, 13.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  74%|███▋ | 349M/473M [00:25<00:08, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  74%|███▋ | 350M/473M [00:25<00:08, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  75%|███▋ | 353M/473M [00:25<00:08, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  75%|███▋ | 354M/473M [00:25<00:08, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  76%|███▊ | 357M/473M [00:26<00:08, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  76%|███▊ | 359M/473M [00:26<00:08, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  76%|███▊ | 361M/473M [00:26<00:08, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  77%|███▊ | 363M/473M [00:26<00:07, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  77%|███▊ | 366M/473M [00:26<00:07, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  78%|███▉ | 367M/473M [00:26<00:07, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  78%|███▉ | 370M/473M [00:27<00:07, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  79%|███▉ | 372M/473M [00:27<00:07, 13.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  79%|███▉ | 374M/473M [00:27<00:07, 13.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  79%|███▉ | 375M/473M [00:27<00:06, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  80%|████ | 378M/473M [00:27<00:06, 13.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  80%|████ | 380M/473M [00:27<00:06, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  81%|████ | 382M/473M [00:27<00:06, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  81%|████ | 384M/473M [00:28<00:06, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  82%|████ | 387M/473M [00:28<00:06, 13.6M Bytes/s][A
+Total:  27%|███████                   | 1.36G/4.99G [01:43<04:36, 13.1M Bytes/s]
+Get sub-02/s .. _bold.nii.gz:  83%|████▏| 391M/473M [00:28<00:06, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  83%|████▏| 392M/473M [00:28<00:05, 14.0M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  84%|████▏| 395M/473M [00:28<00:05, 13.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  84%|████▏| 397M/473M [00:28<00:05, 14.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  84%|████▏| 399M/473M [00:29<00:05, 13.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  85%|████▏| 401M/473M [00:29<00:04, 14.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  85%|████▎| 404M/473M [00:29<00:04, 14.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  86%|████▎| 406M/473M [00:29<00:04, 15.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  86%|████▎| 409M/473M [00:29<00:04, 14.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  87%|████▎| 411M/473M [00:29<00:04, 15.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  87%|████▎| 413M/473M [00:30<00:03, 15.1M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  88%|████▍| 415M/473M [00:30<00:03, 15.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  88%|████▍| 418M/473M [00:30<00:03, 15.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  89%|████▍| 420M/473M [00:30<00:03, 15.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  89%|████▍| 423M/473M [00:30<00:03, 15.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  90%|████▍| 425M/473M [00:30<00:03, 15.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  90%|████▌| 428M/473M [00:30<00:02, 15.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  91%|████▌| 430M/473M [00:31<00:02, 15.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  91%|████▌| 432M/473M [00:31<00:02, 15.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  92%|████▌| 434M/473M [00:31<00:02, 15.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  92%|████▌| 437M/473M [00:31<00:02, 15.2M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  93%|████▋| 439M/473M [00:31<00:02, 15.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  93%|████▋| 442M/473M [00:31<00:02, 15.3M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  94%|████▋| 444M/473M [00:31<00:01, 15.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  94%|████▋| 447M/473M [00:32<00:01, 15.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  95%|████▋| 448M/473M [00:32<00:01, 15.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  95%|████▊| 451M/473M [00:32<00:01, 15.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  96%|████▊| 453M/473M [00:32<00:01, 15.7M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  96%|████▊| 456M/473M [00:32<00:01, 15.4M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  97%|████▊| 458M/473M [00:32<00:00, 15.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  98%|████▉| 461M/473M [00:33<00:00, 15.5M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  98%|████▉| 464M/473M [00:33<00:00, 14.6M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  99%|████▉| 466M/473M [00:33<00:00, 15.9M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz:  99%|████▉| 468M/473M [00:33<00:00, 14.8M Bytes/s][A
+Get sub-02/s .. _bold.nii.gz: 100%|████▉| 470M/473M [00:33<00:00, 16.0M Bytes/s][A
+                                                                                [A
+Get sub-02/s .. _bold.nii.gz: 100%|█████████████| 473M/473M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-04/s .. _bold.nii.gz:   0%|            | 16.4k/514M [00:00<?, ? Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   0%|    | 2.39M/514M [00:00<00:33, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   1%|    | 4.72M/514M [00:00<00:33, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   1%|    | 7.04M/514M [00:00<00:33, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   2%|    | 9.41M/514M [00:00<00:32, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   2%|    | 11.7M/514M [00:00<00:30, 16.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   3%|    | 14.1M/514M [00:00<00:33, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   3%|▏   | 16.4M/514M [00:01<00:32, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   4%|▏   | 18.8M/514M [00:01<00:32, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   4%|▏   | 21.1M/514M [00:01<00:32, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   5%|▏   | 23.5M/514M [00:01<00:32, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   5%|▏   | 25.8M/514M [00:01<00:32, 15.2M Bytes/s][A
+Total:  29%|███████▋                  | 1.47G/4.99G [01:51<04:25, 13.2M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:   6%|▏   | 30.5M/514M [00:01<00:31, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   6%|▎   | 32.9M/514M [00:02<00:31, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   7%|▎   | 35.2M/514M [00:02<00:31, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   7%|▎   | 37.5M/514M [00:02<00:31, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   8%|▎   | 39.8M/514M [00:02<00:31, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   8%|▎   | 42.1M/514M [00:02<00:30, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   9%|▎   | 44.4M/514M [00:02<00:31, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   9%|▎   | 46.8M/514M [00:03<00:30, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  10%|▍   | 49.1M/514M [00:03<00:30, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  10%|▍   | 51.5M/514M [00:03<00:30, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  10%|▍   | 53.9M/514M [00:03<00:29, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  11%|▍   | 56.2M/514M [00:03<00:29, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  11%|▍   | 58.6M/514M [00:03<00:29, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  12%|▍   | 61.0M/514M [00:03<00:29, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  12%|▍   | 63.3M/514M [00:04<00:29, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  13%|▌   | 65.6M/514M [00:04<00:26, 16.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  13%|▌   | 68.4M/514M [00:04<00:29, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  14%|▌   | 70.2M/514M [00:04<00:30, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  14%|▌   | 72.5M/514M [00:04<00:29, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  15%|▌   | 74.9M/514M [00:04<00:29, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  15%|▌   | 77.2M/514M [00:05<00:29, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  15%|▌   | 79.5M/514M [00:05<00:29, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  16%|▋   | 81.8M/514M [00:05<00:28, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  16%|▋   | 84.1M/514M [00:05<00:28, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  17%|▋   | 86.5M/514M [00:05<00:28, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  17%|▋   | 88.8M/514M [00:05<00:27, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  18%|▋   | 91.2M/514M [00:05<00:27, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  18%|▋   | 93.5M/514M [00:06<00:27, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  19%|▋   | 95.9M/514M [00:06<00:25, 16.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  19%|▊   | 98.0M/514M [00:06<00:23, 17.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  20%|▉    | 101M/514M [00:06<00:28, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  20%|█    | 103M/514M [00:06<00:27, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  20%|█    | 105M/514M [00:06<00:27, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  21%|█    | 108M/514M [00:07<00:26, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  21%|█    | 110M/514M [00:07<00:26, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  22%|█    | 112M/514M [00:07<00:26, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  22%|█    | 115M/514M [00:07<00:26, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  23%|█▏   | 117M/514M [00:07<00:25, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  23%|█▏   | 119M/514M [00:07<00:25, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  24%|█▏   | 122M/514M [00:07<00:25, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  24%|█▏   | 124M/514M [00:08<00:25, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  25%|█▏   | 126M/514M [00:08<00:24, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  25%|█▎   | 129M/514M [00:08<00:25, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  25%|█▎   | 131M/514M [00:08<00:25, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  26%|█▎   | 133M/514M [00:08<00:23, 16.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  26%|█▎   | 136M/514M [00:08<00:25, 14.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  27%|█▎   | 138M/514M [00:08<00:24, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  27%|█▎   | 140M/514M [00:09<00:25, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  28%|█▍   | 142M/514M [00:09<00:23, 15.9M Bytes/s][A
+Total:  32%|████████▎                 | 1.59G/4.99G [01:58<04:14, 13.4M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  29%|█▍   | 147M/514M [00:09<00:23, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  29%|█▍   | 149M/514M [00:09<00:22, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  30%|█▍   | 152M/514M [00:09<00:23, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  30%|█▌   | 155M/514M [00:10<00:25, 14.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  30%|█▌   | 157M/514M [00:10<00:22, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  31%|█▌   | 159M/514M [00:10<00:22, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  31%|█▌   | 161M/514M [00:10<00:22, 15.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  32%|█▌   | 163M/514M [00:10<00:22, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  32%|█▌   | 166M/514M [00:10<00:22, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  33%|█▋   | 168M/514M [00:10<00:21, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  33%|█▋   | 171M/514M [00:11<00:22, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  34%|█▋   | 173M/514M [00:11<00:21, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  34%|█▋   | 176M/514M [00:11<00:23, 14.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  35%|█▋   | 178M/514M [00:11<00:21, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  35%|█▊   | 181M/514M [00:11<00:23, 14.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  36%|█▊   | 183M/514M [00:11<00:20, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  36%|█▊   | 185M/514M [00:12<00:22, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  36%|█▊   | 188M/514M [00:12<00:20, 16.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  37%|█▊   | 190M/514M [00:12<00:22, 14.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  37%|█▊   | 192M/514M [00:12<00:19, 16.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  38%|█▉   | 195M/514M [00:12<00:21, 14.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  38%|█▉   | 197M/514M [00:12<00:19, 16.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  39%|█▉   | 200M/514M [00:13<00:21, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  39%|█▉   | 202M/514M [00:13<00:19, 16.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  40%|█▉   | 204M/514M [00:13<00:20, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  40%|██   | 207M/514M [00:13<00:18, 16.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  41%|██   | 209M/514M [00:13<00:20, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  41%|██   | 211M/514M [00:13<00:18, 16.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  42%|██   | 214M/514M [00:13<00:20, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  42%|██   | 216M/514M [00:14<00:18, 16.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  42%|██   | 218M/514M [00:14<00:20, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  43%|██▏  | 221M/514M [00:14<00:18, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  43%|██▏  | 223M/514M [00:14<00:19, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  44%|██▏  | 225M/514M [00:14<00:19, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  44%|██▏  | 228M/514M [00:14<00:19, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  45%|██▏  | 231M/514M [00:15<00:19, 14.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  45%|██▎  | 233M/514M [00:15<00:18, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  46%|██▎  | 235M/514M [00:15<00:18, 14.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  46%|██▎  | 237M/514M [00:15<00:17, 15.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  47%|██▎  | 240M/514M [00:15<00:18, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  47%|██▎  | 242M/514M [00:15<00:17, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  48%|██▍  | 245M/514M [00:15<00:17, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  48%|██▍  | 247M/514M [00:16<00:17, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  49%|██▍  | 250M/514M [00:16<00:18, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  49%|██▍  | 252M/514M [00:16<00:16, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  49%|██▍  | 254M/514M [00:16<00:17, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  50%|██▍  | 256M/514M [00:16<00:16, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  50%|██▌  | 259M/514M [00:16<00:17, 15.0M Bytes/s][A
+Total:  34%|████████▉                 | 1.70G/4.99G [02:06<04:03, 13.5M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  51%|██▌  | 264M/514M [00:17<00:16, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  52%|██▌  | 266M/514M [00:17<00:15, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  52%|██▌  | 269M/514M [00:17<00:16, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  53%|██▋  | 270M/514M [00:17<00:15, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  53%|██▋  | 273M/514M [00:17<00:15, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  53%|██▋  | 275M/514M [00:17<00:15, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  54%|██▋  | 278M/514M [00:18<00:15, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  55%|██▋  | 281M/514M [00:18<00:15, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  55%|██▋  | 283M/514M [00:18<00:14, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  56%|██▊  | 286M/514M [00:18<00:15, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  56%|██▊  | 288M/514M [00:18<00:14, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  56%|██▊  | 290M/514M [00:18<00:15, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  57%|██▊  | 292M/514M [00:19<00:13, 16.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  57%|██▊  | 295M/514M [00:19<00:14, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  58%|██▉  | 297M/514M [00:19<00:13, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  58%|██▉  | 300M/514M [00:19<00:14, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  59%|██▉  | 302M/514M [00:19<00:13, 16.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  59%|██▉  | 305M/514M [00:19<00:14, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  60%|██▉  | 307M/514M [00:19<00:13, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  60%|███  | 309M/514M [00:20<00:14, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  61%|███  | 311M/514M [00:20<00:13, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  61%|███  | 314M/514M [00:20<00:13, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  61%|███  | 316M/514M [00:20<00:12, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  62%|███  | 319M/514M [00:20<00:13, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  62%|███  | 321M/514M [00:20<00:11, 16.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  63%|███▏ | 324M/514M [00:21<00:12, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  63%|███▏ | 326M/514M [00:21<00:11, 16.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  64%|███▏ | 328M/514M [00:21<00:12, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  64%|███▏ | 331M/514M [00:21<00:12, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  65%|███▏ | 333M/514M [00:21<00:11, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  65%|███▎ | 335M/514M [00:21<00:11, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  66%|███▎ | 338M/514M [00:22<00:11, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  66%|███▎ | 340M/514M [00:22<00:10, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  67%|███▎ | 343M/514M [00:22<00:11, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  67%|███▎ | 345M/514M [00:22<00:11, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  68%|███▍ | 347M/514M [00:22<00:10, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  68%|███▍ | 350M/514M [00:22<00:11, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  68%|███▍ | 352M/514M [00:22<00:10, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  69%|███▍ | 355M/514M [00:23<00:10, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  69%|███▍ | 357M/514M [00:23<00:09, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  70%|███▍ | 360M/514M [00:23<00:10, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  70%|███▌ | 361M/514M [00:23<00:09, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  71%|███▌ | 364M/514M [00:23<00:09, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  71%|███▌ | 366M/514M [00:23<00:09, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  72%|███▌ | 369M/514M [00:24<00:09, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  72%|███▌ | 371M/514M [00:24<00:09, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  73%|███▋ | 374M/514M [00:24<00:09, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  73%|███▋ | 375M/514M [00:24<00:08, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  74%|███▋ | 378M/514M [00:24<00:08, 15.3M Bytes/s][A
+Total:  37%|█████████▍                | 1.82G/4.99G [02:13<03:52, 13.6M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  74%|███▋ | 383M/514M [00:24<00:08, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  75%|███▋ | 385M/514M [00:25<00:08, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  75%|███▊ | 388M/514M [00:25<00:08, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  76%|███▊ | 391M/514M [00:25<00:08, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  76%|███▊ | 393M/514M [00:25<00:07, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  77%|███▊ | 395M/514M [00:25<00:08, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  77%|███▊ | 398M/514M [00:25<00:07, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  78%|███▉ | 399M/514M [00:26<00:07, 15.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  78%|███▉ | 402M/514M [00:26<00:07, 15.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  79%|███▉ | 404M/514M [00:26<00:07, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  79%|███▉ | 407M/514M [00:26<00:06, 15.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  80%|███▉ | 410M/514M [00:26<00:07, 14.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  80%|████ | 412M/514M [00:26<00:06, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  80%|████ | 413M/514M [00:26<00:06, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  81%|████ | 417M/514M [00:27<00:06, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  81%|████ | 419M/514M [00:27<00:06, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  82%|████ | 421M/514M [00:27<00:05, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  82%|████ | 424M/514M [00:27<00:06, 14.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  83%|████▏| 426M/514M [00:27<00:05, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  83%|████▏| 429M/514M [00:27<00:05, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  84%|████▏| 431M/514M [00:28<00:05, 16.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  84%|████▏| 433M/514M [00:28<00:05, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  85%|████▏| 435M/514M [00:28<00:04, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  85%|████▎| 438M/514M [00:28<00:05, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  86%|████▎| 440M/514M [00:28<00:04, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  86%|████▎| 443M/514M [00:28<00:04, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  86%|████▎| 445M/514M [00:28<00:04, 15.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  87%|████▎| 448M/514M [00:29<00:04, 15.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  87%|████▎| 449M/514M [00:29<00:04, 15.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  88%|████▍| 452M/514M [00:29<00:04, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  88%|████▍| 454M/514M [00:29<00:03, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  89%|████▍| 457M/514M [00:29<00:03, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  89%|████▍| 459M/514M [00:29<00:03, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  90%|████▍| 462M/514M [00:30<00:03, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  90%|████▌| 464M/514M [00:30<00:03, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  91%|████▌| 467M/514M [00:30<00:03, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  91%|████▌| 468M/514M [00:30<00:02, 15.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  92%|████▌| 471M/514M [00:30<00:02, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  92%|████▌| 473M/514M [00:30<00:02, 15.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  93%|████▋| 476M/514M [00:31<00:02, 15.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  93%|████▋| 478M/514M [00:31<00:02, 15.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  94%|████▋| 481M/514M [00:31<00:02, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  94%|████▋| 484M/514M [00:31<00:02, 14.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  94%|████▋| 486M/514M [00:31<00:01, 15.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  95%|████▋| 488M/514M [00:31<00:01, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  95%|████▊| 490M/514M [00:31<00:01, 16.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  96%|████▊| 493M/514M [00:32<00:01, 14.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  96%|████▊| 495M/514M [00:32<00:01, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  97%|████▊| 498M/514M [00:32<00:01, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  97%|████▊| 500M/514M [00:32<00:00, 16.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  98%|████▉| 503M/514M [00:32<00:00, 14.9M Bytes/s][A
+Total:  39%|██████████▏               | 1.95G/4.99G [02:22<03:42, 13.7M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  99%|████▉| 507M/514M [00:33<00:00, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  99%|████▉| 510M/514M [00:33<00:00, 14.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz: 100%|████▉| 512M/514M [00:33<00:00, 15.4M Bytes/s][A
+                                                                                [A
+Get sub-04/s .. _bold.nii.gz: 100%|█████████████| 514M/514M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-05/s .. _bold.nii.gz:   0%|            | 16.4k/497M [00:00<?, ? Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   0%|    | 2.38M/497M [00:00<00:32, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   1%|    | 4.66M/497M [00:00<00:26, 18.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   1%|    | 6.98M/497M [00:00<00:33, 14.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   2%|    | 9.32M/497M [00:00<00:32, 14.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   2%|    | 11.6M/497M [00:00<00:32, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   3%|    | 13.9M/497M [00:00<00:32, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   3%|▏   | 16.2M/497M [00:01<00:32, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   4%|▏   | 18.6M/497M [00:01<00:32, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   4%|▏   | 20.9M/497M [00:01<00:31, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   5%|▏   | 23.3M/497M [00:01<00:31, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   5%|▏   | 25.6M/497M [00:01<00:31, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   6%|▏   | 27.9M/497M [00:01<00:30, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   6%|▏   | 30.2M/497M [00:01<00:30, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   7%|▎   | 32.6M/497M [00:02<00:27, 16.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   7%|▎   | 35.0M/497M [00:02<00:31, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   8%|▎   | 37.3M/497M [00:02<00:27, 16.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   8%|▎   | 39.7M/497M [00:02<00:31, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   8%|▎   | 42.0M/497M [00:02<00:27, 16.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   9%|▎   | 44.4M/497M [00:02<00:30, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:   9%|▍   | 46.6M/497M [00:03<00:27, 16.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  10%|▍   | 49.1M/497M [00:03<00:30, 14.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  10%|▍   | 51.3M/497M [00:03<00:27, 16.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  11%|▍   | 53.9M/497M [00:03<00:30, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  11%|▍   | 55.9M/497M [00:03<00:27, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  12%|▍   | 58.5M/497M [00:03<00:29, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  12%|▍   | 60.5M/497M [00:03<00:27, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  13%|▌   | 63.2M/497M [00:04<00:29, 14.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  13%|▌   | 65.2M/497M [00:04<00:27, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  14%|▌   | 67.9M/497M [00:04<00:28, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  14%|▌   | 70.0M/497M [00:04<00:26, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  15%|▌   | 72.6M/497M [00:04<00:28, 14.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  15%|▌   | 74.7M/497M [00:04<00:26, 16.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  16%|▌   | 77.2M/497M [00:05<00:28, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  16%|▋   | 79.4M/497M [00:05<00:25, 16.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  17%|▋   | 82.0M/497M [00:05<00:28, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  17%|▋   | 84.2M/497M [00:05<00:25, 16.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  17%|▋   | 86.7M/497M [00:05<00:27, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  18%|▋   | 90.0M/497M [00:05<00:26, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  19%|▋   | 93.1M/497M [00:06<00:26, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  19%|▊   | 94.8M/497M [00:06<00:26, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  20%|▊   | 97.8M/497M [00:06<00:26, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  20%|▊   | 99.6M/497M [00:06<00:26, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  21%|█    | 103M/497M [00:06<00:26, 14.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  21%|█    | 105M/497M [00:06<00:25, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  21%|█    | 107M/497M [00:06<00:24, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  22%|█    | 110M/497M [00:07<00:25, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  23%|█▏   | 112M/497M [00:07<00:24, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  23%|█▏   | 114M/497M [00:07<00:24, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  24%|█▏   | 117M/497M [00:07<00:24, 15.6M Bytes/s][A
+Total:  42%|██████████▊               | 2.08G/4.99G [02:30<03:31, 13.8M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  24%|█▏   | 122M/497M [00:07<00:24, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  25%|█▏   | 123M/497M [00:08<00:23, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  25%|█▎   | 126M/497M [00:08<00:24, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  26%|█▎   | 128M/497M [00:08<00:23, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  26%|█▎   | 131M/497M [00:08<00:23, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  27%|█▎   | 134M/497M [00:08<00:24, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  27%|█▎   | 136M/497M [00:08<00:22, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  28%|█▍   | 139M/497M [00:09<00:23, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  28%|█▍   | 141M/497M [00:09<00:22, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  29%|█▍   | 143M/497M [00:09<00:23, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  29%|█▍   | 145M/497M [00:09<00:22, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  30%|█▍   | 148M/497M [00:09<00:23, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  30%|█▌   | 150M/497M [00:09<00:21, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  31%|█▌   | 153M/497M [00:09<00:22, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  31%|█▌   | 155M/497M [00:10<00:21, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  32%|█▌   | 158M/497M [00:10<00:22, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  32%|█▌   | 160M/497M [00:10<00:21, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  33%|█▋   | 162M/497M [00:10<00:22, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  33%|█▋   | 164M/497M [00:10<00:21, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  34%|█▋   | 167M/497M [00:10<00:21, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  34%|█▋   | 169M/497M [00:10<00:20, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  35%|█▋   | 172M/497M [00:11<00:21, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  35%|█▋   | 174M/497M [00:11<00:20, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  36%|█▊   | 176M/497M [00:11<00:21, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  36%|█▊   | 178M/497M [00:11<00:20, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  36%|█▊   | 181M/497M [00:11<00:20, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  37%|█▊   | 183M/497M [00:11<00:20, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  37%|█▊   | 184M/497M [00:12<00:20, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  38%|█▉   | 188M/497M [00:12<00:20, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  38%|█▉   | 189M/497M [00:12<00:19, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  39%|█▉   | 192M/497M [00:12<00:19, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  39%|█▉   | 194M/497M [00:12<00:19, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  40%|█▉   | 197M/497M [00:12<00:19, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  40%|█▉   | 199M/497M [00:12<00:19, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  41%|██   | 202M/497M [00:13<00:19, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  41%|██   | 203M/497M [00:13<00:18, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  42%|██   | 206M/497M [00:13<00:18, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  42%|██   | 208M/497M [00:13<00:18, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  43%|██▏  | 211M/497M [00:13<00:18, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  43%|██▏  | 213M/497M [00:13<00:18, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  43%|██▏  | 216M/497M [00:14<00:18, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  44%|██▏  | 218M/497M [00:14<00:17, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  44%|██▏  | 221M/497M [00:14<00:17, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  45%|██▏  | 222M/497M [00:14<00:17, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  45%|██▎  | 225M/497M [00:14<00:17, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  46%|██▎  | 227M/497M [00:14<00:17, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  46%|██▎  | 230M/497M [00:14<00:17, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  47%|██▎  | 232M/497M [00:15<00:17, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  47%|██▎  | 235M/497M [00:15<00:17, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  48%|██▍  | 236M/497M [00:15<00:16, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  48%|██▍  | 239M/497M [00:15<00:17, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  49%|██▍  | 241M/497M [00:15<00:16, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  49%|██▍  | 244M/497M [00:15<00:16, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  50%|██▍  | 246M/497M [00:15<00:15, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  50%|██▌  | 249M/497M [00:16<00:16, 15.2M Bytes/s][A
+Total:  44%|███████████▌              | 2.21G/4.99G [02:39<03:20, 13.9M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  51%|██▌  | 254M/497M [00:16<00:15, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  51%|██▌  | 255M/497M [00:16<00:15, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  52%|██▌  | 258M/497M [00:16<00:15, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  52%|██▌  | 260M/497M [00:16<00:14, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  53%|██▋  | 263M/497M [00:17<00:15, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  53%|██▋  | 265M/497M [00:17<00:14, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  54%|██▋  | 268M/497M [00:17<00:15, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  54%|██▋  | 270M/497M [00:17<00:14, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  55%|██▋  | 273M/497M [00:17<00:14, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  55%|██▊  | 274M/497M [00:17<00:13, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  56%|██▊  | 277M/497M [00:17<00:14, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  56%|██▊  | 279M/497M [00:18<00:13, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  57%|██▊  | 282M/497M [00:18<00:14, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  57%|██▊  | 284M/497M [00:18<00:13, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  58%|██▉  | 287M/497M [00:18<00:13, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  58%|██▉  | 289M/497M [00:18<00:13, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  59%|██▉  | 292M/497M [00:18<00:13, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  59%|██▉  | 293M/497M [00:19<00:12, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  60%|██▉  | 296M/497M [00:19<00:13, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  60%|██▉  | 298M/497M [00:19<00:12, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  61%|███  | 301M/497M [00:19<00:12, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  61%|███  | 304M/497M [00:19<00:13, 14.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  62%|███  | 306M/497M [00:19<00:12, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  62%|███  | 309M/497M [00:20<00:12, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  63%|███▏ | 310M/497M [00:20<00:11, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  63%|███▏ | 313M/497M [00:20<00:12, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  63%|███▏ | 315M/497M [00:20<00:11, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  64%|███▏ | 318M/497M [00:20<00:11, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  64%|███▏ | 320M/497M [00:20<00:11, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  65%|███▏ | 323M/497M [00:20<00:11, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  65%|███▎ | 324M/497M [00:21<00:11, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  66%|███▎ | 328M/497M [00:21<00:11, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  66%|███▎ | 329M/497M [00:21<00:10, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  67%|███▎ | 332M/497M [00:21<00:10, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  67%|███▎ | 335M/497M [00:21<00:10, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  68%|███▍ | 337M/497M [00:21<00:10, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  68%|███▍ | 340M/497M [00:22<00:10, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  69%|███▍ | 342M/497M [00:22<00:09, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  69%|███▍ | 345M/497M [00:22<00:09, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  70%|███▍ | 346M/497M [00:22<00:09, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  70%|███▌ | 349M/497M [00:22<00:09, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  71%|███▌ | 351M/497M [00:22<00:09, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  71%|███▌ | 354M/497M [00:22<00:09, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  72%|███▌ | 357M/497M [00:23<00:09, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  72%|███▌ | 359M/497M [00:23<00:08, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  73%|███▋ | 362M/497M [00:23<00:08, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  73%|███▋ | 364M/497M [00:23<00:08, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  74%|███▋ | 367M/497M [00:23<00:08, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  74%|███▋ | 368M/497M [00:23<00:08, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  75%|███▋ | 372M/497M [00:24<00:08, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  75%|███▊ | 374M/497M [00:24<00:08, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  76%|███▊ | 376M/497M [00:24<00:07, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  76%|███▊ | 378M/497M [00:24<00:07, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  77%|███▊ | 381M/497M [00:24<00:07, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  77%|███▊ | 383M/497M [00:24<00:07, 15.7M Bytes/s][A
+Total:  47%|████████████▏             | 2.34G/4.99G [02:48<03:10, 13.9M Bytes/s]
+Get sub-05/s .. _bold.nii.gz:  78%|███▉ | 387M/497M [00:25<00:06, 15.7M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  79%|███▉ | 390M/497M [00:25<00:06, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  79%|███▉ | 393M/497M [00:25<00:06, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  80%|███▉ | 395M/497M [00:25<00:06, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  80%|████ | 398M/497M [00:25<00:06, 15.1M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  81%|████ | 400M/497M [00:25<00:06, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  81%|████ | 403M/497M [00:26<00:06, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  81%|████ | 405M/497M [00:26<00:05, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  82%|████ | 408M/497M [00:26<00:05, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  82%|████ | 409M/497M [00:26<00:05, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  83%|████▏| 412M/497M [00:26<00:05, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  83%|████▏| 414M/497M [00:26<00:05, 15.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  84%|████▏| 417M/497M [00:27<00:05, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  84%|████▏| 419M/497M [00:27<00:05, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  85%|████▏| 422M/497M [00:27<00:04, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  85%|████▎| 425M/497M [00:27<00:04, 14.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  86%|████▎| 427M/497M [00:27<00:04, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  86%|████▎| 429M/497M [00:27<00:04, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  87%|████▎| 432M/497M [00:28<00:04, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  87%|████▎| 434M/497M [00:28<00:04, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  88%|████▍| 436M/497M [00:28<00:03, 16.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  88%|████▍| 439M/497M [00:28<00:03, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  89%|████▍| 441M/497M [00:28<00:03, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  89%|████▍| 444M/497M [00:28<00:03, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  90%|████▍| 445M/497M [00:28<00:03, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  90%|████▌| 448M/497M [00:29<00:03, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  91%|████▌| 450M/497M [00:29<00:02, 16.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  91%|████▌| 453M/497M [00:29<00:02, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  92%|████▌| 455M/497M [00:29<00:02, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  92%|████▌| 458M/497M [00:29<00:02, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  93%|████▋| 461M/497M [00:29<00:02, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  93%|████▋| 462M/497M [00:29<00:02, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  94%|████▋| 465M/497M [00:30<00:02, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  94%|████▋| 467M/497M [00:30<00:01, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  95%|████▋| 470M/497M [00:30<00:01, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  95%|████▋| 472M/497M [00:30<00:01, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  96%|████▊| 475M/497M [00:30<00:01, 15.2M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  96%|████▊| 477M/497M [00:30<00:01, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  97%|████▊| 480M/497M [00:31<00:01, 15.3M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  97%|████▊| 481M/497M [00:31<00:01, 15.5M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  97%|████▊| 484M/497M [00:31<00:00, 15.4M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  98%|████▉| 487M/497M [00:31<00:00, 14.9M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  98%|████▉| 489M/497M [00:31<00:00, 15.6M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  99%|████▉| 492M/497M [00:31<00:00, 15.0M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz:  99%|████▉| 494M/497M [00:32<00:00, 15.8M Bytes/s][A
+Get sub-05/s .. _bold.nii.gz: 100%|████▉| 497M/497M [00:32<00:00, 15.1M Bytes/s][A
+                                                                                [A
+Get sub-05/s .. _bold.nii.gz: 100%|█████████████| 497M/497M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-01/s .. _bold.nii.gz:   0%|            | 16.4k/514M [00:00<?, ? Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   0%|    | 2.38M/514M [00:00<00:33, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   1%|    | 4.75M/514M [00:00<00:32, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   1%|    | 7.06M/514M [00:00<00:33, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   2%|    | 9.39M/514M [00:00<00:33, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   2%|    | 11.7M/514M [00:00<00:31, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   3%|    | 14.0M/514M [00:00<00:33, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   3%|▏   | 16.3M/514M [00:01<00:33, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   4%|▏   | 18.6M/514M [00:01<00:33, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   4%|▏   | 21.0M/514M [00:01<00:32, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   5%|▏   | 23.3M/514M [00:01<00:32, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   5%|▏   | 25.6M/514M [00:01<00:32, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   5%|▏   | 27.9M/514M [00:01<00:32, 15.1M Bytes/s][A
+Total:  50%|████████████▉             | 2.48G/4.99G [02:57<02:59, 14.0M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:   6%|▎   | 32.6M/514M [00:02<00:31, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   7%|▎   | 34.9M/514M [00:02<00:31, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   7%|▎   | 37.3M/514M [00:02<00:31, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   8%|▎   | 39.6M/514M [00:02<00:31, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   8%|▎   | 41.9M/514M [00:02<00:30, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   9%|▎   | 44.3M/514M [00:02<00:31, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   9%|▎   | 46.6M/514M [00:03<00:30, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  10%|▍   | 49.0M/514M [00:03<00:30, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  10%|▍   | 51.3M/514M [00:03<00:30, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  10%|▍   | 53.6M/514M [00:03<00:30, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  11%|▍   | 56.0M/514M [00:03<00:30, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  11%|▍   | 58.3M/514M [00:03<00:29, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  12%|▍   | 60.7M/514M [00:03<00:30, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  12%|▍   | 63.0M/514M [00:04<00:29, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  13%|▌   | 65.3M/514M [00:04<00:26, 16.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  13%|▌   | 67.1M/514M [00:04<00:26, 17.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  14%|▌   | 70.0M/514M [00:04<00:31, 14.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  14%|▌   | 72.3M/514M [00:04<00:29, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  15%|▌   | 74.7M/514M [00:04<00:29, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  15%|▌   | 77.0M/514M [00:05<00:29, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  15%|▌   | 79.3M/514M [00:05<00:29, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  16%|▋   | 81.7M/514M [00:05<00:28, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  16%|▋   | 84.0M/514M [00:05<00:28, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  17%|▋   | 86.4M/514M [00:05<00:27, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  17%|▋   | 88.8M/514M [00:05<00:27, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  18%|▋   | 91.1M/514M [00:05<00:27, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  18%|▋   | 93.5M/514M [00:06<00:27, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  19%|▋   | 95.8M/514M [00:06<00:25, 16.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  19%|▊   | 97.6M/514M [00:06<00:24, 16.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  20%|▉    | 101M/514M [00:06<00:27, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  20%|█    | 103M/514M [00:06<00:27, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  20%|█    | 105M/514M [00:06<00:27, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  21%|█    | 108M/514M [00:07<00:26, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  21%|█    | 110M/514M [00:07<00:26, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  22%|█    | 112M/514M [00:07<00:26, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  22%|█    | 115M/514M [00:07<00:26, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  23%|█▏   | 117M/514M [00:07<00:26, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  23%|█▏   | 119M/514M [00:07<00:25, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  24%|█▏   | 122M/514M [00:07<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  24%|█▏   | 124M/514M [00:08<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  25%|█▏   | 126M/514M [00:08<00:24, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  25%|█▎   | 129M/514M [00:08<00:24, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  25%|█▎   | 131M/514M [00:08<00:25, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  26%|█▎   | 133M/514M [00:08<00:25, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  26%|█▎   | 136M/514M [00:08<00:22, 16.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  27%|█▎   | 138M/514M [00:09<00:25, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  27%|█▎   | 140M/514M [00:09<00:25, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  28%|█▍   | 143M/514M [00:09<00:22, 16.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  28%|█▍   | 145M/514M [00:09<00:25, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  29%|█▍   | 147M/514M [00:09<00:24, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  29%|█▍   | 150M/514M [00:09<00:21, 16.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  30%|█▍   | 152M/514M [00:09<00:24, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  30%|█▌   | 154M/514M [00:10<00:24, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  30%|█▌   | 157M/514M [00:10<00:23, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  31%|█▌   | 159M/514M [00:10<00:21, 16.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  31%|█▌   | 162M/514M [00:10<00:23, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  32%|█▌   | 164M/514M [00:10<00:21, 16.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  32%|█▌   | 166M/514M [00:10<00:22, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  33%|█▋   | 168M/514M [00:10<00:21, 16.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  33%|█▋   | 171M/514M [00:11<00:22, 15.0M Bytes/s][A
+Total:  53%|█████████████▋            | 2.63G/4.99G [03:06<02:48, 14.1M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  34%|█▋   | 176M/514M [00:11<00:22, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  35%|█▋   | 179M/514M [00:11<00:22, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  35%|█▊   | 181M/514M [00:11<00:21, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  36%|█▊   | 184M/514M [00:11<00:21, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  36%|█▊   | 185M/514M [00:12<00:21, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  37%|█▊   | 188M/514M [00:12<00:21, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  37%|█▊   | 190M/514M [00:12<00:21, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  38%|█▉   | 193M/514M [00:12<00:20, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  38%|█▉   | 196M/514M [00:12<00:20, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  38%|█▉   | 198M/514M [00:12<00:20, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  39%|█▉   | 201M/514M [00:13<00:20, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  39%|█▉   | 203M/514M [00:13<00:20, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  40%|█▉   | 206M/514M [00:13<00:20, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  40%|██   | 207M/514M [00:13<00:19, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  41%|██   | 211M/514M [00:13<00:19, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  41%|██   | 212M/514M [00:13<00:18, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  42%|██   | 215M/514M [00:14<00:19, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  42%|██   | 217M/514M [00:14<00:18, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  43%|██▏  | 220M/514M [00:14<00:19, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  43%|██▏  | 222M/514M [00:14<00:18, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  44%|██▏  | 225M/514M [00:14<00:18, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  44%|██▏  | 227M/514M [00:14<00:18, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  45%|██▏  | 230M/514M [00:14<00:18, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  45%|██▏  | 231M/514M [00:15<00:18, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  46%|██▎  | 234M/514M [00:15<00:18, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  46%|██▎  | 236M/514M [00:15<00:17, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  47%|██▎  | 239M/514M [00:15<00:18, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  47%|██▎  | 241M/514M [00:15<00:17, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  47%|██▎  | 244M/514M [00:15<00:17, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  48%|██▍  | 246M/514M [00:15<00:17, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  48%|██▍  | 249M/514M [00:16<00:17, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  49%|██▍  | 251M/514M [00:16<00:16, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  49%|██▍  | 253M/514M [00:16<00:17, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  50%|██▍  | 255M/514M [00:16<00:16, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  50%|██▌  | 258M/514M [00:16<00:17, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  51%|██▌  | 261M/514M [00:17<00:17, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  51%|██▌  | 263M/514M [00:17<00:16, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  52%|██▌  | 266M/514M [00:17<00:16, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  52%|██▌  | 268M/514M [00:17<00:15, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  53%|██▋  | 271M/514M [00:17<00:16, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  53%|██▋  | 272M/514M [00:17<00:15, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  54%|██▋  | 275M/514M [00:17<00:15, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  54%|██▋  | 277M/514M [00:18<00:14, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  54%|██▋  | 280M/514M [00:18<00:15, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  55%|██▋  | 282M/514M [00:18<00:14, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  55%|██▊  | 285M/514M [00:18<00:15, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  56%|██▊  | 287M/514M [00:18<00:14, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  56%|██▊  | 290M/514M [00:18<00:14, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  57%|██▊  | 291M/514M [00:18<00:14, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  57%|██▊  | 294M/514M [00:19<00:14, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  58%|██▉  | 296M/514M [00:19<00:14, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  58%|██▉  | 299M/514M [00:19<00:14, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  59%|██▉  | 301M/514M [00:19<00:13, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  59%|██▉  | 304M/514M [00:19<00:13, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  59%|██▉  | 306M/514M [00:19<00:13, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  60%|███  | 309M/514M [00:20<00:13, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  60%|███  | 311M/514M [00:20<00:12, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  61%|███  | 314M/514M [00:20<00:13, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  62%|███  | 317M/514M [00:20<00:13, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  62%|███  | 318M/514M [00:20<00:12, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  62%|███  | 321M/514M [00:20<00:12, 14.9M Bytes/s][A
+Total:  56%|██████████████▍           | 2.78G/4.99G [03:16<02:36, 14.1M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  63%|███▏ | 326M/514M [00:21<00:12, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  64%|███▏ | 328M/514M [00:21<00:11, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  64%|███▏ | 331M/514M [00:21<00:12, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  65%|███▏ | 333M/514M [00:21<00:11, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  65%|███▎ | 335M/514M [00:21<00:11, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  66%|███▎ | 337M/514M [00:21<00:11, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  66%|███▎ | 340M/514M [00:22<00:11, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  67%|███▎ | 342M/514M [00:22<00:10, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  67%|███▎ | 345M/514M [00:22<00:11, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  67%|███▎ | 347M/514M [00:22<00:10, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  68%|███▍ | 350M/514M [00:22<00:10, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  69%|███▍ | 352M/514M [00:22<00:11, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  69%|███▍ | 354M/514M [00:23<00:10, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  69%|███▍ | 356M/514M [00:23<00:09, 16.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  70%|███▍ | 359M/514M [00:23<00:10, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  70%|███▌ | 361M/514M [00:23<00:09, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  71%|███▌ | 364M/514M [00:23<00:09, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  71%|███▌ | 367M/514M [00:23<00:10, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  72%|███▌ | 369M/514M [00:23<00:09, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  72%|███▌ | 372M/514M [00:24<00:09, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  73%|███▋ | 373M/514M [00:24<00:09, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  73%|███▋ | 375M/514M [00:24<00:08, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  73%|███▋ | 378M/514M [00:24<00:08, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  74%|███▋ | 381M/514M [00:24<00:08, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  74%|███▋ | 383M/514M [00:24<00:08, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  75%|███▊ | 386M/514M [00:25<00:08, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  75%|███▊ | 388M/514M [00:25<00:08, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  76%|███▊ | 391M/514M [00:25<00:08, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  76%|███▊ | 393M/514M [00:25<00:08, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  77%|███▊ | 395M/514M [00:25<00:07, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  77%|███▊ | 398M/514M [00:25<00:07, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  78%|███▉ | 400M/514M [00:26<00:07, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  78%|███▉ | 403M/514M [00:26<00:07, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  79%|███▉ | 405M/514M [00:26<00:06, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  79%|███▉ | 408M/514M [00:26<00:07, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  80%|███▉ | 410M/514M [00:26<00:06, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  80%|████ | 412M/514M [00:26<00:06, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  81%|████ | 414M/514M [00:26<00:06, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  81%|████ | 417M/514M [00:27<00:06, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  81%|████ | 419M/514M [00:27<00:05, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  82%|████ | 422M/514M [00:27<00:06, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  82%|████ | 424M/514M [00:27<00:05, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  83%|████▏| 427M/514M [00:27<00:05, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  84%|████▏| 430M/514M [00:27<00:05, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  84%|████▏| 431M/514M [00:28<00:05, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  84%|████▏| 434M/514M [00:28<00:05, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  85%|████▏| 436M/514M [00:28<00:05, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  85%|████▎| 439M/514M [00:28<00:04, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  86%|████▎| 441M/514M [00:28<00:04, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  86%|████▎| 444M/514M [00:28<00:04, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  87%|████▎| 446M/514M [00:28<00:04, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  87%|████▎| 449M/514M [00:29<00:04, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  88%|████▍| 450M/514M [00:29<00:04, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  88%|████▍| 453M/514M [00:29<00:03, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  89%|████▍| 456M/514M [00:29<00:03, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  89%|████▍| 458M/514M [00:29<00:03, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  90%|████▍| 461M/514M [00:30<00:03, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  90%|████▍| 463M/514M [00:30<00:03, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  91%|████▌| 466M/514M [00:30<00:03, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  91%|████▌| 469M/514M [00:30<00:02, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  91%|████▌| 471M/514M [00:30<00:02, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  92%|████▌| 474M/514M [00:30<00:02, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  92%|████▌| 475M/514M [00:30<00:02, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  93%|████▋| 479M/514M [00:31<00:02, 15.4M Bytes/s][A
+Total:  59%|███████████████▎          | 2.94G/4.99G [03:26<02:24, 14.2M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  94%|████▋| 483M/514M [00:31<00:02, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  94%|████▋| 485M/514M [00:31<00:01, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  95%|████▋| 488M/514M [00:31<00:01, 15.4M Bytes/s][A
+Total:  59%|███████████████▎          | 2.94G/4.99G [03:27<02:24, 14.2M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  95%|████▊| 491M/514M [00:31<00:01, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  96%|████▊| 494M/514M [00:32<00:01, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  96%|████▊| 496M/514M [00:32<00:01, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  97%|████▊| 499M/514M [00:32<00:00, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  97%|████▊| 501M/514M [00:32<00:00, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  98%|████▉| 504M/514M [00:32<00:00, 15.5M Bytes/s][A
+Total:  59%|███████████████▍          | 2.96G/4.99G [03:28<02:23, 14.2M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  99%|████▉| 509M/514M [00:33<00:00, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  99%|████▉| 510M/514M [00:33<00:00, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz: 100%|████▉| 513M/514M [00:33<00:00, 15.5M Bytes/s][A
+                                                                                [A
+Get sub-01/s .. _bold.nii.gz: 100%|█████████████| 514M/514M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-03/s .. _bold.nii.gz:   0%|            | 16.4k/498M [00:00<?, ? Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|    | 2.39M/498M [00:00<00:31, 15.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   1%|    | 4.73M/498M [00:00<00:31, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   1%|    | 7.09M/498M [00:00<00:31, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   2%|    | 9.40M/498M [00:00<00:31, 15.3M Bytes/s][A
+Total:  60%|███████████████▌          | 2.98G/4.99G [03:30<02:21, 14.2M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:   3%|    | 14.0M/498M [00:00<00:31, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   3%|▏   | 16.4M/498M [00:01<00:31, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   4%|▏   | 18.7M/498M [00:01<00:30, 15.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   4%|▏   | 21.0M/498M [00:01<00:31, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   5%|▏   | 23.4M/498M [00:01<00:31, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   5%|▏   | 25.7M/498M [00:01<00:31, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   6%|▏   | 28.1M/498M [00:01<00:30, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   6%|▏   | 30.4M/498M [00:01<00:30, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   7%|▎   | 32.7M/498M [00:02<00:30, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   7%|▎   | 35.0M/498M [00:02<00:30, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   7%|▎   | 37.3M/498M [00:02<00:30, 15.0M Bytes/s][A
+Total:  60%|███████████████▋          | 3.01G/4.99G [03:31<02:19, 14.2M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:   8%|▎   | 41.9M/498M [00:02<00:30, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   9%|▎   | 44.3M/498M [00:02<00:30, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   9%|▎   | 46.6M/498M [00:03<00:30, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  10%|▍   | 48.9M/498M [00:03<00:28, 15.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  10%|▍   | 51.3M/498M [00:03<00:30, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  11%|▍   | 53.6M/498M [00:03<00:29, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  11%|▍   | 55.9M/498M [00:03<00:29, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  12%|▍   | 58.2M/498M [00:03<00:29, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  12%|▍   | 60.6M/498M [00:04<00:29, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  13%|▌   | 62.9M/498M [00:04<00:28, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  13%|▌   | 65.2M/498M [00:04<00:28, 15.0M Bytes/s][A
+Total:  61%|███████████████▊          | 3.04G/4.99G [03:33<02:17, 14.2M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  14%|▌   | 69.9M/498M [00:04<00:28, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  15%|▌   | 72.2M/498M [00:04<00:28, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  15%|▌   | 74.6M/498M [00:04<00:27, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  15%|▌   | 76.9M/498M [00:05<00:27, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  16%|▋   | 79.3M/498M [00:05<00:25, 16.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  16%|▋   | 81.7M/498M [00:05<00:27, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  17%|▋   | 84.0M/498M [00:05<00:27, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  17%|▋   | 86.4M/498M [00:05<00:26, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  18%|▋   | 88.7M/498M [00:05<00:26, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  18%|▋   | 91.1M/498M [00:06<00:26, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  19%|▊   | 93.4M/498M [00:06<00:26, 15.3M Bytes/s][A
+Total:  61%|███████████████▉          | 3.06G/4.99G [03:35<02:15, 14.2M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  20%|▊   | 98.1M/498M [00:06<00:26, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  20%|█    | 101M/498M [00:06<00:25, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  21%|█    | 103M/498M [00:06<00:25, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  21%|█    | 105M/498M [00:06<00:25, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  22%|█    | 107M/498M [00:07<00:25, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  22%|█    | 110M/498M [00:07<00:24, 15.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  23%|█▏   | 112M/498M [00:07<00:25, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  23%|█▏   | 115M/498M [00:07<00:25, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  23%|█▏   | 117M/498M [00:07<00:24, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  24%|█▏   | 119M/498M [00:07<00:24, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  24%|█▏   | 122M/498M [00:07<00:24, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  25%|█▏   | 124M/498M [00:08<00:24, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  25%|█▎   | 126M/498M [00:08<00:24, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  26%|█▎   | 129M/498M [00:08<00:24, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  26%|█▎   | 131M/498M [00:08<00:23, 15.4M Bytes/s][A
+Total:  62%|████████████████▏         | 3.10G/4.99G [03:37<02:12, 14.2M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  27%|█▎   | 136M/498M [00:08<00:23, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  28%|█▍   | 138M/498M [00:09<00:24, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  28%|█▍   | 140M/498M [00:09<00:23, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  29%|█▍   | 143M/498M [00:09<00:23, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  29%|█▍   | 145M/498M [00:09<00:23, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  30%|█▍   | 147M/498M [00:09<00:23, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  30%|█▌   | 149M/498M [00:09<00:23, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  30%|█▌   | 152M/498M [00:09<00:22, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  31%|█▌   | 154M/498M [00:10<00:20, 16.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  31%|█▌   | 156M/498M [00:10<00:20, 16.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  32%|█▌   | 159M/498M [00:10<00:23, 14.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  32%|█▌   | 161M/498M [00:10<00:21, 15.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  33%|█▋   | 163M/498M [00:10<00:20, 16.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  33%|█▋   | 166M/498M [00:10<00:21, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  34%|█▋   | 168M/498M [00:10<00:20, 16.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  34%|█▋   | 170M/498M [00:11<00:21, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  35%|█▋   | 172M/498M [00:11<00:20, 16.0M Bytes/s][A
+Total:  63%|████████████████▎         | 3.14G/4.99G [03:40<02:09, 14.2M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  36%|█▊   | 178M/498M [00:11<00:22, 14.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  36%|█▊   | 180M/498M [00:11<00:21, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  37%|█▊   | 182M/498M [00:11<00:21, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  37%|█▊   | 185M/498M [00:12<00:20, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  38%|█▉   | 187M/498M [00:12<00:20, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  38%|█▉   | 189M/498M [00:12<00:20, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  39%|█▉   | 192M/498M [00:12<00:19, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  39%|█▉   | 194M/498M [00:12<00:18, 16.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  39%|█▉   | 196M/498M [00:12<00:17, 17.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  40%|█▉   | 199M/498M [00:13<00:20, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  40%|██   | 201M/498M [00:13<00:19, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  41%|██   | 204M/498M [00:13<00:19, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  41%|██   | 206M/498M [00:13<00:19, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  42%|██   | 208M/498M [00:13<00:18, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  42%|██   | 211M/498M [00:13<00:18, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  43%|██▏  | 213M/498M [00:13<00:18, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  43%|██▏  | 215M/498M [00:14<00:16, 17.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  44%|██▏  | 218M/498M [00:14<00:18, 14.9M Bytes/s][A
+Total:  64%|████████████████▌         | 3.19G/4.99G [03:43<02:06, 14.3M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  45%|██▏  | 222M/498M [00:14<00:18, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  45%|██▎  | 226M/498M [00:14<00:17, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  46%|██▎  | 229M/498M [00:14<00:17, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  46%|██▎  | 231M/498M [00:15<00:17, 15.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  47%|██▎  | 233M/498M [00:15<00:17, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  47%|██▎  | 235M/498M [00:15<00:16, 15.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  48%|██▍  | 238M/498M [00:15<00:17, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  48%|██▍  | 240M/498M [00:15<00:16, 15.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  49%|██▍  | 243M/498M [00:15<00:16, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  49%|██▍  | 245M/498M [00:16<00:16, 15.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  50%|██▍  | 248M/498M [00:16<00:16, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  50%|██▌  | 250M/498M [00:16<00:16, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  51%|██▌  | 253M/498M [00:16<00:17, 14.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  51%|██▌  | 255M/498M [00:16<00:15, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  52%|██▌  | 257M/498M [00:16<00:15, 15.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  52%|██▌  | 260M/498M [00:17<00:16, 14.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  53%|██▋  | 262M/498M [00:17<00:14, 15.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  53%|██▋  | 264M/498M [00:17<00:14, 16.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  54%|██▋  | 267M/498M [00:17<00:16, 14.4M Bytes/s][A
+Total:  65%|████████████████▊         | 3.24G/4.99G [03:46<02:02, 14.3M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  55%|██▋  | 272M/498M [00:17<00:15, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  55%|██▋  | 274M/498M [00:17<00:15, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  55%|██▊  | 276M/498M [00:18<00:13, 16.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  56%|██▊  | 279M/498M [00:18<00:14, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  56%|██▊  | 281M/498M [00:18<00:14, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  57%|██▊  | 283M/498M [00:18<00:13, 16.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  57%|██▊  | 286M/498M [00:18<00:14, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  58%|██▉  | 288M/498M [00:18<00:12, 16.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  58%|██▉  | 290M/498M [00:19<00:13, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  59%|██▉  | 293M/498M [00:19<00:12, 16.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  59%|██▉  | 295M/498M [00:19<00:13, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  60%|██▉  | 297M/498M [00:19<00:12, 16.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  60%|███  | 300M/498M [00:19<00:13, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  61%|███  | 302M/498M [00:19<00:13, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  61%|███  | 304M/498M [00:19<00:11, 16.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  62%|███  | 307M/498M [00:20<00:12, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  62%|███  | 309M/498M [00:20<00:12, 15.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  63%|███▏ | 312M/498M [00:20<00:12, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  63%|███▏ | 314M/498M [00:20<00:12, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  63%|███▏ | 315M/498M [00:20<00:11, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  64%|███▏ | 319M/498M [00:20<00:11, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  65%|███▏ | 321M/498M [00:21<00:11, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  65%|███▏ | 323M/498M [00:21<00:11, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  65%|███▎ | 325M/498M [00:21<00:11, 15.3M Bytes/s][A
+Total:  66%|█████████████████▏        | 3.30G/4.99G [03:50<01:58, 14.3M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  66%|███▎ | 330M/498M [00:21<00:10, 15.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  67%|███▎ | 332M/498M [00:21<00:11, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  67%|███▎ | 336M/498M [00:21<00:10, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  68%|███▍ | 338M/498M [00:22<00:10, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  68%|███▍ | 341M/498M [00:22<00:10, 15.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  69%|███▍ | 343M/498M [00:22<00:10, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  69%|███▍ | 345M/498M [00:22<00:09, 15.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  70%|███▍ | 348M/498M [00:22<00:10, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  70%|███▌ | 350M/498M [00:22<00:09, 16.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  71%|███▌ | 353M/498M [00:23<00:09, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  71%|███▌ | 355M/498M [00:23<00:08, 16.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  72%|███▌ | 357M/498M [00:23<00:09, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  72%|███▌ | 359M/498M [00:23<00:09, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  73%|███▋ | 362M/498M [00:23<00:08, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  73%|███▋ | 365M/498M [00:23<00:09, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  74%|███▋ | 367M/498M [00:24<00:08, 15.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  74%|███▋ | 370M/498M [00:24<00:08, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  75%|███▋ | 371M/498M [00:24<00:08, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  75%|███▊ | 374M/498M [00:24<00:08, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  75%|███▊ | 376M/498M [00:24<00:08, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  76%|███▊ | 379M/498M [00:24<00:07, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  76%|███▊ | 381M/498M [00:24<00:07, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  77%|███▊ | 383M/498M [00:25<00:07, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  77%|███▊ | 385M/498M [00:25<00:07, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  78%|███▉ | 388M/498M [00:25<00:07, 14.9M Bytes/s][A
+Total:  67%|█████████████████▍        | 3.36G/4.99G [03:54<01:54, 14.3M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  79%|███▉ | 391M/498M [00:25<00:06, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  79%|███▉ | 394M/498M [00:25<00:06, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  80%|███▉ | 396M/498M [00:25<00:06, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  80%|███▉ | 398M/498M [00:26<00:06, 15.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  80%|████ | 401M/498M [00:26<00:06, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  81%|████ | 404M/498M [00:26<00:06, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  81%|████ | 405M/498M [00:26<00:06, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  82%|████ | 407M/498M [00:26<00:05, 16.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  82%|████ | 410M/498M [00:26<00:05, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  83%|████▏| 413M/498M [00:27<00:05, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  83%|████▏| 415M/498M [00:27<00:05, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  84%|████▏| 418M/498M [00:27<00:05, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  84%|████▏| 421M/498M [00:27<00:05, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  85%|████▏| 422M/498M [00:27<00:05, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  85%|████▎| 424M/498M [00:27<00:04, 15.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  86%|████▎| 427M/498M [00:28<00:04, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  86%|████▎| 429M/498M [00:28<00:04, 15.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  87%|████▎| 432M/498M [00:28<00:04, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  87%|████▎| 433M/498M [00:28<00:04, 15.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  88%|████▍| 436M/498M [00:28<00:04, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  88%|████▍| 438M/498M [00:28<00:03, 15.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  89%|████▍| 441M/498M [00:28<00:03, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  89%|████▍| 443M/498M [00:29<00:03, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  89%|████▍| 446M/498M [00:29<00:03, 15.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  90%|████▍| 447M/498M [00:29<00:03, 15.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  90%|████▌| 450M/498M [00:29<00:03, 15.1M Bytes/s][A
+Total:  69%|█████████████████▊        | 3.42G/4.99G [03:58<01:49, 14.3M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  91%|████▌| 455M/498M [00:29<00:02, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  92%|████▌| 458M/498M [00:30<00:02, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  92%|████▌| 460M/498M [00:30<00:02, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  93%|████▋| 463M/498M [00:30<00:02, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  94%|████▋| 466M/498M [00:30<00:02, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  94%|████▋| 469M/498M [00:30<00:01, 15.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  95%|████▋| 473M/498M [00:31<00:01, 15.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  95%|████▊| 474M/498M [00:31<00:01, 15.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  96%|████▊| 477M/498M [00:31<00:01, 14.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  96%|████▊| 479M/498M [00:31<00:01, 15.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  97%|████▊| 482M/498M [00:31<00:01, 14.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  97%|████▊| 484M/498M [00:31<00:00, 15.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  98%|████▉| 486M/498M [00:31<00:00, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  98%|████▉| 489M/498M [00:32<00:00, 16.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  99%|████▉| 491M/498M [00:32<00:00, 14.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  99%|████▉| 494M/498M [00:32<00:00, 15.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz: 100%|████▉| 498M/498M [00:32<00:00, 15.8M Bytes/s][A
+                                                                                [A
+Get sub-03/s .. _bold.nii.gz: 100%|█████████████| 498M/498M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-01/s .. _bold.nii.gz:   0%|            | 16.4k/513M [00:00<?, ? Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   0%|    | 2.39M/513M [00:00<00:32, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   1%|    | 4.27M/513M [00:00<00:37, 13.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   1%|    | 6.60M/513M [00:00<00:35, 14.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   2%|    | 8.91M/513M [00:00<00:34, 14.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   2%|    | 11.2M/513M [00:00<00:34, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   3%|    | 13.5M/513M [00:00<00:33, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   3%|    | 15.9M/513M [00:01<00:33, 14.8M Bytes/s][A
+Total:  70%|██████████████████▏       | 3.48G/4.99G [04:03<01:45, 14.3M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:   4%|▏   | 20.5M/513M [00:01<00:34, 14.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   4%|▏   | 22.8M/513M [00:01<00:33, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   5%|▏   | 25.1M/513M [00:01<00:33, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   5%|▏   | 27.4M/513M [00:01<00:32, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   6%|▏   | 29.7M/513M [00:02<00:32, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   6%|▏   | 32.0M/513M [00:02<00:32, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   7%|▎   | 34.4M/513M [00:02<00:31, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   7%|▎   | 36.7M/513M [00:02<00:31, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   8%|▎   | 39.1M/513M [00:02<00:31, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   8%|▎   | 41.4M/513M [00:02<00:31, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   9%|▎   | 43.7M/513M [00:02<00:30, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   9%|▎   | 46.0M/513M [00:03<00:30, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:   9%|▍   | 48.3M/513M [00:03<00:28, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  10%|▍   | 50.6M/513M [00:03<00:31, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  10%|▍   | 52.9M/513M [00:03<00:31, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  11%|▍   | 55.2M/513M [00:03<00:30, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  11%|▍   | 57.6M/513M [00:03<00:30, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  12%|▍   | 59.9M/513M [00:04<00:30, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  12%|▍   | 62.2M/513M [00:04<00:30, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  13%|▌   | 64.5M/513M [00:04<00:29, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  13%|▌   | 66.8M/513M [00:04<00:29, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  13%|▌   | 69.1M/513M [00:04<00:29, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  14%|▌   | 71.5M/513M [00:04<00:29, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  14%|▌   | 73.8M/513M [00:04<00:29, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  15%|▌   | 76.0M/513M [00:05<00:29, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  15%|▌   | 78.3M/513M [00:05<00:27, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  16%|▋   | 80.6M/513M [00:05<00:29, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  16%|▋   | 82.9M/513M [00:05<00:29, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  17%|▋   | 85.2M/513M [00:05<00:28, 14.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  17%|▋   | 87.5M/513M [00:05<00:28, 14.9M Bytes/s][A
+Total:  71%|██████████████████▌       | 3.56G/4.99G [04:08<01:40, 14.3M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  18%|▋   | 92.2M/513M [00:06<00:28, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  18%|▋   | 94.5M/513M [00:06<00:27, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  19%|▊   | 96.8M/513M [00:06<00:27, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  19%|▊   | 99.2M/513M [00:06<00:27, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  20%|▉    | 102M/513M [00:06<00:27, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  20%|█    | 104M/513M [00:06<00:26, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  21%|█    | 106M/513M [00:07<00:26, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  21%|█    | 109M/513M [00:07<00:25, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  22%|█    | 111M/513M [00:07<00:26, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  22%|█    | 113M/513M [00:07<00:26, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  23%|█▏   | 116M/513M [00:07<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  23%|█▏   | 118M/513M [00:07<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  23%|█▏   | 120M/513M [00:07<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  24%|█▏   | 123M/513M [00:08<00:25, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  24%|█▏   | 125M/513M [00:08<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  25%|█▏   | 127M/513M [00:08<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  25%|█▎   | 130M/513M [00:08<00:25, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  26%|█▎   | 132M/513M [00:08<00:22, 16.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  26%|█▎   | 134M/513M [00:08<00:25, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  27%|█▎   | 137M/513M [00:09<00:25, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  27%|█▎   | 139M/513M [00:09<00:24, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  28%|█▍   | 141M/513M [00:09<00:22, 16.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  28%|█▍   | 144M/513M [00:09<00:25, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  28%|█▍   | 146M/513M [00:09<00:24, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  29%|█▍   | 148M/513M [00:09<00:24, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  29%|█▍   | 151M/513M [00:09<00:24, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  30%|█▍   | 153M/513M [00:10<00:23, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  30%|█▌   | 155M/513M [00:10<00:23, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  31%|█▌   | 158M/513M [00:10<00:23, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  31%|█▌   | 160M/513M [00:10<00:23, 15.3M Bytes/s][A
+Total:  73%|██████████████████▉       | 3.63G/4.99G [04:13<01:34, 14.3M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  32%|█▌   | 165M/513M [00:10<00:23, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  33%|█▋   | 167M/513M [00:11<00:23, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  33%|█▋   | 169M/513M [00:11<00:21, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  33%|█▋   | 171M/513M [00:11<00:20, 16.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  34%|█▋   | 174M/513M [00:11<00:21, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  34%|█▋   | 176M/513M [00:11<00:23, 14.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  35%|█▋   | 179M/513M [00:11<00:21, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  35%|█▊   | 181M/513M [00:11<00:23, 14.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  36%|█▊   | 183M/513M [00:12<00:20, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  36%|█▊   | 186M/513M [00:12<00:22, 14.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  37%|█▊   | 188M/513M [00:12<00:19, 16.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  37%|█▊   | 191M/513M [00:12<00:22, 14.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  38%|█▉   | 193M/513M [00:12<00:20, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  38%|█▉   | 195M/513M [00:12<00:19, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  39%|█▉   | 198M/513M [00:13<00:21, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  39%|█▉   | 200M/513M [00:13<00:20, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  39%|█▉   | 202M/513M [00:13<00:20, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  40%|█▉   | 205M/513M [00:13<00:20, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  40%|██   | 207M/513M [00:13<00:20, 15.3M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  41%|██   | 210M/513M [00:13<00:19, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  41%|██   | 212M/513M [00:13<00:19, 15.4M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  42%|██   | 214M/513M [00:14<00:19, 15.5M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  42%|██   | 217M/513M [00:14<00:17, 17.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  43%|██▏  | 219M/513M [00:14<00:19, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  43%|██▏  | 221M/513M [00:14<00:18, 16.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  44%|██▏  | 224M/513M [00:14<00:19, 14.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  44%|██▏  | 226M/513M [00:14<00:18, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  44%|██▏  | 228M/513M [00:14<00:17, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  45%|██▏  | 231M/513M [00:15<00:18, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  45%|██▎  | 233M/513M [00:15<00:17, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  46%|██▎  | 235M/513M [00:15<00:18, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  46%|██▎  | 237M/513M [00:15<00:17, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  47%|██▎  | 240M/513M [00:15<00:18, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  47%|██▎  | 242M/513M [00:15<00:17, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  48%|██▍  | 245M/513M [00:16<00:17, 15.0M Bytes/s][A
+Total:  74%|███████████████████▎      | 3.71G/4.99G [04:18<01:29, 14.4M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  49%|██▍  | 250M/513M [00:16<00:17, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  49%|██▍  | 251M/513M [00:16<00:16, 15.7M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  50%|██▍  | 254M/513M [00:16<00:17, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  50%|██▍  | 256M/513M [00:16<00:16, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  50%|██▌  | 259M/513M [00:17<00:16, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  51%|██▌  | 261M/513M [00:17<00:16, 15.6M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  51%|██▌  | 264M/513M [00:17<00:16, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  52%|██▌  | 266M/513M [00:17<00:15, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  52%|██▌  | 268M/513M [00:17<00:16, 14.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  53%|██▋  | 270M/513M [00:17<00:15, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  53%|██▋  | 273M/513M [00:17<00:16, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  54%|██▋  | 275M/513M [00:18<00:15, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  54%|██▋  | 278M/513M [00:18<00:15, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  54%|██▋  | 280M/513M [00:18<00:14, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  55%|██▊  | 283M/513M [00:18<00:15, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  55%|██▊  | 284M/513M [00:18<00:14, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  56%|██▊  | 287M/513M [00:18<00:14, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  56%|██▊  | 289M/513M [00:18<00:14, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  57%|██▊  | 292M/513M [00:19<00:14, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  57%|██▊  | 294M/513M [00:19<00:13, 15.8M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  58%|██▉  | 297M/513M [00:19<00:14, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  58%|██▉  | 299M/513M [00:19<00:13, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  59%|██▉  | 301M/513M [00:19<00:14, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  59%|██▉  | 303M/513M [00:19<00:13, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  60%|██▉  | 306M/513M [00:20<00:13, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  60%|██▉  | 308M/513M [00:20<00:12, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  61%|███  | 311M/513M [00:20<00:13, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  61%|███  | 313M/513M [00:20<00:12, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  61%|███  | 316M/513M [00:20<00:13, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  62%|███  | 317M/513M [00:20<00:12, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  62%|███  | 320M/513M [00:20<00:12, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  63%|███▏ | 322M/513M [00:21<00:11, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  63%|███▏ | 325M/513M [00:21<00:12, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  64%|███▏ | 327M/513M [00:21<00:11, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  64%|███▏ | 330M/513M [00:21<00:12, 15.1M Bytes/s][A
+Total:  76%|███████████████████▊      | 3.80G/4.99G [04:23<01:22, 14.4M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  65%|███▎ | 334M/513M [00:21<00:11, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  66%|███▎ | 336M/513M [00:22<00:11, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  66%|███▎ | 339M/513M [00:22<00:11, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  66%|███▎ | 341M/513M [00:22<00:10, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  67%|███▎ | 344M/513M [00:22<00:11, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  67%|███▎ | 346M/513M [00:22<00:10, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  68%|███▍ | 349M/513M [00:22<00:10, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  68%|███▍ | 351M/513M [00:22<00:10, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  69%|███▍ | 353M/513M [00:23<00:10, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  69%|███▍ | 355M/513M [00:23<00:09, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  70%|███▍ | 358M/513M [00:23<00:10, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  70%|███▌ | 360M/513M [00:23<00:09, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  71%|███▌ | 363M/513M [00:23<00:09, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  71%|███▌ | 365M/513M [00:23<00:09, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  72%|███▌ | 368M/513M [00:24<00:09, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  72%|███▌ | 370M/513M [00:24<00:09, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  73%|███▋ | 372M/513M [00:24<00:09, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  73%|███▋ | 374M/513M [00:24<00:08, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  73%|███▋ | 377M/513M [00:24<00:08, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  74%|███▋ | 379M/513M [00:24<00:08, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  74%|███▋ | 382M/513M [00:24<00:08, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  75%|███▋ | 384M/513M [00:25<00:08, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  75%|███▊ | 387M/513M [00:25<00:08, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  76%|███▊ | 388M/513M [00:25<00:07, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  76%|███▊ | 391M/513M [00:25<00:08, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  77%|███▊ | 393M/513M [00:25<00:07, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  77%|███▊ | 396M/513M [00:25<00:07, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  78%|███▉ | 398M/513M [00:25<00:07, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  78%|███▉ | 401M/513M [00:26<00:07, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  78%|███▉ | 403M/513M [00:26<00:06, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  79%|███▉ | 405M/513M [00:26<00:07, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  79%|███▉ | 407M/513M [00:26<00:06, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  80%|███▉ | 410M/513M [00:26<00:06, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  80%|████ | 412M/513M [00:26<00:06, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  81%|████ | 415M/513M [00:27<00:06, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  81%|████ | 417M/513M [00:27<00:05, 16.1M Bytes/s][A
+Total:  78%|████████████████████▏     | 3.89G/4.99G [04:29<01:16, 14.4M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  82%|████ | 422M/513M [00:27<00:05, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  83%|████▏| 424M/513M [00:27<00:05, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  83%|████▏| 426M/513M [00:27<00:05, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  84%|████▏| 429M/513M [00:28<00:05, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  84%|████▏| 431M/513M [00:28<00:05, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  85%|████▏| 434M/513M [00:28<00:05, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  85%|████▏| 436M/513M [00:28<00:04, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  85%|████▎| 439M/513M [00:28<00:04, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  86%|████▎| 441M/513M [00:28<00:04, 16.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  86%|████▎| 443M/513M [00:28<00:04, 15.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  87%|████▎| 445M/513M [00:29<00:04, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  87%|████▎| 448M/513M [00:29<00:04, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  88%|████▍| 450M/513M [00:29<00:03, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  88%|████▍| 453M/513M [00:29<00:04, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  89%|████▍| 455M/513M [00:29<00:03, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  89%|████▍| 458M/513M [00:29<00:03, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  89%|████▍| 459M/513M [00:29<00:03, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  90%|████▌| 462M/513M [00:30<00:03, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  90%|████▌| 464M/513M [00:30<00:03, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  91%|████▌| 467M/513M [00:30<00:03, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  91%|████▌| 469M/513M [00:30<00:02, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  92%|████▌| 472M/513M [00:30<00:02, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  92%|████▌| 474M/513M [00:30<00:02, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  93%|████▋| 477M/513M [00:31<00:02, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  93%|████▋| 478M/513M [00:31<00:02, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  94%|████▋| 481M/513M [00:31<00:02, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  94%|████▋| 483M/513M [00:31<00:01, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  95%|████▋| 486M/513M [00:31<00:01, 15.2M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  95%|████▊| 488M/513M [00:31<00:01, 15.9M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  96%|████▊| 491M/513M [00:31<00:01, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  96%|████▊| 493M/513M [00:32<00:01, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  97%|████▊| 495M/513M [00:32<00:01, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  97%|████▊| 497M/513M [00:32<00:00, 16.0M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  97%|████▊| 500M/513M [00:32<00:00, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz:  98%|████▉| 503M/513M [00:32<00:00, 15.6M Bytes/s][A
+Total:  80%|████████████████████▋     | 3.97G/4.99G [04:35<01:10, 14.4M Bytes/s]
+Get sub-01/s .. _bold.nii.gz:  99%|████▉| 510M/513M [00:33<00:00, 15.1M Bytes/s][A
+Get sub-01/s .. _bold.nii.gz: 100%|████▉| 512M/513M [00:33<00:00, 16.0M Bytes/s][A
+                                                                                [A
+Get sub-01/s .. _bold.nii.gz: 100%|█████████████| 513M/513M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-03/s .. _bold.nii.gz:   0%|            | 16.4k/498M [00:00<?, ? Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|   | 33.4k/498M [00:00<1:09:51, 119k Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|     | 85.6k/498M [00:00<31:33, 263k Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|      | 120k/498M [00:00<32:44, 254k Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|      | 173k/498M [00:00<27:55, 297k Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|      | 260k/498M [00:00<20:18, 409k Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|      | 503k/498M [00:00<09:46, 849k Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|     | 852k/498M [00:01<06:05, 1.36M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   0%|    | 1.65M/498M [00:01<03:05, 2.68M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   1%|    | 3.27M/498M [00:01<01:26, 5.74M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   1%|    | 6.55M/498M [00:01<00:46, 10.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   2%|    | 10.4M/498M [00:01<00:31, 15.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   3%|    | 14.2M/498M [00:01<00:25, 18.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   4%|▏   | 17.6M/498M [00:01<00:21, 22.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   4%|▏   | 22.0M/498M [00:02<00:21, 21.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   5%|▏   | 25.4M/498M [00:02<00:19, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   6%|▏   | 29.7M/498M [00:02<00:21, 22.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   7%|▎   | 33.1M/498M [00:02<00:19, 23.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   8%|▎   | 37.6M/498M [00:02<00:20, 22.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   8%|▎   | 41.1M/498M [00:02<00:18, 25.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:   9%|▎   | 45.1M/498M [00:03<00:19, 23.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  10%|▍   | 47.9M/498M [00:03<00:18, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  10%|▍   | 50.5M/498M [00:03<00:18, 24.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  11%|▍   | 53.0M/498M [00:03<00:18, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  11%|▍   | 56.3M/498M [00:03<00:19, 22.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  12%|▍   | 61.1M/498M [00:03<00:17, 24.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  13%|▌   | 66.4M/498M [00:03<00:17, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  14%|▌   | 70.7M/498M [00:04<00:18, 22.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  15%|▌   | 76.2M/498M [00:04<00:18, 22.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  16%|▋   | 79.4M/498M [00:04<00:17, 23.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  17%|▋   | 82.3M/498M [00:04<00:17, 24.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  17%|▋   | 87.0M/498M [00:04<00:17, 23.4M Bytes/s][A
+Total:  82%|█████████████████████▏    | 4.07G/4.99G [04:41<01:03, 14.5M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  19%|▊   | 94.2M/498M [00:05<00:17, 22.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  20%|▊   | 97.7M/498M [00:05<00:16, 24.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  20%|█    | 102M/498M [00:05<00:17, 23.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  21%|█    | 105M/498M [00:05<00:16, 24.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  22%|█    | 108M/498M [00:05<00:15, 24.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  23%|█▏   | 113M/498M [00:05<00:15, 24.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  24%|█▏   | 118M/498M [00:06<00:16, 23.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  24%|█▏   | 121M/498M [00:06<00:15, 24.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  25%|█▏   | 124M/498M [00:06<00:15, 23.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  25%|█▎   | 127M/498M [00:06<00:15, 24.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  26%|█▎   | 129M/498M [00:06<00:14, 25.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  27%|█▎   | 134M/498M [00:06<00:15, 22.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  27%|█▎   | 137M/498M [00:06<00:15, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  28%|█▍   | 142M/498M [00:07<00:15, 22.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  29%|█▍   | 145M/498M [00:07<00:14, 24.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  30%|█▌   | 150M/498M [00:07<00:14, 24.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  31%|█▌   | 154M/498M [00:07<00:15, 22.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  32%|█▌   | 158M/498M [00:07<00:13, 25.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  32%|█▌   | 162M/498M [00:07<00:14, 23.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  33%|█▋   | 165M/498M [00:08<00:13, 24.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  34%|█▋   | 170M/498M [00:08<00:14, 23.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  35%|█▋   | 174M/498M [00:08<00:13, 23.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  35%|█▊   | 177M/498M [00:08<00:12, 25.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  36%|█▊   | 182M/498M [00:08<00:13, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  37%|█▊   | 184M/498M [00:08<00:12, 24.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  38%|█▉   | 187M/498M [00:08<00:12, 24.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  38%|█▉   | 191M/498M [00:09<00:12, 24.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  39%|█▉   | 194M/498M [00:09<00:12, 25.0M Bytes/s][A
+Total:  84%|█████████████████████▊    | 4.18G/4.99G [04:45<00:55, 14.6M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  40%|██   | 201M/498M [00:09<00:12, 23.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  41%|██   | 204M/498M [00:09<00:11, 25.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  42%|██   | 209M/498M [00:09<00:11, 24.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  43%|██▏  | 214M/498M [00:10<00:11, 24.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  43%|██▏  | 217M/498M [00:10<00:11, 23.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  44%|██▏  | 219M/498M [00:10<00:11, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  45%|██▏  | 222M/498M [00:10<00:10, 25.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  46%|██▎  | 227M/498M [00:10<00:11, 23.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  46%|██▎  | 230M/498M [00:10<00:10, 24.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  47%|██▎  | 235M/498M [00:10<00:10, 24.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  48%|██▍  | 240M/498M [00:11<00:10, 25.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  49%|██▍  | 244M/498M [00:11<00:10, 23.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  50%|██▍  | 247M/498M [00:11<00:10, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  50%|██▌  | 250M/498M [00:11<00:09, 26.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  51%|██▌  | 255M/498M [00:11<00:10, 23.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  52%|██▌  | 258M/498M [00:11<00:09, 24.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  52%|██▌  | 261M/498M [00:11<00:09, 24.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  53%|██▋  | 266M/498M [00:12<00:09, 24.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  54%|██▋  | 269M/498M [00:12<00:09, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  55%|██▋  | 272M/498M [00:12<00:09, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  55%|██▊  | 275M/498M [00:12<00:09, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  56%|██▊  | 277M/498M [00:12<00:09, 23.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  56%|██▊  | 280M/498M [00:12<00:08, 24.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  57%|██▊  | 282M/498M [00:12<00:08, 24.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  57%|██▊  | 285M/498M [00:12<00:08, 25.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  58%|██▉  | 290M/498M [00:13<00:08, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  59%|██▉  | 293M/498M [00:13<00:08, 24.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  60%|██▉  | 298M/498M [00:13<00:08, 23.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  60%|███  | 301M/498M [00:13<00:07, 24.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  61%|███  | 306M/498M [00:13<00:08, 23.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  62%|███  | 309M/498M [00:13<00:07, 24.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  63%|███▏ | 312M/498M [00:14<00:07, 24.1M Bytes/s][A
+Total:  86%|██████████████████████▎   | 4.30G/4.99G [04:50<00:47, 14.8M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  64%|███▏ | 320M/498M [00:14<00:07, 24.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  65%|███▏ | 324M/498M [00:14<00:07, 23.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  66%|███▎ | 327M/498M [00:14<00:06, 25.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  67%|███▎ | 332M/498M [00:14<00:06, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  67%|███▎ | 335M/498M [00:15<00:06, 24.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  68%|███▍ | 339M/498M [00:15<00:06, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  69%|███▍ | 342M/498M [00:15<00:06, 25.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  70%|███▍ | 347M/498M [00:15<00:06, 23.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  70%|███▌ | 350M/498M [00:15<00:06, 24.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  71%|███▌ | 355M/498M [00:15<00:05, 24.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  72%|███▌ | 360M/498M [00:16<00:05, 23.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  73%|███▋ | 363M/498M [00:16<00:05, 24.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  74%|███▋ | 367M/498M [00:16<00:04, 26.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  74%|███▋ | 371M/498M [00:16<00:05, 23.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  75%|███▊ | 375M/498M [00:16<00:05, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  76%|███▊ | 378M/498M [00:16<00:04, 25.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  77%|███▊ | 383M/498M [00:16<00:04, 23.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  77%|███▊ | 386M/498M [00:17<00:04, 25.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  78%|███▉ | 391M/498M [00:17<00:04, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  79%|███▉ | 394M/498M [00:17<00:03, 26.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  80%|███▉ | 398M/498M [00:17<00:04, 24.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  81%|████ | 403M/498M [00:17<00:04, 23.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  81%|████ | 406M/498M [00:17<00:03, 25.6M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  82%|████ | 411M/498M [00:18<00:03, 23.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  83%|████▏| 414M/498M [00:18<00:03, 25.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  84%|████▏| 418M/498M [00:18<00:03, 24.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  85%|████▏| 422M/498M [00:18<00:03, 25.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  86%|████▎| 426M/498M [00:18<00:03, 23.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  86%|████▎| 430M/498M [00:18<00:02, 24.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  87%|████▎| 432M/498M [00:19<00:02, 23.3M Bytes/s][A
+Total:  88%|██████████████████████▉   | 4.41G/4.99G [04:55<00:38, 14.9M Bytes/s]
+Get sub-03/s .. _bold.nii.gz:  88%|████▍| 437M/498M [00:19<00:02, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  88%|████▍| 440M/498M [00:19<00:02, 23.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  89%|████▍| 444M/498M [00:19<00:02, 25.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  90%|████▍| 448M/498M [00:19<00:02, 23.3M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  90%|████▌| 451M/498M [00:19<00:02, 23.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  91%|████▌| 456M/498M [00:20<00:01, 23.5M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  92%|████▌| 460M/498M [00:20<00:01, 21.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  93%|████▋| 464M/498M [00:20<00:01, 23.9M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  94%|████▋| 468M/498M [00:20<00:01, 22.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  94%|████▋| 471M/498M [00:20<00:01, 22.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  95%|████▊| 474M/498M [00:20<00:01, 23.4M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  96%|████▊| 476M/498M [00:20<00:00, 23.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  96%|████▊| 479M/498M [00:20<00:00, 23.7M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  97%|████▊| 482M/498M [00:21<00:00, 24.1M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  97%|████▊| 484M/498M [00:21<00:00, 24.0M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  98%|████▉| 487M/498M [00:21<00:00, 24.8M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  99%|████▉| 493M/498M [00:21<00:00, 24.2M Bytes/s][A
+Get sub-03/s .. _bold.nii.gz:  99%|████▉| 495M/498M [00:21<00:00, 22.3M Bytes/s][A
+                                                                                [A
+Get sub-03/s .. _bold.nii.gz: 100%|█████████████| 498M/498M [00:00<?, ? Bytes/s][A
+                                                                                [A
+Get sub-04/s .. _bold.nii.gz:   0%|            | 16.4k/514M [00:00<?, ? Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   1%|    | 3.93M/514M [00:00<00:18, 26.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   2%|    | 7.81M/514M [00:00<00:18, 26.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   2%|    | 11.6M/514M [00:00<00:18, 26.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   3%|    | 15.4M/514M [00:00<00:18, 26.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   4%|▏   | 19.3M/514M [00:00<00:18, 26.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   4%|▏   | 22.9M/514M [00:00<00:17, 28.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   5%|▏   | 26.9M/514M [00:01<00:21, 22.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   6%|▏   | 30.8M/514M [00:01<00:20, 23.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   7%|▎   | 34.6M/514M [00:01<00:19, 24.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   7%|▎   | 38.5M/514M [00:01<00:18, 25.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   8%|▎   | 42.3M/514M [00:01<00:17, 26.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:   9%|▎   | 46.7M/514M [00:01<00:19, 23.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  10%|▍   | 50.2M/514M [00:01<00:18, 25.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  11%|▍   | 54.6M/514M [00:02<00:19, 23.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  11%|▍   | 58.1M/514M [00:02<00:17, 25.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  12%|▍   | 62.6M/514M [00:02<00:18, 24.0M Bytes/s][A
+Total:  91%|███████████████████████▋  | 4.55G/4.99G [05:01<00:29, 15.1M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  14%|▌   | 71.3M/514M [00:02<00:18, 24.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  15%|▌   | 76.0M/514M [00:03<00:18, 23.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  15%|▌   | 79.7M/514M [00:03<00:16, 25.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  16%|▋   | 84.1M/514M [00:03<00:18, 23.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  17%|▋   | 87.7M/514M [00:03<00:16, 25.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  18%|▋   | 92.1M/514M [00:03<00:17, 23.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  19%|▋   | 95.5M/514M [00:03<00:16, 25.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  19%|▉    | 100M/514M [00:04<00:17, 24.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  20%|█    | 103M/514M [00:04<00:16, 25.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  21%|█    | 106M/514M [00:04<00:15, 26.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  22%|█    | 111M/514M [00:04<00:15, 25.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  22%|█    | 116M/514M [00:04<00:16, 24.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  23%|█▏   | 119M/514M [00:04<00:15, 25.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  24%|█▏   | 124M/514M [00:04<00:16, 23.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  25%|█▏   | 126M/514M [00:05<00:15, 24.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  26%|█▎   | 131M/514M [00:05<00:16, 23.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  26%|█▎   | 134M/514M [00:05<00:15, 24.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  27%|█▎   | 140M/514M [00:05<00:15, 23.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  28%|█▍   | 145M/514M [00:05<00:15, 23.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  29%|█▍   | 148M/514M [00:06<00:14, 24.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  30%|█▍   | 153M/514M [00:06<00:14, 24.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  30%|█▌   | 156M/514M [00:06<00:15, 23.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  31%|█▌   | 160M/514M [00:06<00:14, 24.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  32%|█▌   | 163M/514M [00:06<00:13, 25.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  33%|█▋   | 168M/514M [00:06<00:14, 24.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  33%|█▋   | 171M/514M [00:06<00:14, 24.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  34%|█▋   | 176M/514M [00:07<00:14, 23.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  35%|█▋   | 179M/514M [00:07<00:13, 25.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  36%|█▊   | 185M/514M [00:07<00:12, 25.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  37%|█▊   | 189M/514M [00:07<00:14, 23.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  37%|█▊   | 193M/514M [00:07<00:13, 24.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  38%|█▉   | 195M/514M [00:07<00:12, 25.0M Bytes/s][A
+Total:  94%|████████████████████████▍ | 4.68G/4.99G [05:06<00:20, 15.3M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  40%|█▉   | 205M/514M [00:08<00:13, 22.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  41%|██   | 208M/514M [00:08<00:12, 24.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  41%|██   | 213M/514M [00:08<00:12, 24.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  42%|██   | 216M/514M [00:08<00:12, 24.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  43%|██▏  | 222M/514M [00:09<00:11, 24.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  44%|██▏  | 226M/514M [00:09<00:12, 23.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  45%|██▏  | 230M/514M [00:09<00:11, 25.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  46%|██▎  | 235M/514M [00:09<00:11, 24.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  46%|██▎  | 238M/514M [00:09<00:11, 23.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  47%|██▎  | 242M/514M [00:09<00:10, 25.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  48%|██▍  | 246M/514M [00:10<00:11, 23.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  48%|██▍  | 249M/514M [00:10<00:10, 24.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  50%|██▍  | 255M/514M [00:10<00:10, 24.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  51%|██▌  | 260M/514M [00:10<00:10, 24.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  51%|██▌  | 263M/514M [00:10<00:10, 25.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  52%|██▌  | 267M/514M [00:10<00:10, 23.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  53%|██▋  | 273M/514M [00:11<00:09, 24.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  54%|██▋  | 275M/514M [00:11<00:09, 25.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  54%|██▋  | 280M/514M [00:11<00:10, 23.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  55%|██▊  | 283M/514M [00:11<00:09, 25.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  56%|██▊  | 287M/514M [00:11<00:09, 22.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  57%|██▊  | 291M/514M [00:11<00:08, 25.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  57%|██▊  | 295M/514M [00:12<00:09, 23.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  58%|██▉  | 298M/514M [00:12<00:09, 21.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  59%|██▉  | 302M/514M [00:12<00:08, 24.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  59%|██▉  | 306M/514M [00:12<00:07, 26.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  60%|███  | 310M/514M [00:12<00:08, 23.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  61%|███  | 313M/514M [00:12<00:07, 25.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  62%|███  | 318M/514M [00:13<00:10, 19.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  62%|███  | 321M/514M [00:13<00:10, 18.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  63%|███▏ | 324M/514M [00:13<00:11, 16.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  63%|███▏ | 326M/514M [00:13<00:12, 15.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  64%|███▏ | 330M/514M [00:14<00:12, 14.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  64%|███▏ | 331M/514M [00:14<00:11, 15.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  65%|███▏ | 334M/514M [00:14<00:13, 13.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  65%|███▎ | 336M/514M [00:14<00:12, 14.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  66%|███▎ | 337M/514M [00:14<00:12, 14.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  66%|███▎ | 340M/514M [00:14<00:12, 13.6M Bytes/s][A
+Total:  97%|█████████████████████████ | 4.82G/4.99G [05:13<00:11, 15.4M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  67%|███▎ | 344M/514M [00:15<00:12, 13.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  67%|███▎ | 346M/514M [00:15<00:11, 14.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  67%|███▎ | 347M/514M [00:15<00:11, 14.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  68%|███▍ | 350M/514M [00:15<00:12, 13.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  68%|███▍ | 351M/514M [00:15<00:11, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  69%|███▍ | 354M/514M [00:15<00:11, 13.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  69%|███▍ | 356M/514M [00:15<00:11, 13.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  69%|███▍ | 357M/514M [00:16<00:11, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  70%|███▌ | 360M/514M [00:16<00:11, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  70%|███▌ | 362M/514M [00:16<00:11, 13.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  71%|███▌ | 363M/514M [00:16<00:10, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  71%|███▌ | 366M/514M [00:16<00:10, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  71%|███▌ | 368M/514M [00:16<00:10, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  72%|███▌ | 369M/514M [00:16<00:10, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  72%|███▌ | 371M/514M [00:16<00:10, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  72%|███▌ | 372M/514M [00:17<00:10, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  73%|███▋ | 374M/514M [00:17<00:10, 13.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  73%|███▋ | 375M/514M [00:17<00:09, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  73%|███▋ | 378M/514M [00:17<00:09, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  74%|███▋ | 380M/514M [00:17<00:09, 13.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  74%|███▋ | 381M/514M [00:17<00:09, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  74%|███▋ | 383M/514M [00:17<00:09, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  75%|███▋ | 386M/514M [00:18<00:09, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  75%|███▊ | 387M/514M [00:18<00:09, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  76%|███▊ | 389M/514M [00:18<00:08, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  76%|███▊ | 392M/514M [00:18<00:08, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  76%|███▊ | 393M/514M [00:18<00:08, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  77%|███▊ | 395M/514M [00:18<00:08, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  77%|███▊ | 398M/514M [00:18<00:08, 13.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  78%|███▉ | 399M/514M [00:19<00:08, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  78%|███▉ | 401M/514M [00:19<00:08, 14.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  78%|███▉ | 404M/514M [00:19<00:08, 13.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  79%|███▉ | 405M/514M [00:19<00:07, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  79%|███▉ | 407M/514M [00:19<00:07, 14.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  80%|███▉ | 409M/514M [00:19<00:07, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  80%|████ | 412M/514M [00:19<00:07, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  81%|████ | 415M/514M [00:20<00:07, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  81%|████ | 417M/514M [00:20<00:06, 14.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  82%|████ | 419M/514M [00:20<00:06, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  82%|████ | 421M/514M [00:20<00:06, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  82%|████ | 423M/514M [00:20<00:06, 13.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  83%|████▏| 425M/514M [00:20<00:06, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  83%|████▏| 427M/514M [00:20<00:06, 14.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  83%|████▏| 429M/514M [00:21<00:06, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  84%|████▏| 431M/514M [00:21<00:05, 14.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  84%|████▏| 433M/514M [00:21<00:06, 13.2M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  85%|████▏| 435M/514M [00:21<00:05, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  85%|████▎| 438M/514M [00:21<00:05, 13.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  85%|████▎| 439M/514M [00:21<00:05, 13.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  86%|████▎| 441M/514M [00:22<00:05, 14.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  86%|████▎| 444M/514M [00:22<00:05, 13.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  87%|████▎| 445M/514M [00:22<00:05, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  87%|████▎| 447M/514M [00:22<00:04, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  87%|████▎| 450M/514M [00:22<00:04, 13.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  88%|████▍| 451M/514M [00:22<00:04, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  88%|████▍| 453M/514M [00:22<00:04, 14.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  89%|████▍| 456M/514M [00:23<00:04, 13.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  89%|████▍| 457M/514M [00:23<00:04, 13.9M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  89%|████▍| 460M/514M [00:23<00:04, 13.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  90%|████▍| 462M/514M [00:23<00:03, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  90%|████▌| 463M/514M [00:23<00:03, 14.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  91%|████▌| 466M/514M [00:23<00:03, 13.6M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  91%|████▌| 468M/514M [00:23<00:03, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  91%|████▌| 470M/514M [00:24<00:03, 13.4M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  92%|████▌| 472M/514M [00:24<00:03, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  92%|████▌| 473M/514M [00:24<00:02, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  93%|████▋| 476M/514M [00:24<00:02, 13.8M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  93%|████▋| 478M/514M [00:24<00:02, 14.3M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  93%|████▋| 480M/514M [00:24<00:02, 13.5M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  94%|████▋| 482M/514M [00:24<00:02, 14.1M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  94%|████▋| 484M/514M [00:25<00:02, 13.6M Bytes/s][A
+Total:  99%|█████████████████████████▊| 4.97G/4.99G [05:23<00:01, 15.3M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  95%|████▊| 489M/514M [00:25<00:01, 13.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  96%|████▊| 492M/514M [00:25<00:01, 14.2M Bytes/s][A
+Total: 100%|█████████████████████████▉| 4.97G/4.99G [05:24<00:01, 15.3M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  96%|████▊| 496M/514M [00:26<00:01, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  97%|████▊| 499M/514M [00:26<00:01, 13.8M Bytes/s][A
+Total: 100%|█████████████████████████▉| 4.98G/4.99G [05:24<00:00, 15.3M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  98%|████▉| 503M/514M [00:26<00:00, 13.7M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  98%|████▉| 505M/514M [00:26<00:00, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz:  98%|████▉| 506M/514M [00:26<00:00, 14.5M Bytes/s][A
+Total: 100%|█████████████████████████▉| 4.99G/4.99G [05:25<00:00, 15.3M Bytes/s]
+Get sub-04/s .. _bold.nii.gz:  99%|████▉| 510M/514M [00:27<00:00, 14.0M Bytes/s][A
+Get sub-04/s .. _bold.nii.gz: 100%|████▉| 513M/514M [00:27<00:00, 13.7M Bytes/s][A
+                                                                                [A
+Get sub-04/s .. _bold.nii.gz: 100%|█████████████| 514M/514M [00:00<?, ? Bytes/s][A
+[1;1mget[0m([1;32mok[0m): sub-02/ses-mri/func/sub-02_ses-mri_task-facerecognition_run-1_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-05/ses-mri/func/sub-05_ses-mri_task-facerecognition_run-1_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-02/ses-mri/func/sub-02_ses-mri_task-facerecognition_run-2_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-04/ses-mri/func/sub-04_ses-mri_task-facerecognition_run-2_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-05/ses-mri/func/sub-05_ses-mri_task-facerecognition_run-2_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-01/ses-mri/func/sub-01_ses-mri_task-facerecognition_run-2_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-03/ses-mri/func/sub-03_ses-mri_task-facerecognition_run-2_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-01/ses-mri/func/sub-01_ses-mri_task-facerecognition_run-1_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-03/ses-mri/func/sub-03_ses-mri_task-facerecognition_run-1_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+[1;1mget[0m([1;32mok[0m): sub-04/ses-mri/func/sub-04_ses-mri_task-facerecognition_run-1_space-MNI152NLin6Asym_desc-smoothAROMAnonaggr_bold.nii.gz ([1;35mfile[0m) [from openneuro-derivatives...]
+action summary:
+  get (ok: 10)
+[0m

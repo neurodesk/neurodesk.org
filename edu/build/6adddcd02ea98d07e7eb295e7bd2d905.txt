@@ -1,0 +1,390 @@
+260709-23:01:37,807 nipype.workflow INFO:
+	 Workflow level2_spm_1sample settings: ['check', 'execution', 'logging', 'monitoring']
+260709-23:01:37,826 nipype.workflow INFO:
+	 Running in parallel.
+260709-23:01:37,828 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 6 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:01:38,81 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.l2source" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_7/l2source".
+260709-23:01:38,81 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.l2source" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_6/l2source".
+260709-23:01:38,81 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.l2source" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_5/l2source".
+260709-23:01:38,83 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.l2source" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_8/l2source".
+260709-23:01:38,83 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.l2source" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_10/l2source".
+260709-23:01:38,83 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.l2source" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_9/l2source".
+260709-23:01:38,87 nipype.workflow INFO:
+	 [Node] Executing "l2source" <nipype.interfaces.io.DataGrabber>
+260709-23:01:38,88 nipype.workflow INFO:
+	 [Node] Executing "l2source" <nipype.interfaces.io.DataGrabber>
+260709-23:01:38,88 nipype.workflow INFO:
+	 [Node] Executing "l2source" <nipype.interfaces.io.DataGrabber>
+260709-23:01:38,89 nipype.workflow INFO:
+	 [Node] Executing "l2source" <nipype.interfaces.io.DataGrabber>
+260709-23:01:38,90 nipype.workflow INFO:
+	 [Node] Executing "l2source" <nipype.interfaces.io.DataGrabber>
+260709-23:01:38,91 nipype.workflow INFO:
+	 [Node] Executing "l2source" <nipype.interfaces.io.DataGrabber>
+260709-23:01:38,92 nipype.workflow INFO:
+	 [Node] Finished "l2source", elapsed time 0.001133s.
+260709-23:01:38,92 nipype.workflow INFO:
+	 [Node] Finished "l2source", elapsed time 0.001252s.
+260709-23:01:38,93 nipype.workflow INFO:
+	 [Node] Finished "l2source", elapsed time 0.001526s.
+260709-23:01:38,94 nipype.workflow INFO:
+	 [Node] Finished "l2source", elapsed time 0.001085s.
+260709-23:01:38,95 nipype.workflow INFO:
+	 [Node] Finished "l2source", elapsed time 0.001184s.
+260709-23:01:38,94 nipype.workflow INFO:
+	 [Node] Finished "l2source", elapsed time 0.001559s.
+260709-23:01:39,828 nipype.workflow INFO:
+	 [Job 0] Completed (level2_spm_1sample.l2source).
+260709-23:01:39,831 nipype.workflow INFO:
+	 [Job 1] Completed (level2_spm_1sample.l2source).
+260709-23:01:39,832 nipype.workflow INFO:
+	 [Job 2] Completed (level2_spm_1sample.l2source).
+260709-23:01:39,832 nipype.workflow INFO:
+	 [Job 3] Completed (level2_spm_1sample.l2source).
+260709-23:01:39,833 nipype.workflow INFO:
+	 [Job 4] Completed (level2_spm_1sample.l2source).
+260709-23:01:39,834 nipype.workflow INFO:
+	 [Job 5] Completed (level2_spm_1sample.l2source).
+260709-23:01:39,835 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 6 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:01:40,1 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.onesampttestdes" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_5/onesampttestdes".
+260709-23:01:40,3 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.onesampttestdes" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_6/onesampttestdes".
+260709-23:01:40,3 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.onesampttestdes" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_8/onesampttestdes".
+260709-23:01:40,4 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.onesampttestdes" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_10/onesampttestdes".
+260709-23:01:40,4 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.onesampttestdes" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_9/onesampttestdes".
+260709-23:01:40,4 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.onesampttestdes" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_7/onesampttestdes".
+260709-23:01:40,10 nipype.workflow INFO:
+	 [Node] Executing "onesampttestdes" <nipype.interfaces.spm.model.OneSampleTTestDesign>
+260709-23:01:40,10 nipype.workflow INFO:
+	 [Node] Executing "onesampttestdes" <nipype.interfaces.spm.model.OneSampleTTestDesign>
+260709-23:01:40,10 nipype.workflow INFO:
+	 [Node] Executing "onesampttestdes" <nipype.interfaces.spm.model.OneSampleTTestDesign>
+260709-23:01:40,11 nipype.workflow INFO:
+	 [Node] Executing "onesampttestdes" <nipype.interfaces.spm.model.OneSampleTTestDesign>
+260709-23:01:40,11 nipype.workflow INFO:
+	 [Node] Executing "onesampttestdes" <nipype.interfaces.spm.model.OneSampleTTestDesign>
+260709-23:01:40,12 nipype.workflow INFO:
+	 [Node] Executing "onesampttestdes" <nipype.interfaces.spm.model.OneSampleTTestDesign>
+260709-23:01:41,830 nipype.workflow INFO:
+	 [MultiProc] Running 6 tasks, and 0 jobs ready. Free memory (GB): 55.31/56.51, Free processors: 10/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level2_spm_1sample.onesampttestdes
+                       * level2_spm_1sample.onesampttestdes
+                       * level2_spm_1sample.onesampttestdes
+                       * level2_spm_1sample.onesampttestdes
+                       * level2_spm_1sample.onesampttestdes
+                       * level2_spm_1sample.onesampttestdes
+260709-23:01:53,68 nipype.workflow INFO:
+	 [Node] Finished "onesampttestdes", elapsed time 13.052115s.
+260709-23:01:53,73 nipype.workflow INFO:
+	 [Node] Finished "onesampttestdes", elapsed time 13.057172s.
+260709-23:01:53,76 nipype.workflow INFO:
+	 [Node] Finished "onesampttestdes", elapsed time 13.059958s.
+260709-23:01:53,83 nipype.workflow INFO:
+	 [Node] Finished "onesampttestdes", elapsed time 13.070586s.
+260709-23:01:53,90 nipype.workflow INFO:
+	 [Node] Finished "onesampttestdes", elapsed time 13.077061s.
+260709-23:01:53,402 nipype.workflow INFO:
+	 [Node] Finished "onesampttestdes", elapsed time 13.389153s.
+260709-23:01:53,832 nipype.workflow INFO:
+	 [Job 6] Completed (level2_spm_1sample.onesampttestdes).
+260709-23:01:53,833 nipype.workflow INFO:
+	 [Job 7] Completed (level2_spm_1sample.onesampttestdes).
+260709-23:01:53,834 nipype.workflow INFO:
+	 [Job 8] Completed (level2_spm_1sample.onesampttestdes).
+260709-23:01:53,835 nipype.workflow INFO:
+	 [Job 9] Completed (level2_spm_1sample.onesampttestdes).
+260709-23:01:53,835 nipype.workflow INFO:
+	 [Job 10] Completed (level2_spm_1sample.onesampttestdes).
+260709-23:01:53,836 nipype.workflow INFO:
+	 [Job 11] Completed (level2_spm_1sample.onesampttestdes).
+260709-23:01:53,837 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 6 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:01:53,949 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_9/level2estimate".
+260709-23:01:53,950 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_10/level2estimate".
+260709-23:01:53,949 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_5/level2estimate".
+260709-23:01:53,949 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_7/level2estimate".
+260709-23:01:53,949 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_8/level2estimate".
+260709-23:01:53,949 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_6/level2estimate".
+260709-23:01:53,954 nipype.workflow INFO:
+	 [Node] Executing "level2estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:01:53,953 nipype.workflow INFO:
+	 [Node] Executing "level2estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:01:53,955 nipype.workflow INFO:
+	 [Node] Executing "level2estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:01:53,957 nipype.workflow INFO:
+	 [Node] Executing "level2estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:01:53,958 nipype.workflow INFO:
+	 [Node] Executing "level2estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:01:53,959 nipype.workflow INFO:
+	 [Node] Executing "level2estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:01:55,832 nipype.workflow INFO:
+	 [MultiProc] Running 6 tasks, and 0 jobs ready. Free memory (GB): 55.31/56.51, Free processors: 10/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level2_spm_1sample.level2estimate
+                       * level2_spm_1sample.level2estimate
+                       * level2_spm_1sample.level2estimate
+                       * level2_spm_1sample.level2estimate
+                       * level2_spm_1sample.level2estimate
+                       * level2_spm_1sample.level2estimate
+260709-23:02:08,153 nipype.workflow INFO:
+	 [Node] Finished "level2estimate", elapsed time 14.194098s.
+260709-23:02:08,341 nipype.workflow INFO:
+	 [Node] Finished "level2estimate", elapsed time 14.384245s.
+260709-23:02:08,475 nipype.workflow INFO:
+	 [Node] Finished "level2estimate", elapsed time 14.515423s.
+260709-23:02:08,521 nipype.workflow INFO:
+	 [Node] Finished "level2estimate", elapsed time 14.558975s.
+260709-23:02:08,566 nipype.workflow INFO:
+	 [Node] Finished "level2estimate", elapsed time 14.609978s.
+260709-23:02:08,623 nipype.workflow INFO:
+	 [Node] Finished "level2estimate", elapsed time 14.666649s.
+260709-23:02:09,833 nipype.workflow INFO:
+	 [Job 12] Completed (level2_spm_1sample.level2estimate).
+260709-23:02:09,834 nipype.workflow INFO:
+	 [Job 13] Completed (level2_spm_1sample.level2estimate).
+260709-23:02:09,835 nipype.workflow INFO:
+	 [Job 14] Completed (level2_spm_1sample.level2estimate).
+260709-23:02:09,836 nipype.workflow INFO:
+	 [Job 15] Completed (level2_spm_1sample.level2estimate).
+260709-23:02:09,836 nipype.workflow INFO:
+	 [Job 16] Completed (level2_spm_1sample.level2estimate).
+260709-23:02:09,837 nipype.workflow INFO:
+	 [Job 17] Completed (level2_spm_1sample.level2estimate).
+260709-23:02:09,839 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 6 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:02:09,945 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2conestimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_6/level2conestimate".
+260709-23:02:09,945 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2conestimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_5/level2conestimate".
+260709-23:02:09,947 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2conestimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_7/level2conestimate".
+260709-23:02:09,947 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2conestimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_10/level2conestimate".
+260709-23:02:09,947 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2conestimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_9/level2conestimate".
+260709-23:02:09,947 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2conestimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_8/level2conestimate".
+260709-23:02:09,951 nipype.workflow INFO:
+	 [Node] Executing "level2conestimate" <nipype.interfaces.spm.model.EstimateContrast>
+260709-23:02:09,952 nipype.workflow INFO:
+	 [Node] Executing "level2conestimate" <nipype.interfaces.spm.model.EstimateContrast>
+260709-23:02:09,952 nipype.workflow INFO:
+	 [Node] Executing "level2conestimate" <nipype.interfaces.spm.model.EstimateContrast>
+260709-23:02:09,953 nipype.workflow INFO:
+	 [Node] Executing "level2conestimate" <nipype.interfaces.spm.model.EstimateContrast>
+260709-23:02:09,953 nipype.workflow INFO:
+	 [Node] Executing "level2conestimate" <nipype.interfaces.spm.model.EstimateContrast>
+260709-23:02:09,953 nipype.workflow INFO:
+	 [Node] Executing "level2conestimate" <nipype.interfaces.spm.model.EstimateContrast>
+260709-23:02:11,835 nipype.workflow INFO:
+	 [MultiProc] Running 6 tasks, and 0 jobs ready. Free memory (GB): 55.31/56.51, Free processors: 10/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level2_spm_1sample.level2conestimate
+                       * level2_spm_1sample.level2conestimate
+                       * level2_spm_1sample.level2conestimate
+                       * level2_spm_1sample.level2conestimate
+                       * level2_spm_1sample.level2conestimate
+                       * level2_spm_1sample.level2conestimate
+260709-23:02:23,352 nipype.workflow INFO:
+	 [Node] Finished "level2conestimate", elapsed time 13.396822s.
+260709-23:02:23,448 nipype.workflow INFO:
+	 [Node] Finished "level2conestimate", elapsed time 13.492612s.
+260709-23:02:23,491 nipype.workflow INFO:
+	 [Node] Finished "level2conestimate", elapsed time 13.537573s.
+260709-23:02:23,575 nipype.workflow INFO:
+	 [Node] Finished "level2conestimate", elapsed time 13.622394s.
+260709-23:02:23,612 nipype.workflow INFO:
+	 [Node] Finished "level2conestimate", elapsed time 13.657235s.
+260709-23:02:23,804 nipype.workflow INFO:
+	 [Node] Finished "level2conestimate", elapsed time 13.850491s.
+260709-23:02:23,836 nipype.workflow INFO:
+	 [Job 18] Completed (level2_spm_1sample.level2conestimate).
+260709-23:02:23,839 nipype.workflow INFO:
+	 [Job 19] Completed (level2_spm_1sample.level2conestimate).
+260709-23:02:23,840 nipype.workflow INFO:
+	 [Job 20] Completed (level2_spm_1sample.level2conestimate).
+260709-23:02:23,840 nipype.workflow INFO:
+	 [Job 21] Completed (level2_spm_1sample.level2conestimate).
+260709-23:02:23,841 nipype.workflow INFO:
+	 [Job 22] Completed (level2_spm_1sample.level2conestimate).
+260709-23:02:23,842 nipype.workflow INFO:
+	 [Job 23] Completed (level2_spm_1sample.level2conestimate).
+260709-23:02:23,843 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 6 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:02:23,959 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2thresh" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_5/level2thresh".
+260709-23:02:23,959 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2thresh" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_7/level2thresh".
+260709-23:02:23,959 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2thresh" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_6/level2thresh".
+260709-23:02:23,960 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2thresh" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_8/level2thresh".
+260709-23:02:23,960 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2thresh" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_9/level2thresh".
+260709-23:02:23,960 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.level2thresh" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_10/level2thresh".
+260709-23:02:23,964 nipype.workflow INFO:
+	 [Node] Executing "level2thresh" <nipype.interfaces.spm.model.Threshold>
+260709-23:02:23,964 nipype.workflow INFO:
+	 [Node] Executing "level2thresh" <nipype.interfaces.spm.model.Threshold>
+260709-23:02:23,965 nipype.workflow INFO:
+	 [Node] Executing "level2thresh" <nipype.interfaces.spm.model.Threshold>
+260709-23:02:23,965 nipype.workflow INFO:
+	 [Node] Executing "level2thresh" <nipype.interfaces.spm.model.Threshold>
+260709-23:02:23,965 nipype.workflow INFO:
+	 [Node] Executing "level2thresh" <nipype.interfaces.spm.model.Threshold>
+260709-23:02:23,968 nipype.workflow INFO:
+	 [Node] Executing "level2thresh" <nipype.interfaces.spm.model.Threshold>
+260709-23:02:25,841 nipype.workflow INFO:
+	 [MultiProc] Running 6 tasks, and 0 jobs ready. Free memory (GB): 55.31/56.51, Free processors: 10/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level2_spm_1sample.level2thresh
+                       * level2_spm_1sample.level2thresh
+                       * level2_spm_1sample.level2thresh
+                       * level2_spm_1sample.level2thresh
+                       * level2_spm_1sample.level2thresh
+                       * level2_spm_1sample.level2thresh
+260709-23:02:33,390 nipype.workflow INFO:
+	 [Node] Finished "level2thresh", elapsed time 9.422174s.
+260709-23:02:33,398 nipype.workflow INFO:
+	 [Node] Finished "level2thresh", elapsed time 9.431563s.
+260709-23:02:33,402 nipype.workflow INFO:
+	 [Node] Finished "level2thresh", elapsed time 9.432618s.
+260709-23:02:33,405 nipype.workflow INFO:
+	 [Node] Finished "level2thresh", elapsed time 9.43422s.
+260709-23:02:33,409 nipype.workflow INFO:
+	 [Node] Finished "level2thresh", elapsed time 9.442976s.
+260709-23:02:33,416 nipype.workflow INFO:
+	 [Node] Finished "level2thresh", elapsed time 9.449892s.
+260709-23:02:33,839 nipype.workflow INFO:
+	 [Job 24] Completed (level2_spm_1sample.level2thresh).
+260709-23:02:33,841 nipype.workflow INFO:
+	 [Job 25] Completed (level2_spm_1sample.level2thresh).
+260709-23:02:33,841 nipype.workflow INFO:
+	 [Job 26] Completed (level2_spm_1sample.level2thresh).
+260709-23:02:33,842 nipype.workflow INFO:
+	 [Job 27] Completed (level2_spm_1sample.level2thresh).
+260709-23:02:33,843 nipype.workflow INFO:
+	 [Job 28] Completed (level2_spm_1sample.level2thresh).
+260709-23:02:33,844 nipype.workflow INFO:
+	 [Job 29] Completed (level2_spm_1sample.level2thresh).
+260709-23:02:33,845 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 6 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:02:33,969 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.datasink_2nd" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_8/datasink_2nd".
+260709-23:02:33,969 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.datasink_2nd" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_5/datasink_2nd".
+260709-23:02:33,969 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.datasink_2nd" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_9/datasink_2nd".
+260709-23:02:33,969 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.datasink_2nd" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_6/datasink_2nd".
+260709-23:02:33,970 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.datasink_2nd" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_10/datasink_2nd".
+260709-23:02:33,969 nipype.workflow INFO:
+	 [Node] Setting-up "level2_spm_1sample.datasink_2nd" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_1sample/_con_7/datasink_2nd".
+260709-23:02:33,974 nipype.workflow INFO:
+	 [Node] Executing "datasink_2nd" <nipype.interfaces.io.DataSink>
+260709-23:02:33,974 nipype.workflow INFO:
+	 [Node] Executing "datasink_2nd" <nipype.interfaces.io.DataSink>
+260709-23:02:33,974 nipype.workflow INFO:
+	 [Node] Executing "datasink_2nd" <nipype.interfaces.io.DataSink>
+260709-23:02:33,974 nipype.workflow INFO:
+	 [Node] Executing "datasink_2nd" <nipype.interfaces.io.DataSink>
+260709-23:02:33,975 nipype.workflow INFO:
+	 [Node] Executing "datasink_2nd" <nipype.interfaces.io.DataSink>
+260709-23:02:33,975 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_6/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con6/SPM.mat
+260709-23:02:33,975 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_9/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con9/SPM.mat
+260709-23:02:33,976 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_8/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con8/SPM.mat
+260709-23:02:33,977 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_6/spmT_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con6/spmT_0001.nii
+260709-23:02:33,977 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_8/spmT_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con8/spmT_0001.nii
+260709-23:02:33,977 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_9/spmT_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con9/spmT_0001.nii
+260709-23:02:33,976 nipype.workflow INFO:
+	 [Node] Executing "datasink_2nd" <nipype.interfaces.io.DataSink>
+260709-23:02:33,978 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_10/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con10/SPM.mat
+260709-23:02:33,978 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_6/con_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con6/con_0001.nii
+260709-23:02:33,978 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_5/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con5/SPM.mat
+260709-23:02:33,978 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_8/con_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con8/con_0001.nii
+260709-23:02:33,978 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_9/con_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con9/con_0001.nii
+260709-23:02:33,979 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_8/spmT_0001_thr.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con8/spmT_0001_thr.nii
+260709-23:02:33,979 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_10/spmT_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con10/spmT_0001.nii
+260709-23:02:33,979 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_5/spmT_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con5/spmT_0001.nii
+260709-23:02:33,979 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_7/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con7/SPM.mat
+260709-23:02:33,979 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_6/spmT_0001_thr.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con6/spmT_0001_thr.nii
+260709-23:02:33,980 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_9/spmT_0001_thr.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con9/spmT_0001_thr.nii
+260709-23:02:33,980 nipype.workflow INFO:
+	 [Node] Finished "datasink_2nd", elapsed time 0.004765s.
+260709-23:02:33,980 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_10/con_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con10/con_0001.nii
+260709-23:02:33,980 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_5/con_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con5/con_0001.nii
+260709-23:02:33,981 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_7/spmT_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con7/spmT_0001.nii
+260709-23:02:33,981 nipype.workflow INFO:
+	 [Node] Finished "datasink_2nd", elapsed time 0.005568s.
+260709-23:02:33,981 nipype.workflow INFO:
+	 [Node] Finished "datasink_2nd", elapsed time 0.005592s.
+260709-23:02:33,982 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_7/con_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con7/con_0001.nii
+260709-23:02:33,982 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_10/spmT_0001_thr.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con10/spmT_0001_thr.nii
+260709-23:02:33,981 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_5/spmT_0001_thr.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con5/spmT_0001_thr.nii
+260709-23:02:33,983 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/2ndLevel/_con_7/spmT_0001_thr.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level2_spm_results_1sample/con7/spmT_0001_thr.nii
+260709-23:02:33,984 nipype.workflow INFO:
+	 [Node] Finished "datasink_2nd", elapsed time 0.005816s.
+260709-23:02:33,984 nipype.workflow INFO:
+	 [Node] Finished "datasink_2nd", elapsed time 0.006347s.
+260709-23:02:33,984 nipype.workflow INFO:
+	 [Node] Finished "datasink_2nd", elapsed time 0.005589s.
+260709-23:02:35,840 nipype.workflow INFO:
+	 [Job 30] Completed (level2_spm_1sample.datasink_2nd).
+260709-23:02:35,841 nipype.workflow INFO:
+	 [Job 31] Completed (level2_spm_1sample.datasink_2nd).
+260709-23:02:35,842 nipype.workflow INFO:
+	 [Job 32] Completed (level2_spm_1sample.datasink_2nd).
+260709-23:02:35,842 nipype.workflow INFO:
+	 [Job 33] Completed (level2_spm_1sample.datasink_2nd).
+260709-23:02:35,843 nipype.workflow INFO:
+	 [Job 34] Completed (level2_spm_1sample.datasink_2nd).
+260709-23:02:35,844 nipype.workflow INFO:
+	 [Job 35] Completed (level2_spm_1sample.datasink_2nd).
+260709-23:02:35,845 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.

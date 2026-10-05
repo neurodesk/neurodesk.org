@@ -102,7 +102,7 @@ sample_data_raw_file = os.path.join(sample_data_folder, 'sub-01', 'eeg',
 raw = mne.io.read_raw_brainvision(sample_data_raw_file , preload=True)
 ```
 
-the raw.info structure contains information about the dataset:
+the `raw.info` structure contains information about the dataset:
 ```
 # Display data info
 print(raw)
@@ -131,7 +131,7 @@ This should open an interactive window in which you can scroll through the data.
 
 ![EEGtut6](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut6.png 'EEGtut6')
 
-If, upon visual inspection, you decide to exclude one of the channels, you can specify this in raw.info[‘bads’] now. For example:
+If, upon visual inspection, you decide to exclude one of the channels, you can specify this in `raw.info['bads']` now. For example:
 ```
 raw.info['bads'] = ['POz']
 ```

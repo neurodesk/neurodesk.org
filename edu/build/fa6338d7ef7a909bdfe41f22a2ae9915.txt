@@ -1,0 +1,1520 @@
+bids-validator@1.14.10
+[32mThis dataset appears to be BIDS compatible.[39m
+        [34m[4mSummary:[24m[39m                   [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[39m[24m 
+        292 Files, 429.42MB        sharedreward            MRI                   
+        50 - Subjects              trust                                         
+        1 - Session                ultimatum                                     
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+261004-21:50:29,69 nipype.workflow IMPORTANT:
+	 Running fMRIPrep version 25.2.5
+
+         License NOTICE ##################################################
+         fMRIPrep 25.2.5
+         Copyright The NiPreps Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software is also distributed as a Docker container image.
+         The bootstrapping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+261004-21:50:29,69 nipype.workflow IMPORTANT:
+	 Building fMRIPrep's workflow:
+           * BIDS dataset path: /home/jovyan/trust_example/bids/ds003745.
+           * Participants and sessions: sub-104.
+           * Run identifier: 20261004-214955_ff4b1a04-8a20-4154-b143-7d860dfaaa50.
+           * Output spaces: MNI152NLin6Asym:res-2.
+           * Pre-run FreeSurfer's SUBJECTS_DIR: /home/jovyan/freesurfer-subjects-dir.
+261004-21:50:42,885 nipype.workflow INFO:
+	 ANAT Stage 1: Adding template workflow
+261004-21:50:43,206 nipype.workflow INFO:
+	 ANAT Stage 2: Preparing brain extraction workflow
+261004-21:50:55,626 nipype.workflow INFO:
+	 ANAT Stage 3: Preparing segmentation workflow
+261004-21:50:55,629 nipype.workflow INFO:
+	 ANAT Stage 4: Preparing normalization workflow for ['MNI152NLin6Asym', 'MNI152NLin2009cAsym']
+261004-21:50:55,637 nipype.workflow INFO:
+	 ANAT Skipping Stages 5+
+261004-21:50:56,221 nipype.workflow INFO:
+	 B0 field inhomogeneity map will be estimated with the following 1 estimator(s): [<EstimatorType.PHASEDIFF: 3>].
+261004-21:50:56,284 nipype.workflow INFO:
+	 Setting up fieldmap "auto_00000" (EstimatorType.PHASEDIFF) with <sub-104_phasediff.nii.gz, sub-104_magnitude1.nii.gz, sub-104_magnitude2.nii.gz>
+261004-21:50:56,351 nipype.workflow INFO:
+	 No single-band-reference found for sub-104_task-trust_run-01_bold.nii.gz.
+261004-21:50:56,404 nipype.workflow INFO:
+	 Stage 1: Adding HMC boldref workflow
+261004-21:50:56,412 nipype.workflow INFO:
+	 Stage 2: Adding motion correction workflow
+261004-21:50:56,418 nipype.workflow INFO:
+	 Stage 3: Adding fieldmap reconstruction workflow
+261004-21:50:56,419 nipype.workflow INFO:
+	 Stage 3: Registering fieldmap to boldref
+261004-21:50:56,424 nipype.workflow INFO:
+	 Stage 4: Adding coregistration boldref workflow
+261004-21:51:01,573 nipype.workflow INFO:
+	 Stage 5: Adding coregistration workflow
+261004-21:51:01,575 nipype.workflow WARNING:
+	 T2w intermediate for FSL is not implemented, registering with T1w instead.
+261004-21:51:01,587 nipype.workflow IMPORTANT:
+	 BOLD series will be slice-timing corrected to an offset of 0.972s.
+261004-21:51:12,627 nipype.workflow INFO:
+	 fMRIPrep workflow graph with 398 nodes built successfully.
+261004-21:51:46,186 nipype.workflow IMPORTANT:
+	 fMRIPrep started!
+261004-21:51:53,14 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.full_wm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/full_wm".
+261004-21:51:53,16 nipype.workflow INFO:
+	 [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+261004-21:51:53,93 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.out_merge_fmap_id" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/out_merge_fmap_id".
+261004-21:51:53,95 nipype.workflow INFO:
+	 [Node] Executing "out_merge_fmap_id" <nipype.interfaces.utility.base.Merge>
+261004-21:51:53,101 nipype.workflow INFO:
+	 [Node] Finished "out_merge_fmap_id", elapsed time 0.000212s.
+261004-21:51:53,104 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.out_merge_method" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/out_merge_method".
+261004-21:51:53,105 nipype.workflow INFO:
+	 [Node] Executing "out_merge_method" <nipype.interfaces.utility.base.Merge>
+261004-21:51:53,106 nipype.workflow INFO:
+	 [Node] Finished "out_merge_method", elapsed time 0.000151s.
+261004-21:51:53,237 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.lap_tmpl" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/lap_tmpl".
+261004-21:51:53,239 nipype.workflow INFO:
+	 [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:51:53,429 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.res_tmpl" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/res_tmpl".
+261004-21:51:53,431 nipype.workflow INFO:
+	 [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+261004-21:51:53,521 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_native_wf.bold_source" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_native_wf/bold_source".
+261004-21:51:53,523 nipype.workflow INFO:
+	 [Node] Executing "bold_source" <nipype.interfaces.utility.base.Select>
+261004-21:51:53,527 nipype.workflow INFO:
+	 [Node] Finished "bold_source", elapsed time 0.00035s.
+261004-21:51:53,577 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.hmc_boldref_wf.validation_and_dummies_wf.val_bold" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/hmc_boldref_wf/validation_and_dummies_wf/val_bold".
+261004-21:51:53,579 nipype.workflow INFO:
+	 [Node] Executing "val_bold" <niworkflows.interfaces.header.ValidateImage>
+261004-21:51:53,631 nipype.workflow INFO:
+	 [Node] Finished "val_bold", elapsed time 0.052162s.
+261004-21:51:53,684 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.hmc_boldref_wf.validation_and_dummies_wf.get_dummy" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/hmc_boldref_wf/validation_and_dummies_wf/get_dummy".
+261004-21:51:53,686 nipype.workflow INFO:
+	 [Node] Executing "get_dummy" <niworkflows.interfaces.bold.NonsteadyStatesDetector>
+261004-21:51:53,812 nipype.workflow INFO:
+	 [Node] Finished "full_wm", elapsed time 0.790456s.
+261004-21:51:53,960 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.check_register" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/check_register".
+261004-21:51:53,963 nipype.workflow INFO:
+	 [Node] Executing "check_register" <sdcflows.interfaces.fmap.CheckRegister>
+261004-21:51:53,983 nipype.workflow INFO:
+	 [Node] Finished "check_register", elapsed time 0.019884s.
+261004-21:51:54,304 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_native_wf.validate_bold" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_native_wf/validate_bold".
+261004-21:51:54,306 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.register_template_wf.set_reference" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin6Asym/set_reference".
+261004-21:51:54,306 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.register_template_wf.set_reference" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/set_reference".
+261004-21:51:54,307 nipype.workflow INFO:
+	 [Node] Executing "validate_bold" <niworkflows.interfaces.header.ValidateImage>
+261004-21:51:54,351 nipype.workflow INFO:
+	 [Node] Finished "validate_bold", elapsed time 0.043508s.
+261004-21:51:54,724 nipype.workflow INFO:
+	 [Node] Finished "get_dummy", elapsed time 1.033889s.
+261004-21:51:54,866 nipype.workflow INFO:
+	 [Node] Finished "res_tmpl", elapsed time 1.430857s.
+261004-21:51:55,539 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bidssrc" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bidssrc".
+261004-21:51:55,541 nipype.workflow INFO:
+	 [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+261004-21:51:55,545 nipype.interface INFO:
+	 No "asl" images found for sub-104
+261004-21:51:55,546 nipype.interface INFO:
+	 No "sbref" images found for sub-104
+261004-21:51:55,546 nipype.interface INFO:
+	 No "flair" images found for sub-104
+261004-21:51:55,546 nipype.interface INFO:
+	 No "dwi" images found for sub-104
+261004-21:51:55,546 nipype.interface INFO:
+	 No "roi" images found for sub-104
+261004-21:51:55,546 nipype.interface INFO:
+	 No "pet" images found for sub-104
+261004-21:51:55,546 nipype.workflow INFO:
+	 [Node] Finished "bidssrc", elapsed time 0.000578s.
+261004-21:51:56,99 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.ds_hmc_wf.sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/ds_hmc_wf/sources".
+261004-21:51:56,104 nipype.workflow INFO:
+	 [Node] Executing "sources" <fmriprep.interfaces.bids.BIDSURI>
+261004-21:51:56,108 nipype.workflow INFO:
+	 [Node] Finished "sources", elapsed time 0.00037s.
+261004-21:51:56,126 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.ds_hmc_boldref_wf.sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/ds_hmc_boldref_wf/sources".
+261004-21:51:56,129 nipype.workflow INFO:
+	 [Node] Executing "sources" <fmriprep.interfaces.bids.BIDSURI>
+261004-21:51:56,133 nipype.workflow INFO:
+	 [Node] Finished "sources", elapsed time 0.000379s.
+261004-21:51:56,176 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat_template_wf.anat_ref_dimensions" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_template_wf/anat_ref_dimensions".
+261004-21:51:56,328 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.hmc_boldref_wf.gen_avg" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/hmc_boldref_wf/gen_avg".
+261004-21:51:56,329 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.magnitude_wf.magmrg" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/magnitude_wf/magmrg".
+261004-21:51:56,333 nipype.workflow INFO:
+	 [Node] Executing "gen_avg" <niworkflows.interfaces.images.RobustAverage>
+261004-21:51:56,595 nipype.workflow INFO:
+	 [Node] Executing "magmrg" <niworkflows.interfaces.images.IntraModalMerge>
+261004-21:51:56,650 nipype.workflow INFO:
+	 [Node] Finished "magmrg", elapsed time 0.054465s.
+261004-21:51:56,803 nipype.workflow INFO:
+	 [Node] Executing "set_reference" <nipype.interfaces.utility.wrappers.Function>
+261004-21:51:56,809 nipype.workflow INFO:
+	 [Node] Finished "set_reference", elapsed time 0.000504s.
+261004-21:51:56,870 nipype.workflow INFO:
+	 [Node] Executing "set_reference" <nipype.interfaces.utility.wrappers.Function>
+261004-21:51:56,875 nipype.workflow INFO:
+	 [Node] Finished "set_reference", elapsed time 0.000433s.
+261004-21:51:57,299 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.299169:++ 3dvolreg: AFNI version=AFNI_25.2.09 (Aug 24 2025) [64-bit]
+261004-21:51:57,299 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.299169:++ Authored by: RW Cox
+261004-21:51:57,301 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.301394:** AFNI converts NIFTI_datatype=4 (INT16) in file /home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/hmc_boldref_wf/gen_avg/sub-104_task-trust_run-01_bold_sliced.nii.gz to FLOAT32
+261004-21:51:57,301 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.301394:     Warnings of this type will be muted for this session.
+261004-21:51:57,301 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.301394:     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408:[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408:  such as /home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/hmc_boldref_wf/gen_avg/sub-104_task-trust_run-01_bold_sliced.nii.gz,
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408:  or viewing/combining it with volumes of differing obliquity,
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408:  you should consider running: 
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408:     3dWarp -deoblique 
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408:  on this and  other oblique datasets in the same session.
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408: See 3dWarp -help for details.
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304408:++ Oblique dataset:/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/hmc_boldref_wf/gen_avg/sub-104_task-trust_run-01_bold_sliced.nii.gz is 16.999994 degrees from plumb.
+261004-21:51:57,304 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.304732:++ Coarse del was 10, replaced with 4
+261004-21:51:57,416 nipype.interface INFO:
+	 stderr 2026-10-04T21:51:57.416219:++ edt_blur: sigx 2, dx 1, fwhm 4.70964, sfac 2.5, firx 5
+261004-21:51:57,922 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.magnitude_wf.brainextraction_wf.clipper_pre" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/magnitude_wf/brainextraction_wf/clipper_pre".
+261004-21:51:57,930 nipype.workflow INFO:
+	 [Node] Executing "clipper_pre" <niworkflows.interfaces.nibabel.IntensityClip>
+261004-21:51:58,269 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.source_anatomical" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/source_anatomical".
+261004-21:51:58,272 nipype.workflow INFO:
+	 [Node] Executing "source_anatomical" <fmriprep.interfaces.bids.BIDSSourceFile>
+261004-21:51:58,272 nipype.workflow INFO:
+	 [Node] Finished "source_anatomical", elapsed time 0.000147s.
+261004-21:51:58,355 nipype.workflow INFO:
+	 [Node] Executing "anat_ref_dimensions" <niworkflows.interfaces.images.TemplateDimensions>
+261004-21:51:58,434 nipype.workflow INFO:
+	 [Node] Finished "anat_ref_dimensions", elapsed time 0.078299s.
+261004-21:51:58,585 nipype.workflow INFO:
+	 [Node] Finished "clipper_pre", elapsed time 0.654228s.
+261004-21:52:00,125 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.ds_t1w_mask_wf.raw_sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/ds_t1w_mask_wf/raw_sources".
+261004-21:52:00,135 nipype.workflow INFO:
+	 [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+261004-21:52:00,136 nipype.workflow INFO:
+	 [Node] Finished "raw_sources", elapsed time 0.000433s.
+261004-21:52:00,175 nipype.workflow INFO:
+	 [Node] Setting-up "_denoise0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_template_wf/denoise/mapflow/_denoise0".
+261004-21:52:00,176 nipype.workflow INFO:
+	 [Node] Executing "_denoise0" <nipype.interfaces.ants.segmentation.DenoiseImage>
+261004-21:52:01,776 nipype.workflow INFO:
+	 [Node] Finished "lap_tmpl", elapsed time 8.299622s.
+261004-21:52:02,865 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bids_info" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bids_info".
+261004-21:52:02,874 nipype.workflow INFO:
+	 [Node] Executing "bids_info" <niworkflows.interfaces.bids.BIDSInfo>
+261004-21:52:02,886 nipype.workflow INFO:
+	 [Node] Finished "bids_info", elapsed time 0.005977s.
+261004-21:52:03,893 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.mrg_tmpl" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/mrg_tmpl".
+261004-21:52:03,908 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.create_fs_id" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/create_fs_id".
+261004-21:52:03,910 nipype.workflow INFO:
+	 [Node] Executing "create_fs_id" <fmriprep.interfaces.bids.CreateFreeSurferID>
+261004-21:52:03,911 nipype.workflow INFO:
+	 [Node] Finished "create_fs_id", elapsed time 9.2e-05s.
+261004-21:52:03,940 nipype.workflow INFO:
+	 [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+261004-21:52:03,941 nipype.workflow INFO:
+	 [Node] Finished "mrg_tmpl", elapsed time 0.000172s.
+261004-21:52:05,864 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_native_wf.bold_stc_wf.slice_timing_correction" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_native_wf/bold_stc_wf/slice_timing_correction".
+261004-21:52:05,882 nipype.workflow INFO:
+	 [Node] Executing "slice_timing_correction" <fmriprep.workflows.bold.stc.TShift>
+261004-21:52:11,865 nipype.interface INFO:
+	 stderr 2026-10-04T21:52:11.865864:++ Max displacement in automask = 0.32 (mm) at sub-brick 14
+261004-21:52:11,866 nipype.interface INFO:
+	 stderr 2026-10-04T21:52:11.865864:++ Max delta displ  in automask = 0.26 (mm) at sub-brick 14
+261004-21:52:13,21 nipype.workflow INFO:
+	 [Node] Finished "gen_avg", elapsed time 16.687203s.
+261004-21:52:13,894 nipype.interface WARNING:
+	 Changing /home/jovyan/trust_example/derivatives/fmriprep/sub-104/func/sub-104_task-trust_run-01_desc-hmc_boldref.nii.gz dtype from int16 to int16
+261004-21:52:15,881 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.fmapref_buffer" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/fmapref_buffer".
+261004-21:52:15,883 nipype.workflow INFO:
+	 [Node] Executing "fmapref_buffer" <nipype.interfaces.utility.wrappers.Function>
+261004-21:52:15,885 nipype.workflow INFO:
+	 [Node] Finished "fmapref_buffer", elapsed time 0.000933s.
+261004-21:52:16,128 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_hmc_wf.mcflirt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_hmc_wf/mcflirt".
+261004-21:52:16,146 nipype.workflow INFO:
+	 [Node] Executing "mcflirt" <nipype.interfaces.fsl.preprocess.MCFLIRT>
+261004-21:52:16,371 nipype.workflow INFO:
+	 [Node] Finished "slice_timing_correction", elapsed time 10.488336s.
+261004-21:52:17,941 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_native_wf.bold_stc_wf.copy_xform" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_native_wf/bold_stc_wf/copy_xform".
+261004-21:52:23,97 nipype.workflow INFO:
+	 [Node] Executing "copy_xform" <niworkflows.interfaces.header.CopyXForm>
+261004-21:52:24,952 nipype.workflow INFO:
+	 [Node] Finished "_denoise0", elapsed time 24.511862999999998s.
+261004-21:52:25,387 nipype.workflow INFO:
+	 [Node] Finished "copy_xform", elapsed time 2.289403s.
+261004-21:52:25,895 nipype.workflow INFO:
+	 [Node] Setting-up "_anat_conform0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_template_wf/anat_conform/mapflow/_anat_conform0".
+261004-21:52:25,896 nipype.workflow INFO:
+	 [Node] Executing "_anat_conform0" <niworkflows.interfaces.images.Conform>
+261004-21:52:25,931 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.magnitude_wf.brainextraction_wf.n4" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/magnitude_wf/brainextraction_wf/n4".
+261004-21:52:25,943 nipype.workflow INFO:
+	 [Node] Executing "n4" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+261004-21:52:25,946 nipype.workflow INFO:
+	 [Node] Finished "_anat_conform0", elapsed time 0.049408s.
+261004-21:52:27,158 nipype.workflow INFO:
+	 [Node] Finished "n4", elapsed time 0.930046s.
+261004-21:52:27,893 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat_template_wf.get1st" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_template_wf/get1st".
+261004-21:52:27,902 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.magnitude_wf.brainextraction_wf.clipper_post" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/magnitude_wf/brainextraction_wf/clipper_post".
+261004-21:52:27,933 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.init_aff" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/init_aff".
+261004-21:52:27,936 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+261004-21:52:27,942 nipype.workflow INFO:
+	 [Node] Executing "clipper_post" <niworkflows.interfaces.nibabel.IntensityClip>
+261004-21:52:28,228 nipype.workflow INFO:
+	 [Node] Executing "get1st" <nipype.interfaces.utility.base.Select>
+261004-21:52:28,229 nipype.workflow INFO:
+	 [Node] Finished "get1st", elapsed time 0.000279s.
+261004-21:52:28,504 nipype.workflow INFO:
+	 [Node] Finished "clipper_post", elapsed time 0.560887s.
+261004-21:52:30,109 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.magnitude_wf.brainextraction_wf.masker" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/magnitude_wf/brainextraction_wf/masker".
+261004-21:52:30,123 nipype.workflow INFO:
+	 [Node] Executing "masker" <sdcflows.interfaces.brainmask.BrainExtraction>
+261004-21:52:31,866 nipype.workflow INFO:
+	 [Node] Finished "masker", elapsed time 1.74166s.
+261004-21:52:31,938 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+261004-21:52:31,940 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:52:32,339 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.fmap_derivatives_wf_auto_00000.ds_reference" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_derivatives_wf_auto_00000/ds_reference".
+261004-21:52:32,343 nipype.workflow INFO:
+	 [Node] Executing "ds_reference" <sdcflows.workflows.outputs.DerivativesDataSink>
+261004-21:52:32,427 nipype.workflow INFO:
+	 [Node] Finished "ds_reference", elapsed time 0.083632s.
+261004-21:52:33,883 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.phdiff_wf.prelude" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/phdiff_wf/prelude".
+261004-21:52:33,885 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.out_merge_fmap_ref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/out_merge_fmap_ref".
+261004-21:52:33,895 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.fmap_derivatives_wf_auto_00000.ds_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_derivatives_wf_auto_00000/ds_mask".
+261004-21:52:33,898 nipype.workflow INFO:
+	 [Node] Executing "prelude" <nipype.interfaces.fsl.preprocess.PRELUDE>
+261004-21:52:33,900 nipype.workflow INFO:
+	 [Node] Executing "out_merge_fmap_ref" <nipype.interfaces.utility.base.Merge>
+261004-21:52:33,901 nipype.workflow INFO:
+	 [Node] Finished "out_merge_fmap_ref", elapsed time 0.000162s.
+261004-21:52:33,909 nipype.workflow INFO:
+	 [Node] Executing "ds_mask" <sdcflows.workflows.outputs.DerivativesDataSink>
+261004-21:52:33,959 nipype.workflow INFO:
+	 [Node] Finished "ds_mask", elapsed time 0.047207s.
+261004-21:52:34,180 nipype.workflow INFO:
+	 [Node] Finished "prelude", elapsed time 0.281424s.
+261004-21:52:34,958 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 2.712224s.
+261004-21:52:35,922 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.out_merge_fmap_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/out_merge_fmap_mask".
+261004-21:52:35,928 nipype.workflow INFO:
+	 [Node] Executing "out_merge_fmap_mask" <nipype.interfaces.utility.base.Merge>
+261004-21:52:35,929 nipype.workflow INFO:
+	 [Node] Finished "out_merge_fmap_mask", elapsed time 0.000242s.
+261004-21:52:36,145 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.phdiff_wf.compfmap" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/phdiff_wf/compfmap".
+261004-21:52:36,252 nipype.workflow INFO:
+	 [Node] Executing "compfmap" <sdcflows.interfaces.fmap.Phasediff2Fieldmap>
+261004-21:52:36,271 nipype.workflow INFO:
+	 [Node] Finished "compfmap", elapsed time 0.018801s.
+261004-21:52:38,681 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.wf_auto_00000.bs_filter" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/wf_auto_00000/bs_filter".
+261004-21:52:38,782 nipype.workflow INFO:
+	 [Node] Executing "bs_filter" <sdcflows.interfaces.bspline.BSplineApprox>
+261004-21:52:41,539 nipype.interface INFO:
+	 Approximating B-Splines grids (and 16x16x14 [knots]) on a grid of 74x74x36 (197136) voxels, of which 50938 fall within the mask.
+261004-21:52:46,629 nipype.workflow INFO:
+	 [Node] Finished "mcflirt", elapsed time 30.482373s.
+261004-21:52:50,901 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 22.704389s.
+261004-21:52:51,991 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_hmc_wf.fsl2itk" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_hmc_wf/fsl2itk".
+261004-21:52:52,118 nipype.workflow INFO:
+	 [Node] Executing "fsl2itk" <niworkflows.interfaces.itk.MCFLIRT2ITK>
+261004-21:52:52,119 nipype.interface WARNING:
+	 Multithreading is deprecated. Remove the num_threads input.
+261004-21:52:52,265 nipype.workflow INFO:
+	 [Node] Finished "fsl2itk", elapsed time 0.145889s.
+261004-21:52:52,769 nipype.workflow INFO:
+	 [Node] Finished "bs_filter", elapsed time 13.986494s.
+261004-21:52:53,919 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.norm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/norm".
+261004-21:52:53,927 nipype.workflow INFO:
+	 [Node] Executing "norm" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+261004-21:52:54,182 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+261004-21:52:54,185 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+261004-21:52:55,888 nipype.workflow INFO:
+	 [Node] Finished "norm", elapsed time 1.779648s.
+261004-21:52:57,915 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.map_brainmask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/map_brainmask".
+261004-21:52:57,917 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.rmsd" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/rmsd".
+261004-21:52:57,918 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.fmap_derivatives_wf_auto_00000.gen_desc" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_derivatives_wf_auto_00000/gen_desc".
+261004-21:52:57,922 nipype.workflow INFO:
+	 [Node] Executing "map_brainmask" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-21:52:57,924 nipype.workflow INFO:
+	 [Node] Executing "rmsd" <fmriprep.interfaces.confounds.FSLRMSDeviation>
+261004-21:52:57,926 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.fmap_derivatives_wf_auto_00000.merge_fmap" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_derivatives_wf_auto_00000/merge_fmap".
+261004-21:52:58,32 nipype.workflow INFO:
+	 [Node] Finished "rmsd", elapsed time 0.105876s.
+261004-21:52:58,484 nipype.workflow INFO:
+	 [Node] Executing "merge_fmap" <niworkflows.interfaces.nibabel.MergeSeries>
+261004-21:52:58,500 nipype.workflow INFO:
+	 [Node] Executing "gen_desc" <nipype.interfaces.utility.wrappers.Function>
+261004-21:52:58,501 nipype.workflow INFO:
+	 [Node] Finished "gen_desc", elapsed time 0.000528s.
+261004-21:52:58,534 nipype.workflow INFO:
+	 [Node] Finished "merge_fmap", elapsed time 0.048311s.
+261004-21:52:58,750 nipype.workflow INFO:
+	 [Node] Finished "map_brainmask", elapsed time 0.48736s.
+261004-21:53:00,125 nipype.workflow INFO:
+	 [Node] Setting-up "_ds_coeff0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_derivatives_wf_auto_00000/ds_coeff/mapflow/_ds_coeff0".
+261004-21:53:00,128 nipype.workflow INFO:
+	 [Node] Executing "_ds_coeff0" <sdcflows.workflows.outputs.DerivativesDataSink>
+261004-21:53:00,152 nipype.workflow INFO:
+	 [Node] Finished "_ds_coeff0", elapsed time 0.023147s.
+261004-21:53:00,752 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.fmap_reports_wf_auto_00000.fmap_rpt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_reports_wf_auto_00000/fmap_rpt".
+261004-21:53:00,800 nipype.workflow INFO:
+	 [Node] Executing "fmap_rpt" <sdcflows.interfaces.reportlets.FieldmapReportlet>
+261004-21:53:01,336 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.motion_params" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/motion_params".
+261004-21:53:01,338 nipype.workflow INFO:
+	 [Node] Executing "motion_params" <fmriprep.interfaces.confounds.FSLMotionParams>
+261004-21:53:01,452 nipype.workflow INFO:
+	 [Node] Finished "motion_params", elapsed time 0.113705s.
+261004-21:53:01,907 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.n4_correct" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/n4_correct".
+261004-21:53:01,910 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.out_merge_fmap_coeff" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/out_merge_fmap_coeff".
+261004-21:53:01,935 nipype.workflow INFO:
+	 [Node] Executing "n4_correct" <niworkflows.interfaces.fixes.FixN4BiasFieldCorrection>
+261004-21:53:03,338 nipype.workflow INFO:
+	 [Node] Finished "n4_correct", elapsed time 1.121576s.
+261004-21:53:03,924 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass".
+261004-21:53:03,929 nipype.workflow INFO:
+	 [Node] Executing "skullstrip_first_pass" <nipype.interfaces.fsl.preprocess.BET>
+261004-21:53:04,233 nipype.workflow INFO:
+	 [Node] Executing "out_merge_fmap_coeff" <nipype.interfaces.utility.base.Merge>
+261004-21:53:04,233 nipype.workflow INFO:
+	 [Node] Finished "out_merge_fmap_coeff", elapsed time 0.00016s.
+261004-21:53:04,240 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.fmap_derivatives_wf_auto_00000.ds_fieldmap" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_derivatives_wf_auto_00000/ds_fieldmap".
+261004-21:53:04,245 nipype.workflow INFO:
+	 [Node] Executing "ds_fieldmap" <sdcflows.workflows.outputs.DerivativesDataSink>
+261004-21:53:04,329 nipype.workflow INFO:
+	 [Node] Finished "ds_fieldmap", elapsed time 0.083287s.
+261004-21:53:05,309 nipype.workflow INFO:
+	 [Node] Finished "skullstrip_first_pass", elapsed time 1.379249s.
+261004-21:53:05,359 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.fdisp" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/fdisp".
+261004-21:53:05,361 nipype.workflow INFO:
+	 [Node] Executing "fdisp" <fmriprep.interfaces.confounds.FramewiseDisplacement>
+261004-21:53:05,373 nipype.workflow INFO:
+	 [Node] Finished "fdisp", elapsed time 0.010738s.
+261004-21:53:05,906 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.first_dilate" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/first_dilate".
+261004-21:53:05,906 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.out_merge_fmap" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/out_merge_fmap".
+261004-21:53:05,912 nipype.workflow INFO:
+	 [Node] Executing "out_merge_fmap" <nipype.interfaces.utility.base.Merge>
+261004-21:53:05,912 nipype.workflow INFO:
+	 [Node] Finished "out_merge_fmap", elapsed time 0.000147s.
+261004-21:53:06,22 nipype.workflow INFO:
+	 [Node] Executing "first_dilate" <niworkflows.interfaces.nibabel.BinaryDilation>
+261004-21:53:06,215 nipype.workflow INFO:
+	 [Node] Finished "first_dilate", elapsed time 0.191882s.
+261004-21:53:06,561 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 12.117141s.
+261004-21:53:07,915 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.res_target" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/res_target".
+261004-21:53:07,915 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.first_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/first_mask".
+261004-21:53:07,917 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+261004-21:53:07,954 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.lap_target" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/lap_target".
+261004-21:53:07,957 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:53:08,22 nipype.workflow INFO:
+	 [Node] Executing "first_mask" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-21:53:08,45 nipype.workflow INFO:
+	 [Node] Finished "first_mask", elapsed time 0.022108s.
+261004-21:53:08,490 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 0.57258s.
+261004-21:53:09,905 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.init_aff" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/init_aff".
+261004-21:53:09,912 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+261004-21:53:09,960 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.unifize" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/unifize".
+261004-21:53:09,963 nipype.workflow INFO:
+	 [Node] Executing "unifize" <nipype.interfaces.afni.utils.Unifize>
+261004-21:53:10,92 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.fmapreg_wf.dilate_fmap_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/fmapreg_wf/dilate_fmap_mask".
+261004-21:53:10,109 nipype.workflow INFO:
+	 [Node] Executing "dilate_fmap_mask" <sdcflows.interfaces.brainmask.BinaryDilation>
+261004-21:53:10,257 nipype.workflow INFO:
+	 [Node] Finished "dilate_fmap_mask", elapsed time 0.146421s.
+261004-21:53:11,425 nipype.workflow INFO:
+	 [Node] Finished "fmap_rpt", elapsed time 10.624362s.
+261004-21:53:11,895 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.ds_fmapreg_wf.sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/ds_fmapreg_wf/sources".
+261004-21:53:11,898 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.fmap_preproc_wf.fmap_reports_wf_auto_00000.ds_fmap_report" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/fmap_preproc_wf/fmap_reports_wf_auto_00000/ds_fmap_report".
+261004-21:53:11,898 nipype.workflow INFO:
+	 [Node] Executing "sources" <fmriprep.interfaces.bids.BIDSURI>
+261004-21:53:11,899 nipype.workflow INFO:
+	 [Node] Finished "sources", elapsed time 0.000508s.
+261004-21:53:11,905 nipype.workflow INFO:
+	 [Node] Executing "ds_fmap_report" <sdcflows.workflows.outputs.DerivativesDataSink>
+261004-21:53:11,923 nipype.workflow INFO:
+	 [Node] Finished "ds_fmap_report", elapsed time 0.017103s.
+261004-21:53:12,883 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 4.743987s.
+261004-21:53:13,905 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.mrg_target" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/mrg_target".
+261004-21:53:13,908 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+261004-21:53:13,909 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000161s.
+261004-21:53:23,816 nipype.workflow INFO:
+	 [Node] Finished "init_aff", elapsed time 13.901394s.
+261004-21:53:25,929 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.norm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/norm".
+261004-21:53:25,935 nipype.workflow INFO:
+	 [Node] Executing "norm" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+261004-21:54:45,91 nipype.workflow INFO:
+	 [Node] Finished "unifize", elapsed time 95.127203s.
+261004-21:54:45,942 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/fixhdr_unifize".
+261004-21:54:45,948 nipype.workflow INFO:
+	 [Node] Executing "fixhdr_unifize" <niworkflows.interfaces.header.CopyXForm>
+261004-21:54:45,977 nipype.workflow INFO:
+	 [Node] Finished "fixhdr_unifize", elapsed time 0.02771s.
+261004-21:54:47,986 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/skullstrip_second_pass".
+261004-21:54:48,121 nipype.workflow INFO:
+	 [Node] Executing "skullstrip_second_pass" <nipype.interfaces.afni.preprocess.Automask>
+261004-21:54:48,297 nipype.workflow INFO:
+	 [Node] Finished "skullstrip_second_pass", elapsed time 0.175114s.
+261004-21:54:49,942 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/fixhdr_skullstrip2".
+261004-21:54:49,948 nipype.workflow INFO:
+	 [Node] Executing "fixhdr_skullstrip2" <niworkflows.interfaces.header.CopyXForm>
+261004-21:54:49,965 nipype.workflow INFO:
+	 [Node] Finished "fixhdr_skullstrip2", elapsed time 0.01565s.
+261004-21:54:52,226 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.combine_masks" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/combine_masks".
+261004-21:54:52,247 nipype.workflow INFO:
+	 [Node] Executing "combine_masks" <nipype.interfaces.fsl.maths.BinaryMaths>
+261004-21:54:52,473 nipype.workflow INFO:
+	 [Node] Finished "combine_masks", elapsed time 0.225274s.
+261004-21:54:53,933 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.enhance_and_skullstrip_bold_wf.apply_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/enhance_and_skullstrip_bold_wf/apply_mask".
+261004-21:54:53,944 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.fmapreg_wf.dilate_target_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/fmapreg_wf/dilate_target_mask".
+261004-21:54:53,961 nipype.workflow INFO:
+	 [Node] Executing "apply_mask" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-21:54:53,989 nipype.workflow INFO:
+	 [Node] Finished "apply_mask", elapsed time 0.027418s.
+261004-21:54:54,84 nipype.workflow INFO:
+	 [Node] Executing "dilate_target_mask" <sdcflows.interfaces.brainmask.BinaryDilation>
+261004-21:54:54,241 nipype.workflow INFO:
+	 [Node] Finished "dilate_target_mask", elapsed time 0.156577s.
+261004-21:54:55,944 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.fmapreg_wf.coregister" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/fmapreg_wf/coregister".
+261004-21:54:55,963 nipype.workflow INFO:
+	 [Node] Executing "coregister" <niworkflows.interfaces.fixes.FixHeaderRegistration>
+261004-21:54:56,980 nipype.workflow INFO:
+	 [Node] Finished "coregister", elapsed time 0.74472s.
+261004-21:54:57,939 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.itk_mat2txt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/itk_mat2txt".
+261004-21:54:57,944 nipype.workflow INFO:
+	 [Node] Executing "itk_mat2txt" <niworkflows.interfaces.nitransforms.ConcatenateXFMs>
+261004-21:54:58,168 nipype.workflow INFO:
+	 [Node] Finished "itk_mat2txt", elapsed time 0.223113s.
+261004-21:55:01,949 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.boldref_fmap" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/boldref_fmap".
+261004-21:55:01,963 nipype.workflow INFO:
+	 [Node] Executing "boldref_fmap" <fmriprep.interfaces.resampling.ReconstructFieldmap>
+261004-21:55:02,330 nipype.workflow INFO:
+	 [Node] Finished "boldref_fmap", elapsed time 0.365085s.
+261004-21:55:04,302 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.unwarp_boldref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/unwarp_boldref".
+261004-21:55:04,306 nipype.workflow INFO:
+	 [Node] Executing "unwarp_boldref" <fmriprep.interfaces.resampling.ResampleSeries>
+261004-21:55:04,501 nipype.workflow INFO:
+	 [Node] Finished "unwarp_boldref", elapsed time 0.194287s.
+261004-21:55:05,951 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.ds_coreg_boldref_wf.sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/ds_coreg_boldref_wf/sources".
+261004-21:55:05,954 nipype.workflow INFO:
+	 [Node] Executing "sources" <fmriprep.interfaces.bids.BIDSURI>
+261004-21:55:05,955 nipype.workflow INFO:
+	 [Node] Finished "sources", elapsed time 0.000621s.
+261004-21:55:09,956 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.ds_boldreg_wf.sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/ds_boldreg_wf/sources".
+261004-21:55:09,956 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.ds_boldmask_wf.sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/ds_boldmask_wf/sources".
+261004-21:55:09,961 nipype.workflow INFO:
+	 [Node] Executing "sources" <fmriprep.interfaces.bids.BIDSURI>
+261004-21:55:09,963 nipype.workflow INFO:
+	 [Node] Finished "sources", elapsed time 0.000569s.
+261004-21:55:09,965 nipype.workflow INFO:
+	 [Node] Executing "sources" <fmriprep.interfaces.bids.BIDSURI>
+261004-21:55:09,970 nipype.workflow INFO:
+	 [Node] Finished "sources", elapsed time 0.003662s.
+261004-21:55:10,85 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.skullstrip_bold_wf.skullstrip_first_pass" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/skullstrip_bold_wf/skullstrip_first_pass".
+261004-21:55:10,91 nipype.workflow INFO:
+	 [Node] Executing "skullstrip_first_pass" <nipype.interfaces.fsl.preprocess.BET>
+261004-21:55:10,173 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_std_wf.gen_ref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/gen_ref".
+261004-21:55:10,176 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.fmapref_boldref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/fmapref_boldref".
+261004-21:55:10,182 nipype.workflow INFO:
+	 [Node] Executing "fmapref_boldref" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-21:55:10,199 nipype.workflow INFO:
+	 [Node] Executing "gen_ref" <niworkflows.interfaces.nibabel.GenerateSamplingReference>
+261004-21:55:10,201 nipype.workflow INFO:
+	 [Node] Finished "gen_ref", elapsed time 0.000884s.
+261004-21:55:10,238 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_native_wf.boldref_fmap" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_native_wf/boldref_fmap".
+261004-21:55:10,242 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.fmap_boldref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/fmap_boldref".
+261004-21:55:10,251 nipype.workflow INFO:
+	 [Node] Executing "boldref_fmap" <fmriprep.interfaces.resampling.ReconstructFieldmap>
+261004-21:55:10,253 nipype.workflow INFO:
+	 [Node] Executing "fmap_boldref" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-21:55:10,641 nipype.workflow INFO:
+	 [Node] Finished "boldref_fmap", elapsed time 0.389545s.
+261004-21:55:11,123 nipype.workflow INFO:
+	 [Node] Finished "fmapref_boldref", elapsed time 0.940873s.
+261004-21:55:11,465 nipype.workflow INFO:
+	 [Node] Finished "skullstrip_first_pass", elapsed time 1.373029s.
+261004-21:55:11,569 nipype.workflow INFO:
+	 [Node] Finished "fmap_boldref", elapsed time 0.999701s.
+261004-21:55:12,9 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.skullstrip_bold_wf.skullstrip_second_pass" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/skullstrip_bold_wf/skullstrip_second_pass".
+261004-21:55:12,13 nipype.workflow INFO:
+	 [Node] Executing "skullstrip_second_pass" <nipype.interfaces.afni.preprocess.Automask>
+261004-21:55:12,151 nipype.workflow INFO:
+	 [Node] Finished "skullstrip_second_pass", elapsed time 0.137574s.
+261004-21:55:13,959 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_native_wf.boldref_bold" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_native_wf/boldref_bold".
+261004-21:55:13,983 nipype.workflow INFO:
+	 [Node] Executing "boldref_bold" <fmriprep.interfaces.resampling.ResampleSeries>
+261004-21:55:24,236 nipype.workflow INFO:
+	 [Node] Finished "boldref_bold", elapsed time 10.251801s.
+261004-21:55:25,970 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.skullstrip_bold_wf.combine_masks" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/skullstrip_bold_wf/combine_masks".
+261004-21:55:26,41 nipype.workflow INFO:
+	 [Node] Executing "combine_masks" <nipype.interfaces.fsl.maths.BinaryMaths>
+261004-21:55:26,158 nipype.workflow INFO:
+	 [Node] Finished "combine_masks", elapsed time 0.116558s.
+261004-21:55:27,937 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.skullstrip_bold_wf.apply_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/skullstrip_bold_wf/apply_mask".
+261004-21:55:27,951 nipype.interface WARNING:
+	 Changing /home/jovyan/trust_example/derivatives/fmriprep/sub-104/func/sub-104_task-trust_run-01_desc-brain_mask.nii.gz dtype from float32 to float32
+261004-21:55:27,972 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.skullstrip_bold_wf.mask_reportlet" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/skullstrip_bold_wf/mask_reportlet".
+261004-21:55:27,976 nipype.workflow INFO:
+	 [Node] Executing "mask_reportlet" <niworkflows.interfaces.reportlets.masks.SimpleShowMaskRPT>
+261004-21:55:28,63 nipype.workflow INFO:
+	 [Node] Executing "apply_mask" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-21:55:28,99 nipype.workflow INFO:
+	 [Node] Finished "apply_mask", elapsed time 0.035393s.
+261004-21:55:29,959 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.dvars" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/dvars".
+261004-21:55:29,967 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.sdcreg_report" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/sdcreg_report".
+261004-21:55:29,973 nipype.workflow INFO:
+	 [Node] Executing "sdcreg_report" <sdcflows.interfaces.reportlets.FieldmapReportlet>
+261004-21:55:29,992 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.tcompcor" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/tcompcor".
+261004-21:55:29,999 nipype.workflow INFO:
+	 [Node] Executing "tcompcor" <niworkflows.interfaces.patches.RobustTCompCor>
+261004-21:55:30,26 nipype.workflow INFO:
+	 [Node] Executing "dvars" <nipype.algorithms.confounds.ComputeDVARS>
+261004-21:55:32,509 nipype.workflow INFO:
+	 [Node] Finished "tcompcor", elapsed time 2.508632s.
+261004-21:55:33,985 nipype.workflow INFO:
+	 [Node] Finished "mask_reportlet", elapsed time 6.007576s.
+261004-21:55:35,265 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.tcc_metadata_filter" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/tcc_metadata_filter".
+261004-21:55:35,279 nipype.workflow INFO:
+	 [Node] Executing "tcc_metadata_filter" <fmriprep.interfaces.confounds.FilterDropped>
+261004-21:55:35,289 nipype.workflow INFO:
+	 [Node] Finished "tcc_metadata_filter", elapsed time 0.008831s.
+261004-21:55:35,951 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.tcc_metadata_fmt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/tcc_metadata_fmt".
+261004-21:55:39,294 nipype.workflow INFO:
+	 [Node] Executing "tcc_metadata_fmt" <niworkflows.interfaces.utility.TSV2JSON>
+261004-21:55:39,300 nipype.workflow INFO:
+	 [Node] Finished "tcc_metadata_fmt", elapsed time 0.00503s.
+261004-21:55:39,978 nipype.workflow INFO:
+	 [Node] Finished "dvars", elapsed time 9.951351s.
+261004-21:55:41,689 nipype.workflow INFO:
+	 [Node] Finished "sdcreg_report", elapsed time 11.715965s.
+261004-21:55:41,930 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.ds_sdcreg_report" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/ds_sdcreg_report".
+261004-21:55:41,937 nipype.workflow INFO:
+	 [Node] Executing "ds_sdcreg_report" <fmriprep.interfaces.DerivativesDataSink>
+261004-21:55:41,954 nipype.workflow INFO:
+	 [Node] Finished "ds_sdcreg_report", elapsed time 0.015257s.
+261004-21:58:58,342 nipype.workflow INFO:
+	 [Node] Finished "norm", elapsed time 332.405588s.
+261004-21:58:59,971 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.map_brainmask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/map_brainmask".
+261004-21:58:59,984 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.map_wmmask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/map_wmmask".
+261004-21:58:59,988 nipype.workflow INFO:
+	 [Node] Executing "map_brainmask" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-21:58:59,995 nipype.workflow INFO:
+	 [Node] Executing "map_wmmask" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-21:59:11,320 nipype.workflow INFO:
+	 [Node] Finished "map_brainmask", elapsed time 11.329922s.
+261004-21:59:11,804 nipype.workflow INFO:
+	 [Node] Finished "map_wmmask", elapsed time 11.807219s.
+261004-21:59:12,7 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.thr_brainmask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/thr_brainmask".
+261004-21:59:12,17 nipype.workflow INFO:
+	 [Node] Executing "thr_brainmask" <nipype.interfaces.ants.utils.ThresholdImage>
+261004-21:59:12,912 nipype.workflow INFO:
+	 [Node] Finished "thr_brainmask", elapsed time 0.893393s.
+261004-21:59:13,981 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.dil_brainmask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/dil_brainmask".
+261004-21:59:13,983 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.03_pad_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/03_pad_mask".
+261004-21:59:13,993 nipype.workflow INFO:
+	 [Node] Executing "dil_brainmask" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:13,996 nipype.workflow INFO:
+	 [Node] Executing "03_pad_mask" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:14,820 nipype.workflow INFO:
+	 [Node] Finished "03_pad_mask", elapsed time 0.821694s.
+261004-21:59:15,210 nipype.workflow INFO:
+	 [Node] Finished "dil_brainmask", elapsed time 1.214345s.
+261004-21:59:15,988 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.get_brainmask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/get_brainmask".
+261004-21:59:15,998 nipype.workflow INFO:
+	 [Node] Executing "get_brainmask" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:17,245 nipype.workflow INFO:
+	 [Node] Finished "get_brainmask", elapsed time 1.244837s.
+261004-21:59:17,988 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.01_atropos" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/01_atropos".
+261004-21:59:17,999 nipype.workflow INFO:
+	 [Node] Executing "01_atropos" <nipype.interfaces.ants.segmentation.Atropos>
+261004-21:59:37,341 nipype.workflow INFO:
+	 [Node] Finished "01_atropos", elapsed time 19.339961s.
+261004-21:59:37,981 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.02_pad_segm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/02_pad_segm".
+261004-21:59:37,992 nipype.workflow INFO:
+	 [Node] Executing "02_pad_segm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:38,862 nipype.workflow INFO:
+	 [Node] Finished "02_pad_segm", elapsed time 0.868513s.
+261004-21:59:39,976 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.04_sel_labels" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/04_sel_labels".
+261004-21:59:39,985 nipype.workflow INFO:
+	 [Node] Executing "04_sel_labels" <nipype.interfaces.utility.wrappers.Function>
+261004-21:59:40,242 nipype.workflow INFO:
+	 [Node] Finished "04_sel_labels", elapsed time 0.254175s.
+261004-21:59:42,263 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.27_depad_csf" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/27_depad_csf".
+261004-21:59:42,264 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.10_me_csf" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/10_me_csf".
+261004-21:59:42,267 nipype.workflow INFO:
+	 [Node] Executing "10_me_csf" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:42,267 nipype.workflow INFO:
+	 [Node] Executing "27_depad_csf" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:42,268 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.05_get_wm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/05_get_wm".
+261004-21:59:42,269 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.06_get_gm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/06_get_gm".
+261004-21:59:42,281 nipype.workflow INFO:
+	 [Node] Executing "06_get_gm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:42,284 nipype.workflow INFO:
+	 [Node] Executing "05_get_wm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:42,704 nipype.workflow INFO:
+	 [Node] Finished "27_depad_csf", elapsed time 0.435901s.
+261004-21:59:43,643 nipype.workflow INFO:
+	 [Node] Finished "05_get_wm", elapsed time 1.3571520000000001s.
+261004-21:59:43,716 nipype.workflow INFO:
+	 [Node] Finished "06_get_gm", elapsed time 1.432813s.
+261004-21:59:44,267 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.09_relabel_wm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/09_relabel_wm".
+261004-21:59:44,268 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.07_fill_gm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/07_fill_gm".
+261004-21:59:44,270 nipype.workflow INFO:
+	 [Node] Executing "09_relabel_wm" <nipype.interfaces.ants.utils.MultiplyImages>
+261004-21:59:44,274 nipype.workflow INFO:
+	 [Node] Executing "07_fill_gm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:44,779 nipype.workflow INFO:
+	 [Node] Finished "09_relabel_wm", elapsed time 0.508612s.
+261004-21:59:44,987 nipype.workflow INFO:
+	 [Node] Finished "10_me_csf", elapsed time 2.719799s.
+261004-21:59:46,271 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.26_depad_wm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/26_depad_wm".
+261004-21:59:46,271 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.apply_wm_prior" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/apply_wm_prior".
+261004-21:59:46,274 nipype.workflow INFO:
+	 [Node] Executing "26_depad_wm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:46,295 nipype.workflow INFO:
+	 [Node] Executing "apply_wm_prior" <nipype.interfaces.utility.wrappers.Function>
+261004-21:59:46,737 nipype.workflow INFO:
+	 [Node] Finished "apply_wm_prior", elapsed time 0.44046s.
+261004-21:59:46,936 nipype.workflow INFO:
+	 [Node] Finished "26_depad_wm", elapsed time 0.66134s.
+261004-21:59:48,290 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n4_final0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/inu_n4_final/mapflow/_inu_n4_final0".
+261004-21:59:48,292 nipype.workflow INFO:
+	 [Node] Executing "_inu_n4_final0" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+261004-21:59:51,161 nipype.workflow INFO:
+	 [Node] Finished "07_fill_gm", elapsed time 6.886391s.
+261004-21:59:52,265 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.08_mult_gm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/08_mult_gm".
+261004-21:59:52,268 nipype.workflow INFO:
+	 [Node] Executing "08_mult_gm" <nipype.interfaces.ants.utils.MultiplyImages>
+261004-21:59:52,941 nipype.workflow INFO:
+	 [Node] Finished "08_mult_gm", elapsed time 0.672421s.
+261004-21:59:54,271 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.11_add_gm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/11_add_gm".
+261004-21:59:54,275 nipype.workflow INFO:
+	 [Node] Executing "11_add_gm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:55,443 nipype.workflow INFO:
+	 [Node] Finished "11_add_gm", elapsed time 1.16769s.
+261004-21:59:56,280 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.12_relabel_gm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/12_relabel_gm".
+261004-21:59:56,284 nipype.workflow INFO:
+	 [Node] Executing "12_relabel_gm" <nipype.interfaces.ants.utils.MultiplyImages>
+261004-21:59:56,485 nipype.workflow INFO:
+	 [Node] Finished "_inu_n4_final0", elapsed time 8.192241s.
+261004-21:59:57,175 nipype.workflow INFO:
+	 [Node] Finished "12_relabel_gm", elapsed time 0.890956s.
+261004-21:59:58,283 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.13_add_gm_wm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/13_add_gm_wm".
+261004-21:59:58,283 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.25_depad_gm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/25_depad_gm".
+261004-21:59:58,287 nipype.workflow INFO:
+	 [Node] Executing "13_add_gm_wm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:58,287 nipype.workflow INFO:
+	 [Node] Executing "25_depad_gm" <nipype.interfaces.ants.utils.ImageMath>
+261004-21:59:58,967 nipype.workflow INFO:
+	 [Node] Finished "25_depad_gm", elapsed time 0.679438s.
+261004-21:59:59,476 nipype.workflow INFO:
+	 [Node] Finished "13_add_gm_wm", elapsed time 1.188213s.
+261004-22:00:00,288 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.24_depad_segm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/24_depad_segm".
+261004-22:00:00,289 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.merge_tpms" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/merge_tpms".
+261004-22:00:00,289 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.14_sel_labels2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/14_sel_labels2".
+261004-22:00:00,291 nipype.workflow INFO:
+	 [Node] Executing "24_depad_segm" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:00,291 nipype.workflow INFO:
+	 [Node] Executing "14_sel_labels2" <nipype.interfaces.utility.wrappers.Function>
+261004-22:00:00,292 nipype.workflow INFO:
+	 [Node] Executing "merge_tpms" <nipype.interfaces.utility.base.Merge>
+261004-22:00:00,293 nipype.workflow INFO:
+	 [Node] Finished "merge_tpms", elapsed time 0.000188s.
+261004-22:00:00,424 nipype.workflow INFO:
+	 [Node] Finished "14_sel_labels2", elapsed time 0.132054s.
+261004-22:00:00,844 nipype.workflow INFO:
+	 [Node] Finished "24_depad_segm", elapsed time 0.551937s.
+261004-22:00:02,286 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.15_add_7" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/15_add_7".
+261004-22:00:02,289 nipype.workflow INFO:
+	 [Node] Executing "15_add_7" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:03,204 nipype.workflow INFO:
+	 [Node] Finished "15_add_7", elapsed time 0.914432s.
+261004-22:00:04,282 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.16_me_7" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/16_me_7".
+261004-22:00:04,285 nipype.workflow INFO:
+	 [Node] Executing "16_me_7" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:05,912 nipype.workflow INFO:
+	 [Node] Finished "16_me_7", elapsed time 1.626011s.
+261004-22:00:06,280 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.17_comp_7" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/17_comp_7".
+261004-22:00:06,282 nipype.workflow INFO:
+	 [Node] Executing "17_comp_7" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:07,274 nipype.workflow INFO:
+	 [Node] Finished "17_comp_7", elapsed time 0.991564s.
+261004-22:00:08,281 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.18_md_7" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/18_md_7".
+261004-22:00:08,284 nipype.workflow INFO:
+	 [Node] Executing "18_md_7" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:09,382 nipype.workflow INFO:
+	 [Node] Finished "18_md_7", elapsed time 1.097751s.
+261004-22:00:10,287 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.19_fill_7" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/19_fill_7".
+261004-22:00:10,290 nipype.workflow INFO:
+	 [Node] Executing "19_fill_7" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:16,564 nipype.workflow INFO:
+	 [Node] Finished "19_fill_7", elapsed time 6.273403s.
+261004-22:00:18,282 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.20_add_7_2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/20_add_7_2".
+261004-22:00:18,285 nipype.workflow INFO:
+	 [Node] Executing "20_add_7_2" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:19,344 nipype.workflow INFO:
+	 [Node] Finished "20_add_7_2", elapsed time 1.057749s.
+261004-22:00:20,283 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.21_md_7_2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/21_md_7_2".
+261004-22:00:20,285 nipype.workflow INFO:
+	 [Node] Executing "21_md_7_2" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:21,399 nipype.workflow INFO:
+	 [Node] Finished "21_md_7_2", elapsed time 1.112255s.
+261004-22:00:22,307 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.22_me_7_2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/22_me_7_2".
+261004-22:00:22,311 nipype.workflow INFO:
+	 [Node] Executing "22_me_7_2" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:23,991 nipype.workflow INFO:
+	 [Node] Finished "22_me_7_2", elapsed time 1.6793040000000001s.
+261004-22:00:24,288 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.23_depad_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/23_depad_mask".
+261004-22:00:24,291 nipype.workflow INFO:
+	 [Node] Executing "23_depad_mask" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:24,746 nipype.workflow INFO:
+	 [Node] Finished "23_depad_mask", elapsed time 0.453718s.
+261004-22:00:26,292 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.brain_extraction_wf.atropos_wf.msk_conform" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/msk_conform".
+261004-22:00:26,313 nipype.workflow INFO:
+	 [Node] Executing "msk_conform" <nipype.interfaces.utility.wrappers.Function>
+261004-22:00:26,472 nipype.workflow INFO:
+	 [Node] Finished "msk_conform", elapsed time 0.158607s.
+261004-22:00:31,770 nipype.workflow INFO:
+	 [Node] Setting-up "_apply_mask0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/brain_extraction_wf/atropos_wf/apply_mask/mapflow/_apply_mask0".
+261004-22:00:31,772 nipype.workflow INFO:
+	 [Node] Executing "_apply_mask0" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-22:00:32,214 nipype.workflow INFO:
+	 [Node] Finished "_apply_mask0", elapsed time 0.441897s.
+261004-22:00:34,486 nipype.interface WARNING:
+	 Changing /home/jovyan/trust_example/derivatives/fmriprep/sub-104/anat/sub-104_desc-brain_mask.nii.gz dtype from int16 to int16
+261004-22:00:35,189 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.register_template_wf.trunc_mov" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin6Asym/trunc_mov".
+261004-22:00:35,193 nipype.workflow INFO:
+	 [Node] Executing "trunc_mov" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:35,390 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.register_template_wf.trunc_mov" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/trunc_mov".
+261004-22:00:35,391 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.ds_std_volumes_wf.gen_ref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/gen_ref".
+261004-22:00:35,392 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.ds_std_volumes_wf.mask_anat" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/mask_anat".
+261004-22:00:35,392 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mask_t1w_brain" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mask_t1w_brain".
+261004-22:00:35,392 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_anat_wf.gen_ref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_anat_wf/gen_ref".
+261004-22:00:35,394 nipype.workflow INFO:
+	 [Node] Executing "trunc_mov" <nipype.interfaces.ants.utils.ImageMath>
+261004-22:00:35,400 nipype.workflow INFO:
+	 [Node] Executing "mask_t1w_brain" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-22:00:35,401 nipype.workflow INFO:
+	 [Node] Executing "gen_ref" <niworkflows.interfaces.nibabel.GenerateSamplingReference>
+261004-22:00:35,406 nipype.workflow INFO:
+	 [Node] Executing "gen_ref" <niworkflows.interfaces.nibabel.GenerateSamplingReference>
+261004-22:00:35,406 nipype.workflow INFO:
+	 [Node] Executing "mask_anat" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-22:00:35,406 nipype.workflow INFO:
+	 [Node] Finished "gen_ref", elapsed time 0.000182s.
+261004-22:00:35,408 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.fast" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/fast".
+261004-22:00:35,411 nipype.workflow INFO:
+	 [Node] Executing "fast" <smriprep.interfaces.fsl.FAST>
+261004-22:00:35,840 nipype.workflow INFO:
+	 [Node] Finished "mask_t1w_brain", elapsed time 0.439803s.
+261004-22:00:35,853 nipype.workflow INFO:
+	 [Node] Finished "mask_anat", elapsed time 0.446325s.
+261004-22:00:35,875 nipype.workflow INFO:
+	 [Node] Finished "gen_ref", elapsed time 0.473615s.
+261004-22:00:37,382 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.mri_coreg" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/mri_coreg".
+261004-22:00:37,389 nipype.workflow INFO:
+	 [Node] Executing "mri_coreg" <nipype.interfaces.freesurfer.registration.MRICoreg>
+261004-22:00:37,846 nipype.workflow INFO:
+	 [Node] Finished "trunc_mov", elapsed time 2.652513s.
+261004-22:00:37,995 nipype.workflow INFO:
+	 [Node] Finished "trunc_mov", elapsed time 2.599286s.
+261004-22:00:50,742 nipype.workflow INFO:
+	 [Node] Finished "mri_coreg", elapsed time 13.350467s.
+261004-22:00:51,362 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.register_template_wf.registration" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin6Asym/registration".
+261004-22:00:51,370 nipype.workflow INFO:
+	 [Node] Executing "registration" <niworkflows.interfaces.norm.SpatialNormalization>
+261004-22:00:53,346 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.lta_to_fsl" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/lta_to_fsl".
+261004-22:00:53,348 nipype.workflow INFO:
+	 [Node] Executing "lta_to_fsl" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+261004-22:00:53,453 nipype.workflow INFO:
+	 [Node] Finished "lta_to_fsl", elapsed time 0.103721s.
+261004-22:01:45,83 nipype.workflow INFO:
+	 [Node] Finished "fast", elapsed time 69.668388s.
+261004-22:01:45,401 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.register_template_wf.registration" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/register_template_wf/_template_MNI152NLin2009cAsym/registration".
+261004-22:01:45,411 nipype.workflow INFO:
+	 [Node] Executing "registration" <niworkflows.interfaces.norm.SpatialNormalization>
+261004-22:16:28,556 nipype.workflow INFO:
+	 [Node] Finished "registration", elapsed time 937.185173s.
+261004-22:16:30,237 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.lut_t1w_dseg" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/lut_t1w_dseg".
+261004-22:16:30,262 nipype.workflow INFO:
+	 [Node] Executing "lut_t1w_dseg" <nipype.interfaces.utility.wrappers.Function>
+261004-22:16:30,447 nipype.workflow INFO:
+	 [Node] Finished "lut_t1w_dseg", elapsed time 0.182471s.
+261004-22:16:37,213 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.t1w_wm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/t1w_wm".
+261004-22:16:37,216 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.wm_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/wm_mask".
+261004-22:16:37,222 nipype.workflow INFO:
+	 [Node] Executing "t1w_wm" <nipype.interfaces.utility.wrappers.Function>
+261004-22:16:37,224 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.acc_masks" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_masks".
+261004-22:16:37,233 nipype.workflow INFO:
+	 [Node] Executing "wm_mask" <nipype.interfaces.utility.wrappers.Function>
+261004-22:16:37,337 nipype.workflow INFO:
+	 [Node] Finished "t1w_wm", elapsed time 0.112727s.
+261004-22:16:37,351 nipype.workflow INFO:
+	 [Node] Finished "wm_mask", elapsed time 0.115597s.
+261004-22:16:37,412 nipype.workflow INFO:
+	 [Node] Executing "acc_masks" <fmriprep.interfaces.confounds.aCompCorMasks>
+261004-22:16:38,652 nipype.workflow INFO:
+	 [Node] Finished "acc_masks", elapsed time 1.237291s.
+261004-22:16:39,270 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat_reports_wf.seg_rpt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_reports_wf/seg_rpt".
+261004-22:16:39,276 nipype.workflow INFO:
+	 [Node] Executing "seg_rpt" <niworkflows.interfaces.reportlets.masks.ROIsPlot>
+261004-22:16:39,360 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr".
+261004-22:16:41,402 nipype.workflow INFO:
+	 [Node] Executing "flt_bbr" <nipype.interfaces.fsl.preprocess.FLIRT>
+261004-22:16:50,162 nipype.workflow INFO:
+	 [Node] Finished "seg_rpt", elapsed time 10.884546s.
+261004-22:17:27,456 nipype.workflow INFO:
+	 [Node] Finished "flt_bbr", elapsed time 46.052293s.
+261004-22:17:33,229 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+261004-22:17:33,235 nipype.workflow INFO:
+	 [Node] Executing "_fsl_to_lta1" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+261004-22:17:33,580 nipype.workflow INFO:
+	 [Node] Finished "_fsl_to_lta1", elapsed time 0.343946s.
+261004-22:17:34,931 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+261004-22:17:34,936 nipype.workflow INFO:
+	 [Node] Executing "_fsl_to_lta0" <niworkflows.interfaces.freesurfer.PatchedLTAConvert>
+261004-22:17:35,111 nipype.workflow INFO:
+	 [Node] Finished "_fsl_to_lta0", elapsed time 0.174112s.
+261004-22:17:37,233 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+261004-22:17:37,236 nipype.workflow INFO:
+	 [Node] Cached "_fsl_to_lta0" - collecting precomputed outputs
+261004-22:17:37,238 nipype.workflow INFO:
+	 [Node] "_fsl_to_lta0" found cached.
+261004-22:17:37,239 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+261004-22:17:37,240 nipype.workflow INFO:
+	 [Node] Cached "_fsl_to_lta1" - collecting precomputed outputs
+261004-22:17:37,240 nipype.workflow INFO:
+	 [Node] "_fsl_to_lta1" found cached.
+261004-22:17:39,228 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.compare_transforms" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/compare_transforms".
+261004-22:17:39,369 nipype.workflow INFO:
+	 [Node] Executing "compare_transforms" <nipype.interfaces.utility.wrappers.Function>
+261004-22:17:39,386 nipype.workflow INFO:
+	 [Node] Finished "compare_transforms", elapsed time 0.014186s.
+261004-22:17:43,242 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.bold_reg_wf.fsl_bbr_wf.xfm2itk" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/bold_reg_wf/fsl_bbr_wf/xfm2itk".
+261004-22:17:43,250 nipype.workflow INFO:
+	 [Node] Executing "xfm2itk" <fmriprep.interfaces.nitransforms.ConvertAffine>
+261004-22:17:43,288 nipype.workflow INFO:
+	 [Node] Finished "xfm2itk", elapsed time 0.036361s.
+261004-22:17:47,237 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.t1w_boldref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/t1w_boldref".
+261004-22:17:47,239 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.boldref_wm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/boldref_wm".
+261004-22:17:47,249 nipype.workflow INFO:
+	 [Node] Executing "t1w_boldref" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:17:47,250 nipype.workflow INFO:
+	 [Node] Executing "boldref_wm" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:17:47,443 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.t1w_mask_tfm" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/t1w_mask_tfm".
+261004-22:17:47,449 nipype.workflow INFO:
+	 [Node] Executing "t1w_mask_tfm" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:17:47,789 nipype.workflow INFO:
+	 [Node] Finished "boldref_wm", elapsed time 0.538384s.
+261004-22:17:48,377 nipype.workflow INFO:
+	 [Node] Finished "t1w_boldref", elapsed time 1.126525s.
+261004-22:17:48,692 nipype.workflow INFO:
+	 [Node] Finished "t1w_mask_tfm", elapsed time 1.242105s.
+261004-22:17:49,276 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.sdc_report" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/sdc_report".
+261004-22:17:49,287 nipype.workflow INFO:
+	 [Node] Executing "sdc_report" <nireports.interfaces.reporting.base.SimpleBeforeAfterRPT>
+261004-22:17:49,288 nipype.interface INFO:
+	 Report - setting before (/home/jovyan/trust_example/derivatives/fmriprep/sub-104/func/sub-104_task-trust_run-01_desc-coreg_boldref.nii.gz) and after (/home/jovyan/trust_example/derivatives/fmriprep/sub-104/func/sub-104_task-trust_run-01_desc-hmc_boldref.nii.gz) images
+261004-22:17:49,288 nipype.interface INFO:
+	 Generating visual report
+261004-22:17:49,803 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.epi_t1_report" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/epi_t1_report".
+261004-22:17:49,807 nipype.workflow INFO:
+	 [Node] Executing "epi_t1_report" <nireports.interfaces.reporting.base.SimpleBeforeAfterRPT>
+261004-22:17:49,808 nipype.interface INFO:
+	 Report - setting before (/home/jovyan/trust_example/derivatives/fmriprep/sub-104/func/sub-104_task-trust_run-01_desc-coreg_boldref.nii.gz) and after (/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/t1w_boldref/sub-104_desc-preproc_T1w_trans.nii.gz) images
+261004-22:17:49,808 nipype.interface INFO:
+	 Generating visual report
+261004-22:17:49,816 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.union_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/union_mask".
+261004-22:17:49,817 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm0".
+261004-22:17:49,817 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm1".
+261004-22:17:49,820 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_tfm1" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:17:49,820 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm2".
+261004-22:17:49,823 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_tfm0" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:17:49,826 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_tfm2" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:17:49,826 nipype.workflow INFO:
+	 [Node] Executing "union_mask" <nipype.interfaces.utility.wrappers.Function>
+261004-22:17:49,868 nipype.workflow INFO:
+	 [Node] Finished "union_mask", elapsed time 0.040685s.
+261004-22:17:50,364 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_tfm1", elapsed time 0.54343s.
+261004-22:17:50,459 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_tfm0", elapsed time 0.635054s.
+261004-22:17:50,460 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_tfm2", elapsed time 0.632936s.
+261004-22:17:51,229 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.dilated_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/dilated_mask".
+261004-22:17:51,229 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm0".
+261004-22:17:51,231 nipype.workflow INFO:
+	 [Node] Executing "dilated_mask" <niworkflows.interfaces.morphology.BinaryDilation>
+261004-22:17:51,231 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_tfm0" - collecting precomputed outputs
+261004-22:17:51,238 nipype.workflow INFO:
+	 [Node] "_acc_msk_tfm0" found cached.
+261004-22:17:51,240 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm1".
+261004-22:17:51,243 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_tfm1" - collecting precomputed outputs
+261004-22:17:51,243 nipype.workflow INFO:
+	 [Node] "_acc_msk_tfm1" found cached.
+261004-22:17:51,244 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm2".
+261004-22:17:51,245 nipype.workflow INFO:
+	 [Node] Finished "dilated_mask", elapsed time 0.013036s.
+261004-22:17:51,246 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_tfm2" - collecting precomputed outputs
+261004-22:17:51,246 nipype.workflow INFO:
+	 [Node] "_acc_msk_tfm2" found cached.
+261004-22:17:51,281 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_anat_wf.fmap_recon" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_anat_wf/fmap_recon".
+261004-22:17:51,297 nipype.workflow INFO:
+	 [Node] Executing "fmap_recon" <fmriprep.interfaces.resampling.ReconstructFieldmap>
+261004-22:17:51,586 nipype.workflow INFO:
+	 [Node] Finished "fmap_recon", elapsed time 0.288292s.
+261004-22:17:53,267 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.subtract_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/subtract_mask".
+261004-22:17:53,270 nipype.workflow INFO:
+	 [Node] Executing "subtract_mask" <niworkflows.interfaces.morphology.BinarySubtraction>
+261004-22:17:53,279 nipype.workflow INFO:
+	 [Node] Finished "subtract_mask", elapsed time 0.008319s.
+261004-22:17:55,255 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain0".
+261004-22:17:55,257 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain1".
+261004-22:17:55,257 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_brain0" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-22:17:55,257 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain2".
+261004-22:17:55,259 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_brain1" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-22:17:55,259 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_brain2" <niworkflows.interfaces.nibabel.ApplyMask>
+261004-22:17:55,282 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_brain1", elapsed time 0.02184s.
+261004-22:17:55,286 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.crowncompcor" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/crowncompcor".
+261004-22:17:55,293 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_brain2", elapsed time 0.029072s.
+261004-22:17:55,294 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_brain0", elapsed time 0.036122s.
+261004-22:17:55,345 nipype.workflow INFO:
+	 [Node] Executing "crowncompcor" <niworkflows.interfaces.patches.RobustACompCor>
+261004-22:17:57,264 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain0".
+261004-22:17:57,265 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_brain0" - collecting precomputed outputs
+261004-22:17:57,265 nipype.workflow INFO:
+	 [Node] "_acc_msk_brain0" found cached.
+261004-22:17:57,265 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain1".
+261004-22:17:57,266 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_brain1" - collecting precomputed outputs
+261004-22:17:57,266 nipype.workflow INFO:
+	 [Node] "_acc_msk_brain1" found cached.
+261004-22:17:57,266 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain2".
+261004-22:17:57,267 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_brain2" - collecting precomputed outputs
+261004-22:17:57,267 nipype.workflow INFO:
+	 [Node] "_acc_msk_brain2" found cached.
+261004-22:17:57,674 nipype.workflow INFO:
+	 [Node] Finished "sdc_report", elapsed time 8.386177s.
+261004-22:17:57,845 nipype.workflow INFO:
+	 [Node] Finished "crowncompcor", elapsed time 2.498642s.
+261004-22:17:58,44 nipype.workflow INFO:
+	 [Node] Finished "epi_t1_report", elapsed time 8.23551s.
+261004-22:17:59,245 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.ds_epi_t1_report" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/ds_epi_t1_report".
+261004-22:17:59,246 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_fit_wf.func_fit_reports_wf.ds_sdc_report" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_fit_wf/func_fit_reports_wf/ds_sdc_report".
+261004-22:17:59,251 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.crowncc_metadata_fmt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/crowncc_metadata_fmt".
+261004-22:17:59,256 nipype.workflow INFO:
+	 [Node] Executing "crowncc_metadata_fmt" <niworkflows.interfaces.utility.TSV2JSON>
+261004-22:17:59,270 nipype.workflow INFO:
+	 [Node] Finished "crowncc_metadata_fmt", elapsed time 0.013393s.
+261004-22:18:00,475 nipype.workflow INFO:
+	 [Node] Executing "ds_sdc_report" <fmriprep.interfaces.DerivativesDataSink>
+261004-22:18:00,489 nipype.workflow INFO:
+	 [Node] Finished "ds_sdc_report", elapsed time 0.011882s.
+261004-22:18:00,840 nipype.workflow INFO:
+	 [Node] Executing "ds_epi_t1_report" <fmriprep.interfaces.DerivativesDataSink>
+261004-22:18:00,856 nipype.workflow INFO:
+	 [Node] Finished "ds_epi_t1_report", elapsed time 0.014961s.
+261004-22:18:01,215 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_anat_wf.resample" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_anat_wf/resample".
+261004-22:18:01,221 nipype.workflow INFO:
+	 [Node] Executing "resample" <fmriprep.interfaces.resampling.ResampleSeries>
+261004-22:18:08,266 nipype.workflow INFO:
+	 [Node] Finished "resample", elapsed time 7.043705s.
+261004-22:18:09,239 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin0".
+261004-22:18:09,241 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_bin0" <niworkflows.interfaces.nibabel.Binarize>
+261004-22:18:09,242 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin1".
+261004-22:18:09,243 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin2".
+261004-22:18:09,245 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_bin2" <niworkflows.interfaces.nibabel.Binarize>
+261004-22:18:09,246 nipype.workflow INFO:
+	 [Node] Executing "_acc_msk_bin1" <niworkflows.interfaces.nibabel.Binarize>
+261004-22:18:09,261 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_bin2", elapsed time 0.01552s.
+261004-22:18:09,264 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_bin0", elapsed time 0.022066s.
+261004-22:18:09,265 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_bin1", elapsed time 0.018485s.
+261004-22:18:11,251 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin0".
+261004-22:18:11,253 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_bin0" - collecting precomputed outputs
+261004-22:18:11,253 nipype.workflow INFO:
+	 [Node] "_acc_msk_bin0" found cached.
+261004-22:18:11,255 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin1".
+261004-22:18:11,257 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_bin1" - collecting precomputed outputs
+261004-22:18:11,258 nipype.workflow INFO:
+	 [Node] "_acc_msk_bin1" found cached.
+261004-22:18:11,258 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin2".
+261004-22:18:11,259 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_bin2" - collecting precomputed outputs
+261004-22:18:11,259 nipype.workflow INFO:
+	 [Node] "_acc_msk_bin2" found cached.
+261004-22:18:13,246 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.acompcor" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acompcor".
+261004-22:18:13,256 nipype.workflow INFO:
+	 [Node] Executing "acompcor" <niworkflows.interfaces.patches.RobustACompCor>
+261004-22:18:15,82 nipype.workflow INFO:
+	 [Node] Finished "acompcor", elapsed time 1.824704s.
+261004-22:18:15,259 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.signals" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/signals".
+261004-22:18:15,260 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.rois_plot" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/rois_plot".
+261004-22:18:15,266 nipype.workflow INFO:
+	 [Node] Executing "signals" <niworkflows.interfaces.images.SignalExtraction>
+261004-22:18:15,268 nipype.workflow INFO:
+	 [Node] Executing "rois_plot" <niworkflows.interfaces.reportlets.masks.ROIsPlot>
+261004-22:18:16,485 nipype.workflow INFO:
+	 [Node] Finished "signals", elapsed time 1.218337s.
+261004-22:18:17,245 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.rename_acompcor" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/rename_acompcor".
+261004-22:18:17,250 nipype.workflow INFO:
+	 [Node] Executing "rename_acompcor" <fmriprep.interfaces.confounds.RenameACompCor>
+261004-22:18:17,316 nipype.workflow INFO:
+	 [Node] Finished "rename_acompcor", elapsed time 0.064127s.
+261004-22:18:19,255 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.acc_metadata_filter" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_metadata_filter".
+261004-22:18:19,259 nipype.workflow INFO:
+	 [Node] Executing "acc_metadata_filter" <fmriprep.interfaces.confounds.FilterDropped>
+261004-22:18:19,267 nipype.workflow INFO:
+	 [Node] Finished "acc_metadata_filter", elapsed time 0.007101s.
+261004-22:18:19,556 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.compcor_plot" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/compcor_plot".
+261004-22:18:19,561 nipype.workflow INFO:
+	 [Node] Executing "compcor_plot" <nireports.interfaces.nuisance.CompCorVariancePlot>
+261004-22:18:20,246 nipype.workflow INFO:
+	 [Node] Finished "compcor_plot", elapsed time 0.683006s.
+261004-22:18:21,244 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.model_expansion" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/model_expansion".
+261004-22:18:21,247 nipype.workflow INFO:
+	 [Node] Executing "model_expansion" <niworkflows.interfaces.confounds.ExpandModel>
+261004-22:18:21,249 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.acc_metadata_fmt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/acc_metadata_fmt".
+261004-22:18:21,363 nipype.workflow INFO:
+	 [Node] Finished "model_expansion", elapsed time 0.113914s.
+261004-22:18:21,859 nipype.workflow INFO:
+	 [Node] Executing "acc_metadata_fmt" <niworkflows.interfaces.utility.TSV2JSON>
+261004-22:18:21,869 nipype.workflow INFO:
+	 [Node] Finished "acc_metadata_fmt", elapsed time 0.009642s.
+261004-22:18:22,658 nipype.workflow INFO:
+	 [Node] Finished "rois_plot", elapsed time 7.389122s.
+261004-22:18:23,683 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.spike_regressors" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/spike_regressors".
+261004-22:18:23,686 nipype.workflow INFO:
+	 [Node] Executing "spike_regressors" <niworkflows.interfaces.confounds.SpikeRegressors>
+261004-22:18:23,783 nipype.workflow INFO:
+	 [Node] Finished "spike_regressors", elapsed time 0.096743s.
+261004-22:18:23,980 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_confounds_wf.conf_corr_plot" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_confounds_wf/conf_corr_plot".
+261004-22:18:23,997 nipype.workflow INFO:
+	 [Node] Executing "conf_corr_plot" <nireports.interfaces.nuisance.ConfoundsCorrelationPlot>
+261004-22:18:24,723 nipype.workflow INFO:
+	 [Node] Finished "conf_corr_plot", elapsed time 0.724944s.
+261004-22:20:55,310 nipype.workflow INFO:
+	 [Node] Finished "registration", elapsed time 1149.89819s.
+261004-22:20:57,236 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.register_template_wf.outputnode" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/register_template_wf/outputnode".
+261004-22:20:57,245 nipype.workflow INFO:
+	 [Node] Executing "outputnode" <nipype.interfaces.utility.base.IdentityInterface>
+261004-22:20:57,247 nipype.workflow INFO:
+	 [Node] Finished "outputnode", elapsed time 0.000485s.
+261004-22:20:59,237 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.template_buffer" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/template_buffer".
+261004-22:20:59,242 nipype.workflow INFO:
+	 [Node] Executing "template_buffer" <nipype.interfaces.utility.base.Merge>
+261004-22:20:59,243 nipype.workflow INFO:
+	 [Node] Finished "template_buffer", elapsed time 0.000369s.
+261004-22:21:05,263 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat2std_buffer" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat2std_buffer".
+261004-22:21:05,264 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.std2anat_buffer" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/std2anat_buffer".
+261004-22:21:05,267 nipype.workflow INFO:
+	 [Node] Executing "std2anat_buffer" <nipype.interfaces.utility.base.Merge>
+261004-22:21:05,267 nipype.workflow INFO:
+	 [Node] Executing "anat2std_buffer" <nipype.interfaces.utility.base.Merge>
+261004-22:21:05,269 nipype.workflow INFO:
+	 [Node] Finished "anat2std_buffer", elapsed time 0.000368s.
+261004-22:21:05,269 nipype.workflow INFO:
+	 [Node] Finished "std2anat_buffer", elapsed time 0.000364s.
+261004-22:21:09,265 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.ds_std_volumes_wf.anat2std_dseg" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_dseg".
+261004-22:21:09,265 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.ds_std_volumes_wf.anat2std_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_mask".
+261004-22:21:09,271 nipype.workflow INFO:
+	 [Node] Executing "anat2std_dseg" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:09,272 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.ds_std_volumes_wf.anat2std_t1w" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_t1w".
+261004-22:21:09,272 nipype.workflow INFO:
+	 [Node] Executing "anat2std_mask" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:09,275 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat_reports_wf.t1w_std" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_reports_wf/_in_tuple_MNI152NLin6Asym.res2/t1w_std".
+261004-22:21:09,276 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.ds_bold_std_wf.boldref2target" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/ds_bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/boldref2target".
+261004-22:21:09,276 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.carpetplot_wf.mrg_xfms" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/carpetplot_wf/mrg_xfms".
+261004-22:21:09,276 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat_reports_wf.mask_std" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_reports_wf/_in_tuple_MNI152NLin6Asym.res2/mask_std".
+261004-22:21:09,277 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.ds_bold_std_wf.sources" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/ds_bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/sources".
+261004-22:21:09,280 nipype.workflow INFO:
+	 [Node] Executing "anat2std_t1w" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:09,281 nipype.workflow INFO:
+	 [Node] Executing "mrg_xfms" <nipype.interfaces.utility.base.Merge>
+261004-22:21:09,283 nipype.workflow INFO:
+	 [Node] Finished "mrg_xfms", elapsed time 0.000245s.
+261004-22:21:09,290 nipype.workflow INFO:
+	 [Node] Executing "t1w_std" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:09,294 nipype.workflow INFO:
+	 [Node] Executing "boldref2target" <nipype.interfaces.utility.base.Merge>
+261004-22:21:09,295 nipype.workflow INFO:
+	 [Node] Finished "boldref2target", elapsed time 0.000244s.
+261004-22:21:09,296 nipype.workflow INFO:
+	 [Node] Executing "mask_std" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:09,304 nipype.workflow INFO:
+	 [Node] Executing "sources" <fmriprep.interfaces.bids.BIDSURI>
+261004-22:21:09,306 nipype.workflow INFO:
+	 [Node] Finished "sources", elapsed time 0.0012s.
+261004-22:21:11,279 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.ds_bold_std_wf.resample_ref" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/ds_bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/resample_ref".
+261004-22:21:11,279 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.carpetplot_wf.resample_parc" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/carpetplot_wf/resample_parc".
+261004-22:21:11,282 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.ds_bold_std_wf.resample_mask" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/ds_bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/resample_mask".
+261004-22:21:11,289 nipype.workflow INFO:
+	 [Node] Executing "resample_parc" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:11,289 nipype.workflow INFO:
+	 [Node] Executing "resample_ref" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:11,292 nipype.workflow INFO:
+	 [Node] Executing "resample_mask" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:11,902 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_tpms/mapflow/_anat2std_tpms1".
+261004-22:21:11,902 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_tpms/mapflow/_anat2std_tpms0".
+261004-22:21:11,902 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_tpms/mapflow/_anat2std_tpms2".
+261004-22:21:11,905 nipype.workflow INFO:
+	 [Node] Executing "_anat2std_tpms2" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:11,905 nipype.workflow INFO:
+	 [Node] Executing "_anat2std_tpms1" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:11,908 nipype.workflow INFO:
+	 [Node] Executing "_anat2std_tpms0" <niworkflows.interfaces.fixes.FixHeaderApplyTransforms>
+261004-22:21:12,962 nipype.workflow INFO:
+	 [Node] Finished "anat2std_t1w", elapsed time 3.6810929999999997s.
+261004-22:21:13,246 nipype.workflow INFO:
+	 [Node] Finished "t1w_std", elapsed time 3.955688s.
+261004-22:21:13,688 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_std_wf.fmap_recon" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/fmap_recon".
+261004-22:21:13,692 nipype.workflow INFO:
+	 [Node] Executing "fmap_recon" <fmriprep.interfaces.resampling.ReconstructFieldmap>
+261004-22:21:13,977 nipype.workflow INFO:
+	 [Node] Finished "_anat2std_tpms2", elapsed time 2.072016s.
+261004-22:21:14,119 nipype.workflow INFO:
+	 [Node] Finished "resample_parc", elapsed time 2.825829s.
+261004-22:21:14,177 nipype.workflow INFO:
+	 [Node] Finished "_anat2std_tpms0", elapsed time 2.267507s.
+261004-22:21:14,328 nipype.workflow INFO:
+	 [Node] Finished "_anat2std_tpms1", elapsed time 2.422482s.
+261004-22:21:14,681 nipype.workflow INFO:
+	 [Node] Finished "mask_std", elapsed time 5.383624s.
+261004-22:21:14,960 nipype.workflow INFO:
+	 [Node] Finished "anat2std_mask", elapsed time 5.686482s.
+261004-22:21:14,991 nipype.workflow INFO:
+	 [Node] Finished "resample_ref", elapsed time 3.692508s.
+261004-22:21:15,264 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms0" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_tpms/mapflow/_anat2std_tpms0".
+261004-22:21:15,265 nipype.workflow INFO:
+	 [Node] Cached "_anat2std_tpms0" - collecting precomputed outputs
+261004-22:21:15,265 nipype.workflow INFO:
+	 [Node] "_anat2std_tpms0" found cached.
+261004-22:21:15,266 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms1" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_tpms/mapflow/_anat2std_tpms1".
+261004-22:21:15,267 nipype.workflow INFO:
+	 [Node] Cached "_anat2std_tpms1" - collecting precomputed outputs
+261004-22:21:15,267 nipype.workflow INFO:
+	 [Node] "_anat2std_tpms1" found cached.
+261004-22:21:15,268 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms2" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/ds_std_volumes_wf/_in_tuple_MNI152NLin6Asym.res2/anat2std_tpms/mapflow/_anat2std_tpms2".
+261004-22:21:15,269 nipype.workflow INFO:
+	 [Node] Cached "_anat2std_tpms2" - collecting precomputed outputs
+261004-22:21:15,269 nipype.workflow INFO:
+	 [Node] "_anat2std_tpms2" found cached.
+261004-22:21:15,282 nipype.interface WARNING:
+	 Changing /home/jovyan/trust_example/derivatives/fmriprep/sub-104/anat/sub-104_space-MNI152NLin6Asym_res-2_desc-brain_mask.nii.gz dtype from float64 to float64
+261004-22:21:15,540 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat_reports_wf.norm_msk" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_reports_wf/_in_tuple_MNI152NLin6Asym.res2/norm_msk".
+261004-22:21:15,543 nipype.workflow INFO:
+	 [Node] Executing "norm_msk" <nipype.interfaces.utility.wrappers.Function>
+261004-22:21:15,585 nipype.workflow INFO:
+	 [Node] Finished "anat2std_dseg", elapsed time 6.313407s.
+261004-22:21:15,662 nipype.workflow INFO:
+	 [Node] Finished "fmap_recon", elapsed time 1.969339s.
+261004-22:21:15,733 nipype.workflow INFO:
+	 [Node] Finished "norm_msk", elapsed time 0.188648s.
+261004-22:21:15,951 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.carpetplot_wf.parcels" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/carpetplot_wf/parcels".
+261004-22:21:15,958 nipype.workflow INFO:
+	 [Node] Executing "parcels" <nipype.interfaces.utility.wrappers.Function>
+261004-22:21:15,977 nipype.workflow INFO:
+	 [Node] Finished "parcels", elapsed time 0.017947s.
+261004-22:21:16,337 nipype.workflow INFO:
+	 [Node] Finished "resample_mask", elapsed time 5.042861s.
+261004-22:21:17,266 nipype.interface WARNING:
+	 Changing /home/jovyan/trust_example/derivatives/fmriprep/sub-104/anat/sub-104_space-MNI152NLin6Asym_res-2_dseg.nii.gz dtype from float64 to float64
+261004-22:21:18,463 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.anat_fit_wf.anat_reports_wf.norm_rpt" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/anat_fit_wf/anat_reports_wf/_in_tuple_MNI152NLin6Asym.res2/norm_rpt".
+261004-22:21:18,470 nipype.workflow INFO:
+	 [Node] Executing "norm_rpt" <niworkflows.interfaces.reportlets.registration.SimpleBeforeAfterRPT>
+261004-22:21:18,484 nipype.interface WARNING:
+	 Changing /home/jovyan/trust_example/derivatives/fmriprep/sub-104/func/sub-104_task-trust_run-01_space-MNI152NLin6Asym_res-2_desc-brain_mask.nii.gz dtype from float64 to float64
+261004-22:21:18,733 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.bold_std_wf.resample" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/resample".
+261004-22:21:18,739 nipype.workflow INFO:
+	 [Node] Executing "resample" <fmriprep.interfaces.resampling.ResampleSeries>
+261004-22:21:19,939 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.carpetplot_wf.conf_plot" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/carpetplot_wf/conf_plot".
+261004-22:21:19,943 nipype.workflow INFO:
+	 [Node] Executing "conf_plot" <fmriprep.interfaces.confounds.FMRISummary>
+261004-22:21:23,196 nipype.workflow INFO:
+	 [Node] Finished "conf_plot", elapsed time 3.252608s.
+261004-22:21:27,750 nipype.workflow INFO:
+	 [Node] Finished "norm_rpt", elapsed time 9.278313s.
+261004-22:21:59,35 nipype.workflow INFO:
+	 [Node] Finished "resample", elapsed time 40.295228s.
+261004-22:21:59,280 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_25_2_wf.sub_104_wf.bold_task_trust_run_01_wf.ds_bold_std_wf.ds_bold" in "/home/jovyan/trust_example/scratch/fmriprep_work/fmriprep_25_2_wf/sub_104_wf/bold_task_trust_run_01_wf/ds_bold_std_wf/_in_tuple_MNI152NLin6Asym.res2/ds_bold".
+261004-22:21:59,284 nipype.workflow INFO:
+	 [Node] Executing "ds_bold" <fmriprep.interfaces.DerivativesDataSink>
+261004-22:22:31,547 nipype.workflow INFO:
+	 [Node] Finished "ds_bold", elapsed time 32.261573s.
+261004-22:22:35,211 nipype.workflow IMPORTANT:
+	 fMRIPrep finished successfully!
+261004-22:22:35,215 nipype.workflow IMPORTANT:
+	 Works derived from this fMRIPrep execution should include the boilerplate text found in <OUTPUT_PATH>/logs/CITATION.md.

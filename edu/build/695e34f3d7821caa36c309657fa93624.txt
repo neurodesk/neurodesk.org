@@ -1,0 +1,819 @@
+260709-22:59:53,672 nipype.workflow INFO:
+	 Workflow level1_spm settings: ['check', 'execution', 'logging', 'monitoring']
+260709-22:59:53,692 nipype.workflow INFO:
+	 Running in parallel.
+260709-22:59:53,695 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 5 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-22:59:53,914 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.datagrabber" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/datagrabber".
+260709-22:59:53,914 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.datagrabber" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/datagrabber".
+260709-22:59:53,915 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.datagrabber" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/datagrabber".
+260709-22:59:53,915 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.datagrabber" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/datagrabber".
+260709-22:59:53,915 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.datagrabber" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/datagrabber".
+260709-22:59:53,920 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+260709-22:59:53,921 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+260709-22:59:53,922 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+260709-22:59:53,922 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+260709-22:59:53,922 nipype.workflow INFO:
+	 [Node] Executing "datagrabber" <nipype.interfaces.io.DataGrabber>
+260709-22:59:53,924 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.00111s.
+260709-22:59:53,924 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.000897s.
+260709-22:59:53,926 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.001025s.
+260709-22:59:53,926 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.001121s.
+260709-22:59:53,926 nipype.workflow INFO:
+	 [Node] Finished "datagrabber", elapsed time 0.001121s.
+260709-22:59:55,696 nipype.workflow INFO:
+	 [Job 0] Completed (level1_spm.datagrabber).
+260709-22:59:55,698 nipype.workflow INFO:
+	 [Job 1] Completed (level1_spm.datagrabber).
+260709-22:59:55,699 nipype.workflow INFO:
+	 [Job 2] Completed (level1_spm.datagrabber).
+260709-22:59:55,700 nipype.workflow INFO:
+	 [Job 3] Completed (level1_spm.datagrabber).
+260709-22:59:55,701 nipype.workflow INFO:
+	 [Job 4] Completed (level1_spm.datagrabber).
+260709-22:59:55,702 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 10 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-22:59:57,696 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 20 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-22:59:57,792 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/gunzip_func/mapflow/_gunzip_func1".
+260709-22:59:57,792 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:57,793 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:57,794 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/gunzip_func/mapflow/_gunzip_func0".
+260709-22:59:57,792 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/gunzip_func/mapflow/_gunzip_func0".
+260709-22:59:57,794 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/gunzip_func/mapflow/_gunzip_func1".
+260709-22:59:57,795 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:57,798 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func1" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,800 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func0" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,798 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:57,795 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:57,799 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo0" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,797 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/gunzip_func/mapflow/_gunzip_func1".
+260709-22:59:57,798 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func0" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,799 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo1" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,800 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo1" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,799 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:57,797 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/gunzip_func/mapflow/_gunzip_func0".
+260709-22:59:57,802 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo0" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,803 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo1" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,804 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/gunzip_func/mapflow/_gunzip_func0".
+260709-22:59:57,804 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:57,800 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func1" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,804 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:57,803 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func1" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,805 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo0" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,804 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/gunzip_func/mapflow/_gunzip_func1".
+260709-22:59:57,807 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func0" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,807 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo1" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,808 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func0" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,808 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func1" <nipype.algorithms.misc.Gunzip>
+260709-22:59:57,810 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo0" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:57,822 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo1", elapsed time 0.019757s.
+260709-22:59:57,823 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo1", elapsed time 0.018413s.
+260709-22:59:57,826 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo1", elapsed time 0.022755s.
+260709-22:59:57,830 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo1", elapsed time 0.019977s.
+260709-22:59:57,835 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo0", elapsed time 0.028365s.
+260709-22:59:57,839 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo0", elapsed time 0.034603s.
+260709-22:59:57,843 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo0", elapsed time 0.027737s.
+260709-22:59:57,844 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo0", elapsed time 0.031348s.
+260709-22:59:59,696 nipype.workflow INFO:
+	 [Job 37] Completed (_getsubjectinfo0).
+260709-22:59:59,699 nipype.workflow INFO:
+	 [Job 38] Completed (_getsubjectinfo1).
+260709-22:59:59,700 nipype.workflow INFO:
+	 [Job 41] Completed (_getsubjectinfo0).
+260709-22:59:59,700 nipype.workflow INFO:
+	 [Job 42] Completed (_getsubjectinfo1).
+260709-22:59:59,702 nipype.workflow INFO:
+	 [Job 45] Completed (_getsubjectinfo0).
+260709-22:59:59,702 nipype.workflow INFO:
+	 [Job 46] Completed (_getsubjectinfo1).
+260709-22:59:59,703 nipype.workflow INFO:
+	 [Job 49] Completed (_getsubjectinfo0).
+260709-22:59:59,704 nipype.workflow INFO:
+	 [Job 50] Completed (_getsubjectinfo1).
+260709-22:59:59,705 nipype.workflow INFO:
+	 [MultiProc] Running 8 tasks, and 8 jobs ready. Free memory (GB): 54.91/56.51, Free processors: 8/16, Free GPU slot:0/0.
+                     Currently running:
+                       * _gunzip_func1
+                       * _gunzip_func0
+                       * _gunzip_func1
+                       * _gunzip_func0
+                       * _gunzip_func1
+                       * _gunzip_func0
+                       * _gunzip_func1
+                       * _gunzip_func0
+260709-22:59:59,834 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:59,834 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:59,836 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo0" - collecting precomputed outputs
+260709-22:59:59,836 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo0" - collecting precomputed outputs
+260709-22:59:59,837 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo0" found cached.
+260709-22:59:59,837 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:59,837 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo0" found cached.
+260709-22:59:59,839 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/gunzip_func/mapflow/_gunzip_func1".
+260709-22:59:59,839 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:59,839 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/gunzip_func/mapflow/_gunzip_func0".
+260709-22:59:59,842 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func1" <nipype.algorithms.misc.Gunzip>
+260709-22:59:59,839 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:59,841 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-22:59:59,840 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo0" - collecting precomputed outputs
+260709-22:59:59,840 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:59,841 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:59,841 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo0" found cached.
+260709-22:59:59,841 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo1" - collecting precomputed outputs
+260709-22:59:59,842 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo0" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:59,843 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo0" - collecting precomputed outputs
+260709-22:59:59,845 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:59,847 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo1" - collecting precomputed outputs
+260709-22:59:59,844 nipype.workflow INFO:
+	 [Node] Executing "_getsubjectinfo1" <nipype.interfaces.utility.wrappers.Function>
+260709-22:59:59,844 nipype.workflow INFO:
+	 [Node] Executing "_gunzip_func0" <nipype.algorithms.misc.Gunzip>
+260709-22:59:59,844 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo1" found cached.
+260709-22:59:59,848 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo0" found cached.
+260709-22:59:59,848 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo1" - collecting precomputed outputs
+260709-22:59:59,849 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo1" found cached.
+260709-22:59:59,850 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo1" found cached.
+260709-22:59:59,851 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-22:59:59,857 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo1" - collecting precomputed outputs
+260709-22:59:59,857 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo0", elapsed time 0.011135s.
+260709-22:59:59,858 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo1" found cached.
+260709-22:59:59,861 nipype.workflow INFO:
+	 [Node] Finished "_getsubjectinfo1", elapsed time 0.011794s.
+260709-23:00:01,565 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func1", elapsed time 3.757956s.
+260709-23:00:01,610 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func0", elapsed time 3.804603s.
+260709-23:00:01,668 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func1", elapsed time 3.8568949999999997s.
+260709-23:00:01,674 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func0", elapsed time 3.871911s.
+260709-23:00:01,682 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func0", elapsed time 3.87399s.
+260709-23:00:01,695 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func0", elapsed time 3.884369s.
+260709-23:00:01,696 nipype.workflow INFO:
+	 [Job 40] Completed (_gunzip_func1).
+260709-23:00:01,697 nipype.workflow INFO:
+	 [Job 6] Completed (level1_spm.getsubjectinfo).
+260709-23:00:01,698 nipype.workflow INFO:
+	 [Job 8] Completed (level1_spm.getsubjectinfo).
+260709-23:00:01,699 nipype.workflow INFO:
+	 [Job 10] Completed (level1_spm.getsubjectinfo).
+260709-23:00:01,700 nipype.workflow INFO:
+	 [Job 12] Completed (level1_spm.getsubjectinfo).
+260709-23:00:01,700 nipype.workflow INFO:
+	 [Job 53] Completed (_getsubjectinfo0).
+260709-23:00:01,701 nipype.workflow INFO:
+	 [Job 54] Completed (_getsubjectinfo1).
+260709-23:00:01,702 nipype.workflow INFO:
+	 [MultiProc] Running 9 tasks, and 1 jobs ready. Free memory (GB): 54.71/56.51, Free processors: 7/16, Free GPU slot:0/0.
+                     Currently running:
+                       * _gunzip_func1
+                       * _gunzip_func0
+                       * _gunzip_func1
+                       * _gunzip_func0
+                       * _gunzip_func1
+                       * _gunzip_func0
+                       * _gunzip_func0
+                       * _gunzip_func1
+                       * _gunzip_func0
+260709-23:00:01,710 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func1", elapsed time 3.908633s.
+260709-23:00:01,724 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func1", elapsed time 3.910553s.
+260709-23:00:01,840 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/getsubjectinfo/mapflow/_getsubjectinfo0".
+260709-23:00:01,842 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo0" - collecting precomputed outputs
+260709-23:00:01,845 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo0" found cached.
+260709-23:00:01,851 nipype.workflow INFO:
+	 [Node] Setting-up "_getsubjectinfo1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/getsubjectinfo/mapflow/_getsubjectinfo1".
+260709-23:00:01,855 nipype.workflow INFO:
+	 [Node] Cached "_getsubjectinfo1" - collecting precomputed outputs
+260709-23:00:01,858 nipype.workflow INFO:
+	 [Node] "_getsubjectinfo1" found cached.
+260709-23:00:03,697 nipype.workflow INFO:
+	 [Job 35] Completed (_gunzip_func0).
+260709-23:00:03,697 nipype.workflow INFO:
+	 [Job 36] Completed (_gunzip_func1).
+260709-23:00:03,698 nipype.workflow INFO:
+	 [Job 39] Completed (_gunzip_func0).
+260709-23:00:03,699 nipype.workflow INFO:
+	 [Job 43] Completed (_gunzip_func0).
+260709-23:00:03,700 nipype.workflow INFO:
+	 [Job 44] Completed (_gunzip_func1).
+260709-23:00:03,700 nipype.workflow INFO:
+	 [Job 47] Completed (_gunzip_func0).
+260709-23:00:03,701 nipype.workflow INFO:
+	 [Job 48] Completed (_gunzip_func1).
+260709-23:00:03,702 nipype.workflow INFO:
+	 [Job 14] Completed (level1_spm.getsubjectinfo).
+260709-23:00:03,703 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 4 jobs ready. Free memory (GB): 56.11/56.51, Free processors: 14/16, Free GPU slot:0/0.
+                     Currently running:
+                       * _gunzip_func1
+                       * _gunzip_func0
+260709-23:00:03,819 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/gunzip_func/mapflow/_gunzip_func0".
+260709-23:00:03,819 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/gunzip_func/mapflow/_gunzip_func0".
+260709-23:00:03,819 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/gunzip_func/mapflow/_gunzip_func0".
+260709-23:00:03,819 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/gunzip_func/mapflow/_gunzip_func0".
+260709-23:00:03,821 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func0" - collecting precomputed outputs
+260709-23:00:03,821 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func0" - collecting precomputed outputs
+260709-23:00:03,821 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func0" - collecting precomputed outputs
+260709-23:00:03,821 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func0" - collecting precomputed outputs
+260709-23:00:03,822 nipype.workflow INFO:
+	 [Node] "_gunzip_func0" found cached.
+260709-23:00:03,822 nipype.workflow INFO:
+	 [Node] "_gunzip_func0" found cached.
+260709-23:00:03,823 nipype.workflow INFO:
+	 [Node] "_gunzip_func0" found cached.
+260709-23:00:03,822 nipype.workflow INFO:
+	 [Node] "_gunzip_func0" found cached.
+260709-23:00:03,823 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/gunzip_func/mapflow/_gunzip_func1".
+260709-23:00:03,823 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/gunzip_func/mapflow/_gunzip_func1".
+260709-23:00:03,824 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/gunzip_func/mapflow/_gunzip_func1".
+260709-23:00:03,824 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/gunzip_func/mapflow/_gunzip_func1".
+260709-23:00:03,825 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func1" - collecting precomputed outputs
+260709-23:00:03,825 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func1" - collecting precomputed outputs
+260709-23:00:03,826 nipype.workflow INFO:
+	 [Node] "_gunzip_func1" found cached.
+260709-23:00:03,826 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func1" - collecting precomputed outputs
+260709-23:00:03,826 nipype.workflow INFO:
+	 [Node] "_gunzip_func1" found cached.
+260709-23:00:03,826 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func1" - collecting precomputed outputs
+260709-23:00:03,829 nipype.workflow INFO:
+	 [Node] "_gunzip_func1" found cached.
+260709-23:00:03,829 nipype.workflow INFO:
+	 [Node] "_gunzip_func1" found cached.
+260709-23:00:05,697 nipype.workflow INFO:
+	 [Job 5] Completed (level1_spm.gunzip_func).
+260709-23:00:05,698 nipype.workflow INFO:
+	 [Job 7] Completed (level1_spm.gunzip_func).
+260709-23:00:05,699 nipype.workflow INFO:
+	 [Job 9] Completed (level1_spm.gunzip_func).
+260709-23:00:05,699 nipype.workflow INFO:
+	 [Job 11] Completed (level1_spm.gunzip_func).
+260709-23:00:05,701 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 4 jobs ready. Free memory (GB): 56.11/56.51, Free processors: 14/16, Free GPU slot:0/0.
+                     Currently running:
+                       * _gunzip_func1
+                       * _gunzip_func0
+260709-23:00:05,802 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.modelspec" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/modelspec".
+260709-23:00:05,802 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.modelspec" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/modelspec".
+260709-23:00:05,802 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.modelspec" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/modelspec".
+260709-23:00:05,802 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.modelspec" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/modelspec".
+260709-23:00:05,866 nipype.workflow INFO:
+	 [Node] Executing "modelspec" <nipype.algorithms.modelgen.SpecifySPMModel>
+260709-23:00:05,866 nipype.workflow INFO:
+	 [Node] Executing "modelspec" <nipype.algorithms.modelgen.SpecifySPMModel>
+260709-23:00:05,867 nipype.workflow INFO:
+	 [Node] Executing "modelspec" <nipype.algorithms.modelgen.SpecifySPMModel>
+260709-23:00:05,867 nipype.workflow INFO:
+	 [Node] Executing "modelspec" <nipype.algorithms.modelgen.SpecifySPMModel>
+260709-23:00:05,873 nipype.workflow INFO:
+	 [Node] Finished "modelspec", elapsed time 0.004827s.
+260709-23:00:05,873 nipype.workflow INFO:
+	 [Node] Finished "modelspec", elapsed time 0.005028s.
+260709-23:00:05,874 nipype.workflow INFO:
+	 [Node] Finished "modelspec", elapsed time 0.004621s.
+260709-23:00:05,874 nipype.workflow INFO:
+	 [Node] Finished "modelspec", elapsed time 0.006227s.
+260709-23:00:07,697 nipype.workflow INFO:
+	 [Job 15] Completed (level1_spm.modelspec).
+260709-23:00:07,698 nipype.workflow INFO:
+	 [Job 16] Completed (level1_spm.modelspec).
+260709-23:00:07,699 nipype.workflow INFO:
+	 [Job 17] Completed (level1_spm.modelspec).
+260709-23:00:07,700 nipype.workflow INFO:
+	 [Job 18] Completed (level1_spm.modelspec).
+260709-23:00:07,701 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 4 jobs ready. Free memory (GB): 56.11/56.51, Free processors: 14/16, Free GPU slot:0/0.
+                     Currently running:
+                       * _gunzip_func1
+                       * _gunzip_func0
+260709-23:00:07,832 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1design" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/level1design".
+260709-23:00:07,833 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1design" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/level1design".
+260709-23:00:07,833 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1design" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/level1design".
+260709-23:00:07,833 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1design" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/level1design".
+260709-23:00:07,864 nipype.workflow INFO:
+	 [Node] Executing "level1design" <nipype.interfaces.spm.model.Level1Design>
+260709-23:00:07,864 nipype.workflow INFO:
+	 [Node] Executing "level1design" <nipype.interfaces.spm.model.Level1Design>
+260709-23:00:07,864 nipype.workflow INFO:
+	 [Node] Executing "level1design" <nipype.interfaces.spm.model.Level1Design>
+260709-23:00:07,864 nipype.workflow INFO:
+	 [Node] Executing "level1design" <nipype.interfaces.spm.model.Level1Design>
+260709-23:00:09,699 nipype.workflow INFO:
+	 [MultiProc] Running 6 tasks, and 0 jobs ready. Free memory (GB): 55.31/56.51, Free processors: 10/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * _gunzip_func1
+                       * _gunzip_func0
+260709-23:00:09,802 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func0", elapsed time 9.95196s.
+260709-23:00:09,823 nipype.workflow INFO:
+	 [Node] Finished "_gunzip_func1", elapsed time 9.979388s.
+260709-23:00:11,699 nipype.workflow INFO:
+	 [Job 51] Completed (_gunzip_func0).
+260709-23:00:11,700 nipype.workflow INFO:
+	 [Job 52] Completed (_gunzip_func1).
+260709-23:00:11,701 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 1 jobs ready. Free memory (GB): 55.71/56.51, Free processors: 12/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+260709-23:00:11,806 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func0" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/gunzip_func/mapflow/_gunzip_func0".
+260709-23:00:11,808 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func0" - collecting precomputed outputs
+260709-23:00:11,809 nipype.workflow INFO:
+	 [Node] "_gunzip_func0" found cached.
+260709-23:00:11,810 nipype.workflow INFO:
+	 [Node] Setting-up "_gunzip_func1" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/gunzip_func/mapflow/_gunzip_func1".
+260709-23:00:11,811 nipype.workflow INFO:
+	 [Node] Cached "_gunzip_func1" - collecting precomputed outputs
+260709-23:00:11,812 nipype.workflow INFO:
+	 [Node] "_gunzip_func1" found cached.
+260709-23:00:13,700 nipype.workflow INFO:
+	 [Job 13] Completed (level1_spm.gunzip_func).
+260709-23:00:13,702 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 1 jobs ready. Free memory (GB): 55.71/56.51, Free processors: 12/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+260709-23:00:13,818 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.modelspec" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/modelspec".
+260709-23:00:13,826 nipype.workflow INFO:
+	 [Node] Executing "modelspec" <nipype.algorithms.modelgen.SpecifySPMModel>
+260709-23:00:13,831 nipype.workflow INFO:
+	 [Node] Finished "modelspec", elapsed time 0.004051s.
+260709-23:00:15,700 nipype.workflow INFO:
+	 [Job 19] Completed (level1_spm.modelspec).
+260709-23:00:15,701 nipype.workflow INFO:
+	 [MultiProc] Running 4 tasks, and 1 jobs ready. Free memory (GB): 55.71/56.51, Free processors: 12/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+260709-23:00:15,814 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1design" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/level1design".
+260709-23:00:15,825 nipype.workflow INFO:
+	 [Node] Executing "level1design" <nipype.interfaces.spm.model.Level1Design>
+260709-23:00:17,700 nipype.workflow INFO:
+	 [MultiProc] Running 5 tasks, and 0 jobs ready. Free memory (GB): 55.51/56.51, Free processors: 11/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+                       * level1_spm.level1design
+260709-23:00:40,50 nipype.workflow INFO:
+	 [Node] Finished "level1design", elapsed time 32.184618s.
+260709-23:00:40,50 nipype.workflow INFO:
+	 [Node] Finished "level1design", elapsed time 32.184482s.
+260709-23:00:40,59 nipype.workflow INFO:
+	 [Node] Finished "level1design", elapsed time 32.193457s.
+260709-23:00:40,77 nipype.workflow INFO:
+	 [Node] Finished "level1design", elapsed time 24.249767s.
+260709-23:00:40,83 nipype.workflow INFO:
+	 [Node] Finished "level1design", elapsed time 32.217381s.
+260709-23:00:41,702 nipype.workflow INFO:
+	 [Job 20] Completed (level1_spm.level1design).
+260709-23:00:41,703 nipype.workflow INFO:
+	 [Job 21] Completed (level1_spm.level1design).
+260709-23:00:41,704 nipype.workflow INFO:
+	 [Job 22] Completed (level1_spm.level1design).
+260709-23:00:41,705 nipype.workflow INFO:
+	 [Job 23] Completed (level1_spm.level1design).
+260709-23:00:41,705 nipype.workflow INFO:
+	 [Job 24] Completed (level1_spm.level1design).
+260709-23:00:41,707 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 5 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:00:41,805 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/level1estimate".
+260709-23:00:41,806 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/level1estimate".
+260709-23:00:41,806 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/level1estimate".
+260709-23:00:41,806 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/level1estimate".
+260709-23:00:41,806 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.level1estimate" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/level1estimate".
+260709-23:00:41,812 nipype.workflow INFO:
+	 [Node] Executing "level1estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:00:41,812 nipype.workflow INFO:
+	 [Node] Executing "level1estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:00:41,812 nipype.workflow INFO:
+	 [Node] Executing "level1estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:00:41,813 nipype.workflow INFO:
+	 [Node] Executing "level1estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:00:41,813 nipype.workflow INFO:
+	 [Node] Executing "level1estimate" <nipype.interfaces.spm.model.EstimateModel>
+260709-23:00:43,704 nipype.workflow INFO:
+	 [MultiProc] Running 5 tasks, and 0 jobs ready. Free memory (GB): 55.51/56.51, Free processors: 11/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1estimate
+                       * level1_spm.level1estimate
+                       * level1_spm.level1estimate
+                       * level1_spm.level1estimate
+                       * level1_spm.level1estimate
+260709-23:01:26,666 nipype.workflow INFO:
+	 [Node] Finished "level1estimate", elapsed time 44.849597s.
+260709-23:01:26,702 nipype.workflow INFO:
+	 [Node] Finished "level1estimate", elapsed time 44.886442s.
+260709-23:01:27,641 nipype.workflow INFO:
+	 [Node] Finished "level1estimate", elapsed time 45.826497s.
+260709-23:01:27,709 nipype.workflow INFO:
+	 [Job 27] Completed (level1_spm.level1estimate).
+260709-23:01:27,710 nipype.workflow INFO:
+	 [Job 28] Completed (level1_spm.level1estimate).
+260709-23:01:27,711 nipype.workflow INFO:
+	 [Job 29] Completed (level1_spm.level1estimate).
+260709-23:01:27,712 nipype.workflow INFO:
+	 [MultiProc] Running 2 tasks, and 3 jobs ready. Free memory (GB): 56.11/56.51, Free processors: 14/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1estimate
+                       * level1_spm.level1estimate
+260709-23:01:27,737 nipype.workflow INFO:
+	 [Node] Finished "level1estimate", elapsed time 45.923172s.
+260709-23:01:27,824 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.sinker" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_03/sinker".
+260709-23:01:27,824 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.sinker" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_05/sinker".
+260709-23:01:27,824 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.sinker" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_04/sinker".
+260709-23:01:27,831 nipype.workflow INFO:
+	 [Node] Executing "sinker" <nipype.interfaces.io.DataSink>
+260709-23:01:27,831 nipype.workflow INFO:
+	 [Node] Executing "sinker" <nipype.interfaces.io.DataSink>
+260709-23:01:27,832 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///SPM.mat
+260709-23:01:27,832 nipype.workflow INFO:
+	 [Node] Executing "sinker" <nipype.interfaces.io.DataSink>
+260709-23:01:27,833 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///SPM.mat
+260709-23:01:27,833 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmT_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmT_0005.nii
+260709-23:01:27,834 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmT_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmT_0005.nii
+260709-23:01:27,834 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///SPM.mat
+260709-23:01:27,834 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmT_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmT_0006.nii
+260709-23:01:27,835 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmT_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmT_0006.nii
+260709-23:01:27,835 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmT_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmT_0005.nii
+260709-23:01:27,836 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmT_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmT_0007.nii
+260709-23:01:27,836 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmT_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmT_0006.nii
+260709-23:01:27,837 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmT_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmT_0007.nii
+260709-23:01:27,837 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmT_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmT_0008.nii
+260709-23:01:27,837 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmT_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmT_0007.nii
+260709-23:01:27,838 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmT_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmT_0008.nii
+260709-23:01:27,838 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmT_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmT_0009.nii
+260709-23:01:27,839 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmT_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmT_0009.nii
+260709-23:01:27,838 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmT_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmT_0008.nii
+260709-23:01:27,839 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmT_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmT_0010.nii
+260709-23:01:27,840 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmT_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmT_0010.nii
+260709-23:01:27,840 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmT_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmT_0009.nii
+260709-23:01:27,840 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/con_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///con_0005.nii
+260709-23:01:27,841 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/con_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///con_0005.nii
+260709-23:01:27,841 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmT_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmT_0010.nii
+260709-23:01:27,842 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/con_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///con_0006.nii
+260709-23:01:27,842 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/con_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///con_0005.nii
+260709-23:01:27,843 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/con_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///con_0006.nii
+260709-23:01:27,843 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/con_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///con_0007.nii
+260709-23:01:27,843 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/con_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///con_0006.nii
+260709-23:01:27,844 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/con_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///con_0008.nii
+260709-23:01:27,844 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/con_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///con_0007.nii
+260709-23:01:27,844 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/con_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///con_0007.nii
+260709-23:01:27,845 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/con_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///con_0008.nii
+260709-23:01:27,845 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/con_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///con_0009.nii
+260709-23:01:27,845 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/con_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///con_0008.nii
+260709-23:01:27,846 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/con_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///con_0010.nii
+260709-23:01:27,846 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/con_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///con_0009.nii
+260709-23:01:27,846 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/con_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///con_0009.nii
+260709-23:01:27,847 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmF_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmF_0001.nii
+260709-23:01:27,847 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/con_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///con_0010.nii
+260709-23:01:27,847 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/con_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///con_0010.nii
+260709-23:01:27,849 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmF_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmF_0001.nii
+260709-23:01:27,848 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmF_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmF_0002.nii
+260709-23:01:27,849 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmF_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmF_0001.nii
+260709-23:01:27,850 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmF_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmF_0002.nii
+260709-23:01:27,851 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmF_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmF_0003.nii
+260709-23:01:27,851 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmF_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmF_0002.nii
+260709-23:01:27,852 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmF_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmF_0003.nii
+260709-23:01:27,852 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/spmF_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///spmF_0004.nii
+260709-23:01:27,853 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/ess_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///ess_0001.nii
+260709-23:01:27,853 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/spmF_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///spmF_0004.nii
+260709-23:01:27,853 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmF_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmF_0003.nii
+260709-23:01:27,854 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/ess_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///ess_0001.nii
+260709-23:01:27,855 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/spmF_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///spmF_0004.nii
+260709-23:01:27,854 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/ess_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///ess_0002.nii
+260709-23:01:27,855 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/ess_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///ess_0002.nii
+260709-23:01:27,855 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/ess_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///ess_0003.nii
+260709-23:01:27,857 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/ess_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///ess_0004.nii
+260709-23:01:27,856 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/03/1stLevel/_subject_id_03/ess_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-03///ess_0003.nii
+260709-23:01:27,857 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/05/1stLevel/_subject_id_05/ess_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-05///ess_0004.nii
+260709-23:01:27,856 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/ess_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///ess_0001.nii
+260709-23:01:27,858 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/ess_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///ess_0002.nii
+260709-23:01:27,858 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.025216s.
+260709-23:01:27,858 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.026262s.
+260709-23:01:27,859 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/ess_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///ess_0003.nii
+260709-23:01:27,860 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/04/1stLevel/_subject_id_04/ess_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-04///ess_0004.nii
+260709-23:01:27,861 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.027104s.
+260709-23:01:29,709 nipype.workflow INFO:
+	 [Job 26] Completed (level1_spm.level1estimate).
+260709-23:01:29,710 nipype.workflow INFO:
+	 [Job 32] Completed (level1_spm.sinker).
+260709-23:01:29,711 nipype.workflow INFO:
+	 [Job 33] Completed (level1_spm.sinker).
+260709-23:01:29,712 nipype.workflow INFO:
+	 [Job 34] Completed (level1_spm.sinker).
+260709-23:01:29,713 nipype.workflow INFO:
+	 [MultiProc] Running 1 tasks, and 1 jobs ready. Free memory (GB): 56.31/56.51, Free processors: 15/16, Free GPU slot:0/0.
+                     Currently running:
+                       * level1_spm.level1estimate
+260709-23:01:29,819 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.sinker" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_02/sinker".
+260709-23:01:29,826 nipype.workflow INFO:
+	 [Node] Executing "sinker" <nipype.interfaces.io.DataSink>
+260709-23:01:29,827 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///SPM.mat
+260709-23:01:29,829 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmT_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmT_0005.nii
+260709-23:01:29,830 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmT_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmT_0006.nii
+260709-23:01:29,831 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmT_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmT_0007.nii
+260709-23:01:29,831 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmT_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmT_0008.nii
+260709-23:01:29,832 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmT_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmT_0009.nii
+260709-23:01:29,834 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmT_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmT_0010.nii
+260709-23:01:29,834 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/con_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///con_0005.nii
+260709-23:01:29,836 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/con_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///con_0006.nii
+260709-23:01:29,836 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/con_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///con_0007.nii
+260709-23:01:29,837 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/con_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///con_0008.nii
+260709-23:01:29,838 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/con_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///con_0009.nii
+260709-23:01:29,839 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/con_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///con_0010.nii
+260709-23:01:29,840 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmF_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmF_0001.nii
+260709-23:01:29,841 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmF_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmF_0002.nii
+260709-23:01:29,842 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmF_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmF_0003.nii
+260709-23:01:29,843 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/spmF_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///spmF_0004.nii
+260709-23:01:29,844 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/ess_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///ess_0001.nii
+260709-23:01:29,844 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/ess_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///ess_0002.nii
+260709-23:01:29,845 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/ess_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///ess_0003.nii
+260709-23:01:29,846 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/02/1stLevel/_subject_id_02/ess_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-02///ess_0004.nii
+260709-23:01:29,847 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.019926s.
+260709-23:01:30,155 nipype.workflow INFO:
+	 [Node] Finished "level1estimate", elapsed time 48.340842s.
+260709-23:01:31,709 nipype.workflow INFO:
+	 [Job 25] Completed (level1_spm.level1estimate).
+260709-23:01:31,710 nipype.workflow INFO:
+	 [Job 31] Completed (level1_spm.sinker).
+260709-23:01:31,712 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 1 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.
+260709-23:01:31,820 nipype.workflow INFO:
+	 [Node] Setting-up "level1_spm.sinker" in "/home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm/_subject_id_01/sinker".
+260709-23:01:31,827 nipype.workflow INFO:
+	 [Node] Executing "sinker" <nipype.interfaces.io.DataSink>
+260709-23:01:31,828 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/SPM.mat -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///SPM.mat
+260709-23:01:31,829 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmT_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmT_0005.nii
+260709-23:01:31,830 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmT_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmT_0006.nii
+260709-23:01:31,831 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmT_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmT_0007.nii
+260709-23:01:31,832 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmT_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmT_0008.nii
+260709-23:01:31,833 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmT_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmT_0009.nii
+260709-23:01:31,834 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmT_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmT_0010.nii
+260709-23:01:31,835 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/con_0005.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///con_0005.nii
+260709-23:01:31,836 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/con_0006.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///con_0006.nii
+260709-23:01:31,837 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/con_0007.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///con_0007.nii
+260709-23:01:31,838 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/con_0008.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///con_0008.nii
+260709-23:01:31,839 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/con_0009.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///con_0009.nii
+260709-23:01:31,840 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/con_0010.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///con_0010.nii
+260709-23:01:31,841 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmF_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmF_0001.nii
+260709-23:01:31,841 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmF_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmF_0002.nii
+260709-23:01:31,842 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmF_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmF_0003.nii
+260709-23:01:31,843 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/spmF_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///spmF_0004.nii
+260709-23:01:31,844 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/ess_0001.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///ess_0001.nii
+260709-23:01:31,846 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/ess_0002.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///ess_0002.nii
+260709-23:01:31,846 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/ess_0003.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///ess_0003.nii
+260709-23:01:31,847 nipype.interface INFO:
+	 sub: /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/01/1stLevel/_subject_id_01/ess_0004.nii -> /home/jovyan/workspace/books/examples/functional_imaging/spm_analysis/level1_spm_results/sub-01///ess_0004.nii
+260709-23:01:31,849 nipype.workflow INFO:
+	 [Node] Finished "sinker", elapsed time 0.020356s.
+260709-23:01:33,709 nipype.workflow INFO:
+	 [Job 30] Completed (level1_spm.sinker).
+260709-23:01:33,711 nipype.workflow INFO:
+	 [MultiProc] Running 0 tasks, and 0 jobs ready. Free memory (GB): 56.51/56.51, Free processors: 16/16, Free GPU slot:0/0.

@@ -24,22 +24,23 @@
   border: 1px solid var(--nd-review-border);
 }
 
-.nd-review-badge--reviewed {
+/* Doubled class beats the theme's dark:bg-myst-bg-secondary on admonitions. */
+.nd-review-badge.nd-review-badge--reviewed {
   background: var(--nd-review-reviewed-bg);
   color: var(--nd-review-reviewed-fg);
 }
 
-.nd-review-badge--in-progress {
+.nd-review-badge.nd-review-badge--in-progress {
   background: var(--nd-review-inprogress-bg);
   color: var(--nd-review-inprogress-fg);
 }
 
-.nd-review-badge--unreviewed {
+.nd-review-badge.nd-review-badge--unreviewed {
   background: var(--nd-review-unreviewed-bg);
   color: var(--nd-review-unreviewed-fg);
 }
 
-.nd-review-badge--stale {
+.nd-review-badge.nd-review-badge--stale {
   background: var(--nd-review-stale-bg);
   color: var(--nd-review-stale-fg);
 }
@@ -58,4 +59,97 @@
 
 .nd-review-badge p {
   margin: 0.25rem 0;
+}
+
+/* Wrap long log lines instead of giving every stream output its own horizontal scrollbar. */
+.myst-jp-stream-output {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.nd-doi {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--nd-review-border);
+  background: #024b74;
+  color: #ffffff;
+}
+
+.nd-doi strong {
+  color: inherit;
+}
+
+.nd-doi a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.nd-doi p {
+  margin: 0;
+}
+
+/* Launch menu added to the page header by launch-menu.js. */
+.nd-launch-menu {
+  position: relative;
+  margin-left: 0.5rem;
+}
+
+.nd-launch-menu > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.375rem;
+  background: #e18435;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nd-launch-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nd-launch-menu > summary:hover {
+  background: #c46a1f;
+}
+
+.nd-launch-menu > ul {
+  position: absolute;
+  right: 0;
+  z-index: 30;
+  min-width: 14rem;
+  margin: 0.25rem 0 0;
+  padding: 0.25rem 0;
+  list-style: none;
+  background: #ffffff;
+  border: 1px solid var(--nd-review-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.35);
+}
+
+.dark .nd-launch-menu > ul {
+  background: #292524;
+}
+
+.nd-launch-menu li a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  color: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nd-launch-menu li a:hover {
+  background: rgba(225, 132, 53, 0.15);
+}
+
+/* The header menu replaces the in-page dropdown, which stays as the fallback without JavaScript. */
+article:has(.nd-launch-menu) .nd-launch {
+  display: none;
 }
