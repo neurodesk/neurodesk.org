@@ -775,6 +775,18 @@
 					<span style="--depth: 0;" class="astro-v32dpjc4">Related information</span>
 				</a>
 				
+			</li><li style="--depth: 0;" class="astro-v32dpjc4">
+				<a href="#technical-details" style="--depth: 0;" class="astro-v32dpjc4">
+					<span style="--depth: 0;" class="astro-v32dpjc4">Technical details</span>
+				</a>
+				<ul class="isMobile astro-v32dpjc4" style="--depth: 1;">
+	<li style="--depth: 1;" class="astro-v32dpjc4">
+				<a href="#data-workflow" style="--depth: 1;" class="astro-v32dpjc4">
+					<span style="--depth: 1;" class="astro-v32dpjc4">Data workflow</span>
+				</a>
+				
+			</li>
+</ul>
 			</li>
 </ul>
 					</div>
@@ -851,6 +863,18 @@
 					<span style="--depth: 0;" class="astro-v32dpjc4">Related information</span>
 				</a>
 				
+			</li><li style="--depth: 0;" class="astro-v32dpjc4">
+				<a href="#technical-details" style="--depth: 0;" class="astro-v32dpjc4">
+					<span style="--depth: 0;" class="astro-v32dpjc4">Technical details</span>
+				</a>
+				<ul class="astro-v32dpjc4" style="--depth: 1;">
+	<li style="--depth: 1;" class="astro-v32dpjc4">
+				<a href="#data-workflow" style="--depth: 1;" class="astro-v32dpjc4">
+					<span style="--depth: 1;" class="astro-v32dpjc4">Data workflow</span>
+				</a>
+				
+			</li>
+</ul>
 			</li>
 </ul>
 			</nav>
@@ -1042,6 +1066,17 @@
 <ul>
 <li><a href="/getting-started/hosted/xnat/">Neurodesk on XNAT</a></li>
 <li><a href="/getting-started/neurodesktop/">Using Neurodesktop</a></li>
+</ul>
+<div class="sl-heading-wrapper level-h2"><h2 id="technical-details">Technical details</h2><a class="sl-anchor-link" href="#technical-details"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Technical details”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="data-workflow">Data workflow</h3><a class="sl-anchor-link" href="#data-workflow"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Data workflow”</span></a></div>
+<p>The local server receives DICOM images through Orthanc and raw TWIX and physiological files through Samba. It retains received data locally and prepares anonymized copies for transfer through SeaweedFS to the cloud XNAT instance. Local copies follow the retention periods described above.</p>
+<p>XNAT Container Service saves processing outputs back to XNAT. Users can download data and derivatives to their computers or HPC systems such as Sherlock.</p>
+<p><a href="/docs/getting-started/installations/xnat-lucas/stanford-xnat-workflow.svg"><img src="/docs/getting-started/installations/xnat-lucas/stanford-xnat-workflow.svg" alt="Stanford XNAT workflow showing MRI scanners, local Orthanc and Samba ingestion, retained originals, local anonymization, SeaweedFS transfer, XNAT processing, and downloads to computers or HPC"/></a></p>
+<p>Select the diagram to view it at full size.</p>
+<p>The Stanford deployment uses these repositories:</p>
+<ul>
+<li><a href="https://github.com/stebo85/ais-edge/tree/stanford">AIS Edge, <code dir="auto">stanford</code> branch</a>: Local ingestion, staging, and SeaweedFS transfer.</li>
+<li><a href="https://github.com/Australian-Imaging-Service/ais-devstack/tree/stanford">AIS XNAT deployment stack, <code dir="auto">stanford</code> branch</a>: Cloud XNAT deployment and Container Service processing.</li>
 </ul>
 									</div>
 									<footer class="sl-flex astro-6a3xgedj">

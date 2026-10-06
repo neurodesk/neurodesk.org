@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1180" viewBox="0 0 2100 1180" role="img" aria-labelledby="title desc">
+  <title id="title">Stanford XNAT data workflow</title>
+  <desc id="desc">Multiple MRI scanners send DICOM to a local Orthanc server. Raw TWIX and physiological files enter the same local server through Samba. All received originals remain in local storage. An additional local anonymization step, confirmed by the user as deployed at Stanford, prepares cloud copies before AIS Edge stages and uploads them through HTTPS and S3 to cloud SeaweedFS. A cloud ingest worker imports staged files into XNAT through REST. XNAT Container Service runs Docker processing and returns outputs to XNAT. Researchers download data and derivatives to computers or HPC.</desc>
+  <defs>
+    <marker id="blue-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2966a3"/></marker>
+    <marker id="purple-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7955a3"/></marker>
+    <marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#287c75"/></marker>
+    <marker id="gray-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#738394"/></marker>
+    <g id="scanner-icon" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="45" height="50" rx="9"/><circle cx="22.5" cy="23" r="13"/><path d="M 22.5 33 L 22.5 51 M 15 39 L 57 39 L 57 44 L 15 44 M 54 44 L 54 53"/></g>
+    <g id="disk-icon" fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="20" cy="7" rx="19" ry="7"/><path d="M 1 7 V 37 C 1 47 39 47 39 37 V 7 M 1 22 C 1 32 39 32 39 22"/></g>
+    <g id="cloud-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M 10 35 C -4 32 -1 13 13 15 C 18 -2 39 -2 45 14 C 63 11 69 35 52 37 H 10"/></g>
+    <g id="computer-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="1" width="48" height="32" rx="4"/><path d="M 18 33 V 42 M 34 33 V 42 M 12 42 H 40"/></g>
+    <g id="hpc-icon" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect width="49" height="48" rx="4"/><path d="M 0 16 H 49 M 0 32 H 49 M 9 8 H 12 M 9 24 H 12 M 9 40 H 12 M 23 8 H 40 M 23 24 H 40 M 23 40 H 40"/></g>
+    <style>
+      text { font-family: 'DejaVu Sans', Arial, sans-serif; fill: #203448; }
+      .title { font-size: 44px; font-weight: 700; letter-spacing: -1px; }
+      .subtitle { font-size: 22px; fill: #5b6d7c; }
+      .zone-title { font-size: 25px; font-weight: 700; }
+      .zone-sub { font-size: 18px; fill: #5b6d7c; }
+      .step { font-size: 18px; font-weight: 700; fill: white; text-anchor: middle; }
+      .node-title { font-size: 24px; font-weight: 700; }
+      .body { font-size: 19px; fill: #4b6071; }
+      .small { font-size: 17px; fill: #607485; }
+      .edge-label { font-size: 17px; font-weight: 600; }
+      .node { fill: white; stroke-width: 1.6; }
+      .edge { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .blue { stroke: #2966a3; marker-end: url(#blue-arrow); }
+      .purple { stroke: #7955a3; marker-end: url(#purple-arrow); }
+      .teal { stroke: #287c75; marker-end: url(#teal-arrow); }
+      .retention { stroke: #738394; stroke-width: 2.2; stroke-dasharray: 6 6; marker-end: url(#gray-arrow); }
+      .badge { font-size: 16px; font-weight: 600; }
+      .note { font-size: 19px; fill: #4b6071; }
+      .footer { font-size: 16px; fill: #718190; }
+    </style>
+  </defs>
+  <rect width="2100" height="1180" fill="white"/>
+  <rect x="60" y="52" width="7" height="74" rx="3" fill="#8c1515"/>
+  <text x="88" y="86" class="title">Stanford XNAT data workflow</text>
+  <text x="88" y="124" class="subtitle">MRI acquisition, local retention, cloud ingestion, and research use</text>
+  <rect x="60" y="151" width="352" height="30" rx="15" fill="#edf4fa"/>
+  <text x="78" y="172" class="badge" style="fill:#2966a3">Local anonymization before upload</text>
+  <rect x="426" y="151" width="394" height="30" rx="15" fill="#f2edf8"/>
+  <text x="444" y="172" class="badge" style="fill:#7955a3">Raw TWIX and physiology via Samba</text>
+
+  <rect x="50" y="205" width="960" height="800" rx="23" fill="#f3f7fb" stroke="#dce6ef" stroke-width="1.5"/>
+  <rect x="1040" y="205" width="665" height="800" rx="23" fill="#f0f7f5" stroke="#d7e9e4" stroke-width="1.5"/>
+  <rect x="1735" y="205" width="315" height="800" rx="23" fill="#f6f3fa" stroke="#e5ddef" stroke-width="1.5"/>
+  <circle cx="95" cy="254" r="21" fill="#2966a3"/><text x="95" y="260" class="step">01</text>
+  <text x="131" y="262" class="zone-title">Stanford MRI facility</text>
+  <text x="131" y="291" class="zone-sub">Local acquisition and retained originals</text>
+  <circle cx="1085" cy="254" r="21" fill="#287c75"/><text x="1085" y="260" class="step">02</text>
+  <text x="1121" y="262" class="zone-title">Cloud</text>
+  <text x="1121" y="291" class="zone-sub">SeaweedFS transfer buffer and XNAT</text>
+  <circle cx="1780" cy="254" r="21" fill="#7955a3"/><text x="1780" y="260" class="step">03</text>
+  <text x="1816" y="262" class="zone-title">Research use</text>
+  <text x="1764" y="291" class="zone-sub">Download data for analysis</text>
+
+  <rect x="85" y="335" width="190" height="624" rx="16" fill="white" stroke="#c3d6e7" stroke-width="1.6"/>
+  <text x="105" y="376" class="node-title" style="font-size:21px">Multiple MRI</text>
+  <text x="105" y="404" class="node-title" style="font-size:21px">scanners</text>
+  <g transform="translate(104 443)" style="color:#2966a3"><use href="#scanner-icon"/></g>
+  <text x="166" y="473" class="body" style="font-size:18px">MRI 1</text>
+  <g transform="translate(104 560)" style="color:#2966a3"><use href="#scanner-icon"/></g>
+  <text x="166" y="590" class="body" style="font-size:18px">MRI 2</text>
+  <g transform="translate(104 677)" style="color:#2966a3"><use href="#scanner-icon"/></g>
+  <text x="166" y="707" class="body" style="font-size:18px">MRI n</text>
+  <path d="M 105 762 H 255" stroke="#e0e8f0" stroke-width="1.5"/>
+  <text x="105" y="799" class="body" style="font-size:18px">Console exports</text>
+  <text x="105" y="833" class="small">Raw TWIX</text>
+  <text x="105" y="860" class="small">Physiological files</text>
+  <text x="105" y="929" class="small">Facility network</text>
+
+  <rect x="340" y="335" width="620" height="630" rx="17" fill="#eaf1f7" stroke="#bdcedd" stroke-width="1.6"/>
+  <text x="365" y="376" class="node-title">Local DICOM server</text>
+  <text x="365" y="405" class="body">Orthanc, Samba, and AIS Edge</text>
+
+  <path d="M 275 500 H 365" class="edge blue"/>
+  <text x="320" y="477" text-anchor="middle" class="edge-label" style="fill:#2966a3">C-STORE</text>
+  <text x="320" y="530" text-anchor="middle" class="small" style="fill:#2966a3">DICOM</text>
+  <path d="M 275 769 H 365" class="edge purple"/>
+  <text x="319" y="747" text-anchor="middle" class="edge-label" style="fill:#7955a3">SMB</text>
+  <path d="M 610 522 H 649 V 577 H 685" class="edge blue"/>
+  <path d="M 610 758 H 649 V 667 H 685" class="edge purple"/>
+  <path d="M 390 592 V 645 H 352 V 898 H 365" class="edge retention"/>
+  <path d="M 490 825 V 865" class="edge retention"/>
+
+  <rect x="365" y="442" width="245" height="150" rx="13" class="node" stroke="#8fb2d3"/>
+  <circle cx="395" cy="479" r="11" fill="#2966a3"/>
+  <text x="419" y="488" class="node-title">Orthanc</text>
+  <text x="388" y="530" class="body">Receives DICOM</text>
+  <text x="388" y="560" class="body">Labels stable studies</text>
+  <rect x="365" y="690" width="245" height="135" rx="13" class="node" stroke="#b8a0d1"/>
+  <circle cx="395" cy="725" r="11" fill="#7955a3"/>
+  <text x="419" y="734" class="node-title">Samba</text>
+  <text x="388" y="773" class="body">TWIX and physiology</text>
+  <text x="388" y="802" class="small">Receives raw files</text>
+  <rect x="685" y="510" width="245" height="214" rx="13" class="node" stroke="#8fb2d3"/>
+  <text x="708" y="550" class="node-title">Anonymize</text>
+  <text x="708" y="580" class="node-title">cloud copies*</text>
+  <text x="708" y="621" class="body">Stage DICOM sessions</text>
+  <text x="708" y="651" class="body">Stage TWIX + physio</text>
+  <path d="M 708 668 H 907" stroke="#dce6ef"/>
+  <text x="708" y="699" class="body" style="fill:#2966a3">Edge S3 uploader</text>
+  <rect x="365" y="865" width="565" height="81" rx="13" fill="#f9fbfd" stroke="#c1ceda" stroke-width="1.6"/>
+  <g transform="translate(390 882) scale(.9)" style="color:#627b91"><use href="#disk-icon"/></g>
+  <text x="445" y="896" class="node-title" style="font-size:20px">All received data retained locally</text>
+  <text x="445" y="925" class="small">Orthanc DICOM + archived TWIX and physiology</text>
+
+  <path d="M 930 600 H 1080" class="edge teal"/>
+  <rect x="944" y="555" width="123" height="28" rx="8" fill="white"/>
+  <text x="1005" y="575" text-anchor="middle" class="edge-label" style="fill:#287c75">HTTPS + S3</text>
+  <rect x="1080" y="510" width="245" height="160" rx="13" class="node" stroke="#80b4ab"/>
+  <g transform="translate(1101 531) scale(.58)" style="color:#287c75"><use href="#cloud-icon"/></g>
+  <text x="1149" y="551" class="node-title">SeaweedFS</text>
+  <text x="1103" y="595" class="body">S3 staging buffer</text>
+  <text x="1103" y="626" class="body">Receives session files</text>
+  <text x="1103" y="653" class="small">Transfer storage only</text>
+  <path d="M 1202 670 V 760" class="edge teal"/>
+  <text x="1220" y="710" class="small">Read staged</text>
+  <text x="1220" y="736" class="small">files</text>
+  <rect x="1080" y="760" width="245" height="122" rx="13" class="node" stroke="#80b4ab"/>
+  <text x="1103" y="800" class="node-title" style="font-size:22px">XNAT ingest</text>
+  <text x="1103" y="829" class="node-title" style="font-size:22px">uploader</text>
+  <text x="1103" y="859" class="small">Imports using REST</text>
+  <path d="M 1325 821 H 1360 V 632 H 1395" class="edge teal"/>
+  <text x="1360" y="613" text-anchor="middle" class="edge-label" style="fill:#287c75">REST</text>
+
+  <rect x="1395" y="510" width="270" height="160" rx="13" fill="#287c75" stroke="#287c75" stroke-width="1.6"/>
+  <text x="1420" y="553" class="node-title" style="fill:white;font-size:31px">XNAT</text>
+  <text x="1420" y="594" class="body" style="fill:#effaf7">Images and raw files</text>
+  <text x="1420" y="625" class="body" style="fill:#effaf7">Projects and sessions</text>
+  <text x="1420" y="653" class="small" style="fill:#d6ebe6">Data and derivatives</text>
+  <path d="M 1460 670 V 760" class="edge teal"/>
+  <path d="M 1600 760 V 670" class="edge purple" style="stroke-dasharray:7 6"/>
+  <text x="1477" y="719" class="edge-label" style="fill:#287c75">Inputs</text>
+  <text x="1617" y="719" class="edge-label" style="fill:#7955a3;font-size:16px">Outputs</text>
+  <rect x="1395" y="760" width="270" height="160" rx="13" class="node" stroke="#80b4ab"/>
+  <text x="1420" y="800" class="node-title" style="font-size:22px">Container Service</text>
+  <text x="1420" y="840" class="body">Docker processing</text>
+  <text x="1420" y="870" class="body">Conversion + analysis</text>
+  <text x="1420" y="898" class="small">Saves derivatives in XNAT</text>
+
+  <path d="M 1665 592 H 1720" class="edge" stroke="#7955a3"/>
+  <path d="M 1720 592 V 495 H 1775" class="edge purple"/>
+  <path d="M 1720 592 V 830 H 1775" class="edge purple"/>
+  <circle cx="1720" cy="592" r="5" fill="#7955a3"/>
+  <text x="1764" y="635" class="edge-label" style="fill:#7955a3;font-size:20px">Download data</text>
+  <text x="1764" y="665" class="edge-label" style="fill:#7955a3;font-size:20px">and derivatives</text>
+  <rect x="1775" y="425" width="235" height="140" rx="13" class="node" stroke="#b8a0d1"/>
+  <g transform="translate(1797 449) scale(.75)" style="color:#7955a3"><use href="#computer-icon"/></g>
+  <text x="1797" y="520" class="node-title" style="font-size:21px">User computers</text>
+  <text x="1797" y="545" class="small">Local analysis</text>
+  <rect x="1775" y="760" width="235" height="140" rx="13" class="node" stroke="#b8a0d1"/>
+  <g transform="translate(1797 782) scale(.75)" style="color:#7955a3"><use href="#hpc-icon"/></g>
+  <text x="1797" y="853" class="node-title">HPC</text>
+  <text x="1797" y="881" class="small">Further analysis</text>
+
+  <path d="M 60 1040 H 2040" stroke="#e0e6ec" stroke-width="1.5"/>
+  <text x="60" y="1077" class="note">* Additional local anonymization follows the confirmed Stanford deployment. The repositories document ingestion, transfer, and processing.</text>
+  <text x="60" y="1107" class="note">Originals remain on the local server. Anonymized cloud copies proceed to SeaweedFS and XNAT.</text>
+  <text x="60" y="1150" class="footer">Sources: stebo85/ais-edge, stanford branch • Australian-Imaging-Service/ais-devstack, stanford branch</text>
+  <text x="2040" y="1150" text-anchor="end" class="footer">Workflow overview</text>
+</svg>
