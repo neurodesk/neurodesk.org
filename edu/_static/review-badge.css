@@ -59,6 +59,12 @@
   margin: 0.25rem 0;
 }
 
+/* Cells tagged scroll-output scroll inside a fixed height, as they did in Jupyter Book 1. */
+.nd-scroll-output [data-name="outputs-container"] {
+  max-height: 24em;
+  overflow-y: auto;
+}
+
 /* Wrap long log lines instead of giving every stream output its own horizontal scrollbar. */
 .myst-jp-stream-output {
   white-space: pre-wrap;
