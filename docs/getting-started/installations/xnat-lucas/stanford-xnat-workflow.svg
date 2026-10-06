@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1180" viewBox="0 0 2100 1180" role="img" aria-labelledby="title desc">
-  <title id="title">Stanford XNAT data workflow</title>
-  <desc id="desc">Multiple MRI scanners send DICOM to a local Orthanc server. Raw TWIX and physiological files enter the same local server through Samba. All received originals remain in local storage. An additional local anonymization step, confirmed by the user as deployed at Stanford, prepares cloud copies before AIS Edge stages and uploads them through HTTPS and S3 to cloud SeaweedFS. A cloud ingest worker imports staged files into XNAT through REST. XNAT Container Service runs Docker processing and returns outputs to XNAT. Researchers download data and derivatives to computers or HPC.</desc>
+  <title id="title">Lucas Centre XNAT data workflow</title>
+  <desc id="desc">Multiple MRI scanners at the Lucas Centre send DICOM to a local Orthanc server. Raw TWIX and physiological files enter the same local server through Samba. All received originals remain in local storage. An additional local anonymization step, confirmed by the user as deployed at the Lucas Centre, prepares cloud copies before AIS Edge stages and uploads them through HTTPS and S3 to cloud SeaweedFS. A cloud ingest worker imports staged files into XNAT through REST. XNAT Container Service runs Docker processing and returns outputs to XNAT. Users launch an interactive Neurodesk JupyterLab environment through JupyterHub, access mounted XNAT project data and a personal workspace, and upload processed files back to XNAT. Researchers also download data and derivatives to computers or HPC.</desc>
   <defs>
     <marker id="blue-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2966a3"/></marker>
     <marker id="purple-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7955a3"/></marker>
     <marker id="teal-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#287c75"/></marker>
+    <marker id="green-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6e8f33"/></marker>
     <marker id="gray-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#738394"/></marker>
     <g id="scanner-icon" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="45" height="50" rx="9"/><circle cx="22.5" cy="23" r="13"/><path d="M 22.5 33 L 22.5 51 M 15 39 L 57 39 L 57 44 L 15 44 M 54 44 L 54 53"/></g>
     <g id="disk-icon" fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="20" cy="7" rx="19" ry="7"/><path d="M 1 7 V 37 C 1 47 39 47 39 37 V 7 M 1 22 C 1 32 39 32 39 22"/></g>
@@ -27,6 +28,7 @@
       .blue { stroke: #2966a3; marker-end: url(#blue-arrow); }
       .purple { stroke: #7955a3; marker-end: url(#purple-arrow); }
       .teal { stroke: #287c75; marker-end: url(#teal-arrow); }
+      .green { stroke: #6e8f33; marker-end: url(#green-arrow); }
       .retention { stroke: #738394; stroke-width: 2.2; stroke-dasharray: 6 6; marker-end: url(#gray-arrow); }
       .badge { font-size: 16px; font-weight: 600; }
       .note { font-size: 19px; fill: #4b6071; }
@@ -35,7 +37,7 @@
   </defs>
   <rect width="2100" height="1180" fill="white"/>
   <rect x="60" y="52" width="7" height="74" rx="3" fill="#8c1515"/>
-  <text x="88" y="86" class="title">Stanford XNAT data workflow</text>
+  <text x="88" y="86" class="title">Lucas Centre XNAT data workflow</text>
   <text x="88" y="124" class="subtitle">MRI acquisition, local retention, cloud ingestion, and research use</text>
   <rect x="60" y="151" width="352" height="30" rx="15" fill="#edf4fa"/>
   <text x="78" y="172" class="badge" style="fill:#2966a3">Local anonymization before upload</text>
@@ -46,14 +48,14 @@
   <rect x="1040" y="205" width="665" height="800" rx="23" fill="#f0f7f5" stroke="#d7e9e4" stroke-width="1.5"/>
   <rect x="1735" y="205" width="315" height="800" rx="23" fill="#f6f3fa" stroke="#e5ddef" stroke-width="1.5"/>
   <circle cx="95" cy="254" r="21" fill="#2966a3"/><text x="95" y="260" class="step">01</text>
-  <text x="131" y="262" class="zone-title">Stanford MRI facility</text>
+  <text x="131" y="262" class="zone-title">Lucas Centre MRI facility</text>
   <text x="131" y="291" class="zone-sub">Local acquisition and retained originals</text>
   <circle cx="1085" cy="254" r="21" fill="#287c75"/><text x="1085" y="260" class="step">02</text>
   <text x="1121" y="262" class="zone-title">Cloud</text>
   <text x="1121" y="291" class="zone-sub">SeaweedFS transfer buffer and XNAT</text>
   <circle cx="1780" cy="254" r="21" fill="#7955a3"/><text x="1780" y="260" class="step">03</text>
   <text x="1816" y="262" class="zone-title">Research use</text>
-  <text x="1764" y="291" class="zone-sub">Download data for analysis</text>
+  <text x="1764" y="291" class="zone-sub">Interactive use and downloads</text>
 
   <rect x="85" y="335" width="190" height="624" rx="16" fill="white" stroke="#c3d6e7" stroke-width="1.6"/>
   <text x="105" y="376" class="node-title" style="font-size:21px">Multiple MRI</text>
@@ -125,6 +127,18 @@
   <path d="M 1325 821 H 1360 V 632 H 1395" class="edge teal"/>
   <text x="1360" y="613" text-anchor="middle" class="edge-label" style="fill:#287c75">REST</text>
 
+  <path d="M 1892 425 V 405 H 1665" class="edge green"/>
+  <text x="1755" y="384" class="edge-label" style="fill:#6e8f33;font-size:17px">Launch via JupyterHub</text>
+  <rect x="1395" y="330" width="270" height="145" rx="13" fill="#f4f8e9" stroke="#91ac59" stroke-width="1.6"/>
+  <text x="1420" y="369" class="node-title" style="fill:#537323">Neurodesk</text>
+  <text x="1420" y="402" class="body">Interactive JupyterLab</text>
+  <text x="1420" y="433" class="small">Mounted project data</text>
+  <text x="1420" y="458" class="small">Personal workspace</text>
+  <path d="M 1460 510 V 475" class="edge teal"/>
+  <path d="M 1600 475 V 510" class="edge purple" style="stroke-dasharray:7 6"/>
+  <text x="1477" y="501" class="edge-label" style="fill:#287c75;font-size:16px">Data</text>
+  <text x="1617" y="501" class="edge-label" style="fill:#7955a3;font-size:16px">Upload</text>
+
   <rect x="1395" y="510" width="270" height="160" rx="13" fill="#287c75" stroke="#287c75" stroke-width="1.6"/>
   <text x="1420" y="553" class="node-title" style="fill:white;font-size:31px">XNAT</text>
   <text x="1420" y="594" class="body" style="fill:#effaf7">Images and raw files</text>
@@ -156,7 +170,7 @@
   <text x="1797" y="881" class="small">Further analysis</text>
 
   <path d="M 60 1040 H 2040" stroke="#e0e6ec" stroke-width="1.5"/>
-  <text x="60" y="1077" class="note">* Additional local anonymization follows the confirmed Stanford deployment. The repositories document ingestion, transfer, and processing.</text>
+  <text x="60" y="1077" class="note">* Additional local anonymization follows the confirmed Lucas Centre deployment. The repositories document ingestion, transfer, and processing.</text>
   <text x="60" y="1107" class="note">Originals remain on the local server. Anonymized cloud copies proceed to SeaweedFS and XNAT.</text>
   <text x="60" y="1150" class="footer">Sources: stebo85/ais-edge, stanford branch • Australian-Imaging-Service/ais-devstack, stanford branch</text>
   <text x="2040" y="1150" text-anchor="end" class="footer">Workflow overview</text>
