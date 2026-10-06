@@ -1066,6 +1066,13 @@
             "license": "other-at"
         },
         {
+            "application": "brainstemnavigator_1.0.0_20261004",
+            "categories": [
+                "image registration",
+                "structural imaging"
+            ]
+        },
+        {
             "application": "brainstorm_3.211130_20211207",
             "categories": [
                 "electrophysiology"
@@ -1266,6 +1273,13 @@
             "doi": "10.5281/zenodo.22851308",
             "doi_url": "https://doi.org/10.5281/zenodo.22851308",
             "license": "cc-by-4.0"
+        },
+        {
+            "application": "chimera-brainparcellation_0.4.1_20261004",
+            "categories": [
+                "image segmentation",
+                "structural imaging"
+            ]
         },
         {
             "application": "civet_2.1.1_20260727",
@@ -2415,26 +2429,20 @@
             "license": "other-open"
         },
         {
-            "application": "freesurfer_8.2.0_20260818",
+            "application": "freesurfer_8.2.0_20261005",
             "categories": [
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "FreeSurfer contains a set of programs with a common focus of analyzing magnetic resonance imaging scans of brain tissue. It is an important tool in functional brain mapping and contains tools to conduct both volume based and surface based analysis.",
-            "doi": "10.5281/zenodo.22063516",
-            "doi_url": "https://doi.org/10.5281/zenodo.22063516",
-            "license": "other-open"
+            "description": "FreeSurfer contains a set of programs with a common focus of analyzing magnetic resonance imaging scans of brain tissue. It is an important tool in functional brain mapping and contains tools to conduct both volume based and surface based analysis."
         },
         {
-            "application": "frisgo_2.10.0_20261002",
+            "application": "frisgo_2.10.0_20261005",
             "categories": [
                 "functional imaging",
                 "image reconstruction"
             ],
             "description": "OpenRecon image-to-image Fuzzy Ripple correction for dual-polarity (3D-)EPI BOLD time series, using `LN2_FRISGO -tshift` from LayNii {{ context.laynii_version }}. The OpenRecon module collects every reconstructed image of the run, arranges them by slice position and repetition into a 4D NIfTI, runs `LN2_FRISGO -input timeseries.nii -tshift` and returns: - the original time series on `image_series_index = 100` (`sendoriginal`) - the FRISGO-corrected time series `<source>-frisgo` on `image_series_index = 101` (`sendfrisgo`) Both outputs keep the source 2D geometry, slice and repetition counters with `Keep_image_geometry = 1`. Corrected values are rounded to the source pixel type, so negative values clip to 0 for unsigned scanner images. Run the module with fewer than 4 repetitions and only the originals are returned. Incomplete runs, repetition gaps and duplicate nonconstant counters skip correction for that source group while preserving requested originals. Echo, phase, set and average counters define independent time series. Long outputs split into new series before the 16-bit image index overflows. Simulate the OpenRecon round trip with a 4D NIfTI:",
-            "doi": "10.5281/zenodo.23129716",
-            "doi_url": "https://doi.org/10.5281/zenodo.23129716",
-            "license": "bsd-3-clause",
             "openrecon": true
         },
         {
@@ -2588,7 +2596,7 @@
             "license": "other-open"
         },
         {
-            "application": "fsl_6.0.7.23_20260925",
+            "application": "fsl_6.0.7.23_20261004",
             "categories": [
                 "arterial spin labelling",
                 "diffusion imaging",
@@ -2597,10 +2605,7 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. Most of the tools can be run both from the command line and as GUIs (\"point-and-click\" graphical user interfaces). To quote the relevant references for FSL tools you should look in the individual tools' manual pages, and also please reference one or more of the FSL overview papers: 1. M.W. Woolrich, S. Jbabdi, B. Patenaude, M. Chappell, S. Makni, T. Behrens, C. Beckmann, M. Jenkinson, S.M. Smith. Bayesian analysis of neuroimaging data in FSL. NeuroImage, 45:S173-86, 2009 2. S.M. Smith, M. Jenkinson, M.W. Woolrich, C.F. Beckmann, T.E.J. Behrens, H. Johansen-Berg, P.R. Bannister, M. De Luca, I. Drobnjak, D.E. Flitney, R. Niazy, J. Saunders, J. Vickers, Y. Zhang, N. De Stefano, J.M. Brady, and P.M. Matthews. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 23(S1):208-19, 2004 3. M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. NeuroImage, 62:782-90, 2012",
-            "doi": "10.5281/zenodo.23130039",
-            "doi_url": "https://doi.org/10.5281/zenodo.23130039",
-            "license": "other-open"
+            "description": "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. Most of the tools can be run both from the command line and as GUIs (\"point-and-click\" graphical user interfaces). To quote the relevant references for FSL tools you should look in the individual tools' manual pages, and also please reference one or more of the FSL overview papers: 1. M.W. Woolrich, S. Jbabdi, B. Patenaude, M. Chappell, S. Makni, T. Behrens, C. Beckmann, M. Jenkinson, S.M. Smith. Bayesian analysis of neuroimaging data in FSL. NeuroImage, 45:S173-86, 2009 2. S.M. Smith, M. Jenkinson, M.W. Woolrich, C.F. Beckmann, T.E.J. Behrens, H. Johansen-Berg, P.R. Bannister, M. De Luca, I. Drobnjak, D.E. Flitney, R. Niazy, J. Saunders, J. Vickers, Y. Zhang, N. De Stefano, J.M. Brady, and P.M. Matthews. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 23(S1):208-19, 2004 3. M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. NeuroImage, 62:782-90, 2012"
         },
         {
             "application": "fsl_6.0.7.4_20231005",
@@ -4049,6 +4054,12 @@
             "license": "bsd-2-clause-netbsd"
         },
         {
+            "application": "niimath_1.0.20260924_20261004",
+            "categories": [
+                "data organisation"
+            ]
+        },
+        {
             "application": "niimath_arm64_1.0.20260703_20260909",
             "categories": [
                 "data organisation"
@@ -4056,6 +4067,12 @@
             "doi": "10.5281/zenodo.22851358",
             "doi_url": "https://doi.org/10.5281/zenodo.22851358",
             "license": "bsd-2-clause-netbsd"
+        },
+        {
+            "application": "niimath_arm64_1.0.20260924_20261004",
+            "categories": [
+                "data organisation"
+            ]
         },
         {
             "application": "niistat_1.0.20191216_20260629",
@@ -4066,6 +4083,13 @@
             "doi": "10.5281/zenodo.21200436",
             "doi_url": "https://doi.org/10.5281/zenodo.21200436",
             "license": "cc-by-4.0"
+        },
+        {
+            "application": "nipype_1.11.0_20261005",
+            "categories": [
+                "workflows"
+            ],
+            "description": "Python environment with VScode and singularity to run Nipype workflows Setup:"
         },
         {
             "application": "nipype_1.8.3_20220825",
@@ -4126,7 +4150,7 @@
             "openrecon": true
         },
         {
-            "application": "openmsk_0.2.0_20260908",
+            "application": "openmsk_0.2.0_20261004",
             "categories": [
                 "image segmentation",
                 "quantitative imaging"
@@ -5053,15 +5077,12 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "slicer_5.10.0_20260226",
+            "application": "slicer_5.10.0_20261005",
             "categories": [
                 "image segmentation",
                 "visualization"
             ],
-            "description": "3D Slicer is a software application for visualization and analysis of medical image computing data sets. Supports images, segmentations, surfaces, annotations, transformations in 2D, 3D, and 4D.",
-            "doi": "10.5281/zenodo.18931914",
-            "doi_url": "https://doi.org/10.5281/zenodo.18931914",
-            "license": "cc-by-4.0"
+            "description": "3D Slicer is a software application for visualization and analysis of medical image computing data sets. Supports images, segmentations, surfaces, annotations, transformations in 2D, 3D, and 4D."
         },
         {
             "application": "slicersalt_3.0.0_20210301",

@@ -1,19 +1,11 @@
 {
   "version": 2,
-  "generated_at": "2026-10-05T20:12:16+00:00",
+  "generated_at": "2026-10-06T15:09:28+00:00",
   "source": {
     "type": "github-issues",
     "repo": "neurodesk/neurodeskedu-reviews"
   },
   "reviews": {
-    "3e97519f-e80b-463c-849c-0cd479fc72df": {
-      "state": "in-progress",
-      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/61",
-      "reviewers": [
-        "lowripowell"
-      ],
-      "source_path": "examples/diffusion_imaging/qsirecon.ipynb"
-    },
     "6efa2dd3-1858-4cea-945a-c8751ba86617": {
       "state": "unreviewed",
       "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/57",
@@ -59,6 +51,17 @@
         "neurolabusc"
       ],
       "source_path": "examples/functional_imaging/AFNI_preprocessing_plus_glm.ipynb"
+    },
+    "3e97519f-e80b-463c-849c-0cd479fc72df": {
+      "state": "reviewed",
+      "review_issue_url": "https://github.com/neurodesk/neurodeskedu-reviews/issues/61",
+      "reviewers": [
+        "lowripowell"
+      ],
+      "reviewed_at": "2026-10-06",
+      "review_commit_sha": "c132fcc2a4e0844beffc22f557a82af6227593c3",
+      "source_path": "examples/diffusion_imaging/qsirecon.ipynb",
+      "review_content_hash": "67abd29f425c931ec56059ca4beb00eb88a461e7dceed29f8c0598186c576fa9"
     },
     "776677f3-4ea4-4810-a314-4212d09cb31a": {
       "state": "reviewed",
@@ -467,7 +470,7 @@
       "reviewed_at": "2026-03-05",
       "review_commit_sha": "c50b3f9b8078eda2654b986050d9fadfc20165ee",
       "source_path": "examples/structural_imaging/FSL_course_bet.ipynb",
-      "review_content_hash": "bb66b5972af1befc884e87f37e9869256071e76645981ab67fb60862d10149de"
+      "review_content_hash": "ccad991075cb2fd25c16135c36828977a250e8e594f6a6f37a99bfeee643603b"
     },
     "71fd5ecb-23f1-424c-9701-3beb2027db7d": {
       "state": "reviewed",
