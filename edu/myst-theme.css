@@ -157,3 +157,28 @@
 article:has(.nd-launch-menu) .nd-launch {
   display: none;
 }
+
+/* Light/dark image variants: the theme toggles the `dark` class on <html>. */
+.nd-dark-only {
+  display: none !important;
+}
+
+.dark .nd-light-only {
+  display: none !important;
+}
+
+.dark .nd-dark-only {
+  display: block !important;
+}
+
+/* Black-on-transparent logos (e.g. Wellcome Trust) turn white in dark mode. */
+.dark .nd-invert-dark {
+  filter: invert(1);
+}
+
+
+/* The homepage shows the stacked NeurodeskEDU logo instead of its title. Hide only the title (not
+   the whole title block) so the page keeps its GitHub, edit and download buttons. */
+article:has(.nd-home-logo) .myst-fm-block-title {
+  display: none;
+}

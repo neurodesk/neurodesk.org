@@ -1395,14 +1395,11 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_240320_20261001",
+            "application": "code_240320_20261006",
             "categories": [
                 "programming"
             ],
-            "description": "Python and Julia environment with VScode and singularity",
-            "doi": "10.5281/zenodo.23129780",
-            "doi_url": "https://doi.org/10.5281/zenodo.23129780",
-            "license": "cc-by-4.0"
+            "description": "Python and Julia environment with VScode and singularity"
         },
         {
             "application": "condaenvs_1.0.1_20260513",
@@ -1646,6 +1643,13 @@
             "license": "mit-license"
         },
         {
+            "application": "datalad_1.7.0_20261006",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
+        },
+        {
             "application": "datalad_arm64_1.1.5_20260911",
             "categories": [
                 "data organisation"
@@ -1689,6 +1693,12 @@
             "doi": "10.5281/zenodo.23130005",
             "doi_url": "https://doi.org/10.5281/zenodo.23130005",
             "license": "mit-license"
+        },
+        {
+            "application": "datalad_arm64_1.7.0_20261006",
+            "categories": [
+                "data organisation"
+            ]
         },
         {
             "application": "dcm2bids_3.2.0_20260527",
@@ -1917,6 +1927,13 @@
             "license": "mit-license"
         },
         {
+            "application": "dicompare_0.15.3_20261006",
+            "categories": [
+                "data organisation",
+                "quality control"
+            ]
+        },
+        {
             "application": "dicompare_0.5.4_20260506",
             "categories": [
                 "data organisation",
@@ -1928,6 +1945,13 @@
         },
         {
             "application": "dicompare_arm64_0.15.2_20260921",
+            "categories": [
+                "data organisation",
+                "quality control"
+            ]
+        },
+        {
+            "application": "dicompare_arm64_0.15.3_20261006",
             "categories": [
                 "data organisation",
                 "quality control"
@@ -4303,6 +4327,14 @@
             "license": "gpl-3.0"
         },
         {
+            "application": "petprep_0.0.10_20261005",
+            "categories": [
+                "quantitative imaging",
+                "structural imaging"
+            ],
+            "description": "PETPrep is a positron emission tomography (PET) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs comprehensive processing steps\u2014such as motion correction, segmentation, registration, partial volume correction, and extraction of time activity curves, providing outputs that can be easily submitted to a variety of group level analyses, pharmacokinetic modelling, graph theory measures, and surface or volume-based statistics."
+        },
+        {
             "application": "petprep_0.0.5_20260519",
             "categories": [
                 "quantitative imaging",
@@ -4357,6 +4389,13 @@
             "license": "mit-license"
         },
         {
+            "application": "pydeface_2.1.0_20261006",
+            "categories": [
+                "image segmentation"
+            ],
+            "description": "pydeface is defacing utility for MRI images"
+        },
+        {
             "application": "pyem_0.69.0_20261004",
             "categories": [
                 "cryo EM"
@@ -4372,6 +4411,14 @@
             "doi": "10.5281/zenodo.18931729",
             "doi_url": "https://doi.org/10.5281/zenodo.18931729",
             "license": "other-at"
+        },
+        {
+            "application": "qmrlab_3.0.0_20261006",
+            "categories": [
+                "image reconstruction",
+                "quantitative imaging"
+            ],
+            "description": "qMRLab is an open-source software for quantitative MR image analysis. Our main goal is to provide the community with an intuitive tool for data fitting, plotting, simulation and protocol optimization for a myriad of different quantitative models. The modularity of the qMRLab framework makes it easy to add any additional modules and we encourage everyone to contribute their favorite recipe for qMR! For documentation, visit http://qmrlab.readthedocs.io/ If you are a developer please visit https://github.com/neuropoly/qMRLab/wiki Please report any bug or suggestions in https://github.com/neuropoly/qMRLab/issues For interactive tutorials blog posts and more, you can visit https://qmrlab.org qMRLab is a fork from the initial project https://github.com/neuropoly/qMTLab Citation: * [Karakuzu et al. *qMRLab: Quantitative MRI analysis, under one umbrella.* Journal of Open Source Software (JOSS) 2020](https://joss.theoj.org/papers/10.21105/joss.02343) * [Karakuzu et al. *The qMRLab workflow: From acquisition to publication.* ISMRM 2019](https://www.ismrm.org/19/program_files/DP23.htm#005) * [Duval et al. *Quantitative MRI made easy with qMRLab.* ISMRM 2018](http://archive.ismrm.org/2018/2288.html) * [Cabana et al. *Quantitative magnetization transfer imaging made easy with qMTLab: Software for data simulation, analysis, and visualization.* Concepts in Magnetic Resonance 2015](https://onlinelibrary.wiley.com/doi/abs/10.1002/cmr.a.21357) License: MIT License"
         },
         {
             "application": "qsiprep_0.20.0_20240408",
@@ -4394,6 +4441,13 @@
             "license": "bsd-3-clause"
         },
         {
+            "application": "qsiprep_26.0.0_20261007",
+            "categories": [
+                "diffusion imaging"
+            ],
+            "description": "qsiprep configures pipelines for processing diffusion-weighted MRI (dMRI) data. The main features of this software are - A BIDS-app approach to preprocessing nearly all kinds of modern diffusion MRI data. - Automatically generated preprocessing pipelines that correctly group, distortion correct, motion correct, denoise, coregister and resample your scans, producing visual reports and QC metrics. - A system for running state-of-the-art reconstruction pipelines that include algorithms from Dipy, MRTrix, DSI Studio and others. - A novel motion correction algorithm that works on DSI and random q-space sampling schemes"
+        },
+        {
             "application": "qsirecon_1.1.0_20250423",
             "categories": [
                 "diffusion imaging"
@@ -4404,6 +4458,13 @@
             "license": "bsd-3-clause"
         },
         {
+            "application": "qsirecon_26.0.1_20261006",
+            "categories": [
+                "diffusion imaging"
+            ],
+            "description": "QSIRecon builds post-processing workflows that produce many of the biologically-interesting dMRI derivatives used for hypothesis testing. The main goal of QSIRecon is to make the state-of-the-art methods available in Dipy, MRTrix, DSI Studio, PyAFQ and other software packages easy to apply on preprocessed dMRI data. QSIRecon is companion software for XCP-D, doing for dMRI what XCP-D does for BOLD."
+        },
+        {
             "application": "qsmbly_0.11.0_20260506",
             "categories": [
                 "structural imaging"
@@ -4411,6 +4472,12 @@
             "doi": "10.5281/zenodo.20102866",
             "doi_url": "https://doi.org/10.5281/zenodo.20102866",
             "license": "mit-license"
+        },
+        {
+            "application": "qsmbly_0.29.0_20261006",
+            "categories": [
+                "structural imaging"
+            ]
         },
         {
             "application": "qsmbly_0.3.0_20260211",

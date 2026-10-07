@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-06T20:51:51Z",
+  "generatedAt": "2026-10-07T12:03:32Z",
   "source": "Google Analytics 4",
   "periodDays": 30,
-  "totalUsers": 79634,
-  "periodUsers": 14787,
-  "periodSessions": 17055,
-  "periodPageViews": 22888,
+  "totalUsers": 84837,
+  "periodUsers": 20094,
+  "periodSessions": 22302,
+  "periodPageViews": 28499,
   "months": [
     {
       "month": "2023-05",
@@ -214,50 +214,50 @@
     },
     {
       "month": "2026-10",
-      "newUsers": 10009,
-      "cumulativeUsers": 81690
+      "newUsers": 15411,
+      "cumulativeUsers": 87092
     }
   ],
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "users": 26698
+      "users": 31928
     },
     {
       "code": "CN",
       "name": "China",
-      "users": 10219
+      "users": 10225
     },
     {
       "code": "SG",
       "name": "Singapore",
-      "users": 9730
+      "users": 9752
     },
     {
       "code": "AU",
       "name": "Australia",
-      "users": 6369
+      "users": 6373
     },
     {
       "code": "DE",
       "name": "Germany",
-      "users": 3700
-    },
-    {
-      "code": "GB",
-      "name": "United Kingdom",
-      "users": 2022
+      "users": 3702
     },
     {
       "code": "CA",
       "name": "Canada",
-      "users": 1960
+      "users": 2034
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "users": 2025
     },
     {
       "code": "FR",
       "name": "France",
-      "users": 1440
+      "users": 1441
     },
     {
       "code": "IN",
@@ -272,7 +272,7 @@
     {
       "code": "JP",
       "name": "Japan",
-      "users": 1113
+      "users": 1115
     },
     {
       "code": "AT",
@@ -282,12 +282,12 @@
     {
       "code": "NL",
       "name": "Netherlands",
-      "users": 1045
+      "users": 1046
     },
     {
       "code": "CH",
       "name": "Switzerland",
-      "users": 1031
+      "users": 1032
     },
     {
       "code": "ES",
@@ -302,12 +302,12 @@
     {
       "code": "BR",
       "name": "Brazil",
-      "users": 811
+      "users": 813
     },
     {
       "code": "KR",
       "name": "South Korea",
-      "users": 750
+      "users": 751
     },
     {
       "code": "TR",
@@ -322,7 +322,7 @@
     {
       "code": "VN",
       "name": "Vietnam",
-      "users": 589
+      "users": 591
     },
     {
       "code": "PL",
@@ -340,6 +340,11 @@
       "users": 483
     },
     {
+      "code": "MX",
+      "name": "Mexico",
+      "users": 467
+    },
+    {
       "code": "SE",
       "name": "Sweden",
       "users": 421
@@ -347,12 +352,7 @@
     {
       "code": "IR",
       "name": "Iran",
-      "users": 415
-    },
-    {
-      "code": "MX",
-      "name": "Mexico",
-      "users": 399
+      "users": 416
     },
     {
       "code": "PH",
@@ -362,7 +362,7 @@
     {
       "code": "IL",
       "name": "Israel",
-      "users": 369
+      "users": 370
     },
     {
       "code": "CZ",
@@ -387,7 +387,7 @@
     {
       "code": "CO",
       "name": "Colombia",
-      "users": 233
+      "users": 234
     },
     {
       "code": "DK",
@@ -415,14 +415,14 @@
       "users": 185
     },
     {
+      "code": "AR",
+      "name": "Argentina",
+      "users": 168
+    },
+    {
       "code": "NO",
       "name": "Norway",
       "users": 167
-    },
-    {
-      "code": "AR",
-      "name": "Argentina",
-      "users": 166
     },
     {
       "code": "CL",
@@ -447,7 +447,7 @@
     {
       "code": "GR",
       "name": "Greece",
-      "users": 137
+      "users": 138
     },
     {
       "code": "BD",
@@ -502,7 +502,7 @@
     {
       "code": "VE",
       "name": "Venezuela",
-      "users": 58
+      "users": 59
     },
     {
       "code": "DZ",
@@ -1113,10 +1113,10 @@
         "pagePathPrefix": "/edu"
       },
       "trackingStartDate": "2025-12-18",
-      "totalUsers": 3140,
-      "periodUsers": 225,
-      "periodSessions": 242,
-      "periodPageViews": 291,
+      "totalUsers": 3176,
+      "periodUsers": 261,
+      "periodSessions": 282,
+      "periodPageViews": 346,
       "months": [
         {
           "month": "2025-12",
@@ -1170,25 +1170,25 @@
         },
         {
           "month": "2026-10",
-          "newUsers": 204,
-          "cumulativeUsers": 2594
+          "newUsers": 235,
+          "cumulativeUsers": 2625
         }
       ],
       "countries": [
         {
           "code": "US",
           "name": "United States",
-          "users": 642
+          "users": 652
         },
         {
           "code": "SG",
           "name": "Singapore",
-          "users": 537
+          "users": 549
         },
         {
           "code": "CN",
           "name": "China",
-          "users": 274
+          "users": 281
         },
         {
           "code": "DE",
@@ -1198,7 +1198,7 @@
         {
           "code": "AU",
           "name": "Australia",
-          "users": 169
+          "users": 171
         },
         {
           "code": "FR",
@@ -1233,7 +1233,7 @@
         {
           "code": "BR",
           "name": "Brazil",
-          "users": 58
+          "users": 59
         },
         {
           "code": "JP",
@@ -1283,7 +1283,7 @@
         {
           "code": "IL",
           "name": "Israel",
-          "users": 24
+          "users": 25
         },
         {
           "code": "VN",
@@ -1321,6 +1321,11 @@
           "users": 14
         },
         {
+          "code": "CO",
+          "name": "Colombia",
+          "users": 13
+        },
+        {
           "code": "FI",
           "name": "Finland",
           "users": 13
@@ -1331,24 +1336,19 @@
           "users": 13
         },
         {
-          "code": "CO",
-          "name": "Colombia",
-          "users": 12
-        },
-        {
           "code": "MX",
           "name": "Mexico",
           "users": 12
         },
         {
+          "code": "AR",
+          "name": "Argentina",
+          "users": 11
+        },
+        {
           "code": "PT",
           "name": "Portugal",
           "users": 10
-        },
-        {
-          "code": "AR",
-          "name": "Argentina",
-          "users": 9
         },
         {
           "code": "IE",
@@ -1648,10 +1648,10 @@
         ]
       },
       "trackingStartDate": "2026-07-08",
-      "totalUsers": 440,
-      "periodUsers": 162,
-      "periodSessions": 277,
-      "periodPageViews": 991,
+      "totalUsers": 441,
+      "periodUsers": 163,
+      "periodSessions": 282,
+      "periodPageViews": 999,
       "months": [
         {
           "month": "2026-07",
@@ -1703,7 +1703,7 @@
         {
           "code": "CA",
           "name": "Canada",
-          "users": 20
+          "users": 21
         },
         {
           "code": "CN",
@@ -1945,8 +1945,8 @@
       "trackingStartDate": "2026-07-08",
       "totalUsers": 145,
       "periodUsers": 71,
-      "periodSessions": 234,
-      "periodPageViews": 777,
+      "periodSessions": 236,
+      "periodPageViews": 786,
       "months": [
         {
           "month": "2026-07",
@@ -2323,40 +2323,361 @@
       ]
     },
     {
-      "id": "webapp-calmar",
-      "name": "CALMaR",
-      "url": "https://calmar.neurodesk.org/",
-      "description": "CALMaR lesion mapping and reporting webapp.",
+      "id": "webapp-musclemap",
+      "name": "MuscleMap",
+      "url": "https://webapps.neurodesk.org/musclemap/",
+      "description": "MuscleMap hosted Neurodesk webapp.",
       "filters": {
-        "hostNames": [
-          "calmar.neurodesk.org"
-        ]
+        "orGroup": {
+          "expressions": [
+            {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "hostName",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "webapps.neurodesk.org",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "orGroup": {
+                      "expressions": [
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "EXACT",
+                              "value": "/musclemap",
+                              "caseSensitive": false
+                            }
+                          }
+                        },
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "BEGINS_WITH",
+                              "value": "/musclemap/",
+                              "caseSensitive": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "musclemap.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            }
+          ]
+        }
       },
-      "trackingStartDate": "2026-07-11",
-      "totalUsers": 64,
-      "periodUsers": 16,
-      "periodSessions": 26,
-      "periodPageViews": 42,
+      "trackingStartDate": "2026-07-12",
+      "totalUsers": 332,
+      "periodUsers": 147,
+      "periodSessions": 241,
+      "periodPageViews": 293,
       "months": [
         {
           "month": "2026-07",
-          "newUsers": 8,
-          "cumulativeUsers": 8
+          "newUsers": 54,
+          "cumulativeUsers": 54
         },
         {
           "month": "2026-08",
-          "newUsers": 14,
-          "cumulativeUsers": 22
+          "newUsers": 97,
+          "cumulativeUsers": 151
         },
         {
           "month": "2026-09",
-          "newUsers": 10,
-          "cumulativeUsers": 32
+          "newUsers": 120,
+          "cumulativeUsers": 271
         },
         {
           "month": "2026-10",
-          "newUsers": 1,
+          "newUsers": 14,
+          "cumulativeUsers": 285
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 100
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "users": 38
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 31
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 19
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "users": 19
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "users": 15
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 15
+        },
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "users": 11
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 9
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 6
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 6
+        },
+        {
+          "code": "IE",
+          "name": "Ireland",
+          "users": 6
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "users": 6
+        },
+        {
+          "code": "AR",
+          "name": "Argentina",
+          "users": 5
+        },
+        {
+          "code": "CO",
+          "name": "Colombia",
+          "users": 5
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "users": 5
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "users": 4
+        },
+        {
+          "code": "GR",
+          "name": "Greece",
+          "users": 4
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "users": 4
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "users": 3
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "users": 3
+        },
+        {
+          "code": "SE",
+          "name": "Sweden",
+          "users": 3
+        },
+        {
+          "code": "TR",
+          "name": "T\u00fcrkiye",
+          "users": 3
+        },
+        {
+          "code": "BE",
+          "name": "Belgium",
+          "users": 2
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "users": 2
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "users": 2
+        },
+        {
+          "code": "AE",
+          "name": "United Arab Emirates",
+          "users": 1
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "users": 1
+        },
+        {
+          "code": "CZ",
+          "name": "Czechia",
+          "users": 1
+        },
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "users": 1
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "users": 1
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "users": 1
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "users": 1
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "users": 1
+        },
+        {
+          "code": "VN",
+          "name": "Vietnam",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-vesselboost",
+      "name": "VesselBoost",
+      "url": "https://webapps.neurodesk.org/vesselboost/",
+      "description": "VesselBoost hosted Neurodesk webapp.",
+      "filters": {
+        "orGroup": {
+          "expressions": [
+            {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "hostName",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "webapps.neurodesk.org",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "orGroup": {
+                      "expressions": [
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "EXACT",
+                              "value": "/vesselboost",
+                              "caseSensitive": false
+                            }
+                          }
+                        },
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "BEGINS_WITH",
+                              "value": "/vesselboost/",
+                              "caseSensitive": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "vesselboost.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-07-12",
+      "totalUsers": 110,
+      "periodUsers": 60,
+      "periodSessions": 115,
+      "periodPageViews": 165,
+      "months": [
+        {
+          "month": "2026-07",
+          "newUsers": 16,
+          "cumulativeUsers": 16
+        },
+        {
+          "month": "2026-08",
+          "newUsers": 17,
           "cumulativeUsers": 33
+        },
+        {
+          "month": "2026-09",
+          "newUsers": 45,
+          "cumulativeUsers": 78
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 7,
+          "cumulativeUsers": 85
         }
       ],
       "countries": [
@@ -2366,9 +2687,420 @@
           "users": 25
         },
         {
+          "code": "CN",
+          "name": "China",
+          "users": 20
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 9
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "users": 6
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 5
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 5
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "users": 4
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "users": 4
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "users": 3
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 3
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "users": 3
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 3
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "users": 3
+        },
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "users": 2
+        },
+        {
+          "code": "CL",
+          "name": "Chile",
+          "users": 2
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "users": 2
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "users": 2
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "users": 2
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 2
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
+          "users": 1
+        },
+        {
+          "code": "EG",
+          "name": "Egypt",
+          "users": 1
+        },
+        {
+          "code": "GR",
+          "name": "Greece",
+          "users": 1
+        },
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "users": 1
+        },
+        {
+          "code": "MT",
+          "name": "Malta",
+          "users": 1
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "users": 1
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
+          "users": 1
+        },
+        {
+          "code": "VN",
+          "name": "Vietnam",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-sct",
+      "name": "Spinal Cord Toolbox",
+      "url": "https://webapps.neurodesk.org/sct/",
+      "description": "Spinal Cord Toolbox hosted Neurodesk webapp.",
+      "filters": {
+        "orGroup": {
+          "expressions": [
+            {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "hostName",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "webapps.neurodesk.org",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "orGroup": {
+                      "expressions": [
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "EXACT",
+                              "value": "/sct",
+                              "caseSensitive": false
+                            }
+                          }
+                        },
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "BEGINS_WITH",
+                              "value": "/sct/",
+                              "caseSensitive": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "sct.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-07-13",
+      "totalUsers": 47,
+      "periodUsers": 20,
+      "periodSessions": 32,
+      "periodPageViews": 41,
+      "months": [
+        {
+          "month": "2026-07",
+          "newUsers": 7,
+          "cumulativeUsers": 7
+        },
+        {
+          "month": "2026-08",
+          "newUsers": 7,
+          "cumulativeUsers": 14
+        },
+        {
+          "month": "2026-09",
+          "newUsers": 8,
+          "cumulativeUsers": 22
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 23
+        }
+      ],
+      "countries": [
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "users": 8
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 7
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "users": 6
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 5
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "users": 4
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 3
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 2
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "users": 2
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 2
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "users": 1
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 1
+        },
+        {
+          "code": "CZ",
+          "name": "Czechia",
+          "users": 1
+        },
+        {
+          "code": "EG",
+          "name": "Egypt",
+          "users": 1
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "users": 1
+        },
+        {
+          "code": "IR",
+          "name": "Iran",
+          "users": 1
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "users": 1
+        },
+        {
+          "code": "TR",
+          "name": "T\u00fcrkiye",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-calmar",
+      "name": "CALMaR",
+      "url": "https://webapps.neurodesk.org/calmar/",
+      "description": "CALMaR hosted Neurodesk webapp.",
+      "filters": {
+        "orGroup": {
+          "expressions": [
+            {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "hostName",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "webapps.neurodesk.org",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "orGroup": {
+                      "expressions": [
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "EXACT",
+                              "value": "/calmar",
+                              "caseSensitive": false
+                            }
+                          }
+                        },
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "BEGINS_WITH",
+                              "value": "/calmar/",
+                              "caseSensitive": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "calmar.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-07-11",
+      "totalUsers": 71,
+      "periodUsers": 23,
+      "periodSessions": 33,
+      "periodPageViews": 51,
+      "months": [
+        {
+          "month": "2026-07",
+          "newUsers": 9,
+          "cumulativeUsers": 9
+        },
+        {
+          "month": "2026-08",
+          "newUsers": 14,
+          "cumulativeUsers": 23
+        },
+        {
+          "month": "2026-09",
+          "newUsers": 10,
+          "cumulativeUsers": 33
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 3,
+          "cumulativeUsers": 36
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 27
+        },
+        {
           "code": "AU",
           "name": "Australia",
           "users": 12
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 6
         },
         {
           "code": "DE",
@@ -2386,11 +3118,6 @@
           "users": 3
         },
         {
-          "code": "CH",
-          "name": "Switzerland",
-          "users": 3
-        },
-        {
           "code": "PL",
           "name": "Poland",
           "users": 3
@@ -2404,6 +3131,11 @@
           "code": "BR",
           "name": "Brazil",
           "users": 2
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "users": 1
         },
         {
           "code": "IN",
@@ -2436,226 +3168,13 @@
           "users": 1
         },
         {
-          "code": "TR",
-          "name": "T\u00fcrkiye",
-          "users": 1
-        }
-      ]
-    },
-    {
-      "id": "webapp-dicompare",
-      "name": "dicompare",
-      "url": "https://dicompare.neurodesk.org",
-      "description": "dicompare DICOM protocol comparison webapp.",
-      "filters": {
-        "hostNames": [
-          "dicompare.neurodesk.org"
-        ]
-      },
-      "trackingStartDate": null,
-      "totalUsers": 0,
-      "periodUsers": 0,
-      "periodSessions": 0,
-      "periodPageViews": 0,
-      "months": [],
-      "countries": []
-    },
-    {
-      "id": "webapp-musclemap",
-      "name": "MuscleMap",
-      "url": "https://musclemap.neurodesk.org",
-      "description": "MuscleMap muscle segmentation webapp.",
-      "filters": {
-        "hostNames": [
-          "musclemap.neurodesk.org"
-        ]
-      },
-      "trackingStartDate": "2026-07-12",
-      "totalUsers": 278,
-      "periodUsers": 95,
-      "periodSessions": 173,
-      "periodPageViews": 214,
-      "months": [
-        {
-          "month": "2026-07",
-          "newUsers": 52,
-          "cumulativeUsers": 52
-        },
-        {
-          "month": "2026-08",
-          "newUsers": 95,
-          "cumulativeUsers": 147
-        },
-        {
-          "month": "2026-09",
-          "newUsers": 85,
-          "cumulativeUsers": 232
-        },
-        {
-          "month": "2026-10",
-          "newUsers": 11,
-          "cumulativeUsers": 243
-        }
-      ],
-      "countries": [
-        {
-          "code": "US",
-          "name": "United States",
-          "users": 89
-        },
-        {
-          "code": "CN",
-          "name": "China",
-          "users": 31
-        },
-        {
-          "code": "AU",
-          "name": "Australia",
-          "users": 29
-        },
-        {
-          "code": "DE",
-          "name": "Germany",
-          "users": 17
-        },
-        {
-          "code": "NL",
-          "name": "Netherlands",
-          "users": 17
-        },
-        {
-          "code": "JP",
-          "name": "Japan",
-          "users": 13
-        },
-        {
           "code": "SG",
           "name": "Singapore",
-          "users": 11
-        },
-        {
-          "code": "FR",
-          "name": "France",
-          "users": 6
-        },
-        {
-          "code": "IN",
-          "name": "India",
-          "users": 6
-        },
-        {
-          "code": "CA",
-          "name": "Canada",
-          "users": 5
-        },
-        {
-          "code": "IE",
-          "name": "Ireland",
-          "users": 5
-        },
-        {
-          "code": "AR",
-          "name": "Argentina",
-          "users": 4
-        },
-        {
-          "code": "CH",
-          "name": "Switzerland",
-          "users": 4
-        },
-        {
-          "code": "ES",
-          "name": "Spain",
-          "users": 4
-        },
-        {
-          "code": "GB",
-          "name": "United Kingdom",
-          "users": 4
-        },
-        {
-          "code": "GR",
-          "name": "Greece",
-          "users": 4
-        },
-        {
-          "code": "BR",
-          "name": "Brazil",
-          "users": 3
-        },
-        {
-          "code": "CO",
-          "name": "Colombia",
-          "users": 3
-        },
-        {
-          "code": "HK",
-          "name": "Hong Kong",
-          "users": 3
-        },
-        {
-          "code": "ID",
-          "name": "Indonesia",
-          "users": 3
-        },
-        {
-          "code": "IT",
-          "name": "Italy",
-          "users": 3
-        },
-        {
-          "code": "SE",
-          "name": "Sweden",
-          "users": 3
+          "users": 1
         },
         {
           "code": "TR",
           "name": "T\u00fcrkiye",
-          "users": 3
-        },
-        {
-          "code": "RU",
-          "name": "Russia",
-          "users": 2
-        },
-        {
-          "code": "AE",
-          "name": "United Arab Emirates",
-          "users": 1
-        },
-        {
-          "code": "BE",
-          "name": "Belgium",
-          "users": 1
-        },
-        {
-          "code": "CZ",
-          "name": "Czechia",
-          "users": 1
-        },
-        {
-          "code": "IL",
-          "name": "Israel",
-          "users": 1
-        },
-        {
-          "code": "MY",
-          "name": "Malaysia",
-          "users": 1
-        },
-        {
-          "code": "RO",
-          "name": "Romania",
-          "users": 1
-        },
-        {
-          "code": "TH",
-          "name": "Thailand",
-          "users": 1
-        },
-        {
-          "code": "VN",
-          "name": "Vietnam",
           "users": 1
         }
       ]
@@ -2663,120 +3182,421 @@
     {
       "id": "webapp-qsmbly",
       "name": "QSMbly",
-      "url": "https://qsmbly.neurodesk.org",
-      "description": "QSMbly quantitative susceptibility mapping webapp.",
+      "url": "https://webapps.neurodesk.org/qsmbly/",
+      "description": "QSMbly hosted Neurodesk webapp.",
       "filters": {
-        "hostNames": [
-          "qsmbly.neurodesk.org"
-        ]
+        "orGroup": {
+          "expressions": [
+            {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "hostName",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "webapps.neurodesk.org",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "orGroup": {
+                      "expressions": [
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "EXACT",
+                              "value": "/qsmbly",
+                              "caseSensitive": false
+                            }
+                          }
+                        },
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "BEGINS_WITH",
+                              "value": "/qsmbly/",
+                              "caseSensitive": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "qsmbly.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            }
+          ]
+        }
       },
-      "trackingStartDate": null,
-      "totalUsers": 0,
-      "periodUsers": 0,
-      "periodSessions": 0,
-      "periodPageViews": 0,
-      "months": [],
-      "countries": []
-    },
-    {
-      "id": "webapp-seedseg",
-      "name": "SeedSeg",
-      "url": "https://seedseg.neurodesk.org/",
-      "description": "SeedSeg fiducial marker segmentation webapp.",
-      "filters": {
-        "hostNames": [
-          "seedseg.neurodesk.org"
-        ]
-      },
-      "trackingStartDate": null,
-      "totalUsers": 0,
-      "periodUsers": 0,
-      "periodSessions": 0,
-      "periodPageViews": 0,
-      "months": [],
-      "countries": []
-    },
-    {
-      "id": "webapp-sct",
-      "name": "Spinal Cord Toolbox",
-      "url": "https://sct.neurodesk.org",
-      "description": "Spinal Cord Toolbox segmentation webapp.",
-      "filters": {
-        "hostNames": [
-          "sct.neurodesk.org"
-        ]
-      },
-      "trackingStartDate": "2026-07-13",
-      "totalUsers": 41,
-      "periodUsers": 13,
-      "periodSessions": 25,
-      "periodPageViews": 31,
+      "trackingStartDate": "2026-09-19",
+      "totalUsers": 7,
+      "periodUsers": 7,
+      "periodSessions": 8,
+      "periodPageViews": 11,
       "months": [
         {
-          "month": "2026-07",
-          "newUsers": 7,
-          "cumulativeUsers": 7
-        },
-        {
-          "month": "2026-08",
-          "newUsers": 7,
-          "cumulativeUsers": 14
-        },
-        {
           "month": "2026-09",
-          "newUsers": 8,
-          "cumulativeUsers": 22
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 2
         }
       ],
       "countries": [
         {
-          "code": "BR",
-          "name": "Brazil",
-          "users": 8
-        },
-        {
-          "code": "PL",
-          "name": "Poland",
-          "users": 6
+          "code": "US",
+          "name": "United States",
+          "users": 2
         },
         {
           "code": "CA",
           "name": "Canada",
-          "users": 5
-        },
-        {
-          "code": "US",
-          "name": "United States",
-          "users": 5
+          "users": 1
         },
         {
           "code": "CN",
           "name": "China",
-          "users": 4
+          "users": 1
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "users": 1
+        },
+        {
+          "code": "IR",
+          "name": "Iran",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-seedseg",
+      "name": "SeedSeg",
+      "url": "https://webapps.neurodesk.org/seedseg/",
+      "description": "SeedSeg hosted Neurodesk webapp.",
+      "filters": {
+        "orGroup": {
+          "expressions": [
+            {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "hostName",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "webapps.neurodesk.org",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "orGroup": {
+                      "expressions": [
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "EXACT",
+                              "value": "/seedseg",
+                              "caseSensitive": false
+                            }
+                          }
+                        },
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "BEGINS_WITH",
+                              "value": "/seedseg/",
+                              "caseSensitive": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "seedseg.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-23",
+      "totalUsers": 2,
+      "periodUsers": 2,
+      "periodSessions": 2,
+      "periodPageViews": 2,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-dicompare",
+      "name": "dicompare",
+      "url": "https://webapps.neurodesk.org/dicompare/",
+      "description": "dicompare hosted Neurodesk webapp.",
+      "filters": {
+        "orGroup": {
+          "expressions": [
+            {
+              "andGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "hostName",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "webapps.neurodesk.org",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "orGroup": {
+                      "expressions": [
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "EXACT",
+                              "value": "/dicompare",
+                              "caseSensitive": false
+                            }
+                          }
+                        },
+                        {
+                          "filter": {
+                            "fieldName": "pagePath",
+                            "stringFilter": {
+                              "matchType": "BEGINS_WITH",
+                              "value": "/dicompare/",
+                              "caseSensitive": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "dicompare.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-17",
+      "totalUsers": 4,
+      "periodUsers": 4,
+      "periodSessions": 6,
+      "periodPageViews": 13,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 2
         },
         {
           "code": "CH",
           "name": "Switzerland",
-          "users": 2
+          "users": 1
         },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-deface",
+      "name": "Deface",
+      "url": "https://webapps.neurodesk.org/deface/",
+      "description": "Deface hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/deface",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/deface/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-10-03",
+      "totalUsers": 1,
+      "periodUsers": 1,
+      "periodSessions": 1,
+      "periodPageViews": 1,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-easy-mp2rage",
+      "name": "Easy MP2RAGE T1 Map",
+      "url": "https://webapps.neurodesk.org/easy-mp2rage/",
+      "description": "Easy MP2RAGE T1 Map hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/easy-mp2rage",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/easy-mp2rage/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-07-22",
+      "totalUsers": 4,
+      "periodUsers": 2,
+      "periodSessions": 2,
+      "periodPageViews": 2,
+      "months": [],
+      "countries": [
         {
           "code": "DE",
           "name": "Germany",
-          "users": 2
-        },
-        {
-          "code": "AT",
-          "name": "Austria",
-          "users": 1
-        },
-        {
-          "code": "AU",
-          "name": "Australia",
-          "users": 1
-        },
-        {
-          "code": "CZ",
-          "name": "Czechia",
           "users": 1
         },
         {
@@ -2785,8 +3605,100 @@
           "users": 1
         },
         {
-          "code": "GB",
-          "name": "United Kingdom",
+          "code": "NL",
+          "name": "Netherlands",
+          "users": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-niimath",
+      "name": "NiiMath",
+      "url": "https://webapps.neurodesk.org/niimath/",
+      "description": "NiiMath hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/niimath",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/niimath/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-15",
+      "totalUsers": 7,
+      "periodUsers": 7,
+      "periodSessions": 7,
+      "periodPageViews": 9,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 1
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 1
+        },
+        {
+          "code": "EG",
+          "name": "Egypt",
+          "users": 1
+        },
+        {
+          "code": "FR",
+          "name": "France",
           "users": 1
         },
         {
@@ -2795,109 +3707,295 @@
           "users": 1
         },
         {
-          "code": "NL",
-          "name": "Netherlands",
-          "users": 1
-        },
-        {
           "code": "SG",
           "name": "Singapore",
-          "users": 1
-        },
-        {
-          "code": "TR",
-          "name": "T\u00fcrkiye",
           "users": 1
         }
       ]
     },
     {
-      "id": "webapp-vesselboost",
-      "name": "VesselBoost",
-      "url": "https://vesselboost.neurodesk.org",
-      "description": "VesselBoost blood vessel segmentation webapp.",
+      "id": "webapp-dicom2vid",
+      "name": "MRI2VID",
+      "url": "https://webapps.neurodesk.org/dicom2vid/",
+      "description": "MRI2VID hosted Neurodesk webapp.",
       "filters": {
-        "hostNames": [
-          "vesselboost.neurodesk.org"
-        ]
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/dicom2vid",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/dicom2vid/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       },
-      "trackingStartDate": "2026-07-12",
-      "totalUsers": 99,
-      "periodUsers": 48,
-      "periodSessions": 88,
-      "periodPageViews": 126,
+      "trackingStartDate": "2026-07-14",
+      "totalUsers": 6,
+      "periodUsers": 3,
+      "periodSessions": 4,
+      "periodPageViews": 4,
       "months": [
         {
           "month": "2026-07",
-          "newUsers": 16,
-          "cumulativeUsers": 16
-        },
-        {
-          "month": "2026-08",
-          "newUsers": 17,
-          "cumulativeUsers": 33
+          "newUsers": 1,
+          "cumulativeUsers": 1
         },
         {
           "month": "2026-09",
-          "newUsers": 44,
-          "cumulativeUsers": 77
-        },
-        {
-          "month": "2026-10",
-          "newUsers": 6,
-          "cumulativeUsers": 83
+          "newUsers": 1,
+          "cumulativeUsers": 2
         }
       ],
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
-          "users": 21
+          "code": "AT",
+          "name": "Austria",
+          "users": 1
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
         },
         {
           "code": "CN",
           "name": "China",
-          "users": 19
-        },
-        {
-          "code": "AU",
-          "name": "Australia",
-          "users": 9
-        },
-        {
-          "code": "JP",
-          "name": "Japan",
-          "users": 6
-        },
-        {
-          "code": "CA",
-          "name": "Canada",
-          "users": 5
+          "users": 1
         },
         {
           "code": "DE",
           "name": "Germany",
-          "users": 4
+          "users": 1
         },
         {
-          "code": "HK",
-          "name": "Hong Kong",
-          "users": 4
+          "code": "NL",
+          "name": "Netherlands",
+          "users": 1
         },
         {
-          "code": "KR",
-          "name": "South Korea",
-          "users": 4
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-browserqc",
+      "name": "BrowserQC",
+      "url": "https://webapps.neurodesk.org/browserqc/",
+      "description": "BrowserQC hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/browserqc",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/browserqc/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-17",
+      "totalUsers": 6,
+      "periodUsers": 6,
+      "periodSessions": 11,
+      "periodPageViews": 9,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 1,
+          "cumulativeUsers": 1
         },
         {
-          "code": "AT",
-          "name": "Austria",
-          "users": 3
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 2
+        }
+      ],
+      "countries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 2
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 2
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 1
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "users": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-surfannotate",
+      "name": "SurfAnnotate",
+      "url": "https://webapps.neurodesk.org/surfannotate/",
+      "description": "SurfAnnotate hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/surfannotate",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/surfannotate/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-15",
+      "totalUsers": 40,
+      "periodUsers": 40,
+      "periodSessions": 59,
+      "periodPageViews": 66,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 26,
+          "cumulativeUsers": 26
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 27
+        }
+      ],
+      "countries": [
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 12
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 7
         },
         {
           "code": "FR",
           "name": "France",
+          "users": 4
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
           "users": 3
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "users": 2
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 2
         },
         {
           "code": "BR",
@@ -2905,53 +4003,23 @@
           "users": 2
         },
         {
+          "code": "NZ",
+          "name": "New Zealand",
+          "users": 2
+        },
+        {
           "code": "CH",
           "name": "Switzerland",
-          "users": 2
-        },
-        {
-          "code": "CL",
-          "name": "Chile",
-          "users": 2
-        },
-        {
-          "code": "ES",
-          "name": "Spain",
-          "users": 2
+          "users": 1
         },
         {
           "code": "GB",
           "name": "United Kingdom",
-          "users": 2
-        },
-        {
-          "code": "ID",
-          "name": "Indonesia",
-          "users": 2
-        },
-        {
-          "code": "IL",
-          "name": "Israel",
-          "users": 2
-        },
-        {
-          "code": "IN",
-          "name": "India",
-          "users": 2
-        },
-        {
-          "code": "DK",
-          "name": "Denmark",
           "users": 1
         },
         {
-          "code": "GR",
-          "name": "Greece",
-          "users": 1
-        },
-        {
-          "code": "KZ",
-          "name": "Kazakhstan",
+          "code": "IR",
+          "name": "Iran",
           "users": 1
         },
         {
@@ -2965,11 +4033,1380 @@
           "users": 1
         },
         {
-          "code": "VN",
-          "name": "Vietnam",
+          "code": "SK",
+          "name": "Slovakia",
           "users": 1
         }
       ]
+    },
+    {
+      "id": "webapp-zarro",
+      "name": "ZARRo",
+      "url": "https://webapps.neurodesk.org/zarro/",
+      "description": "ZARRo hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/zarro",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/zarro/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-16",
+      "totalUsers": 5,
+      "periodUsers": 5,
+      "periodSessions": 11,
+      "periodPageViews": 13,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 2
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 4
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-synthsr",
+      "name": "SynthSR",
+      "url": "https://webapps.neurodesk.org/synthsr/",
+      "description": "SynthSR hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/synthsr",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/synthsr/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-19",
+      "totalUsers": 4,
+      "periodUsers": 4,
+      "periodSessions": 12,
+      "periodPageViews": 10,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 2,
+          "cumulativeUsers": 2
+        }
+      ],
+      "countries": [
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
+        },
+        {
+          "code": "EG",
+          "name": "Egypt",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-synthseg",
+      "name": "SynthSeg",
+      "url": "https://webapps.neurodesk.org/synthseg/",
+      "description": "SynthSeg hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/synthseg",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/synthseg/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-15",
+      "totalUsers": 12,
+      "periodUsers": 12,
+      "periodSessions": 16,
+      "periodPageViews": 15,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 2
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 5
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "users": 2
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 2
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 1
+        },
+        {
+          "code": "EG",
+          "name": "Egypt",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-syncro",
+      "name": "SYNcro",
+      "url": "https://webapps.neurodesk.org/syncro/",
+      "description": "SYNcro hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/syncro",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/syncro/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-15",
+      "totalUsers": 7,
+      "periodUsers": 7,
+      "periodSessions": 10,
+      "periodPageViews": 11,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 3,
+          "cumulativeUsers": 3
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 4
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 6
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-dwi2trx",
+      "name": "dwi2trx",
+      "url": "https://webapps.neurodesk.org/dwi2trx/",
+      "description": "dwi2trx hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/dwi2trx",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/dwi2trx/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-18",
+      "totalUsers": 3,
+      "periodUsers": 3,
+      "periodSessions": 3,
+      "periodPageViews": 4,
+      "months": [],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 2
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-edgereg",
+      "name": "EdgeReg",
+      "url": "https://webapps.neurodesk.org/edgereg/",
+      "description": "EdgeReg hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/edgereg",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/edgereg/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-25",
+      "totalUsers": 2,
+      "periodUsers": 2,
+      "periodSessions": 2,
+      "periodPageViews": 2,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-disconnectome",
+      "name": "Disconnectome",
+      "url": "https://webapps.neurodesk.org/disconnectome/",
+      "description": "Disconnectome hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/disconnectome",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/disconnectome/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-23",
+      "totalUsers": 4,
+      "periodUsers": 4,
+      "periodSessions": 12,
+      "periodPageViews": 11,
+      "months": [],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 3
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 1
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-greedy",
+      "name": "Greedy",
+      "url": "https://webapps.neurodesk.org/greedy/",
+      "description": "Greedy hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/greedy",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/greedy/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-16",
+      "totalUsers": 3,
+      "periodUsers": 3,
+      "periodSessions": 5,
+      "periodPageViews": 6,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 2,
+          "cumulativeUsers": 2
+        }
+      ],
+      "countries": [
+        {
+          "code": "DK",
+          "name": "Denmark",
+          "users": 1
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-ants",
+      "name": "ANTs",
+      "url": "https://webapps.neurodesk.org/ants/",
+      "description": "ANTs hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/ants",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/ants/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-16",
+      "totalUsers": 7,
+      "periodUsers": 7,
+      "periodSessions": 8,
+      "periodPageViews": 9,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 4
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-brain2print",
+      "name": "Brain2Print",
+      "url": "https://webapps.neurodesk.org/brain2print/",
+      "description": "Brain2Print hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/brain2print",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/brain2print/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-16",
+      "totalUsers": 5,
+      "periodUsers": 5,
+      "periodSessions": 7,
+      "periodPageViews": 8,
+      "months": [],
+      "countries": [
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 2
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 2
+        },
+        {
+          "code": "CH",
+          "name": "Switzerland",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-topofit",
+      "name": "TopoFit",
+      "url": "https://webapps.neurodesk.org/topofit/",
+      "description": "TopoFit hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/topofit",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/topofit/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-15",
+      "totalUsers": 23,
+      "periodUsers": 23,
+      "periodSessions": 29,
+      "periodPageViews": 33,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 12,
+          "cumulativeUsers": 12
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 7,
+          "cumulativeUsers": 19
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 18
+        },
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "users": 2
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "users": 1
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 1
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "users": 1
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-fireants",
+      "name": "FireANTs",
+      "url": "https://webapps.neurodesk.org/fireants/",
+      "description": "FireANTs hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/fireants",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/fireants/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-15",
+      "totalUsers": 6,
+      "periodUsers": 6,
+      "periodSessions": 8,
+      "periodPageViews": 8,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        },
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 2
+        }
+      ],
+      "countries": [
+        {
+          "code": "CN",
+          "name": "China",
+          "users": 3
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "users": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "users": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-brain-extraction",
+      "name": "Brain extraction",
+      "url": "https://webapps.neurodesk.org/brain-extraction/",
+      "description": "Brain extraction hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/brain-extraction",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/brain-extraction/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-16",
+      "totalUsers": 13,
+      "periodUsers": 13,
+      "periodSessions": 22,
+      "periodPageViews": 31,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 2,
+          "cumulativeUsers": 2
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 3
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "users": 2
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "users": 2
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "users": 2
+        },
+        {
+          "code": "MX",
+          "name": "Mexico",
+          "users": 2
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "users": 1
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "users": 1
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "users": 1
+        },
+        {
+          "code": "RS",
+          "name": "Serbia",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-carotid-flow",
+      "name": "Carotid Flow",
+      "url": "https://webapps.neurodesk.org/carotid-flow/",
+      "description": "Carotid Flow hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/carotid-flow",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/carotid-flow/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-09-28",
+      "totalUsers": 6,
+      "periodUsers": 6,
+      "periodSessions": 8,
+      "periodPageViews": 7,
+      "months": [
+        {
+          "month": "2026-09",
+          "newUsers": 5,
+          "cumulativeUsers": 5
+        }
+      ],
+      "countries": [
+        {
+          "code": "BE",
+          "name": "Belgium",
+          "users": 1
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 1
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "users": 1
+        },
+        {
+          "code": "IE",
+          "name": "Ireland",
+          "users": 1
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "users": 1
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-lcmodel",
+      "name": "LCModel",
+      "url": "https://webapps.neurodesk.org/lcmodel/",
+      "description": "LCModel hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/lcmodel",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/lcmodel/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-10-06",
+      "totalUsers": 3,
+      "periodUsers": 3,
+      "periodSessions": 3,
+      "periodPageViews": 3,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 1,
+          "cumulativeUsers": 1
+        }
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 2
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-white-matter-lesions",
+      "name": "White matter lesions",
+      "url": "https://webapps.neurodesk.org/white-matter-lesions/",
+      "description": "White matter lesions hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/white-matter-lesions",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/white-matter-lesions/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": "2026-10-01",
+      "totalUsers": 4,
+      "periodUsers": 4,
+      "periodSessions": 5,
+      "periodPageViews": 4,
+      "months": [
+        {
+          "month": "2026-10",
+          "newUsers": 3,
+          "cumulativeUsers": 3
+        }
+      ],
+      "countries": [
+        {
+          "code": "CA",
+          "name": "Canada",
+          "users": 3
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "users": 1
+        }
+      ]
+    },
+    {
+      "id": "webapp-nesvor",
+      "name": "NeSVoR",
+      "url": "https://webapps.neurodesk.org/nesvor/",
+      "description": "NeSVoR hosted Neurodesk webapp.",
+      "filters": {
+        "andGroup": {
+          "expressions": [
+            {
+              "filter": {
+                "fieldName": "hostName",
+                "stringFilter": {
+                  "matchType": "EXACT",
+                  "value": "webapps.neurodesk.org",
+                  "caseSensitive": false
+                }
+              }
+            },
+            {
+              "orGroup": {
+                "expressions": [
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "EXACT",
+                        "value": "/nesvor",
+                        "caseSensitive": false
+                      }
+                    }
+                  },
+                  {
+                    "filter": {
+                      "fieldName": "pagePath",
+                      "stringFilter": {
+                        "matchType": "BEGINS_WITH",
+                        "value": "/nesvor/",
+                        "caseSensitive": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "trackingStartDate": null,
+      "totalUsers": 0,
+      "periodUsers": 0,
+      "periodSessions": 0,
+      "periodPageViews": 0,
+      "months": [],
+      "countries": []
     }
   ]
 }

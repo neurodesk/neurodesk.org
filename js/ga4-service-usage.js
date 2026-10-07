@@ -60,8 +60,13 @@
       .filter(Boolean);
   }
 
-  function selectedSegments(data, ids) {
+  function selectedSegments(data, ids, idPrefix) {
     var segments = Array.isArray(data.segments) ? data.segments : [];
+    if (idPrefix) {
+      return segments.filter(function (segment) {
+        return String(segment.id || "").startsWith(idPrefix);
+      });
+    }
     if (!ids.length) {
       return segments;
     }
@@ -85,7 +90,7 @@
     }
 
     var ids = requestedIds(block);
-    var segments = selectedSegments(data, ids);
+    var segments = selectedSegments(data, ids, block.dataset.ga4ServiceUsageIdPrefix);
     if (!segments.length) {
       renderStatus(block, "Service usage statistics are not configured for this build.");
       return;
