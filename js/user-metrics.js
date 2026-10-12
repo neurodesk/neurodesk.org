@@ -274,20 +274,22 @@
     return figure;
   }
 
-  var MAP_RAMP = ["#e6f1d6", "#d3e7b6", "#b7d886", "#6aa329", "#4f7b38"];
+  // Ramp steps are CSS custom properties so each theme can supply its own.
+  var MAP_RAMP = [0, 1, 2, 3, 4].map(function (i) {
+    return "var(--um-map-" + i + ")";
+  });
 
   function binThresholds(values) {
-    // Quantile bin edges over countries with data; deduped for small sets.
-    var sorted = values.slice().sort(function (a, b) { return a - b; });
+    // Log-scale bin edges at powers of ten (10, 100, 1,000, ...) up to the
+    // max. User counts span several orders of magnitude, so linear or
+    // quantile bins lump most countries into one colour. If there are more
+    // decades than ramp steps, the lowest decades are merged.
+    var max = values.reduce(function (a, b) { return Math.max(a, b); }, 0);
     var thresholds = [];
-    for (var i = 1; i < MAP_RAMP.length; i++) {
-      var value = sorted[Math.min(sorted.length - 1,
-        Math.floor((sorted.length * i) / MAP_RAMP.length))];
-      if (!thresholds.length || value > thresholds[thresholds.length - 1]) {
-        thresholds.push(value);
-      }
+    for (var edge = 10; edge <= max; edge *= 10) {
+      thresholds.push(edge);
     }
-    return thresholds;
+    return thresholds.slice(Math.max(0, thresholds.length - (MAP_RAMP.length - 1)));
   }
 
   function binIndex(value, thresholds) {
