@@ -412,6 +412,60 @@
             "openrecon": true
         },
         {
+            "application": "b0mapromeo_1.1.0_20261008",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "openrecon": true
+        },
+        {
+            "application": "b0mapromeo_1.2.0_20261008",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "openrecon": true
+        },
+        {
+            "application": "b0mapromeo_1.3.0_20261008",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "openrecon": true
+        },
+        {
+            "application": "b0mapromeo_1.4.0_20261008",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "openrecon": true
+        },
+        {
+            "application": "b0mapromeo_1.4.1_20261008",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "openrecon": true
+        },
+        {
+            "application": "b0mapromeo_1.4.3_20261009",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "openrecon": true
+        },
+        {
             "application": "bart_0.7.00_20210302",
             "categories": [
                 "image reconstruction"
@@ -1395,7 +1449,7 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_240320_20261006",
+            "application": "code_240320_20261008",
             "categories": [
                 "programming"
             ],
@@ -1650,6 +1704,13 @@
             "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
         },
         {
+            "application": "datalad_1.7.1_20261007",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
+        },
+        {
             "application": "datalad_arm64_1.1.5_20260911",
             "categories": [
                 "data organisation"
@@ -1699,6 +1760,15 @@
             "categories": [
                 "data organisation"
             ]
+        },
+        {
+            "application": "datalad_arm64_1.7.1_20261007",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23290008",
+            "doi_url": "https://doi.org/10.5281/zenodo.23290008",
+            "license": "mit-license"
         },
         {
             "application": "dcm2bids_3.2.0_20260527",
@@ -2461,13 +2531,19 @@
             "description": "FreeSurfer contains a set of programs with a common focus of analyzing magnetic resonance imaging scans of brain tissue. It is an important tool in functional brain mapping and contains tools to conduct both volume based and surface based analysis."
         },
         {
-            "application": "frisgo_2.10.0_20261005",
+            "application": "frisgo_2.10.0_20261009",
             "categories": [
                 "functional imaging",
                 "image reconstruction"
             ],
-            "description": "OpenRecon image-to-image Fuzzy Ripple correction for dual-polarity (3D-)EPI BOLD time series, using `LN2_FRISGO -tshift` from LayNii {{ context.laynii_version }}. The OpenRecon module collects every reconstructed image of the run, arranges them by slice position and repetition into a 4D NIfTI, runs `LN2_FRISGO -input timeseries.nii -tshift` and returns: - the original time series on `image_series_index = 100` (`sendoriginal`) - the FRISGO-corrected time series `<source>-frisgo` on `image_series_index = 101` (`sendfrisgo`) Both outputs keep the source 2D geometry, slice and repetition counters with `Keep_image_geometry = 1`. Corrected values are rounded to the source pixel type, so negative values clip to 0 for unsigned scanner images. Run the module with fewer than 4 repetitions and only the originals are returned. Incomplete runs, repetition gaps and duplicate nonconstant counters skip correction for that source group while preserving requested originals. Echo, phase, set and average counters define independent time series. Long outputs split into new series before the 16-bit image index overflows. Simulate the OpenRecon round trip with a 4D NIfTI:",
+            "description": "OpenRecon image-to-image Fuzzy Ripple correction for dual-polarity (3D-)EPI BOLD time series, using `LN2_FRISGO -tshift` from LayNii {{ context.laynii_version }}. The OpenRecon module collects every reconstructed image of the run, arranges them by slice position and repetition into a 4D NIfTI, runs `LN2_FRISGO -input timeseries.nii -tshift` and returns: - the original time series on `image_series_index = 100` (`sendoriginal`) - the FRISGO-corrected time series `<source>-frisgo` on `image_series_index = 101` (`sendfrisgo`) Both outputs keep the source 2D geometry, slice and repetition counters with `Keep_image_geometry = 1`. Corrected values are rounded to the source pixel type, so negative values clip to 0 for unsigned scanner images. The GUI selects Spline (default), Simple, Low-pass or Run-wise. Spline requires 4 repetitions; other modes require 2. Low-pass also requires at least 100 spatial voxels. Its Gaussian window defaults to 40 TRs and accepts 0.1 to 1000000 TRs, including fractional values. The window applies only to Low-pass. Invalid selections skip correction and preserve requested originals. Nondefault corrected series identify the algorithm in their suffix and processing history. Incomplete runs, repetition gaps and duplicate nonconstant counters skip correction for that source group while preserving requested originals. Echo, phase, set and average counters define independent time series. Long outputs split into new series before the 16-bit image index overflows. Simulate the OpenRecon round trip with a 4D NIfTI:",
             "openrecon": true
+        },
+        {
+            "application": "frisgokspace_0.1.0_20261008",
+            "categories": [
+                "image reconstruction"
+            ]
         },
         {
             "application": "fsl_6.0.3_20200905",
@@ -3094,6 +3170,13 @@
             "license": "mit-license"
         },
         {
+            "application": "kspacefilter_0.1.0_20261008",
+            "categories": [
+                "image reconstruction"
+            ],
+            "openrecon": true
+        },
+        {
             "application": "kul-vbg_0.61.0_23112021_beta_20261004",
             "categories": [
                 "image segmentation",
@@ -3645,7 +3728,7 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "mneextended_1.2.0_20261004",
+            "application": "mneextended_1.2.0_20261008",
             "categories": [
                 "electrophysiology",
                 "programming"
@@ -4096,7 +4179,10 @@
             "application": "niimath_arm64_1.0.20260924_20261004",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23290198",
+            "doi_url": "https://doi.org/10.5281/zenodo.23290198",
+            "license": "bsd-2-clause-netbsd"
         },
         {
             "application": "niistat_1.0.20191216_20260629",
@@ -4130,7 +4216,10 @@
             "categories": [
                 "image segmentation",
                 "machine learning"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23290102",
+            "doi_url": "https://doi.org/10.5281/zenodo.23290102",
+            "license": "apache2.0"
         },
         {
             "application": "noddi_1.0_20260520",
@@ -4935,6 +5024,13 @@
             "license": "apache2.0"
         },
         {
+            "application": "radtract_0.2.4_20261007",
+            "categories": [
+                "diffusion imaging"
+            ],
+            "description": "RadTract is a python implementation of radiomic tractometry or \"Tractomics\". It is designed for tract-specific microstructural analysis of the brain's white matter using diffusion MRI. It enhances traditional tractometry, which often misses valuable information due to its reliance on bare summary statistics and scalar values. RadTract incorporates radiomics, a method that analyzes a multitude of quantitative image features beyond visual perception, into tractometry. This integration allows for improved predictive modeling while maintaining the localization capability of tractometry."
+        },
+        {
             "application": "rapidtide_3.1.11_20260714",
             "categories": [
                 "functional imaging"
@@ -4943,6 +5039,13 @@
             "doi": "10.5281/zenodo.21436381",
             "doi_url": "https://doi.org/10.5281/zenodo.21436381",
             "license": "apache2.0"
+        },
+        {
+            "application": "rapidtide_3.2.0_20261008",
+            "categories": [
+                "functional imaging"
+            ],
+            "description": "Rapidtide is a suite of Python programs used to perform time delay analysis on functional imaging data to find time lagged correlations between the voxelwise time series and other time series, primarily to identify and remove low frequency systemic (non-neuronal) hemodynamic signals. The suite includes the core `rapidtide` program (RIPTiDe delay mapping), `happy` (cardiac waveform extraction from fMRI), registration helpers (`rapidtide2std`, `happy2std`), the `tidepool` GUI viewer, and a number of time course/NIfTI utilities (`showtc`, `showxcorrx`, `showxy`, `showhist`, `resampletc`, `resamplenifti`)."
         },
         {
             "application": "relion_4.0.1.sm61_20240528",
@@ -4992,6 +5095,16 @@
             "description": "ROOT is a powerful software framework, an open source project coordinated by the European Organisation for Nuclear Research, CERN in Geneva. ROOT is very flexible and provides both a programming interface to use in own applications and a graphical user interface for interactive data analysis. ROOT leads a double life. It has an interpreter for macros (Cling) that you can run from the command line or run like applications. But it is also an interactive shell that can evaluate arbitrary statements and expressions. This is extremely useful for debugging, quick hacking and testing. Let us first have a look at some very simple examples. start the root shell with the command 'root', try things like 'TMath::Pi()' or plotting a function",
             "doi": "10.5281/zenodo.18931779",
             "doi_url": "https://doi.org/10.5281/zenodo.18931779",
+            "license": "lgpl-2.1-or-later"
+        },
+        {
+            "application": "root_6.24.06_20261009",
+            "categories": [
+                "programming"
+            ],
+            "description": "ROOT is a powerful software framework, an open source project coordinated by the European Organisation for Nuclear Research, CERN in Geneva. ROOT is very flexible and provides both a programming interface to use in own applications and a graphical user interface for interactive data analysis. ROOT leads a double life. It has an interpreter for macros (Cling) that you can run from the command line or run like applications. But it is also an interactive shell that can evaluate arbitrary statements and expressions. This is extremely useful for debugging, quick hacking and testing. Let us first have a look at some very simple examples. start the root shell with the command 'root', try things like 'TMath::Pi()' or plotting a function",
+            "doi": "10.5281/zenodo.23289980",
+            "doi_url": "https://doi.org/10.5281/zenodo.23289980",
             "license": "lgpl-2.1-or-later"
         },
         {
@@ -5046,6 +5159,13 @@
             "license": "apgl-v3"
         },
         {
+            "application": "rstudio_2026.09.0_20261009",
+            "categories": [
+                "statistics"
+            ],
+            "description": "RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. This container includes both RStudio Desktop (GUI) and RStudio Server (web-based)."
+        },
+        {
             "application": "samri_0.5_20260608",
             "categories": [
                 "functional imaging",
@@ -5077,6 +5197,15 @@
             "doi": "10.5281/zenodo.20361615",
             "doi_url": "https://doi.org/10.5281/zenodo.20361615",
             "license": "bsd-3-clause"
+        },
+        {
+            "application": "shim-toolbox_1.5.0_20261009",
+            "categories": [
+                "image reconstruction",
+                "phase processing",
+                "quantitative imaging"
+            ],
+            "openrecon": true
         },
         {
             "application": "sigviewer_0.6.4_20220315",
@@ -5386,7 +5515,10 @@
             "application": "stir_6.4.0_20261003",
             "categories": [
                 "image reconstruction"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23290168",
+            "doi_url": "https://doi.org/10.5281/zenodo.23290168",
+            "license": "apache2.0"
         },
         {
             "application": "surfice_1.0.20210730_20211218",
@@ -5421,16 +5553,13 @@
             "license": "bsd-2-clause-netbsd"
         },
         {
-            "application": "synthseg_8.2.0_20260902",
+            "application": "synthseg_8.2.0_20261010",
             "categories": [
                 "image segmentation",
                 "machine learning",
                 "structural imaging"
             ],
             "description": "SynthSeg is a contrast- and resolution-agnostic brain MRI segmentation tool. It is trained on synthetic data generated with domain randomisation, so a single network segments scans of any contrast and resolution without retraining or preprocessing. This container packages `mri_synthseg` and the trained weights from FreeSurfer {{ context.version }}: SynthSeg 2.0 (default), SynthSeg 1.0 (`--v1`), SynthSeg-robust (`--robust`), the cortical parcellation and QC networks, and Photo-SynthSeg 1.0 (`--photo`). Only that subtree is installed, so this is much smaller than a full FreeSurfer image. Segmentation runs at 1 mm isotropic regardless of the input resolution. Pass `--keepgeom` to resample the label map back onto the input grid.",
-            "doi": "10.5281/zenodo.22731017",
-            "doi_url": "https://doi.org/10.5281/zenodo.22731017",
-            "license": "other-open",
             "openrecon": true
         },
         {
@@ -5562,16 +5691,13 @@
             "openrecon": true
         },
         {
-            "application": "topofit_0.6.0_20260917",
+            "application": "topofit_0.6.0_20261010",
             "categories": [
                 "machine learning",
                 "shape analysis",
                 "structural imaging"
             ],
             "description": "This container packages BrainNet TopoFit {{ context.brainnet_version }} for fast cortical surface reconstruction. It predicts bilateral white and pial surfaces plus spherical registration without running a full FreeSurfer `recon-all` workflow. Run it on a NIfTI MPRAGE:",
-            "doi": "10.5281/zenodo.22851295",
-            "doi_url": "https://doi.org/10.5281/zenodo.22851295",
-            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -5691,6 +5817,14 @@
             "doi": "10.5281/zenodo.18932149",
             "doi_url": "https://doi.org/10.5281/zenodo.18932149",
             "license": "cc-by-4.0"
+        },
+        {
+            "application": "vessynth_2026.10.9_20261010",
+            "categories": [
+                "image segmentation",
+                "machine learning"
+            ],
+            "openrecon": true
         },
         {
             "application": "vina_1.2.3_20230221",
