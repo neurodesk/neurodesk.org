@@ -6,5 +6,6 @@ title: "Reproducibility"
 
 Tutorial pages related to reproducible workflows.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

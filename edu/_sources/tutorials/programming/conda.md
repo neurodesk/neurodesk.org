@@ -1,16 +1,35 @@
 ---
-title: "Conda environments"
-linkTitle: "conda envs"
+title: Conda environments
+linkTitle: conda envs
 weight: 1
-tags: ["python", "conda", "programming"]
-author: Fernanda L. Ribeiro
+tags:
+- python
+- conda
+- programming
 aliases:
 - /tutorials/programming/conda
-description: > 
-  A tutorial for setting up your conda environments on Neurodesk.
+description: A tutorial for setting up your conda environments on Neurodesk.
+authors:
+- name: Fernanda L. Ribeiro
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
-
 # Conda environments
+
+**Authors:** Fernanda L. Ribeiro, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Create and activate a software environment.
+- Install a package in the intended environment.
+- Select the corresponding notebook kernel.
+:::
+
 
 A tutorial for setting up your conda environments on Neurodesk.
 
@@ -36,7 +55,7 @@ The default conda environment is not persistent across sessions, so this means a
 
 1. In a Terminal window, type in:
 
-![1_terminal](/static/tutorials/programming/conda/1_terminal.png '1_terminal')
+![1_terminal](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/neurodesktop-launcher-terminal.png '1_terminal')
 
 For *Python*:
 ```bash
@@ -101,8 +120,8 @@ conda activate r_env
 
 4. Open a new Launcher tab. The new environment can take a short time to appear on the JupyterLab start page after the installation finishes. When it appears, select the new Notebook option to start a Jupyter Notebook in that environment.
 
-![2_env](/static/tutorials/programming/conda/2_env.png '2_env')
+![2_env](/static/tutorials/programming/conda/2-env.png '2_env')
 
 Switching the environment on a Jupyter Notebook is also possible on the top right corner dropdown menu.
 
-![3_notebook](/static/tutorials/programming/conda/3_notebook.png '3_notebook')
+![3_notebook](/static/tutorials/programming/conda/3-notebook.png '3_notebook')

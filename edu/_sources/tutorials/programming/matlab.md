@@ -1,90 +1,123 @@
 ---
-title: "Matlab"
-linkTitle: "Matlab"
+title: Matlab
+linkTitle: Matlab
 weight: 1
-tags: ["matlab", "programming"]
-author: Fernanda L. Ribeiro
+tags:
+- matlab
+- programming
 aliases:
 - /tutorials/programming/matlab
-description: > 
-  A tutorial for setting up your matlab license on Neurodesk.
+description: A tutorial for setting up your matlab license on Neurodesk.
+authors:
+- name: Fernanda L. Ribeiro
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
+# MATLAB
 
-# Matlab
+**Authors:** Fernanda L. Ribeiro, Michèle Masson-Trottier
 
-A tutorial for setting up your matlab license on Neurodesk.
+**Last updated:** 20 October 2026
 
-> _This tutorial was created by Fernanda L. Ribeiro._ 
->
-> Email: fernanda.ribeiro@uq.edu.au
->
-> Github: @felenitaribeiro
->
-> Twitter: @NandaRibeiro93
->
-<!-- Fill in your personal details above so that we can credit the tutorial to you. Feel free to add any additional contact details i.e. website, or remove those that are irrelevant -->
+:::{admonition} Learning Objectives
+:class: tip
 
-<!-- Following line adds a link to getting set up with Neurodesk -->
+By the end of this tutorial you will be able to:
+
+- Launch MATLAB and use the available activation route.
+- Call a Neurodesk tool from MATLAB.
+- Choose and save keyboard shortcut preferences.
+:::
+
+
+This tutorial covers activating MATLAB R2022a, calling a Neurodesk tool from MATLAB and changing keyboard shortcuts.
+
+> _This tutorial was created by Fernanda L. Ribeiro._
+>
+> Email: fernanda.ribeiro@uq.edu.au · GitHub: @felenitaribeiro
+
 [Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
-<!-- -->
 
-This tutorial documents how to set up your matlab license on Neurodesk. 
+## Start MATLAB
 
-## Matlab license
+You need your own MATLAB license. An eligible MathWorks account can activate MATLAB, or your institution can provide a network license file and access to its license server. A file installation key alone does not activate this installed copy; see [MathWorks' license-file and installation-key guidance](https://www.mathworks.com/help/install/ug/get-license-file-and-file-installation-key.html).
 
-0. Note: You need your own Matlab license to use Matlab in Neurodesk. You can either login to your matlab account or you can provide an institutional network license server if your neurodesk runs within your institution network and ran reach your license server.
+The desktop menu contains **Neurodesk (1) → Programming (2) → matlab (3) → matlabGUI 2022a (4)**.
 
-1. a) Institutional network license
-run the following command once and replace the address of your license server and the license number
+![MATLAB entries in the current Neurodesk menu](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-matlab-guide.png)
+
+On the Neurodesktop image tested on 20 October 2026, that GUI entry exits without opening a window. Open **LXTerminal** from the bottom panel and start MATLAB directly:
+
 ```bash
-mkdir -p /home/jovyan/Downloads && echo -e "SERVER rtlicense1.university.edu D1234560F6 27007\nUSE_SERVER" > /home/jovyan/Downloads/network.lic
+ml matlab/2022a
+matlab
 ```
 
-1. b) Mathworks account: In the application menu, navigate to Neurodesk → Programming → matlab → matlabGUI 2022a
+If MATLAB reports **License Manager Error -1** because no license file is available, activate it first using the following procedure.
 
-![1_menu](/static/tutorials/programming/matlab/0_appmenu.png '1_menu')
+## Activate with a MathWorks account
 
-2. Select “Activate automatically using the internet” and hit next. 
+In LXTerminal, run the official activation client from the installed R2022a container:
 
-![2_matlabgui](/static/tutorials/programming/matlab/1_matlabgui.png '2_matlabgui')
-
-Then, add your email address and password from your MathWorks account (which you can set up using your university credentials if they provide a license for staff and students).
-
-![2_login](/static/tutorials/programming/matlab/2_login.png '2_login')
-
-3. Hit next after you select the appropriate license.
-
-![3_license](/static/tutorials/programming/matlab/3_license.png '3_license')
-
-4. Do not change the login name and hit next.
-
-![4_username](/static/tutorials/programming/matlab/4_username.png '4_username')
-
-5. Hit confirm, and you are all set!
-
-![5_confirm](/static/tutorials/programming/matlab/5_confirm.png '5_confirm')
-
-6. To launch the GUI, navigate through the application menu to Neurodesk → Programming → matlab → matlabGUI 2022a
-
-## Calling Neurodesk tools from within Matlab
-You can use Neurodesk software within Matlab by adding the specific Neurodesk container to your execution Path. For the example of adding the FSL package, this can be done as follows in Matlab:
-
-```
-setenv("PATH",getenv("PATH") + ":/cvmfs/neurodesk.ardc.edu.au/containers/fsl_6.0.7.4_20231005");
+```bash
+apptainer exec --bind /home/jovyan:/opt/matlab/R2022a/licenses /cvmfs/neurodesk.ardc.edu.au/containers/matlab_2022a_20231207/matlab_2022a_20231207.simg /opt/matlab/R2022a/bin/activate_matlab.sh
 ```
 
-Now you can, for example, use fslmaths in Matlab scripts:
-![fslmaths called from Matlab](/static/tutorials/programming/matlab/6_fslmaths.png)
+This command is specific to the tested R2022a image. It uses the same home-directory license binding as the installed MATLAB launcher.
 
-Let us know if this works well for you, and we would be very keen to hear if there is a better way of integrating the lmod system in Matlab.
+1. Leave **Activate automatically using the Internet** selected.
+2. Click **Next**.
 
-## Changing Matlab Keyboard Shortcuts
-By default, Matlab uses the emacs keyboard shortcuts in Linux, which might not be what most users expect. To change the keyboard shortcuts to a more common pattern, follow the next steps:
+![Activation client: 1 automatic activation, 2 Next](/static/tutorials/programming/matlab/activate-matlab-annotated.svg)
 
-Open the Preferences menu:
+Complete the MathWorks sign-in yourself, choose an eligible license and follow the activation client's prompts. Keep the Linux login name `jovyan` when asked which user will run MATLAB. Account and license screens are omitted here because they contain private information. See [MathWorks' activation instructions for R2022a and earlier](https://uk.mathworks.com/matlabcentral/answers/99457-how-do-i-activate-matlab-or-other-mathworks-products) for the account-dependent steps.
 
-![Matlab Preferences menu](/static/tutorials/programming/matlab/7_preferences.png)
+After activation, close the client and launch MATLAB from LXTerminal again:
 
-Navigate to Keyboard -> Shortcuts and change the active settings from "Emacs Default Set" to "Windows Default Set":
+```bash
+ml matlab/2022a
+matlab
+```
 
-![Keyboard shortcuts set to Windows Default Set](/static/tutorials/programming/matlab/8_shortcuts.png)
+The MATLAB desktop should open. Double-click its title bar to maximize it.
+
+![Activated MATLAB R2022a desktop](/static/tutorials/programming/matlab/matlab-desktop.jpg)
+
+### Institutional network license
+
+Ask your license administrator for the correct `network.lic` file and place it in `~/Downloads/network.lic`, the location used by this container's launcher. You must be able to reach the institution's license server from the Neurodesk instance. Use the administrator-provided file rather than constructing a license file from a license number. See [MathWorks' network-client installation guidance](https://www.mathworks.com/help/install/ug/install-products-on-client-machines.html). This alternative was not tested in the account-activated session above.
+
+## Call Neurodesk tools from MATLAB
+
+Add the chosen tool's Neurodesk wrapper directory to MATLAB's execution path. The older FSL 6.0.7.4 image used in this tutorial has been disabled by its maintainers. The following FSL 6.0.7.8 wrapper was verified in the current instance.
+
+In the **MATLAB Command Window**, run:
+
+```matlab
+setenv("PATH", "/cvmfs/neurodesk.ardc.edu.au/containers/fsl_6.0.7.8_20240913:" + getenv("PATH"));
+system('fslmaths');
+```
+
+Prepending the directory makes this wrapper take precedence over older FSL entries. Calling `fslmaths` without arguments prints its usage information; its nonzero exit status in this case is expected.
+
+![FSL usage displayed in the MATLAB Command Window](/static/tutorials/programming/matlab/fslmaths-from-matlab.jpg)
+
+To process an image, pass the arguments inside the command string, for example:
+
+```matlab
+status = system('fslmaths /path/to/input.nii.gz -mul 1 /home/jovyan/neurodesktop-storage/matlab-fsl-test.nii.gz');
+```
+
+Replace `/path/to/input.nii.gz` with an existing image. `status = 0` indicates success. This image-copy operation was tested from the GUI and its output matched the input voxel for voxel.
+
+## Change keyboard shortcuts
+
+MATLAB on Linux initially uses **Emacs Default Set**. To use the familiar Windows shortcuts, click **Preferences** on the **Home** ribbon.
+
+![Open MATLAB Preferences](/static/tutorials/programming/matlab/preferences-ribbon-annotated.svg)
+
+1. Expand **MATLAB → Keyboard** and select **Shortcuts**.
+2. Change **Active settings** to **Windows Default Set**.
+3. Click **OK**. Reopening Preferences should show the saved selection.
+
+![Keyboard shortcuts: 1 Shortcuts, 2 Windows Default Set, 3 OK](/static/tutorials/programming/matlab/keyboard-shortcuts-annotated.svg)

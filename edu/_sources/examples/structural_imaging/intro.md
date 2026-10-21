@@ -6,5 +6,6 @@ title: "Structural Imaging"
 
 Example notebooks for structural imaging workflows.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

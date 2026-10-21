@@ -6,5 +6,6 @@ title: "About Neurodesk"
 
 Tutorial pages related to Neurodesk workflows and tool access.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

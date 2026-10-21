@@ -6,5 +6,6 @@ title: "Structural Imaging"
 
 Tutorial pages related to structural imaging workflows.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

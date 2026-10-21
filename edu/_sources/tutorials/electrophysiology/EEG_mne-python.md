@@ -1,13 +1,32 @@
 ---
-title: "Analysing EEG Data with MNE"
-linkTitle: "MNE-Python: EEG"
+title: Analysing EEG Data with MNE
+linkTitle: 'MNE-Python: EEG'
 weight: 1
 aliases:
 - /tutorials/electrophysiology/EEG_mne-python
-description: >
-  Use mne-python to load, pre-process, and plot example EEG data in a jupyter notebook through vscode. 
+description: 'Use mne-python to load, pre-process, and plot example EEG data in a
+  jupyter notebook through vscode. '
+authors:
+- name: Angela Renton
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
 # Analysing EEG Data with MNE
+
+**Authors:** Angela Renton, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Distinguish commands for the terminal from code for notebook cells.
+- Select the MNE Python kernel and load a public EEG recording.
+- Inspect raw, filtered and averaged EEG in interactive plot windows.
+:::
+
 
 Use mne-python to load, pre-process, and plot example EEG data in a jupyter notebook through vscode. 
 
@@ -23,29 +42,28 @@ Use mne-python to load, pre-process, and plot example EEG data in a jupyter note
 
 ## Getting started
 
-To begin, navigate to Neurodesk->Electrophysiology->mne->vscodeGUI 0.23.4 in the menu. This version of vscode has been installed in a software container together with the a conda environment containing MNE-python. Note that if you open any other version of vscode in Neurodesk, you will not be able to access the MNE conda environment. 
+To begin, navigate to Neurodesk → Electrophysiology → mne → code 0.23.4 in the menu. This version of vscode has been installed in a software container together with a conda environment containing MNE-python. Note that if you open any other version of vscode in Neurodesk, you will not be able to access the MNE conda environment.
 
-![EEGtut0](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut0.png 'EEGtut0')
+![Click 1 Neurodesk, 2 Electrophysiology, 3 mne, and 4 code 0.23.4](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-mne-guide.png)
 
-![EEGtut1](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut1.png 'EEGtut1')
+Follow the numbered menu targets: **1** Neurodesk → **2** Electrophysiology → **3** mne → **4** code 0.23.4.
 
-Open the folder: “/home/user/Desktop/storage” or a subfolder in which you would like to store this demo. In this folder, create a new file named “EEGDemo.ipynb” or something similar:
+![VS Code running in the MNE container](/static/tutorials/electrophysiology/eeg_mne-python/mne-code-editor.jpg)
 
-![EEGtut2](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut2.png 'EEGtut2')
+Open the folder: “/neurodesktop-storage” or a subfolder in which you would like to store this demo. In this folder, create a new file named “EEGDemo.ipynb” or something similar:
 
-If this is your first time opening a Jupyter notebook on vscode in neurodesktop, you may see the following popup. If so, click “install” to install the vscode extensions for Jupyter.
 
-![EEGtut3](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut3.png 'EEGtut3')
+If VS Code prompts you to install its Jupyter extension, click **Install**, then reopen the notebook. The extension may already be installed in your instance.
+
 
 ## Select MNE python kernel
 
-Next, we need to direct vscode to use the python kernel associated with MNE. In the top right corner of your empty jupyter notebook, click “Select Kernel”:
+Next, we need to direct vscode to use the python kernel associated with MNE. In the top right corner of your empty jupyter notebook, click **Select Kernel** (or the current kernel name).
 
-![EEGtut4](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut4.png 'EEGtut4')
 
-Then, select mne-0.23.4 from the dropdown menu, which should look something like this:
+Then select **mne-0.23.4** from the dropdown menu, marked **1** below.
 
-![EEGtut5](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut5.png 'EEGtut5')
+![Select the mne-0.23.4 Python environment](/static/tutorials/electrophysiology/eeg_mne-python/mne-kernel-options-annotated.svg)
 
 ## Activate the MNE conda environment in the terminal
 
@@ -59,6 +77,14 @@ Once you have initialised conda, you can activate the MNE environment in the ter
 conda activate mne-0.23.4
 ```
 
+If `conda activate` asks you to initialise the shell, you can also initialise only the current terminal without changing your shell startup files:
+
+```bash
+source /opt/miniconda-latest/etc/profile.d/conda.sh
+conda activate mne-0.23.4
+```
+
+
 You should now see "(mne-0.23.4)" ahead of the current line in the terminal. 
 
 ## Download sample data
@@ -68,8 +94,10 @@ In the terminal (in which you have activated the MNE environment), input the fol
 > Remember to update the path to the location you are storing this tutorial! 
 
 ```
-pip install osfclient
-osf -p C689U fetch Data_sample.zip /neurodesktop-storage/EEGDEMO/Data_sample.zip
+python -m pip install osfclient
+mkdir -p /neurodesktop-storage/EEGDemo
+cd /neurodesktop-storage/EEGDemo
+osf -p c689u fetch osfstorage/Data_sample.zip Data_sample.zip
 unzip Data_sample.zip 
 ```
 
@@ -129,7 +157,7 @@ raw.plot()
 
 This should open an interactive window in which you can scroll through the data. See the MNE documentation for help on how to customise this plot. 
 
-![EEGtut6](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut6.png 'EEGtut6')
+![Interactive raw EEG traces](/static/tutorials/electrophysiology/eeg_mne-python/raw-eeg.jpg)
 
 If, upon visual inspection, you decide to exclude one of the channels, you can specify this in `raw.info['bads']` now. For example:
 ```
@@ -152,7 +180,7 @@ print(events[:5])
 mne.viz.plot_events(events, raw.info['sfreq'], raw.first_samp)
 ```
 
-![EEGtut7](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut7.png 'EEGtut7')
+![Events extracted from the trigger channel](/static/tutorials/electrophysiology/eeg_mne-python/events.jpg)
 
 Now that we’ve extracted our events, we can extract our EEG channels and do some simple pre-processing:
 ```
@@ -175,7 +203,7 @@ Let’s visualise our data again now that it’s cleaner:
 eeg_data_interp.plot(events=events, duration=10.0, scalings=dict(eeg=0.00005), color='k', event_color='r')
 ```
 
-![EEGtut8](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut8.png 'EEGtut8')
+![Filtered EEG after interpolation](/static/tutorials/electrophysiology/eeg_mne-python/filtered-eeg.jpg)
 
 That’s looking good! We can even see hints of the frequency tagging. It’s about time to epoch our data. 
 ```
@@ -203,7 +231,7 @@ evokeds = dict(attend6=list(epochs['attend 6Hz K'].iter_evoked()),
 mne.viz.plot_compare_evokeds(evokeds, combine='mean')
 ```
 
-![EEGtut9](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut9.png 'EEGtut9')
+![Evoked responses for both attention conditions](/static/tutorials/electrophysiology/eeg_mne-python/evoked-responses.jpg)
 
 In this plot, we can see that the data are frequency tagged. While these data were collected, the participant was performing an attention task in which two visual stimuli were flickering at 6 Hz and 7.5 Hz respectively. On each trial the participant was cued to monitor one of these two stimuli for brief bursts of motion. From previous research, we expect that the steady-state visual evoked potential (SSVEP) should be larger at the attended frequency than the unattended frequency. Lets check if this is true. 
 
@@ -248,6 +276,6 @@ ax.legend()
 
 
 ```
-![EEGtut10](/static/tutorials/electrophysiology/eeg_mne-python/EEGtut10.PNG 'EEGtut10')
+![Frequency spectrum for both attention conditions](/static/tutorials/electrophysiology/eeg_mne-python/frequency-spectrum.jpg)
 
 This plot shows that the SSVEPs were indeed modulated by attention in the direction we would expect! Congratulations! You’ve run your first analysis of EEG data in neurodesktop.

@@ -1,13 +1,32 @@
 ---
-title: "Using MFCSC"
-linkTitle: "MFCSC"
+title: Using MFCSC
+linkTitle: MFCSC
 weight: 1
-tags: ["multimodal", "preprocessing"]
-author: Oren Civier
-description: > 
-  A tutorial for using MFCSC to integrate connectomes from different modalities
+tags:
+- multimodal
+- preprocessing
+description: A tutorial for using MFCSC to integrate connectomes from different modalities
+authors:
+- name: Oren Civier
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
 # Using MFCSC
+
+**Authors:** Oren Civier, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Prepare paired functional and structural connectomes.
+- Run MFCSC on the public example data.
+- Inspect mismatch matrices and compare outputs with the reference results.
+:::
+
 
 A tutorial for using MFCSC to integrate connectomes from different modalities
 

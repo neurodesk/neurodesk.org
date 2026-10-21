@@ -1,16 +1,33 @@
 ---
-title: "datalad"
-linkTitle: "datalad"
+title: datalad
+linkTitle: datalad
 weight: 1
-tags: ["datalad"]
-author: Steffen Bollmann
+tags:
+- datalad
 aliases:
 - /tutorials/open_data/datalad
-description: >
-  Using datalad to publish and access open data on OSF
+description: Using datalad to publish and access open data on OSF
+authors:
+- name: Steffen Bollmann
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
-
 # datalad
+
+**Authors:** Steffen Bollmann, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Clone an open dataset and distinguish file metadata from file content.
+- Retrieve selected data and record local changes.
+- Understand when DataLad differs from a simple file download.
+:::
+
 
 Using datalad to publish and access open data on OSF.
 
@@ -29,6 +46,7 @@ DataLad is an open-source tool to publish and access open datasets. In addition 
 First we have to create a DataLad dataset:
 ```Bash
 datalad create my_dataset
+cd my_dataset
 
 # now add files to your project and then add save the files with datalad
 datalad save -m "added new files"
@@ -47,7 +65,7 @@ Here is an example how to publish a dataset on the OSF:
 
 # create sibling
 datalad create-sibling-osf --title best-study-ever -s osf
-git config --global --add datalad.extensions.load next
+git config --local --add datalad.extensions.load next
 
 # push
 datalad push --to osf

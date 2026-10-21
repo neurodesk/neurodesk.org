@@ -6,5 +6,6 @@ title: "Quantitative Imaging"
 
 Example notebooks for quantitative data preprocessing and analysis.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

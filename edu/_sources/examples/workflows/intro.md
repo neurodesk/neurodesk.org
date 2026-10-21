@@ -6,5 +6,6 @@ title: "Workflows"
 
 Example notebooks demonstrating common preprocessing and workflow tools.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

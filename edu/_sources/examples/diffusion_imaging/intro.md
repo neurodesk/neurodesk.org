@@ -6,5 +6,6 @@ title: "Diffusion Imaging"
 
 This folder contains example notebooks that demonstrate diffusion MRI preprocessing and analysis using MRtrix and FSL.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

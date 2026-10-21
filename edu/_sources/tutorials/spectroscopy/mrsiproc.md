@@ -1,16 +1,33 @@
 ---
-title: "Spectroscopy pipeline"
-linkTitle: "mrsiproc"
+title: Spectroscopy pipeline
+linkTitle: mrsiproc
 weight: 1
-tags: ["mrsiproc"]
-author: Korbinian Eckstein
+tags:
+- mrsiproc
 aliases:
 - /tutorials/spectroscopy/mrsiproc
-description: >
-  Using mrsiproc, you can reconstruct and analyze MR spectroscopy data.
+description: Using mrsiproc, you can reconstruct and analyze MR spectroscopy data.
+authors:
+- name: Korbinian Eckstein
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
-
 # Spectroscopy pipeline
+
+**Authors:** Korbinian Eckstein, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Launch the MRSI processing environment.
+- Identify the inputs needed by the processing scripts.
+- Locate output maps and distinguish preparation from a completed analysis.
+:::
+
 
 Using mrsiproc, you can reconstruct and analyze MR spectroscopy data.
 
@@ -22,50 +39,45 @@ Using mrsiproc, you can reconstruct and analyze MR spectroscopy data.
 [Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
 <!-- -->
 
-```{admonition} Processing MRSI
-```
+Load the MRSI processing module in a JupyterLab terminal:
+
+```bash
 ml mrsiproc/0.1.0
 ```
 
-```
-bash Part1_ProcessMRSI.sh [ARGUMENTS]
-```
+Run the two processing stages in order, replacing `[ARGUMENTS]` with the options for your input data:
 
-
-```
-bash Part2_EvaluateMRSI.sh [ARGUMENTS]
-```
+```bash
+Part1_ProcessMRSI.sh [ARGUMENTS]
+Part2_EvaluateMRSI.sh [ARGUMENTS]
 ```
 
 ## Starting Neurodesk
 
-After starting Neurodesk, a JupyterLab instance should open. You can either work from here or open a desktop environment by clicking `Neurodesktop` under `Notebooks`. This tutorial uses the desktop.
+After starting Neurodesk, a JupyterLab instance should open. You can either work from here or open a desktop environment by clicking **Neurodesktop RDP** or **Neurodesktop VNC** under **Neurodesk** in the Launcher. This tutorial uses the desktop.
 
-![JupyterLab](/static/tutorials/spectroscopy/mrsiproc/jupyterlab.png 'JupyterLab')
+![JupyterLab](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/neurodesktop-launcher-desktop.png 'JupyterLab')
 
 ## Running MRSI reconstruction
 
 Open vscode and create and open a new folder under `neurodesktop-storage`
 
-![Open Folder](/static/tutorials/spectroscopy/mrsiproc/open_folder.png 'Open Folder')
+![Open Folder](/static/tutorials/spectroscopy/mrsiproc/open-folder.png 'Open Folder')
 
-```{admonition} Info
-The processing can either start from reconstructed DICOM files or exported dat files.
-A reconstruction of a dat files might look like this:
+The processing can start from reconstructed DICOM files or exported DAT files. A reconstruction from a DAT file can look like this:
 
-```
+```bash
 Part1_ProcessMRSI.sh \
--c /neurodesktop-storage/data/meas_test.dat \
--t /neurodesktop-storage/data/T1/ \
--a /neurodesktop-storage/data/INV1/ \
--b fid_1.300000ms.basis \
--o /neurodesktop-storage/mrsi_proc/ProcessResults/test_files \
--j LCModel_Control_Template.m \
--m "dreid"
+  -c /neurodesktop-storage/data/meas_test.dat \
+  -t /neurodesktop-storage/data/T1/ \
+  -a /neurodesktop-storage/data/INV1/ \
+  -b fid_1.300000ms.basis \
+  -o /neurodesktop-storage/mrsi_proc/ProcessResults/test_files \
+  -j LCModel_Control_Template.m \
+  -m "dreid"
 ```
 
-The `fid_1.300000ms.basis` and `LCModel_Control_Template.m` files are included
-```
+The `fid_1.300000ms.basis` and `LCModel_Control_Template.m` files are included in the processing container.
 
 Here, we create a new bash file with the default settings and execute it. Copy the contents of this template file to `run_mrsi_part1.sh` and replace the `-c`, `-t` and `-a` arguments with your own data and set the output path with `-o`.
 
@@ -153,7 +165,7 @@ Then run the script with
 bash run_mrsi_part1.sh
 ```
 
-![Run MRSI](/static/tutorials/spectroscopy/mrsiproc/run_mrsi.png 'Run MRSI')
+![Run MRSI](/static/tutorials/spectroscopy/mrsiproc/run-mrsi.png 'Run MRSI')
 
 This can take several hours for reconstruction and LCModel processing.
 

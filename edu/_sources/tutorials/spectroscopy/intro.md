@@ -6,5 +6,6 @@ title: "Spectroscopy"
 
 Tutorial pages related to MR spectroscopy workflows.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

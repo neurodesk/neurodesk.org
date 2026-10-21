@@ -1,16 +1,36 @@
 ---
-title: "Using fmriprep with neurodesk on an HPC"
-linkTitle: "fmriprep"
+title: Using fmriprep with neurodesk on an HPC
+linkTitle: fmriprep
 weight: 1
-tags: ["fmriprep", "documentation", "preprocessing"]
-author: Kelly G. Garner
+tags:
+- fmriprep
+- documentation
+- preprocessing
 aliases:
 - /tutorials/functional_imaging/fmriprep_cvl
 - /tutorials-examples/tutorials/functional_imaging/fmriprep_cvl
-description: > 
-  A brief guide to using fmriprep with neurodesk
+description: A brief guide to using fmriprep with neurodesk
+authors:
+- name: Kelly G. Garner
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
 # Using fmriprep with neurodesk on an HPC
+
+**Authors:** Kelly G. Garner, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Launch a specific fMRIPrep version in Neurodesktop.
+- Download a public BIDS dataset and run a single-participant example.
+- Find the preprocessing outputs and inspect the HTML report.
+:::
+
 
 A brief guide to using fmriprep with Neurodesk.
 
@@ -41,45 +61,48 @@ A brief guide to using fmriprep with Neurodesk.
 
 ## Steps
 
-### Launch Neurodesk
+### Launch Neurodesktop
 
-From the launcher, click the Neurodesktop icon:
+In JupyterLab, open a Launcher tab with the **+** button. Under **Neurodesk**, select **Neurodesktop RDP** or **Neurodesktop VNC**.
 
-![launch_neurodesk](/static/tutorials/functional_imaging/fmriprep/launch_neurodesk.png 'launch_neurodesk') <!-- ![filename without extension](/static/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
+![Current JupyterLab Launcher with Neurodesktop options](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/neurodesktop-launcher-desktop.png)
 
-### Open fmriprep 
+### Open fMRIPrep
 
-Now you're in Neurodesk, use the menus to first open the neurodesk options
+In the bottom-left Applications menu, select **Neurodesk (1) → Functional Imaging (2) → fmriprep (3) → fmriprep 25.2.6 (4)**. The four numbers match the screenshot below.
 
-![neurodesk_menu](/static/tutorials/functional_imaging/fmriprep/neurodesk_menu.png 'neurodesk_menu') <!-- ![filename without extension](/static/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
+![Neurodesk application categories on the current desktop](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-fmriprep-guide.png)
 
-and then select fMRIPrep. Note that the latest version will be the lowest on the dropdown list:
+The application entry opens a terminal with fMRIPrep loaded. Check the version before entering the analysis command:
 
-![open_fmriprep](/static/tutorials/functional_imaging/fmriprep/open_fmriprep.png 'open_fmriprep') <!-- ![filename without extension](/static/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
+```bash
+fmriprep --version
+ml list
+```
 
-This will open a terminal window where fMRIPrep is ready and waiting at your fingertips - woohoo!
-
-![fmriprep_bash](/static/tutorials/functional_imaging/fmriprep/fmriprep_bash.png 'fmriprep_bash') <!-- ![filename without extension](/static/tutorials/functional_imaging/subfolder_name/filename.png '[filename without extension')  -->
-
+You can also load a container in an existing terminal with `ml fmriprep/<version>`. The command examples below were checked against the installed fMRIPrep command help; running a complete analysis also requires your BIDS data and FreeSurfer license.
 
 ### Setting up fmriprep command
 
 You can now enter your fmriprep command straight into the command line in the newly opened terminal. Here is a quick guide to the command I have used with the options I have found most useful. Note that fMRIPrep requests the path to the freesurfer license file, which should be somewhere in your system for neurodesk to read - e.g. in 'neurodesktop-storage'.
 
+Replace the example paths with your BIDS dataset, output directory, work directory and FreeSurfer license. Keep the work and output directories separate from the input data. This example uses six processes and a 10,000 MB memory budget; match these to your allocation.
+
 ```bash
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=6
 
-export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=6 # specify the number of threads you want to use
-
-fmriprep /path/to/your/data \ # this is the top level of your data folder
-         /path/to/your/data/derivatives \ # where you want fmriprep output to be saved
-         participant \ # this tells fmriprep to analyse at the participant level
-         --fs-license-file /path/to/your/freesurfer.txt \ # where the freesurfer license file is
-         --output-spaces T1w MNI152NLin2009cAsym fsaverage fsnative \ 
-         --participant-label 01 \ # put what ever participant labels you want to analyse
-         --nprocs 6 --mem 10000 \ # fmriprep can be greedy on the hpc, make sure it is not
-         --skip_bids_validation \ # its normally fine to skip this but do make sure your data are BIDS enough
-         -v # be verbal fmriprep, tell me what you are doing
+fmriprep /path/to/bids \
+  /path/to/derivatives/fmriprep \
+  participant \
+  --fs-license-file /path/to/freesurfer.txt \
+  --output-spaces T1w MNI152NLin2009cAsym fsaverage fsnative \
+  --participant-label 01 \
+  --nprocs 6 --mem 10000 \
+  -w /path/to/work/fmriprep \
+  -v
 ```
+
+A continuation backslash must be the last character on its line. Leave BIDS validation enabled for the first run. See the [fMRIPrep command reference](https://fmriprep.org/en/stable/usage.html) for options.
 
 
 Then hit return and fMRIPrep should now be merrily working away on your data :)

@@ -1,16 +1,34 @@
 ---
-title: "Reproducible script execution with DataLad"
-linkTitle: "datalad run"
+title: Reproducible script execution with DataLad
+linkTitle: datalad run
 weight: 1
-tags: ["datalad"]
-author: Sin Kim
+tags:
+- datalad
 aliases:
 - /tutorials/reproducibility/datalad-run
-description: >
-  Using datalad run, you can precisely record results of your analysis scripts.
+description: Using datalad run, you can precisely record results of your analysis
+  scripts.
+authors:
+- name: Sin Kim
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
-
 # Reproducible script execution with DataLad
+
+**Authors:** Sin Kim, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Record a command and its inputs and outputs with DataLad.
+- Clone the recorded analysis into a second location.
+- Rerun the analysis and verify the reproduced result.
+:::
+
 
 Using datalad run, you can precisely record results of your analysis scripts.
 
@@ -40,14 +58,14 @@ many things including an analysis project. Let's go to the Neurodesktop storage
 and create a dataset for some project. Open a terminal and enter these commands:
 
 ```
-$ cd /storage
+$ cd ~/neurodesktop-storage
 
 $ datalad create -c yoda SomeProject
-[INFO   ] Creating a new annex repo at /home/user/Desktop/storage/SomeProject
+[INFO   ] Creating a new annex repo at /home/jovyan/neurodesktop-storage/SomeProject
 [INFO   ] Running procedure cfg_yoda
 [INFO   ] == Command start (output follows) =====
 [INFO   ] == Command exit (modification check follows) =====
-create(ok): /home/user/Desktop/storage/SomeProject (dataset)
+create(ok): /home/jovyan/neurodesktop-storage/SomeProject (dataset)
 ```
 
 ```{admonition} yoda?
@@ -104,8 +122,8 @@ or clean them.
 
 ```
 $ datalad status
-untracked: /home/user/Desktop/storage/SomeProject/code/hello.jl (file)
-untracked: /home/user/Desktop/storage/SomeProject/hello.txt (file)
+untracked: /home/jovyan/neurodesktop-storage/SomeProject/code/hello.jl (file)
+untracked: /home/jovyan/neurodesktop-storage/SomeProject/hello.txt (file)
 
 $ datalad save -m 'hello script' code/
 add(ok): code/hello.jl (file)

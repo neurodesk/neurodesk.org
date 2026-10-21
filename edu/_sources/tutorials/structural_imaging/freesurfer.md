@@ -1,14 +1,31 @@
 ---
-title: "FreeSurfer"
-linkTitle: "FreeSurfer"
+title: FreeSurfer
+linkTitle: FreeSurfer
 weight: 1
 aliases:
 - /tutorials/structural_imaging/freesurfer
-description: >
-  Example workflow for FreeSurfer
+description: Example workflow for FreeSurfer
+authors:
+- name: Steffen Bollmann
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
-
 # FreeSurfer
+
+**Authors:** Steffen Bollmann, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Launch FreeSurfer and its Freeview viewer.
+- Open anatomical images and add segmentation or surface overlays.
+- Use the slice, visibility and display controls to inspect the result.
+:::
+
 
 Example workflow for FreeSurfer
 
@@ -68,15 +85,7 @@ Before using Freesurfer you need to request a license here (https://surfer.nmr.m
 ### FreeSurfer Example
 Open FreeSurfer (Neurodesk -> Image Segmentation -> Freesurfer -> Freesurfer 7.1.1)
 
-Setup FreeSurfer license (for example - replace with your license):
-```
-echo "Steffen.Bollmann@cai.uq.edu.au
-> 21029
->  *Cqyn12sqTCxo
->  FSxgcvGkNR59Y" >> ~/.license
-
-export FS_LICENSE=~/.license 
-```
+Current FreeSurfer containers may supply a license. Check the launch terminal for its location. If your selected version requires a personal license, obtain it from the [FreeSurfer registration page](https://surfer.nmr.mgh.harvard.edu/registration.html), save it privately, and set `FS_LICENSE` to its path. Never paste license contents into a tutorial or repository.
 
 Setup FreeSurfer:
 ```

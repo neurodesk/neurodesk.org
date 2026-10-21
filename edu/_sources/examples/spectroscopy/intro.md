@@ -6,5 +6,6 @@ title: "Spectroscopy"
 
 Example notebooks for spectroscopy analyses.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

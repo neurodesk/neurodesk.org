@@ -6,5 +6,6 @@ title: "Open Data"
 
 Tutorial pages related to open data tooling and workflows.
 
-```{tableofcontents}
+```{toc}
+:context: children
 ```

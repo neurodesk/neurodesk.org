@@ -1,13 +1,31 @@
 ---
-title: "PhysIO"
-linkTitle: "PhysIO"
+title: PhysIO
+linkTitle: PhysIO
 weight: 1
 aliases:
 - /tutorials/functional_imaging/physio
-description: >
-  Example workflow for the PhysIO Toolbox
+description: Example workflow for the PhysIO Toolbox
+authors:
+- name: Lars Kasper
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
 # PhysIO
+
+**Authors:** Lars Kasper, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Download the public PhysIO demonstration recordings.
+- Configure and run the Philips ECG3T example in SPM Batch Editor.
+- Inspect the physiological regressors and quality-control figures.
+:::
+
 
 Example workflow for the PhysIO Toolbox
 
@@ -36,9 +54,9 @@ PhysIO is part of the open-source [TAPAS Software Package](https://translational
 
 Please cite these works if you use PhysIO and see the [FAQ](https://gitlab.ethz.ch/physio/physio-doc/-/wikis/FAQ#3-how-do-i-cite-physio) for details.
 
-neurodesk offers the possibility of running PhysIO without installing Matlab or requiring a Matlab license. The functionality should be equivalent, though debugging and extending the toolbox, as well as unreleased development features, will only be available in the Matlab version of PhysIO, which is exclusively hosted on the [TAPAS GitHub](https://github.com/translationalneuromodeling/tapas).
+Neurodesk offers the possibility of running PhysIO without installing MATLAB or requiring a MATLAB license. Debugging and extending the toolbox require the MATLAB version. Current source code is hosted in the [PhysIO repository](https://github.com/ComputationalPsychiatry/PhysIO).
 
-More general info about PhysIO besides neurodesk usage is found in the [README](https://github.com/translationalneuromodeling/tapas/tree/master/PhysIO#readme) on GitHub.
+More general information about PhysIO is available in the [README](https://github.com/ComputationalPsychiatry/PhysIO#readme).
 
 
 ## Purpose
@@ -66,12 +84,16 @@ The accompanying technical paper about the toolbox concept and methodology can b
 
 ## Download Example Data
 
-The example data should already be present in neurodesk in the following folder `/opt/spm12`
+This walkthrough uses the official [PhysIO examples v9.1.0 archive on Zenodo](https://zenodo.org/records/19075176). This version was tested with Neurodesk's `physio/r2021a` container in October 2026.
 
-If you cannot find the example data there:
-1. Download the latest version from the [location mentioned in the TAPAS distribution](https://github.com/translationalneuromodeling/tapas/blob/master/misc/log_tapas.txt)
-    - e.g., `https://www.tapas.tnu-zurich.com/examples_v5.0.0.zip`
-2. Follow the instructions for copying your own data in the next section
+1. Open Firefox **inside the Neurodesk desktop** and visit the archive page.
+2. Under **Files**, click **Download** (1). The archive is about 38.5 MB.
+
+![Download the official PhysIO examples archive: click Download under Files](/static/tutorials/functional_imaging/physio/download-examples-annotated.svg)
+
+3. Open **Downloads** in the file manager, right-click the downloaded ZIP and select **Extract Here**.
+4. Rename the extracted `ComputationalPsychiatry-PhysIO-Examples-9343a40` folder to `physio-demo` and move it into `~/neurodesktop-storage/`.
+5. Open `physio-demo/Philips/ECG3T/`. It should contain `SCANPHYSLOG.log`, `rp_fMRI.txt` and the `philips_ecg3t_*` scripts and batch files.
 
 ## Copy your own data
 
@@ -80,31 +102,53 @@ If you cannot find the example data there:
 
 
 ## Example: Running PhysIO in the GUI
-1. Open the PhysIO GUI (Neurodesk -> Functional Imaging -> physio -> physioGUI r7771, see screenshot:
 
-![PhysIO GUI in neurodesk](/static/tutorials/functional_imaging/physio/physio_screenshot1.jpg 'physio_screenshot')
+### Start SPM
 
-2. SPM should automatically open up (might take a while). Select 'fMRI' from the modality selection screen.
-3. Press the "Batch Editor" button (see screenshot with open Batch Editor, red highlights)
+In the bottom-left Applications menu, select **Neurodesk (1) → Functional Imaging (2) → physio (3) → physioGUI r2021a (4)**.
 
-![neurodesk with SPM Batch Editor PhysIO](/static/tutorials/functional_imaging/physio/physio_screenshot2.jpg 'physio_screenshot2')
+![Follow the four numbered menu choices to open PhysIO](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-physio-guide.png)
 
-    - NB: If you later want to create a new PhysIO batch with all parameters, from scratch or explore the options, select from the Batch Editor Menu top row, SPM -> Tools -> TAPAS PhysIO Toolbox (see screenshot, read highlights)
+If the menu does not open SPM, open **LXTerminal** from the desktop panel and enter these two commands, one at a time:
 
-4. For now, load an existing example (or previously created SPM Batch File) as follows: It is most convenient to change the working directory of SPM to the location of the physiological logfiles
-    - In the Batch Editor GUI, lowest row, choose 'CD' from the 'Utils..' dropdown menu
-    - Navigate to any of the example folders, e.g., `/opt/spm12/examples/Philips/ECG3T/` and select it
-    - NB: you can skip this part, if you later manually update all input files in the Batch Editor window (resp/cardiac/scan timing and realignment parameter file further down)
-    - Any other example should also work the same way, just CD to its folder before the next step
-5. Select File -> Load Batch from the top row menu of the Batch Editor window
-    - make sure you select the matlab batch file `*_spm_job.<m|mat>`, (e.g., `philips_ecg3t_spm_job.m` and `philips_ecg3t_spm_job.mat` are identical, either is fine), but not the script.
-6. Press The green "Play" button in the top icon menu row of the Batch Editor Window
-7. Several output figures should appear, with the last being a grayscale plot of the nuisance regressor design matrix
+```bash
+ml physio/r2021a
+spm12 fmri
+```
 
-![Output Nuisance Regressor Matrix PhysIO](/static/tutorials/functional_imaging/physio/physio_screenshot3.jpg 'physio_screenshot3')
+Wait for the SPM windows to appear. This command selects fMRI mode directly. The remaining steps use the SPM GUI.
 
-8. Congratulations, your first successful physiological noise model has been created! If you don't see the mentioned figure, chances are certain input files were not found (e.g., wrong file location specified). You can always check the text output in the "bash" window associated with the SPM window for any error messages.
+### Select the working directory
+
+1. In SPM's main **Menu** window, open **Utils…** (1) and choose **CD** (2).
+
+![SPM main menu: open Utils, then choose CD](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/spm-change-directory-guide.png)
+
+2. Navigate to `~/neurodesktop-storage/physio-demo/Philips/` using the left-hand directory list. In the **right-hand list**, click **ECG3T**, then **Done**. The selected directory appears in the box at the bottom before you click Done.
+
+The batch uses relative input paths, so SPM must be working in the folder containing `SCANPHYSLOG.log` and `rp_fMRI.txt`.
+
+### Load and run the batch
+
+1. Click **Batch** (1) in SPM's main Menu window.
+
+![Open Batch Editor using the Batch button](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/spm-open-batch-guide.png)
+
+2. In Batch Editor, choose **File → Load Batch**, or click the **open-folder icon** (1 in the next screenshot).
+3. Select **`philips_ecg3t_spm_job.m`**, then **Done**. Wait for **TAPAS PhysIO Toolbox** to appear in the Module List. The corresponding `.mat` file is also supplied; do not select `philips_ecg3t_matlab_script.m`.
+4. Leave the example parameters unchanged. `save_dir` is `physio_out`, a subfolder of the selected working directory.
+5. Click the green **Play** button (2).
+
+![Loaded PhysIO batch: open-folder icon and green Play button](/static/tutorials/functional_imaging/physio/loaded-batch-annotated.svg)
+
+Several quality-control figures open during processing. The final figure is **Model: RETROICOR GLM regressors**, showing the nuisance regressor matrix. Maximize this figure to see all scan rows and regressor labels.
+
+![PhysIO nuisance regressor matrix from the Philips ECG3T example](/static/tutorials/functional_imaging/physio/nuisance-regressor-matrix.jpg)
+
+The tested example produced `physio_out/multiple_regressors.txt` with **495 rows and 24 columns**, plus `physio.mat` and saved quality-control figures. If the final matrix does not appear, check the terminal associated with SPM for errors. For missing input files, check the working directory and the paths under **log_files** and the movement-regressor settings in Batch Editor.
+
+To create a new batch from scratch, use **SPM → Tools → TAPAS PhysIO Toolbox** in Batch Editor. Loading the supplied example already creates this module.
 
 ## Further Info on PhysIO
 
-Please check out the [README](https://github.com/translationalneuromodeling/tapas/tree/master/PhysIO#readme) and [FAQ](https://gitlab.ethz.ch/physio/physio-doc/-/wikis/FAQ)
+Please check out the [README](https://github.com/ComputationalPsychiatry/PhysIO#readme) and [FAQ](https://gitlab.ethz.ch/physio/physio-doc/-/wikis/FAQ).

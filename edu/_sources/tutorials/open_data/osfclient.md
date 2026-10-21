@@ -1,15 +1,33 @@
 ---
-title: "osfclient"
-linkTitle: "osfclient"
+title: osfclient
+linkTitle: osfclient
 weight: 1
-tags: ["osfclient"]
-author: Steffen Bollmann
+tags:
+- osfclient
 aliases:
 - /tutorials/open_data/osfclient
-description: >
-  Using osfclient to publish and access open data on OSF
+description: Using osfclient to publish and access open data on OSF
+authors:
+- name: Steffen Bollmann
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
 # osfclient
+
+**Authors:** Steffen Bollmann, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- List files in a public OSF project.
+- Download and verify a specific example dataset.
+- Distinguish anonymous downloads from authenticated uploads.
+:::
+
 
 Using osfclient to publish and access open data on OSF.
 

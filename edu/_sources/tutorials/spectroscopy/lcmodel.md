@@ -1,16 +1,33 @@
 ---
-title: "Spectroscopy with lcmodel"
-linkTitle: "lcmodel"
+title: Spectroscopy with lcmodel
+linkTitle: lcmodel
 weight: 1
-tags: ["lcmodel"]
-author: Steffen Bollmann
+tags:
+- lcmodel
 aliases:
 - /tutorials/spectroscopy/lcmodel
-description: >
-  Using lcmodel, you can analyze MR spectroscopy data.
+description: Using lcmodel, you can analyze MR spectroscopy data.
+authors:
+- name: Steffen Bollmann
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
-
 # Spectroscopy with lcmodel
+
+**Authors:** Steffen Bollmann, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Launch LCModel and initialise its graphical interface.
+- Load the bundled Varian spectrum and matching basis.
+- Run the fit and inspect the saved spectral reports.
+:::
+
 
 Using lcmodel, you can analyze MR spectroscopy data.
 
@@ -25,48 +42,58 @@ Using lcmodel, you can analyze MR spectroscopy data.
 [Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
 <!-- -->
 
-Open lcmodel from the menu: Applications -> Spectroscopy -> lcmodel -> lcmodel 6.3
+Open the bottom-left Applications menu and select **Neurodesk (1) → Spectroscopy (2) → lcmodel (3) → lcmodel 6.3 (4)**.
 
-run 
-```
+![Follow the four numbered menu choices to open the LCModel terminal](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-lcmodel-guide.png)
+
+In the terminal opened by the menu, enter the setup command and press **Enter**:
+
+```bash
 setup_lcmodel.sh
 ```
 
-then run
-```
+Wait for the setup to finish. In the **same terminal**, enter the next command and press **Enter** to open the graphical interface:
+
+```bash
 lcmgui
 ```
 
 We packed example data into the container (https://zenodo.org/record/3904443/) and we will use this to show a basic analysis.
 
-The example data comes in the Varian fid format, so click on Varian:
+The example data comes in the Varian fid format, so click **Varian** (1):
 
-<img width="522" alt="image" src="https://user-images.githubusercontent.com/4021595/155111509-967055c2-7ee1-4bf5-b645-6a0b1eee3328.png">
-
-
-and then select the fid data in: /opt/datasets/Spectra_hippocampus(rat)_TE02/s_20131015_03_BDL106_scan0/isise_01.fid
-
-<img width="751" alt="image" src="https://user-images.githubusercontent.com/4021595/155111715-305678e9-0c60-4154-bdf3-3aa5ccfd7da1.png">
+![Select Varian data in LCMgui](/static/tutorials/spectroscopy/lcmodel/select-data-type-annotated.svg)
 
 
-Then Change BASIS and select the appropriate basis set in /opt/datasets/Spectra_hippocampus(rat)_TE02/Control_files_Basis_set
+Use the directory tree to navigate to:
 
-<img width="753" alt="image" src="https://user-images.githubusercontent.com/4021595/155111920-9df07a57-beb1-4507-ab7e-2c260a52d91d.png">
+```text
+/opt/datasets/Spectra_hippocampus(rat)_TE02/s_20131015_03_BDL106_scan0/isise_01.fid
+```
 
+Double-click each directory to open it. Select the **fid** file (1) inside `isise_01.fid`, then click **OK** (2).
 
-Then hit Run LCModel:
-
-<img width="812" alt="image" src="https://user-images.githubusercontent.com/4021595/155112027-11350513-7616-4158-aca7-d5c0b07397d0.png">
-
-
-and confirm:
-
-<img width="199" alt="image" src="https://user-images.githubusercontent.com/4021595/155112122-1b93ff25-7469-4997-8aa6-e96a6784defa.png">
+![Select the bundled Varian fid file](/static/tutorials/spectroscopy/lcmodel/select-fid-annotated.svg)
 
 
-then wait a couple of minutes until the analyzed spectra appear - by closing the window you can go through the results:
+Then click **Change BASIS** and navigate to `/opt/datasets/Spectra_hippocampus(rat)_TE02/Control_files_Basis_set`. Select the supplied `9T_TE02_...BASIS` file (1) and click **OK** (2).
 
-<img width="893" alt="image" src="https://user-images.githubusercontent.com/4021595/155112432-c91bbdef-4701-4fee-a37a-b3bf8f847843.png">
+![Select the supplied basis set](/static/tutorials/spectroscopy/lcmodel/select-basis-annotated.svg)
 
-the results are also saved in ~/.lcmodel/saved/
+
+If the Control Parameters window extends beyond the desktop, double-click its title bar to maximize it. Check the selected basis, then click **Run LCModel** (2):
+
+![LCModel parameters with the selected basis file](/static/tutorials/spectroscopy/lcmodel/control-parameters-annotated.svg)
+
+
+Click **Yes** (1) to analyze all ten voxels in Slice 1:
+
+![Confirm analysis of the selected voxels](/static/tutorials/spectroscopy/lcmodel/confirm-analysis-annotated.svg)
+
+
+Wait until the fitted spectra appear. Maximize the Ghostview window and press **-** to reduce the scale if the report is clipped; the screenshot uses scale 0.500. Closing a result window reveals the next voxel’s result. See the [Ghostview key bindings](https://www.gnu.org/software/gv/manual/gv.html) for display controls:
+
+![Fitted spectroscopy result displayed in the LCModel viewer](/static/tutorials/spectroscopy/lcmodel/fitted-spectrum.jpg)
+
+The results are also saved in `~/.lcmodel/saved/`. The tested example produced ten PostScript reports and ten result tables.
 

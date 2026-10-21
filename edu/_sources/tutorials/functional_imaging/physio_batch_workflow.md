@@ -1,15 +1,35 @@
 ---
-title: "A batch scripting example for PhysIO toolbox"
-linkTitle: "PhysIO_Batch"
+title: A batch scripting example for PhysIO toolbox
+linkTitle: PhysIO_Batch
 weight: 1
-tags: ["fMRI", "documentation"]
-author: Kelly G. Garner
+tags:
+- fMRI
+- documentation
 aliases:
 - /tutorials/functional_imaging/physio_batch_workflow
-description: > 
-  Follow this tutorial as an example of how to batch script for the PhysIO toolbox using Neurodesk.
+description: Follow this tutorial as an example of how to batch script for the PhysIO
+  toolbox using Neurodesk.
+authors:
+- name: Kelly G. Garner
+- name: Michèle Masson-Trottier
+date: '2026-10-20'
 ---
 # A batch scripting example for PhysIO toolbox
+
+**Authors:** Kelly G. Garner, Michèle Masson-Trottier
+
+**Last updated:** 20 October 2026
+
+:::{admonition} Learning Objectives
+:class: tip
+
+By the end of this tutorial you will be able to:
+
+- Create a reusable PhysIO batch from a working GUI job.
+- Set recording and output paths explicitly.
+- Run the saved batch and check the regressor file.
+:::
+
 
 Follow this tutorial as an example of how to batch script for the PhysIO toolbox using Neurodesk.
 
@@ -51,7 +71,7 @@ Once I had my .log files and .txt motion regressors file, I followed the instruc
 
 I wound up with a Batch script for the PhysIO toolbox that looked a little bit like this: 
 
-![PhysIOBatch1](/static/tutorials/functional_imaging/PhysIO_Batch/PhysIOBatch1.png 'PhysIOBatch1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![PhysIOBatch1](/static/tutorials/functional_imaging/physio-batch-workflow/physiobatch1.png 'PhysIOBatch1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
 ## 2. Generalise the script for use with any participant
 
@@ -173,7 +193,7 @@ First make sure the details at the top of the script are correct. You can see th
 
 On Neurodesk, go to the PhysIO toolbox, but select the command line tool rather than the GUI interface ('physio r7771 instead of physioGUI r7771). This will take you to the container for the PhysIO toolbox <p>
 
-![PhysIOBatch2](/static/tutorials/functional_imaging/PhysIO_Batch/PhysIOBatch2.png 'PhysIOBatch2') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+![PhysIOBatch2](/static/tutorials/functional_imaging/physio-batch-workflow/physiobatch2.png 'PhysIOBatch2') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
 
 Now to run your PhysIO batch script, type the command:
 
