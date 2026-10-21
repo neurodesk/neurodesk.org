@@ -11,13 +11,9 @@ description: A tutorial for setting up your matlab license on Neurodesk.
 authors:
 - name: Fernanda L. Ribeiro
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # MATLAB
-
-**Authors:** Fernanda L. Ribeiro, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
@@ -44,7 +40,7 @@ You need your own MATLAB license. An eligible MathWorks account can activate MAT
 
 The desktop menu contains **Neurodesk (1) → Programming (2) → matlab (3) → matlabGUI 2022a (4)**.
 
-![MATLAB entries in the current Neurodesk menu](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-matlab-guide.png)
+![MATLAB entries in the current Neurodesk menu](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-matlab-guide.png)
 
 On the Neurodesktop image tested on 20 October 2026, that GUI entry exits without opening a window. Open **LXTerminal** from the bottom panel and start MATLAB directly:
 

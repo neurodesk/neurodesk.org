@@ -12,100 +12,97 @@ description: A brief guide to using FieldTrip to analyse electrophysiological da
 authors:
 - name: Judy D Zhu
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # Analysing M/EEG Data with FieldTrip
-
-**Authors:** Judy D Zhu, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
 
 By the end of this tutorial you will be able to:
 
-- Launch the compiled FieldTrip container.
-- Download public EEG data and prepare a runnable script.
-- Browse recording segments and change the time scale.
+- Open the compiled FieldTrip environment.
+- Download a public EEG recording and a ready-to-run MATLAB script.
+- Browse recording segments and adjust the time scale.
 :::
 
+The Neurodesk container runs compatible FieldTrip scripts using MATLAB Runtime. A MATLAB licence is not required for this example.
 
-A brief guide to using FieldTrip to analyse electrophysiological data within neurodesk.
+## General use
 
-> _This tutorial was created by Judy D Zhu._ 
->
-> Email: judyzhud@gmail.com
->
-> Github: @JD-Zhu
->
-> Twitter: @JudyDZhu
+### Open the FieldTrip terminal
 
----
+From Neurodesktop's bottom-left Applications menu, choose **Neurodesk (1) → Electrophysiology (2) → fieldtrip (3) → fieldtrip 20211114 (4)**.
 
-<!-- Following line adds a link to getting set up with Neurodesk -->
-[Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
-<!-- -->
+![The four numbered choices that launch FieldTrip](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-fieldtrip-guide.png)
 
-Please note that this container uses a compiled version of FieldTrip to run scripts (without needing a Matlab license). Code development is not currently supported within the container and needs to be carried out separately in Matlab.  
-<br/>
+This opens a terminal with **[fieldtrip/20211114]** in its prompt. Commands go after that prompt.
 
-## Getting started
+![Terminal with FieldTrip loaded](/static/tutorials/electrophysiology/fieldtrip/fieldtrip-terminal.jpg)
 
-1. Navigate to **Neurodesk → Electrophysiology → fieldtrip → fieldtrip 20211114** (1) in the menu:
+For a compatible script of your own, run the following in this terminal, replacing the example path:
 
-![Launch FieldTrip 20211114 from the Neurodesk menu](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-fieldtrip-guide.png '1_menu')
-
-Once this window is loaded, you are ready to go:
-
-![Terminal with FieldTrip 20211114 loaded](/static/tutorials/electrophysiology/fieldtrip/fieldtrip-terminal.jpg '2_container')
-
-<br/>
-
-2. Type the following into the command window (replacing "./yourscript.m" with the name of your custom script - if the script is in the current folder, use "./" before the script name like in the example; otherwise, please supply the full path):
 ```bash
-run_fieldtrip.sh /opt/MCR/v99 ./yourscript.m
+run_fieldtrip.sh /opt/MCR/v99 /path/to/yourscript.m
 ```
-The script determines which GUI opens. The container does not include the `yourscript.m` placeholder. Use your own compatible script, or follow the reproducible browsing example below.
 
-NOTES:
-1. The script can only call FieldTrip and SPM functions (these are the only functions in the search path, and the search path cannot be altered using addpath)
-2. The script cannot include internal functions
-3. The script can use all the MATLAB toolboxes included in the compiled version of FieldTrip
+The script determines which viewer opens. It can call the FieldTrip, SPM and toolbox functions included in this compiled release; its search path cannot be extended with `addpath`, and internal script functions are unsupported. Develop new scripts in MATLAB before running them in the compiled environment.
 
+## Worked example: browse a public EEG recording
 
-## Reproducible raw EEG browsing example
+### 1. Download and extract the recording
 
-This added example uses the public five-channel EEG recording from the [MNE EEG tutorial](EEG_mne-python.md#download-sample-data). It demonstrates FieldTrip's interactive data browser. It was tested with `fieldtrip/20211114` on Neurodesk Play in October 2026.
+Open a **separate LXTerminal** using Neurodesktop's terminal icon. Use this normal terminal for downloading the data. The tested platform already includes `osf`; if it is unavailable, install its client here with `python -m pip install --user osfclient`.
 
-### Prepare the data and script
-
-If you already followed the MNE tutorial and have `~/neurodesktop-storage/EEGDemo/Data_sample/`, reuse that folder. Otherwise, in the terminal download and extract the [public OSF sample dataset](https://osf.io/c689u/):
+Paste these commands into this download terminal, pressing **Enter** after each line:
 
 ```bash
 mkdir -p ~/neurodesktop-storage/EEGDemo
 cd ~/neurodesktop-storage/EEGDemo
 osf -p c689u fetch osfstorage/Data_sample.zip Data_sample.zip
-unzip Data_sample.zip
+unzip -nq Data_sample.zip
 ```
 
-Download [browse-eeg.m](/static/tutorials/electrophysiology/fieldtrip/browse-eeg.m) using Firefox inside Neurodesk. Save it in **Downloads**. The script uses the data path above; update `cfg.dataset` if you used a different folder.
+The [public OSF recording](https://osf.io/c689u/) is approximately 157 MB and has five EEG channels. Wait for **100%** and for the terminal prompt to return. `unzip -nq` extracts quietly and preserves files that already exist. If you already downloaded `Data_sample.zip` for the MNE tutorial, reuse it and run only the extraction command.
 
-The script sets `cfg.readbids = false` to read the native BrainVision header and markers. This sample's JSON stores `SamplingFrequency` as the text `"1200"`; FieldTrip 20211114 otherwise reads character codes as the sampling frequency and fails with **Matrix dimensions must agree**. The workaround leaves the dataset files unchanged.
+![The EEG archive has finished downloading and extraction has returned to the prompt](/static/tutorials/electrophysiology/fieldtrip/download-data.png)
 
-### Open and explore the recording
+The recording's BrainVision files should now be under `~/neurodesktop-storage/EEGDemo/Data_sample/sub-01/eeg/`.
 
-In the terminal opened from the FieldTrip menu, run:
+### 2. Download the browsing script
+
+In **Firefox inside Neurodesk**, open the [browse-eeg.m file on GitHub](https://github.com/neurodesk/neurodeskedu/blob/main/books/static/tutorials/electrophysiology/fieldtrip/browse-eeg.m). Click **Download raw file (1)**, the downward arrow beside **Raw**, and save it in **Downloads** as **browse-eeg.m**.
+
+![The browsing script and GitHub's Download raw file button](/static/tutorials/electrophysiology/fieldtrip/download-script-annotated.svg)
+
+You can also [download the script directly](/static/tutorials/electrophysiology/fieldtrip/browse-eeg.m). If your browser displays its text, use **Save Page As…** and keep the `.m` filename extension.
+
+The script already uses the data folder above. Its `cfg.readbids = false` setting makes this FieldTrip release read the recording's native BrainVision header and markers; it avoids a sampling-frequency parsing error in this sample's JSON metadata. The data files are left unchanged.
+
+### 3. Run the downloaded script
+
+Return to the **FieldTrip terminal opened from the application menu**, identified by **[fieldtrip/20211114]**. Paste this command after its prompt and press **Enter**:
 
 ```bash
 run_fieldtrip.sh /opt/MCR/v99 ~/Downloads/browse-eeg.m
 ```
 
-Wait for **ft_databrowser** to open, then maximize its window. The first segment covers approximately 0–10 seconds and includes a large initial transient. Five EEG traces and the TRIG channel are displayed.
+![The downloaded script is run in the FieldTrip-loaded terminal](/static/tutorials/electrophysiology/fieldtrip/run-script.png)
 
-1. Click **>** beside **segment** (1) to move to the next ten-second segment. Its title should show **segment 2/309, time from 10 to 19.9992 s**.
-2. Use **+** beside **horizontal** (2) to shorten the displayed time interval. **-** widens it again.
+Wait for **ft_databrowser** to open, then double-click its title bar to maximise it. The first view shows **segment 1/309**, covering approximately 0–10 seconds. The large initial transient is present in this recording. Five EEG traces and the TRIG channel are displayed.
 
-![FieldTrip raw EEG browser: next segment and horizontal zoom controls](/static/tutorials/electrophysiology/fieldtrip/raw-eeg-browser-annotated.svg)
+![The first segment in the actual FieldTrip data browser](/static/tutorials/electrophysiology/fieldtrip/first-segment.png)
 
-Closing the browser returns control to the script. This example is for viewing the recording; it does not save artifact annotations or perform an EEG analysis. For further browsing and artifact-selection options, see the [official FieldTrip data browser guide](https://www.fieldtriptoolbox.org/faq/how_can_i_use_the_databrowser/).
+### 4. Move between segments
+
+Click **> beside segment (1)** at the bottom of the viewer. The title changes to **segment 2/309, time from 10 to 19.9992 s**. The matching **<** button returns to the previous segment.
+
+![The second segment, with navigation and horizontal zoom controls numbered](/static/tutorials/electrophysiology/fieldtrip/raw-eeg-browser-annotated.svg)
+
+### 5. Change the time scale
+
+Click **+ beside horizontal (2)** to shorten the displayed interval. The title and segment count update; this click displays approximately seven seconds. The matching **−** button widens the interval again.
+
+![The same recording after shortening the horizontal time interval](/static/tutorials/electrophysiology/fieldtrip/horizontal-zoom.png)
+
+Close the data-browser window to finish this viewing exercise and return to the terminal. For artifact selection and other browsing options, see the [official FieldTrip data-browser guide](https://www.fieldtriptoolbox.org/faq/how_can_i_use_the_databrowser/).

@@ -1,101 +1,114 @@
 ---
-title: FreeSurfer
+title: 'FreeSurfer: viewing anatomy with Freeview'
 linkTitle: FreeSurfer
 weight: 1
 aliases:
 - /tutorials/structural_imaging/freesurfer
-description: Example workflow for FreeSurfer
+description: A GUI walkthrough of anatomical images, segmentations and cortical surfaces
+  using bundled demonstration data.
 authors:
 - name: Steffen Bollmann
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
-# FreeSurfer
-
-**Authors:** Steffen Bollmann, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
+# FreeSurfer: viewing anatomy with Freeview
 
 :::{admonition} Learning Objectives
 :class: tip
 
 By the end of this tutorial you will be able to:
 
-- Launch FreeSurfer and its Freeview viewer.
-- Open anatomical images and add segmentation or surface overlays.
-- Use the slice, visibility and display controls to inspect the result.
+- Open Freeview from a Neurodesk terminal.
+- Load an anatomical image and a coloured segmentation.
+- Read structure labels and explore a cortical surface in 3D.
 :::
 
+Freeview is FreeSurfer's graphical viewer for anatomical images, segmentations and surfaces. This example uses the **fsaverage demonstration files bundled with FreeSurfer 8.2.0**. You can start immediately without downloading a participant dataset or waiting for a reconstruction.
 
-Example workflow for FreeSurfer
+## General use
 
-> _This tutorial was created by Steffen Bollmann._
->
-> Github: [@stebo85](https://github.com/stebo85)
-> Web: [mri.sbollmann.net](https://mri.sbollmann.net/)
-> Twitter: [@sbollmann_MRI](https://twitter.com/sbollmann_MRI)
+Open **LXTerminal** using the terminal icon in Neurodesktop's bottom panel. Click after the terminal prompt, where the cursor appears, and paste these commands, pressing **Enter** after each line:
 
-<!-- Following line adds a link to getting set up with Neurodesk -->
-[Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
-<!-- -->
-
-## FreeSurfer Example using module load (e.g. on an HPC)
-Download data:
-```
-osf -p bt4ez fetch osfstorage/TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz sub-01_ses-01_7T_T1w_defaced.nii.gz
+```bash
+ml freesurfer/8.2.0
+freeview
 ```
 
-Setup FreeSurfer:
-```
-ml freesurfer/7.3.2
-export SUBJECTS_DIR=$PWD/freesurfer-output
-mkdir $SUBJECTS_DIR
-export SINGULARITYENV_SUBJECTS_DIR=$SUBJECTS_DIR
-export APPTAINERENV_SUBJECTS_DIR=$SUBJECTS_DIR
+Wait until the **FreeView** window has fully opened, then double-click its title bar to maximize it. You should see the **File** menu, toolbar and empty viewing area shown below. Keep the launch terminal open in the background while Freeview runs.
+
+![Freeview fully open and ready to load the first anatomical image](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/freeview-start.png)
+
+The tested FreeSurfer container supplies a license. License contents do not need to be copied into a tutorial or typed into Freeview. If another container asks for a license, follow its launch-terminal instructions or obtain your own from the [FreeSurfer registration page](https://surfer.nmr.mgh.harvard.edu/registration.html).
+
+## Worked example: anatomy, labels and a surface
+
+### 1. Open the anatomical image
+
+In Freeview, choose **File → Load Volume… (1)**. The same menu also contains **Load Surface… (2)**, which we will use later.
+
+![Freeview File menu: Load Volume is 1 and Load Surface is 2](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/freeview-menu-guide.png)
+
+Paste the following path into **Select volume file (1)** in the **Load Volume** dialog:
+
+```text
+/opt/freesurfer-8.2.0/subjects/fsaverage/mri/T1.mgz
 ```
 
-Run Recon all pipeline:
-```
-recon-all -subject test-subject -i sub-01_ses-01_7T_T1w_defaced.nii.gz -all
+Leave **Color map** as **Grayscale**, then click **OK (2)**.
+
+![Enter the T1 image path in the Load Volume dialog, then click OK](/static/tutorials/structural_imaging/freesurfer/freeview-load-volume-guide.png)
+
+The image appears in sagittal, coronal and axial views, with a 3D view at the bottom right. Click within an anatomical view: the other slices follow the selected location, and the **Cursor** panel reports its coordinates and image value.
+
+![The bundled anatomical image displayed in Freeview](/static/tutorials/structural_imaging/freesurfer/freeview-anatomy.png)
+
+### 2. Add the segmentation
+
+Choose **File → Load Volume…** again. Paste this path into **Select volume file (1)**:
+
+```text
+/opt/freesurfer-8.2.0/subjects/fsaverage/mri/aparc+aseg.mgz
 ```
 
-When using Freesurfer >8.0.0:
-```
-export FS_ALLOW_DEEP=1
-export APPTAINERENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
-export SINGULARITYENV_FS_ALLOW_DEEP=$FS_ALLOW_DEEP
+Keep **Sample method → Nearest neighbor** selected. Set **Color map → Lookup Table (2)** and leave **Look up table → FreeSurferColorLUT**. Click **OK (3)**.
+
+![Load the segmentation using the FreeSurfer colour lookup table](/static/tutorials/structural_imaging/freesurfer/freeview-load-segmentation-guide.png)
+
+This file contains anatomical label numbers. The lookup table gives those labels distinct colours; nearest-neighbour sampling preserves the label values.
+
+### 3. Inspect a labelled structure
+
+Select **aparc+aseg** in the left-hand **Volumes** list. Its checkbox **(1)** hides or shows the overlay. Set **Opacity (2)** to **0.35** so the underlying T1 image remains visible.
+
+Click a coloured structure in a slice and read the **aparc+aseg** row in the **Cursor** panel **(3)**. The screenshot shows label **51, Right-Putamen**; a different location will show a different label. If the panel is too small, drag its upper divider upward.
+
+![Toggle the segmentation, adjust its opacity and read the clicked structure name](/static/tutorials/structural_imaging/freesurfer/freeview-segmentation-guide.png)
+
+### 4. Add a cortical surface
+
+Choose **File → Load Surface…**. In the file chooser, enter this path in **File name (1)**, then click **Open (2)**:
+
+```text
+/opt/freesurfer-8.2.0/subjects/fsaverage/surf/lh.pial
 ```
 
-When running on a GPU, make sure to check if this is set:
-```
-export neurodesk_singularity_opts='--nv'
-```
+You can also select **lh.pial** from the displayed `surf` folder, as shown below. The surface appears under **Surfaces** in the left panel.
 
-## Alternative instructions for using Freesurfer via the Neurodesk application menu
-### Download demo data
-Open a terminal and run:
-```
-pip install osfclient
-osf -p bt4ez fetch TOMCAT_DIB/sub-01/ses-01_7T/anat/sub-01_ses-01_7T_T1w_defaced.nii.gz /neurodesktop-storage/sub-01_ses-01_7T_T1w_defaced.nii.gz
-```
+![Select the left-hemisphere pial surface and open it](/static/tutorials/structural_imaging/freesurfer/freeview-select-surface-guide.png)
 
-### FreeSurfer License file:
-Before using Freesurfer you need to request a license here (https://surfer.nmr.mgh.harvard.edu/registration.html) and store it in your homedirectory as ~/.license
+### 5. Explore the surface in 3D
 
-### FreeSurfer Example
-Open FreeSurfer (Neurodesk -> Image Segmentation -> Freesurfer -> Freesurfer 7.1.1)
+1. Clear the two **Volumes** checkboxes **(1)**, leaving **Surfaces → lh.pial** checked.
+2. Click the **Single View** toolbar button **(2)**.
+3. Click the **3D view** button, shown as a grey head **(3)**.
+4. Drag within the 3D pane to rotate the surface and inspect its folds.
 
-Current FreeSurfer containers may supply a license. Check the launch terminal for its location. If your selected version requires a personal license, obtain it from the [FreeSurfer registration page](https://surfer.nmr.mgh.harvard.edu/registration.html), save it privately, and set `FS_LICENSE` to its path. Never paste license contents into a tutorial or repository.
+For the clean view shown here, turn off **View → Show Cursor** and **View → Show Slice Frames (3D View)**. These display options do not change the data.
 
-Setup FreeSurfer:
-```
-mkdir /neurodesktop-storage/freesurfer-output
-source /opt/freesurfer-7.1.1/SetUpFreeSurfer.sh
-export SUBJECTS_DIR=/neurodesktop-storage/freesurfer-output
-```
+![Show only the cortical surface in a single 3D pane](/static/tutorials/structural_imaging/freesurfer/freeview-surface-guide.png)
 
-Run Recon all pipeline:
-```
-recon-all -subject test-subject -i /neurodesktop-storage/sub-01_ses-01_7T_T1w_defaced.nii.gz -all
-```
+## What you have checked
 
+You have opened the bundled anatomy, displayed its segmentation with named structures, and rotated a cortical surface. This is a viewing exercise using existing demonstration outputs. To inspect your own FreeSurfer results, repeat the same steps with files from your subject's `mri/` and `surf/` folders.
+
+For more display options and guidance on inspecting reconstruction outputs, see the official [Freeview guide](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeviewGuide/FreeviewIntroduction) and [FreeSurfer output-viewing tutorial](https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview).

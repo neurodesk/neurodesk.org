@@ -11,13 +11,9 @@ description: A tutorial for running a functional MRI analysis in SPM.
 authors:
 - name: Steffen Bollmann
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # Statistical Parametric Mapping (SPM)
-
-**Authors:** Steffen Bollmann, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
@@ -77,7 +73,7 @@ The task used is described here: https://andysbrainbook.readthedocs.io/en/latest
 
 Open **Neurodesk (1) → Functional Imaging (2) → spm12 (3) → spm12GUI r7771 (4)** from the bottom-left Applications menu.
 
-![SPM launcher in the current Neurodesk menu](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-spm-guide.png)
+![SPM launcher in the current Neurodesk menu](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-spm-guide.png)
 
 Click **fMRI** in the SPM selector. This launches SPM12 (7771); this standalone version does not require your own MATLAB license.
 
@@ -89,7 +85,7 @@ The main **Menu** window contains the analysis buttons; the **Graphics** window 
 
 In the main **Menu** window, open **Utils → CD** to change the working directory. This is separate from the Batch Editor's menus.
 
-![Open Utils, then CD](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/spm-change-directory-guide.png)
+![Open Utils, then CD](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/spm-change-directory-guide.png)
 
 Navigate to `/home/jovyan/neurodesktop-storage/ds000102`. Click **sub-08 in the right-hand list** to select it, then **Done**. Clicking a directory in the left-hand list enters it; clicking its name in the right-hand list selects it. The chosen path appears at the bottom.
 

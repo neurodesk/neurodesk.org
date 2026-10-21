@@ -1,5 +1,5 @@
 ---
-title: Using MFCSC
+title: 'MFCSC: a public FC–SC example'
 linkTitle: MFCSC
 weight: 1
 tags:
@@ -9,81 +9,154 @@ description: A tutorial for using MFCSC to integrate connectomes from different 
 authors:
 - name: Oren Civier
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
-# Using MFCSC
-
-**Authors:** Oren Civier, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
+# MFCSC: a public FC–SC example
 
 :::{admonition} Learning Objectives
 :class: tip
 
 By the end of this tutorial you will be able to:
 
-- Prepare paired functional and structural connectomes.
-- Run MFCSC on the public example data.
-- Inspect mismatch matrices and compare outputs with the reference results.
+- Download paired functional and structural connectomes.
+- Run MFCSC on the public 50-participant example.
+- Check its outputs against the published reference and view a mismatch matrix.
+- Exclude undefined scores when comparing connections across participants.
 :::
 
+MFCSC estimates mismatch between functional connectivity (FC) and structural connectivity (SC). This walkthrough uses the [public example accompanying the software](https://osf.io/d7j9n/), then opens the actual results in a local browser report. The compiled Neurodesk tool runs without a MATLAB licence.
 
-A tutorial for using MFCSC to integrate connectomes from different modalities
+## General use: open MFCSC
 
-> _This tutorial was created by Oren Civier._ 
->
-> Github: [@civier]
-> Email: orenciv@gmail.com
->
+In Neurodesktop's bottom-left Applications menu, choose **Neurodesk (1) → Functional Imaging (2) → mfcsc (3) → mfcsc 1.1 (4)**.
 
-----------
+![The four numbered menu choices for MFCSC](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-mfcsc-guide.png)
 
-More details on MFCSC and this tutorial can be found in the following paper:
+This opens a terminal with **[mfcsc/1.1]** in the prompt. Paste the example's commands after that prompt. For your own inputs, the four required arguments are the pairing file, FC folder, SC folder and output folder:
 
-> Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports
-https://doi.org/10.1038/s41598-022-17213-z
-
-In short, MFCSC calculates the mismatch between connectomes generated from different imaging modalities. It does it by normalising the connectomes to a common space calculated at group level, and taking into account the role of indirect connectivity in shaping the functional connectomes.
-
-
-**TUTORIAL FOR CONNECTOMES FROM fMRI AND dMRI** 
-
-1. Download the "input" folder from the OSF repository (https://osf.io/d7j9n/files/osfstorage)
-
-2. Launch mfcsc from either "Neurodesk"-->"Diffusion Imaging --> mfsc --> mfcsc 1.1" or "Neurodesk"-->"Functional Imaging --> mfcsc --> mfcsc 1.1" in the start menu. 
-
-3. Run the following command with **input** being the directory where the input data was downloaded to, and **outputdir** being the directory where the output should be written to:
-```
-    mfcsc input/FC_SC_list.txt input/FC input/SC outputdir
+```bash
+mfcsc input/FC_SC_list.txt input/FC input/SC output
 ```
 
-4. After MFCSC finishes running, the content of **outputdir** should be identical to the "output" folder in the OSF repository (https://osf.io/d7j9n/files/osfstorage)
-   It contains connectomes that encode the mismatch between functional and structural connectivity (mFCSC) for every connection.
+Each row of the pairing file must identify a functional matrix and its matching structural matrix. Both must describe the same regions in the same order. Consult the [upstream input specification](https://github.com/civier/mfcsc#readme) before using new datasets.
 
+## Worked example: public resting-state FC and diffusion SC
 
-**TUTORIAL FOR CONNECTOMES FROM MEG AND dMRI** 
+### 1. Download the input folder
 
-1. Use the MEG connectivity tutorial to generate functional connectomes from your MEG data using MNE tools on Neurodesk (Tutorial in progress: https://github.com/benmslade/neurodesk.github.io/blob/main/content/en/tutorials/electrophysiology/meg_connectivity.md)
-   
-2. Use the structul connectivity tutorial to generate structural connectomes from your dMRI data using MRtrix tools on Neurodesk (https://neurodesk.org/tutorials-examples/tutorials/structural_imaging/structuralconnectivity/)
+Open **Firefox inside Neurodesk** and visit the [OSF example files](https://osf.io/d7j9n/files/osfstorage). Click the **input** folder, then **Download As Zip (1)**. Check that the current folder is **input**, as shown below.
 
-3. Launch mfcsc from either "Neurodesk"-->"Diffusion Imaging --> mfsc --> mfcsc 1.1" or "Neurodesk"-->"Functional Imaging --> mfcsc --> mfcsc 1.1" in the start menu. 
+![Download the selected OSF folder as a Zip archive](/static/tutorials/multimodal_imaging/mfcsc/osf-download-folder-guide.png)
 
-4. Copy the MEG connectomes into input/MEG and the structural connectomes into input/SC
+Wait for `d7j9n-osfstorage-input-archive.zip` to appear in Firefox's **Downloads**. The archive is approximately 6.5 MB. These public files do not require an OSF sign-in.
 
-5. Create an input/MEG_SC_list.txt file that lists the pairing between MEG and structural connectomes
+### 2. Extract and check the input files
 
-6. Run the following command with **input** being the directory where the input data was downloaded to, and **outputdir** being the directory where the output should be written to:
+Return to the **MFCSC terminal opened from the application menu**. Paste these commands there, pressing **Enter** after each line:
+
+```bash
+mkdir -p ~/neurodesktop-storage/mfcsc-demo/input
+unzip -nq ~/Downloads/d7j9n-osfstorage-input-archive.zip -d ~/neurodesktop-storage/mfcsc-demo/input
+cd ~/neurodesktop-storage/mfcsc-demo
+ls input
 ```
-    mfcsc input/MEG_SC_list.txt input/MEG input/SC outputdir
+
+The Zip contains the folder's contents directly. The explicit `-d …/input` destination creates the layout used by the processing command. `-nq` preserves existing files and extracts quietly.
+
+![The extracted FC and SC folders, pairing list and region labels](/static/tutorials/multimodal_imaging/mfcsc/extract-input.png)
+
+You should see **FC**, **SC**, **FC_SC_list.txt** and **Desikan_Killiany-84_nodes_labels.txt**. The supplied example has 50 participant pairs and 84 regions.
+
+Check the pairing list in this terminal:
+
+```bash
+head -n 3 input/FC_SC_list.txt
+wc -l input/FC_SC_list.txt
 ```
 
-7. After MFCSC finishes running, **outputdir** will  contains connectomes that encode the mismatch between MEG and structural connectivity (mFCSC) for every connection.
+![The first three input pairs and the 50-row pairing list](/static/tutorials/multimodal_imaging/mfcsc/check-pairs.png)
 
+Each row has an FC filename in the first column and its matching SC filename in the second, separated by a tab. The line count should be **50**. Check the participant identifiers before processing; matching file counts alone do not establish correct pairing.
 
-----------
+### 3. Run MFCSC
 
-**CITATIONS**
+In the **MFCSC terminal**, run:
+
+```bash
+mfcsc input/FC_SC_list.txt input/FC input/SC output | tee mfcsc-run.log
+```
+
+MFCSC reports **50 pairs** and **84 regions** before fitting its transformations and calculating the mismatch matrices. The log is also saved as `mfcsc-run.log`.
+
+The tested build opens diagnostic figures, including a group transformation and participant fits. Maximise a figure by double-clicking its title bar.
+
+![The fitted transformation from SC to the FC scale, generated by this run](/static/tutorials/multimodal_imaging/mfcsc/sc-transformation.png)
+
+The group plot compares equally ranked mean FC and SC values. A participant plot compares FC with transformed SC for that participant and shows its fitted line.
+
+![A participant fit generated from the downloaded public data](/static/tutorials/multimodal_imaging/mfcsc/participant-fit.png)
+
+When the terminal displays **press ENTER to close figures (if not closed already) and exit**, return to that terminal and press **Enter**. The figures close and the shell prompt returns.
+
+![The completed run and its instruction to close the figures](/static/tutorials/multimodal_imaging/mfcsc/completed.png)
+
+The output folder now contains:
+
+- **50 `mFCSC-…-masked.csv` files:** one mismatch matrix per paired participant.
+- **`mask.csv`:** the final connection mask used by this Neurodesk build.
+- **`group_connectomes/`:** group-average matrices and intermediate masks.
+
+### 4. Check and display the results
+
+Download [inspect_mfcsc.py](/static/tutorials/multimodal_imaging/mfcsc/inspect_mfcsc.py) in **Firefox inside Neurodesk**, saving it in **Downloads**. This small companion script checks the example's file pairing and matrix dimensions, reports invalid values, and creates a report for viewing. It uses NumPy and Matplotlib from the Neurodesk base Python environment.
+
+Run it in the **MFCSC terminal**:
+
+```bash
+python ~/Downloads/inspect_mfcsc.py
+```
+
+The tested run produced 50 matrices of size **84 × 84**. Its original mask selects **1,009 connections**, but **15 selected values across eight participants are non-finite**. All 15 coincide with zero entries in the input SC matrices. The checker creates a separate **`common-valid-mask.csv`** that retains **998 connections valid across all 50 participants**. It preserves the original outputs.
+
+Values of **−99** indicate excluded connections; **−999** and non-finite values must also be excluded. They must not be interpreted as large negative mismatch scores or replaced with valid zero scores.
+
+![The output check, including comparison with the public reference when downloaded](/static/tutorials/multimodal_imaging/mfcsc/output-check.png)
+
+Open the generated report from this terminal:
+
+```bash
+firefox --new-window "file://$HOME/neurodesktop-storage/mfcsc-demo/mfcsc-report.html"
+```
+
+![The actual mismatch matrix and quality checks opened in Neurodesk Firefox](/static/tutorials/multimodal_imaging/mfcsc/result-report.png)
+
+The report displays the first participant's matrix using the common valid mask. Grey cells are excluded. The colour scale distinguishes positive and negative mismatch around zero. This run uses the tool's default upper-triangle, within-hemisphere output, so the lower triangle and between-hemisphere blocks are grey. Region indices follow the supplied region-label file.
+
+The common mask is a conservative choice for comparing the same connections across participants. It excludes undefined scores; it does not recover a score for a missing connection.
+
+### 5. Compare with the published reference
+
+In Firefox, return to the [OSF files](https://osf.io/d7j9n/files/osfstorage), open **output**, and use **Download As Zip** again. Wait for `d7j9n-osfstorage-output-archive.zip` in **Downloads**.
+
+In the **MFCSC terminal**, extract it into a separate comparison folder and rerun the checker:
+
+```bash
+cd ~/neurodesktop-storage/mfcsc-demo
+mkdir -p reference
+unzip -nq ~/Downloads/d7j9n-osfstorage-output-archive.zip -d reference
+python ~/Downloads/inspect_mfcsc.py
+```
+
+The checker adds the comparison to the report and writes `reference-check.txt`. In the tested example, all **50 matrices agree within an absolute tolerance of 0.000011**; the largest finite difference is approximately **0.00001**. The original masks and the locations of all non-finite values match the reference. Thus the undefined entries are also present in the published example, rather than being unique to this Neurodesk run.
+
+Reopen or refresh `mfcsc-report.html` to see the comparison, as in the screenshot above. Keep the processing log, quality checks and chosen comparison mask with your analysis.
+
+## Use your own paired modalities
+
+The same four-argument workflow can be used with appropriately prepared MEG and diffusion connectomes. Put the functional matrices in a separate folder, pair each with its corresponding structural matrix in a tab-separated list, and retain identical region definitions and ordering across both modalities. Review the [MFCSC method and its interpretation](https://doi.org/10.1038/s41598-022-17213-z) before drawing conclusions from the mismatch scores.
+
+## References and data acknowledgments
+
 
 When using MFCSC, authors should cite:
 
@@ -101,9 +174,9 @@ When using the structural connectivity matrices from OSF, authors should cite:
 
 > Data were provided by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University, St. Louis, MO.
 
-	
+
 When using the functional connectivity matrices from OSF, authors should cite:
-	
+
 
 > Civier O, Sourty M, Calamante F (2023) MFCSC: Novel method to calculate mismatch between functional and structural brain connectomes, and its application for detecting hemispheric functional specialisations. Scientific Reports https://doi.org/10.1038/s41598-022-17213-z
 
@@ -111,9 +184,9 @@ When using the functional connectivity matrices from OSF, authors should cite:
 
 > Data were provided by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University, St. Louis, MO.
 
------------------
 
-**ACKNOWLEDGMENTS**
+
+## Software acknowledgments
     
 National Health and Medical Research Council of Australia (grant numbers APP1091593 andAPP1117724)
 

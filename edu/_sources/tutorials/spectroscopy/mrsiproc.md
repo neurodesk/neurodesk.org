@@ -1,5 +1,5 @@
 ---
-title: Spectroscopy pipeline
+title: Spectroscopy pipeline with MRSIProc
 linkTitle: mrsiproc
 weight: 1
 tags:
@@ -10,216 +10,182 @@ description: Using mrsiproc, you can reconstruct and analyze MR spectroscopy dat
 authors:
 - name: Korbinian Eckstein
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
-# Spectroscopy pipeline
-
-**Authors:** Korbinian Eckstein, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
+# Spectroscopy pipeline with MRSIProc
 
 :::{admonition} Learning Objectives
 :class: tip
 
 By the end of this tutorial you will be able to:
 
-- Launch the MRSI processing environment.
-- Identify the inputs needed by the processing scripts.
-- Locate output maps and distinguish preparation from a completed analysis.
+- Prepare the two MRSI processing scripts in Neurodesktop.
+- Pass the completed Part 1 results to Part 2 using the correct options.
+- Check for generated maps and open them in Freeview.
 :::
 
+MRSIProc reconstructs and analyses MR spectroscopic imaging data. **Part 1** reconstructs the acquisition and runs LCModel fitting. **Part 2** evaluates those results and creates maps for inspection.
 
-Using mrsiproc, you can reconstruct and analyze MR spectroscopy data.
+For a complete public-data exercise with fitted spectra and map screenshots, follow [FSL-MRS: fit and inspect a public MRSI dataset](fsl-mrs.md). FSL-MRS uses a different processing workflow; its outputs are not inputs to MRSIProc Part 2.
 
-> _This tutorial was created by Korbinian Eckstein._
->
-> Github: [@korbinian90](https://github.com/korbinian90/)
+## Inputs and verification status
 
-<!-- Following line adds a link to getting set up with Neurodesk -->
-[Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
-<!-- -->
+This is a **bring-your-own-data workflow**. The supplied scripts contain example paths; you must set them to a compatible MRSI DAT acquisition and its T1/INV1 DICOM folders. The T1 folders used by this example should contain the acquisition's `.IMA` files. Select a basis set and control file appropriate to your acquisition before processing.
 
-Load the MRSI processing module in a JupyterLab terminal:
+The current screenshots demonstrate script preparation and syntax checks. The Part 2 option parser has also been checked against the installed **mrsiproc 0.1.0** container. Preparation checks do not establish successful reconstruction or fitting. Use the FSL-MRS tutorial above for the demonstrated public-data example; use this reference when you have compatible MRSIProc inputs.
+
+## General use: start the desktop
+
+In JupyterLab's Launcher, choose **Neurodesktop VNC (2)**.
+
+![Neurodesktop RDP is 1 and VNC is 2](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/neurodesktop-launcher-desktop.png)
+
+Use the **terminal icon in Neurodesktop's bottom panel** for the Bash commands below. Use **Mousepad** to edit the `.sh` scripts. Each script loads `mrsiproc/0.1.0` when run.
+
+## Part 1: prepare reconstruction and fitting
+
+### 1. Open the Part 1 template
+
+Download [run_mrsi_part1.sh](/static/tutorials/spectroscopy/mrsiproc/run_mrsi_part1.sh) in **Firefox inside Neurodesk**, saving it in **Downloads**. Open it from the Neurodesktop terminal:
 
 ```bash
-ml mrsiproc/0.1.0
+mousepad ~/Downloads/run_mrsi_part1.sh
 ```
 
-Run the two processing stages in order, replacing `[ARGUMENTS]` with the options for your input data:
+Maximise Mousepad by double-clicking its title bar. Set the three acquisition input paths **(1)** and the Part 1 output path **(2)** to your files. Save with **Ctrl+S** and close the editor.
 
-```bash
-Part1_ProcessMRSI.sh [ARGUMENTS]
-Part2_EvaluateMRSI.sh [ARGUMENTS]
-```
+![Set the input paths and the output folder in the Part 1 script](/static/tutorials/spectroscopy/mrsiproc/part1-template-annotated.svg)
 
-## Starting Neurodesk
-
-After starting Neurodesk, a JupyterLab instance should open. You can either work from here or open a desktop environment by clicking **Neurodesktop RDP** or **Neurodesktop VNC** under **Neurodesk** in the Launcher. This tutorial uses the desktop.
-
-![JupyterLab](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/neurodesktop-launcher-desktop.png 'JupyterLab')
-
-## Running MRSI reconstruction
-
-Open vscode and create and open a new folder under `neurodesktop-storage`
-
-![Open Folder](/static/tutorials/spectroscopy/mrsiproc/open-folder.png 'Open Folder')
-
-The processing can start from reconstructed DICOM files or exported DAT files. A reconstruction from a DAT file can look like this:
+The template uses the same acquisition settings as the original example:
 
 ```bash
 Part1_ProcessMRSI.sh \
-  -c /neurodesktop-storage/data/meas_test.dat \
-  -t /neurodesktop-storage/data/T1/ \
-  -a /neurodesktop-storage/data/INV1/ \
-  -b fid_1.300000ms.basis \
-  -o /neurodesktop-storage/mrsi_proc/ProcessResults/test_files \
-  -j LCModel_Control_Template.m \
-  -m "dreid"
+    -c "$mrsi_input" \
+    -t "$t1_input" \
+    -a "$inv1_input" \
+    -b fid_1.300000ms.basis \
+    -o "$mrsi_results" \
+    -j LCModel_Control_Template.m \
+    -m dreid \
+    -L "L2,0.2"
 ```
 
-The `fid_1.300000ms.basis` and `LCModel_Control_Template.m` files are included in the processing container.
+These lines are **already in the downloaded script**, where the variables are defined. The bundled basis and control filenames are starting points for this example; their presence does not establish suitability for another acquisition.
 
-Here, we create a new bash file with the default settings and execute it. Copy the contents of this template file to `run_mrsi_part1.sh` and replace the `-c`, `-t` and `-a` arguments with your own data and set the output path with `-o`.
+### 2. Check and run Part 1
 
-```
-#!/bin/bash
-# There are two script to process the mrsi data
-# First run this script, then run the part 2 script
+In the **Neurodesktop terminal**, check the script's syntax:
 
-ml mrsiproc/0.1.0
-
-## The required files are:
-# - DAT file / DICOM files
-# - T1 (DICOM or .mnc)
-
-## Create own mask (not fully supported yet)
-# hd-bet -i /neurodesktop-storage/mrsi_proc/test_files/MP2RAGE/t1.nii.gz -o /neurodesktop-storage/mrsi_proc/test_files/mask.nii.gz -device cpu -mode fast -tta 0
-# nii2mnc /neurodesktop-storage/mrsi_proc/test_files/mask.nii.gz /neurodesktop-storage/mrsi_proc/test_files/mask.mnc
-
-Part1_ProcessMRSI.sh \
--c /neurodesktop-storage/data/meas_test.dat \
--t /neurodesktop-storage/data/T1/ \
--a /neurodesktop-storage/data/INV1/ \
--b fid_1.300000ms.basis \
--o /neurodesktop-storage/mrsi_proc/ProcessResults/test_files \
--j LCModel_Control_Template.m \
--m "dreid" \
--L "L2,0.2"
-
-## HINT
-# To change the number of threads used by LCModel, change the number in the LCModel_Control_Template.m file (default 8)
-
-## WARNING -s
-# The Julia based recontstruction is still experimental! The algorithm is different, and the results are not expected to be identical. It should be identical to the DICOM output from the ICE version.
-
-## WARNING -m
-# If a mask file is given, it must be in *.mnc format
-# The word "bet" may not be part of the filename of the mask given to the -m flag
-# For a 3D mask, it is suggested to use -m "dreid" instead of -m "bet"
-
-## WARNING -t
-# The DICOM folder for giving the T1-weighted image must not contain any other files than *.IMA
-# The t1-weighted file can be given as *.mnc file as well
-
-
-## The OPTIONS are
-# Usage: %s
-
-# mandatory:
-# -c	[csi file]			Format: DAT, DICOM, or .mat. If a .mat file is passed over, it is expected that everything is already performed like coil combination etc.
-# 						You can pass over several files of the same type by \'-c \"[csi_path1] [csi_path2] ...\"\'. These files get individually processed and averaged
-# 						at the end.
-# -b	[basis files]		Format: .BASIS. Used for LCM fitting (for FID)
-# -B	[basis files]		Format: .BASIS. Used for LCM fitting (spin echo: for fidesi =  fid + echo)
-# -o	[output directory]
-
-# optional: 
-# -i	[image NORMAL]		Format: DAT or DICOM. The FoV must match that of the CSI file. Used for our coil combination and for creating mask (if no T1 is inputted)
-# -f	[image FLIP]		Format: DAT or DICOM. Imaging file FLIP (FOV rotated about -180 deg). Used for correcting gradient delays.
-# -v	[VC image]	      	Format: DAT or DICOM. Image of volume or body coil file. Used for sensmap method or for creating mask.
-# -t	[T1 images] 		Format: DICOM. Folder of 3d T1-weighted acquisition containing DICOM files. Used for creating mask and for visual purposes. If minc file is given instead of folder, it is treated as the magnitude file.
-# -a	[T1 AntiNoise images]	Format: DICOM. Folder of 3d T1-weighted acquisition containing DICOM files. Used for pre-masking the T1w image to get rid of the noise in air-areas.
-# -w	[Water Reference]	Format: DAT or DICOM. LCModel 'Do Water Scaling' or separate water quantification (Water maps are created). The same scan as -c [csi file], but without water suppression.
-# -m	[mask]			Defines how to create the mask. Options: -m \"bet\", \"thresh\", \"voi\", \"[Path_to_usermade_mask]\". If not set --> no mask used.
-# -h 	[100]               	Hamming filter CSI data.
-# -r 	[InPlaneCaipPattern_And_VD_Radius]	The InPlaneCaipPattern and the VD_Radius as used in ParallelImagingSimReco.m. Example: \"InPlaneCaipPattern = [0 0 0; 0 0 0; 0 0 1]; VD_Radius = 2;\". 
-# -R 	[SliceAliasingPattern]
-# -g 	[noisedecorr_path]	If this option is used the csi data gets noise decorrelated using noise from passed-over noise file, or if -g \" is given, by noise from the end of the FIDs at the border of the FoV or from the PRESCAN, if available. 
-# -F    [Nothing]               If this option is set, the spectra are corrected for the first order phase caused by an acquisition delay of the FID-sequences. You must provide a basis set with an appropriate acquisition delay. DONT USE WITH SPIN ECHO SEQUENCES.
-# -u	[Nothing]               If a phantom was measured. Different settings used for fitting (e.g. some metabolites are omitted)
-# -I	[\"nextpow2\" Or Vector]If nextpow2: Perform zerofilling to the next power of 2 in ROW and COL dimensions (e.g. from 42x42 to 64x64). If vector (e.g. [16 16 1]): Spatially Interpolate to this size.
-# -A	[\"\" Or Path]          Perform frequency alignment. If a mnc file is given, use these as B0-map, otherwise shift according to water peak of center voxel.
-# -l	[Nothing]               If this option is set, LCModel is not started, everything else is done normally. Useful for only computing the SNR.
-# -j	[LCM_ControlFile]       ControlFile telling LCModel how to process the data. for FID
-# -J	[LCM_ControlFile]       ControlFile telling LCModel how to process the data. for ECHO
-# -X	[XPACE MOTION LOG]       XPACE MOTION LOG
-# 							otherwise standard values are assumed. A template file is provided in this package.
-# -e	[LineBroadeningInHz]    Apply an exponential filter to the spectra [Hz].
-# -s	[threads] [mmap] 		Use the Julia reconstruction version (less RAM usage, different reconstruction algorithm). [threads=auto] can be auto or a number. [mmap=false] can be \"true\", \"false\" or a path.
-# -d    [Nothing]				Use the deprecated, old dat file format (before sequence merging, 06/2023)
+```bash
+bash -n ~/Downloads/run_mrsi_part1.sh
 ```
 
-Then run the script with
+A successful syntax check returns to the prompt without output. After setting and verifying your input paths and acquisition parameters, run:
 
+```bash
+bash ~/Downloads/run_mrsi_part1.sh
 ```
-bash run_mrsi_part1.sh
+
+The input guard stops the template if its example DAT file or structural folders do not exist. Reconstruction and LCModel fitting can take several hours. Wait for completion, inspect the processing log for errors, and retain the **whole output folder**, including sidecar files and coordinate outputs. Part 2 uses that folder's contents.
+
+## Part 2: evaluate the fitted spectra and inspect maps
+
+### 1. Prepare a working copy of the Part 1 results
+
+Use a **completed Part 1 results folder**. Part 2 rebuilds map subfolders, so perform evaluation on a working copy if you need to retain an earlier set of maps.
+
+In the **Neurodesktop terminal**, set `part1_results` to the actual folder created by Part 1. The path below matches the template's default output:
+
+```bash
+part1_results="$HOME/neurodesktop-storage/mrsi_proc/ProcessResults/test_files"
+part2_copy="$HOME/neurodesktop-storage/mrsiproc-demo/part1-copy"
+mkdir -p "$part2_copy"
+cp -a "$part1_results/." "$part2_copy/"
 ```
 
-![Run MRSI](/static/tutorials/spectroscopy/mrsiproc/run-mrsi.png 'Run MRSI')
+Copy the complete folder. For this release, the Part 1 LCModel coordinate outputs should be available as `spectra/CoordFiles/` or `CoordFiles.tar.gz`; other Part 1 metadata and structural files are also required.
 
-This can take several hours for reconstruction and LCModel processing.
+### 2. Open the corrected Part 2 script
 
-## Part 2
+Download [run_mrsi_part2.sh](/static/tutorials/spectroscopy/mrsiproc/run_mrsi_part2.sh) in **Firefox inside Neurodesk**, saving it in **Downloads**. Open it from the terminal:
 
-Continue with the same process for part 2  
-Template file for part 2
-
+```bash
+mousepad ~/Downloads/run_mrsi_part2.sh
 ```
-#!/bin/bash
 
-ml mrsiproc/0.1.0
+The script accepts your results folder as its first command-line argument. The default folder **(1)** is used only when no argument is supplied. The options **(2)** create maps while retaining both MINC and NIfTI outputs. Save any changes with **Ctrl+S**, then close Mousepad.
 
+![The Part 2 results path and corrected options in Mousepad](/static/tutorials/spectroscopy/mrsiproc/part2-template-annotated.svg)
+
+The processing command already included in this script is:
+
+```bash
 Part2_EvaluateMRSI.sh \
--o neurodesktop-storage/mrsi_proc/ProcessResults/test_files \
--S "Glu,Gln,Raw-abs-csi" \
--N Nifti \
--R \
--b
-
-
-## The OPTIONS are
-# Usage: %s
-
-# mandatory:
-# -o	[output directory]
-
-# optional: 
-# -d	[print_indiv..._flag]   If this option is set, the SNR gets computed by our own program. If the
-# 				                print_individual_spectra_flag=1 (by using option -d 1) all spectra for 
-# 				                computing the SNR are printed.
-# -b    [segmentation_matrix_size]
-# 				                If segmentation to GM, WM and CSF should be performed.
-
-# -s	[CRLB_treshold_value]	user can set the treshold value for CRLB in the metabolic maps
-# -n	[SNR_treshold_value]    If this option is set (user set the value of SNR threshold after the flag),
-# 				                SNR binary mask is computed either for LC model SNR or (if the -d flag is set) for
-# 				                custom SNR computation method and LCmodel            
-# -f	[FWHM_treshold_value]   If this option is set (user set the value of FWHM threshold after the flag),
-# 				                FWHM binary mask is computed from LCmodel results
-# -a    [Control file]          Compute SNR with home-brewed script.
-# -l    [local_folder]          Perform some of the file-heavy tasks in \$local_folder/tmpx (x=1,2,3,...) instead of on \$out_dir
-#                               directly. This is faster, and if \$out_dir is mounted via nfs4, writing directly to \$out_dir
-#                               can lead to timeouts and terrible zombie processes. 
-# -k	[spectra_stack_range]	If this option is set, the .Coord files from LCmodel are used to create stacks of spectra
-# 				                to visualize the fit in corresponding voxels (results stored in form of .eps)
-#       				        user can set the starting point of range for stack of spectra for display purposes (in ppm)
-# 				                user can set the ending point of range for stack of spectra for display purposes (in ppm)
-# 				                Options: \"['fullrange']\", \"[ppm_start; ppm_end]\"
-# -r	[non_lin_reg_type]	    If this option is set, the non-linear registration is computed using minctools, Options: -r \"MNI305\", \"MNI152\"
-# -w	[compute_reg_only_flag] If this option is set, only the non-linear registration is computed. 
-# -q	[compute_seg_only_flag] If this option is set, only the segmentation is computed. 
-# -N    [\"Nifti\" or \"Both\"] Only create nifti-files. If \"Both\" option is used, create minc and nifti. If -N option is not used, creat only mnc files.
-# -S    [SpectralMap_flag] 		Create a nifti-file with a map of the LCModel-spectra and -fits to view with freeview as timeseries.\nNeeds freesurfer-linux-centos7_x86_64-dev-20181113-8abd50c, and MATLAB version > R2017b. Can only be used with -N option.
-# -u    [UpsampledMaps_flag]	Create upsampled maps by zero-filling (in future more sophisticated methods might be implemented).
-# -R    [RatioMaps_flag]		Create Ratio maps.
+    -o "$results" \
+    -N Both \
+    -S \
+    -R \
+    -b
 ```
+
+| Option | Meaning in mrsiproc 0.1.0 |
+|---|---|
+| `-o` | The complete Part 1 results folder, here a working copy. |
+| `-N Both` | Retain MINC maps and also export NIfTI maps. |
+| `-S` | Enable spectral maps for inspecting spectra and fits. |
+| `-R` | Create ratio maps. |
+| `-b` | Run tissue segmentation, using the structural information from Part 1. |
+
+**Version-specific fix:** in the installed 0.1.0 script, `-S`, `-R` and `-b` are flags with no value. The older tutorial's `-S "Glu,Gln,Raw-abs-csi"` stops option parsing at that text, leaving the later options unprocessed. The corrected template removes it and uses an absolute results path.
+
+### 3. Check the script before processing
+
+In the **Neurodesktop terminal**, run:
+
+```bash
+bash -n ~/Downloads/run_mrsi_part2.sh && printf 'Part 2 script syntax: OK\n'
+bash -c 'type ml >/dev/null' && printf 'Neurodesk module command: available\n'
+```
+
+![The actual script syntax and module-command checks passed](/static/tutorials/spectroscopy/mrsiproc/part2-preflight.png)
+
+These checks verify script preparation. They do not run Part 2 or validate your acquisition data.
+
+### 4. Run Part 2 on the completed working copy
+
+In the **Neurodesktop terminal**, pass the working-copy folder explicitly:
+
+```bash
+bash ~/Downloads/run_mrsi_part2.sh "$HOME/neurodesktop-storage/mrsiproc-demo/part1-copy"
+```
+
+The script checks for the folder and coordinate outputs before loading the processing module. If either is absent, check the Part 1 output path and copy the complete results before retrying. Wait for processing to finish and inspect its log for errors.
+
+### 5. Locate and inspect the generated maps
+
+After a successful Part 2 run, list the maps from the **Neurodesktop terminal**:
+
+```bash
+part2_copy="$HOME/neurodesktop-storage/mrsiproc-demo/part1-copy"
+find "$part2_copy/maps" -type f \
+    \( -name '*.nii' -o -name '*.nii.gz' -o -name '*.mnc' \)
+```
+
+The exact map names depend on the fitted metabolites and enabled options. Check the metabolite and quality maps, the `maps/Ratio/` outputs requested by `-R`, and the spectral maps requested by `-S`. A returned prompt or an `END` message alone does not establish that the expected maps were generated.
+
+To view a generated NIfTI map, open Freeview from the terminal:
+
+```bash
+ml freesurfer/8.2.0
+freeview
+```
+
+Wait for the **FreeView** window. Choose **File → Load Volume… (1)** and select an actual map from your working copy's `maps/` folder.
+
+![Freeview's File menu; Load Volume is numbered 1](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/freeview-menu-guide.png)
+
+Load the matching structural image as another volume to inspect coverage and alignment. For volume display controls, see the [Freeview GUI walkthrough](../structural_imaging/freesurfer.md). Review maps and fitting quality together before interpreting metabolite values.
+
+## Further information
+
+The [MRSI pipeline project](https://github.com/korbinian90/mrsi_pipeline_neurodesk) contains the processing scripts and their option documentation. Use options appropriate to the container version you are running; newer releases can expose different arguments.

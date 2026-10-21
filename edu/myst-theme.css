@@ -182,3 +182,13 @@ article:has(.nd-launch-menu) .nd-launch {
 article:has(.nd-home-logo) .myst-fm-block-title {
   display: none;
 }
+
+/* Inline code uses the logo's green palette, with readable contrast in each theme.
+   Keep syntax highlighting inside fenced blocks. */
+article.article :not(pre) > code {
+  color: #456b1b;
+}
+
+.dark article.article :not(pre) > code {
+  color: #b7d886;
+}

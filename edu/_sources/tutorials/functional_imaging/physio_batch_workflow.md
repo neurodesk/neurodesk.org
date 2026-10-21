@@ -12,13 +12,9 @@ description: Follow this tutorial as an example of how to batch script for the P
 authors:
 - name: Kelly G. Garner
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # A batch scripting example for PhysIO toolbox
-
-**Authors:** Kelly G. Garner, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
@@ -33,20 +29,13 @@ By the end of this tutorial you will be able to:
 
 Follow this tutorial as an example of how to batch script for the PhysIO toolbox using Neurodesk.
 
-> _This tutorial was created by Kelly G. Garner._ 
->
-> Github: @kel-github
->
-> Twitter: @garner_theory
->
-
 <!-- Following line adds a link to getting set up with Neurodesk -->
 [Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
 <!-- -->
 
 This tutorial walks through 1 way to batch script the use of the PhysIO toolbox with Neurodesk.
 The goal is to use the toolbox to generate physiological regressors to use when modelling fMRI data. 
-The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes. <p>
+The output format of the regressor files are directly compatible for use with SPM, and can be adapted to fit the specifications of other toolboxes.
 
 ## Getting started
 
@@ -57,11 +46,11 @@ This tutorial assumes the following:
 4. That you have a file that contains the motion regressors you plan to use in your GLM. I'll talk below a bit about what I did with the output given by fmriprep (e.g. ..._desc-confounds_timeseries.tsv')
 5. That you can use SPM12 and the PhysIO GUI to initialise your batch code
 
-NB. You can see the code generated from this tutorial [here](https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress) <p> 
+NB. You can see the code generated from this tutorial [here](https://github.com/garner-code/imaging_cert_value_7T_pipeline/tree/master/physiol_regress)
 
 ## 1. Generate an example script for batching
 
-First you will create an example batch script that is specific to one of your participants. To achieve this I downloaded locally the relevant '.log' files for one participant, as well as the '...desc-confounds_timeseries.tsv' output for fmriprep for each run. PhysIO is nice in that it will append the regressors from your physiological data to your movement parameters, so that you have a single file of regressors to add to your design matrix in SPM etc (other toolboxes are available). <p> 
+First you will create an example batch script that is specific to one of your participants. To achieve this I downloaded locally the relevant '.log' files for one participant, as well as the '...desc-confounds_timeseries.tsv' output for fmriprep for each run. PhysIO is nice in that it will append the regressors from your physiological data to your movement parameters, so that you have a single file of regressors to add to your design matrix in SPM etc (other toolboxes are available).
 
 To work with PhysIO toolbox, your motion parameters need to be in the .txt format as required by SPM.  
 
@@ -71,7 +60,12 @@ Once I had my .log files and .txt motion regressors file, I followed the instruc
 
 I wound up with a Batch script for the PhysIO toolbox that looked a little bit like this: 
 
-![PhysIOBatch1](/static/tutorials/functional_imaging/physio-batch-workflow/physiobatch1.png 'PhysIOBatch1') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+:::{figure} /static/tutorials/functional_imaging/physio-batch-workflow/physiobatch1.png
+:width: 100%
+:alt: A participant-specific PhysIO batch script in the MATLAB editor
+
+Example of a PhysIO batch configured for one participant.
+:::
 
 ## 2. Generalise the script for use with any participant
 
@@ -187,13 +181,18 @@ end
 
 ## 3. Ready to run on Neurodesk!
 
-Now we have a batch script, we're ready to run this on Neurodesk - yay! <p>
+Now we have a batch script, we're ready to run this on Neurodesk - yay!
 
 First make sure the details at the top of the script are correct. You can see that this script could easily be amended to run multiple subjects.
 
-On Neurodesk, go to the PhysIO toolbox, but select the command line tool rather than the GUI interface ('physio r7771 instead of physioGUI r7771). This will take you to the container for the PhysIO toolbox <p>
+On Neurodesk, go to the PhysIO toolbox, but select the command line tool rather than the GUI interface ('physio r7771 instead of physioGUI r7771). This will take you to the container for the PhysIO toolbox
 
-![PhysIOBatch2](/static/tutorials/functional_imaging/physio-batch-workflow/physiobatch2.png 'PhysIOBatch2') <!-- ![filename without extension](/subfolder_name/filename.png '[filename without extension')  -->
+:::{figure} /static/tutorials/functional_imaging/physio-batch-workflow/physiobatch2.png
+:width: 100%
+:alt: The PhysIO command-line tool in the Neurodesktop application menu
+
+The command-line entry used in the original batch workflow.
+:::
 
 Now to run your PhysIO batch script, type the command:
 

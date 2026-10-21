@@ -12,13 +12,9 @@ description: A tutorial for setting up your conda environments on Neurodesk.
 authors:
 - name: Fernanda L. Ribeiro
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # Conda environments
-
-**Authors:** Fernanda L. Ribeiro, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
@@ -55,7 +51,7 @@ The default conda environment is not persistent across sessions, so this means a
 
 1. In a Terminal window, type in:
 
-![1_terminal](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/neurodesktop-launcher-terminal.png '1_terminal')
+![1_terminal](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/neurodesktop-launcher-terminal.png '1_terminal')
 
 For *Python*:
 ```bash

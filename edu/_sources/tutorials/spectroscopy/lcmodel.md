@@ -10,13 +10,9 @@ description: Using lcmodel, you can analyze MR spectroscopy data.
 authors:
 - name: Steffen Bollmann
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # Spectroscopy with lcmodel
-
-**Authors:** Steffen Bollmann, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
@@ -44,7 +40,7 @@ Using lcmodel, you can analyze MR spectroscopy data.
 
 Open the bottom-left Applications menu and select **Neurodesk (1) → Spectroscopy (2) → lcmodel (3) → lcmodel 6.3 (4)**.
 
-![Follow the four numbered menu choices to open the LCModel terminal](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-lcmodel-guide.png)
+![Follow the four numbered menu choices to open the LCModel terminal](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-lcmodel-guide.png)
 
 In the terminal opened by the menu, enter the setup command and press **Enter**:
 

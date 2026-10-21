@@ -8,13 +8,9 @@ description: Example workflow for the PhysIO Toolbox
 authors:
 - name: Lars Kasper
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # PhysIO
-
-**Authors:** Lars Kasper, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
@@ -107,7 +103,7 @@ This walkthrough uses the official [PhysIO examples v9.1.0 archive on Zenodo](ht
 
 In the bottom-left Applications menu, select **Neurodesk (1) → Functional Imaging (2) → physio (3) → physioGUI r2021a (4)**.
 
-![Follow the four numbered menu choices to open PhysIO](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-physio-guide.png)
+![Follow the four numbered menu choices to open PhysIO](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-physio-guide.png)
 
 If the menu does not open SPM, open **LXTerminal** from the desktop panel and enter these two commands, one at a time:
 
@@ -122,7 +118,7 @@ Wait for the SPM windows to appear. This command selects fMRI mode directly. The
 
 1. In SPM's main **Menu** window, open **Utils…** (1) and choose **CD** (2).
 
-![SPM main menu: open Utils, then choose CD](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/spm-change-directory-guide.png)
+![SPM main menu: open Utils, then choose CD](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/spm-change-directory-guide.png)
 
 2. Navigate to `~/neurodesktop-storage/physio-demo/Philips/` using the left-hand directory list. In the **right-hand list**, click **ECG3T**, then **Done**. The selected directory appears in the box at the bottom before you click Done.
 
@@ -132,7 +128,7 @@ The batch uses relative input paths, so SPM must be working in the folder contai
 
 1. Click **Batch** (1) in SPM's main Menu window.
 
-![Open Batch Editor using the Batch button](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/spm-open-batch-guide.png)
+![Open Batch Editor using the Batch button](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/spm-open-batch-guide.png)
 
 2. In Batch Editor, choose **File → Load Batch**, or click the **open-folder icon** (1 in the next screenshot).
 3. Select **`philips_ecg3t_spm_job.m`**, then **Done**. Wait for **TAPAS PhysIO Toolbox** to appear in the Module List. The corresponding `.mat` file is also supplied; do not select `philips_ecg3t_matlab_script.m`.

@@ -1,121 +1,119 @@
 ---
-title: Using mriqc with neurodesk on HPC
+title: 'MRIQC: inspecting anatomical image quality'
 linkTitle: mriqc
 weight: 1
 tags:
 - mriqc
 - documentation
-- preprocessing
+- quality-control
 aliases:
 - /tutorials/functional_imaging/mriqc_cvl
 - /tutorials-examples/tutorials/functional_imaging/mriqc_cvl
-description: A brief guide to using mriqc with neurodesk.
+description: Launch MRIQC, run a public anatomical example and inspect its quality
+  report in Neurodesk.
 authors:
 - name: Kelly G. Garner
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
-# Using mriqc with neurodesk on HPC
-
-**Authors:** Kelly G. Garner, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
+# MRIQC: inspecting anatomical image quality
 
 :::{admonition} Learning Objectives
 :class: tip
 
 By the end of this tutorial you will be able to:
 
-- Launch MRIQC and identify its terminal.
-- Run quality assessment on public BIDS data.
-- Open individual and group reports and interpret the displayed quality checks.
+- Launch MRIQC from Neurodesktop's application menu.
+- Download a public BIDS participant and check its T1-weighted image.
+- Find the quality metrics and inspect the visual report in Firefox.
 :::
 
+MRIQC calculates image-quality metrics and generates visual reports. Processing runs in a terminal; the resulting HTML report opens in a browser.
 
-A brief guide to using mriqc with neurodesk.
+## General use
 
-> _This tutorial was created by Kelly G. Garner._ 
->
-> Github: [@kel_github](https://github.com/garner-code)
->
+### Open Neurodesktop
 
-> This workflow documents how to use MRIQC with neurodesk and provides some details that may help you troubleshoot some common problems I found along the way. 
+In JupyterLab, open a **Launcher** tab with **+**. Choose **Neurodesktop VNC (2)** in the shared launcher guide below.
 
-<!-- Following line adds a link to getting set up with Neurodesk -->
-[Getting Set Up with Neurodesk](https://neurodesk.org/getting-started/)
-<!-- -->
-
----
-
-## Assumptions
-
-- [ ] Your data is already in [BIDS format](https://bids.neuroimaging.io/)
-- [ ] You plan to run mriqc using Neurodesk
-
-NOTE: MRIQC has its $HOME variable hardcoded to be /home/mriqc. This leads to problems on some HPCs. A workaround is to run this before mriqc:
-```
-export neurodesk_singularity_opts="--home $HOME:/home"
-```
----
-
-## Steps
-
----
-
-### Launch Neurodesktop
-
-In JupyterLab, open a Launcher tab with the **+** button. Under **Neurodesk**, select **Neurodesktop RDP** or **Neurodesktop VNC**.
-
-![Current JupyterLab Launcher with Neurodesktop options](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/neurodesktop-launcher-desktop.png)
+![Shared launcher: RDP is 1 and VNC is 2](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/neurodesktop-launcher-desktop.png)
 
 ### Open MRIQC
 
-In the bottom-left Applications menu, select **Neurodesk (1) → Functional Imaging (2) → mriqc (3) → mriqc 24.0.2 (4)**. The four numbers match the screenshot below.
+In the bottom-left Applications menu, select **Neurodesk (1) → Functional Imaging (2) → mriqc (3) → mriqc 24.0.2 (4)**.
 
-![Neurodesk application categories on the current desktop](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-mriqc-guide.png)
+![Follow the four numbered menu choices to open the MRIQC terminal](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-mriqc-guide.png)
 
-The application entry opens a terminal with MRIQC loaded. Check the version before entering the analysis command:
+The entry opens a terminal with MRIQC loaded. Type this command **after the terminal prompt**, then press **Enter**:
 
 ```bash
 mriqc --version
-ml list
 ```
 
-You can also load a container in an existing terminal with `ml mriqc/<version>`. The command examples below were checked against the installed MRIQC command help; running a complete analysis also requires your BIDS data.
+![The terminal opened by the MRIQC menu, showing the executable version](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/mriqc-loaded-terminal.png)
 
-### Setting up mriqc command
+Record the menu version and the executable version with your analysis. On the tested platform, the `24.0.2` entry reports `v24.1.0.dev0+gd5b13cb5.d20240826`.
 
-You can now enter the following mriqc commands straight into the command line in the newly opened terminal window. 
+For your own data, MRIQC takes a BIDS dataset root, an output folder and the analysis level `participant`. Keep the output and work folders outside the raw input dataset. The example below uses four processes and an 8 GB memory budget; `--mem_gb` is measured in gigabytes. Match these settings to the resources available in your instance or HPC job.
 
-Set the paths to your BIDS input, MRIQC output and a separate work directory. This example uses six processes and **10 GB** of memory; `--mem_gb` takes gigabytes.
+## Worked example: one public anatomical scan
+
+### 1. Download participant 08
+
+This example uses [OpenNeuro dataset ds000102](https://github.com/OpenNeuroDatasets/ds000102), which is also used in the SPM and fMRIPrep examples. DataLad first installs its file catalogue, then downloads the requested participant's file contents.
+
+In the **terminal opened from the MRIQC menu**, shown above with MRIQC loaded, paste the following commands and press **Enter** after each line. If this dataset already exists at the shown location, reuse that clone and continue with the `datalad get` step.
 
 ```bash
-export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=6
-
-mriqc /path/to/bids \
-  /path/to/derivatives/mriqc \
-  participant \
-  --participant-label 01 \
-  --work-dir /path/to/work/mriqc \
-  --nprocs 6 --mem_gb 10 \
-  -v
+mkdir -p ~/neurodesktop-storage/open-data
+cd ~/neurodesktop-storage/open-data
+datalad clone https://github.com/OpenNeuroDatasets/ds000102.git ds000102
+cd ds000102
+datalad get sub-08/
 ```
 
-Note that above I have set the processor and memory limits. This is because I was in this case running on an HPC, and I used those commands to stop MRIQC from hogging all the resources. You may want to skip those inputs if you're running MRIQC locally.  
+Wait for the download to finish and the prompt to return. The participant contains an anatomical image and two functional runs. This walkthrough will check only the anatomical image.
 
+### 2. Run MRIQC
 
-OR: if you have run all the participants and you just want the group level report, use these mriqc commands instead:
+Paste this **whole command block into the MRIQC terminal**, then press **Enter**. Each continuation backslash must remain the final character on its line.
 
 ```bash
-mriqc /path/to/bids \
-  /path/to/derivatives/mriqc \
-  group \
-  --work-dir /path/to/work/mriqc \
-  --nprocs 6 --mem_gb 10 \
-  -v
+base=~/neurodesktop-storage
+mriqc "$base/open-data/ds000102" "$base/mriqc-demo" participant \
+  --participant-label 08 --modalities T1w \
+  --nprocs 4 --omp-nthreads 2 --mem_gb 8 \
+  --no-sub --notrack \
+  --work-dir "$base/mriqc-work"
 ```
 
-Use the same output directory that contains the participant results. A continuation backslash must be the final character on its line. See the [MRIQC command reference](https://mriqc.readthedocs.io/en/stable/running.html).
+`--modalities T1w` selects the anatomical scan. `--no-sub` disables automatic submission of the quality metrics, and `--notrack` disables usage tracking.
 
+Wait for **MRIQC completed** and the terminal prompt. The first run took about six minutes on the tested instance. Reruns can reuse completed work from `mriqc-work`.
 
-Hit enter, and mriqc should now be merrily working away on your data :)
+### 3. Find the results
+
+The output folder is `~/neurodesktop-storage/mriqc-demo/`. Check that it contains:
+
+- **`sub-08_T1w.html`** — the participant's visual report.
+- **`sub-08/anat/sub-08_T1w.json`** — the numerical quality metrics and processing metadata.
+
+The tested run produced one anatomical report and **68 finite numerical values in the metrics file**. The separate `mriqc-work` folder holds intermediate processing files.
+
+### 4. Open the visual report
+
+In the **MRIQC terminal where you ran the analysis**, paste this command and press **Enter**:
+
+```bash
+firefox --new-window "file://$HOME/neurodesktop-storage/mriqc-demo/sub-08_T1w.html"
+```
+
+Firefox inside Neurodesk opens the **Basic visual report**. The first panel enhances the background around the head.
+
+![The generated MRIQC report opened in Neurodesk Firefox](/static/tutorials/functional_imaging/mriqc/report-overview.jpg)
+
+Scroll down to **Zoomed-in mosaic view of the brain**. Browse through its slices to inspect the anatomical image, then continue through the remaining report panels. The screenshot shows the beginning of this mosaic; more slices follow below.
+
+![The anatomical mosaic section in the same clean Firefox window](/static/tutorials/functional_imaging/mriqc/anatomical-mosaic.jpg)
+
+Use the images together with the numerical metrics when assessing quality. For metric definitions and study-level workflows, see the official [MRIQC documentation](https://mriqc.readthedocs.io/en/stable/).

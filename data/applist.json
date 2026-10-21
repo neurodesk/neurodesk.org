@@ -1,36 +1,6 @@
 {
     "list": [
         {
-            "application": "acsrss_0.1.1_20260916",
-            "categories": [
-                "image reconstruction"
-            ],
-            "doi": "10.5281/zenodo.22984819",
-            "doi_url": "https://doi.org/10.5281/zenodo.22984819",
-            "license": "cc-by-4.0",
-            "openrecon": true
-        },
-        {
-            "application": "acsrss_0.1.2_20260916",
-            "categories": [
-                "image reconstruction"
-            ],
-            "doi": "10.5281/zenodo.22851554",
-            "doi_url": "https://doi.org/10.5281/zenodo.22851554",
-            "license": "cc-by-4.0",
-            "openrecon": true
-        },
-        {
-            "application": "acsrss_0.1.4_20260916",
-            "categories": [
-                "image reconstruction"
-            ],
-            "doi": "10.5281/zenodo.22851349",
-            "doi_url": "https://doi.org/10.5281/zenodo.22851349",
-            "license": "cc-by-4.0",
-            "openrecon": true
-        },
-        {
             "application": "afni_21.2.00_20210714",
             "categories": [
                 "functional imaging"
@@ -2417,7 +2387,7 @@
             "description": "Enigma-PD-WML segments White Matter Lesions (WML) from a subject's T1-weighted and FLAIR MRI images acquired in the same scanning session. It combines FSL (fsl_anat, bet, flirt, fnirt, fast, bianca) for pre-/post-processing with UNet-pgs for the deep-learning segmentation, and expects the input data in BIDS format. Lesion maps are produced in native and MNI standard space, split into periventricular and deep white matter lesions, together with per-session zip files, lesion volume CSVs and an HTML quality-control report. The pipeline always operates on the dataset mounted at `/data`, so run it from your top-level BIDS directory with that directory bound to `/data`:"
         },
         {
-            "application": "ep3d_1.0.0_20261020",
+            "application": "ep3d_1.0.0_20261021",
             "categories": [
                 "image reconstruction",
                 "phase processing"
@@ -5006,6 +4976,22 @@
             "openrecon": true
         },
         {
+            "application": "prostatefiducialseg_8.0.2_20261021",
+            "categories": [
+                "body",
+                "image segmentation"
+            ],
+            "openrecon": true
+        },
+        {
+            "application": "prostatefiducialseg_8.0.3_20261021",
+            "categories": [
+                "body",
+                "image segmentation"
+            ],
+            "openrecon": true
+        },
+        {
             "application": "pydeface_2.0.2_20260417",
             "categories": [
                 "image segmentation"
@@ -5170,7 +5156,7 @@
             ]
         },
         {
-            "application": "qsmxt_10.0.0_20261020",
+            "application": "qsmxt_10.0.0_20261021",
             "categories": [
                 "image reconstruction",
                 "phase processing",

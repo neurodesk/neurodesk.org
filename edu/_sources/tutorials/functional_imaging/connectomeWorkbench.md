@@ -12,13 +12,9 @@ description: A tutorial for accessing and visualizing the 7T HCP Retinotopy Data
 authors:
 - name: Fernanda L. Ribeiro
 - name: Michèle Masson-Trottier
-date: '2026-10-20'
+date: '2026-10-21'
 ---
 # Connectome Workbench
-
-**Authors:** Fernanda L. Ribeiro, Michèle Masson-Trottier
-
-**Last updated:** 20 October 2026
 
 :::{admonition} Learning Objectives
 :class: tip
@@ -73,7 +69,7 @@ To do so, follow the next steps:
 
 1. In the application menu, navigate to **1** Neurodesk → **2** Functional Imaging → **3** connectomeworkbench → **4** connectomeworkbench 1.5.0
 
-![Follow the four numbered menu targets to launch Workbench 1.5.0](https://raw.githubusercontent.com/neurodesk/media/main/screenshots/neurodesk/launch-workbench-guide.png)
+![Follow the four numbered menu targets to launch Workbench 1.5.0](https://raw.githubusercontent.com/neurodesk/media/neurodesk-shared-gui-controls-2026-10-20/screenshots/neurodesk/launch-workbench-guide.png)
 
 2. On the terminal shell that pops up, type in:
 
