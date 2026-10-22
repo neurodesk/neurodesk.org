@@ -51,16 +51,16 @@
     return 10 * magnitude;
   }
 
-  function renderSummary(data, currentMonthKey) {
+  function renderSummary(data, value, labelText) {
     var summary = document.createElement("div");
     summary.className = "user-metrics__summary";
 
     var metric = document.createElement("span");
     metric.className = "user-metrics__metric";
     var number = document.createElement("strong");
-    number.textContent = formatNumber(data.totalUsers);
+    number.textContent = formatNumber(value);
     var label = document.createElement("span");
-    label.textContent = "users to date";
+    label.textContent = labelText;
     metric.append(number, label);
     summary.append(metric);
 
@@ -314,7 +314,7 @@
     return item;
   }
 
-  function renderMapInto(figure, svgText, countries) {
+  function renderMapInto(figure, svgText, countries, scope) {
     var doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
     var svg = doc.documentElement;
     if (!svg || svg.nodeName !== "svg") {
@@ -342,7 +342,7 @@
     figure.textContent = "";
     var caption = document.createElement("figcaption");
     caption.className = "user-metrics__map-caption";
-    caption.textContent = "Cumulative users by country (all time)";
+    caption.textContent = scope.caption;
     figure.append(caption, svg);
 
     // Legend: one swatch per bin range, plus the no-data fill.
@@ -417,16 +417,13 @@
     svg.addEventListener("pointerleave", clearHover);
   }
 
-  function renderMap(countries, mapUrl) {
+  function renderMap(countries, mapUrl, scope) {
     var section = document.createElement("div");
     section.className = "user-metrics__map";
 
     var figure = document.createElement("figure");
     figure.className = "user-metrics__map-figure";
-    figure.setAttribute(
-      "aria-label",
-      "World map of cumulative Neurodesk users by country since tracking began. Values are listed in the table below the map."
-    );
+    figure.setAttribute("aria-label", scope.ariaLabel);
     var status = document.createElement("span");
     status.className = "user-metrics__status";
     status.textContent = "Loading map...";
@@ -435,7 +432,7 @@
 
     var details = document.createElement("details");
     var summary = document.createElement("summary");
-    summary.textContent = "Cumulative users by country (table)";
+    summary.textContent = scope.tableSummary;
     details.append(summary);
     var wrapper = document.createElement("div");
     wrapper.className = "user-metrics__table-wrapper";
@@ -479,7 +476,7 @@
         return response.text();
       })
       .then(function (svgText) {
-        renderMapInto(figure, svgText, countries);
+        renderMapInto(figure, svgText, countries, scope);
       })
       .catch(function () {
         status.textContent = "The map could not be loaded.";
@@ -542,7 +539,30 @@
     block.append(status);
   }
 
+  function renderPeriod(block, data) {
+    var countries = data.periodCountries;
+    if (data.unavailable || !Array.isArray(countries) || !countries.length || !block.dataset.userMetricsMap) {
+      renderStatus(block, "Recent user locations are not available in this build.");
+      return;
+    }
+    var periodDays = data.periodDays || 30;
+    block.textContent = "";
+    block.append(
+      renderSummary(data, data.periodUsers, "users in the last " + periodDays + " days"),
+      renderMap(countries, block.dataset.userMetricsMap, {
+        caption: "Users by country (last " + periodDays + " days)",
+        ariaLabel: "World map of Neurodesk users by country during the last " + periodDays +
+          " days. Values are listed in the table below the map.",
+        tableSummary: "Users by country, last " + periodDays + " days (table)"
+      })
+    );
+  }
+
   function render(block, data) {
+    if (block.dataset.userMetricsView === "period") {
+      renderPeriod(block, data);
+      return;
+    }
     if (data.unavailable || !Array.isArray(data.months) || !data.months.length) {
       renderStatus(block, "User statistics are not available in this build.");
       return;
@@ -550,11 +570,16 @@
     var currentMonthKey = String(data.generatedAt || "").slice(0, 7);
     block.textContent = "";
     block.append(
-      renderSummary(data, currentMonthKey),
+      renderSummary(data, data.totalUsers, "users to date"),
       renderChart(data.months)
     );
     if (Array.isArray(data.countries) && data.countries.length && block.dataset.userMetricsMap) {
-      block.append(renderMap(data.countries, block.dataset.userMetricsMap));
+      block.append(renderMap(data.countries, block.dataset.userMetricsMap, {
+        caption: "Cumulative users by country (all time)",
+        ariaLabel: "World map of cumulative Neurodesk users by country since tracking began. " +
+          "Values are listed in the table below the map.",
+        tableSummary: "Cumulative users by country (table)"
+      }));
     }
     block.append(renderTable(data.months, currentMonthKey));
   }
