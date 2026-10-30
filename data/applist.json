@@ -95,14 +95,30 @@
             "categories": [
                 "functional imaging"
             ],
-            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)"
+            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)",
+            "doi": "10.5281/zenodo.23630086",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630086",
+            "license": "gpl-3.0"
         },
         {
             "application": "afni_26.3.04_20261015",
             "categories": [
                 "functional imaging"
             ],
-            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)"
+            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)",
+            "doi": "10.5281/zenodo.23629735",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629735",
+            "license": "gpl-3.0"
+        },
+        {
+            "application": "afni_26.3.05_20261024",
+            "categories": [
+                "functional imaging"
+            ],
+            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)",
+            "doi": "10.5281/zenodo.23629715",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629715",
+            "license": "gpl-3.0"
         },
         {
             "application": "aidamri_1.1_20210708",
@@ -163,7 +179,10 @@
                 "functional imaging",
                 "rodent imaging",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629870",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629870",
+            "license": "gpl-3.0"
         },
         {
             "application": "alpaca_1.1.4_20260929",
@@ -172,7 +191,10 @@
                 "machine learning",
                 "structural imaging"
             ],
-            "description": "ALPaCA (Automated Lesion, PRL, and CVS Analysis) segments multiple sclerosis lesions and classifies each lesion candidate for a paramagnetic rim (PRL) and a central vein sign (CVS). It uses a multi-contrast 3D convolutional neural network on T1-weighted, FLAIR, T2*-weighted EPI magnitude and phase images. Lesion candidates come from MIMoSA. The container runs on CPU. Run the full pipeline:"
+            "description": "ALPaCA (Automated Lesion, PRL, and CVS Analysis) segments multiple sclerosis lesions and classifies each lesion candidate for a paramagnetic rim (PRL) and a central vein sign (CVS). It uses a multi-contrast 3D convolutional neural network on T1-weighted, FLAIR, T2*-weighted EPI magnitude and phase images. Lesion candidates come from MIMoSA. The container runs on CPU. Run the full pipeline:",
+            "doi": "10.5281/zenodo.23630460",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630460",
+            "license": "mit-license"
         },
         {
             "application": "amico_2.1.0_20250628",
@@ -282,7 +304,10 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "ANTs extracts information from complex datasets that include imaging. Paired with ANTsR, ANTs is useful for managing, interpreting and visualizing multidimensional data. ANTs is popularly considered a state-of-the-art medical image registration and segmentation toolkit. ANTsR is an emerging tool supporting standardized multimodality image analysis. ANTs depends on the Insight ToolKit (ITK), a widely used medical image processing library to which ANTs developers contribute. A summary of some ANTs findings and tutorial material (most of which is on this page) is here.\\"
+            "description": "ANTs extracts information from complex datasets that include imaging. Paired with ANTsR, ANTs is useful for managing, interpreting and visualizing multidimensional data. ANTs is popularly considered a state-of-the-art medical image registration and segmentation toolkit. ANTsR is an emerging tool supporting standardized multimodality image analysis. ANTs depends on the Insight ToolKit (ITK), a widely used medical image processing library to which ANTs developers contribute. A summary of some ANTs findings and tutorial material (most of which is on this page) is here.\\",
+            "doi": "10.5281/zenodo.23629911",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629911",
+            "license": "apache2.0"
         },
         {
             "application": "ants_arm64_2.6.5_20261012",
@@ -290,7 +315,29 @@
                 "image registration",
                 "image segmentation",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630312",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630312",
+            "license": "apache2.0"
+        },
+        {
+            "application": "arfimapping_1.0.12_20261025",
+            "categories": [
+                "image reconstruction"
+            ],
+            "description": "OpenRecon Bloch-Siegert B1 mapping from reconstructed magnitude and phase image messages. The runtime implements the workflow from `Read_7T_all_rev_openRecon.m`: detects 1Tx versus 8Tx from the frame count, uses the revised four-echo calculation, dedicated transmit-phase frames, and pre/post reference frames, builds an optional QC magnitude mask, converts phase counts to radians, corrects the scanner DICOM BSp polarity, computes BSp, measured B1, phase, and B0, then sends selected maps as explicit MRD volume images. Default outputs are B1, BSp, Tx phase, and B0 maps. Enable `sendmask` to also return the computed QC mask. The default phase scaling is the MATLAB DICOM conversion `phase * 2*pi/4096 - pi`. Every complete, nonconstant 3D output volume is mapped to scanner pixels spanning `0..4095`; DICOM rescaling and image comments record the inverse mapping back to physical units. B1 is reported in uT, BSp and Tx phase in degrees, B0 in Hz, and the mask as binary. Small negative BSp values are retained in the phase output and clamped only in the separate nonnegative copy used for the B1 square-root calculation. OpenRecon runtime notes: `recipes/blochsiegertb1mapping/OpenReconREADME.md`. Build and validate:",
+            "doi": "10.5281/zenodo.23718836",
+            "doi_url": "https://doi.org/10.5281/zenodo.23718836",
+            "license": "mit-license",
+            "openrecon": true
+        },
+        {
+            "application": "arfirecon_1.0.1_20261024",
+            "categories": [
+                "image reconstruction"
+            ],
+            "description": "OpenRecon ARFI magnitude and phase reconstruction. Every magnitude and phase frame is returned as a multi-slice 2D series with source geometry and slice positions preserved. Single Freq divides one-based frames into sequential groups of `ARFI Block Length`. Odd groups form the noFUS set and even groups form the withFUS set. Multiple Freq uses `myTemp = floor((sqrt(floor((frame_number-1)/2)*8+1)+1)/2)` and assigns a frame to withFUS when `frame_number > myTemp * myTemp`. The runtime forms complex data as `magnitude * exp(i * phase)`, averages the withFUS and noFUS sets independently, and outputs `angle(withFUS_average * conj(noFUS_average))` as `<source> ARFI phase`. Magnitude and wrapped phase frames are also returned in `<source> Magnitude` and `<source> Phase` series. When `Send Phase Standard Deviation` is enabled, every complex frame is multiplied by the conjugate of its set's complex mean. The sample standard deviation of the residual phase is output separately as `<source> withFUS phase standard deviation` and `<source> noFUS phase standard deviation`. A one-frame set produces zero. Phase outputs are converted to degrees. Nonconstant volumes use DICOM pixels `0..4095`, with `RescaleSlope` and `RescaleIntercept` recording the mapping back to physical values. Outputs use `Keep_image_geometry = 1` and are sent as one 2D image per slice with the matching source position. `ARFI Schemes` defaults to Single Freq, `ARFI Block Length` defaults to 25, and `Send Phase Standard Deviation` defaults to disabled. The runtime does not calculate B1, Bloch-Siegert phase, B0, or a mask. OpenRecon runtime notes: `recipes/arfirecon/OpenReconREADME.md`. Build and validate:",
+            "openrecon": true
         },
         {
             "application": "ashs_2.0.0_20210105",
@@ -453,6 +500,9 @@
                 "phase processing",
                 "quantitative imaging"
             ],
+            "doi": "10.5281/zenodo.23630490",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630490",
+            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -462,6 +512,9 @@
                 "phase processing",
                 "quantitative imaging"
             ],
+            "doi": "10.5281/zenodo.23630302",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630302",
+            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -477,15 +530,15 @@
             "openrecon": true
         },
         {
-            "application": "b0mapromeo_1.4.3_20261009",
+            "application": "b0mapromeo_1.4.3_20261025",
             "categories": [
                 "image reconstruction",
                 "phase processing",
                 "quantitative imaging"
             ],
-            "doi": "10.5281/zenodo.23444353",
-            "doi_url": "https://doi.org/10.5281/zenodo.23444353",
-            "license": "gpl-3.0",
+            "doi": "10.5281/zenodo.23718763",
+            "doi_url": "https://doi.org/10.5281/zenodo.23718763",
+            "license": "other-open",
             "openrecon": true
         },
         {
@@ -513,13 +566,19 @@
             "categories": [
                 "image reconstruction"
             ],
-            "description": "The Berkeley Advanced Reconstruction Toolbox (BART) is a free and open-source image-reconstruction framework for Computational Magnetic Resonance Imaging. It consists of a programming library and a toolbox of command-line programs. The library provides common operations on multi-dimensional arrays, Fourier and wavelet transforms, as well as generic implementations of iterative optimization algorithms. The command-line tools provide direct access to basic operations on multi-dimensional arrays as well as efficient implementations of many calibration and reconstruction algorithms for parallel imaging and compressed sensing."
+            "description": "The Berkeley Advanced Reconstruction Toolbox (BART) is a free and open-source image-reconstruction framework for Computational Magnetic Resonance Imaging. It consists of a programming library and a toolbox of command-line programs. The library provides common operations on multi-dimensional arrays, Fourier and wavelet transforms, as well as generic implementations of iterative optimization algorithms. The command-line tools provide direct access to basic operations on multi-dimensional arrays as well as efficient implementations of many calibration and reconstruction algorithms for parallel imaging and compressed sensing.",
+            "doi": "10.5281/zenodo.23629758",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629758",
+            "license": "bsd-3-clause"
         },
         {
             "application": "bart_arm64_1.0.00_20261012",
             "categories": [
                 "image reconstruction"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629869",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629869",
+            "license": "bsd-3-clause"
         },
         {
             "application": "batchheudiconv_1.0.0_20261010",
@@ -527,14 +586,20 @@
                 "data organisation",
                 "workflows"
             ],
-            "description": "A set of scripts to help convert DICOM files to BIDS format using heudiconv. Each study is managed as a self-contained workspace with organized directory structure"
+            "description": "A set of scripts to help convert DICOM files to BIDS format using heudiconv. Each study is managed as a self-contained workspace with organized directory structure",
+            "doi": "10.5281/zenodo.23630177",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630177",
+            "license": "gpl-3.0"
         },
         {
             "application": "batchheudiconv_arm64_1.0.0_20261010",
             "categories": [
                 "data organisation",
                 "workflows"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629942",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629942",
+            "license": "gpl-3.0"
         },
         {
             "application": "bcbtoolkit_0.0.0_20260610",
@@ -546,19 +611,13 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "bcbtoolkit_5.3.0_20261002",
-            "categories": [
-                "structural imaging"
-            ],
-            "doi": "10.5281/zenodo.23129723",
-            "doi_url": "https://doi.org/10.5281/zenodo.23129723",
-            "license": "bsd-3-clause"
-        },
-        {
             "application": "bcbtoolkit_5.4.1_20261012",
             "categories": [
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630432",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630432",
+            "license": "bsd-3-clause"
         },
         {
             "application": "bidsappaa_0.2.0_20230613",
@@ -831,7 +890,29 @@
                 "bids apps",
                 "data organisation"
             ],
+            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:",
+            "doi": "10.5281/zenodo.23629731",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629731",
+            "license": "mit-license"
+        },
+        {
+            "application": "bidsmanager_1.5.1_20261021",
+            "categories": [
+                "bids apps",
+                "data organisation"
+            ],
             "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:"
+        },
+        {
+            "application": "bidsmanager_1.5.2_20261029",
+            "categories": [
+                "bids apps",
+                "data organisation"
+            ],
+            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:",
+            "doi": "10.5281/zenodo.23791676",
+            "doi_url": "https://doi.org/10.5281/zenodo.23791676",
+            "license": "mit-license"
         },
         {
             "application": "bidsmanager_arm64_1.2.6.1_20260912",
@@ -879,6 +960,26 @@
                 "bids apps",
                 "data organisation"
             ]
+        },
+        {
+            "application": "bidsmanager_arm64_1.5.1_20261021",
+            "categories": [
+                "bids apps",
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23630241",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630241",
+            "license": "mit-license"
+        },
+        {
+            "application": "bidsmanager_arm64_1.5.2_20261029",
+            "categories": [
+                "bids apps",
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23791723",
+            "doi_url": "https://doi.org/10.5281/zenodo.23791723",
+            "license": "mit-license"
         },
         {
             "application": "bidsme_1.11.0_20260915",
@@ -1000,7 +1101,10 @@
             "categories": [
                 "bids apps",
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630018",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630018",
+            "license": "bsd-2-clause-netbsd"
         },
         {
             "application": "blastct_2.0.0_20260512",
@@ -1043,25 +1147,35 @@
             "license": "gpl-3.0-or-later"
         },
         {
-            "application": "blochsiegertb1mapping_1.1.0_20260915",
+            "application": "blender_5.2.3_20261023",
+            "categories": [
+                "visualization"
+            ],
+            "description": "Blender is an open-source 3D creation suite for modeling, animation, rendering, compositing, simulation, and scripting.",
+            "doi": "10.5281/zenodo.23630162",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630162",
+            "license": "gpl-3.0-or-later"
+        },
+        {
+            "application": "blochsiegertb1mapping_1.1.0_20261025",
             "categories": [
                 "image reconstruction"
             ],
             "description": "OpenRecon Bloch-Siegert B1 mapping from reconstructed magnitude and phase image messages. The runtime implements the workflow from `Read_7T_all_rev_openRecon.m`: detects 1Tx versus 8Tx from the frame count, uses the revised four-echo calculation, dedicated transmit-phase frames, and pre/post reference frames, builds phase and magnitude masks, converts phase counts to radians, corrects the scanner DICOM BSp polarity, computes BSp, measured B1, phase, and B0, then sends selected maps as explicit MRD volume images. B1 and B0 maps are always returned. BSp and Tx phase remain configurable, and the computed masks are never returned. When Apply Mask is enabled, the MATLAB-derived magnitude mask is applied to every returned map. Mask holes are filled slice by slice and then across the 3D volume. BS phase/B1 and B0 are filtered with a polynomial fit (order 20 for 1Tx, order 10 for 8Tx) and Gaussian sigma 0.5; Apply Filter changes BS phase from untrusted-only replacement to whole-volume replacement. The default phase scaling is the MATLAB DICOM conversion `phase * 2*pi/4096 - pi`. Every complete, nonconstant 3D output volume is mapped to scanner pixels spanning `0..4095`; DICOM rescaling and image comments record the inverse mapping back to physical units. B1 is reported in uT, BSp and Tx phase in degrees, and B0 in Hz. For 1Tx, a reference-amplitude map in V is also returned using `11.74 * ABS_Tx_Ref_Amp / B1`. Processing-information histogram images are generated for masked B1 (one per Tx channel) and masked B0; they use uT and Hz source units respectively. Small negative BSp values are retained in the phase output and clamped only in the separate nonnegative copy used for the B1 square-root calculation. OpenRecon runtime notes: `recipes/blochsiegertb1mapping/OpenReconREADME.md`. Build and validate:",
-            "doi": "10.5281/zenodo.22851282",
-            "doi_url": "https://doi.org/10.5281/zenodo.22851282",
+            "doi": "10.5281/zenodo.23718892",
+            "doi_url": "https://doi.org/10.5281/zenodo.23718892",
             "license": "mit-license",
             "openrecon": true
         },
         {
-            "application": "braid_1.0.0_20260722",
+            "application": "braid_1.0.0_20261024",
             "categories": [
                 "diffusion imaging",
                 "machine learning"
             ],
             "description": "BRAID: Brain Age Identification from Diffusion MRI BRAID estimates brain age from diffusion MRI. Unlike its counterparts, which typically use anatomical features (such as volume and shape of brain regions) to assist in the estimation, BRAID deliberately destroys anatomical information. Through non-rigid transformations, BRAID minimizes anatomical information to better focus on subtle microstructural changes that predate apparent anatomical changes in neurodegeneration.",
-            "doi": "10.5281/zenodo.21753753",
-            "doi_url": "https://doi.org/10.5281/zenodo.21753753",
+            "doi": "10.5281/zenodo.23750846",
+            "doi_url": "https://doi.org/10.5281/zenodo.23750846",
             "license": "cc-by-nc-4.0"
         },
         {
@@ -1085,21 +1199,27 @@
             "license": "lgpl-3.0"
         },
         {
-            "application": "brainles-aurora_0.2.7_20261012",
+            "application": "brainles-aurora_0.2.7_20261024",
             "categories": [
                 "image segmentation",
                 "machine learning",
                 "structural imaging"
             ],
-            "description": "AURORA segments brain metastases from multi-modal MR images using pretrained deep learning models. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Example"
+            "description": "AURORA segments brain metastases from multi-modal MR images using pretrained deep learning models. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Example",
+            "doi": "10.5281/zenodo.23751091",
+            "doi_url": "https://doi.org/10.5281/zenodo.23751091",
+            "license": "apache2.0"
         },
         {
-            "application": "brainles-aurora_arm64_0.2.7_20261012",
+            "application": "brainles-aurora_arm64_0.2.7_20261024",
             "categories": [
                 "image segmentation",
                 "machine learning",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23718765",
+            "doi_url": "https://doi.org/10.5281/zenodo.23718765",
+            "license": "apache2.0"
         },
         {
             "application": "brainles-preprocessing_0.6.10_20260825",
@@ -1118,7 +1238,10 @@
                 "image registration",
                 "structural imaging"
             ],
-            "description": "brainles-preprocessing provides a preprocessing pipeline for brain MRI: co-registration, atlas alignment, skull-stripping, defacing and intensity normalization. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Commands"
+            "description": "brainles-preprocessing provides a preprocessing pipeline for brain MRI: co-registration, atlas alignment, skull-stripping, defacing and intensity normalization. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Commands",
+            "doi": "10.5281/zenodo.23629839",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629839",
+            "license": "apache2.0"
         },
         {
             "application": "brainles-preprocessing_0.8.0_20260916",
@@ -1136,7 +1259,10 @@
             "categories": [
                 "image registration",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630504",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630504",
+            "license": "apache2.0"
         },
         {
             "application": "brainlesion_1.0.0_20260825",
@@ -1181,13 +1307,19 @@
             "categories": [
                 "workflows"
             ],
-            "description": "With brainlife CLI, you can .. Upload/download data from your computer. Upload data stored in BIDS format. Submit Apps, and monitor (you can fully script data processing through brainlife) Query projects, data, datatypes, etc."
+            "description": "With brainlife CLI, you can .. Upload/download data from your computer. Upload data stored in BIDS format. Submit Apps, and monitor (you can fully script data processing through brainlife) Query projects, data, datatypes, etc.",
+            "doi": "10.5281/zenodo.23629783",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629783",
+            "license": "mit-license"
         },
         {
             "application": "brainlifecli_arm64_1.8.2_20261012",
             "categories": [
                 "workflows"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629998",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629998",
+            "license": "mit-license"
         },
         {
             "application": "brainnetviewer_1.7.20191031_20240904",
@@ -1201,14 +1333,11 @@
             "license": "other-at"
         },
         {
-            "application": "brainstemnavigator_1.0.0_20261004",
+            "application": "brainstemnavigator_1.0.0_20261029",
             "categories": [
                 "image registration",
                 "structural imaging"
-            ],
-            "doi": "10.5281/zenodo.23444414",
-            "doi_url": "https://doi.org/10.5281/zenodo.23444414",
-            "license": "mit-license"
+            ]
         },
         {
             "application": "brainstorm_3.211130_20211207",
@@ -1301,7 +1430,19 @@
             "license": "apache2.0"
         },
         {
-            "application": "brats_0.1.13_20261012",
+            "application": "brats_0.1.13_20261024",
+            "categories": [
+                "image segmentation",
+                "structural imaging",
+                "workflows"
+            ],
+            "description": "BraTS gives a single interface over the winning algorithms from the BraTS challenges: adult and paediatric glioma, meningioma, brain metastasis and sub-Saharan Africa segmentation, plus inpainting and missing-MRI synthesis. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Read this first: no algorithms are bundled This container is an orchestrator. It contains no model and no weights. Each of the 66 algorithms is a separate container published by its authors, between roughly 4 GB and over 30 GB compressed -- and the cached sandbox is larger still: a 4 GB pull unpacks to about 8 GB on disk, a 9 GB pull to about 14 GB. You pull the ones you want, once. ### GPU or CPU? Most algorithms need a GPU: only 16 of the 66 are CPU-compatible, and 7 of the 8 task defaults are GPU-only, so on a CPU node `brats -t <task>` without `-a` fails for every task except `africa`. The `adult-glioma-pre`, `pediatric` and `goat` tasks have no CPU-compatible algorithm at all. `brats-algorithms` marks each algorithm `CPU-OK` or `GPU-only`, and `brats-algorithms --cpu-only` lists just the ones a CPU node can run; pick one with `-a`. Incompatibility is also detected before anything is downloaded. CPU runtimes differ by more than two orders of magnitude between algorithms, from about a minute to several hours per subject. `brats-algorithms` shows the estimate where upstream records one; size Slurm walltimes accordingly. **Step 1 -- point the cache at persistent storage.** The cache lives under `$TMPDIR` inside the container; anything in `/tmp` is lost with the session. The module wrapper runs this container with `--cleanenv`, which strips a plain `TMPDIR` export, so use the prefixed form, which survives it:",
+            "doi": "10.5281/zenodo.23719585",
+            "doi_url": "https://doi.org/10.5281/zenodo.23719585",
+            "license": "apache2.0"
+        },
+        {
+            "application": "brats_0.1.14_20261029",
             "categories": [
                 "image segmentation",
                 "structural imaging",
@@ -1336,13 +1477,19 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "[![DOI](https://zenodo.org/badge/245546149.svg)](https://zenodo.org/badge/latestdoi/245546149) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BrkRaw/tutorials/master)"
+            "description": "[![DOI](https://zenodo.org/badge/245546149.svg)](https://zenodo.org/badge/latestdoi/245546149) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BrkRaw/tutorials/master)",
+            "doi": "10.5281/zenodo.23629788",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629788",
+            "license": "gpl-3.0"
         },
         {
             "application": "brkraw_arm64_0.5.7_20261012",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630054",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630054",
+            "license": "gpl-3.0"
         },
         {
             "application": "cartool_5.06.04_20260605",
@@ -1386,6 +1533,18 @@
                 "structural imaging"
             ],
             "description": "SPM standalone with CAT12 toolbox in Matlab Compiler Runtime"
+        },
+        {
+            "application": "cat12_26.0.1_20261022",
+            "categories": [
+                "image registration",
+                "image segmentation",
+                "structural imaging"
+            ],
+            "description": "SPM standalone with CAT12 toolbox in Matlab Compiler Runtime",
+            "doi": "10.5281/zenodo.23630558",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630558",
+            "license": "gpl-2.0"
         },
         {
             "application": "cat12_26.0.rc3_20260521",
@@ -1474,14 +1633,20 @@
             "categories": [
                 "phase processing",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629729",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629729",
+            "license": "mit-license"
         },
         {
             "application": "clearswi_arm64_1.7.0_20261012",
             "categories": [
                 "phase processing",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630534",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630534",
+            "license": "mit-license"
         },
         {
             "application": "clinica_0.10.0_20260722",
@@ -1528,7 +1693,10 @@
             "categories": [
                 "workflows"
             ],
-            "description": "Framework for the reproducible processing of neuroimaging data with deep learning methods ClinicaDL is the deep learning extension of Clinica, a Python library to process neuroimaging data in BIDS format."
+            "description": "Framework for the reproducible processing of neuroimaging data with deep learning methods ClinicaDL is the deep learning extension of Clinica, a Python library to process neuroimaging data in BIDS format.",
+            "doi": "10.5281/zenodo.23629737",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629737",
+            "license": "mit-license"
         },
         {
             "application": "clinicadl_2.1.0_20260920",
@@ -1545,7 +1713,10 @@
             "categories": [
                 "image registration",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630410",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630410",
+            "license": "gpl-3.0-or-later"
         },
         {
             "application": "code_230315_20230315",
@@ -1558,17 +1729,17 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_240320_20261016",
+            "application": "code_240320_20261024",
             "categories": [
                 "programming"
             ],
             "description": "Python and Julia environment with VScode and singularity",
-            "doi": "10.5281/zenodo.23444274",
-            "doi_url": "https://doi.org/10.5281/zenodo.23444274",
+            "doi": "10.5281/zenodo.23629907",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629907",
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_arm64_240320_20261016",
+            "application": "code_arm64_240320_20261024",
             "categories": [
                 "programming"
             ]
@@ -1588,13 +1759,19 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "This container provides ready-to-go conda environments for neuroimaging"
+            "description": "This container provides ready-to-go conda environments for neuroimaging",
+            "doi": "10.5281/zenodo.23630285",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630285",
+            "license": "cc-by-4.0"
         },
         {
             "application": "condaenvs_arm64_1.1.0_20261012",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630406",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630406",
+            "license": "cc-by-4.0"
         },
         {
             "application": "conn_20b_20210109",
@@ -1693,7 +1870,7 @@
             "license": "lgpl-3.0"
         },
         {
-            "application": "cryosparc_1.0.0_20261018",
+            "application": "cryosparc_1.0.0_20261029",
             "categories": [
                 "cryo EM"
             ]
@@ -1839,7 +2016,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend.",
+            "doi": "10.5281/zenodo.23629927",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629927",
+            "license": "mit-license"
         },
         {
             "application": "datalad_1.7.1_20261007",
@@ -1850,6 +2030,13 @@
             "doi": "10.5281/zenodo.23444363",
             "doi_url": "https://doi.org/10.5281/zenodo.23444363",
             "license": "mit-license"
+        },
+        {
+            "application": "datalad_1.7.2_20261029",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
         },
         {
             "application": "datalad_arm64_1.1.5_20260911",
@@ -1900,7 +2087,10 @@
             "application": "datalad_arm64_1.7.0_20261006",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630651",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630651",
+            "license": "mit-license"
         },
         {
             "application": "datalad_arm64_1.7.1_20261007",
@@ -1910,6 +2100,12 @@
             "doi": "10.5281/zenodo.23290008",
             "doi_url": "https://doi.org/10.5281/zenodo.23290008",
             "license": "mit-license"
+        },
+        {
+            "application": "datalad_arm64_1.7.2_20261029",
+            "categories": [
+                "data organisation"
+            ]
         },
         {
             "application": "dcm2bids_3.2.0_20260527",
@@ -1968,7 +2164,7 @@
             "license": "other-open"
         },
         {
-            "application": "deep-quality-estimation_0.0.3_20261012",
+            "application": "deep-quality-estimation_0.0.3_20261024",
             "categories": [
                 "image segmentation",
                 "machine learning",
@@ -1977,12 +2173,15 @@
             "description": "Deep Quality Estimation rates BraTS glioma segmentation quality on a one to six star scale. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Example"
         },
         {
-            "application": "deep-quality-estimation_arm64_0.0.3_20261012",
+            "application": "deep-quality-estimation_arm64_0.0.3_20261024",
             "categories": [
                 "image segmentation",
                 "machine learning",
                 "quality control"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23719616",
+            "doi_url": "https://doi.org/10.5281/zenodo.23719616",
+            "license": "apache2.0"
         },
         {
             "application": "deepcombat_0.0.0.9000_20260929",
@@ -2020,7 +2219,10 @@
             "categories": [
                 "diffusion imaging",
                 "machine learning"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629984",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629984",
+            "license": "other-open"
         },
         {
             "application": "deepisles_1.1_20260715",
@@ -2095,13 +2297,13 @@
             "description": "This container has FreeSurfer 7.3.2, Connectome Workbench v1.5.0, PyTorch 2.5.1 (gpu), and PyTorch geometric 2.6.1 (gpu). These packages are required for data preparation and model inference. Use this container for GPU/CPU inference."
         },
         {
-            "application": "deepsif_0.0.1_20260629",
+            "application": "deepsif_0.0.1_20261024",
             "categories": [
                 "electrophysiology"
             ],
             "description": "Container environment for Deep Learning based Source Imaging Framework (DeepSIF) Including pytorch, numpy mne h5py tvb and cuda11.5 cudnn 8.3.0.98",
-            "doi": "10.5281/zenodo.21200497",
-            "doi_url": "https://doi.org/10.5281/zenodo.21200497",
+            "doi": "10.5281/zenodo.23719677",
+            "doi_url": "https://doi.org/10.5281/zenodo.23719677",
             "license": "bsd-3-clause"
         },
         {
@@ -2152,7 +2354,10 @@
             "categories": [
                 "data organisation",
                 "quality control"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630527",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630527",
+            "license": "mit-license"
         },
         {
             "application": "dicompare_0.15.4_20261017",
@@ -2199,7 +2404,10 @@
             "categories": [
                 "data organisation",
                 "quality control"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630079",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630079",
+            "license": "mit-license"
         },
         {
             "application": "dicomtools_1.0.0_20250204",
@@ -2222,7 +2430,10 @@
             "application": "dicomtools_arm64_1.1.0_20261012",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629807",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629807",
+            "license": "other-open"
         },
         {
             "application": "diffusiontoolkit_0.6.4.1_20220303",
@@ -2298,7 +2509,10 @@
             "application": "dwidenoise2_arm64_1.0.0_20261012",
             "categories": [
                 "diffusion imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630160",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630160",
+            "license": "polyform-noncommercial-1.0.0"
         },
         {
             "application": "eeglab_2020.0_20211026",
@@ -2315,7 +2529,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "ENIGMA Harmonization (eharmonize) is a python-based package that harmonizes provided data to included lifespan reference curves. The package is currently set up for outputs of the ENIGMA-DTI pipeline."
+            "description": "ENIGMA Harmonization (eharmonize) is a python-based package that harmonizes provided data to included lifespan reference curves. The package is currently set up for outputs of the ENIGMA-DTI pipeline.",
+            "doi": "10.5281/zenodo.23629968",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629968",
+            "license": "other-open"
         },
         {
             "application": "eharmonize_arm64_1.0.0_20261013",
@@ -2338,19 +2555,28 @@
             "categories": [
                 "image registration"
             ],
-            "description": "a toolbox for rigid and nonrigid registration of images. elastix is open source software, based on the well-known Insight Segmentation and Registration Toolkit (ITK). The software consists of a collection of algorithms that are commonly used to perform (medical) image registration: the task of finding a spatial transformation, mapping one image (the fixed image) to another (the moving image), by optimizing relevant image similarity metrics. The modular design of elastix allows the user to quickly configure, test, and compare different registration methods for a specific application. A command-line interface enables automated processing of large numbers of data sets, by means of scripting. Nowadays elastix is accompanied by ITKElastix making it available in Python (on Pypi) and by SimpleElastix, making it available in languages like C++, Python, Java, R, Ruby, C# and Lua."
+            "description": "a toolbox for rigid and nonrigid registration of images. elastix is open source software, based on the well-known Insight Segmentation and Registration Toolkit (ITK). The software consists of a collection of algorithms that are commonly used to perform (medical) image registration: the task of finding a spatial transformation, mapping one image (the fixed image) to another (the moving image), by optimizing relevant image similarity metrics. The modular design of elastix allows the user to quickly configure, test, and compare different registration methods for a specific application. A command-line interface enables automated processing of large numbers of data sets, by means of scripting. Nowadays elastix is accompanied by ITKElastix making it available in Python (on Pypi) and by SimpleElastix, making it available in languages like C++, Python, Java, R, Ruby, C# and Lua.",
+            "doi": "10.5281/zenodo.23630249",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630249",
+            "license": "cc-by-4.0"
         },
         {
             "application": "elastix_arm64_5.3.1_20261013",
             "categories": [
                 "image registration"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630261",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630261",
+            "license": "cc-by-4.0"
         },
         {
             "application": "eman2_2.99.85_20261012",
             "categories": [
                 "cryo EM"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630866",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630866",
+            "license": "gpl-2.0-or-later"
         },
         {
             "application": "emuses_1.3.0_20261019",
@@ -2358,14 +2584,20 @@
                 "machine learning",
                 "statistics"
             ],
-            "description": "EMUSES (Emerging-properties Mapping Using Spatial Embedding Statistics) is a predictive modeling and interpretability tool for high-dimensional data. It supports image, NIfTI, and tabular inputs, then builds UMAP latent spaces for clustering, heatmap, and prediction workflows."
+            "description": "EMUSES (Emerging-properties Mapping Using Spatial Embedding Statistics) is a predictive modeling and interpretability tool for high-dimensional data. It supports image, NIfTI, and tabular inputs, then builds UMAP latent spaces for clustering, heatmap, and prediction workflows.",
+            "doi": "10.5281/zenodo.23630037",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630037",
+            "license": "mit-license"
         },
         {
             "application": "emuses_arm64_1.3.0_20261019",
             "categories": [
                 "machine learning",
                 "statistics"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630065",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630065",
+            "license": "mit-license"
         },
         {
             "application": "enigma-pd-wml_1.1.1_20260901",
@@ -2384,10 +2616,13 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "Enigma-PD-WML segments White Matter Lesions (WML) from a subject's T1-weighted and FLAIR MRI images acquired in the same scanning session. It combines FSL (fsl_anat, bet, flirt, fnirt, fast, bianca) for pre-/post-processing with UNet-pgs for the deep-learning segmentation, and expects the input data in BIDS format. Lesion maps are produced in native and MNI standard space, split into periventricular and deep white matter lesions, together with per-session zip files, lesion volume CSVs and an HTML quality-control report. The pipeline always operates on the dataset mounted at `/data`, so run it from your top-level BIDS directory with that directory bound to `/data`:"
+            "description": "Enigma-PD-WML segments White Matter Lesions (WML) from a subject's T1-weighted and FLAIR MRI images acquired in the same scanning session. It combines FSL (fsl_anat, bet, flirt, fnirt, fast, bianca) for pre-/post-processing with UNet-pgs for the deep-learning segmentation, and expects the input data in BIDS format. Lesion maps are produced in native and MNI standard space, split into periventricular and deep white matter lesions, together with per-session zip files, lesion volume CSVs and an HTML quality-control report. The pipeline always operates on the dataset mounted at `/data`, so run it from your top-level BIDS directory with that directory bound to `/data`:",
+            "doi": "10.5281/zenodo.23630328",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630328",
+            "license": "bsd-3-clause"
         },
         {
-            "application": "ep3d_1.0.0_20261021",
+            "application": "ep3d_1.0.0_20261029",
             "categories": [
                 "image reconstruction",
                 "phase processing"
@@ -2395,13 +2630,13 @@
             "openrecon": true
         },
         {
-            "application": "epirecon_0.0.4_20260908",
+            "application": "epirecon_0.0.4_20261024",
             "categories": [
                 "image reconstruction"
             ],
             "description": "This container runs a fully-sampled Cartesian 3D EPI reconstruction for OpenRecon: a per-coil 3D FFT followed by root-sum-of-squares coil combination. Build the recipe with:",
-            "doi": "10.5281/zenodo.22730961",
-            "doi_url": "https://doi.org/10.5281/zenodo.22730961",
+            "doi": "10.5281/zenodo.23719920",
+            "doi_url": "https://doi.org/10.5281/zenodo.23719920",
             "license": "mit-license",
             "openrecon": true
         },
@@ -2409,7 +2644,10 @@
             "application": "epu-group-afis_0.3.0_20261003",
             "categories": [
                 "cryo EM"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630201",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630201",
+            "license": "mit-license"
         },
         {
             "application": "esilpd_0.0.1_20260629",
@@ -2419,6 +2657,16 @@
             "description": "for EEG/MEG modeling and analysis MNE 1.0.3+PyTorch1.11_cuda_11.3+jax 0.3.13 with CUDA11.5 with cudnn 8.3.0 https://mne.tools/stable/index.html",
             "doi": "10.5281/zenodo.21200434",
             "doi_url": "https://doi.org/10.5281/zenodo.21200434",
+            "license": "bsd-3-clause"
+        },
+        {
+            "application": "esilpd_0.1.0_20261024",
+            "categories": [
+                "electrophysiology"
+            ],
+            "description": "for EEG/MEG modeling and analysis MNE 1.0.3+PyTorch1.11_cuda_11.3+jax 0.3.13 with CUDA11.5 with cudnn 8.3.0 https://mne.tools/stable/index.html",
+            "doi": "10.5281/zenodo.23719946",
+            "doi_url": "https://doi.org/10.5281/zenodo.23719946",
             "license": "bsd-3-clause"
         },
         {
@@ -2468,7 +2716,10 @@
             "categories": [
                 "structural imaging"
             ],
-            "description": "FastSurfer provides a fully compatible FreeSurfer alternative for volumetric analysis (within minutes) and surface-based thickness analysis (within only around 1h run time). FastSurfer is transitioning to sub-millimeter resolution support throughout the pipeline. The FastSurfer pipeline consists of two main parts for segmentation and surface reconstruction. the segmentation sub-pipeline (seg) employs advanced deep learning networks for fast, accurate segmentation and volumetric calculation of the whole brain and selected substructures. the surface sub-pipeline (recon-surf) reconstructs cortical surfaces, maps cortical labels and performs a traditional point-wise and ROI thickness analysis. FastSurfer also has a dedicated pipeline to quantify longitudinal changes in T1-weighted MRI. FastSurfer\u2019s longitudinal pipeline outperforms independent (cross-sectional) processing of individual MRIs across time in both FastSurfer and FreeSurfer, as well as even the longitudinal pipeline in FreeSurfer."
+            "description": "FastSurfer provides a fully compatible FreeSurfer alternative for volumetric analysis (within minutes) and surface-based thickness analysis (within only around 1h run time). FastSurfer is transitioning to sub-millimeter resolution support throughout the pipeline. The FastSurfer pipeline consists of two main parts for segmentation and surface reconstruction. the segmentation sub-pipeline (seg) employs advanced deep learning networks for fast, accurate segmentation and volumetric calculation of the whole brain and selected substructures. the surface sub-pipeline (recon-surf) reconstructs cortical surfaces, maps cortical labels and performs a traditional point-wise and ROI thickness analysis. FastSurfer also has a dedicated pipeline to quantify longitudinal changes in T1-weighted MRI. FastSurfer\u2019s longitudinal pipeline outperforms independent (cross-sectional) processing of individual MRIs across time in both FastSurfer and FreeSurfer, as well as even the longitudinal pipeline in FreeSurfer.",
+            "doi": "10.5281/zenodo.23630013",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630013",
+            "license": "apache2.0"
         },
         {
             "application": "fatsegnet_1.0.gpu_20201212",
@@ -2499,7 +2750,10 @@
                 "fetal imaging",
                 "image segmentation",
                 "machine learning"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630454",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630454",
+            "license": "other-open"
         },
         {
             "application": "fetalsynthseg_arm64_1.0.0_20261014",
@@ -2548,7 +2802,10 @@
                 "image segmentation",
                 "machine learning"
             ],
-            "description": "FLAMeS: a robust deep-learning (nnU-Netv2) model for automated multiple sclerosis lesion segmentation from a single FLAIR image."
+            "description": "FLAMeS: a robust deep-learning (nnU-Netv2) model for automated multiple sclerosis lesion segmentation from a single FLAIR image.",
+            "doi": "10.5281/zenodo.23629733",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629733",
+            "license": "gpl-3.0"
         },
         {
             "application": "flames_arm64_1.0.0_20261014",
@@ -2684,7 +2941,10 @@
                 "functional imaging",
                 "workflows"
             ],
-            "description": "fMRIPrep is a functional magnetic resonance imaging (fMRI) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) providing outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc."
+            "description": "fMRIPrep is a functional magnetic resonance imaging (fMRI) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) providing outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.",
+            "doi": "10.5281/zenodo.23630129",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630129",
+            "license": "apache2.0"
         },
         {
             "application": "freesurfer_5.3.0_20260818",
@@ -2703,7 +2963,10 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "FreeSurfer contains a set of programs with a common focus of analyzing magnetic resonance imaging scans of brain tissue. It is an important tool in functional brain mapping and contains tools to conduct both volume based and surface based analysis."
+            "description": "FreeSurfer contains a set of programs with a common focus of analyzing magnetic resonance imaging scans of brain tissue. It is an important tool in functional brain mapping and contains tools to conduct both volume based and surface based analysis.",
+            "doi": "10.5281/zenodo.23630273",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630273",
+            "license": "other-open"
         },
         {
             "application": "freesurfer_7.1.1_20211216",
@@ -2777,7 +3040,10 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "FreeSurfer contains a set of programs with a common focus of analyzing magnetic resonance imaging scans of brain tissue. It is an important tool in functional brain mapping and contains tools to conduct both volume based and surface based analysis."
+            "description": "FreeSurfer contains a set of programs with a common focus of analyzing magnetic resonance imaging scans of brain tissue. It is an important tool in functional brain mapping and contains tools to conduct both volume based and surface based analysis.",
+            "doi": "10.5281/zenodo.23629797",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629797",
+            "license": "other-open"
         },
         {
             "application": "frisgo_2.10.0_20261013",
@@ -2795,7 +3061,10 @@
             "application": "frisgokspace_0.1.0_20261008",
             "categories": [
                 "image reconstruction"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630386",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630386",
+            "license": "mit-license"
         },
         {
             "application": "fsl_6.0.3_20200905",
@@ -2957,7 +3226,10 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. Most of the tools can be run both from the command line and as GUIs (\"point-and-click\" graphical user interfaces). To quote the relevant references for FSL tools you should look in the individual tools' manual pages, and also please reference one or more of the FSL overview papers: 1. M.W. Woolrich, S. Jbabdi, B. Patenaude, M. Chappell, S. Makni, T. Behrens, C. Beckmann, M. Jenkinson, S.M. Smith. Bayesian analysis of neuroimaging data in FSL. NeuroImage, 45:S173-86, 2009 2. S.M. Smith, M. Jenkinson, M.W. Woolrich, C.F. Beckmann, T.E.J. Behrens, H. Johansen-Berg, P.R. Bannister, M. De Luca, I. Drobnjak, D.E. Flitney, R. Niazy, J. Saunders, J. Vickers, Y. Zhang, N. De Stefano, J.M. Brady, and P.M. Matthews. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 23(S1):208-19, 2004 3. M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. NeuroImage, 62:782-90, 2012"
+            "description": "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data. Most of the tools can be run both from the command line and as GUIs (\"point-and-click\" graphical user interfaces). To quote the relevant references for FSL tools you should look in the individual tools' manual pages, and also please reference one or more of the FSL overview papers: 1. M.W. Woolrich, S. Jbabdi, B. Patenaude, M. Chappell, S. Makni, T. Behrens, C. Beckmann, M. Jenkinson, S.M. Smith. Bayesian analysis of neuroimaging data in FSL. NeuroImage, 45:S173-86, 2009 2. S.M. Smith, M. Jenkinson, M.W. Woolrich, C.F. Beckmann, T.E.J. Behrens, H. Johansen-Berg, P.R. Bannister, M. De Luca, I. Drobnjak, D.E. Flitney, R. Niazy, J. Saunders, J. Vickers, Y. Zhang, N. De Stefano, J.M. Brady, and P.M. Matthews. Advances in functional and structural MR image analysis and implementation as FSL. NeuroImage, 23(S1):208-19, 2004 3. M. Jenkinson, C.F. Beckmann, T.E. Behrens, M.W. Woolrich, S.M. Smith. FSL. NeuroImage, 62:782-90, 2012",
+            "doi": "10.5281/zenodo.23629913",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629913",
+            "license": "other-open"
         },
         {
             "application": "fsl_6.0.7.8_20240913",
@@ -2983,14 +3255,20 @@
                 "image registration",
                 "image segmentation",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629717",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629717",
+            "license": "other-open"
         },
         {
             "application": "fsqc_2.1.7_20261012",
             "categories": [
                 "quality control"
             ],
-            "description": "This package provides quality assurance / quality control scripts for FastSurfer- or FreeSurfer-processed structural MRI data. It will check outputs of these two software packages by means of quantitative and visual summaries. Prior processing of data using either FastSurfer or FreeSurfer is required, i.e. the software cannot be used on raw images. It is a revision, extension, and translation to the Python language of the Freesurfer QA Tools. It has been augmented by additional functions from the MRIQC toolbox, and with code derived from the LaPy and BrainPrint toolboxes."
+            "description": "This package provides quality assurance / quality control scripts for FastSurfer- or FreeSurfer-processed structural MRI data. It will check outputs of these two software packages by means of quantitative and visual summaries. Prior processing of data using either FastSurfer or FreeSurfer is required, i.e. the software cannot be used on raw images. It is a revision, extension, and translation to the Python language of the Freesurfer QA Tools. It has been augmented by additional functions from the MRIQC toolbox, and with code derived from the LaPy and BrainPrint toolboxes.",
+            "doi": "10.5281/zenodo.23629769",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629769",
+            "license": "mit-license"
         },
         {
             "application": "fsqc_arm64_2.1.7_20261012",
@@ -3017,7 +3295,10 @@
             "categories": [
                 "cryo EM"
             ],
-            "description": "Gautomatch is a GPU-accelerated program by Kai Zhang (MRC Laboratory of Molecular Biology) for fully automatic particle picking in cryo-EM micrographs, with or without 2D templates. This container installs Gautomatch v{{ context.upstream_version }}, binary `{{ context.gautomatch_binary }}`. The binary was compiled for CUDA 10.1 and compute capabilities sm_30 to sm_75. It also embeds sm_75 PTX, which the NVIDIA driver JIT-compiles for newer GPUs. The CUDA 10.1 runtime libraries it links against (cuFFT, cuBLAS, cuRAND and NPP) are bundled in {{ context.cuda_libs }}. The host must provide an NVIDIA GPU and a driver that supports CUDA 10.1 or newer (418.39+). Run Apptainer/Singularity with `--nv`."
+            "description": "Gautomatch is a GPU-accelerated program by Kai Zhang (MRC Laboratory of Molecular Biology) for fully automatic particle picking in cryo-EM micrographs, with or without 2D templates. This container installs Gautomatch v{{ context.upstream_version }}, binary `{{ context.gautomatch_binary }}`. The binary was compiled for CUDA 10.1 and compute capabilities sm_30 to sm_75. It also embeds sm_75 PTX, which the NVIDIA driver JIT-compiles for newer GPUs. The CUDA 10.1 runtime libraries it links against (cuFFT, cuBLAS, cuRAND and NPP) are bundled in {{ context.cuda_libs }}. The host must provide an NVIDIA GPU and a driver that supports CUDA 10.1 or newer (418.39+). Run Apptainer/Singularity with `--nv`.",
+            "doi": "10.5281/zenodo.23630183",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630183",
+            "license": "other-open"
         },
         {
             "application": "gigaconnectome_0.6.0_20261012",
@@ -3025,14 +3306,20 @@
                 "bids apps",
                 "functional imaging"
             ],
-            "description": "Functional connectivity is a common approach in analysing resting state fMRI data. The Python tool Nilearn provides utilities to extract and denoise time-series on a parcellation. Nilearn also has methods to compute functional connectivity. While Nilearn provides useful methods to generate connectomes, there is no standalone one stop solution to generate connectomes from fMRIPrep outputs. giga-connectome (a BIDS-app!) combines Nilearn and TemplateFlow to denoise the data, generate timeseries, and most critically giga-connectome generates functional connectomes directly from fMRIPrep outputs. The workflow comes with several built-in denoising strategies and there are several choices of atlases (MIST, Schaefer 7 networks, DiFuMo, Harvard-Oxford). Users can customise their own strategies and atlases using the configuration json files."
+            "description": "Functional connectivity is a common approach in analysing resting state fMRI data. The Python tool Nilearn provides utilities to extract and denoise time-series on a parcellation. Nilearn also has methods to compute functional connectivity. While Nilearn provides useful methods to generate connectomes, there is no standalone one stop solution to generate connectomes from fMRIPrep outputs. giga-connectome (a BIDS-app!) combines Nilearn and TemplateFlow to denoise the data, generate timeseries, and most critically giga-connectome generates functional connectomes directly from fMRIPrep outputs. The workflow comes with several built-in denoising strategies and there are several choices of atlases (MIST, Schaefer 7 networks, DiFuMo, Harvard-Oxford). Users can customise their own strategies and atlases using the configuration json files.",
+            "doi": "10.5281/zenodo.23630398",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630398",
+            "license": "mit-license"
         },
         {
             "application": "gigaconnectome_arm64_0.6.0_20261012",
             "categories": [
                 "bids apps",
                 "functional imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630267",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630267",
+            "license": "mit-license"
         },
         {
             "application": "gimp_2.10.18_20210104",
@@ -3076,7 +3363,10 @@
             "application": "gingerale_4.0.0_20261012",
             "categories": [
                 "statistics"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630045",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630045",
+            "license": "other-open"
         },
         {
             "application": "gingerale_arm64_4.0.0_20261012",
@@ -3088,15 +3378,26 @@
             "license": "other-open"
         },
         {
-            "application": "gliomoda_0.0.4_20260824",
+            "application": "gliomoda_0.0.4_20261024",
             "categories": [
                 "image segmentation",
                 "machine learning",
                 "structural imaging"
             ],
             "description": "GlioMODA segments gliomas from multi-modal brain MRI across several sequence combinations. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Input requirements Inputs must be skull-stripped, co-registered and resampled to the BraTS/SRI24 atlas grid: **exactly 240x240x155 at 1 mm**. Anything else is rejected. Use brainles-preprocessing, which bundles the SRI24 template, to get there. ### Output One NIfTI with BraTS 2023 labels, on the same grid and affine as the input:",
-            "doi": "10.5281/zenodo.22430489",
-            "doi_url": "https://doi.org/10.5281/zenodo.22430489",
+            "doi": "10.5281/zenodo.23719612",
+            "doi_url": "https://doi.org/10.5281/zenodo.23719612",
+            "license": "apache2.0"
+        },
+        {
+            "application": "gliomoda_arm64_0.0.4_20261024",
+            "categories": [
+                "image segmentation",
+                "machine learning",
+                "structural imaging"
+            ],
+            "doi": "10.5281/zenodo.23722018",
+            "doi_url": "https://doi.org/10.5281/zenodo.23722018",
             "license": "apache2.0"
         },
         {
@@ -3110,17 +3411,23 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "glmsingle_1.2.0_20261019",
+            "application": "glmsingle_1.2.0_20261020",
             "categories": [
                 "functional imaging"
             ],
-            "description": "A toolbox for accurate single-trial estimates in fMRI time-series data. This container is set up so that the python version of the toolbox is ready to use. Import the GLMsingle package on your python script: 'import glmsingle'. Run, 'jupyter-lab' to use the jupyter interface. To use GLMsingle with Matlab, load the Matlab container and follow the instructions as described here: https://github.com/cvnlab/GLMsingle?tab=readme-ov-file#matlab"
+            "description": "A toolbox for accurate single-trial estimates in fMRI time-series data. This container is set up so that the python version of the toolbox is ready to use. Import the GLMsingle package on your python script: 'import glmsingle'. Run, 'jupyter-lab' to use the jupyter interface. To use GLMsingle with Matlab, load the Matlab container and follow the instructions as described here: https://github.com/cvnlab/GLMsingle?tab=readme-ov-file#matlab",
+            "doi": "10.5281/zenodo.23630111",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630111",
+            "license": "bsd-3-clause"
         },
         {
-            "application": "glmsingle_arm64_1.2.0_20261019",
+            "application": "glmsingle_arm64_1.2.0_20261020",
             "categories": [
                 "functional imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630269",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630269",
+            "license": "bsd-3-clause"
         },
         {
             "application": "globus_3.2.2_20230620",
@@ -3147,7 +3454,20 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "Globus client"
+            "description": "Globus client",
+            "doi": "10.5281/zenodo.23630367",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630367",
+            "license": "other-open"
+        },
+        {
+            "application": "globus_3.3.2_20261023",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "Globus client",
+            "doi": "10.5281/zenodo.23630169",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630169",
+            "license": "other-open"
         },
         {
             "application": "globus_arm64_3.3.1_20261013",
@@ -3156,6 +3476,15 @@
             ],
             "doi": "10.5281/zenodo.23444246",
             "doi_url": "https://doi.org/10.5281/zenodo.23444246",
+            "license": "other-open"
+        },
+        {
+            "application": "globus_arm64_3.3.2_20261023",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23630426",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630426",
             "license": "other-open"
         },
         {
@@ -3223,7 +3552,10 @@
             "application": "hdbet_arm64_2.0.1_20261012",
             "categories": [
                 "image segmentation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629833",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629833",
+            "license": "cc-by-4.0"
         },
         {
             "application": "heudiconv_1.3.1_20241105",
@@ -3435,7 +3767,20 @@
             "categories": [
                 "programming"
             ],
-            "description": "Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM."
+            "description": "Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM.",
+            "doi": "10.5281/zenodo.23630061",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630061",
+            "license": "mit-license"
+        },
+        {
+            "application": "julia_1.13.3_20261029",
+            "categories": [
+                "programming"
+            ],
+            "description": "Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM.",
+            "doi": "10.5281/zenodo.23791681",
+            "doi_url": "https://doi.org/10.5281/zenodo.23791681",
+            "license": "mit-license"
         },
         {
             "application": "julia_1.4.1_20210105",
@@ -3461,19 +3806,37 @@
             "application": "julia_arm64_1.13.1_20261012",
             "categories": [
                 "programming"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629723",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629723",
+            "license": "mit-license"
         },
         {
             "application": "julia_arm64_1.13.2_20261016",
             "categories": [
                 "programming"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630139",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630139",
+            "license": "mit-license"
+        },
+        {
+            "application": "julia_arm64_1.13.3_20261029",
+            "categories": [
+                "programming"
+            ],
+            "doi": "10.5281/zenodo.23791756",
+            "doi_url": "https://doi.org/10.5281/zenodo.23791756",
+            "license": "mit-license"
         },
         {
             "application": "kspacefilter_0.1.0_20261008",
             "categories": [
                 "image reconstruction"
             ],
+            "doi": "10.5281/zenodo.23629883",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629883",
+            "license": "mit-license",
             "openrecon": true
         },
         {
@@ -3481,7 +3844,10 @@
             "categories": [
                 "image segmentation",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630402",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630402",
+            "license": "mpl-2.0"
         },
         {
             "application": "lashis_1.0_20210105",
@@ -3508,15 +3874,15 @@
             "license": "other-at"
         },
         {
-            "application": "lashis_2.0.0_20260508",
+            "application": "lashis_2.0.0_20261024",
             "categories": [
                 "hippocampus",
                 "image segmentation",
                 "structural imaging"
             ],
             "description": "Longitudinal Automatic Segmentation of Hippocampal Subfields (LASHiS) v2. A Nipype workflow that combines cross-sectional ASHS segmentation per timepoint with a multimodal single-subject template (SST), per-side TSE chunk SSTs, and weighted joint label fusion or majority voting, with optional Jacobian-penalised relabelling. Validated on the TOMCAT 7T test\u2013retest dataset (https://osf.io/bt4ez/) \u2014 cross-session coefficient of variation is 4-7x lower than running cross-sectional ASHS independently per timepoint. See https://github.com/thomshaw92/LASHiS for the reproduction recipe. An ASHS atlas (e.g. UMC Utrecht 7T from https://www.nitrc.org/projects/ashs/) is required at runtime via `-a /path/to/ashs_atlas_*` or `$ASHS_ATLAS`. The atlas is not bundled here (license-restricted, registration required).",
-            "doi": "10.5281/zenodo.20102814",
-            "doi_url": "https://doi.org/10.5281/zenodo.20102814",
+            "doi": "10.5281/zenodo.23722817",
+            "doi_url": "https://doi.org/10.5281/zenodo.23722817",
             "license": "gpl-3.0-or-later"
         },
         {
@@ -3524,7 +3890,10 @@
             "categories": [
                 "functional imaging"
             ],
-            "description": "LayNii is a standalone software suite for mesoscopic (functional) magnetic resonance imaging (e.g. layer-fMRI). It is a collection of C++ programs that depend only on a C++ compiler. The purpose of this package is to provide layer-analysis software that are not (yet) included in the other major MRI analysis software."
+            "description": "LayNii is a standalone software suite for mesoscopic (functional) magnetic resonance imaging (e.g. layer-fMRI). It is a collection of C++ programs that depend only on a C++ compiler. The purpose of this package is to provide layer-analysis software that are not (yet) included in the other major MRI analysis software.",
+            "doi": "10.5281/zenodo.23629822",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629822",
+            "license": "bsd-3-clause"
         },
         {
             "application": "laynii_2.2.1_20220701",
@@ -3540,7 +3909,10 @@
             "application": "laynii_arm64_2.10.0_20261012",
             "categories": [
                 "functional imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630173",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630173",
+            "license": "bsd-3-clause"
         },
         {
             "application": "lcmodel_6.3_20220222",
@@ -3577,7 +3949,10 @@
                 "statistics",
                 "workflows"
             ],
-            "description": "Lesion to Symptom Mapping in R. LESYMAP maps the specific brain areas responsible for cognitive deficits by taking a series of lesion maps and a vector of behavioral scores. Both univariate (t-test, Brunner-Munzel, regression) and multivariate (sparse canonical correlations) tests are available. LESYMAP is built to run both real and simulated lesion-to-symptom mapping analyses."
+            "description": "Lesion to Symptom Mapping in R. LESYMAP maps the specific brain areas responsible for cognitive deficits by taking a series of lesion maps and a vector of behavioral scores. Both univariate (t-test, Brunner-Munzel, regression) and multivariate (sparse canonical correlations) tests are available. LESYMAP is built to run both real and simulated lesion-to-symptom mapping analyses.",
+            "doi": "10.5281/zenodo.23629841",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629841",
+            "license": "apache2.0"
         },
         {
             "application": "lesymap_0.0.0.9222_20250730",
@@ -3625,7 +4000,10 @@
             "categories": [
                 "functional imaging",
                 "machine learning"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630153",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630153",
+            "license": "bsd-3-clause"
         },
         {
             "application": "lipsia_arm64_4.1.1_20261013",
@@ -3643,20 +4021,29 @@
                 "arterial spin labelling",
                 "quality control",
                 "quantitative imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630133",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630133",
+            "license": "gpl-3.0"
         },
         {
             "application": "lqt_0.1.0_20261013",
             "categories": [
                 "structural imaging"
             ],
-            "description": "LQT is an R implementation of the lesion quantification toolkit, based on the paper \u201cLesion Quantification Toolkit: A MATLAB software tool for estimating grey matter damage and white matter disconnections in patients with focal brain lesions\u201d by Griffis et al. The LQT is \u201ca publicly available software package for quantifying the structural impacts of focal brain lesions. It uses atlas-based approaches to estimate parcel-level grey matter lesion loads and multiple measures of white matter disconnection severity that include tract-level disconnection measures, voxel-wise disconnection maps, and parcel-wise disconnection matrices. The toolkit also estimates lesion-induced increases in the lengths of the shortest structural paths between parcel pairs, which provide information about changes in higher-order structural network topology.\u201d The R package creates data structures necessary for applying the methods directly to MNI-registered lesion maps from either a single patient or a full study. The package then allows the user to create figures for visualization and summary, and to compile analysis-ready datasets for research."
+            "description": "LQT is an R implementation of the lesion quantification toolkit, based on the paper \u201cLesion Quantification Toolkit: A MATLAB software tool for estimating grey matter damage and white matter disconnections in patients with focal brain lesions\u201d by Griffis et al. The LQT is \u201ca publicly available software package for quantifying the structural impacts of focal brain lesions. It uses atlas-based approaches to estimate parcel-level grey matter lesion loads and multiple measures of white matter disconnection severity that include tract-level disconnection measures, voxel-wise disconnection maps, and parcel-wise disconnection matrices. The toolkit also estimates lesion-induced increases in the lengths of the shortest structural paths between parcel pairs, which provide information about changes in higher-order structural network topology.\u201d The R package creates data structures necessary for applying the methods directly to MNI-registered lesion maps from either a single patient or a full study. The package then allows the user to create figures for visualization and summary, and to compile analysis-ready datasets for research.",
+            "doi": "10.5281/zenodo.23629745",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629745",
+            "license": "other-open"
         },
         {
             "application": "lqt_arm64_0.1.0_20261013",
             "categories": [
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629857",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629857",
+            "license": "other-open"
         },
         {
             "application": "lstai_1.1.0_20260911",
@@ -3686,7 +4073,10 @@
                 "image segmentation",
                 "machine learning",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630023",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630023",
+            "license": "other-open"
         },
         {
             "application": "matlab_2022a_20231207",
@@ -3825,7 +4215,10 @@
                 "machine learning",
                 "statistics"
             ],
-            "description": "MEGaNorm derives functional imaging-derived phenotypes from large-scale EEG and MEG datasets and fits normative models over them, so an individual recording can be placed against a population reference range. It wraps MNE-Python for preprocessing and feature extraction, and PCNToolkit for the normative modelling. ### Example"
+            "description": "MEGaNorm derives functional imaging-derived phenotypes from large-scale EEG and MEG datasets and fits normative models over them, so an individual recording can be placed against a population reference range. It wraps MNE-Python for preprocessing and feature extraction, and PCNToolkit for the normative modelling. ### Example",
+            "doi": "10.5281/zenodo.23630225",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630225",
+            "license": "gpl-3.0"
         },
         {
             "application": "meganorm_arm64_0.2.2_20261012",
@@ -3833,7 +4226,10 @@
                 "electrophysiology",
                 "machine learning",
                 "statistics"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629792",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629792",
+            "license": "gpl-3.0"
         },
         {
             "application": "megnet_1.0.1_20260608",
@@ -3850,13 +4246,19 @@
             "categories": [
                 "electrophysiology"
             ],
-            "description": "MEGNET pipelines for MEG (MEGIN and KIT) data analysis"
+            "description": "MEGNET pipelines for MEG (MEGIN and KIT) data analysis",
+            "doi": "10.5281/zenodo.23630376",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630376",
+            "license": "mit-license"
         },
         {
             "application": "megnet_arm64_1.1.0_20261013",
             "categories": [
                 "electrophysiology"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630531",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630531",
+            "license": "mit-license"
         },
         {
             "application": "meica_4.0.1_20261017",
@@ -3867,7 +4269,31 @@
                 "workflows"
             ],
             "description": "ME-ICA v4 is a comprehensive multi-echo fMRI processing pipeline. It uses echo-time dependence to separate BOLD-like signals from non-BOLD artifacts. This recipe includes the matched upstream AFNI runtime and an OpenRecon adapter for reconstructed multi-echo magnitude image streams. Command-line example:",
+            "doi": "10.5281/zenodo.23629751",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629751",
+            "license": "cc-by-nc-sa-4.0",
             "openrecon": true
+        },
+        {
+            "application": "meica-rs_0.1.20261021_20261027",
+            "categories": [
+                "functional imaging",
+                "quality control"
+            ],
+            "description": "meica is a Rust port of [tedana](https://tedana.readthedocs.io/en/stable/) multi-echo independent component analysis (ME-ICA) denoising for multi-echo fMRI. It ports tedana's workflow (commit e07066c) and its dimensionality estimate, mapca 0.0.8. It needs neither Python nor Matlab, and its results match tedana's to floating-point rounding with identical component classifications. This container is distinct from the `meica` container, which packages the original ME-ICA v3 (`meica.py`) by Kundu et al. The container provides three programs in /opt/meica-rs/bin: - `meica`: the ME-ICA command line tool (source commit {{ context.meica_rs_commit }}) - `niimath` {{ context.niimath_version }}: used by `meica --moco` for motion correction - `brainchop-mindgrab`: used by `meica --moco` to mask the BOLD reference. It is the `@brainchop/mindgrab` {{ context.mindgrab_version }} CPU WebAssembly build, run by Node.js {{ context.node_version }} through the neurodesk/webapps node-drivers command line. A run takes about 40 s on 8 cores and about 2.4 GB of memory.",
+            "doi": "10.5281/zenodo.23718767",
+            "doi_url": "https://doi.org/10.5281/zenodo.23718767",
+            "license": "lgpl-2.1"
+        },
+        {
+            "application": "meica-rs_arm64_0.1.20261021_20261027",
+            "categories": [
+                "functional imaging",
+                "quality control"
+            ],
+            "doi": "10.5281/zenodo.23718787",
+            "doi_url": "https://doi.org/10.5281/zenodo.23718787",
+            "license": "lgpl-2.1"
         },
         {
             "application": "metabody_1.0.3_20260902",
@@ -4077,17 +4503,23 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "mne_1.13.2_20261017",
+            "application": "mne_1.13.2_20261024",
             "categories": [
                 "electrophysiology"
             ],
-            "description": "Python MNE environment with VScode"
+            "description": "Python MNE environment with VScode",
+            "doi": "10.5281/zenodo.23724682",
+            "doi_url": "https://doi.org/10.5281/zenodo.23724682",
+            "license": "bsd-3-clause"
         },
         {
-            "application": "mne_arm64_1.13.2_20261017",
+            "application": "mne_arm64_1.13.2_20261024",
             "categories": [
                 "electrophysiology"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630279",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630279",
+            "license": "bsd-3-clause"
         },
         {
             "application": "mneextended_1.1.0_20260727",
@@ -4101,35 +4533,44 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "mneextended_1.2.0_20261017",
+            "application": "mneextended_1.2.0_20261029",
             "categories": [
                 "electrophysiology",
                 "programming"
             ],
             "description": "Python MNE environment with VScode This environment contains MNE Python and some additional tools with dependencies (MNE BIDS Pipeline, MNE-connectivity, MNE-icalabel, Neurokit2)",
-            "doi": "10.5281/zenodo.23444218",
-            "doi_url": "https://doi.org/10.5281/zenodo.23444218",
+            "doi": "10.5281/zenodo.23791780",
+            "doi_url": "https://doi.org/10.5281/zenodo.23791780",
             "license": "bsd-3-clause"
         },
         {
-            "application": "mneextended_arm64_1.2.0_20261017",
+            "application": "mneextended_arm64_1.2.0_20261029",
             "categories": [
                 "electrophysiology",
                 "programming"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23791942",
+            "doi_url": "https://doi.org/10.5281/zenodo.23791942",
+            "license": "bsd-3-clause"
         },
         {
             "application": "modsort_0.0.2_20261012",
             "categories": [
                 "data organisation"
             ],
-            "description": "modsort sorts, identifies and tags MR sequences through a drag-and-drop desktop interface, then copies and renames the files into the structure you choose. It is a graphical tool: there is no batch or command line mode. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Input format modsort is **NIfTI only**. Its drop targets are BraTS-style modality tags -- `_t1.nii.gz`, `_t1c.nii.gz`, `_t2.nii.gz`, `_fla.nii.gz`, plus `swi`, `dwi`, `adc` and `rcbv`. It does not sort DICOM; convert first with `dcm2niix` if that is what you have. ### It writes to your filesystem Sorting means copying and renaming real files into a destination you pick. Point it at a copy before running it over data you cannot regenerate. ### Example"
+            "description": "modsort sorts, identifies and tags MR sequences through a drag-and-drop desktop interface, then copies and renames the files into the structure you choose. It is a graphical tool: there is no batch or command line mode. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Input format modsort is **NIfTI only**. Its drop targets are BraTS-style modality tags -- `_t1.nii.gz`, `_t1c.nii.gz`, `_t2.nii.gz`, `_fla.nii.gz`, plus `swi`, `dwi`, `adc` and `rcbv`. It does not sort DICOM; convert first with `dcm2niix` if that is what you have. ### It writes to your filesystem Sorting means copying and renaming real files into a destination you pick. Point it at a copy before running it over data you cannot regenerate. ### Example",
+            "doi": "10.5281/zenodo.23630408",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630408",
+            "license": "apache2.0"
         },
         {
             "application": "modsort_arm64_0.0.2_20261012",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630229",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630229",
+            "license": "apache2.0"
         },
         {
             "application": "motioncor3_1.2.4_20261012",
@@ -4180,7 +4621,10 @@
                 "structural imaging",
                 "visualization"
             ],
-            "description": "MRIcron is a cross-platform NIfTI image viewer for volume rendering, overlays, and regions of interest. The container also provides dcm2niix for converting DICOM images to NIfTI."
+            "description": "MRIcron is a cross-platform NIfTI image viewer for volume rendering, overlays, and regions of interest. The container also provides dcm2niix for converting DICOM images to NIfTI.",
+            "doi": "10.5281/zenodo.23629891",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629891",
+            "license": "bsd-2-clause-netbsd"
         },
         {
             "application": "mricron_arm64_1.2.20211006_20261013",
@@ -4247,7 +4691,10 @@
             "categories": [
                 "phase processing"
             ],
-            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets. And Susceptibility weighted imaging mritools contains ROMEO, CLEARSWI and MCPC3DS"
+            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets. And Susceptibility weighted imaging mritools contains ROMEO, CLEARSWI and MCPC3DS",
+            "doi": "10.5281/zenodo.23629925",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629925",
+            "license": "mit-license"
         },
         {
             "application": "mritools_4.9.1_20261016",
@@ -4260,13 +4707,19 @@
             "application": "mritools_arm64_4.9.0_20261013",
             "categories": [
                 "phase processing"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630392",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630392",
+            "license": "mit-license"
         },
         {
             "application": "mritools_arm64_4.9.1_20261016",
             "categories": [
                 "phase processing"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629765",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629765",
+            "license": "mit-license"
         },
         {
             "application": "mrsimetabolicconnectome_1.0.0_20260629",
@@ -4376,7 +4829,10 @@
             "categories": [
                 "diffusion imaging"
             ],
-            "description": "MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. It is designed with consistency, performance, and stability in mind, and is freely available under an open-source license. This is the current version, built from source (not a release)."
+            "description": "MRtrix3 provides a set of tools to perform various types of diffusion MRI analyses, from various forms of tractography through to next-generation group-level analyses. It is designed with consistency, performance, and stability in mind, and is freely available under an open-source license. This is the current version, built from source (not a release).",
+            "doi": "10.5281/zenodo.23629921",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629921",
+            "license": "mpl-2.0"
         },
         {
             "application": "mrtrix3tissue_5.2.8_20201111",
@@ -4411,14 +4867,11 @@
             "openrecon": true
         },
         {
-            "application": "musclemap_1.4.0_20260827",
+            "application": "musclemap_1.4.0_20261029",
             "categories": [
                 "body"
             ],
             "description": "An open-source quantitative MRI toolbox for muscle segmentation and analysis. This image packages MuscleMap software {{ context.musclemap_software_version }} from commit {{ context.musclemap_source_revision }}, whole-body model v{{ context.musclemap_model_version }}, regional model v{{ context.musclemap_regional_model_version }}, and the abdomen registration template. All model and template assets are available offline at runtime.",
-            "doi": "10.5281/zenodo.22168696",
-            "doi_url": "https://doi.org/10.5281/zenodo.22168696",
-            "license": "mit-license",
             "openrecon": true
         },
         {
@@ -4440,7 +4893,10 @@
                 "machine learning",
                 "visualization"
             ],
-            "description": "napari is an interactive multi-dimensional image viewer. This container includes: - napari-VoxTell {{ context.napari_voxtell_version }} for free-text-prompted 3D medical image segmentation - napari-nnInteractive {{ context.napari_nninteractive_version }} for point, scribble, box, and lasso-prompted 3D segmentation - {{ context.pytorch_wheel_channel }} PyTorch {{ context.torch_version }} and the nnInteractive {{ context.nninteractive_version }} local backend - napari-nifti for NIfTI image loading Launch napari or open either plugin directly:"
+            "description": "napari is an interactive multi-dimensional image viewer. This container includes: - napari-VoxTell {{ context.napari_voxtell_version }} for free-text-prompted 3D medical image segmentation - napari-nnInteractive {{ context.napari_nninteractive_version }} for point, scribble, box, and lasso-prompted 3D segmentation - {{ context.pytorch_wheel_channel }} PyTorch {{ context.torch_version }} and the nnInteractive {{ context.nninteractive_version }} local backend - napari-nifti for NIfTI image loading Launch napari or open either plugin directly:",
+            "doi": "10.5281/zenodo.23629837",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629837",
+            "license": "bsd-3-clause"
         },
         {
             "application": "napari_arm64_0.9.2_20261013",
@@ -4448,7 +4904,10 @@
                 "image segmentation",
                 "machine learning",
                 "visualization"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629719",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629719",
+            "license": "bsd-3-clause"
         },
         {
             "application": "nesvor_0.5.0_20260722",
@@ -4467,7 +4926,21 @@
                 "data organisation",
                 "image registration"
             ],
-            "description": "This toolbox was used to explore the network correspondence between networks across different atlases."
+            "description": "This toolbox was used to explore the network correspondence between networks across different atlases.",
+            "doi": "10.5281/zenodo.23630662",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630662",
+            "license": "mit-license"
+        },
+        {
+            "application": "networkcorrespondancetoolkit_0.4.1_20261023",
+            "categories": [
+                "data organisation",
+                "image registration"
+            ],
+            "description": "This toolbox was used to explore the network correspondence between networks across different atlases.",
+            "doi": "10.5281/zenodo.23630414",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630414",
+            "license": "mit-license"
         },
         {
             "application": "neurocommand_1.0.0_20261014",
@@ -4484,7 +4957,10 @@
             "categories": [
                 "programming",
                 "workflows"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629767",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629767",
+            "license": "apache2.0"
         },
         {
             "application": "neurodock_1.0.0_20241122",
@@ -4502,14 +4978,20 @@
                 "hippocampus",
                 "programming"
             ],
-            "description": "NFTsim is a neural field simulation framework for large-scale brain dynamics. This container allows users to simulate various neural models including corticothalamic and cortical circuits using configuration files."
+            "description": "NFTsim is a neural field simulation framework for large-scale brain dynamics. This container allows users to simulate various neural models including corticothalamic and cortical circuits using configuration files.",
+            "doi": "10.5281/zenodo.23630197",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630197",
+            "license": "cc-by-4.0"
         },
         {
             "application": "nftsim_arm64_1.0.2_20261019",
             "categories": [
                 "hippocampus",
                 "programming"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630369",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630369",
+            "license": "cc-by-4.0"
         },
         {
             "application": "nibabies_24.0.0_20260122",
@@ -4652,7 +5134,10 @@
             "application": "niimath_arm64_1.0.20261016_20261018",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629750",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629750",
+            "license": "bsd-2-clause-netbsd"
         },
         {
             "application": "niistat_1.0.20191216_20260629",
@@ -4669,7 +5154,10 @@
             "categories": [
                 "workflows"
             ],
-            "description": "Python environment with VScode and singularity to run Nipype workflows Setup:"
+            "description": "Python environment with VScode and singularity to run Nipype workflows Setup:",
+            "doi": "10.5281/zenodo.23630320",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630320",
+            "license": "apache2.0"
         },
         {
             "application": "nipype_1.8.3_20220825",
@@ -4726,13 +5214,19 @@
             "categories": [
                 "image segmentation"
             ],
-            "description": "OpenADS is an end-to-end medical imaging pipeline for stroke analysis, covering preprocessing, registration, segmentation, and report generation for DWI and PWI workflows. This is the CPU version of the neurocontainer."
+            "description": "OpenADS is an end-to-end medical imaging pipeline for stroke analysis, covering preprocessing, registration, segmentation, and report generation for DWI and PWI workflows. This is the CPU version of the neurocontainer.",
+            "doi": "10.5281/zenodo.23630481",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630481",
+            "license": "other-open"
         },
         {
             "application": "openadscpu_arm64_1.0.0_20261014",
             "categories": [
                 "image segmentation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629819",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629819",
+            "license": "other-open"
         },
         {
             "application": "openmsk_0.1.11_20260902",
@@ -4744,7 +5238,7 @@
             "openrecon": true
         },
         {
-            "application": "openmsk_0.2.0_20261015",
+            "application": "openmsk_0.2.0_20261024",
             "categories": [
                 "image segmentation",
                 "quantitative imaging"
@@ -4760,6 +5254,13 @@
             "doi": "10.5281/zenodo.22851460",
             "doi_url": "https://doi.org/10.5281/zenodo.22851460",
             "license": "other-at"
+        },
+        {
+            "application": "openreconexample_1.0.0_20261024",
+            "categories": [
+                "image reconstruction"
+            ],
+            "openrecon": true
         },
         {
             "application": "openreconi2iexample_1.0.89_20261002",
@@ -4842,14 +5343,11 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "palmettobug_0.2.11_20260911",
+            "application": "palmettobug_0.2.11_20261024",
             "categories": [
                 "molecular biology"
             ],
-            "description": "HARMONI is a pure-python GUI in customtinker that, along with its sister package isoSegDenoise, can preprocess, segment, and analyze high-dimensional image or flow cytometry data, especially mass cytometry / imaging mass cytometry data",
-            "doi": "10.5281/zenodo.22731064",
-            "doi_url": "https://doi.org/10.5281/zenodo.22731064",
-            "license": "cc-by-4.0"
+            "description": "HARMONI is a pure-python GUI in customtinker that, along with its sister package isoSegDenoise, can preprocess, segment, and analyze high-dimensional image or flow cytometry data, especially mass cytometry / imaging mass cytometry data"
         },
         {
             "application": "pals_2.0.1_20261014",
@@ -4890,7 +5388,10 @@
             "categories": [
                 "image segmentation",
                 "quality control"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629815",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629815",
+            "license": "apache2.0"
         },
         {
             "application": "pcntoolkit_0.35_20250628",
@@ -4903,14 +5404,27 @@
             "license": "gpl-3.0"
         },
         {
-            "application": "pcntoolkit_1.3.0_20261012",
+            "application": "pcntoolkit_1.3.0_20261024",
             "categories": [
                 "statistics"
             ],
             "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands."
         },
         {
-            "application": "pcntoolkit_arm64_1.3.0_20261012",
+            "application": "pcntoolkit_1.4.0_20261029",
+            "categories": [
+                "statistics"
+            ],
+            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands."
+        },
+        {
+            "application": "pcntoolkit_arm64_1.3.0_20261024",
+            "categories": [
+                "statistics"
+            ]
+        },
+        {
+            "application": "pcntoolkit_arm64_1.4.0_20261029",
             "categories": [
                 "statistics"
             ]
@@ -4935,15 +5449,26 @@
             "license": "apache2.0"
         },
         {
-            "application": "petu_0.0.7_20260822",
+            "application": "petu_0.0.7_20261024",
             "categories": [
                 "image segmentation",
                 "machine learning",
                 "structural imaging"
             ],
             "description": "PeTu segments paediatric brain tumours into enhancing tumour (ET), cystic component (CC) and T2-hyperintense (T2H) regions from multi-parametric MRI. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Input requirements Inputs must already be co-registered and resampled to the BraTS/SRI24 atlas grid: **exactly 240x240x155 at 1 mm**. PeTu asserts this and rejects anything else with \"Invalid shape for input data\". Ordinary preprocessed images, including MNI152 1 mm at 182x218x182, are refused. Use brainles-preprocessing to produce conforming images. Upstream recommends retaining the skull and avoiding defacing to preserve optic-nerve anatomy; skull-stripped inputs are a separate runtime example, not validation of paediatric diagnostic accuracy. ### Example",
-            "doi": "10.5281/zenodo.22731015",
-            "doi_url": "https://doi.org/10.5281/zenodo.22731015",
+            "doi": "10.5281/zenodo.23752957",
+            "doi_url": "https://doi.org/10.5281/zenodo.23752957",
+            "license": "apache2.0"
+        },
+        {
+            "application": "petu_arm64_0.0.7_20261024",
+            "categories": [
+                "image segmentation",
+                "machine learning",
+                "structural imaging"
+            ],
+            "doi": "10.5281/zenodo.23754671",
+            "doi_url": "https://doi.org/10.5281/zenodo.23754671",
             "license": "apache2.0"
         },
         {
@@ -4957,15 +5482,12 @@
             "license": "gpl-3.0"
         },
         {
-            "application": "prequal_1.1.0_20260604",
+            "application": "prequal_1.1.0_20261024",
             "categories": [
                 "diffusion imaging",
                 "quality control"
             ],
-            "description": "PreQual is an automated quality assurance pipeline for diffusion weighted MRI. It provides integrated preprocessing and quality control for DWI data, including distortion correction, motion correction, denoising, tensor-derived metrics, and PDF quality reports.",
-            "doi": "10.5281/zenodo.20685822",
-            "doi_url": "https://doi.org/10.5281/zenodo.20685822",
-            "license": "other-open"
+            "description": "PreQual is an automated quality assurance pipeline for diffusion weighted MRI. It provides integrated preprocessing and quality control for DWI data, including distortion correction, motion correction, denoising, tensor-derived metrics, and PDF quality reports."
         },
         {
             "application": "prostatefiducialseg_8.0.1_20261020",
@@ -4973,6 +5495,9 @@
                 "body",
                 "image segmentation"
             ],
+            "doi": "10.5281/zenodo.23630000",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630000",
+            "license": "cc-by-4.0",
             "openrecon": true
         },
         {
@@ -4981,14 +5506,20 @@
                 "body",
                 "image segmentation"
             ],
+            "doi": "10.5281/zenodo.23629727",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629727",
+            "license": "cc-by-4.0",
             "openrecon": true
         },
         {
-            "application": "prostatefiducialseg_8.0.3_20261021",
+            "application": "prostatefiducialseg_8.0.3_20261023",
             "categories": [
                 "body",
                 "image segmentation"
             ],
+            "doi": "10.5281/zenodo.23630396",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630396",
+            "license": "cc-by-4.0",
             "openrecon": true
         },
         {
@@ -5006,13 +5537,19 @@
             "categories": [
                 "image segmentation"
             ],
-            "description": "pydeface is defacing utility for MRI images"
+            "description": "pydeface is defacing utility for MRI images",
+            "doi": "10.5281/zenodo.23629722",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629722",
+            "license": "mit-license"
         },
         {
             "application": "pydeface_arm64_2.1.0_20261019",
             "categories": [
                 "image segmentation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629843",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629843",
+            "license": "mit-license"
         },
         {
             "application": "pyem_0.69.0_20261004",
@@ -5037,7 +5574,10 @@
                 "image reconstruction",
                 "quantitative imaging"
             ],
-            "description": "qMRLab is an open-source software for quantitative MR image analysis. Our main goal is to provide the community with an intuitive tool for data fitting, plotting, simulation and protocol optimization for a myriad of different quantitative models. The modularity of the qMRLab framework makes it easy to add any additional modules and we encourage everyone to contribute their favorite recipe for qMR! For documentation, visit http://qmrlab.readthedocs.io/ If you are a developer please visit https://github.com/neuropoly/qMRLab/wiki Please report any bug or suggestions in https://github.com/neuropoly/qMRLab/issues For interactive tutorials blog posts and more, you can visit https://qmrlab.org qMRLab is a fork from the initial project https://github.com/neuropoly/qMTLab Citation: * [Karakuzu et al. *qMRLab: Quantitative MRI analysis, under one umbrella.* Journal of Open Source Software (JOSS) 2020](https://joss.theoj.org/papers/10.21105/joss.02343) * [Karakuzu et al. *The qMRLab workflow: From acquisition to publication.* ISMRM 2019](https://www.ismrm.org/19/program_files/DP23.htm#005) * [Duval et al. *Quantitative MRI made easy with qMRLab.* ISMRM 2018](http://archive.ismrm.org/2018/2288.html) * [Cabana et al. *Quantitative magnetization transfer imaging made easy with qMTLab: Software for data simulation, analysis, and visualization.* Concepts in Magnetic Resonance 2015](https://onlinelibrary.wiley.com/doi/abs/10.1002/cmr.a.21357) License: MIT License"
+            "description": "qMRLab is an open-source software for quantitative MR image analysis. Our main goal is to provide the community with an intuitive tool for data fitting, plotting, simulation and protocol optimization for a myriad of different quantitative models. The modularity of the qMRLab framework makes it easy to add any additional modules and we encourage everyone to contribute their favorite recipe for qMR! For documentation, visit http://qmrlab.readthedocs.io/ If you are a developer please visit https://github.com/neuropoly/qMRLab/wiki Please report any bug or suggestions in https://github.com/neuropoly/qMRLab/issues For interactive tutorials blog posts and more, you can visit https://qmrlab.org qMRLab is a fork from the initial project https://github.com/neuropoly/qMTLab Citation: * [Karakuzu et al. *qMRLab: Quantitative MRI analysis, under one umbrella.* Journal of Open Source Software (JOSS) 2020](https://joss.theoj.org/papers/10.21105/joss.02343) * [Karakuzu et al. *The qMRLab workflow: From acquisition to publication.* ISMRM 2019](https://www.ismrm.org/19/program_files/DP23.htm#005) * [Duval et al. *Quantitative MRI made easy with qMRLab.* ISMRM 2018](http://archive.ismrm.org/2018/2288.html) * [Cabana et al. *Quantitative magnetization transfer imaging made easy with qMTLab: Software for data simulation, analysis, and visualization.* Concepts in Magnetic Resonance 2015](https://onlinelibrary.wiley.com/doi/abs/10.1002/cmr.a.21357) License: MIT License",
+            "doi": "10.5281/zenodo.23630231",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630231",
+            "license": "mit-license"
         },
         {
             "application": "qmrlab_arm64_3.0.0_20261013",
@@ -5074,7 +5614,10 @@
             "categories": [
                 "diffusion imaging"
             ],
-            "description": "qsiprep configures pipelines for processing diffusion-weighted MRI (dMRI) data. The main features of this software are - A BIDS-app approach to preprocessing nearly all kinds of modern diffusion MRI data. - Automatically generated preprocessing pipelines that correctly group, distortion correct, motion correct, denoise, coregister and resample your scans, producing visual reports and QC metrics. - A system for running state-of-the-art reconstruction pipelines that include algorithms from Dipy, MRTrix, DSI Studio and others. - A novel motion correction algorithm that works on DSI and random q-space sampling schemes"
+            "description": "qsiprep configures pipelines for processing diffusion-weighted MRI (dMRI) data. The main features of this software are - A BIDS-app approach to preprocessing nearly all kinds of modern diffusion MRI data. - Automatically generated preprocessing pipelines that correctly group, distortion correct, motion correct, denoise, coregister and resample your scans, producing visual reports and QC metrics. - A system for running state-of-the-art reconstruction pipelines that include algorithms from Dipy, MRTrix, DSI Studio and others. - A novel motion correction algorithm that works on DSI and random q-space sampling schemes",
+            "doi": "10.5281/zenodo.23630566",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630566",
+            "license": "bsd-3-clause"
         },
         {
             "application": "qsiprep_26.1.0_20261015",
@@ -5105,7 +5648,10 @@
             "categories": [
                 "diffusion imaging"
             ],
-            "description": "QSIRecon builds post-processing workflows that produce many of the biologically-interesting dMRI derivatives used for hypothesis testing. The main goal of QSIRecon is to make the state-of-the-art methods available in Dipy, MRTrix, DSI Studio, PyAFQ and other software packages easy to apply on preprocessed dMRI data. QSIRecon is companion software for XCP-D, doing for dMRI what XCP-D does for BOLD."
+            "description": "QSIRecon builds post-processing workflows that produce many of the biologically-interesting dMRI derivatives used for hypothesis testing. The main goal of QSIRecon is to make the state-of-the-art methods available in Dipy, MRTrix, DSI Studio, PyAFQ and other software packages easy to apply on preprocessed dMRI data. QSIRecon is companion software for XCP-D, doing for dMRI what XCP-D does for BOLD.",
+            "doi": "10.5281/zenodo.23629889",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629889",
+            "license": "bsd-3-clause"
         },
         {
             "application": "qsmbly_0.11.0_20260506",
@@ -5120,7 +5666,10 @@
             "application": "qsmbly_0.29.0_20261014",
             "categories": [
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630289",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630289",
+            "license": "mit-license"
         },
         {
             "application": "qsmbly_0.3.0_20260211",
@@ -5153,10 +5702,13 @@
             "application": "qsmbly_arm64_0.29.0_20261014",
             "categories": [
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629759",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629759",
+            "license": "mit-license"
         },
         {
-            "application": "qsmxt_10.0.0_20261021",
+            "application": "qsmxt_10.0.0_20261023",
             "categories": [
                 "image reconstruction",
                 "phase processing",
@@ -5165,6 +5717,9 @@
                 "workflows"
             ],
             "description": "QSMxT is an end-to-end software toolbox for Quantitative Susceptibility Mapping (QSM). This container packages upstream QSMxT {{ context.upstream_version }}. QSMxT is implemented in Rust as a single self-contained binary that reconstructs QSM from BIDS datasets, converts DICOMs to BIDS, and includes an interactive TUI. A pinned dcm2niix is bundled.",
+            "doi": "10.5281/zenodo.23630761",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630761",
+            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -5477,6 +6032,9 @@
                 "workflows"
             ],
             "description": "QSMxT is an end-to-end software toolbox for Quantitative Susceptibility Mapping (QSM). This container packages upstream QSMxT {{ context.upstream_version }}. QSMxT is implemented in Rust as a single self-contained binary that reconstructs QSM from BIDS datasets, converts DICOMs to BIDS, and includes an interactive TUI. A pinned dcm2niix is bundled.",
+            "doi": "10.5281/zenodo.23630243",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630243",
+            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -5501,7 +6059,10 @@
                 "quantitative imaging",
                 "visualization",
                 "workflows"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629861",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629861",
+            "license": "apache2.0"
         },
         {
             "application": "quickshear_1.1.0_20240606",
@@ -5524,7 +6085,10 @@
             "application": "quickshear_arm64_1.2.0_20261012",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630308",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630308",
+            "license": "bsd-3-clause"
         },
         {
             "application": "qupath_0.6.0_20250805",
@@ -5553,7 +6117,10 @@
                 "data organisation",
                 "image segmentation",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630247",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630247",
+            "license": "gpl-3.0"
         },
         {
             "application": "rabies_0.3.5_20220111",
@@ -5583,6 +6150,13 @@
             "description": "RABIES (Rodent Automated Bold Improvement of EPI Sequences) is an open source image processing pipeline for rodent fMRI. It conducts state-of-the-art preprocessing and confound correction, and supplies standard resting-state functional connectivity analyses. **Key Features:** - Robust registration workflow with automatically-adapting parameters - Head motion correction and susceptibility distortion correction - Brain parcellation and resampling to native or common space - Confound regression with multiple nuisance regressor options - ICA-AROMA denoising and frame censoring - Seed-based and whole-brain connectivity analyses - Comprehensive data quality assessment tools **Main Processing Stages:** 1. **Preprocessing**: Motion correction, distortion correction, registration, parcellation 2. **Confound Correction**: Detrending, regression, filtering, smoothing 3. **Analysis**: Connectivity analysis, group-ICA, dual regression, data diagnosis **Examples:**"
         },
         {
+            "application": "rabies_0.6.3_20261029",
+            "categories": [
+                "rodent imaging"
+            ],
+            "description": "RABIES (Rodent Automated Bold Improvement of EPI Sequences) is an open source image processing pipeline for rodent fMRI. It conducts state-of-the-art preprocessing and confound correction, and supplies standard resting-state functional connectivity analyses. **Key Features:** - Robust registration workflow with automatically-adapting parameters - Head motion correction and susceptibility distortion correction - Brain parcellation and resampling to native or common space - Confound regression with multiple nuisance regressor options - ICA-AROMA denoising and frame censoring - Seed-based and whole-brain connectivity analyses - Comprehensive data quality assessment tools **Main Processing Stages:** 1. **Preprocessing**: Motion correction, distortion correction, registration, parcellation 2. **Confound Correction**: Detrending, regression, filtering, smoothing 3. **Analysis**: Connectivity analysis, group-ICA, dual regression, data diagnosis **Examples:**"
+        },
+        {
             "application": "radtract_0.2.3_20260203",
             "categories": [
                 "diffusion imaging"
@@ -5597,7 +6171,10 @@
             "categories": [
                 "diffusion imaging"
             ],
-            "description": "RadTract is a python implementation of radiomic tractometry or \"Tractomics\". It is designed for tract-specific microstructural analysis of the brain's white matter using diffusion MRI. It enhances traditional tractometry, which often misses valuable information due to its reliance on bare summary statistics and scalar values. RadTract incorporates radiomics, a method that analyzes a multitude of quantitative image features beyond visual perception, into tractometry. This integration allows for improved predictive modeling while maintaining the localization capability of tractometry."
+            "description": "RadTract is a python implementation of radiomic tractometry or \"Tractomics\". It is designed for tract-specific microstructural analysis of the brain's white matter using diffusion MRI. It enhances traditional tractometry, which often misses valuable information due to its reliance on bare summary statistics and scalar values. RadTract incorporates radiomics, a method that analyzes a multitude of quantitative image features beyond visual perception, into tractometry. This integration allows for improved predictive modeling while maintaining the localization capability of tractometry.",
+            "doi": "10.5281/zenodo.23630141",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630141",
+            "license": "apache2.0"
         },
         {
             "application": "radtract_arm64_0.2.4_20261013",
@@ -5658,7 +6235,7 @@
             "license": "gpl-2.0"
         },
         {
-            "application": "relion_5.1.1_20261018",
+            "application": "relion_5.1.1_20261028",
             "categories": [
                 "cryo EM"
             ],
@@ -5689,26 +6266,38 @@
             "categories": [
                 "phase processing"
             ],
-            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets."
+            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets.",
+            "doi": "10.5281/zenodo.23630287",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630287",
+            "license": "mit-license"
         },
         {
             "application": "romeo_4.9.1_20261019",
             "categories": [
                 "phase processing"
             ],
-            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets."
+            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets.",
+            "doi": "10.5281/zenodo.23630295",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630295",
+            "license": "mit-license"
         },
         {
             "application": "romeo_arm64_4.9.0_20261013",
             "categories": [
                 "phase processing"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630041",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630041",
+            "license": "mit-license"
         },
         {
             "application": "romeo_arm64_4.9.1_20261019",
             "categories": [
                 "phase processing"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629809",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629809",
+            "license": "mit-license"
         },
         {
             "application": "root_6.22.02_20201104",
@@ -5725,7 +6314,10 @@
             "categories": [
                 "programming"
             ],
-            "description": "ROOT is a powerful software framework, an open source project coordinated by the European Organisation for Nuclear Research, CERN in Geneva. ROOT is very flexible and provides both a programming interface to use in own applications and a graphical user interface for interactive data analysis. ROOT leads a double life. It has an interpreter for macros (Cling) that you can run from the command line or run like applications. But it is also an interactive shell that can evaluate arbitrary statements and expressions. This is extremely useful for debugging, quick hacking and testing. Let us first have a look at some very simple examples. start the root shell with the command 'root', try things like 'TMath::Pi()' or plotting a function"
+            "description": "ROOT is a powerful software framework, an open source project coordinated by the European Organisation for Nuclear Research, CERN in Geneva. ROOT is very flexible and provides both a programming interface to use in own applications and a graphical user interface for interactive data analysis. ROOT leads a double life. It has an interpreter for macros (Cling) that you can run from the command line or run like applications. But it is also an interactive shell that can evaluate arbitrary statements and expressions. This is extremely useful for debugging, quick hacking and testing. Let us first have a look at some very simple examples. start the root shell with the command 'root', try things like 'TMath::Pi()' or plotting a function",
+            "doi": "10.5281/zenodo.23630330",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630330",
+            "license": "lgpl-2.1-or-later"
         },
         {
             "application": "root_arm64_6.24.06_20261013",
@@ -5742,10 +6334,34 @@
                 "bids apps",
                 "functional imaging"
             ],
-            "description": "rsHRF is a toolbox for resting-state HRF estimation and deconvolution from BOLD-fMRI data. It can be used on standalone text or imaging inputs, and also supports BIDS-style inputs through its `--bids_dir` interface."
+            "description": "rsHRF is a toolbox for resting-state HRF estimation and deconvolution from BOLD-fMRI data. It can be used on standalone text or imaging inputs, and also supports BIDS-style inputs through its `--bids_dir` interface.",
+            "doi": "10.5281/zenodo.23630382",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630382",
+            "license": "mit-license"
+        },
+        {
+            "application": "rshrf_1.8.0_20261023",
+            "categories": [
+                "bids apps",
+                "functional imaging"
+            ],
+            "description": "rsHRF is a toolbox for resting-state HRF estimation and deconvolution from BOLD-fMRI data. It can be used on standalone text or imaging inputs, and also supports BIDS-style inputs through its `--bids_dir` interface.",
+            "doi": "10.5281/zenodo.23629994",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629994",
+            "license": "mit-license"
         },
         {
             "application": "rshrf_arm64_1.7.0_20261013",
+            "categories": [
+                "bids apps",
+                "functional imaging"
+            ],
+            "doi": "10.5281/zenodo.23629849",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629849",
+            "license": "mit-license"
+        },
+        {
+            "application": "rshrf_arm64_1.8.0_20261023",
             "categories": [
                 "bids apps",
                 "functional imaging"
@@ -5796,7 +6412,10 @@
             "categories": [
                 "statistics"
             ],
-            "description": "RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. This container includes both RStudio Desktop (GUI) and RStudio Server (web-based)."
+            "description": "RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. This container includes both RStudio Desktop (GUI) and RStudio Server (web-based).",
+            "doi": "10.5281/zenodo.23629873",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629873",
+            "license": "apgl-v3"
         },
         {
             "application": "rstudio_2026.10.0_20261015",
@@ -5824,7 +6443,10 @@
                 "rodent imaging",
                 "workflows"
             ],
-            "description": "SAMRI (Small Animal Magnetic Resonance Imaging) provides fMRI preprocessing, Bruker ParaVision metadata parsing, BIDS conversion, and analysis workflows for small rodent MRI data. This container includes SAMRI, FSL, ANTs, Bru2Nii, Blender, and the Python packages listed by upstream SAMRI for the 0.5 workflow generation. Example datasets and atlas releases are not bundled."
+            "description": "SAMRI (Small Animal Magnetic Resonance Imaging) provides fMRI preprocessing, Bruker ParaVision metadata parsing, BIDS conversion, and analysis workflows for small rodent MRI data. This container includes SAMRI, FSL, ANTs, Bru2Nii, Blender, and the Python packages listed by upstream SAMRI for the 0.5 workflow generation. Example datasets and atlas releases are not bundled.",
+            "doi": "10.5281/zenodo.23630019",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630019",
+            "license": "gpl-3.0-or-later"
         },
         {
             "application": "samsrfx_v10.004_20241127",
@@ -5858,7 +6480,7 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "shim-toolbox_1.5.0_20261009",
+            "application": "shim-toolbox_1.5.0_20261025",
             "categories": [
                 "image reconstruction",
                 "phase processing",
@@ -5867,20 +6489,17 @@
             "openrecon": true
         },
         {
-            "application": "sigviewer_0.6.4_20261013",
+            "application": "sigviewer_0.6.4_20261024",
             "categories": [
                 "electrophysiology"
             ],
             "description": "SigViewer is a viewing application for biosignals such as EEG or MEG time series. In addition to viewing raw data, SigViewer can also create, edit, and display event information (such as annotations or artifact selections)."
         },
         {
-            "application": "sigviewer_arm64_0.6.4_20261013",
+            "application": "sigviewer_arm64_0.6.4_20261024",
             "categories": [
                 "electrophysiology"
-            ],
-            "doi": "10.5281/zenodo.23444165",
-            "doi_url": "https://doi.org/10.5281/zenodo.23444165",
-            "license": "gpl-3.0"
+            ]
         },
         {
             "application": "skan_0.13.1_20261004",
@@ -5949,7 +6568,10 @@
                 "image segmentation",
                 "visualization"
             ],
-            "description": "3D Slicer is a software application for visualization and analysis of medical image computing data sets. Supports images, segmentations, surfaces, annotations, transformations in 2D, 3D, and 4D."
+            "description": "3D Slicer is a software application for visualization and analysis of medical image computing data sets. Supports images, segmentations, surfaces, annotations, transformations in 2D, 3D, and 4D.",
+            "doi": "10.5281/zenodo.23630090",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630090",
+            "license": "cc-by-4.0"
         },
         {
             "application": "slicer_5.12.4_20261010",
@@ -5976,17 +6598,33 @@
                 "quantitative imaging",
                 "structural imaging"
             ],
-            "description": "This project will develop a comprehensive software that will allow biomedical scientists to precisely locate shape changes in their imaging studies. This software called Shape AnaLysis Toolbox (SALT), will enhance the intuitiveness and ease of use for such studies, as well as allow researchers to find shape changes with higher statistical power. Altogether this constitutes a crucial resource for the imaging field that will enable many and important new findings in biomedical imaging studies."
+            "description": "This project will develop a comprehensive software that will allow biomedical scientists to precisely locate shape changes in their imaging studies. This software called Shape AnaLysis Toolbox (SALT), will enhance the intuitiveness and ease of use for such studies, as well as allow researchers to find shape changes with higher statistical power. Altogether this constitutes a crucial resource for the imaging field that will enable many and important new findings in biomedical imaging studies.",
+            "doi": "10.5281/zenodo.23630058",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630058",
+            "license": "cc-by-4.0"
         },
         {
-            "application": "sodiumgriddingptpi_0.1.10_20260803",
+            "application": "sodiumgridding_0.1.6_20261024",
+            "categories": [
+                "image reconstruction"
+            ],
+            "description": "This container runs a 3D sodium Kaiser-Bessel gridding reconstruction for OpenRecon. It includes variance-based coil compression, adaptive or sum-of-squares coil combination, and optional N4 bias correction. Build the recipe with:",
+            "openrecon": true
+        },
+        {
+            "application": "sodiumgriddingptpi_0.1.10_20261024",
             "categories": [
                 "image reconstruction"
             ],
             "description": "This container runs a multi-echo palindromic TPI Kaiser-Bessel gridding reconstruction for OpenRecon. It includes variance-based coil compression, TE1/TE2 field-map estimation, low-rank phase correction, adaptive or sum-of-squares coil combination, optional N4 bias correction, and temporal SVD denoising of the final echo volumes. Build the recipe with:",
-            "doi": "10.5281/zenodo.22431002",
-            "doi_url": "https://doi.org/10.5281/zenodo.22431002",
-            "license": "mit-license",
+            "openrecon": true
+        },
+        {
+            "application": "sodiumnufft_0.1.10_20261024",
+            "categories": [
+                "image reconstruction"
+            ],
+            "description": "This container runs a sodium NUFFT reconstruction for OpenRecon using `sigpy` and the python-ismrmrd-server. Build the recipe with:",
             "openrecon": true
         },
         {
@@ -6016,14 +6654,20 @@
                 "bids apps",
                 "electrophysiology"
             ],
-            "description": "Python sovabids environment with VScode This environment contains sovabids, a package for eeg to bids conversion."
+            "description": "Python sovabids environment with VScode This environment contains sovabids, a package for eeg to bids conversion.",
+            "doi": "10.5281/zenodo.23630259",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630259",
+            "license": "cc-by-4.0"
         },
         {
             "application": "sovabids_arm64_0.4.7_20261013",
             "categories": [
                 "bids apps",
                 "electrophysiology"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630125",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630125",
+            "license": "cc-by-4.0"
         },
         {
             "application": "spant_3.7.0_20260319",
@@ -6228,7 +6872,10 @@
                 "functional imaging",
                 "structural imaging"
             ],
-            "description": "Statistical Parametric Mapping refers to the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called SPM. The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of fMRI, PET, SPECT, EEG and MEG."
+            "description": "Statistical Parametric Mapping refers to the construction and assessment of spatially extended statistical processes used to test hypotheses about functional imaging data. These ideas have been instantiated in a free and open source software that is called SPM. The SPM software package has been designed for the analysis of brain imaging data sequences. The sequences can be a series of images from different cohorts, or time-series from the same subject. The current release is designed for the analysis of fMRI, PET, SPECT, EEG and MEG.",
+            "doi": "10.5281/zenodo.23630189",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630189",
+            "license": "gpl-2.0-or-later"
         },
         {
             "application": "spmpython_25.1.2.post2_20261010",
@@ -6272,23 +6919,13 @@
             "license": "apache2.0"
         },
         {
-            "application": "surfice_1.0.20210730_20211218",
+            "application": "surfice_1.0.20211006_20261027",
             "categories": [
                 "visualization"
             ],
             "description": "Surf Ice, a simple tool for visualizing connectome networks, tractography and statistical maps on top of anatomical brain images. It is closely related to MRIcroGL, but where MRIcroGL is a volume renderer; Surf Ice is a surface renderer",
-            "doi": "10.5281/zenodo.18931342",
-            "doi_url": "https://doi.org/10.5281/zenodo.18931342",
-            "license": "bsd-2-clause-netbsd"
-        },
-        {
-            "application": "surfice_1.0.20211006_20261011",
-            "categories": [
-                "visualization"
-            ],
-            "description": "Surf Ice, a simple tool for visualizing connectome networks, tractography and statistical maps on top of anatomical brain images. It is closely related to MRIcroGL, but where MRIcroGL is a volume renderer; Surf Ice is a surface renderer",
-            "doi": "10.5281/zenodo.23444326",
-            "doi_url": "https://doi.org/10.5281/zenodo.23444326",
+            "doi": "10.5281/zenodo.23718805",
+            "doi_url": "https://doi.org/10.5281/zenodo.23718805",
             "license": "bsd-2-clause-netbsd"
         },
         {
@@ -6318,16 +6955,22 @@
             "categories": [
                 "structural imaging"
             ],
-            "description": "syncro is a spatial normalization toolkit based on ANTS, SynthSR and SynthStrip. It supports normalising brains with lesions."
+            "description": "syncro is a spatial normalization toolkit based on ANTS, SynthSR and SynthStrip. It supports normalising brains with lesions.",
+            "doi": "10.5281/zenodo.23629755",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629755",
+            "license": "bsd-2-clause-netbsd"
         },
         {
             "application": "syncro_arm64_0.2.0_20261014",
             "categories": [
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630127",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630127",
+            "license": "bsd-2-clause-netbsd"
         },
         {
-            "application": "synthseg_8.2.0_20261016",
+            "application": "synthseg_8.2.0_20261025",
             "categories": [
                 "image segmentation",
                 "machine learning",
@@ -6396,7 +7039,10 @@
             "application": "template_arm64_1.1.5_20261013",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629747",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629747",
+            "license": "mit-license"
         },
         {
             "application": "terastitcher_1.11.10_20261013",
@@ -6409,7 +7055,10 @@
             "application": "terastitcher_arm64_1.11.10_20261013",
             "categories": [
                 "visualization"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630123",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630123",
+            "license": "cc-by-4.0"
         },
         {
             "application": "tgvqsm_1.0.0_20260601",
@@ -6439,14 +7088,20 @@
                 "cryo EM",
                 "machine learning"
             ],
-            "description": "A pipeline for particle detection in cryo-electron microscopy images using convolutional neural networks trained from positive and unlabeled examples. Topaz also includes methods for micrograph and tomogram denoising using deep denoising models."
+            "description": "A pipeline for particle detection in cryo-electron microscopy images using convolutional neural networks trained from positive and unlabeled examples. Topaz also includes methods for micrograph and tomogram denoising using deep denoising models.",
+            "doi": "10.5281/zenodo.23630096",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630096",
+            "license": "cc-by-4.0"
         },
         {
             "application": "topaz_arm64_0.3.20_20261012",
             "categories": [
                 "cryo EM",
                 "machine learning"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629725",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629725",
+            "license": "cc-by-4.0"
         },
         {
             "application": "topofit_0.2_20260902",
@@ -6521,6 +7176,9 @@
                 "structural imaging"
             ],
             "description": "This container packages BrainNet TopoFit {{ context.brainnet_version }} for fast cortical surface reconstruction. It predicts bilateral white and pial surfaces plus spherical registration without running a full FreeSurfer `recon-all` workflow. Run it on a NIfTI MPRAGE:",
+            "doi": "10.5281/zenodo.23630251",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630251",
+            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -6528,7 +7186,10 @@
             "categories": [
                 "image segmentation"
             ],
-            "description": "Tool for segmentation of most major anatomical structures in any CT or MR image. It was trained on a wide range of different CT and MR images (different scanners, institutions, protocols,...) and therefore works well on most images. A large part of the training dataset can be downloaded here: CT dataset (1228 subjects) and MR dataset (616 subjects). You can also try the tool online at totalsegmentator.com or as 3D Slicer extension."
+            "description": "Tool for segmentation of most major anatomical structures in any CT or MR image. It was trained on a wide range of different CT and MR images (different scanners, institutions, protocols,...) and therefore works well on most images. A large part of the training dataset can be downloaded here: CT dataset (1228 subjects) and MR dataset (616 subjects). You can also try the tool online at totalsegmentator.com or as 3D Slicer extension.",
+            "doi": "10.5281/zenodo.23630164",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630164",
+            "license": "apache2.0"
         },
         {
             "application": "totalsegmentator_2.5.0_20260323",
@@ -6544,7 +7205,10 @@
             "application": "totalsegmentator_arm64_2.18.0_20261012",
             "categories": [
                 "image segmentation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629934",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629934",
+            "license": "apache2.0"
         },
         {
             "application": "trackvis_0.6.1_20260821",
@@ -6577,7 +7241,10 @@
             "application": "tractseg_arm64_2.10.0_20261016",
             "categories": [
                 "diffusion imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629929",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629929",
+            "license": "apache2.0"
         },
         {
             "application": "vertexwiser_1.5.1_20261013",
@@ -6585,7 +7252,10 @@
                 "structural imaging",
                 "workflows"
             ],
-            "description": "VertexWiseR is an R package for extracting, manipulating, analysing, and visualising cortical surface and hippocampal vertex-wise data."
+            "description": "VertexWiseR is an R package for extracting, manipulating, analysing, and visualising cortical surface and hippocampal vertex-wise data.",
+            "doi": "10.5281/zenodo.23630439",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630439",
+            "license": "gpl-3.0"
         },
         {
             "application": "vertexwiser_1.5.4_20261014",
@@ -6601,14 +7271,20 @@
                 "structural imaging",
                 "workflows"
             ],
-            "description": "VertexWiseR is an R package for extracting, manipulating, analysing, and visualising cortical surface and hippocampal vertex-wise data."
+            "description": "VertexWiseR is an R package for extracting, manipulating, analysing, and visualising cortical surface and hippocampal vertex-wise data.",
+            "doi": "10.5281/zenodo.23629741",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629741",
+            "license": "gpl-3.0"
         },
         {
             "application": "vertexwiser_arm64_1.5.1_20261013",
             "categories": [
                 "structural imaging",
                 "workflows"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23629713",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629713",
+            "license": "gpl-3.0"
         },
         {
             "application": "vertexwiser_arm64_1.5.4_20261014",
@@ -6655,6 +7331,9 @@
                 "image segmentation"
             ],
             "description": "This container provides VesselBoost {{ context.vesselboost_source_version }} from the latest `{{ context.vesselboost_branch }}` branch.",
+            "doi": "10.5281/zenodo.23629739",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629739",
+            "license": "mit-license",
             "openrecon": true
         },
         {
@@ -6680,7 +7359,7 @@
             "openrecon": true
         },
         {
-            "application": "vesselboost_2.0.5_20261019",
+            "application": "vesselboost_2.0.5_20261024",
             "categories": [
                 "image segmentation"
             ],
@@ -6776,7 +7455,10 @@
                 "shape analysis",
                 "visualization"
             ],
-            "description": "The Vascular Modeling Toolkit is a collection of libraries and tools for 3D reconstruction, geometric analysis, mesh generation, and surface data analysis for image-based modeling of blood vessels. VMTK can be used through its command line tools, as Python/C++ libraries, or as part of 3D Slicer workflows. This container builds upstream VMTK {{ context.version }} from source with its individual command launchers and TetGen support. The locked conda-forge development environment supplies VTK {{ context.vtk_version }}, ITK {{ context.itk_version }}, and Python {{ context.python_version }}. Homepage: http://www.vmtk.org/ Documentation: http://www.vmtk.org/documentation/"
+            "description": "The Vascular Modeling Toolkit is a collection of libraries and tools for 3D reconstruction, geometric analysis, mesh generation, and surface data analysis for image-based modeling of blood vessels. VMTK can be used through its command line tools, as Python/C++ libraries, or as part of 3D Slicer workflows. This container builds upstream VMTK {{ context.version }} from source with its individual command launchers and TetGen support. The locked conda-forge development environment supplies VTK {{ context.vtk_version }}, ITK {{ context.itk_version }}, and Python {{ context.python_version }}. Homepage: http://www.vmtk.org/ Documentation: http://www.vmtk.org/documentation/",
+            "doi": "10.5281/zenodo.23630314",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630314",
+            "license": "bsd-3-clause"
         },
         {
             "application": "voreen_5.3.0_20260722",
@@ -6804,7 +7486,10 @@
             "categories": [
                 "phase processing",
                 "quantitative imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630400",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630400",
+            "license": "cc-by-4.0"
         },
         {
             "application": "whitematterlesions_0.2.20261009_20261013",
@@ -6813,6 +7498,9 @@
                 "machine learning"
             ],
             "description": "FLAMeS white matter lesion segmentation from one FLAIR image, as the Neurodesk White matter lesions web app runs it. SynthStrip finds the brain, then FLAMeS (nnU-Net, converted to ONNX) segments the lesions on the CPU. It needs no GPU and no network connection. Segment a FLAIR:",
+            "doi": "10.5281/zenodo.23630373",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630373",
+            "license": "apache2.0",
             "openrecon": true
         },
         {
@@ -6822,6 +7510,21 @@
                 "machine learning"
             ],
             "description": "FLAMeS white matter lesion segmentation from one FLAIR image, as the Neurodesk White matter lesions web app runs it. SynthStrip finds the brain, then FLAMeS (nnU-Net, converted to ONNX) segments the lesions on the CPU. It needs no GPU and no network connection. Segment a FLAIR:",
+            "doi": "10.5281/zenodo.23630179",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630179",
+            "license": "apache2.0",
+            "openrecon": true
+        },
+        {
+            "application": "whitematterlesions_0.5.20261022_20261023",
+            "categories": [
+                "image segmentation",
+                "machine learning"
+            ],
+            "description": "FLAMeS white matter lesion segmentation from one FLAIR image, as the Neurodesk White matter lesions web app runs it. SynthStrip finds the brain, then FLAMeS (nnU-Net, converted to ONNX) segments the lesions on the CPU. It needs no GPU and no network connection. Segment a FLAIR:",
+            "doi": "10.5281/zenodo.23629972",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629972",
+            "license": "apache2.0",
             "openrecon": true
         },
         {
@@ -6835,16 +7538,54 @@
             "license": "bsd-3-clause"
         },
         {
+            "application": "xcpd_26.2.0_20261023",
+            "categories": [
+                "functional imaging"
+            ],
+            "description": "An fMRI post-processing BIDS App designed to prepare fMRI data for resting-state functional connectivity analyses.",
+            "doi": "10.5281/zenodo.23629754",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629754",
+            "license": "bsd-3-clause"
+        },
+        {
+            "application": "xcpd_26.3.0_20261029",
+            "categories": [
+                "functional imaging"
+            ],
+            "description": "An fMRI post-processing BIDS App designed to prepare fMRI data for resting-state functional connectivity analyses."
+        },
+        {
             "application": "xmipp_6.0.0_20261012",
             "categories": [
                 "cryo EM"
             ]
         },
         {
+            "application": "xnat_1.10.0_20261023",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23630336",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630336",
+            "license": "cc-by-4.0"
+        },
+        {
             "application": "xnat_1.9.2.1_20261014",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23630556",
+            "doi_url": "https://doi.org/10.5281/zenodo.23630556",
+            "license": "cc-by-4.0"
+        },
+        {
+            "application": "xnat_arm64_1.10.0_20261023",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23629946",
+            "doi_url": "https://doi.org/10.5281/zenodo.23629946",
+            "license": "cc-by-4.0"
         },
         {
             "application": "xnat_arm64_1.9.2.1_20261014",
