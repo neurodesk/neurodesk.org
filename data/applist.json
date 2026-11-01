@@ -337,6 +337,9 @@
                 "image reconstruction"
             ],
             "description": "OpenRecon ARFI magnitude and phase reconstruction. Every magnitude and phase frame is returned as a multi-slice 2D series with source geometry and slice positions preserved. Single Freq divides one-based frames into sequential groups of `ARFI Block Length`. Odd groups form the noFUS set and even groups form the withFUS set. Multiple Freq uses `myTemp = floor((sqrt(floor((frame_number-1)/2)*8+1)+1)/2)` and assigns a frame to withFUS when `frame_number > myTemp * myTemp`. The runtime forms complex data as `magnitude * exp(i * phase)`, averages the withFUS and noFUS sets independently, and outputs `angle(withFUS_average * conj(noFUS_average))` as `<source> ARFI phase`. Magnitude and wrapped phase frames are also returned in `<source> Magnitude` and `<source> Phase` series. When `Send Phase Standard Deviation` is enabled, every complex frame is multiplied by the conjugate of its set's complex mean. The sample standard deviation of the residual phase is output separately as `<source> withFUS phase standard deviation` and `<source> noFUS phase standard deviation`. A one-frame set produces zero. Phase outputs are converted to degrees. Nonconstant volumes use DICOM pixels `0..4095`, with `RescaleSlope` and `RescaleIntercept` recording the mapping back to physical values. Outputs use `Keep_image_geometry = 1` and are sent as one 2D image per slice with the matching source position. `ARFI Schemes` defaults to Single Freq, `ARFI Block Length` defaults to 25, and `Send Phase Standard Deviation` defaults to disabled. The runtime does not calculate B1, Bloch-Siegert phase, B0, or a mask. OpenRecon runtime notes: `recipes/arfirecon/OpenReconREADME.md`. Build and validate:",
+            "doi": "10.5281/zenodo.23850161",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850161",
+            "license": "mit-license",
             "openrecon": true
         },
         {
@@ -901,7 +904,10 @@
                 "bids apps",
                 "data organisation"
             ],
-            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:"
+            "description": "BIDS Manager is a GUI and command-line tool for converting, curating, editing, and validating MRI, EEG, MEG, and physiological recordings in BIDS datasets. Tools included:",
+            "doi": "10.5281/zenodo.23850446",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850446",
+            "license": "mit-license"
         },
         {
             "application": "bidsmanager_1.5.2_20261029",
@@ -959,7 +965,10 @@
             "categories": [
                 "bids apps",
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850335",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850335",
+            "license": "mit-license"
         },
         {
             "application": "bidsmanager_arm64_1.5.1_20261021",
@@ -1333,11 +1342,27 @@
             "license": "other-at"
         },
         {
+            "application": "brainqcnet_1.0.1_20261031",
+            "categories": [
+                "bids apps",
+                "machine learning",
+                "quality control",
+                "structural imaging"
+            ],
+            "doi": "10.5281/zenodo.23852159",
+            "doi_url": "https://doi.org/10.5281/zenodo.23852159",
+            "license": "apache2.0",
+            "openrecon": true
+        },
+        {
             "application": "brainstemnavigator_1.0.0_20261029",
             "categories": [
                 "image registration",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850188",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850188",
+            "license": "mit-license"
         },
         {
             "application": "brainstorm_3.211130_20211207",
@@ -1448,7 +1473,10 @@
                 "structural imaging",
                 "workflows"
             ],
-            "description": "BraTS gives a single interface over the winning algorithms from the BraTS challenges: adult and paediatric glioma, meningioma, brain metastasis and sub-Saharan Africa segmentation, plus inpainting and missing-MRI synthesis. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Read this first: no algorithms are bundled This container is an orchestrator. It contains no model and no weights. Each of the 66 algorithms is a separate container published by its authors, between roughly 4 GB and over 30 GB compressed -- and the cached sandbox is larger still: a 4 GB pull unpacks to about 8 GB on disk, a 9 GB pull to about 14 GB. You pull the ones you want, once. ### GPU or CPU? Most algorithms need a GPU: only 16 of the 66 are CPU-compatible, and 7 of the 8 task defaults are GPU-only, so on a CPU node `brats -t <task>` without `-a` fails for every task except `africa`. The `adult-glioma-pre`, `pediatric` and `goat` tasks have no CPU-compatible algorithm at all. `brats-algorithms` marks each algorithm `CPU-OK` or `GPU-only`, and `brats-algorithms --cpu-only` lists just the ones a CPU node can run; pick one with `-a`. Incompatibility is also detected before anything is downloaded. CPU runtimes differ by more than two orders of magnitude between algorithms, from about a minute to several hours per subject. `brats-algorithms` shows the estimate where upstream records one; size Slurm walltimes accordingly. **Step 1 -- point the cache at persistent storage.** The cache lives under `$TMPDIR` inside the container; anything in `/tmp` is lost with the session. The module wrapper runs this container with `--cleanenv`, which strips a plain `TMPDIR` export, so use the prefixed form, which survives it:"
+            "description": "BraTS gives a single interface over the winning algorithms from the BraTS challenges: adult and paediatric glioma, meningioma, brain metastasis and sub-Saharan Africa segmentation, plus inpainting and missing-MRI synthesis. Part of the BrainLesion Suite (BLS): https://github.com/BrainLesion ### Read this first: no algorithms are bundled This container is an orchestrator. It contains no model and no weights. Each of the 66 algorithms is a separate container published by its authors, between roughly 4 GB and over 30 GB compressed -- and the cached sandbox is larger still: a 4 GB pull unpacks to about 8 GB on disk, a 9 GB pull to about 14 GB. You pull the ones you want, once. ### GPU or CPU? Most algorithms need a GPU: only 16 of the 66 are CPU-compatible, and 7 of the 8 task defaults are GPU-only, so on a CPU node `brats -t <task>` without `-a` fails for every task except `africa`. The `adult-glioma-pre`, `pediatric` and `goat` tasks have no CPU-compatible algorithm at all. `brats-algorithms` marks each algorithm `CPU-OK` or `GPU-only`, and `brats-algorithms --cpu-only` lists just the ones a CPU node can run; pick one with `-a`. Incompatibility is also detected before anything is downloaded. CPU runtimes differ by more than two orders of magnitude between algorithms, from about a minute to several hours per subject. `brats-algorithms` shows the estimate where upstream records one; size Slurm walltimes accordingly. **Step 1 -- point the cache at persistent storage.** The cache lives under `$TMPDIR` inside the container; anything in `/tmp` is lost with the session. The module wrapper runs this container with `--cleanenv`, which strips a plain `TMPDIR` export, so use the prefixed form, which survives it:",
+            "doi": "10.5281/zenodo.23850629",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850629",
+            "license": "apache2.0"
         },
         {
             "application": "brats_0.1.8_20260822",
@@ -1729,17 +1757,17 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_240320_20261024",
+            "application": "code_240320_20261029",
             "categories": [
                 "programming"
             ],
             "description": "Python and Julia environment with VScode and singularity",
-            "doi": "10.5281/zenodo.23629907",
-            "doi_url": "https://doi.org/10.5281/zenodo.23629907",
+            "doi": "10.5281/zenodo.23850281",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850281",
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_arm64_240320_20261024",
+            "application": "code_arm64_240320_20261029",
             "categories": [
                 "programming"
             ]
@@ -1873,7 +1901,10 @@
             "application": "cryosparc_1.0.0_20261029",
             "categories": [
                 "cryo EM"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850196",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850196",
+            "license": "mit-license"
         },
         {
             "application": "ctffind_4.1.14_20261012",
@@ -2424,7 +2455,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:"
+            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:",
+            "doi": "10.5281/zenodo.23850472",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850472",
+            "license": "other-open"
         },
         {
             "application": "dicomtools_arm64_1.1.0_20261012",
@@ -2538,7 +2572,10 @@
             "application": "eharmonize_arm64_1.0.0_20261013",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850398",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850398",
+            "license": "other-open"
         },
         {
             "application": "elastix_5.1.0_20230407",
@@ -3773,13 +3810,13 @@
             "license": "mit-license"
         },
         {
-            "application": "julia_1.13.3_20261029",
+            "application": "julia_1.13.3_20261030",
             "categories": [
                 "programming"
             ],
             "description": "Julia was designed from the beginning for high performance. Julia programs compile to efficient native code for multiple platforms via LLVM.",
-            "doi": "10.5281/zenodo.23791681",
-            "doi_url": "https://doi.org/10.5281/zenodo.23791681",
+            "doi": "10.5281/zenodo.23828733",
+            "doi_url": "https://doi.org/10.5281/zenodo.23828733",
             "license": "mit-license"
         },
         {
@@ -3821,12 +3858,12 @@
             "license": "mit-license"
         },
         {
-            "application": "julia_arm64_1.13.3_20261029",
+            "application": "julia_arm64_1.13.3_20261030",
             "categories": [
                 "programming"
             ],
-            "doi": "10.5281/zenodo.23791756",
-            "doi_url": "https://doi.org/10.5281/zenodo.23791756",
+            "doi": "10.5281/zenodo.23828742",
+            "doi_url": "https://doi.org/10.5281/zenodo.23828742",
             "license": "mit-license"
         },
         {
@@ -4176,13 +4213,19 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "MEDE de-identifies medical imaging data including MRI, CT, ultrasound, whole slide images, and MRI raw data. It supports metadata de-identification, defacing, skull stripping, text removal, and file renaming. This container removes all private DICOM tags recursively with basicProfile. The rtnSafePrivOpt option is rejected because MEDE 0.0.12 has no validated safe-private allowlist. Other profiles alone do not enable basicProfile; select it explicitly for metadata de-identification."
+            "description": "MEDE de-identifies medical imaging data including MRI, CT, ultrasound, whole slide images, and MRI raw data. It supports metadata de-identification, defacing, skull stripping, text removal, and file renaming. This container removes all private DICOM tags recursively with basicProfile. The rtnSafePrivOpt option is rejected because MEDE 0.0.12 has no validated safe-private allowlist. Other profiles alone do not enable basicProfile; select it explicitly for metadata de-identification.",
+            "doi": "10.5281/zenodo.23850166",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850166",
+            "license": "other-closed"
         },
         {
             "application": "mede_arm64_0.0.12_20261013",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850687",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850687",
+            "license": "other-closed"
         },
         {
             "application": "meganorm_0.2.0_20260824",
@@ -4503,23 +4546,17 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "mne_1.13.2_20261024",
+            "application": "mne_1.13.2_20261029",
             "categories": [
                 "electrophysiology"
             ],
-            "description": "Python MNE environment with VScode",
-            "doi": "10.5281/zenodo.23724682",
-            "doi_url": "https://doi.org/10.5281/zenodo.23724682",
-            "license": "bsd-3-clause"
+            "description": "Python MNE environment with VScode"
         },
         {
-            "application": "mne_arm64_1.13.2_20261024",
+            "application": "mne_arm64_1.13.2_20261029",
             "categories": [
                 "electrophysiology"
-            ],
-            "doi": "10.5281/zenodo.23630279",
-            "doi_url": "https://doi.org/10.5281/zenodo.23630279",
-            "license": "bsd-3-clause"
+            ]
         },
         {
             "application": "mneextended_1.1.0_20260727",
@@ -4701,7 +4738,10 @@
             "categories": [
                 "phase processing"
             ],
-            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets. And Susceptibility weighted imaging mritools contains ROMEO, CLEARSWI and MCPC3DS"
+            "description": "Unwrapping of 3D and 4D datasets. Coil combination of 5D datasets. And Susceptibility weighted imaging mritools contains ROMEO, CLEARSWI and MCPC3DS",
+            "doi": "10.5281/zenodo.23850172",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850172",
+            "license": "mit-license"
         },
         {
             "application": "mritools_arm64_4.9.0_20261013",
@@ -5150,13 +5190,13 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "nipype_1.11.0_20261005",
+            "application": "nipype_1.11.0_20261030",
             "categories": [
                 "workflows"
             ],
             "description": "Python environment with VScode and singularity to run Nipype workflows Setup:",
-            "doi": "10.5281/zenodo.23630320",
-            "doi_url": "https://doi.org/10.5281/zenodo.23630320",
+            "doi": "10.5281/zenodo.23828758",
+            "doi_url": "https://doi.org/10.5281/zenodo.23828758",
             "license": "apache2.0"
         },
         {
@@ -5195,7 +5235,10 @@
                 "statistics",
                 "structural imaging"
             ],
-            "description": "NOMIS (NOrmative Morphometry Image Statistics) computes normative Z-scores for FreeSurfer 6.0 morphometry: 1,344 measures (aseg, wmparc, DK/DKT/Destrieux cortical parcellations, ex vivo Brodmann areas, hippocampal and brainstem subfields) modelled on 6,909 cognitively healthy adults aged 18-100. Z-scores are adjusted for head size and image quality (contrast-to-noise ratio and surface holes), and for age and sex when the CSV provides them. **Only FreeSurfer 6.0 output is valid.** The norms are calibrated on FreeSurfer 6.0 `recon-all -all` run without manual edits or expert options. NOMIS will happily read FreeSurfer 7 or FastSurfer output and return plausible-looking but biased Z-scores, so check which version produced your subjects and check segmentation quality first."
+            "description": "NOMIS (NOrmative Morphometry Image Statistics) computes normative Z-scores for FreeSurfer 6.0 morphometry: 1,344 measures (aseg, wmparc, DK/DKT/Destrieux cortical parcellations, ex vivo Brodmann areas, hippocampal and brainstem subfields) modelled on 6,909 cognitively healthy adults aged 18-100. Z-scores are adjusted for head size and image quality (contrast-to-noise ratio and surface holes), and for age and sex when the CSV provides them. **Only FreeSurfer 6.0 output is valid.** The norms are calibrated on FreeSurfer 6.0 `recon-all -all` run without manual edits or expert options. NOMIS will happily read FreeSurfer 7 or FastSurfer output and return plausible-looking but biased Z-scores, so check which version produced your subjects and check segmentation quality first.",
+            "doi": "10.5281/zenodo.23850225",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850225",
+            "license": "bsd-3-clause"
         },
         {
             "application": "openads_1.0.0_20260527",
@@ -5347,7 +5390,10 @@
             "categories": [
                 "molecular biology"
             ],
-            "description": "HARMONI is a pure-python GUI in customtinker that, along with its sister package isoSegDenoise, can preprocess, segment, and analyze high-dimensional image or flow cytometry data, especially mass cytometry / imaging mass cytometry data"
+            "description": "HARMONI is a pure-python GUI in customtinker that, along with its sister package isoSegDenoise, can preprocess, segment, and analyze high-dimensional image or flow cytometry data, especially mass cytometry / imaging mass cytometry data",
+            "doi": "10.5281/zenodo.23850184",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850184",
+            "license": "cc-by-4.0"
         },
         {
             "application": "pals_2.0.1_20261014",
@@ -5359,7 +5405,10 @@
             "application": "pals_arm64_2.0.1_20261014",
             "categories": [
                 "image segmentation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850156",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850156",
+            "license": "other-closed"
         },
         {
             "application": "panoptica_2.1.6_20260819",
@@ -5408,26 +5457,38 @@
             "categories": [
                 "statistics"
             ],
-            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands."
+            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands.",
+            "doi": "10.5281/zenodo.23850339",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850339",
+            "license": "gpl-3.0"
         },
         {
             "application": "pcntoolkit_1.4.0_20261029",
             "categories": [
                 "statistics"
             ],
-            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands."
+            "description": "Toolbox for normative modelling and spatial inference of neuroimaging data. https://pcntoolkit.readthedocs.io/en/latest/ PCNtoolkit is an open-source Python package for Normative Modelling of neuroimaging data. Python uses a private temporary cache when XDG_CACHE_HOME is unset. The cache is removed when Python exits, so imports and bundled tutorials work without a writable home directory. Set XDG_CACHE_HOME to your own writable directory to retain cache files between commands.",
+            "doi": "10.5281/zenodo.23850536",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850536",
+            "license": "gpl-3.0"
         },
         {
             "application": "pcntoolkit_arm64_1.3.0_20261024",
             "categories": [
                 "statistics"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850154",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850154",
+            "license": "gpl-3.0"
         },
         {
             "application": "pcntoolkit_arm64_1.4.0_20261029",
             "categories": [
                 "statistics"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850481",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850481",
+            "license": "gpl-3.0"
         },
         {
             "application": "petprep_0.0.10_20261005",
@@ -6079,7 +6140,10 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "Quickshear uses a skull stripped version of an anatomical image as a reference to deface the unaltered anatomical image."
+            "description": "Quickshear uses a skull stripped version of an anatomical image as a reference to deface the unaltered anatomical image.",
+            "doi": "10.5281/zenodo.23850354",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850354",
+            "license": "bsd-3-clause"
         },
         {
             "application": "quickshear_arm64_1.2.0_20261012",
@@ -6109,7 +6173,10 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "QuPath is an open-source software for bioimage analysis, especially digital pathology. This container also includes: - BIOP QuPath Cellpose extension {{ context.cellpose_extension_version }} - Cellpose {{ context.cellpose_version }} with the Cellpose 3 `cyto3` model - PyTorch {{ context.torch_version }} (CUDA with CPU fallback on x86_64; official CPU wheels on ARM64) QuPath is preconfigured to use `/opt/cellpose/bin/python` for Cellpose. You can confirm or change this under `Edit > Preferences > Cellpose/Omnipose`."
+            "description": "QuPath is an open-source software for bioimage analysis, especially digital pathology. This container also includes: - BIOP QuPath Cellpose extension {{ context.cellpose_extension_version }} - Cellpose {{ context.cellpose_version }} with the Cellpose 3 `cyto3` model - PyTorch {{ context.torch_version }} (CUDA with CPU fallback on x86_64; official CPU wheels on ARM64) QuPath is preconfigured to use `/opt/cellpose/bin/python` for Cellpose. You can confirm or change this under `Edit > Preferences > Cellpose/Omnipose`.",
+            "doi": "10.5281/zenodo.23850208",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850208",
+            "license": "gpl-3.0"
         },
         {
             "application": "qupath_arm64_0.7.0_20261013",
@@ -6154,7 +6221,10 @@
             "categories": [
                 "rodent imaging"
             ],
-            "description": "RABIES (Rodent Automated Bold Improvement of EPI Sequences) is an open source image processing pipeline for rodent fMRI. It conducts state-of-the-art preprocessing and confound correction, and supplies standard resting-state functional connectivity analyses. **Key Features:** - Robust registration workflow with automatically-adapting parameters - Head motion correction and susceptibility distortion correction - Brain parcellation and resampling to native or common space - Confound regression with multiple nuisance regressor options - ICA-AROMA denoising and frame censoring - Seed-based and whole-brain connectivity analyses - Comprehensive data quality assessment tools **Main Processing Stages:** 1. **Preprocessing**: Motion correction, distortion correction, registration, parcellation 2. **Confound Correction**: Detrending, regression, filtering, smoothing 3. **Analysis**: Connectivity analysis, group-ICA, dual regression, data diagnosis **Examples:**"
+            "description": "RABIES (Rodent Automated Bold Improvement of EPI Sequences) is an open source image processing pipeline for rodent fMRI. It conducts state-of-the-art preprocessing and confound correction, and supplies standard resting-state functional connectivity analyses. **Key Features:** - Robust registration workflow with automatically-adapting parameters - Head motion correction and susceptibility distortion correction - Brain parcellation and resampling to native or common space - Confound regression with multiple nuisance regressor options - ICA-AROMA denoising and frame censoring - Seed-based and whole-brain connectivity analyses - Comprehensive data quality assessment tools **Main Processing Stages:** 1. **Preprocessing**: Motion correction, distortion correction, registration, parcellation 2. **Confound Correction**: Detrending, regression, filtering, smoothing 3. **Analysis**: Connectivity analysis, group-ICA, dual regression, data diagnosis **Examples:**",
+            "doi": "10.5281/zenodo.23850376",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850376",
+            "license": "other-open"
         },
         {
             "application": "radtract_0.2.3_20260203",
@@ -6422,7 +6492,10 @@
             "categories": [
                 "statistics"
             ],
-            "description": "RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. This container includes both RStudio Desktop (GUI) and RStudio Server (web-based)."
+            "description": "RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. This container includes both RStudio Desktop (GUI) and RStudio Server (web-based).",
+            "doi": "10.5281/zenodo.23850221",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850221",
+            "license": "apgl-v3"
         },
         {
             "application": "samri_0.5_20260608",
@@ -6486,6 +6559,9 @@
                 "phase processing",
                 "quantitative imaging"
             ],
+            "doi": "10.5281/zenodo.23850236",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850236",
+            "license": "gpl-3.0",
             "openrecon": true
         },
         {
@@ -6493,13 +6569,19 @@
             "categories": [
                 "electrophysiology"
             ],
-            "description": "SigViewer is a viewing application for biosignals such as EEG or MEG time series. In addition to viewing raw data, SigViewer can also create, edit, and display event information (such as annotations or artifact selections)."
+            "description": "SigViewer is a viewing application for biosignals such as EEG or MEG time series. In addition to viewing raw data, SigViewer can also create, edit, and display event information (such as annotations or artifact selections).",
+            "doi": "10.5281/zenodo.23850186",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850186",
+            "license": "gpl-3.0"
         },
         {
             "application": "sigviewer_arm64_0.6.4_20261024",
             "categories": [
                 "electrophysiology"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850502",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850502",
+            "license": "gpl-3.0"
         },
         {
             "application": "skan_0.13.1_20261004",
@@ -6609,6 +6691,9 @@
                 "image reconstruction"
             ],
             "description": "This container runs a 3D sodium Kaiser-Bessel gridding reconstruction for OpenRecon. It includes variance-based coil compression, adaptive or sum-of-squares coil combination, and optional N4 bias correction. Build the recipe with:",
+            "doi": "10.5281/zenodo.23850422",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850422",
+            "license": "mit-license",
             "openrecon": true
         },
         {
@@ -6617,6 +6702,9 @@
                 "image reconstruction"
             ],
             "description": "This container runs a multi-echo palindromic TPI Kaiser-Bessel gridding reconstruction for OpenRecon. It includes variance-based coil compression, TE1/TE2 field-map estimation, low-rank phase correction, adaptive or sum-of-squares coil combination, optional N4 bias correction, and temporal SVD denoising of the final echo volumes. Build the recipe with:",
+            "doi": "10.5281/zenodo.23850178",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850178",
+            "license": "mit-license",
             "openrecon": true
         },
         {
@@ -6625,6 +6713,9 @@
                 "image reconstruction"
             ],
             "description": "This container runs a sodium NUFFT reconstruction for OpenRecon using `sigpy` and the python-ismrmrd-server. Build the recipe with:",
+            "doi": "10.5281/zenodo.23850370",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850370",
+            "license": "mit-license",
             "openrecon": true
         },
         {
@@ -6649,24 +6740,24 @@
             "license": "other-at"
         },
         {
-            "application": "sovabids_0.4.7_20261013",
+            "application": "sovabids_0.4.7_20261030",
             "categories": [
                 "bids apps",
                 "electrophysiology"
             ],
             "description": "Python sovabids environment with VScode This environment contains sovabids, a package for eeg to bids conversion.",
-            "doi": "10.5281/zenodo.23630259",
-            "doi_url": "https://doi.org/10.5281/zenodo.23630259",
+            "doi": "10.5281/zenodo.23850190",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850190",
             "license": "cc-by-4.0"
         },
         {
-            "application": "sovabids_arm64_0.4.7_20261013",
+            "application": "sovabids_arm64_0.4.7_20261030",
             "categories": [
                 "bids apps",
                 "electrophysiology"
             ],
-            "doi": "10.5281/zenodo.23630125",
-            "doi_url": "https://doi.org/10.5281/zenodo.23630125",
+            "doi": "10.5281/zenodo.23850344",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850344",
             "license": "cc-by-4.0"
         },
         {
@@ -6977,6 +7068,9 @@
                 "structural imaging"
             ],
             "description": "SynthSeg is a contrast- and resolution-agnostic brain MRI segmentation tool. It is trained on synthetic data generated with domain randomisation, so a single network segments scans of any contrast and resolution without retraining or preprocessing. This container packages `mri_synthseg` and the trained weights from FreeSurfer {{ context.version }}: SynthSeg 2.0 (default), SynthSeg 1.0 (`--v1`), SynthSeg-robust (`--robust`), the cortical parcellation and QC networks, and Photo-SynthSeg 1.0 (`--photo`). Only that subtree is installed, so this is much smaller than a full FreeSurfer image. Segmentation runs at 1 mm isotropic regardless of the input resolution. Pass `--keepgeom` to resample the label map back onto the input grid.",
+            "doi": "10.5281/zenodo.23850168",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850168",
+            "license": "other-open",
             "openrecon": true
         },
         {
@@ -6998,7 +7092,10 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "SynthStrip is a skull-stripping tool that extracts brain voxels from a landscape of image types, ranging across imaging modalities, resolutions, and subject populations. It leverages a deep learning strategy to synthesize arbitrary training images from segmentation maps, yielding a robust model agnostic to acquisition specifics. **Citation:** SynthStrip: Skull-Stripping for Any Brain Image Andrew Hoopes, Jocelyn S. Mora, Adrian V. Dalca, Bruce Fischl*, Malte Hoffmann* (*equal contribution) NeuroImage 260, 2022, 119474 https://doi.org/10.1016/j.neuroimage.2022.119474 **Homepage:** https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/ **Example:** `mri_synthstrip` **License:** FreeSurfer Software License Agreement"
+            "description": "SynthStrip is a skull-stripping tool that extracts brain voxels from a landscape of image types, ranging across imaging modalities, resolutions, and subject populations. It leverages a deep learning strategy to synthesize arbitrary training images from segmentation maps, yielding a robust model agnostic to acquisition specifics. **Citation:** SynthStrip: Skull-Stripping for Any Brain Image Andrew Hoopes, Jocelyn S. Mora, Adrian V. Dalca, Bruce Fischl*, Malte Hoffmann* (*equal contribution) NeuroImage 260, 2022, 119474 https://doi.org/10.1016/j.neuroimage.2022.119474 **Homepage:** https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/ **Example:** `mri_synthstrip` **License:** FreeSurfer Software License Agreement",
+            "doi": "10.5281/zenodo.23850162",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850162",
+            "license": "other-open"
         },
         {
             "application": "synthstrip_8.2.0_20261014",
@@ -7006,23 +7103,29 @@
                 "image segmentation",
                 "structural imaging"
             ],
-            "description": "SynthStrip is a skull-stripping tool that extracts brain voxels from a landscape of image types, ranging across imaging modalities, resolutions, and subject populations. It leverages a deep learning strategy to synthesize arbitrary training images from segmentation maps, yielding a robust model agnostic to acquisition specifics. **Citation:** SynthStrip: Skull-Stripping for Any Brain Image Andrew Hoopes, Jocelyn S. Mora, Adrian V. Dalca, Bruce Fischl*, Malte Hoffmann* (*equal contribution) NeuroImage 260, 2022, 119474 https://doi.org/10.1016/j.neuroimage.2022.119474 **Homepage:** https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/ **Example:** `mri_synthstrip` **License:** FreeSurfer Software License Agreement"
+            "description": "SynthStrip is a skull-stripping tool that extracts brain voxels from a landscape of image types, ranging across imaging modalities, resolutions, and subject populations. It leverages a deep learning strategy to synthesize arbitrary training images from segmentation maps, yielding a robust model agnostic to acquisition specifics. **Citation:** SynthStrip: Skull-Stripping for Any Brain Image Andrew Hoopes, Jocelyn S. Mora, Adrian V. Dalca, Bruce Fischl*, Malte Hoffmann* (*equal contribution) NeuroImage 260, 2022, 119474 https://doi.org/10.1016/j.neuroimage.2022.119474 **Homepage:** https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/ **Example:** `mri_synthstrip` **License:** FreeSurfer Software License Agreement",
+            "doi": "10.5281/zenodo.23850534",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850534",
+            "license": "other-open"
         },
         {
             "application": "synthstrip_arm64_8.2.0_20261014",
             "categories": [
                 "image segmentation",
                 "structural imaging"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850592",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850592",
+            "license": "other-open"
         },
         {
-            "application": "synthstroke_0.0.0_20260518",
+            "application": "synthstroke_0.0.0_20261031",
             "categories": [
                 "image segmentation"
             ],
             "description": "Implementation of \"Synthetic Data for Robust Stroke Segmentation\" (MELBA 2025). Uses synthetic data to improve stroke lesion segmentation across different imaging protocols and patient populations. Basic usage (baseline model is baked in): synthstroke --input /path/to/T1w.nii.gz --outdir /path/to/output/ --tta Arguments: --input Input T1w NIfTI file (.nii or .nii.gz) --outdir Output directory for segmentation results --tta Enable test-time augmentation (slower but more accurate) --weights Path to model weights (default: baked-in baseline model) --threshold Probability threshold for binary mask (default: 0.5) Available models: baseline Real ATLAS T1w data only. 2-class: background + lesion. [baked in] synth Synthetic data augmentation. 6-class: tissues + lesion. synth-pseudo Synthetic + pseudo-label augmentation. 6-class. synth-plus Synthetic + multi-dataset training. 6-class. qatlas Quantitative MRI (qMRI) based. 2-class. qsynth qMRI-constrained synthetic training. 6-class. Downloading additional models: synthstroke-download synth synthstroke --input T1w.nii.gz --outdir ./output/ \\ --weights /opt/synthstroke/weights/synth/model.safetensors --tta Note: 6-class models (synth, synth-pseudo, synth-plus, qsynth) also output tissue segmentations: gray matter, white matter, CSF alongside the lesion mask. Citation: Chalcroft, L., Pappas, I., Price, C. J., & Ashburner, J. (2025). Synthetic Data for Robust Stroke Segmentation. Machine Learning for Biomedical Imaging, 3, 317-346. To run container outside of this environment: ml synthstroke/{{ context.version }}",
-            "doi": "10.5281/zenodo.20471138",
-            "doi_url": "https://doi.org/10.5281/zenodo.20471138",
+            "doi": "10.5281/zenodo.23850410",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850410",
             "license": "mit-license"
         },
         {
@@ -7225,7 +7328,10 @@
             "categories": [
                 "diffusion imaging"
             ],
-            "description": "Tool for fast and accurate white matter bundle segmentation from Diffusion MRI. It can create bundle segmentations, segmentations of the endregions of bundles and Tract Orientation Maps (TOMs). Moreover, it can do tracking on the TOMs creating bundle-specific tractogram and do Tractometry analysis on those."
+            "description": "Tool for fast and accurate white matter bundle segmentation from Diffusion MRI. It can create bundle segmentations, segmentations of the endregions of bundles and Tract Orientation Maps (TOMs). Moreover, it can do tracking on the TOMs creating bundle-specific tractogram and do Tractometry analysis on those.",
+            "doi": "10.5281/zenodo.23850176",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850176",
+            "license": "apache2.0"
         },
         {
             "application": "tractseg_2.9_20250702",
@@ -7263,7 +7369,10 @@
                 "structural imaging",
                 "workflows"
             ],
-            "description": "VertexWiseR is an R package for extracting, manipulating, analysing, and visualising cortical surface and hippocampal vertex-wise data."
+            "description": "VertexWiseR is an R package for extracting, manipulating, analysing, and visualising cortical surface and hippocampal vertex-wise data.",
+            "doi": "10.5281/zenodo.23850164",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850164",
+            "license": "gpl-3.0"
         },
         {
             "application": "vertexwiser_1.5.5_20261019",
@@ -7301,7 +7410,10 @@
             "categories": [
                 "structural imaging",
                 "workflows"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850394",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850394",
+            "license": "gpl-3.0"
         },
         {
             "application": "vesselboost_1.0.0_20240815",
@@ -7552,7 +7664,10 @@
             "categories": [
                 "functional imaging"
             ],
-            "description": "An fMRI post-processing BIDS App designed to prepare fMRI data for resting-state functional connectivity analyses."
+            "description": "An fMRI post-processing BIDS App designed to prepare fMRI data for resting-state functional connectivity analyses.",
+            "doi": "10.5281/zenodo.23852161",
+            "doi_url": "https://doi.org/10.5281/zenodo.23852161",
+            "license": "bsd-3-clause"
         },
         {
             "application": "xmipp_6.0.0_20261012",
@@ -7591,7 +7706,10 @@
             "application": "xnat_arm64_1.9.2.1_20261014",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23850327",
+            "doi_url": "https://doi.org/10.5281/zenodo.23850327",
+            "license": "cc-by-4.0"
         }
     ]
 }
