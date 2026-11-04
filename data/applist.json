@@ -121,6 +121,13 @@
             "license": "gpl-3.0"
         },
         {
+            "application": "afni_26.3.07_20261101",
+            "categories": [
+                "functional imaging"
+            ],
+            "description": "AFNI (Analysis of Functional NeuroImages) is a leading software suite of C, Python, R programs and shell scripts primarily developed for the analysis and display of anatomical and functional MRI (FMRI) data. It is freely available (both in source code and in precompiled binaries) for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary Packages are provided for MacOS and Linux systems including Fedora, Ubuntu (including Ubuntu under the Windows Subsystem for Linux)"
+        },
+        {
             "application": "aidamri_1.1_20210708",
             "categories": [
                 "diffusion imaging",
@@ -1070,14 +1077,11 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "bidstools_1.3.0_20260919",
+            "application": "bidstools_1.3.0_20261030",
             "categories": [
                 "data organisation"
             ],
-            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:",
-            "doi": "10.5281/zenodo.22984845",
-            "doi_url": "https://doi.org/10.5281/zenodo.22984845",
-            "license": "cc-by-4.0"
+            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:"
         },
         {
             "application": "bidstools_arm64_1.2.0_20260915",
@@ -1089,13 +1093,10 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "bidstools_arm64_1.3.0_20260919",
+            "application": "bidstools_arm64_1.3.0_20261030",
             "categories": [
                 "data organisation"
-            ],
-            "doi": "10.5281/zenodo.22984813",
-            "doi_url": "https://doi.org/10.5281/zenodo.22984813",
-            "license": "cc-by-4.0"
+            ]
         },
         {
             "application": "bidsvue_0.1.20260704_20261013",
@@ -1575,6 +1576,18 @@
             "license": "gpl-2.0"
         },
         {
+            "application": "cat12_26.0.2_20261031",
+            "categories": [
+                "image registration",
+                "image segmentation",
+                "structural imaging"
+            ],
+            "description": "SPM standalone with CAT12 toolbox in Matlab Compiler Runtime",
+            "doi": "10.5281/zenodo.23933846",
+            "doi_url": "https://doi.org/10.5281/zenodo.23933846",
+            "license": "gpl-2.0"
+        },
+        {
             "application": "cat12_26.0.rc3_20260521",
             "categories": [
                 "image registration",
@@ -1898,13 +1911,10 @@
             "license": "lgpl-3.0"
         },
         {
-            "application": "cryosparc_1.0.0_20261029",
+            "application": "cryosparc_1.0.0_20261030",
             "categories": [
                 "cryo EM"
-            ],
-            "doi": "10.5281/zenodo.23850196",
-            "doi_url": "https://doi.org/10.5281/zenodo.23850196",
-            "license": "mit-license"
+            ]
         },
         {
             "application": "ctffind_4.1.14_20261012",
@@ -2067,7 +2077,20 @@
             "categories": [
                 "data organisation"
             ],
-            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend.",
+            "doi": "10.5281/zenodo.23937084",
+            "doi_url": "https://doi.org/10.5281/zenodo.23937084",
+            "license": "mit-license"
+        },
+        {
+            "application": "datalad_1.7.3_20261101",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend.",
+            "doi": "10.5281/zenodo.23905825",
+            "doi_url": "https://doi.org/10.5281/zenodo.23905825",
+            "license": "mit-license"
         },
         {
             "application": "datalad_arm64_1.1.5_20260911",
@@ -2136,7 +2159,19 @@
             "application": "datalad_arm64_1.7.2_20261029",
             "categories": [
                 "data organisation"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23937092",
+            "doi_url": "https://doi.org/10.5281/zenodo.23937092",
+            "license": "mit-license"
+        },
+        {
+            "application": "datalad_arm64_1.7.3_20261101",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23875811",
+            "doi_url": "https://doi.org/10.5281/zenodo.23875811",
+            "license": "mit-license"
         },
         {
             "application": "dcm2bids_3.2.0_20260527",
@@ -2186,6 +2221,13 @@
             "license": "other-open"
         },
         {
+            "application": "dcm2niix_v1.0.20261029_20261101",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "dcm2niix is designed to convert neuroimaging data from the DICOM format to the NIfTI format. This web page hosts the developmental source code - a compiled version for Linux, MacOS, and Windows of the most recent stable release is included with MRIcroGL. A full manual for this software is available in the form of a NITRC wiki."
+        },
+        {
             "application": "dcm2niix_arm64_v1.0.20260724_20260920",
             "categories": [
                 "data organisation"
@@ -2193,6 +2235,12 @@
             "doi": "10.5281/zenodo.22984811",
             "doi_url": "https://doi.org/10.5281/zenodo.22984811",
             "license": "other-open"
+        },
+        {
+            "application": "dcm2niix_arm64_v1.0.20261029_20261101",
+            "categories": [
+                "data organisation"
+            ]
         },
         {
             "application": "deep-quality-estimation_0.0.3_20261024",
@@ -2451,23 +2499,17 @@
             "license": "other-open"
         },
         {
-            "application": "dicomtools_1.1.0_20261012",
+            "application": "dicomtools_1.1.0_20261030",
             "categories": [
                 "data organisation"
             ],
-            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:",
-            "doi": "10.5281/zenodo.23850472",
-            "doi_url": "https://doi.org/10.5281/zenodo.23850472",
-            "license": "other-open"
+            "description": "Contains a collection of tools useful for DICOM to BIDS conversion Tools included:"
         },
         {
-            "application": "dicomtools_arm64_1.1.0_20261012",
+            "application": "dicomtools_arm64_1.1.0_20261030",
             "categories": [
                 "data organisation"
-            ],
-            "doi": "10.5281/zenodo.23629807",
-            "doi_url": "https://doi.org/10.5281/zenodo.23629807",
-            "license": "other-open"
+            ]
         },
         {
             "application": "diffusiontoolkit_0.6.4.1_20220303",
@@ -3448,23 +3490,17 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "glmsingle_1.2.0_20261020",
+            "application": "glmsingle_1.2.0_20261029",
             "categories": [
                 "functional imaging"
             ],
-            "description": "A toolbox for accurate single-trial estimates in fMRI time-series data. This container is set up so that the python version of the toolbox is ready to use. Import the GLMsingle package on your python script: 'import glmsingle'. Run, 'jupyter-lab' to use the jupyter interface. To use GLMsingle with Matlab, load the Matlab container and follow the instructions as described here: https://github.com/cvnlab/GLMsingle?tab=readme-ov-file#matlab",
-            "doi": "10.5281/zenodo.23630111",
-            "doi_url": "https://doi.org/10.5281/zenodo.23630111",
-            "license": "bsd-3-clause"
+            "description": "A toolbox for accurate single-trial estimates in fMRI time-series data. This container is set up so that the python version of the toolbox is ready to use. Import the GLMsingle package on your python script: 'import glmsingle'. Run, 'jupyter-lab' to use the jupyter interface. To use GLMsingle with Matlab, load the Matlab container and follow the instructions as described here: https://github.com/cvnlab/GLMsingle?tab=readme-ov-file#matlab"
         },
         {
-            "application": "glmsingle_arm64_1.2.0_20261020",
+            "application": "glmsingle_arm64_1.2.0_20261029",
             "categories": [
                 "functional imaging"
-            ],
-            "doi": "10.5281/zenodo.23630269",
-            "doi_url": "https://doi.org/10.5281/zenodo.23630269",
-            "license": "bsd-3-clause"
+            ]
         },
         {
             "application": "globus_3.2.2_20230620",
@@ -4013,6 +4049,25 @@
             "license": "mpl-2.0"
         },
         {
+            "application": "libreoffice_26.8.2.2_20261031",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "LibreOffice is a free and open-source office suite with applications for word processing, spreadsheets, presentations, vector drawing, databases, and formula editing.",
+            "doi": "10.5281/zenodo.23933907",
+            "doi_url": "https://doi.org/10.5281/zenodo.23933907",
+            "license": "other-open"
+        },
+        {
+            "application": "libreoffice_arm64_26.8.2.2_20261031",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23933481",
+            "doi_url": "https://doi.org/10.5281/zenodo.23933481",
+            "license": "other-open"
+        },
+        {
             "application": "linda_0.5.1_20260508",
             "categories": [
                 "structural imaging"
@@ -4359,13 +4414,10 @@
             "openrecon": true
         },
         {
-            "application": "metabody_1.0.5_20260910",
+            "application": "metabody_1.0.5_20261101",
             "categories": [
                 "functional imaging"
             ],
-            "doi": "10.5281/zenodo.22731027",
-            "doi_url": "https://doi.org/10.5281/zenodo.22731027",
-            "license": "cc-by-4.0",
             "openrecon": true
         },
         {
@@ -4546,17 +4598,23 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "mne_1.13.2_20261029",
+            "application": "mne_1.13.2_20261031",
             "categories": [
                 "electrophysiology"
             ],
-            "description": "Python MNE environment with VScode"
+            "description": "Python MNE environment with VScode",
+            "doi": "10.5281/zenodo.23904248",
+            "doi_url": "https://doi.org/10.5281/zenodo.23904248",
+            "license": "bsd-3-clause"
         },
         {
-            "application": "mne_arm64_1.13.2_20261029",
+            "application": "mne_arm64_1.13.2_20261031",
             "categories": [
                 "electrophysiology"
-            ]
+            ],
+            "doi": "10.5281/zenodo.23904311",
+            "doi_url": "https://doi.org/10.5281/zenodo.23904311",
+            "license": "bsd-3-clause"
         },
         {
             "application": "mneextended_1.1.0_20260727",
@@ -4570,25 +4628,37 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "mneextended_1.2.0_20261029",
+            "application": "mneextended_1.2.0_20261031",
             "categories": [
                 "electrophysiology",
                 "programming"
             ],
             "description": "Python MNE environment with VScode This environment contains MNE Python and some additional tools with dependencies (MNE BIDS Pipeline, MNE-connectivity, MNE-icalabel, Neurokit2)",
-            "doi": "10.5281/zenodo.23791780",
-            "doi_url": "https://doi.org/10.5281/zenodo.23791780",
+            "doi": "10.5281/zenodo.23904345",
+            "doi_url": "https://doi.org/10.5281/zenodo.23904345",
             "license": "bsd-3-clause"
         },
         {
-            "application": "mneextended_arm64_1.2.0_20261029",
+            "application": "mneextended_arm64_1.2.0_20261031",
             "categories": [
                 "electrophysiology",
                 "programming"
             ],
-            "doi": "10.5281/zenodo.23791942",
-            "doi_url": "https://doi.org/10.5281/zenodo.23791942",
+            "doi": "10.5281/zenodo.23904494",
+            "doi_url": "https://doi.org/10.5281/zenodo.23904494",
             "license": "bsd-3-clause"
+        },
+        {
+            "application": "mobstr3d_1.0.5_20261103",
+            "categories": [
+                "body",
+                "image segmentation",
+                "phase processing"
+            ],
+            "doi": "10.5281/zenodo.23933479",
+            "doi_url": "https://doi.org/10.5281/zenodo.23933479",
+            "license": "apache2.0",
+            "openrecon": true
         },
         {
             "application": "modsort_0.0.2_20261012",
@@ -4915,6 +4985,18 @@
             "openrecon": true
         },
         {
+            "application": "napari_0.10.0_20261101",
+            "categories": [
+                "image segmentation",
+                "machine learning",
+                "visualization"
+            ],
+            "description": "napari is an interactive multi-dimensional image viewer. This container includes: - napari-VoxTell {{ context.napari_voxtell_version }} for free-text-prompted 3D medical image segmentation - napari-nnInteractive {{ context.napari_nninteractive_version }} for point, scribble, box, and lasso-prompted 3D segmentation - {{ context.pytorch_wheel_channel }} PyTorch {{ context.torch_version }} and the nnInteractive {{ context.nninteractive_version }} local backend - napari-nifti for NIfTI image loading Launch napari or open either plugin directly:",
+            "doi": "10.5281/zenodo.23875810",
+            "doi_url": "https://doi.org/10.5281/zenodo.23875810",
+            "license": "other-open"
+        },
+        {
             "application": "napari_0.8.0_20260814",
             "categories": [
                 "image segmentation",
@@ -4937,6 +5019,17 @@
             "doi": "10.5281/zenodo.23629837",
             "doi_url": "https://doi.org/10.5281/zenodo.23629837",
             "license": "bsd-3-clause"
+        },
+        {
+            "application": "napari_arm64_0.10.0_20261101",
+            "categories": [
+                "image segmentation",
+                "machine learning",
+                "visualization"
+            ],
+            "doi": "10.5281/zenodo.23933483",
+            "doi_url": "https://doi.org/10.5281/zenodo.23933483",
+            "license": "other-open"
         },
         {
             "application": "napari_arm64_0.9.2_20261013",
@@ -5573,14 +5666,19 @@
             "openrecon": true
         },
         {
-            "application": "prostatefiducialseg_8.0.3_20261023",
+            "application": "prostatefiducialseg_8.0.3_20261102",
             "categories": [
                 "body",
                 "image segmentation"
             ],
-            "doi": "10.5281/zenodo.23630396",
-            "doi_url": "https://doi.org/10.5281/zenodo.23630396",
-            "license": "cc-by-4.0",
+            "openrecon": true
+        },
+        {
+            "application": "prostatefiducialseg_8.0.4_20261103",
+            "categories": [
+                "body",
+                "image segmentation"
+            ],
             "openrecon": true
         },
         {
@@ -6498,6 +6596,16 @@
             "license": "apgl-v3"
         },
         {
+            "application": "rstudio_2026.10.1_20261101",
+            "categories": [
+                "statistics"
+            ],
+            "description": "RStudio is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management. This container includes both RStudio Desktop (GUI) and RStudio Server (web-based).",
+            "doi": "10.5281/zenodo.23933850",
+            "doi_url": "https://doi.org/10.5281/zenodo.23933850",
+            "license": "apgl-v3"
+        },
+        {
             "application": "samri_0.5_20260608",
             "categories": [
                 "functional imaging",
@@ -7020,16 +7128,16 @@
             "license": "bsd-2-clause-netbsd"
         },
         {
-            "application": "svrtk_20260626_20260718",
+            "application": "svrtk_20260626_20261101",
             "categories": [
                 "body",
                 "fetal imaging",
                 "image reconstruction",
                 "structural imaging"
             ],
-            "doi": "10.5281/zenodo.21436300",
-            "doi_url": "https://doi.org/10.5281/zenodo.21436300",
-            "license": "apache2.0"
+            "doi": "10.5281/zenodo.23904250",
+            "doi_url": "https://doi.org/10.5281/zenodo.23904250",
+            "license": "other-open"
         },
         {
             "application": "syncro_0.1.1_20251216",
