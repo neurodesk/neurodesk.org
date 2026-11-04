@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-04T12:36:56Z",
+  "generatedAt": "2026-11-04T14:08:33Z",
   "source": "Google Analytics 4",
   "periodDays": 30,
-  "totalUsers": 71846,
-  "periodUsers": 5636,
-  "periodSessions": 7598,
-  "periodPageViews": 13540,
+  "totalUsers": 71866,
+  "periodUsers": 5488,
+  "periodSessions": 7440,
+  "periodPageViews": 13210,
   "months": [
     {
       "month": "2023-05",
@@ -219,8 +219,8 @@
     },
     {
       "month": "2026-11",
-      "newUsers": 625,
-      "cumulativeUsers": 72595
+      "newUsers": 642,
+      "cumulativeUsers": 72612
     }
   ],
   "countries": [
@@ -232,7 +232,7 @@
     {
       "code": "SG",
       "name": "Singapore",
-      "users": 10556
+      "users": 10562
     },
     {
       "code": "CN",
@@ -242,7 +242,7 @@
     {
       "code": "AU",
       "name": "Australia",
-      "users": 5999
+      "users": 6002
     },
     {
       "code": "DE",
@@ -282,17 +282,17 @@
     {
       "code": "AT",
       "name": "Austria",
-      "users": 1099
+      "users": 1100
     },
     {
       "code": "NL",
       "name": "Netherlands",
-      "users": 1078
+      "users": 1079
     },
     {
       "code": "CH",
       "name": "Switzerland",
-      "users": 1076
+      "users": 1078
     },
     {
       "code": "ES",
@@ -302,7 +302,7 @@
     {
       "code": "BE",
       "name": "Belgium",
-      "users": 869
+      "users": 870
     },
     {
       "code": "BR",
@@ -312,7 +312,7 @@
     {
       "code": "KR",
       "name": "South Korea",
-      "users": 761
+      "users": 762
     },
     {
       "code": "HK",
@@ -1099,57 +1099,52 @@
     {
       "code": "SG",
       "name": "Singapore",
-      "users": 1835
+      "users": 1739
     },
     {
       "code": "US",
       "name": "United States",
-      "users": 1323
+      "users": 1314
     },
     {
       "code": "CN",
       "name": "China",
-      "users": 742
+      "users": 735
     },
     {
       "code": "AU",
       "name": "Australia",
-      "users": 226
+      "users": 228
     },
     {
       "code": "DE",
       "name": "Germany",
-      "users": 129
+      "users": 124
     },
     {
       "code": "CA",
       "name": "Canada",
-      "users": 121
+      "users": 119
     },
     {
       "code": "GB",
       "name": "United Kingdom",
-      "users": 118
+      "users": 115
     },
     {
       "code": "FR",
       "name": "France",
-      "users": 88
+      "users": 85
     },
     {
       "code": "BE",
       "name": "Belgium",
-      "users": 70
+      "users": 71
     },
     {
       "code": "CH",
       "name": "Switzerland",
-      "users": 69
-    },
-    {
-      "code": "IN",
-      "name": "India",
-      "users": 67
+      "users": 71
     },
     {
       "code": "NL",
@@ -1157,14 +1152,19 @@
       "users": 67
     },
     {
-      "code": "IT",
-      "name": "Italy",
-      "users": 60
+      "code": "IN",
+      "name": "India",
+      "users": 64
     },
     {
       "code": "NZ",
       "name": "New Zealand",
       "users": 60
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "users": 59
     },
     {
       "code": "JP",
@@ -1174,12 +1174,12 @@
     {
       "code": "VN",
       "name": "Vietnam",
-      "users": 52
+      "users": 48
     },
     {
       "code": "ES",
       "name": "Spain",
-      "users": 47
+      "users": 46
     },
     {
       "code": "AT",
@@ -1189,21 +1189,21 @@
     {
       "code": "HK",
       "name": "Hong Kong",
-      "users": 36
+      "users": 35
     },
     {
       "code": "BR",
       "name": "Brazil",
-      "users": 34
-    },
-    {
-      "code": "SE",
-      "name": "Sweden",
-      "users": 30
+      "users": 33
     },
     {
       "code": "PL",
       "name": "Poland",
+      "users": 29
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
       "users": 29
     },
     {
@@ -1217,24 +1217,19 @@
       "users": 22
     },
     {
-      "code": "CO",
-      "name": "Colombia",
-      "users": 17
-    },
-    {
       "code": "PH",
       "name": "Philippines",
       "users": 17
     },
     {
-      "code": "EG",
-      "name": "Egypt",
+      "code": "CO",
+      "name": "Colombia",
       "users": 15
     },
     {
-      "code": "TR",
-      "name": "T\u00fcrkiye",
-      "users": 15
+      "code": "EG",
+      "name": "Egypt",
+      "users": 14
     },
     {
       "code": "IE",
@@ -1247,9 +1242,14 @@
       "users": 14
     },
     {
+      "code": "TR",
+      "name": "T\u00fcrkiye",
+      "users": 14
+    },
+    {
       "code": "CZ",
       "name": "Czechia",
-      "users": 13
+      "users": 12
     },
     {
       "code": "IR",
@@ -1264,17 +1264,12 @@
     {
       "code": "AR",
       "name": "Argentina",
-      "users": 11
+      "users": 10
     },
     {
       "code": "MX",
       "name": "Mexico",
-      "users": 11
-    },
-    {
-      "code": "ZA",
-      "name": "South Africa",
-      "users": 11
+      "users": 10
     },
     {
       "code": "PK",
@@ -1287,9 +1282,9 @@
       "users": 9
     },
     {
-      "code": "BD",
-      "name": "Bangladesh",
-      "users": 8
+      "code": "ZA",
+      "name": "South Africa",
+      "users": 9
     },
     {
       "code": "GR",
@@ -1307,24 +1302,14 @@
       "users": 8
     },
     {
+      "code": "BD",
+      "name": "Bangladesh",
+      "users": 7
+    },
+    {
       "code": "AE",
       "name": "United Arab Emirates",
-      "users": 7
-    },
-    {
-      "code": "FI",
-      "name": "Finland",
-      "users": 7
-    },
-    {
-      "code": "MY",
-      "name": "Malaysia",
-      "users": 7
-    },
-    {
-      "code": "TH",
-      "name": "Thailand",
-      "users": 7
+      "users": 6
     },
     {
       "code": "DK",
@@ -1332,13 +1317,23 @@
       "users": 6
     },
     {
-      "code": "NO",
-      "name": "Norway",
+      "code": "FI",
+      "name": "Finland",
+      "users": 6
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
       "users": 6
     },
     {
       "code": "PT",
       "name": "Portugal",
+      "users": 6
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
       "users": 6
     },
     {
@@ -1352,14 +1347,14 @@
       "users": 5
     },
     {
-      "code": "TN",
-      "name": "Tunisia",
+      "code": "NO",
+      "name": "Norway",
       "users": 5
     },
     {
-      "code": "HU",
-      "name": "Hungary",
-      "users": 4
+      "code": "TN",
+      "name": "Tunisia",
+      "users": 5
     },
     {
       "code": "MT",
@@ -1382,6 +1377,11 @@
       "users": 3
     },
     {
+      "code": "HU",
+      "name": "Hungary",
+      "users": 3
+    },
+    {
       "code": "IQ",
       "name": "Iraq",
       "users": 3
@@ -1394,11 +1394,6 @@
     {
       "code": "BA",
       "name": "Bosnia & Herzegovina",
-      "users": 2
-    },
-    {
-      "code": "BG",
-      "name": "Bulgaria",
       "users": 2
     },
     {
@@ -1419,11 +1414,6 @@
     {
       "code": "EC",
       "name": "Ecuador",
-      "users": 2
-    },
-    {
-      "code": "OM",
-      "name": "Oman",
       "users": 2
     },
     {
@@ -1450,6 +1440,11 @@
       "code": "UA",
       "name": "Ukraine",
       "users": 2
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "users": 1
     },
     {
       "code": "DO",
@@ -1487,11 +1482,6 @@
       "users": 1
     },
     {
-      "code": "LV",
-      "name": "Latvia",
-      "users": 1
-    },
-    {
       "code": "MD",
       "name": "Moldova",
       "users": 1
@@ -1502,8 +1492,8 @@
       "users": 1
     },
     {
-      "code": "PG",
-      "name": "Papua New Guinea",
+      "code": "OM",
+      "name": "Oman",
       "users": 1
     },
     {
@@ -1545,10 +1535,10 @@
         "pagePathPrefix": "/edu"
       },
       "trackingStartDate": "2025-12-18",
-      "totalUsers": 4188,
-      "periodUsers": 1271,
-      "periodSessions": 1491,
-      "periodPageViews": 1950,
+      "totalUsers": 4190,
+      "periodUsers": 1204,
+      "periodSessions": 1421,
+      "periodPageViews": 1848,
       "months": [
         {
           "month": "2025-12",
@@ -1607,15 +1597,15 @@
         },
         {
           "month": "2026-11",
-          "newUsers": 69,
-          "cumulativeUsers": 3543
+          "newUsers": 71,
+          "cumulativeUsers": 3545
         }
       ],
       "countries": [
         {
           "code": "SG",
           "name": "Singapore",
-          "users": 1011
+          "users": 1013
         },
         {
           "code": "US",
@@ -2100,10 +2090,10 @@
         ]
       },
       "trackingStartDate": "2026-07-08",
-      "totalUsers": 555,
+      "totalUsers": 556,
       "periodUsers": 149,
       "periodSessions": 267,
-      "periodPageViews": 1108,
+      "periodPageViews": 1110,
       "months": [
         {
           "month": "2026-07",
@@ -2248,6 +2238,11 @@
           "users": 5
         },
         {
+          "code": "BE",
+          "name": "Belgium",
+          "users": 4
+        },
+        {
           "code": "CH",
           "name": "Switzerland",
           "users": 4
@@ -2275,11 +2270,6 @@
         {
           "code": "BD",
           "name": "Bangladesh",
-          "users": 3
-        },
-        {
-          "code": "BE",
-          "name": "Belgium",
           "users": 3
         },
         {
@@ -2450,10 +2440,10 @@
         ]
       },
       "trackingStartDate": "2026-07-08",
-      "totalUsers": 180,
+      "totalUsers": 181,
       "periodUsers": 57,
-      "periodSessions": 186,
-      "periodPageViews": 542,
+      "periodSessions": 181,
+      "periodPageViews": 509,
       "months": [
         {
           "month": "2026-07",
@@ -2503,14 +2493,14 @@
           "users": 14
         },
         {
-          "code": "US",
-          "name": "United States",
+          "code": "BE",
+          "name": "Belgium",
           "users": 13
         },
         {
-          "code": "BE",
-          "name": "Belgium",
-          "users": 12
+          "code": "US",
+          "name": "United States",
+          "users": 13
         },
         {
           "code": "CH",
@@ -2697,8 +2687,8 @@
       "trackingStartDate": "2026-07-08",
       "totalUsers": 200,
       "periodUsers": 82,
-      "periodSessions": 142,
-      "periodPageViews": 322,
+      "periodSessions": 134,
+      "periodPageViews": 298,
       "months": [
         {
           "month": "2026-07",
@@ -2948,10 +2938,10 @@
         }
       },
       "trackingStartDate": "2026-07-12",
-      "totalUsers": 911,
-      "periodUsers": 608,
-      "periodSessions": 709,
-      "periodPageViews": 799,
+      "totalUsers": 912,
+      "periodUsers": 607,
+      "periodSessions": 708,
+      "periodPageViews": 798,
       "months": [
         {
           "month": "2026-07",
@@ -2975,15 +2965,15 @@
         },
         {
           "month": "2026-11",
-          "newUsers": 102,
-          "cumulativeUsers": 848
+          "newUsers": 103,
+          "cumulativeUsers": 849
         }
       ],
       "countries": [
         {
           "code": "CN",
           "name": "China",
-          "users": 536
+          "users": 537
         },
         {
           "code": "US",
@@ -3258,8 +3248,8 @@
       "trackingStartDate": "2026-07-12",
       "totalUsers": 155,
       "periodUsers": 57,
-      "periodSessions": 87,
-      "periodPageViews": 122,
+      "periodSessions": 85,
+      "periodPageViews": 116,
       "months": [
         {
           "month": "2026-07",
@@ -3504,9 +3494,9 @@
       },
       "trackingStartDate": "2026-09-15",
       "totalUsers": 39,
-      "periodUsers": 30,
-      "periodSessions": 59,
-      "periodPageViews": 64,
+      "periodUsers": 29,
+      "periodSessions": 58,
+      "periodPageViews": 63,
       "months": [
         {
           "month": "2026-09",
@@ -3651,10 +3641,10 @@
         }
       },
       "trackingStartDate": "2026-09-19",
-      "totalUsers": 36,
-      "periodUsers": 31,
-      "periodSessions": 36,
-      "periodPageViews": 41,
+      "totalUsers": 37,
+      "periodUsers": 32,
+      "periodSessions": 38,
+      "periodPageViews": 43,
       "months": [
         {
           "month": "2026-09",
@@ -3668,8 +3658,8 @@
         },
         {
           "month": "2026-11",
-          "newUsers": 8,
-          "cumulativeUsers": 21
+          "newUsers": 9,
+          "cumulativeUsers": 22
         }
       ],
       "countries": [
@@ -3699,13 +3689,13 @@
           "users": 3
         },
         {
-          "code": "AU",
-          "name": "Australia",
-          "users": 2
-        },
-        {
           "code": "KR",
           "name": "South Korea",
+          "users": 3
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
           "users": 2
         },
         {
@@ -3816,8 +3806,8 @@
       "trackingStartDate": "2026-07-11",
       "totalUsers": 98,
       "periodUsers": 31,
-      "periodSessions": 43,
-      "periodPageViews": 56,
+      "periodSessions": 44,
+      "periodPageViews": 57,
       "months": [
         {
           "month": "2026-07",
@@ -4735,10 +4725,10 @@
         }
       },
       "trackingStartDate": "2026-07-13",
-      "totalUsers": 62,
+      "totalUsers": 63,
       "periodUsers": 19,
       "periodSessions": 25,
-      "periodPageViews": 33,
+      "periodPageViews": 31,
       "months": [
         {
           "month": "2026-07",
@@ -4762,8 +4752,8 @@
         },
         {
           "month": "2026-11",
-          "newUsers": 1,
-          "cumulativeUsers": 32
+          "newUsers": 2,
+          "cumulativeUsers": 33
         }
       ],
       "countries": [
@@ -4800,7 +4790,7 @@
         {
           "code": "CH",
           "name": "Switzerland",
-          "users": 2
+          "users": 3
         },
         {
           "code": "CZ",
@@ -5609,8 +5599,8 @@
       "trackingStartDate": "2026-09-19",
       "totalUsers": 11,
       "periodUsers": 8,
-      "periodSessions": 18,
-      "periodPageViews": 18,
+      "periodSessions": 15,
+      "periodPageViews": 16,
       "months": [
         {
           "month": "2026-10",
@@ -5720,9 +5710,9 @@
       },
       "trackingStartDate": "2026-09-15",
       "totalUsers": 28,
-      "periodUsers": 8,
-      "periodSessions": 11,
-      "periodPageViews": 14,
+      "periodUsers": 6,
+      "periodSessions": 9,
+      "periodPageViews": 9,
       "months": [
         {
           "month": "2026-09",
