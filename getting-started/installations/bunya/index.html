@@ -167,7 +167,7 @@
 </button>
 				<script type="module">var e=class extends HTMLElement{constructor(){super();let e=matchMedia(`(min-width: 50em)`),t=()=>{this.popover=e.matches?null:`auto`};t(),e.addEventListener(`change`,()=>t()),this.addEventListener(`toggle`,({newState:e})=>this.trapFocus(e===`open`))}trapFocus(e){document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}};customElements.define(`sl-sidebar-pane`,e);</script><sl-sidebar-pane popover id="starlight__sidebar" class="sidebar-pane astro-vnhw6v7h">
 					<div class="sidebar-content sl-flex astro-vnhw6v7h">
-						<sl-sidebar-state-persist data-hash="0qvhsrv" class="astro-rmky5lek">
+						<sl-sidebar-state-persist data-hash="0o4s9es" class="astro-rmky5lek">
 	<script aria-hidden="true">
 		(() => {
 			try {
@@ -390,6 +390,11 @@
 			</li><li class="astro-cu6zwyg6">
 				<a href="/getting-started/neurodesktop/uv-environments/" class="astro-cu6zwyg6">
 						<span class="astro-cu6zwyg6">UV Python</span>
+						
+					</a>
+			</li><li class="astro-cu6zwyg6">
+				<a href="/getting-started/neurodesktop/remote-jobs/" class="astro-cu6zwyg6">
+						<span class="astro-cu6zwyg6">Remote HPC jobs</span>
 						
 					</a>
 			</li><li class="astro-cu6zwyg6">
@@ -787,7 +792,10 @@
 								<div class="content-panel astro-c5if7iql">
 	<div class="sl-container astro-c5if7iql">
 									<div class="sl-markdown-content">
-										<p>Neurodesk is installed at the University of Queensland’s supercomputer “Bunya”. To access Neurodesk tools you need to be in an interactive job (so either start a virtual desktop via <a href="https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard">Open OnDemand</a>) or run:</p>
+										<aside aria-label="Submit jobs from another Neurodesktop" class="starlight-aside starlight-aside--note"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg>Submit jobs from another Neurodesktop</p><div class="starlight-aside__content"><p>The experimental <a href="/getting-started/neurodesktop/remote-jobs/">remote HPC jobs guide</a>
+covers DataLad/SSH transfers and Slurm submission from an existing Neurodesktop.
+Its Bunya profile is a template requiring configuration and site validation.</p></div></aside>
+<p>Neurodesk is installed at the University of Queensland’s supercomputer “Bunya”. To access Neurodesk tools you need to be in an interactive job (so either start a virtual desktop via <a href="https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard">Open OnDemand</a>) or run:</p>
 <div class="expressive-code"><link rel="stylesheet" href="/_astro/ec.w36nc.css"/><script type="module" src="/_astro/ec.0vx5m.js"></script><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">salloc</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--nodes=1</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--ntasks-per-node=1</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--cpus-per-task=1</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--mem=5G</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--job-name=TinyInteractive</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--time=01:00:00</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--partition=debug</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--account=REPLACE_THIS_WITH_YOUR_AccountString</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">srun</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--export=PATH,TERM,HOME,LANG</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">--pty</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">/bin/bash</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#82AAFF;--1:#3B61B0">-l</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="salloc --nodes=1 --ntasks-per-node=1 --cpus-per-task=1 --mem=5G --job-name=TinyInteractive --time=01:00:00 --partition=debug --account=REPLACE_THIS_WITH_YOUR_AccountString srun --export=PATH,TERM,HOME,LANG --pty /bin/bash -l"><div></div></button></div></figure></div>
 <p>Then load the neurodesk modules:</p>
 <div class="expressive-code"><figure class="frame is-terminal not-content"><figcaption class="header"><span class="title"></span><span class="sr-only">Terminal window</span></figcaption><pre data-language="bash"><code><div class="ec-line"><div class="code"><span style="--0:#82AAFF;--1:#3B61B0">module</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">use</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#ECC48D;--1:#3B61B0">/sw/local/rocky8/noarch/neuro/software/neurocommand/local/containers/modules/</span></div></div><div class="ec-line"><div class="code"><span style="--0:#C792EA;--1:#8844AE">export</span><span style="--0:#D6DEEB;--1:#403F53"> </span><span style="--0:#C5E478;--1:#3B61B0">APPTAINER_BINDPATH</span><span style="--0:#C792EA;--1:#8844AE">=</span><span style="--0:#D6DEEB;--1:#403F53">/</span><span style="--0:#C5E478;--1:#3B61B0">scratch</span><span style="--0:#D6DEEB;--1:#403F53">,/</span><span style="--0:#C5E478;--1:#3B61B0">QRISdata</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="module use /sw/local/rocky8/noarch/neuro/software/neurocommand/local/containers/modules/export APPTAINER_BINDPATH=/scratch,/QRISdata"><div></div></button></div></figure></div>

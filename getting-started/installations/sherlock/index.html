@@ -167,7 +167,7 @@
 </button>
 				<script type="module">var e=class extends HTMLElement{constructor(){super();let e=matchMedia(`(min-width: 50em)`),t=()=>{this.popover=e.matches?null:`auto`};t(),e.addEventListener(`change`,()=>t()),this.addEventListener(`toggle`,({newState:e})=>this.trapFocus(e===`open`))}trapFocus(e){document.querySelectorAll(`.main-frame, .sl-skip-link`).forEach(t=>{t.toggleAttribute(`inert`,e)})}};customElements.define(`sl-sidebar-pane`,e);</script><sl-sidebar-pane popover id="starlight__sidebar" class="sidebar-pane astro-vnhw6v7h">
 					<div class="sidebar-content sl-flex astro-vnhw6v7h">
-						<sl-sidebar-state-persist data-hash="0qvhsrv" class="astro-rmky5lek">
+						<sl-sidebar-state-persist data-hash="0o4s9es" class="astro-rmky5lek">
 	<script aria-hidden="true">
 		(() => {
 			try {
@@ -390,6 +390,11 @@
 			</li><li class="astro-cu6zwyg6">
 				<a href="/getting-started/neurodesktop/uv-environments/" class="astro-cu6zwyg6">
 						<span class="astro-cu6zwyg6">UV Python</span>
+						
+					</a>
+			</li><li class="astro-cu6zwyg6">
+				<a href="/getting-started/neurodesktop/remote-jobs/" class="astro-cu6zwyg6">
+						<span class="astro-cu6zwyg6">Remote HPC jobs</span>
 						
 					</a>
 			</li><li class="astro-cu6zwyg6">
@@ -1128,6 +1133,9 @@
 	<div class="sl-container astro-c5if7iql">
 									<div class="sl-markdown-content">
 										<p>Neurodesk runs on Stanford’s supercomputer “Sherlock” and below are different ways of accessing it.</p>
+<aside aria-label="Submit jobs from another Neurodesktop" class="starlight-aside starlight-aside--note"><p class="starlight-aside__title" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="starlight-aside__icon"><path d="M12 11a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0v-4a1 1 0 0 0-1-1Zm.38-3.92a1 1 0 0 0-.76 0 1 1 0 0 0-.33.21 1.15 1.15 0 0 0-.21.33 1 1 0 0 0 .21 1.09c.097.088.209.16.33.21A1 1 0 0 0 13 8a1.05 1.05 0 0 0-.29-.71 1 1 0 0 0-.33-.21ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16.001A8 8 0 0 1 12 20Z"></path></svg>Submit jobs from another Neurodesktop</p><div class="starlight-aside__content"><p>The experimental <a href="/getting-started/neurodesktop/remote-jobs/">remote HPC jobs guide</a>
+covers DataLad/SSH transfers and Slurm submission from an existing Neurodesktop.
+Its Sherlock profile is a template requiring configuration and site validation.</p></div></aside>
 <div class="sl-heading-wrapper level-h2"><h2 id="using-neurodesk-on-sherlock-via-ssh">Using Neurodesk on Sherlock via ssh</h2><a class="sl-anchor-link" href="#using-neurodesk-on-sherlock-via-ssh"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Using Neurodesk on Sherlock via ssh”</span></a></div>
 <div class="sl-heading-wrapper level-h3"><h3 id="using-neurodesk-containers">Using Neurodesk containers</h3><a class="sl-anchor-link" href="#using-neurodesk-containers"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="true">Section titled “Using Neurodesk containers”</span></a></div>
 <p>Setup your <code dir="auto">~/.ssh/config</code>:</p>

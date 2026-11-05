@@ -1770,17 +1770,14 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "code_240320_20261029",
+            "application": "code_240320_20261103",
             "categories": [
                 "programming"
             ],
-            "description": "Python and Julia environment with VScode and singularity",
-            "doi": "10.5281/zenodo.23850281",
-            "doi_url": "https://doi.org/10.5281/zenodo.23850281",
-            "license": "cc-by-4.0"
+            "description": "Python and Julia environment with VScode and singularity"
         },
         {
-            "application": "code_arm64_240320_20261029",
+            "application": "code_arm64_240320_20261103",
             "categories": [
                 "programming"
             ]
@@ -2093,6 +2090,13 @@
             "license": "mit-license"
         },
         {
+            "application": "datalad_1.8.0_20261103",
+            "categories": [
+                "data organisation"
+            ],
+            "description": "DataLad is a data management and distribution platform providing access to a wide range of data resources. Git for data using git-annex as backend."
+        },
+        {
             "application": "datalad_arm64_1.1.5_20260911",
             "categories": [
                 "data organisation"
@@ -2171,6 +2175,15 @@
             ],
             "doi": "10.5281/zenodo.23875811",
             "doi_url": "https://doi.org/10.5281/zenodo.23875811",
+            "license": "mit-license"
+        },
+        {
+            "application": "datalad_arm64_1.8.0_20261103",
+            "categories": [
+                "data organisation"
+            ],
+            "doi": "10.5281/zenodo.23969612",
+            "doi_url": "https://doi.org/10.5281/zenodo.23969612",
             "license": "mit-license"
         },
         {
@@ -4598,22 +4611,22 @@
             "license": "bsd-3-clause"
         },
         {
-            "application": "mne_1.13.2_20261031",
+            "application": "mne_1.13.2_20261103",
             "categories": [
                 "electrophysiology"
             ],
             "description": "Python MNE environment with VScode",
-            "doi": "10.5281/zenodo.23904248",
-            "doi_url": "https://doi.org/10.5281/zenodo.23904248",
+            "doi": "10.5281/zenodo.23969620",
+            "doi_url": "https://doi.org/10.5281/zenodo.23969620",
             "license": "bsd-3-clause"
         },
         {
-            "application": "mne_arm64_1.13.2_20261031",
+            "application": "mne_arm64_1.13.2_20261103",
             "categories": [
                 "electrophysiology"
             ],
-            "doi": "10.5281/zenodo.23904311",
-            "doi_url": "https://doi.org/10.5281/zenodo.23904311",
+            "doi": "10.5281/zenodo.23969674",
+            "doi_url": "https://doi.org/10.5281/zenodo.23969674",
             "license": "bsd-3-clause"
         },
         {
@@ -4628,24 +4641,24 @@
             "license": "cc-by-4.0"
         },
         {
-            "application": "mneextended_1.2.0_20261031",
+            "application": "mneextended_1.2.0_20261103",
             "categories": [
                 "electrophysiology",
                 "programming"
             ],
             "description": "Python MNE environment with VScode This environment contains MNE Python and some additional tools with dependencies (MNE BIDS Pipeline, MNE-connectivity, MNE-icalabel, Neurokit2)",
-            "doi": "10.5281/zenodo.23904345",
-            "doi_url": "https://doi.org/10.5281/zenodo.23904345",
+            "doi": "10.5281/zenodo.23969753",
+            "doi_url": "https://doi.org/10.5281/zenodo.23969753",
             "license": "bsd-3-clause"
         },
         {
-            "application": "mneextended_arm64_1.2.0_20261031",
+            "application": "mneextended_arm64_1.2.0_20261103",
             "categories": [
                 "electrophysiology",
                 "programming"
             ],
-            "doi": "10.5281/zenodo.23904494",
-            "doi_url": "https://doi.org/10.5281/zenodo.23904494",
+            "doi": "10.5281/zenodo.23969618",
+            "doi_url": "https://doi.org/10.5281/zenodo.23969618",
             "license": "bsd-3-clause"
         },
         {
@@ -7744,6 +7757,18 @@
             "description": "FLAMeS white matter lesion segmentation from one FLAIR image, as the Neurodesk White matter lesions web app runs it. SynthStrip finds the brain, then FLAMeS (nnU-Net, converted to ONNX) segments the lesions on the CPU. It needs no GPU and no network connection. Segment a FLAIR:",
             "doi": "10.5281/zenodo.23629972",
             "doi_url": "https://doi.org/10.5281/zenodo.23629972",
+            "license": "apache2.0",
+            "openrecon": true
+        },
+        {
+            "application": "whitematterlesions_0.5.20261103_20261104",
+            "categories": [
+                "image segmentation",
+                "machine learning"
+            ],
+            "description": "FLAMeS white matter lesion segmentation from one FLAIR image, as the Neurodesk White matter lesions web app runs it. SynthStrip finds the brain, then FLAMeS (nnU-Net, converted to ONNX) segments the lesions on the CPU. It needs no GPU and no network connection. Segment a FLAIR:",
+            "doi": "10.5281/zenodo.23970243",
+            "doi_url": "https://doi.org/10.5281/zenodo.23970243",
             "license": "apache2.0",
             "openrecon": true
         },
