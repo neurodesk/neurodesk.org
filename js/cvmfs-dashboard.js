@@ -8,6 +8,7 @@
     if (!d || d.type !== 'cvmfs-dashboard:height' || !Number.isFinite(d.height)) return;
     var frame = document.getElementById('cvmfs-dashboard');
     if (!frame || event.source !== frame.contentWindow) return;
-    frame.style.height = Math.min(Math.max(d.height, 400), 20000) + 2 + 'px';
+    // +2 for the frame's 1px top and bottom border (border-box sizing).
+    frame.style.height = Math.ceil(Math.min(Math.max(d.height, 400), 20000)) + 2 + 'px';
   });
 })();
